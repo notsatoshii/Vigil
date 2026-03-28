@@ -1,0 +1,73 @@
+{
+  "id": "20260328-135600-geopolitics-focused-scan",
+  "ingestedAt": "2026-03-28T13:56:00Z",
+  "sourceType": "Web scan (multiple sources)",
+  "reliability": "High (official government sources, major news outlets)",
+  "scanType": "Focused scan: Geopolitics & Macro watchlist",
+
+  "summary": [
+    "US-Israel war on Iran is Day 28 (started Feb 28). Israel struck nuclear sites and heavy water plant in Arak. 1,900+ killed in Iran, 1,142+ killed in Lebanon. Houthis entered the war with missile strike on Israel. Trump delayed energy infrastructure strikes by 10 days to April 6 for 'peace talks.' Polymarket geopolitics markets have $464.5M+ volume across 540 active markets.",
+    "Fed held rates at 3.5-3.75% on March 18 (11-1 vote). Projected 1 cut in 2026, 1 more in 2027. Inflation forecast raised to 2.7% PCE. GDP growth at 2.4%. Uncertainty elevated due to Middle East conflict and tariffs.",
+    "Ukraine ceasefire: 96% chance of NO ceasefire by March 31 on Polymarket. Three rounds of US-mediated talks produced 'process without progress.' Peace talks on hold as US focuses on Iran campaign. Multi-layered ceasefire enforcement framework proposed (24hr diplomatic warning -> coalition response -> Western-backed force at 72hrs).",
+    "Venezuela: Maduro seized by US military Jan 3 2026. Polymarket gives 66% chance Delcy Rodriguez leads Venezuela by end of 2026.",
+    "Prediction market monthly volume hit $21B+ in early 2026, up from $1.2B in mid-2025. Geopolitics and elections are the primary demand drivers. 2026 midterm election markets already active ($4.1M on Polymarket Balance of Power market). NYC election alone drove $150M+ in volume."
+  ],
+
+  "entities": [
+    {"name": "Iran War (2026)", "type": "conflict", "role": "Day 28, US-Israel strikes on Iran since Feb 28. Nuclear sites targeted. 1,900+ Iranian casualties."},
+    {"name": "Mojtaba Khamenei", "type": "person", "role": "Iran's new Supreme Leader, pledged continued strikes on US bases and Strait of Hormuz blockade (March 12)"},
+    {"name": "Houthis", "type": "faction", "role": "Entered Iran war with missile strike against Israel (March 28)"},
+    {"name": "Donald Trump", "type": "person", "role": "Delayed energy infrastructure strikes to April 6 for peace talks"},
+    {"name": "Federal Reserve", "type": "institution", "role": "Held rates at 3.5-3.75%, projects 1 cut in 2026"},
+    {"name": "Stephen Miran", "type": "person", "role": "Dissenting FOMC vote, wanted 25bp cut"},
+    {"name": "Ukraine-Russia War", "type": "conflict", "role": "Year 4, peace talks stalled, 96% no ceasefire by March 31"},
+    {"name": "Nicolas Maduro", "type": "person", "role": "Seized by US military Jan 3 2026"},
+    {"name": "Delcy Rodriguez", "type": "person", "role": "66% Polymarket odds to lead Venezuela by end 2026"},
+    {"name": "2026 US Midterm Elections", "type": "event", "role": "Active prediction markets, $4.1M on Polymarket Balance of Power"}
+  ],
+
+  "relationships": [
+    {"from": "Iran War", "to": "prediction market volume", "relationship": "primary driver of geopolitics market demand ($464.5M+ volume, 540 markets)"},
+    {"from": "Iran War", "to": "Ukraine peace talks", "relationship": "US attention diverted from Ukraine to Iran, stalling negotiations"},
+    {"from": "Iran War", "to": "Fed policy", "relationship": "elevated economic uncertainty, contributing to rate hold"},
+    {"from": "2026 Midterms", "to": "prediction market volume", "relationship": "growing demand driver, conditional markets already launched"},
+    {"from": "Houthis", "to": "Iran War", "relationship": "entered conflict in support of Iran"},
+    {"from": "Strait of Hormuz", "to": "energy markets", "relationship": "Iran threatening blockade, oil price implications"}
+  ],
+
+  "categories": ["strategic", "market", "financial"],
+
+  "keyMetrics": {
+    "iranWarDay": 28,
+    "iranCasualties": "1900+",
+    "lebanonCasualties": "1142+",
+    "trumpEnergyStrikeDeadline": "2026-04-06",
+    "fedRate": "3.5-3.75%",
+    "fedProjectedCuts2026": 1,
+    "fedInflationForecast": "2.7% PCE",
+    "fedGDPForecast": "2.4%",
+    "ukraineCeasefireOdds": "4% by March 31 (Polymarket)",
+    "polymarketGeopoliticsVolume": "$464.5M+",
+    "polymarketGeopoliticsMarkets": 540,
+    "predictionMarketMonthlyVolume": "$21B+ (early 2026)",
+    "midtermBalanceOfPowerVolume": "$4.1M",
+    "nycElectionVolume": "$150M+"
+  },
+
+  "workstreamTags": {
+    "CEO": "Geopolitical instability is a massive tailwind for prediction market demand. Monthly volumes went from $1.2B to $21B+. Iran war, Ukraine, and upcoming midterms are the demand drivers. LEVER's timing is excellent for fundraising narrative.",
+    "ADVISOR": "April 6 is a critical date: Trump's deadline for Iran energy infrastructure strikes. If strikes proceed, expect oil price shock and more prediction market volume. If peace deal, expect a different set of markets. Either way, prediction market demand stays high.",
+    "BUILD": "Geopolitical markets are the highest-volume category on Polymarket ($464.5M). LEVER should prioritize these market types for launch. Crypto/macro events + geopolitics = safer regulatory territory + highest demand.",
+    "IMPROVE": "Election markets UI/UX is a key battleground. Polymarket already has conditional midterm markets. Consider how LEVER could offer leveraged exposure to election outcomes."
+  },
+
+  "sources": [
+    {"title": "Al Jazeera: Iran War Day 28", "url": "https://www.aljazeera.com/news/2026/3/27/us-israel-war-on-iran-whats-happening-on-day-28-of-attacks-2", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "CNN: Houthis Enter Iran War", "url": "https://www.cnn.com/2026/03/28/world/live-news/iran-war-us-israel-trump", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "CNBC: Fed Rate Decision March 2026", "url": "https://www.cnbc.com/2026/03/18/fed-interest-rate-decision-march-2026.html", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Federal Reserve: FOMC Statement", "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a.htm", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "TRM Labs: Prediction Markets $21B Monthly", "url": "https://www.trmlabs.com/resources/blog/how-prediction-markets-scaled-to-usd-21b-in-monthly-volume-in-2026", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Euronews: Ukraine Peace Talks Stalled", "url": "https://www.euronews.com/2026/03/10/russia-and-ukraine-both-claim-front-line-progress-with-us-brokered-peace-talks-on-hold", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "Moscow Times: Negotiations Extending War", "url": "https://www.themoscowtimes.com/2026/03/27/negotiations-are-not-ending-the-ukraine-war-they-are-extending-it-a92363", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"}
+  ]
+}

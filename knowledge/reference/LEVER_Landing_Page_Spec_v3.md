@@ -294,18 +294,15 @@ Then the grid comes back as they scroll to the closing line. Squares re-illumina
 
 **Content:**
 
-Headline: "It only works if all three exist."
+Headline: "Every protocol solves one. None solve all three."
 
-Card 1 — "Leverage without unified liquidity"
-Shallow pools. Tiny position limits. Useless for serious capital.
+Card 1 — "No leverage. No serious capital."
 
-Card 2 — "Unified liquidity without a risk stack"
-LPs get destroyed at binary resolution. Pool blows up on the first major event.
+Card 2 — "Fragmented liquidity. No deep markets."
 
-Card 3 — "A risk stack without leverage"
-Nothing to protect. No product. No fees. No reason to exist.
+Card 3 — "No hedging. No market makers."
 
-LEVER: "Leverage + unified liquidity + purpose-built risk stack. The complete system."
+LEVER: "LEVER is all three. Leveraged perpetuals. Unified liquidity. A risk stack built for binary outcomes."
 
 **Visual direction:**
 

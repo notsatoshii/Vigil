@@ -93,6 +93,56 @@ Additionally, the borrow rate is shown as "0.0200% per hour" in the market panel
 
 ---
 
+## Session: 2026-03-28 15:14 UTC (Fourth Pass)
+Reviewed: Markets, Vault (visual), trade panel, footer
+Browser: Chromium/Puppeteer, 1440x900 desktop + screenshots
+Confirmed: All 9 proposals still OPEN and unaddressed.
+Note: Vault body cards render data fine ($68.6M TVL, $1.0002 share price) while the
+header stat bar remains empty. Once #1 is fixed, the vault page will show TVL and
+utilization in both the header bar AND the body cards. Recommend deduplicating as
+part of that fix so the vault body cards become the single source of truth and the
+header adapts (or hides) on the vault tab. Not a separate proposal; just a note for
+whoever picks up #1.
+
+---
+
+## Session: 2026-03-28 14:53 UTC (Third Pass)
+Reviewed: Markets page, trade panel interaction, Vault, Positions
+Browser: Chromium/Puppeteer, 1440x900 desktop + screenshots
+Confirmed: Proposals #1-#7 still OPEN and unaddressed.
+
+---
+
+### PROPOSAL #8: "Open Position" Button Gives Zero Feedback on Failure
+**Category**: UX
+**Page/Component**: Trade panel, order form
+**Status**: OPEN
+**Priority**: Ship now
+
+**Current State**: Clicking "Open Position" with zero collateral (or any invalid state) simply dismisses the trade panel and returns the user to the market list. No error toast, no inline validation message, no shake animation, nothing. The user has no idea what happened or what they did wrong. Even with collateral entered, if the transaction fails (known high gas issue), the panel closes without explanation.
+
+**Proposed Change**: Add inline validation before submission: "Enter collateral amount" under the input if empty, "Minimum 10 USDT" if too low. If the transaction is attempted and fails, show a toast with a human-readable reason (e.g., "Transaction failed: insufficient gas" rather than a raw revert). The "Open Position" button should be disabled/greyed out when the form is incomplete.
+
+**User Impact**: Every user who tries to trade. Silent failure is the fastest way to lose a new user.
+**Effort Estimate**: Small (validation logic + toast on tx error)
+
+---
+
+### PROPOSAL #9: Order Summary Shows "notional" as Placeholder Text
+**Category**: UI Bug
+**Page/Component**: Trade panel, position summary section
+**Status**: OPEN
+**Priority**: Ship now
+
+**Current State**: In the order summary below the leverage slider, the row "Price:" displays the literal word "notional" instead of an actual dollar value. This appears to be a label or placeholder that leaked into the rendered output. Combined with "Position Size: 0 USDT" when collateral has not been entered, the summary section reads like a half-finished wireframe rather than a live product.
+
+**Proposed Change**: The "Price" row should show the computed notional position value (collateral x leverage) formatted as a dollar amount, or be hidden entirely when the inputs are empty. If the label is meant to say "Notional Value:", change it to that and put the actual calculated number next to it.
+
+**User Impact**: Anyone opening the trade form. Placeholder text in a live product signals "not ready."
+**Effort Estimate**: Small (fix the display binding)
+
+---
+
 ## Session: 2026-03-28 (Quick Spot-Check)
 Reviewed: Trade/Markets, Vault, Positions pages
 Browser: Chromium, 1440x900 desktop

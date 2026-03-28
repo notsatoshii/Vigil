@@ -3,6 +3,11 @@
   "type": "blockchain",
   "facts": [
     "EVM-compatible blockchain operated by Binance",
+    "$7.8B TVL, $13.9B stablecoin market (up 32.3%)",
+    "2026 roadmap: targeting 20,000 TPS with sub-second finality via parallel execution and Reth client",
+    "opBNB (L2) halved block interval to 250ms via Fourier hard fork",
+    "Tether XAUT (gold-backed) launched on BNB Chain (March 2026)",
+    "PancakeSwap and ListaDAO lead DeFi ecosystem",
     "Hosts XMarket prediction market protocol"
   ],
   "relationships": [

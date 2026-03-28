@@ -3,6 +3,12 @@
   "type": "blockchain",
   "facts": [
     "Ethereum L2 built by Coinbase",
+    "Clear L2 leader: $5.6B peak TVL (46.6% of all L2 DeFi TVL) as of late 2025",
+    "Coinbase pursuing 'everything exchange' strategy: crypto + equities + prediction markets + commodities on Base",
+    "Coinbase partnered with Kalshi for prediction markets; notifications pushed to all users",
+    "Morpho integration via Coinbase app drove deposits from $354M to $2B+ (key distribution pattern for LEVER to study)",
+    "Base App live in 140 countries",
+    "Tokenized equities launched: $2.46B monthly transfer volume (up 76%)",
     "LEVER Protocol is deployed on Base Sepolia (testnet, chain ID 84532)",
     "Mainnet Base is the target for LEVER production deployment in Q2 2026",
     "RPC endpoint for testnet: https://sepolia.base.org",

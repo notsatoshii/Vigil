@@ -24,19 +24,17 @@
 ## PLANNED
 *Plans written and approved by CRITIQUE. Ready for BUILD.*
 
-- LEVER-BUG-1: [CRITICAL] PnL formula mismatch — plan: handoffs/plan-20260328-133501.md
-- LEVER-BUG-2: [CRITICAL] $304K unaccounted vault drain — plan: handoffs/plan-lever-bug-2.md
 - LEVER-BUG-3: [CRITICAL] Ghost OI (stale OI with zero positions) — plan: handoffs/plan-lever-bug-3.md
+- LEVER-BUG-4: [CRITICAL] InsuranceFund never absorbs bad debt — plan: handoffs/plan-lever-bug-4.md
 
 ---
 
 ## IN PROGRESS
-*Currently being worked on. Include workstream and start time.*
 
 ---
 
 ## IN REVIEW
-*Completed by BUILD, being reviewed by VERIFY.*
+- [2026-03-28] LEVER-BUG-2: [CRITICAL] $304K unaccounted vault drain
 
 ---
 
@@ -54,4 +52,6 @@
 
 ## BLOCKED
 *Cannot proceed. Include reason and who can unblock.*
+
+- LEVER-BUG-1: [CRITICAL] PnL formula mismatch — CRITIQUE verdict: REVISE (2nd review of revised plan). Plan now uses execution prices (correct direction per LESSONS.md), but exit-side formula diverges from Master's stated formula (double-impact vs single-impact). Master must confirm exit formula before BUILD starts. See: handoffs/critique-lever-bug-1.md
 

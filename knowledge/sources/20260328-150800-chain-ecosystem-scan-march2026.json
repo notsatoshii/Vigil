@@ -1,0 +1,72 @@
+{
+  "id": "20260328-150800-chain-ecosystem-scan",
+  "ingestedAt": "2026-03-28T15:08:00Z",
+  "sourceType": "Web scan (multiple sources)",
+  "reliability": "High (official chain blogs, major outlets, DeFi analytics)",
+  "scanType": "Focused scan: Base & BNB Chain ecosystems",
+
+  "summary": [
+    "Base: Clear L2 leader with $5.6B peak TVL (46.6% of all L2 DeFi TVL). Morpho grew from $354M to $2B+ deposits via Coinbase app integration. Coinbase pursuing 'everything exchange' strategy: crypto + equities + prediction markets + commodities. Partnered with Kalshi for prediction markets. Tokenized equities launched in-house ($2.46B monthly transfer volume, up 76%).",
+    "BNB Chain: $7.8B TVL, $13.9B stablecoin market (up 32.3%). 2026 roadmap targets 20,000 TPS with sub-second finality via parallel execution and Reth client. opBNB halved block interval to 250ms. Tether launched XAUT (gold-backed token) on BNB. PancakeSwap and ListaDAO lead DeFi.",
+    "DeFi derivatives: DEX-to-CEX perps volume ratio tripled from 6.3% to 18.7%. Purpose-built execution layers (Hyperliquid, EdgeX, Lighter) dominating. RWA-Perps emerging as product category. CFTC planning to clarify DeFi registration requirements and perpetual derivatives regulation.",
+    "Coinbase is the kingmaker for Base: Morpho integration drove 5x deposit growth, prediction market notifications pushed to all users (some pushback), Base App live in 140 countries. Coinbase is building exactly the multi-asset platform that the Prediction Index report described as the future.",
+    "CFTC rulemaking will also address DeFi software providers' registration obligations and perpetual derivatives status. This directly affects LEVER's architecture decisions."
+  ],
+
+  "entities": [
+    {"name": "Base", "type": "chain", "role": "LEVER's target chain. L2 leader: $5.6B peak TVL, 46.6% of L2 DeFi TVL"},
+    {"name": "BNB Chain", "type": "chain", "role": "XMarket's chain. $7.8B TVL, $13.9B stablecoins, targeting 20K TPS"},
+    {"name": "Coinbase", "type": "company", "role": "'Everything exchange' strategy. Prediction markets via Kalshi. Tokenized equities in-house. Base App in 140 countries."},
+    {"name": "Morpho", "type": "protocol", "role": "Key Base growth driver: $354M -> $2B+ deposits via Coinbase integration"},
+    {"name": "PancakeSwap", "type": "protocol", "role": "Leading BNB Chain DeFi protocol by TVL"},
+    {"name": "ListaDAO", "type": "protocol", "role": "Leading BNB Chain DeFi protocol"},
+    {"name": "Hyperliquid", "type": "protocol", "role": "Dominant perp DEX on purpose-built execution layer"},
+    {"name": "EdgeX", "type": "protocol", "role": "Perp DEX on own chain"},
+    {"name": "Lighter", "type": "protocol", "role": "Perp DEX on own chain"},
+    {"name": "opBNB", "type": "chain", "role": "BNB L2, halved block interval to 250ms via Fourier hard fork"},
+    {"name": "Tether XAUT", "type": "token", "role": "Gold-backed token launched on BNB Chain (1 token = 1 troy ounce)"},
+    {"name": "Arbitrum", "type": "chain", "role": "Second largest L2 by TVL (30.86%)"}
+  ],
+
+  "relationships": [
+    {"from": "Coinbase", "to": "Base", "relationship": "owns and drives growth via app integration (Morpho, prediction markets)"},
+    {"from": "Coinbase", "to": "Kalshi", "relationship": "partnered for prediction markets on Coinbase platform"},
+    {"from": "LEVER Protocol", "to": "Base", "relationship": "target deployment chain"},
+    {"from": "XMarket", "to": "BNB Chain", "relationship": "deployed on"},
+    {"from": "Morpho", "to": "Base TVL", "relationship": "drove $1.6B+ in deposit growth via Coinbase app"},
+    {"from": "CFTC", "to": "DeFi perpetuals", "relationship": "planning to regulate and clarify registration requirements"}
+  ],
+
+  "categories": ["technical", "strategic", "market", "legal"],
+
+  "keyMetrics": {
+    "basePeakTVL": "$5.6B",
+    "baseL2TVLShare": "46.6%",
+    "arbitrumL2TVLShare": "30.86%",
+    "morphoDeposits": "$2B+ (from $354M)",
+    "bnbChainTVL": "$7.8B",
+    "bnbStablecoinMarket": "$13.9B (up 32.3%)",
+    "bnb2026TPSTarget": "20,000",
+    "opBNBBlockInterval": "250ms",
+    "dexToCexPerpsRatio": "18.7% (from 6.3%)",
+    "tokenizedEquityMonthlyVolume": "$2.46B (up 76%)",
+    "baseAppCountries": 140
+  },
+
+  "workstreamTags": {
+    "CEO": "Base is the right chain choice. 46.6% L2 TVL share, Coinbase as distribution partner, prediction markets already integrated. BNB also strong at $7.8B TVL for XMarket. Both chains have institutional momentum.",
+    "BUILD": "Morpho's Coinbase integration pattern is worth studying: a simple app integration drove 5x deposit growth. LEVER could benefit from similar Coinbase app integration on Base. Also: CFTC plans to regulate perpetual derivatives and DeFi providers. Architecture should be designed with potential registration requirements in mind.",
+    "ADVISOR": "Coinbase's 'everything exchange' strategy (crypto + equities + prediction markets + commodities) validates the multi-asset thesis from the Prediction Index report. LEVER sits perfectly in this stack as the leverage layer. Potential strategic angle: Coinbase partnership for distribution on Base.",
+    "IMPROVE": "Base App live in 140 countries. Design LEVER's UX to work within Coinbase's app ecosystem, not against it."
+  },
+
+  "sources": [
+    {"title": "The Defiant: Base TVL All-Time High", "url": "https://thedefiant.io/news/blockchains/base-ecosystem-tvl-hits-all-time-high", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "The Block: 2026 L2 Outlook", "url": "https://www.theblock.co/post/383329/2026-layer-2-outlook", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "BNB Chain: 2026 Tech Roadmap", "url": "https://www.bnbchain.org/en/blog/tech-roadmap-2026", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Coinbase: Future of Finance", "url": "https://www.coinbase.com/blog/system-update-the-future-of-finance-is-on-coinbase", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Fortune: Coinbase Stock Trading + Kalshi Prediction Markets", "url": "https://fortune.com/2025/12/17/coinbase-announces-stock-trading-and-new-kalshi-based-prediction-markets/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "CoinDesk: CFTC DeFi and Prediction Market Rulemaking", "url": "https://www.coindesk.com/policy/2026/03/10/cftc-chair-highlights-wide-crypto-agenda-including-rules-on-defi-prediction-markets", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "The Block: 2026 DeFi Outlook", "url": "https://www.theblock.co/post/383120/2026-defi-outlook", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"}
+  ]
+}

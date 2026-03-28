@@ -1,8 +1,26 @@
 # Market Intelligence
 ## Auto-generated summary from knowledge graph. Updated on new source ingestion.
 
+## Geopolitical Demand Drivers (Scan: 2026-03-28)
+
+### Active Conflicts Driving Prediction Market Volume
+1. **Iran War (Day 28)**: US-Israel strikes since Feb 28. Nuclear sites hit. 1,900+ Iranian dead, 1,142+ in Lebanon. Houthis entered war March 28. Trump delayed energy strikes to April 6. Iran threatening Strait of Hormuz blockade. **$464.5M+ volume across 540 Polymarket geopolitics markets.**
+2. **Ukraine-Russia (Year 4)**: Peace talks stalled; US attention diverted to Iran. 96% Polymarket odds of no ceasefire by March 31. Multi-layered enforcement framework proposed but no progress.
+3. **Venezuela**: Maduro seized Jan 3. 66% odds Delcy Rodriguez leads by end 2026.
+
+### Key Date: April 6, 2026
+Trump's deadline for Iran energy infrastructure strikes. If strikes proceed: oil price shock, more prediction market volume. If peace deal: different market dynamics. Either way, prediction market demand stays elevated.
+
+### Macro: Fed Holds at 3.5-3.75%
+Fed held March 18 (11-1 vote). Projects 1 cut in 2026. Inflation forecast 2.7% PCE. GDP 2.4%. Middle East uncertainty keeping rates elevated.
+
+### Volume Impact
+Monthly prediction market volume surged from $1.2B (mid-2025) to $21B+ (early 2026). Geopolitics and elections are the primary drivers. NYC election alone: $150M+. Midterm markets already active ($4.1M Balance of Power on Polymarket).
+
+---
+
 ## Prediction Market Sector Overview (as of 2026-03-28)
-**Source**: Prediction Index Annual Report 2025-2026 (published 2026-03-04, reliability: High)
+**Sources**: Prediction Index Annual Report 2025-2026; Web scans 2026-03-28
 
 ### Volume and Growth
 - $100B+ notional trading volume in 2025

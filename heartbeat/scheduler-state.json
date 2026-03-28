@@ -3,11 +3,11 @@
     "lever-bug-1": {
       "task_id": "lever-bug-1",
       "title": "LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs entryPI) causing 38 winners, 0 losers",
-      "stage": "planned",
-      "agent_pid": 0,
-      "dispatched_at": 1774705336.165407,
+      "stage": "critiquing",
+      "agent_pid": 2785012,
+      "dispatched_at": 1774711697.249904,
       "plan_file": "/home/lever/command/handoffs/plan-lever-bug-1.md",
-      "critique_file": "",
+      "critique_file": "/home/lever/command/handoffs/critique-lever-bug-1.md",
       "build_file": "",
       "verify_file": "",
       "attempts": 0
@@ -15,12 +15,12 @@
     "lever-bug-2": {
       "task_id": "lever-bug-2",
       "title": "LEVER-BUG-2: [CRITICAL] $304K unaccounted vault drain",
-      "stage": "critiquing",
-      "agent_pid": 2634499,
-      "dispatched_at": 1774705734.6961834,
+      "stage": "verifying",
+      "agent_pid": 2804741,
+      "dispatched_at": 1774712269.9077284,
       "plan_file": "/home/lever/command/handoffs/plan-20260328-133419.md",
-      "critique_file": "",
-      "build_file": "",
+      "critique_file": "/home/lever/command/handoffs/critique-lever-bug-2.md",
+      "build_file": "/home/lever/command/handoffs/build-lever-bug-2.md",
       "verify_file": "",
       "attempts": 0
     },
@@ -51,9 +51,33 @@
     "lever-bug-5": {
       "task_id": "lever-bug-5",
       "title": "LEVER-BUG-5: [CRITICAL] InsuranceFund decimal mismatch (WAD bootstrap + USDT deposits)",
-      "stage": "planning",
-      "agent_pid": 2684608,
+      "stage": "planned",
+      "agent_pid": 0,
       "dispatched_at": 1774707810.1604064,
+      "plan_file": "/home/lever/command/handoffs/plan-lever-bug-5.md",
+      "critique_file": "",
+      "build_file": "",
+      "verify_file": "",
+      "attempts": 0
+    },
+    "vigil-mission-control": {
+      "task_id": "vigil-mission-control",
+      "title": "VIGIL-MISSION-CONTROL: [HIGHEST PRIORITY] Build a React + Tailwind mission control dashboard to replace the current static HTML. Vite, WebSocket real-time data, mobile-first. Components: StatusBar, Pipeline (big/bold/animated), KanbanBoard (expandable cards), ActivityFeed (workstream colors), AttentionPanel (pulsing alerts), ServiceGrid, ProjectCards, SchedulePanel (countdown timers), StatsPanel (trends). Backend server.js stays. See /home/lever/command/handoffs/session-plan-final-review.md and TIMMY_PERSONALITY.md for all Master feedback on what is wrong with current dashboard.",
+      "stage": "planned",
+      "agent_pid": 0,
+      "dispatched_at": 1774710843.228058,
+      "plan_file": "/home/lever/command/handoffs/plan-vigil-mission-control.md",
+      "critique_file": "",
+      "build_file": "",
+      "verify_file": "",
+      "attempts": 0
+    },
+    "lever-bug-6": {
+      "task_id": "lever-bug-6",
+      "title": "LEVER-BUG-6: [CRITICAL] FeeRouter called without USDT by Liquidation/Settlement",
+      "stage": "planning",
+      "agent_pid": 2816672,
+      "dispatched_at": 1774712611.6435335,
       "plan_file": "",
       "critique_file": "",
       "build_file": "",
@@ -61,6 +85,6 @@
       "attempts": 0
     }
   },
-  "sessions_today": 9,
+  "sessions_today": 22,
   "last_reset_date": "2026-03-28"
 }

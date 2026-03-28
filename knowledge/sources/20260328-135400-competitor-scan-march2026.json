@@ -1,0 +1,66 @@
+{
+  "id": "20260328-135400-competitor-focused-scan",
+  "ingestedAt": "2026-03-28T13:54:00Z",
+  "sourceType": "Web scan (multiple sources)",
+  "reliability": "High (platform announcements, major outlets)",
+  "scanType": "Focused scan: Competitors watchlist",
+
+  "summary": [
+    "Polymarket: ~$9.55B volume in past 30 days. Expanding taker fees to 8 new categories on March 30 (politics, finance, economics, culture, weather, tech, mentions, other). Expected to generate $800K-$1M daily revenue. Acquired Brahma (DeFi infra startup). Maker Rebates Program incentivizing LPs with daily USDC rebates.",
+    "Azuro: $370M+ total trading volume, 20+ live applications, 4,500+ LPs. Top revenue protocol on Polygon (competing with Curve, AAVE). Token at $0.001123. Focused on infrastructure layer for prediction market frontends.",
+    "Major TradFi entrants: FanDuel Predicts (Dec 2025, Flutter/CME Group partnership), DraftKings Predictions (Dec 2025, 38 states, Railbird exchange coming), Fanatics Markets (Dec 2025), Crypto.com's OG app (Feb 2026), Plus500 Futures (Feb 2026).",
+    "The prediction market space has bifurcated into crypto-native (Polymarket, Azuro, Kalshi) and TradFi/sports betting operators (FanDuel, DraftKings, Fanatics). The TradFi side brings massive existing user bases but faces the same regulatory heat on sports.",
+    "Polymarket's fee expansion is significant: moving from free trading to monetization across nearly all categories. The $1M/day revenue target validates the business model but may push price-sensitive traders to alternatives."
+  ],
+
+  "entities": [
+    {"name": "Polymarket", "type": "competitor", "role": "$9.55B/30-day volume, fee expansion March 30, acquired Brahma"},
+    {"name": "Brahma", "type": "company", "role": "DeFi infra startup acquired by Polymarket March 2026"},
+    {"name": "Azuro", "type": "competitor", "role": "$370M+ volume, 20+ apps, top Polygon revenue protocol"},
+    {"name": "FanDuel Predicts", "type": "competitor", "role": "Launched Dec 2025, Flutter/CME partnership, sports/finance/politics/economics"},
+    {"name": "Flutter Entertainment", "type": "company", "role": "FanDuel parent company"},
+    {"name": "DraftKings Predictions", "type": "competitor", "role": "Launched Dec 2025, 38 states, Railbird-powered exchange coming"},
+    {"name": "Railbird", "type": "company", "role": "Powering DraftKings proprietary prediction exchange"},
+    {"name": "Fanatics Markets", "type": "competitor", "role": "Launched Dec 2025, sports/finance/politics/culture"},
+    {"name": "OG (Crypto.com)", "type": "competitor", "role": "Launched Feb 2026, sports/politics/entertainment/economics/finance, parlays"},
+    {"name": "Plus500 Futures", "type": "competitor", "role": "Launched Feb 2026, new entrant"},
+    {"name": "Crypto.com", "type": "company", "role": "Parent of OG prediction market app"}
+  ],
+
+  "relationships": [
+    {"from": "Polymarket", "to": "Brahma", "relationship": "acquired (March 2026)"},
+    {"from": "FanDuel Predicts", "to": "CME Group", "relationship": "partnership for event contracts"},
+    {"from": "DraftKings Predictions", "to": "Railbird", "relationship": "using Railbird for proprietary exchange"},
+    {"from": "TradFi entrants", "to": "Polymarket/Kalshi", "relationship": "competing for mainstream users with existing massive user bases"}
+  ],
+
+  "categories": ["market", "strategic", "financial"],
+
+  "keyMetrics": {
+    "polymarket30DayVolume": "$9.55B",
+    "polymarketDailyRevenueTarget": "$800K-$1M",
+    "polymarketFeeExpansionDate": "2026-03-30",
+    "azuroTotalVolume": "$370M+",
+    "azuroLiveApps": "20+",
+    "azuroLPs": "4500+",
+    "azuroTokenPrice": "$0.001123",
+    "draftKingsStatesLive": 38,
+    "newTradFiEntrants2025_2026": 5
+  },
+
+  "workstreamTags": {
+    "CEO": "CRITICAL competitive intelligence: FanDuel, DraftKings, Fanatics, Crypto.com, and Plus500 all entered prediction markets in the last 4 months. The space is getting crowded fast. LEVER's leverage angle is the differentiator. Investor pitch must address how we compete when billion-dollar companies are entering.",
+    "ADVISOR": "Polymarket's fee expansion ($1M/day target) validates prediction market monetization. But the TradFi flood means competition for users is about to intensify dramatically. LEVER needs to ship fast before the window narrows.",
+    "BUILD": "Polymarket acquired Brahma for blockchain infra simplification. Azuro's infrastructure-layer approach (20+ apps built on top) is worth studying as a model for LEVER's architecture.",
+    "IMPROVE": "FanDuel Predicts and DraftKings Predictions bring polished mainstream UX with existing millions of users. Our UX must compete with that bar, not just crypto-native standards."
+  },
+
+  "sources": [
+    {"title": "Phemex: Polymarket $1M Daily Revenue", "url": "https://phemex.com/news/article/polymarket-projects-1m-daily-revenue-with-new-fee-structure-68935", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"},
+    {"title": "MEXC: Polymarket Fee Expansion March 30", "url": "https://www.mexc.com/news/976171", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"},
+    {"title": "Bloomberg: Polymarket and Kalshi Feature", "url": "https://www.bloomberg.com/features/2026-prediction-markets-polymarket-kalshi/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "FanDuel Predicts Official", "url": "https://www.fanduel.com/predicts", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "DeFiRate: List of US Prediction Markets March 2026", "url": "https://defirate.com/prediction-markets/apps/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"},
+    {"title": "DappRadar: Azuro Analytics", "url": "https://dappradar.com/dapp/azuro", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"}
+  ]
+}

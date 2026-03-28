@@ -53,6 +53,29 @@ CONTRARIAN VIEW: Conditional markets add complexity that may hurt UX for casual 
 
 CONTRARIAN VIEW: $100B notional includes wash trading. 268 projects likely includes many dead ones. Institutional "adoption" is mostly data consumption, not trading. Real addressable market may be smaller than implied.
 
+## Live Competitor Scan (2026-03-28)
+
+### Crypto-Native Platforms
+| Platform | Volume | Key Development (March 2026) |
+|----------|--------|------------------------------|
+| Polymarket | $9.55B/30 days | Fee expansion March 30 (8 new categories), $1M/day revenue target, acquired Brahma |
+| Kalshi | N/A | Facing criminal charges (AZ), lawsuit (MI), 11 state cease-and-desists |
+| Azuro | $370M+ total | 20+ live apps, top Polygon revenue protocol, infrastructure layer model |
+| Predik | Early | Graduation architecture (parimutuel -> AMM) |
+| Inframarkets | Early | Energy vertical on Solana |
+| XO Market | Early | User-generated custom markets |
+
+### TradFi/Sports Betting Entrants (NEW, Dec 2025 - Feb 2026)
+| Platform | Parent | Launch | Coverage |
+|----------|--------|--------|----------|
+| FanDuel Predicts | Flutter/CME Group | Dec 2025 | Sports, finance, economics, politics |
+| DraftKings Predictions | DraftKings/Railbird | Dec 2025 | 38 states, proprietary exchange coming |
+| Fanatics Markets | Fanatics | Dec 2025 | Sports, finance, politics, culture |
+| OG | Crypto.com | Feb 2026 | Sports, politics, entertainment, economics, parlays |
+| Plus500 Futures | Plus500 | Feb 2026 | Prediction markets |
+
+**ANALYSIS**: Five billion-dollar companies entered prediction markets in the last 4 months. They bring massive existing user bases (FanDuel: 12M+, DraftKings: 20M+). The competitive landscape is no longer "Polymarket and a few others." It is now a sector with serious institutional money on both the crypto-native and TradFi sides. LEVER's leverage angle remains unique; nobody else offers leveraged exposure to prediction outcomes.
+
 ## Known Competitors (from spec)
 - Polymarket (prediction market, used as oracle source)
 - Azuro (prediction market platform)
