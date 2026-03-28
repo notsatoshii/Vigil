@@ -10,3 +10,5 @@ inbox/incoming/*.ogg
 telegram-api-data/*.binlog
 telegram-api-data/**/*.binlog
 telegram-api-data/**/*.pdf
+inbox/failed-messages/*.json
+openclaw-cron-backup/

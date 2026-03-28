@@ -10,7 +10,7 @@
 body { background: #0a0a0f; color: #c8c8d0; font-family: 'Bitcount Single Ink Variable', 'Bitcount Single Ink', 'JetBrains Mono', monospace; font-size: 14px; padding: 20px; }
 .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; padding-bottom: 12px; margin-bottom: 20px; }
 .header-left { display: flex; align-items: center; gap: 12px; }
-.header-logo svg { height: 28px; width: 28px; display: block; }
+.header-logo img { height: 32px; display: block; filter: drop-shadow(0 0 6px rgba(255,100,0,.4)); }
 .header h1 { color: #E6FF2B; font-size: 20px; font-weight: 600; letter-spacing: 3px; }
 .header .time { color: #666; font-size: 11px; }
 .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
@@ -35,19 +35,19 @@ pre { white-space: pre-wrap; word-wrap: break-word; color: #999; font-size: 11px
 <body>
 <div class="header">
 <div class="header-left">
-<div class="header-logo"><svg viewBox="0 0 271.513 271.513" xmlns="http://www.w3.org/2000/svg"><path fill="#E6FF2B" d="M195.72,156.11c21.84,0,39.6,17.77,39.6,39.6s-17.76,39.6-39.6,39.6-39.6-17.77-39.6-39.6,17.77-39.6,39.6-39.6Z"/><path fill="#E6FF2B" d="M75.78,271.51h119.96c41.85,0,75.78-33.93,75.78-75.78v-119.96C271.51,33.93,237.59,0,195.74,0h-119.96C33.93,0,0,33.93,0,75.78v119.96c0,41.85,33.93,75.78,75.78,75.78ZM142.54,75.8c0-29.37,23.81-53.18,53.18-53.18h0c29.37,0,53.18,23.81,53.18,53.18v119.92c0,29.37-23.81,53.18-53.18,53.18h0c-29.37,0-53.18-23.81-53.18-53.18v-119.92ZM22.62,75.8c0-29.37,23.81-53.18,53.18-53.18h0c29.37,0,53.18,23.81,53.18,53.18v119.92c0,29.37-23.81,53.18-53.18,53.18h0c-29.37,0-53.18-23.81-53.18-53.18v-119.92Z"/><path fill="#E6FF2B" d="M75.79,115.4c-21.84,0-39.6-17.77-39.6-39.6s17.76-39.6,39.6-39.6,39.6,17.77,39.6,39.6-17.77,39.6-39.6,39.6Z"/></svg></div>
+<div class="header-logo"><img src="vigil-logo.jpg" alt="Vigil"></div>
 <h1>VIGIL</h1>
 </div>
-<div class="time">Updated: 2026-03-28T12:44:42Z | Uptime: 2 weeks, 2 days, 8 hours, 15 minutes</div>
+<div class="time">Updated: 2026-03-28T12:45:44Z | Uptime: 2 weeks, 2 days, 8 hours, 16 minutes</div>
 </div>
 <div class="grid">
 
 <div class="card">
 <h2>System Health</h2>
 <div class="metric"><span class="label">Status</span><span class="value" style="color: #ff4444">problems_detected</span></div>
-<div class="metric"><span class="label">RAM</span><span class="value">8986MB / 15993MB (56%)</span></div>
+<div class="metric"><span class="label">RAM</span><span class="value">9929MB / 15993MB (62%)</span></div>
 <div class="metric"><span class="label">Disk</span><span class="value">35G / 193G (18%)</span></div>
-<div class="metric"><span class="label">CPU Load</span><span class="value">2.06</span></div>
+<div class="metric"><span class="label">CPU Load</span><span class="value">1.88</span></div>
 <div class="metric"><span class="label">Last Check</span><span class="value" style="font-size:10px">2026-03-28T12:00:01Z</span></div>
 </div>
 
@@ -58,7 +58,7 @@ pre { white-space: pre-wrap; word-wrap: break-word; color: #999; font-size: 11px
 <div class="metric"><span class="label"><span class="dot green"></span>lever-accrue</span><span class="value">keeper</span></div>
 <div class="metric"><span class="label"><span class="dot green"></span>openclaw-gw</span><span class="value">:18789</span></div>
 <div class="metric"><span class="label"><span class="dot green"></span>vigil-inbox</span><span class="value">watcher</span></div>
-<div class="metric"><span class="label"><span class="dot green"></span>vigil-telegram</span><span class="value">bot</span></div>
+<div class="metric"><span class="label"><span class="dot red"></span>vigil-telegram</span><span class="value">bot</span></div>
 <div class="metric"><span class="label"><span class="dot green"></span>caddy</span><span class="value">:80</span></div>
 </div>
 
@@ -93,7 +93,7 @@ pre { white-space: pre-wrap; word-wrap: break-word; color: #999; font-size: 11px
 <div class="card full">
 <h2>Heartbeat Schedule</h2>
 <pre>7b8a9ff2-f64a-4013-a54d-d90de236be60 research-evening-scan    cron 0 20 * * * (exact)          in 7h      -          idle      isolated  research   -
-3a316005-650f-4e3b-96cb-799e7e5d5ae4 operate-vigil-selfcheck  cron 0 0,12 * * * (exact)        in 11h     45m ago    error     isolated  operate    -
+3a316005-650f-4e3b-96cb-799e7e5d5ae4 operate-vigil-selfcheck  cron 0 0,12 * * * (exact)        in 11h     46m ago    error     isolated  operate    -
 f87ff4c9-c636-4b9f-b54f-fb611c89e4b9 advisor-daily-brief      cron 0 6 * * * (exact)           in 17h     -          idle      isolated  advisor    -
 017b644c-8ed2-4547-95d6-a54318f7035e research-morning-scan    cron 0 8 * * * (exact)           in 19h     -          idle      isolated  research   -
 b60eb2f2-1a45-420a-8317-c122cdcf5e5e secure-weekly-audit      cron 0 3 * * 1 (exact)           in 2d      -          idle      isolated  secure     -

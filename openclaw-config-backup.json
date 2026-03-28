@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.24",
+    "lastTouchedAt": "2026-03-28T12:20:37.469Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-28T08:31:12.687Z",
+    "lastRunVersion": "2026.3.24",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "claude-cli/claude-sonnet-4-6"
+      },
+      "models": {
+        "anthropic/claude-sonnet-4-6": {},
+        "anthropic/claude-opus-4-6": {}
+      },
+      "workspace": "/home/lever/command/workspaces",
+      "cliBackends": {
+        "claude-cli": {
+          "command": "claude",
+          "reliability": {
+            "watchdog": {
+              "fresh": {
+                "noOutputTimeoutMs": 3600000,
+                "minMs": 300000,
+                "maxMs": 3600000
+              },
+              "resume": {
+                "noOutputTimeoutMs": 3600000,
+                "minMs": 300000,
+                "maxMs": 3600000
+              }
+            }
+          }
+        }
+      },
+      "timeoutSeconds": 7200,
+      "maxConcurrent": 5
+    },
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "build",
+        "name": "build",
+        "workspace": "/home/lever/command/workspaces/build",
+        "agentDir": "/root/.openclaw/agents/build/agent",
+        "model": "claude-cli/claude-sonnet-4-6"
+      },
+      {
+        "id": "verify",
+        "name": "verify",
+        "workspace": "/home/lever/command/workspaces/verify",
+        "agentDir": "/root/.openclaw/agents/verify/agent",
+        "model": "claude-cli/claude-sonnet-4-6"
+      },
+      {
+        "id": "secure",
+        "name": "secure",
+        "workspace": "/home/lever/command/workspaces/secure",
+        "agentDir": "/root/.openclaw/agents/secure/agent",
+        "model": "claude-cli/claude-sonnet-4-6"
+      },
+      {
+        "id": "research",
+        "name": "research",
+        "workspace": "/home/lever/command/workspaces/research",
+        "agentDir": "/root/.openclaw/agents/research/agent",
+        "model": "claude-cli/claude-sonnet-4-6"
+      },
+      {
+        "id": "operate",
+        "name": "operate",
+        "workspace": "/home/lever/command/workspaces/operate",
+        "agentDir": "/root/.openclaw/agents/operate/agent",
+        "model": "claude-cli/claude-sonnet-4-6"
+      },
+      {
+        "id": "ceo",
+        "name": "ceo",
+        "workspace": "/home/lever/command/workspaces/ceo",
+        "agentDir": "/root/.openclaw/agents/ceo/agent",
+        "model": "claude-cli/claude-sonnet-4-6"
+      },
+      {
+        "id": "advisor",
+        "name": "advisor",
+        "workspace": "/home/lever/command/workspaces/advisor",
+        "agentDir": "/root/.openclaw/agents/advisor/agent",
+        "model": "claude-cli/claude-opus-4-6"
+      },
+      {
+        "id": "improve",
+        "name": "improve",
+        "workspace": "/home/lever/command/workspaces/improve",
+        "agentDir": "/root/.openclaw/agents/improve/agent",
+        "model": "claude-cli/claude-sonnet-4-6"
+      },
+      {
+        "id": "plan",
+        "name": "plan",
+        "workspace": "/home/lever/command/workspaces/plan",
+        "agentDir": "/home/lever/.openclaw/agents/plan/agent",
+        "model": "claude-cli/claude-sonnet-4-6"
+      },
+      {
+        "id": "critique",
+        "name": "critique",
+        "workspace": "/home/lever/command/workspaces/critique",
+        "agentDir": "/home/lever/.openclaw/agents/critique/agent",
+        "model": "claude-cli/claude-sonnet-4-6"
+      }
+    ]
+  },
+  "tools": {
+    "profile": "coding"
+  },
+  "bindings": [
+    {
+      "type": "route",
+      "agentId": "main",
+      "match": {
+        "channel": "telegram"
+      }
+    }
+  ],
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": false,
+      "dmPolicy": "pairing",
+      "botToken": "8541708860:AAGmNKlIeo5Acn6Wssk6HzQR1QfMNX2GXwk",
+      "groupPolicy": "allowlist",
+      "streaming": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "b503072ecf1907904102b89df0ce4f3bbc6b53ae4a7adda0"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  }
+}
