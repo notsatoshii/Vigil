@@ -35,3 +35,16 @@
 - **Task**: Knowledge ingestion from inbox
 - **Outcome**: SUCCESS
 - **Source**: 20260328-124624-pngwing.com 1.png (png)
+
+---
+## Session: 2026-03-28 (BUILD - Audit Fixes V2)
+**Task:** Implement 6 new bugs from AUDIT_FINDINGS_V2.md (LEVER-P01 through LEVER-P06)
+**Result:** All 6 fixes implemented. Build passes. 1068 tests pass (net +1 vs baseline).
+**Key changes:**
+- FundingRateEngine + BorrowFeeEngine: depthThreshold=0 guard (P01, P02) - same pattern as MarginEngine LEVER-007 fix
+- FundingRateEngine.routeUnmatchedFunding: depositRewards -> receiveUnmatchedFunding (P05)
+- ExecutionEngine: replaced collectTransactionFee with local fee computation + correct USDT flow (P03)
+- InsuranceFund.absorbBadDebt: added `address recipient` param; all callers pass `address(leverVault)` (P04)
+- LeverVault/ILeverVault: added getNetUnrealizedPnL() getter; ExecutionEngine now calls updateUnrealizedPnL on close (P06)
+**Files:** 10 contracts + 8 test files modified
+**Handoff:** /home/lever/command/handoffs/build-20260328-130802-audit-fixes-v2.md

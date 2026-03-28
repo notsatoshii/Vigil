@@ -5,60 +5,191 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vigil</title>
 <style>
-:root{--bg:#08080d;--card:#0e0e15;--border:#1a1a24;--text:#c8c8d0;--dim:#555;--accent:#E6FF2B;--red:#ff4444;--amber:#ffaa00;--green:#22c55e}
-*{margin:0;padding:0;box-sizing:border-box}body{background:var(--bg);color:var(--text);font-family:'SF Mono','Fira Code','JetBrains Mono',monospace;font-size:13px}a{color:var(--accent);text-decoration:none}
-.header{padding:16px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)}.header-left{display:flex;align-items:center;gap:12px}.header h1{color:var(--accent);font-size:16px;letter-spacing:3px;font-weight:700}
-.health-orb{width:10px;height:10px;border-radius:50%;display:inline-block;animation:pulse 2s ease-in-out infinite}.health-orb.ok{background:var(--green);box-shadow:0 0 8px var(--green)}.health-orb.warn{background:var(--amber);box-shadow:0 0 8px var(--amber)}.health-orb.bad{background:var(--red);box-shadow:0 0 8px var(--red)}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
-.header-meta{display:flex;gap:20px;font-size:11px;color:var(--dim)}.header-meta .stat{display:flex;align-items:center;gap:4px}.header-meta .num{color:var(--text);font-weight:600}
-.container{padding:16px 24px;display:flex;flex-direction:column;gap:16px}.row{display:grid;gap:16px}.row-2{grid-template-columns:2fr 1fr}.row-2eq{grid-template-columns:1fr 1fr}
-.card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:16px}.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.card-title{color:var(--dim);font-size:10px;text-transform:uppercase;letter-spacing:1.5px}
-.card-badge{font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600}.card-badge.green{background:rgba(34,197,94,.15);color:var(--green)}.card-badge.red{background:rgba(255,68,68,.15);color:var(--red)}.card-badge.amber{background:rgba(255,170,0,.15);color:var(--amber)}
-.narrative{font-size:14px;line-height:1.6;color:var(--text);margin-bottom:12px}.narrative strong{color:var(--accent);font-weight:600}
-.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.svc{display:flex;align-items:center;gap:6px;font-size:11px;padding:6px 8px;background:var(--bg);border-radius:4px}.svc-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}.svc-dot.up{background:var(--green)}.svc-dot.down{background:var(--red);animation:pulse 1s ease-in-out infinite}.svc-name{color:var(--dim)}
-.pipeline{display:flex;align-items:center;gap:4px;margin:12px 0}.pipe-stage{flex:1;text-align:center;padding:8px 4px;font-size:10px;letter-spacing:1px;text-transform:uppercase;border-radius:4px;background:var(--bg);color:var(--dim);border:1px solid var(--border)}.pipe-stage.active{background:rgba(230,255,43,.1);color:var(--accent);border-color:var(--accent);animation:pulse 2s ease-in-out infinite}.pipe-stage.done{background:rgba(34,197,94,.1);color:var(--green);border-color:var(--green)}.pipe-arrow{color:var(--dim);font-size:10px}
-.kanban{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.kanban-col{background:var(--bg);border-radius:4px;padding:8px;min-height:60px}.kanban-col-title{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--dim);margin-bottom:8px;text-align:center}.kanban-item{font-size:10px;padding:4px 6px;background:var(--card);border-radius:3px;margin-bottom:4px;border-left:2px solid var(--border);word-break:break-word}.kanban-item.active{border-left-color:var(--accent)}.kanban-item.done{border-left-color:var(--green);opacity:.7}
-.feed{list-style:none}.feed-item{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:12px}.feed-item:last-child{border-bottom:none}.feed-time{color:var(--dim);font-size:10px;white-space:nowrap;min-width:60px}.feed-text{color:var(--text)}.feed-ws{color:var(--accent);font-weight:600;font-size:10px;text-transform:uppercase}
-.approval{padding:8px;background:var(--bg);border-radius:4px;margin-bottom:8px;border-left:3px solid var(--amber)}.approval-title{font-size:12px;font-weight:600;margin-bottom:4px}.approval-action{font-size:10px;color:var(--dim)}
-.stats-row{display:flex;gap:16px;flex-wrap:wrap}.stat-box{flex:1;min-width:80px;background:var(--bg);border-radius:4px;padding:10px;text-align:center}.stat-num{font-size:20px;font-weight:700;color:var(--accent)}.stat-label{font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
-.project{display:flex;justify-content:space-between;align-items:center;padding:10px;background:var(--bg);border-radius:4px;margin-bottom:8px}.project-name{font-weight:600;font-size:13px}.project-status{font-size:10px;padding:2px 8px;border-radius:10px}.project-status.testnet{background:rgba(255,170,0,.15);color:var(--amber)}.project-status.live{background:rgba(34,197,94,.15);color:var(--green)}.project-detail{font-size:10px;color:var(--dim)}
-.upcoming-item{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border);font-size:11px}.upcoming-item:last-child{border-bottom:none}.upcoming-name{color:var(--text)}.upcoming-time{color:var(--dim)}
-.cmd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.cmd{font-size:10px;padding:4px 6px;background:var(--bg);border-radius:3px;color:var(--dim)}.cmd span{color:var(--accent)}
-@media(max-width:900px){.row-2,.row-2eq{grid-template-columns:1fr}.kanban{grid-template-columns:repeat(3,1fr)}.svc-grid{grid-template-columns:repeat(2,1fr)}.cmd-grid{grid-template-columns:repeat(2,1fr)}.header{flex-direction:column;gap:8px}.header-meta{flex-wrap:wrap}}
-@media(max-width:500px){.kanban{grid-template-columns:1fr 1fr}.svc-grid{grid-template-columns:1fr}body{font-size:12px}.container{padding:8px 12px}}
+:root{--bg:#06090f;--card:#0b1018;--border:#151d2b;--text:#d0d4dc;--dim:#4a5568;--accent:#38bdf8;--accent2:#0ea5e9;--red:#ef4444;--amber:#f59e0b;--green:#22c55e;--surface:#0f1520}
+*{margin:0;padding:0;box-sizing:border-box}body{background:var(--bg);color:var(--text);font-family:-apple-system,'SF Mono','Fira Code',monospace;font-size:13px;min-height:100vh}a{color:var(--accent);text-decoration:none}
+.header{padding:20px 28px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);background:var(--card)}
+.header-left{display:flex;align-items:center;gap:14px}
+.header-logo{height:28px;opacity:0.9}
+.header h1{color:var(--accent);font-size:15px;letter-spacing:4px;font-weight:600}
+.health-orb{width:8px;height:8px;border-radius:50%;display:inline-block;animation:pulse 3s ease-in-out infinite}
+.health-orb.ok{background:var(--green);box-shadow:0 0 12px rgba(34,197,94,0.4)}
+.health-orb.warn{background:var(--amber);box-shadow:0 0 12px rgba(245,158,11,0.4)}
+.health-orb.bad{background:var(--red);box-shadow:0 0 12px rgba(239,68,68,0.4)}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.9)}}
+.header-meta{display:flex;gap:24px;font-size:11px;color:var(--dim)}.header-meta .stat{display:flex;align-items:center;gap:5px}.header-meta .num{color:var(--text);font-weight:500}
+.container{padding:20px 28px;display:flex;flex-direction:column;gap:18px;max-width:1400px;margin:0 auto}
+.row{display:grid;gap:18px}.row-2{grid-template-columns:5fr 2fr}.row-2eq{grid-template-columns:1fr 1fr}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;transition:border-color 0.2s}
+.card:hover{border-color:rgba(56,189,248,0.15)}
+.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.card-title{color:var(--dim);font-size:10px;text-transform:uppercase;letter-spacing:2px;font-weight:600}
+.card-badge{font-size:10px;padding:3px 10px;border-radius:12px;font-weight:600}
+.card-badge.green{background:rgba(34,197,94,0.1);color:var(--green);border:1px solid rgba(34,197,94,0.2)}
+.card-badge.red{background:rgba(239,68,68,0.1);color:var(--red);border:1px solid rgba(239,68,68,0.2)}
+.card-badge.amber{background:rgba(245,158,11,0.1);color:var(--amber);border:1px solid rgba(245,158,11,0.2)}
+.narrative{font-size:13px;line-height:1.7;color:var(--text);margin-bottom:14px}
+.narrative strong{color:var(--accent);font-weight:600}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.svc{display:flex;align-items:center;gap:7px;font-size:11px;padding:7px 10px;background:var(--surface);border-radius:6px;border:1px solid transparent}
+.svc.down{border-color:rgba(239,68,68,0.3)}
+.svc-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.svc-dot.up{background:var(--green)}
+.svc-dot.down{background:var(--red);animation:pulse 1.5s ease-in-out infinite}
+.svc-name{color:var(--dim);font-size:10px}
+.pipeline{display:flex;align-items:center;gap:2px;margin:14px 0}
+.pipe-stage{flex:1;text-align:center;padding:10px 4px;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;border-radius:6px;background:var(--surface);color:var(--dim);border:1px solid var(--border);transition:all 0.3s}
+.pipe-stage.active{background:rgba(56,189,248,0.08);color:var(--accent);border-color:var(--accent);box-shadow:0 0 16px rgba(56,189,248,0.1)}
+.pipe-stage.done{background:rgba(34,197,94,0.08);color:var(--green);border-color:rgba(34,197,94,0.3)}
+.pipe-arrow{color:var(--border);font-size:14px;margin:0 2px}
+.kanban{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.kanban-col{background:var(--surface);border-radius:6px;padding:10px;min-height:50px}
+.kanban-col-title{font-size:8px;text-transform:uppercase;letter-spacing:1.5px;color:var(--dim);margin-bottom:8px;text-align:center;font-weight:600}
+.kanban-item{font-size:10px;padding:5px 8px;background:var(--card);border-radius:4px;margin-bottom:4px;border-left:2px solid var(--border);word-break:break-word;line-height:1.4}
+.kanban-item.active{border-left-color:var(--accent)}
+.kanban-item.done{border-left-color:var(--green);opacity:0.6}
+.kanban-empty{font-size:9px;color:#1a2435;text-align:center;padding:8px}
+.feed{list-style:none}
+.feed-item{display:flex;gap:12px;padding:9px 0;border-bottom:1px solid var(--border);font-size:12px;align-items:baseline}
+.feed-item:last-child{border-bottom:none}
+.feed-time{color:var(--dim);font-size:9px;white-space:nowrap;min-width:55px;font-weight:500}
+.feed-text{color:var(--text);line-height:1.4}
+.feed-ws{color:var(--accent);font-weight:700;font-size:9px;text-transform:uppercase;letter-spacing:0.5px;min-width:65px}
+.approval{padding:10px 12px;background:var(--surface);border-radius:6px;margin-bottom:8px;border-left:3px solid var(--amber)}
+.approval.critical{border-left-color:var(--red)}
+.approval-title{font-size:12px;font-weight:600;margin-bottom:3px}
+.approval-action{font-size:10px;color:var(--dim)}
+.approval-action code{background:var(--card);padding:1px 5px;border-radius:3px;color:var(--accent);font-size:10px}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stat-box{background:var(--surface);border-radius:6px;padding:14px;text-align:center;border:1px solid var(--border)}
+.stat-num{font-size:22px;font-weight:700;color:var(--accent);line-height:1}
+.stat-label{font-size:8px;color:var(--dim);text-transform:uppercase;letter-spacing:1.5px;margin-top:6px;font-weight:600}
+.project{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:var(--surface);border-radius:6px;margin-bottom:6px;border:1px solid var(--border)}
+.project-name{font-weight:600;font-size:12px}
+.project-status{font-size:9px;padding:3px 10px;border-radius:12px;font-weight:600;letter-spacing:0.5px}
+.project-status.testnet{background:rgba(245,158,11,0.1);color:var(--amber);border:1px solid rgba(245,158,11,0.2)}
+.project-status.live{background:rgba(34,197,94,0.1);color:var(--green);border:1px solid rgba(34,197,94,0.2)}
+.project-detail{font-size:10px;color:var(--dim);margin-top:2px}
+.upcoming-item{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:11px}
+.upcoming-item:last-child{border-bottom:none}
+.upcoming-name{color:var(--text)}.upcoming-time{color:var(--accent);font-weight:500;font-size:10px}
+.cmd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+.cmd{font-size:10px;padding:6px 8px;background:var(--surface);border-radius:5px;color:var(--dim);border:1px solid var(--border)}
+.cmd span{color:var(--accent);font-weight:600}
+.section-label{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--dim);margin:12px 0 8px;font-weight:600}
+@media(max-width:900px){.row-2,.row-2eq{grid-template-columns:1fr}.kanban{grid-template-columns:repeat(3,1fr)}.svc-grid{grid-template-columns:repeat(2,1fr)}.cmd-grid{grid-template-columns:repeat(2,1fr)}.header{flex-direction:column;gap:10px;text-align:center}.header-meta{flex-wrap:wrap;justify-content:center}}
+@media(max-width:500px){.kanban{grid-template-columns:1fr 1fr}.svc-grid{grid-template-columns:1fr}body{font-size:12px}.container{padding:12px 14px}.stats-row{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
 <body>
-<div class="header"><div class="header-left"><span class="health-orb" id="health-orb"></span><h1>VIGIL</h1></div><div class="header-meta"><div class="stat">Sessions: <span class="num" id="sessions-today">0</span></div><div class="stat">RAM: <span class="num" id="ram-pct">0%</span></div><div class="stat">Disk: <span class="num" id="disk-pct">0%</span></div><div class="stat">CPU: <span class="num" id="cpu-load">0</span></div><div class="stat" id="updated-at" style="color:#333">loading...</div></div></div>
+<div class="header">
+<div class="header-left"><span class="health-orb" id="health-orb"></span><img src="vigil-logo.png" class="header-logo" alt="" onerror="this.style.display='none'"><h1>VIGIL</h1></div>
+<div class="header-meta"><div class="stat">Sessions: <span class="num" id="sessions-today">-</span></div><div class="stat">RAM: <span class="num" id="ram-pct">-</span></div><div class="stat">Disk: <span class="num" id="disk-pct">-</span></div><div class="stat">Load: <span class="num" id="cpu-load">-</span></div><div class="stat" id="updated-at" style="opacity:0.3">syncing...</div></div>
+</div>
 <div class="container">
-<div class="row row-2"><div class="card"><div class="card-header"><span class="card-title">Status</span><span class="card-badge" id="health-badge">...</span></div><div class="narrative" id="narrative">Loading...</div><div class="svc-grid" id="services"></div></div><div class="card"><div class="card-header"><span class="card-title">Budget + Projects</span></div><div class="stats-row"><div class="stat-box"><div class="stat-num" id="sessions-num">0</div><div class="stat-label">Sessions Today</div></div><div class="stat-box"><div class="stat-num" id="sources-num">0</div><div class="stat-label">Sources</div></div><div class="stat-box"><div class="stat-num" id="entities-num">0</div><div class="stat-label">Entities</div></div></div><div style="margin-top:12px"><div class="card-title" style="margin-bottom:8px">Projects</div><div id="projects"></div></div></div></div>
-<div class="card"><div class="card-header"><span class="card-title">Pipeline + Task Board</span><span style="font-size:9px;color:var(--dim)">PLAN > CRITIQUE > BUILD > VERIFY</span></div><div class="pipeline" id="pipeline"></div><div class="kanban" id="kanban"></div></div>
-<div class="row row-2"><div class="card"><div class="card-header"><span class="card-title">Activity Feed</span></div><ul class="feed" id="feed"></ul></div><div class="card"><div class="card-header"><span class="card-title">Needs Attention</span><span class="card-badge" id="attention-badge">0</span></div><div id="approvals"></div><div style="margin-top:12px"><div class="card-title" style="margin-bottom:8px">Upcoming</div><div id="upcoming"></div></div></div></div>
-<div class="row row-2eq"><div class="card"><div class="card-header"><span class="card-title">Latest Advisor Brief</span></div><div class="narrative" id="advisor" style="font-size:12px;color:#999"></div></div><div class="card"><div class="card-header"><span class="card-title">Quick Commands (Telegram)</span></div><div class="cmd-grid"><div class="cmd"><span>/status</span> health</div><div class="cmd"><span>/brief</span> advisor</div><div class="cmd"><span>/approve N</span> accept</div><div class="cmd"><span>/reject N</span> decline</div><div class="cmd"><span>/intent list</span> queue</div><div class="cmd"><span>/intent add</span> new task</div></div><div style="margin-top:12px"><div class="card-title" style="margin-bottom:8px">Active Intentions</div><div id="intentions" style="font-size:11px;color:#999"></div></div></div></div>
+<div class="row row-2">
+<div class="card">
+<div class="card-header"><span class="card-title">System Status</span><span class="card-badge" id="health-badge">...</span></div>
+<div class="narrative" id="narrative">Connecting to Vigil...</div>
+<div class="svc-grid" id="services"></div>
+</div>
+<div class="card">
+<div class="card-header"><span class="card-title">Overview</span></div>
+<div class="stats-row"><div class="stat-box"><div class="stat-num" id="sessions-num">-</div><div class="stat-label">Sessions</div></div><div class="stat-box"><div class="stat-num" id="sources-num">-</div><div class="stat-label">Sources</div></div><div class="stat-box"><div class="stat-num" id="entities-num">-</div><div class="stat-label">Entities</div></div></div>
+<div class="section-label" style="margin-top:16px">Projects</div>
+<div id="projects"></div>
+</div>
+</div>
+<div class="card">
+<div class="card-header"><span class="card-title">Pipeline</span><span style="font-size:9px;color:var(--dim);letter-spacing:1px">PLAN &rarr; CRITIQUE &rarr; BUILD &rarr; VERIFY</span></div>
+<div class="pipeline" id="pipeline"></div>
+<div class="kanban" id="kanban"></div>
+</div>
+<div class="row row-2">
+<div class="card">
+<div class="card-header"><span class="card-title">Activity</span></div>
+<ul class="feed" id="feed"></ul>
+</div>
+<div class="card">
+<div class="card-header"><span class="card-title">Attention Required</span><span class="card-badge" id="attention-badge">0</span></div>
+<div id="approvals"></div>
+<div class="section-label">Scheduled</div>
+<div id="upcoming"></div>
+</div>
+</div>
+<div class="row row-2eq">
+<div class="card">
+<div class="card-header"><span class="card-title">Advisor Brief</span></div>
+<div id="advisor" style="font-size:12px;color:var(--dim);line-height:1.6"></div>
+</div>
+<div class="card">
+<div class="card-header"><span class="card-title">Commands</span></div>
+<div class="cmd-grid"><div class="cmd"><span>/status</span> health</div><div class="cmd"><span>/brief</span> advisor</div><div class="cmd"><span>/approve N</span></div><div class="cmd"><span>/reject N</span></div><div class="cmd"><span>/intent list</span></div><div class="cmd"><span>/intent add</span></div></div>
+<div class="section-label">Intentions</div>
+<div id="intentions" style="font-size:11px;color:var(--dim)"></div>
+</div>
+</div>
 </div>
 <script>
-function ago(e){const s=Math.floor(Date.now()/1000)-e;if(s<60)return s+'s ago';if(s<3600)return Math.floor(s/60)+'m ago';if(s<86400)return Math.floor(s/3600)+'h ago';return Math.floor(s/86400)+'d ago'}
-function sv(n,u){return'<div class="svc"><span class="svc-dot '+(u?'up':'down')+'"></span><span class="svc-name">'+n+'</span></div>'}
-function kb(t,items,c){let h='<div class="kanban-col"><div class="kanban-col-title">'+t+'</div>';if(items&&items.length)items.forEach(function(i){h+='<div class="kanban-item '+c+'">'+i+'</div>'});else h+='<div style="font-size:10px;color:#333;text-align:center">-</div>';return h+'</div>'}
+function ago(e){if(!e)return'--';var s=Math.floor(Date.now()/1000)-e;if(s<0)return'just now';if(s<60)return s+'s ago';if(s<3600)return Math.floor(s/60)+'m ago';if(s<86400)return Math.floor(s/3600)+'h ago';return Math.floor(s/86400)+'d ago'}
+function sv(n,u){return'<div class="svc'+(u?'':' down')+'"><span class="svc-dot '+(u?'up':'down')+'"></span><span class="svc-name">'+n+'</span></div>'}
+function kc(t,items,c){var h='<div class="kanban-col"><div class="kanban-col-title">'+t+'</div>';if(items&&items.length)items.forEach(function(i){h+='<div class="kanban-item '+c+'">'+i+'</div>'});else h+='<div class="kanban-empty">&middot;</div>';return h+'</div>'}
 async function refresh(){try{var r=await fetch('/data.json?'+Date.now());var d=await r.json();
-document.getElementById('health-orb').className='health-orb '+(d.system.health==='healthy'?'ok':d.system.ramPct>90?'bad':'warn');
-document.getElementById('sessions-today').textContent=d.sessions.today;document.getElementById('ram-pct').textContent=d.system.ramPct+'%';document.getElementById('disk-pct').textContent=d.system.diskPct+'%';document.getElementById('cpu-load').textContent=d.system.cpuLoad;document.getElementById('updated-at').textContent=ago(d.epoch);
-var hb=document.getElementById('health-badge');hb.textContent=d.system.health==='healthy'?'ALL SYSTEMS GO':'ISSUES DETECTED';hb.className='card-badge '+(d.system.health==='healthy'?'green':'red');
-var su=Object.values(d.services).filter(function(v){return v}).length,st=Object.keys(d.services).length;var nr='<strong>'+su+'/'+st+'</strong> services running. RAM <strong>'+d.system.ramPct+'%</strong>. <strong>'+d.sessions.today+'</strong> sessions today. ';if(d.sessions.deadLetters>0)nr+='<span style="color:var(--red)">'+d.sessions.deadLetters+' failed messages.</span> ';if(d.sessions.pendingApprovals>0)nr+='<strong style="color:var(--amber)">'+d.sessions.pendingApprovals+' items need approval.</strong>';document.getElementById('narrative').innerHTML=nr;
-var sn={leverFrontend:'frontend',leverOracle:'oracle',leverAccrue:'accrue',openclawGateway:'gateway',vigilInbox:'inbox',vigilTelegram:'telegram',vigilDashboard:'dashboard',caddy:'caddy'};var sh='';for(var k in d.services)sh+=sv(sn[k]||k,d.services[k]);document.getElementById('services').innerHTML=sh;
-document.getElementById('sessions-num').textContent=d.sessions.today;document.getElementById('sources-num').textContent=d.knowledge.sources;document.getElementById('entities-num').textContent=d.knowledge.entities;
-document.getElementById('projects').innerHTML='<div class="project"><div><div class="project-name">LEVER Protocol</div><div class="project-detail">'+d.projects.lever.bugsTotal+' audit items</div></div><span class="project-status testnet">TESTNET</span></div><div class="project"><div><div class="project-name">Landing Page</div><div class="project-detail">Redesign in progress</div></div><span class="project-status live">LIVE</span></div>';
-var stages=['PLAN','CRITIQUE','BUILD','VERIFY'];var ph='';stages.forEach(function(s,i){var c='';var ip=(d.kanban.inProgress||[]).join(' ').toUpperCase();if(ip.indexOf(s)>=0)c='active';if(i>0)ph+='<span class="pipe-arrow">></span>';ph+='<div class="pipe-stage '+c+'">'+s+'</div>'});document.getElementById('pipeline').innerHTML=ph;
-document.getElementById('kanban').innerHTML=kb('Backlog',d.kanban.planned,'')+kb('Planned',d.kanban.planned,'')+kb('In Progress',d.kanban.inProgress,'active')+kb('In Review',d.kanban.inReview,'active')+kb('Done',d.kanban.done,'done');
-var fh='';if(d.recentSessions&&d.recentSessions.length){d.recentSessions.reverse().forEach(function(s){var p=s.split('|');var t=p[0]?p[0].trim().replace(/[\[\]]/g,''):'';var rest=p.slice(1).join('|').trim();var ws=rest.split(' ')[0]||'';var desc=rest.substring(ws.length).trim();var ts=t;try{var dt=new Date(t);if(!isNaN(dt))ts=ago(Math.floor(dt.getTime()/1000))}catch(e){}fh+='<li class="feed-item"><span class="feed-time">'+ts+'</span><span class="feed-ws">'+ws+'</span><span class="feed-text">'+desc+'</span></li>'})}
-if(d.recentHandoffs&&d.recentHandoffs.length){d.recentHandoffs.forEach(function(h){fh+='<li class="feed-item"><span class="feed-time">'+ago(h.time)+'</span><span class="feed-ws">HANDOFF</span><span class="feed-text">'+h.name+'</span></li>'})}
-if(!fh)fh='<li class="feed-item"><span class="feed-text" style="color:var(--dim)">No recent activity</span></li>';document.getElementById('feed').innerHTML=fh;
-var ah='';if(d.sessions.pendingApprovals>0)ah+='<div class="approval"><div class="approval-title">'+d.sessions.pendingApprovals+' pending approval(s)</div><div class="approval-action">Send /approve N or /reject N on Telegram</div></div>';if(d.sessions.deadLetters>0)ah+='<div class="approval" style="border-left-color:var(--red)"><div class="approval-title">'+d.sessions.deadLetters+' failed message(s)</div><div class="approval-action">OPERATE will retry on next self-check</div></div>';if(!ah)ah='<div style="font-size:11px;color:var(--dim)">Nothing needs attention.</div>';document.getElementById('approvals').innerHTML=ah;
-var ac=d.sessions.pendingApprovals+d.sessions.deadLetters;var ab=document.getElementById('attention-badge');ab.textContent=ac;ab.className='card-badge '+(ac>0?'amber':'green');
-var uh='';if(d.nextJobs&&d.nextJobs.length)d.nextJobs.forEach(function(j){uh+='<div class="upcoming-item"><span class="upcoming-name">'+j.name+'</span><span class="upcoming-time">'+j.next+'</span></div>'});if(!uh)uh='<div style="font-size:11px;color:var(--dim)">No upcoming jobs</div>';document.getElementById('upcoming').innerHTML=uh;
-document.getElementById('advisor').innerHTML=(d.advisorSummary||'No briefs yet. First runs at 6am UTC.').replace(/\\n/g,'<br>');
-var ih='';if(d.intentions&&d.intentions.length)d.intentions.forEach(function(i){ih+='<div style="margin-bottom:4px">'+i+'</div>'});else ih='<div style="color:var(--dim)">No active intentions</div>';document.getElementById('intentions').innerHTML=ih;
-}catch(e){console.error('Refresh:',e)}}
-refresh();setInterval(refresh,30000);
+document.getElementById('health-orb').className='health-orb '+(d.system.health==='healthy'?'ok':d.system.ramPct>85?'bad':'warn');
+document.getElementById('sessions-today').textContent=d.sessions.today;
+document.getElementById('ram-pct').textContent=d.system.ramPct+'%';
+document.getElementById('disk-pct').textContent=d.system.diskPct+'%';
+document.getElementById('cpu-load').textContent=d.system.cpuLoad;
+document.getElementById('updated-at').textContent=ago(d.epoch);
+document.getElementById('updated-at').style.opacity='0.5';
+var hb=document.getElementById('health-badge');
+hb.textContent=d.system.health==='healthy'?'OPERATIONAL':'DEGRADED';
+hb.className='card-badge '+(d.system.health==='healthy'?'green':'amber');
+var su=Object.values(d.services).filter(function(v){return v}).length;
+var st=Object.keys(d.services).length;
+var nr='<strong>'+su+'/'+st+'</strong> services operational. ';
+nr+='Memory at <strong>'+d.system.ramPct+'%</strong>. ';
+nr+='<strong>'+d.sessions.today+'</strong> agent sessions today. ';
+if(d.sessions.gatewayErrors>0)nr+='<span style="color:var(--amber)">'+d.sessions.gatewayErrors+' gateway errors. </span>';
+if(d.sessions.deadLetters>0)nr+='<span style="color:var(--red)">'+d.sessions.deadLetters+' failed messages queued. </span>';
+if(d.sessions.pendingApprovals>0)nr+='<strong style="color:var(--amber)">'+d.sessions.pendingApprovals+' awaiting approval.</strong>';
+document.getElementById('narrative').innerHTML=nr;
+var sn={leverFrontend:'frontend :3000',leverOracle:'oracle',leverAccrue:'accrue-keeper',openclawGateway:'gateway :18789',vigilInbox:'inbox',vigilTelegram:'telegram',vigilDashboard:'dashboard :8080',caddy:'caddy :80'};
+var sh='';for(var k in d.services)sh+=sv(sn[k]||k,d.services[k]);
+document.getElementById('services').innerHTML=sh;
+document.getElementById('sessions-num').textContent=d.sessions.today;
+document.getElementById('sources-num').textContent=d.knowledge.sources;
+document.getElementById('entities-num').textContent=d.knowledge.entities;
+var ph='';
+['PLAN','CRITIQUE','BUILD','VERIFY'].forEach(function(s,i){
+var c='';var ip=(d.kanban.inProgress||[]).join(' ').toUpperCase();
+if(ip.indexOf(s)>=0)c='active';
+if(i>0)ph+='<span class="pipe-arrow">&rsaquo;</span>';
+ph+='<div class="pipe-stage '+c+'">'+s+'</div>'});
+document.getElementById('pipeline').innerHTML=ph;
+document.getElementById('kanban').innerHTML=kc('Backlog',d.kanban.planned,'')+kc('Planned',d.kanban.planned,'')+kc('In Progress',d.kanban.inProgress,'active')+kc('In Review',d.kanban.inReview,'active')+kc('Done',d.kanban.done,'done');
+document.getElementById('projects').innerHTML='<div class="project"><div><div class="project-name">LEVER Protocol</div><div class="project-detail">'+d.projects.lever.bugsTotal+' audit items &middot; Base Sepolia</div></div><span class="project-status testnet">TESTNET</span></div><div class="project"><div><div class="project-name">Landing Page</div><div class="project-detail">Institutional redesign</div></div><span class="project-status live">ACTIVE</span></div>';
+var fh='';
+if(d.recentHandoffs&&d.recentHandoffs.length){d.recentHandoffs.forEach(function(h){fh+='<li class="feed-item"><span class="feed-time">'+ago(h.time)+'</span><span class="feed-ws">HANDOFF</span><span class="feed-text">'+h.name+(h.summary?' &middot; '+h.summary:'')+'</span></li>'})}
+if(d.recentSessions&&d.recentSessions.length){d.recentSessions.slice().reverse().forEach(function(s){var p=s.split('|');var t=p[0]?p[0].trim().replace(/[\[\]]/g,''):'';var rest=p.slice(1).join('|').trim();var ws=rest.split(' ')[0]||'';var desc=rest.substring(ws.length).trim();var ts=t;try{var dt=new Date(t);if(!isNaN(dt))ts=ago(Math.floor(dt.getTime()/1000))}catch(e){}fh+='<li class="feed-item"><span class="feed-time">'+ts+'</span><span class="feed-ws">'+ws+'</span><span class="feed-text">'+desc+'</span></li>'})}
+if(!fh)fh='<li class="feed-item"><span class="feed-text" style="color:var(--dim)">No activity recorded yet.</span></li>';
+document.getElementById('feed').innerHTML=fh;
+var ah='';
+if(d.sessions.pendingApprovals>0){var pi=d.sessions.pendingItems||'Items pending review';ah+='<div class="approval"><div class="approval-title">'+d.sessions.pendingApprovals+' Pending Approval'+(d.sessions.pendingApprovals>1?'s':'')+'</div><div class="approval-action">'+pi.replace(/\\n/g,'<br>')+'<br><code>/approve N</code> or <code>/reject N</code></div></div>'}
+if(d.sessions.deadLetters>0){ah+='<div class="approval critical"><div class="approval-title">'+d.sessions.deadLetters+' Failed Message'+(d.sessions.deadLetters>1?'s':'')+'</div><div class="approval-action">OPERATE will retry automatically.</div></div>'}
+if(d.sessions.gatewayErrors>2){ah+='<div class="approval"><div class="approval-title">Gateway Errors: '+d.sessions.gatewayErrors+'</div><div class="approval-action">Check telegram-gateway.log</div></div>'}
+if(!ah)ah='<div style="font-size:11px;color:var(--dim);padding:8px 0">All clear. Nothing needs attention.</div>';
+document.getElementById('approvals').innerHTML=ah;
+var ac=(d.sessions.pendingApprovals||0)+(d.sessions.deadLetters||0);
+var ab=document.getElementById('attention-badge');ab.textContent=ac;ab.className='card-badge '+(ac>0?'amber':'green');
+var uh='';
+if(d.nextJobs&&d.nextJobs.length)d.nextJobs.forEach(function(j){uh+='<div class="upcoming-item"><span class="upcoming-name">'+j.name.replace(/-/g,' ')+'</span><span class="upcoming-time">'+j.next+'</span></div>'});
+if(!uh)uh='<div style="font-size:11px;color:var(--dim)">No scheduled jobs.</div>';
+document.getElementById('upcoming').innerHTML=uh;
+document.getElementById('advisor').innerHTML=(d.advisorSummary||'First brief runs at 6:00 UTC.').replace(/\\n/g,'<br>');
+var ih='';if(d.intentions&&d.intentions.length)d.intentions.forEach(function(i){ih+='<div style="margin-bottom:5px;font-size:11px;color:var(--text)">'+i+'</div>'});else ih='<div style="color:var(--dim)">Queue empty.</div>';
+document.getElementById('intentions').innerHTML=ih;
+}catch(e){document.getElementById('narrative').textContent='Connection lost. Retrying...';console.error(e)}}
+refresh();setInterval(refresh,15000);
 </script>
 </body>
 </html>

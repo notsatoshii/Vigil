@@ -16,8 +16,8 @@ for svc in "${ACTIVE_SERVICES[@]}"; do
     fi
 done
 
-# Check OpenClaw gateway
-if ! systemctl --user is-active --quiet openclaw-gateway 2>/dev/null; then
+# Check OpenClaw gateway (system service, not user service)
+if ! systemctl is-active --quiet openclaw-gateway 2>/dev/null; then
     PROBLEMS+=("SERVICE_DOWN:openclaw-gateway")
 fi
 

@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-03-28T12:57:10Z",
-  "epoch": 1774702630,
+  "timestamp": "2026-03-28T13:12:09Z",
+  "epoch": 1774703529,
   "system": {
-    "health": "problems_detected",
-    "healthTime": "2026-03-28T12:00:01Z",
-    "ramUsed": 6415,
+    "health": "healthy",
+    "healthTime": "2026-03-28T13:09:19Z",
+    "ramUsed": 6077,
     "ramTotal": 15993,
-    "ramPct": 40,
+    "ramPct": 37,
     "diskPct": 18,
     "diskUsed": "35G",
     "diskTotal": "193G",
-    "cpuLoad": "2.40",
-    "uptime": "2 weeks, 2 days, 8 hours, 27 minutes"
+    "cpuLoad": "1.21",
+    "uptime": "2 weeks, 2 days, 8 hours, 42 minutes"
   },
   "services": {
     "leverFrontend": 1,
@@ -25,8 +25,9 @@
   },
   "sessions": {
     "active": 2,
-    "today": 2,
+    "today": 4,
     "pendingApprovals": 1,
+    "pendingItems": "",
     "deadLetters": 0,
     "gatewayErrors": 3
   },
@@ -44,8 +45,8 @@
   "intentions": ["1. Complete Vigil migration (Phase 1 through Phase 9)"],
   "advisorSummary": "",
   "recentSessions": ["[2026-03-28T08:10:00Z] MIGRATION | Phase 0: Foundation","[2026-03-28T10:55:18Z] RESEARCH | Inbox ingestion: test-note.txt","[2026-03-28T12:01:54Z] RESEARCH | Inbox ingestion: 20260328-115423-PredictionIndex2025-2026.pdf","[2026-03-28T12:04:32Z] RESEARCH | Inbox ingestion: 20260328-115813-PredictionIndex2025-2026.pdf","[2026-03-28T12:36:23Z] RESEARCH | Inbox ingestion: 20260328-123557-photo-20260328-123557.jpg","[2026-03-28T12:47:13Z] RESEARCH | Inbox ingestion: 20260328-124624-pngwing.com 1.png"],
-  "recentHandoffs": [{"name":"plan-landing-page-overhaul-v2","time":1774700648,"summary":"**Status:** DRAFT, awaiting critique"},{"name":"operate-20260328-120326","time":1774699406,"summary":"## Task"},{"name":"build-landing-institutional-redesign","time":1774699016,"summary":"**Date:** 2026-03-28"},{"name":"verify-landing-page","time":1774698423,"summary":"**File reviewed:** /home/claude/lever-landing/index.html"},{"name":"build-landing-improvements","time":1774698139,"summary":"**Workstream:** BUILD"}],
-  "nextJobs": [{"name":"research-evening-scan","next":"research"},{"name":"operate-vigil-selfcheck","next":"operate"},{"name":"advisor-daily-brief","next":"advisor"},{"name":"research-morning-scan","next":"research"},{"name":"secure-weekly-audit","next":"secure"},{"name":"ceo-weekly-brief","next":"ceo"},{"name":"improve-weekly-review","next":"improve"}],
+  "recentHandoffs": [{"name":"build-landing-fixes-v2","time":1774703532,"summary":"All 8 issues from the screenshot review have been fixed in `/home/claude/lever-l"},{"name":"verify-verdict","time":1774703363,"summary":"No verdict file produced"},{"name":"build-20260328-130802-audit-fixes-v2","time":1774703325,"summary":"All 6 audit findings from AUDIT_FINDINGS_V2.md have been implemented."},{"name":"build-landing-overhaul-v2","time":1774702679,"summary":"Major visual overhaul of the LEVER landing page. Strip old grid system and vanil"},{"name":"plan-landing-page-overhaul-v2","time":1774700648,"summary":"The page should feel like walking into a private capital desk that happens to be"}],
+  "nextJobs": [{"name":"research-evening-scan","next":"in 7h"},{"name":"operate-vigil-selfcheck","next":"in 11h"},{"name":"advisor-daily-brief","next":"in 17h"},{"name":"research-morning-scan","next":"in 19h"},{"name":"secure-weekly-audit","next":"in 2d"},{"name":"ceo-weekly-brief","next":"in 2d"},{"name":"improve-weekly-review","next":"in 4d"}],
   "projects": {
     "lever": {
       "status": "testnet",

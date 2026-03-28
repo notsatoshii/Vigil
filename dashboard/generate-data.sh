@@ -71,6 +71,9 @@ PENDING_ADVISOR=$(echo "$PENDING_ADVISOR" | tr -d '[:space:]')
 [ -z "$PENDING_ADVISOR" ] && PENDING_ADVISOR=0
 TOTAL_PENDING=$((PENDING_SECURE + PENDING_ADVISOR))
 
+# Get actual pending items text
+PENDING_ITEMS=$(sed -n '/^## PENDING MASTER APPROVAL/,/^---/{/^## PENDING/d;/^---/d;/^\*/d;/^$/d;p;}' "$BRAIN/INTENTIONS.md" 2>/dev/null | head -5 | sed 's/"/\\"/g' | tr '\n' '|' | sed 's/|$//;s/|/\\n/g')
+
 # Active intentions
 INTENTIONS=$(sed -n '/^## ACTIVE/,/^---/{/^## ACTIVE/d;/^---/d;/^\*/d;/^$/d;p;}' "$BRAIN/INTENTIONS.md" 2>/dev/null | head -5 | while read -r line; do
     printf '"%s",' "$(echo "$line" | sed 's/"/\\"/g')"
@@ -79,16 +82,21 @@ done | sed 's/,$//')
 # Latest advisor brief summary (first few lines after "## Latest Brief")
 ADVISOR_SUMMARY=$(sed -n '/^## Latest Brief/,/^---/{/^## Latest/d;/^---/d;/^\*/d;p;}' "$BRAIN/ADVISOR_BRIEFS.md" 2>/dev/null | head -5 | sed 's/"/\\"/g' | tr '\n' '|' | sed 's/|$//;s/|/\\n/g')
 
-# Upcoming cron jobs (next 3)
-NEXT_JOBS=$(su - lever -c "openclaw cron list 2>/dev/null" | tail -n +2 | head -7 | awk '{print $2, $NF, $(NF-1)}' | while read -r name status next; do
-    printf '{"name":"%s","next":"%s"},' "$name" "$next"
+# Upcoming cron jobs with actual next-run times
+NEXT_JOBS=$(su - lever -c "openclaw cron list 2>/dev/null" | tail -n +2 | head -7 | while read -r id name schedule next_label rest; do
+    # Extract the "in Xh" or "in Xd" part
+    next_time=$(echo "$rest" | grep -o 'in [0-9]*[hmd]' | head -1)
+    [ -z "$next_time" ] && next_time="pending"
+    printf '{"name":"%s","next":"%s"},' "$name" "$next_time"
 done | sed 's/,$//')
 
-# Recent handoffs (last 5)
+# Recent handoffs (last 5) with clean summaries
 RECENT_HANDOFFS=$(ls -t /home/lever/command/handoffs/*.md 2>/dev/null | head -5 | while read -r f; do
     name=$(basename "$f" .md)
     mtime=$(stat -c %Y "$f" 2>/dev/null || echo "0")
-    summary=$(head -3 "$f" | tail -1 | sed 's/"/\\"/g' | cut -c1-100)
+    # Get the first line that has actual content (skip headers and metadata)
+    summary=$(grep -m1 "^[A-Z]" "$f" 2>/dev/null | sed 's/"/\\"/g' | cut -c1-80)
+    [ -z "$summary" ] && summary=$(sed -n '3p' "$f" 2>/dev/null | sed 's/[#*]//g;s/"/\\"/g' | cut -c1-80)
     printf '{"name":"%s","time":%s,"summary":"%s"},' "$name" "$mtime" "$summary"
 done | sed 's/,$//')
 
@@ -133,6 +141,7 @@ cat > "$OUTPUT" << JSONEOF
     "active": $ACTIVE_SESSIONS,
     "today": $SESSIONS_TODAY,
     "pendingApprovals": $TOTAL_PENDING,
+    "pendingItems": "$PENDING_ITEMS",
     "deadLetters": $DEAD_LETTERS,
     "gatewayErrors": $GW_ERRORS
   },
