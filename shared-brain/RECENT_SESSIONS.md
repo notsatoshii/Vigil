@@ -66,3 +66,29 @@
 - EXECUTION_ENGINE_ROLE must be granted on LeverVault and InsuranceFund post-deployment
 **Tests:** 6/6 audit tests pass. Full suite 1074/1078 (4 pre-existing PriceSmoothing failures)
 **Verdict:** /home/lever/command/handoffs/verify-verdict.md
+
+---
+## OPERATE | 2026-03-28 13:35-13:58 UTC
+
+**Task**: System check, log review, cleanup.
+
+**Findings**:
+- All 8 services ACTIVE (openclaw-gateway, vigil-telegram, vigil-dashboard, vigil-inbox, lever-frontend, lever-oracle, lever-accrue-keeper, caddy)
+- Disk: 18% / RAM: 48% — no resource concerns
+- Inbox: clean, no pending files
+- Telegram gateway: clean since 12:46, tasks completing normally (77s-930s range)
+- Inbox watcher: all files processed successfully (PDFs, photos, PNGs)
+
+**Issue found and resolved**:
+- Stale `needs-escalation` file from 12:00 health check. Health check caught openclaw-gateway mid-restart (it was being restarted frequently during development). Auto-restart failed with "Failed to connect to bus: No medium found" (transient systemd bus issue during rapid restart cycle). Service recovered on its own. Flag cleared.
+- Gateway also logged `sendChatAction` failures ~12:04-12:05 and a model warmup error for `claude-cli/claude-sonnet-4-6` at the same time. Both resolved — no ongoing errors.
+
+**What's in flight** (from KANBAN):
+- LEVER-BUG-1: In PLANNED state (plan written: handoffs/plan-20260328-133419.md)
+- LEVER-BUGs 2-9: In BACKLOG, awaiting planning
+- Scheduler running: 5 active sessions, 8 dispatched today
+- CRITIQUE sessions for lever-bug-2, 3, 4 completed and ready for BUILD
+
+**Recommendations**:
+- The health-check escalation false alarm pattern will repeat whenever openclaw-gateway is restarted during active development. Consider adding a 30s grace period before flagging a service as "down" (check twice with delay).
+- No action needed from Master.
