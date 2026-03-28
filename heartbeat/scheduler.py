@@ -394,6 +394,7 @@ def dispatch_pipeline_work():
 
     # Fill remaining slots with support work
     remaining = available - dispatched
+    log.info(f"Support check: remaining={remaining}, dispatched={dispatched}")
     if remaining > 0 and not any_agent_running("improve"):
         pid = dispatch_agent("improve",
             "Quick product review. Open http://localhost:3000 in browser. Check 2-3 pages. Write findings to shared-brain/IMPROVE_PROPOSALS.md.",
@@ -422,11 +423,8 @@ def dispatch_pipeline_work():
 
 
 def any_agent_running(agent):
-    """Check if an agent type is currently running."""
-    for task in state.tasks.values():
-        if task.agent_pid > 0 and is_process_alive(task.agent_pid):
-            return True
-    # Also check for support tasks
+    """Check if a specific agent type is currently running."""
+    # Check via ps for the specific agent
     try:
         result = subprocess.run(
             ["bash", "-c", f"ps aux | grep 'openclaw agent.*--agent {agent}' | grep -v grep | wc -l"],

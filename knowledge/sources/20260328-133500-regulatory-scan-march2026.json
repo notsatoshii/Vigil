@@ -1,0 +1,80 @@
+{
+  "id": "20260328-133500-regulatory-focused-scan",
+  "ingestedAt": "2026-03-28T13:35:00Z",
+  "sourceType": "Web scan (multiple sources)",
+  "reliability": "High (official government sources, major news outlets)",
+  "scanType": "Focused scan: Regulatory watchlist",
+
+  "summary": [
+    "CFTC published Advanced Notice of Proposed Rulemaking (ANPR) for prediction markets on March 16, 2026. Comment period open until April 30. Principles-based regime addressing manipulation and asymmetric information. 1,600 event contracts certified in 2025.",
+    "Bipartisan 'Prediction Markets Are Gambling Act' introduced March 23 by Schiff (D-CA) and Curtis (R-UT) would ban contracts on sports, elections, war, and government actions. A separate Merkley/Raskin bill targets the same. Would destroy much of Kalshi/Polymarket's business if enacted.",
+    "Arizona AG filed criminal charges (20 misdemeanor counts) against Kalshi for illegal gambling. Michigan AG sued Kalshi. 39 state AGs urged federal court to uphold state gambling authority. Litigation in 8+ states, cease-and-desist orders in 11 states. States estimate $600M in lost tax revenue.",
+    "Insider trading scandals: Polymarket user made $400K+ on Maduro ouster before it happened. Six new wallets earned ~$1.2M on Iran strike (one account 'Magamyman' profited $553K, first trade 71 minutes before news). Kalshi fined a political candidate trading on own campaign and a YouTube channel employee.",
+    "Kalshi and Polymarket both announced new insider trading bans (March 23-24): blocking athletes/candidates from trading on their own events. CFTC Chairman Selig backs Kalshi in state-level legal battles despite congressional pressure. Rep. Moulton banned staff from using prediction markets."
+  ],
+
+  "entities": [
+    {"name": "CFTC", "type": "regulator", "role": "Published ANPR for prediction markets March 16, comment deadline April 30. Chairman Selig supportive."},
+    {"name": "Michael Selig", "type": "person", "role": "CFTC Chairman, backs Kalshi in state legal battles"},
+    {"name": "Adam Schiff", "type": "person", "role": "D-CA Senator, co-introduced Prediction Markets Are Gambling Act"},
+    {"name": "John Curtis", "type": "person", "role": "R-UT Senator, co-introduced Prediction Markets Are Gambling Act"},
+    {"name": "Jeff Merkley", "type": "person", "role": "Senator, separate bill to ban prediction markets on sports/politics/military"},
+    {"name": "Jamie Raskin", "type": "person", "role": "Congressman, co-introduced Merkley bill in House"},
+    {"name": "Elissa Slotkin", "type": "person", "role": "D-MI Senator, Public Integrity in Financial Predictions Markets Act"},
+    {"name": "Todd Young", "type": "person", "role": "R-IN Senator, co-sponsor of insider trading bill"},
+    {"name": "Ritchie Torres", "type": "person", "role": "Rep, introduced legislation on prediction market insider trading after Maduro trade"},
+    {"name": "Seth Moulton", "type": "person", "role": "Rep, banned own staff from using prediction markets"},
+    {"name": "Gavin Newsom", "type": "person", "role": "CA Governor, signed executive order banning state appointees from insider prediction market trading"},
+    {"name": "Dana Nessel", "type": "person", "role": "Michigan AG, filed lawsuit against Kalshi"},
+    {"name": "Kalshi", "type": "competitor", "role": "Facing 20 criminal charges in Arizona, lawsuit in Michigan, litigation in 8+ states"},
+    {"name": "Polymarket", "type": "competitor", "role": "Updated insider trading policies, Maduro and Iran trades under scrutiny"},
+    {"name": "Prediction Markets Are Gambling Act", "type": "legislation", "role": "Would ban sports/election/war contracts on CFTC-registered platforms"},
+    {"name": "Public Integrity in Financial Predictions Markets Act", "type": "legislation", "role": "Bans government employees from insider prediction market trading"},
+    {"name": "Magamyman", "type": "person", "role": "Polymarket account that profited $553K on Iran strike, first trade 71 min before news"}
+  ],
+
+  "relationships": [
+    {"from": "Prediction Markets Are Gambling Act", "to": "Kalshi", "relationship": "would ban most of their sports/election contracts"},
+    {"from": "Prediction Markets Are Gambling Act", "to": "Polymarket", "relationship": "would ban most of their sports/election contracts"},
+    {"from": "Arizona AG", "to": "Kalshi", "relationship": "filed 20 criminal misdemeanor charges"},
+    {"from": "Michigan AG", "to": "Kalshi", "relationship": "filed civil lawsuit under Lawful Sports Betting Act"},
+    {"from": "39 state AGs", "to": "prediction markets", "relationship": "urged federal court to uphold state gambling authority"},
+    {"from": "CFTC Chairman Selig", "to": "Kalshi", "relationship": "backs Kalshi in state-level legal battles"},
+    {"from": "CFTC ANPR", "to": "prediction markets", "relationship": "principles-based regulation, comment period until April 30"}
+  ],
+
+  "categories": ["legal", "strategic", "market"],
+
+  "keyMetrics": {
+    "statesWithLitigation": "8+",
+    "statesWithCeaseDesist": 11,
+    "stateAGsInCoalition": 39,
+    "estimatedLostStateTaxRevenue": "$600M",
+    "eventContractsCertified2025": 1600,
+    "anprCommentDeadline": "2026-04-30",
+    "maduroTradeProfit": "$400K+",
+    "iranStrikeTradeProfit": "$1.2M across 6 wallets",
+    "magamymanProfit": "$553K, first trade 71 min before news",
+    "kalshiArizonaCounts": 20
+  },
+
+  "workstreamTags": {
+    "CEO": "CRITICAL: Regulatory landscape is bifurcated. CFTC is supportive but Congress and 39 state AGs are hostile. Investor conversations must address this risk clearly. The sports betting angle is the lightning rod; LEVER's focus on leveraged positions (not market creation) may partially insulate us.",
+    "ADVISOR": "Two opposing forces: CFTC building framework vs Congress trying to ban. Sports contracts are the flashpoint. LEVER should position away from sports to avoid regulatory crossfire. Binary outcomes on crypto/macro events are safer territory.",
+    "SECURE": "Insider trading is now the #1 regulatory risk for the sector. LEVER needs to consider how leveraged positions on prediction market outcomes interact with insider trading frameworks.",
+    "BUILD": "No immediate code implications, but any future sports-related market integration should be flagged for regulatory review."
+  },
+
+  "sources": [
+    {"title": "CFTC ANPR Press Release", "url": "https://www.cftc.gov/PressRoom/PressReleases/9194-26", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "CFTC Staff Advisory on Prediction Markets", "url": "https://www.cftc.gov/PressRoom/PressReleases/9193-26", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "CNBC: Prediction Markets Gambling Act", "url": "https://www.cnbc.com/2026/03/26/prediction-markets-sports-election-war-legislation-kalshi-polymarket.html", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "NPR: Arizona AG Criminal Charges vs Kalshi", "url": "https://www.npr.org/2026/03/17/nx-s1-5751165/kalshi-criminal-charges-arizona", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Fortune: Kalshi Polymarket Insider Trading Policies", "url": "https://fortune.com/2026/03/24/kalshi-polymarket-congress-senate-updated-policies-insider-trading-gambling/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "US News: Insider Trading Bans", "url": "https://www.usnews.com/news/business/articles/2026-03-23/kalshi-and-polymarket-rush-to-ban-insider-trading-as-senators-move-to-curb-prediction-markets", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "Michigan AG Lawsuit vs Kalshi", "url": "https://www.michigan.gov/ag/news/press-releases/2026/03/05/ag-nessel-files-lawsuit-against-kalshi", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "MultiState: $600M Lost Tax Revenue", "url": "https://www.multistate.us/insider/2026/3/19/prediction-market-regulation-heats-up-as-states-lose-600-million-in-tax-revenue", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"},
+    {"title": "Harvard Law: Iran/Taylor Swift Informed Trading", "url": "https://corpgov.law.harvard.edu/2026/03/25/from-iran-to-taylor-swift-informed-trading-in-prediction-markets/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Sen. Slotkin: Public Integrity Act", "url": "https://www.slotkin.senate.gov/2026/03/26/slotkin-young-schiff-curtis-lead-bipartisan-bill-to-stop-insider-trading-from-government-officials-on-prediction-markets/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"}
+  ]
+}

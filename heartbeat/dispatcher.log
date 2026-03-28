@@ -90,3 +90,18 @@ Session terminated, killing shell... ...killed.
  ...killed.
 
 Session terminated, killing shell... ...killed.
+Done. Here is what I found in the quick review:
+
+**5 proposals written to `shared-brain/IMPROVE_PROPOSALS.md`:**
+
+1. **Critical: Header stats show no values** (TVL, Volume, OI, Utilization all blank above the fold on every page). Ship now.
+
+2. **High: Oracle price vs on-chain PI gap** (99% Polymarket vs 49.7 cents on-chain with "Awaiting keeper update" -- looks broken to any trader). Next sprint.
+
+3. **High: Vault APY at 0.0%** (terrible LP pitch, especially in a demo -- either add a projected APY range or a utilization/yield simulator). Next sprint.
+
+4. **Critical: Demo positions missing from Positions tab** (tab says "No Open Positions" in demo mode, which makes the feature look dead). Ship now.
+
+5. **Medium: Mobile first impression is bare** (four empty stat cards dominate the viewport before any real content). Backlog.
+
+The two most pressing ones are #1 and #4 -- both directly affect demo quality and both look like bugs rather than design choices.
