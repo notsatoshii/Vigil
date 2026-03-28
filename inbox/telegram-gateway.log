@@ -6,3 +6,14 @@
 2026-03-28 11:28:01,221 [INFO] Vigil Telegram Gateway started
 2026-03-28 11:28:01,222 [INFO] Authorized user: 422985839
 2026-03-28 11:28:01,222 [INFO] Inbox: /home/lever/command/inbox/incoming
+2026-03-28 11:29:04,421 [INFO] Document received: PredictionIndex2025-2026.pdf
+2026-03-28 11:29:04,912 [ERROR] TG API error: getFile - HTTP Error 400: Bad Request
+2026-03-28 11:29:04,912 [ERROR] Could not get file path for BQACAgUAAxkBAAIQgWnHu38HJEximy6SVny4sYL-3w4hAAKRHgACGDJAVshakucvkmUwOgQ
+2026-03-28 11:30:26,582 [INFO] Received signal 15, shutting down...
+2026-03-28 11:30:29,766 [INFO] Forwarding to OpenClaw: Timmy?...
+2026-03-28 11:30:41,965 [INFO] Telegram Gateway stopped
+2026-03-28 11:30:42,049 [INFO] Vigil Telegram Gateway started
+2026-03-28 11:30:42,050 [INFO] Authorized user: 422985839
+2026-03-28 11:30:42,050 [INFO] Inbox: /home/lever/command/inbox/incoming
+2026-03-28 11:30:52,076 [INFO] Forwarding to OpenClaw: are you working on this?...
+2026-03-28 11:31:25,641 [INFO] Forwarding to OpenClaw: [3/28/2026 8:13 PM] Timmy: Master, the document didn't come through clearly. I can't see the attachm...

@@ -209,13 +209,21 @@ def process_message(message):
     downloaded_files = []
 
     # Handle document (PDF, DOCX, etc.)
+    failed_files = []
     document = message.get("document")
     if document:
         filename = document.get("file_name", f"document-{document['file_id']}")
-        log.info(f"Document received: {filename}")
-        path = download_tg_file(document["file_id"], filename)
-        if path:
-            downloaded_files.append(filename)
+        file_size = document.get("file_size", 0)
+        log.info(f"Document received: {filename} ({file_size} bytes)")
+        if file_size > 20_000_000:
+            log.warning(f"File too large for Bot API: {filename} ({file_size} bytes). Telegram Bot API limit is 20MB.")
+            failed_files.append(f"{filename} (too large, {file_size // 1_000_000}MB, use SCP instead)")
+        else:
+            path = download_tg_file(document["file_id"], filename)
+            if path:
+                downloaded_files.append(filename)
+            else:
+                failed_files.append(f"{filename} (download failed)")
 
     # Handle photo
     photos = message.get("photo")
@@ -270,12 +278,22 @@ def process_message(message):
         if forward_text:
             forward_text += f"\n\n[Files received and saved to knowledge inbox: {file_list}]"
         else:
-            forward_text = f"I just sent you these files (already saved to knowledge inbox for processing): {file_list}"
+            forward_text = f"Master just sent files (saved to knowledge inbox): {file_list}. Acknowledge receipt."
+
+    if failed_files and not forward_text:
+        forward_text = f"Master tried to send files but download failed: {', '.join(failed_files)}. I already told him to use SCP for large files."
 
     if saved_urls:
         url_list = ", ".join(saved_urls)
-        if not forward_text or forward_text == f"[Files received and saved to knowledge inbox: {', '.join(downloaded_files)}]":
-            forward_text = f"I just sent you these links (already saved for scraping): {url_list}"
+        if not forward_text:
+            forward_text = f"Master sent links (saved for scraping): {url_list}. Acknowledge receipt."
+
+    # Notify about failed downloads
+    if failed_files:
+        fail_list = ", ".join(failed_files)
+        send_telegram(chat_id,
+            f"Could not download: {fail_list}. For files over 20MB, use SCP:\n"
+            f"`scp \"file.pdf\" lever@165.245.186.254:/home/lever/command/inbox/incoming/`")
 
     # If there is nothing to forward (empty message, sticker, etc.), skip
     if not forward_text or not forward_text.strip():
