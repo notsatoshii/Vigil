@@ -265,8 +265,11 @@ def process_message(message):
         filename = document.get("file_name", f"document-{document['file_id']}")
         file_size = document.get("file_size", 0)
         log.info(f"Document received: {filename} ({file_size} bytes)")
-        if file_size > 20_000_000:
-            log.warning(f"File too large for Bot API: {filename} ({file_size} bytes). Telegram Bot API limit is 20MB.")
+        # Local Bot API server has no size limit (up to 2GB)
+        # Only check size if using remote API
+        is_local = API_BASE and LOCAL_API in API_BASE
+        if not is_local and file_size > 20_000_000:
+            log.warning(f"File too large for remote Bot API: {filename} ({file_size} bytes)")
             failed_files.append(f"{filename} (too large, {file_size // 1_000_000}MB, use SCP instead)")
         else:
             path = download_tg_file(document["file_id"], filename)
