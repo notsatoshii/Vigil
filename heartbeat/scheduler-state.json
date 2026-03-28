@@ -11,8 +11,20 @@
       "build_file": "",
       "verify_file": "",
       "attempts": 0
+    },
+    "lever-bug-2": {
+      "task_id": "lever-bug-2",
+      "title": "LEVER-BUG-2: [CRITICAL] $304K unaccounted vault drain",
+      "stage": "planning",
+      "agent_pid": 2628956,
+      "dispatched_at": 1774705396.2183042,
+      "plan_file": "",
+      "critique_file": "",
+      "build_file": "",
+      "verify_file": "",
+      "attempts": 0
     }
   },
-  "sessions_today": 1,
+  "sessions_today": 2,
   "last_reset_date": "2026-03-28"
 }

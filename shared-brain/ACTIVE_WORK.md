@@ -1,13 +1,14 @@
 # ACTIVE WORK
-## Updated by scheduler at 13:42:16 UTC
+## Updated by scheduler at 13:44:16 UTC
 
-Sessions today: 1/80
+Sessions today: 2/80
 
 ---
 
 ## Pipeline Tasks
 
-- **lever-bug-1**: LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs  [planning (0m)]
+- **lever-bug-1**: LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs  [planning (2m)]
+- **lever-bug-2**: LEVER-BUG-2: [CRITICAL] $304K unaccounted vault drain [planning (1m)]
 
 ---
 
