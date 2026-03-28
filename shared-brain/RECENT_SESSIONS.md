@@ -287,3 +287,55 @@
 
 **Findings**: All 8 services active. Disk 18%, RAM 38%. Gateway stable. Scheduler hit daily circuit breaker (80/80 sessions), 2 active winding down. This is expected safeguard behavior. No errors. No issues found, no fixes needed.
 [2026-03-28T18:48:27Z] OPERATE self-check complete. Fixed health-escalate.sh sudo bug. All services up. Disk 18%, RAM 42%.
+
+---
+## RESEARCH | 2026-03-28 20:00 UTC | Evening Market Scan
+
+**Task**: Comprehensive evening market scan across all 5 coverage domains.
+
+**Outcome**: 16 findings across all domains. All files updated. 5 new watchlist files created. 3 new trends files created.
+
+**Top findings**:
+1. Kalshi valued at $22B after $1B+ Series E (Sequoia, CapitalG). Margin trading approved via NFA (Kinetic Markets FCM). 5cc Capital ($35M prediction market VC fund) launched March 23 -- direct LEVER investor pitch target.
+2. ARK Invest integrated Kalshi data for portfolio hedging (March 27). Institutional prediction market adoption accelerating.
+3. Polymarket fee expansion March 30: 8 new categories, targeting $1M/day revenue. Sector weekly volume: $5.9B total, Polymarket 43% share.
+4. DEATH BETS Act introduced (bipartisan): would ban war/assassination prediction market contracts. CFTC ANPR comment deadline April 30 -- most important regulatory document of the year.
+5. Claude Mythos (Capybara) leaked March 26-27, confirmed by Anthropic. Above Opus 4.6. Watch for API access.
+6. Base DeFi TVL: $4.63B, 46% of L2 market. Morpho on Base: $1.8B (near $2B). Confirms Morpho V2 integration priority.
+7. Aero DEX (Aerodrome + Velodrome merge) confirmed Q2 2026. lvUSDT/USDT pool on track.
+8. Iran War Day 28: Hormuz near-closed, WTI at $99.64, Brent at $112.57. April 6 Trump deadline is next binary event.
+9. TOKEN2049 Dubai April 29-30 (32 days out). CEO decision needed NOW.
+
+**Files updated**:
+- /home/lever/command/shared-brain/ADVISOR_BRIEFS.md (full 16-item scan appended)
+- /home/lever/command/knowledge/summaries/competitor-analysis.md (Kalshi, 5cc Capital, Polymarket updates)
+- /home/lever/command/knowledge/summaries/technical-landscape.md (GPT-5.4, Claude Code March updates)
+- /home/lever/command/knowledge/summaries/regulatory-landscape.md (DEATH BETS Act, CFTC ANPR)
+
+**Files created**:
+- /home/lever/command/knowledge/watchlists/watchlist-competitors.json
+- /home/lever/command/knowledge/watchlists/watchlist-regulatory.json
+- /home/lever/command/knowledge/watchlists/watchlist-geopolitical.json
+- /home/lever/command/knowledge/watchlists/watchlist-ai-tools.json
+- /home/lever/command/knowledge/watchlists/watchlist-investors.json
+- /home/lever/command/knowledge/trends/prediction-market-volumes.json
+- /home/lever/command/knowledge/trends/base-defi-tvl.json
+- /home/lever/command/knowledge/trends/ai-model-landscape.json
+
+---
+## OPERATE | 2026-03-28 19:48-19:56 UTC
+
+**Task**: System self-check, log review, fix any issues.
+
+**Findings**:
+- Scheduler hit daily circuit breaker (80/80) at ~19:44 UTC. Expected safeguard.
+- All 8 services active. Disk 18%, RAM 42% (5.0GB free of 15GB).
+- Health check at 16:00 UTC showed all clear (the 12:00 openclaw-gateway outage self-recovered).
+- **CRITICAL BUG FOUND AND FIXED**: Dashboard (port 8080) was completely unresponsive to HTTP.
+  Root cause: `collectUpcoming()` in server.js called `openclaw cron list` via `execSync`.
+  With the circuit breaker active, openclaw spawns a stuck `openclaw-cron` process (143% CPU, 345MB RAM)
+  that never returns, blocking the Node.js event loop and freezing all HTTP responses.
+  Fix: replaced `execSync("openclaw cron list")` with direct `fs.readFileSync` on
+  `/home/lever/.openclaw/cron/jobs.json`. Dashboard now responds instantly.
+
+**Changes**: dashboard/server.js (committed + pushed: 0accb3e)

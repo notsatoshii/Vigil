@@ -1,0 +1,41 @@
+{
+  "description": "Base L2 DeFi TVL tracking. Updated each RESEARCH scan.",
+  "last_updated": "2026-03-28T20:00:00Z",
+  "unit": "USD",
+  "snapshots": [
+    {
+      "date": "2026-03-28",
+      "base_total_tvl": "4630000000",
+      "base_l2_market_share_pct": 46,
+      "morpho_on_base_tvl": "1800000000",
+      "morpho_total_tvl_all_chains": "6900000000",
+      "aerodrome_tvl": "475900000",
+      "coinbase_morpho_loans_originated": "1200000000",
+      "coinbase_morpho_loans_active": "800000000",
+      "notes": "Base at 46% of L2 DeFi TVL market. Morpho near $2B on Base driven by Coinbase Bitcoin-backed loans. Aero merger Q2 2026 on track.",
+      "source": "MEXC/CryptoTimes Morpho coverage; DeFiLlama estimates"
+    },
+    {
+      "date": "2025-04",
+      "morpho_on_base_tvl": "628000000",
+      "notes": "Morpho Base TVL low point April 2025. By March 2026 it is nearly 3x.",
+      "source": "MEXC Morpho coverage"
+    },
+    {
+      "date": "2024-07",
+      "morpho_on_base_tvl": "60000000",
+      "notes": "Morpho Base TVL at $60M July 2024. 30x growth in 20 months.",
+      "source": "MEXC Morpho coverage"
+    }
+  ],
+  "trends": {
+    "direction": "up",
+    "drivers": [
+      "Coinbase Bitcoin-backed loans via Morpho (primary)",
+      "Institutional adoption (Apollo/JPMorgan entering DeFi vaults)",
+      "Base native DEX (Aerodrome/Aero) TVL",
+      "Ecosystem expansion via Coinbase developer tools"
+    ],
+    "lever_implication": "LEVER launching on Base mainnet targets the highest-TVL L2 environment. Morpho V2 integration (lvUSDT as collateral) is high-priority given $1.8B TVL on Base. ERC-4626 standard positions LEVER perfectly for Coinbase integration (same model as Morpho)."
+  }
+}

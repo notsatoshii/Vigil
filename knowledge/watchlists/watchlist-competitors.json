@@ -1,0 +1,185 @@
+{
+  "last_updated": "2026-03-28T20:00:00Z",
+  "description": "Prediction market competitor tracking. Updated on each RESEARCH scan.",
+  "entities": [
+    {
+      "name": "Polymarket",
+      "type": "prediction_market_exchange",
+      "chain": "Polygon",
+      "website": "https://polymarket.com",
+      "status": "live",
+      "last_scan": "2026-03-28",
+      "metrics": {
+        "30d_volume_usd": "9550000000",
+        "weekly_volume_usd": "2500000000",
+        "market_share_pct": 43,
+        "valuation_usd": "8000000000",
+        "daily_revenue_target_usd": "1000000",
+        "active_markets": "115000+"
+      },
+      "recent_developments": [
+        {
+          "date": "2026-03-30",
+          "event": "Taker fee expansion to 8 new categories (finance, politics, culture). Projecting $800K-$1M daily revenue.",
+          "significance": "high"
+        },
+        {
+          "date": "2026-03-18",
+          "event": "Acquired Brahma (DeFi settlement infra, $1B+ tx processed). Phasing out existing products in 30 days.",
+          "significance": "high"
+        },
+        {
+          "date": "2026-02-19",
+          "event": "Acquired Dome (cross-platform prediction market API, YC Fall 2025, $5.2M raised). Now Polymarket-exclusive.",
+          "significance": "high"
+        }
+      ],
+      "competitive_position": "dominant, 43% market share, moving aggressively on monetization and institutional integration",
+      "threat_to_lever": "Primary oracle source. If Polymarket delists categories under DEATH BETS Act or CFTC pressure, LEVER loses price feeds for those markets.",
+      "opportunity_for_lever": "Taker fee expansion makes Polymarket more expensive. Fee-sensitive traders may migrate to lower-cost platforms."
+    },
+    {
+      "name": "Kalshi",
+      "type": "prediction_market_exchange",
+      "chain": "TradFi (CFTC-regulated DCM)",
+      "website": "https://kalshi.com",
+      "status": "live",
+      "last_scan": "2026-03-28",
+      "metrics": {
+        "valuation_usd": "22000000000",
+        "series_e_raise_usd": "1000000000",
+        "march_madness_weekend_volume_usd": "800000000"
+      },
+      "recent_developments": [
+        {
+          "date": "2026-03-28",
+          "event": "Kinetic Markets LLC (Kalshi affiliate) registered by NFA as FCM, enabling margin trading for institutional clients. Still needs CFTC rulebook approval.",
+          "significance": "critical"
+        },
+        {
+          "date": "2026-03-27",
+          "event": "Washington state sued Kalshi alleging illegal gambling.",
+          "significance": "medium"
+        },
+        {
+          "date": "2026-03-27",
+          "event": "ARK Invest partnership: integrates Kalshi data for portfolio hedging and risk management workflows.",
+          "significance": "high"
+        },
+        {
+          "date": "2026-03-24",
+          "event": "Valuation jumped from $11B to $22B on $1B+ Series E (Sequoia, CapitalG, ARK Venture Fund).",
+          "significance": "critical"
+        },
+        {
+          "date": "2026-03-17",
+          "event": "Arizona AG filed criminal charges for illegal gambling (first-ever criminal charges against a prediction market).",
+          "significance": "high"
+        }
+      ],
+      "competitive_position": "TradFi-native, CFTC-regulated, moving into margin trading for institutions. Valuation at $22B signals winner-take-most positioning in TradFi prediction markets.",
+      "threat_to_lever": "Kalshi offering institutional leverage on prediction markets validates the market, but competes for institutional LP capital. Their Kinetic Markets FCM model is different from DeFi-native leverage.",
+      "opportunity_for_lever": "LEVER is DeFi-native, permissionless, 24/7, 50x leverage vs Kalshi's margin collateral model. Different user segments (DeFi natives vs TradFi institutions). Fundraising narrative: LEVER is what Kalshi is for DeFi."
+    },
+    {
+      "name": "Azuro",
+      "type": "prediction_market_infrastructure",
+      "chain": "Polygon, Gnosis",
+      "website": "https://azuro.org",
+      "status": "live",
+      "last_scan": "2026-03-28",
+      "metrics": {
+        "total_volume_usd": "370000000+",
+        "live_apps": "20+"
+      },
+      "recent_developments": [
+        {
+          "date": "2026-Q1",
+          "event": "Unified LiquidityTree pool reducing fragmentation across markets. Top Polygon revenue protocol.",
+          "significance": "medium"
+        }
+      ],
+      "competitive_position": "infrastructure layer, not a direct consumer platform",
+      "threat_to_lever": "low - different model (sports-focused, no leverage)",
+      "opportunity_for_lever": "infrastructure integration if Azuro adds LEVER as a leverage layer"
+    },
+    {
+      "name": "Ultramarkets",
+      "type": "leveraged_prediction_market",
+      "chain": "unknown",
+      "website": "https://ultramarkets.xyz",
+      "status": "early/pre-launch",
+      "last_scan": "2026-03-28",
+      "metrics": {
+        "max_leverage": "10x",
+        "funding": "unknown"
+      },
+      "recent_developments": [],
+      "competitive_position": "DIRECT LEVER COMPETITOR. Same thesis: leverage on prediction markets. Weaker implementation: 10x max vs LEVER's 50x, binary auto-close vs continuous risk curves.",
+      "threat_to_lever": "high - only known direct competitor for leveraged prediction market positions",
+      "opportunity_for_lever": "LEVER has superior architecture (50x, ERC-4626, continuous risk curves, deterministic fee split). Need to get to market before Ultramarkets gains traction."
+    },
+    {
+      "name": "Limitless Exchange",
+      "type": "prediction_market_exchange",
+      "chain": "Base",
+      "website": "https://limitless.exchange",
+      "status": "live",
+      "last_scan": "2026-03-28",
+      "metrics": {
+        "total_volume_usd": "500000000+",
+        "funding_usd": "10000000"
+      },
+      "recent_developments": [
+        {
+          "date": "2025-08",
+          "event": "25x growth Aug-Sep 2025.",
+          "significance": "high"
+        }
+      ],
+      "competitive_position": "Largest prediction market on Base (same chain as LEVER). Short-term binary options, not leveraged positions.",
+      "threat_to_lever": "Adjacent. If they add leverage, becomes direct competitor. Coinbase Ventures backing is significant.",
+      "opportunity_for_lever": "Potential oracle source or integration target. LEVER could offer leveraged positions on Limitless markets."
+    },
+    {
+      "name": "Opinion",
+      "type": "prediction_market_exchange",
+      "chain": "BNB Chain",
+      "website": "unknown",
+      "status": "live",
+      "last_scan": "2026-03-28",
+      "metrics": {
+        "weekly_volume_peak_usd": "653000000",
+        "global_rank": 3,
+        "backer": "YZi Labs ($25M total: $5M seed + $20M)"
+      },
+      "recent_developments": [],
+      "competitive_position": "Primary BNB Chain prediction market. Points system model. YZi Labs (Binance) backed.",
+      "threat_to_lever": "XMarket competitor on BNB Chain. Much larger volume. YZi Labs backing gives ecosystem advantages.",
+      "opportunity_for_lever": "XMarket's creator revenue share (50%) and CLOB model differentiates from Opinion's points model."
+    },
+    {
+      "name": "5cc Capital",
+      "type": "prediction_market_vc_fund",
+      "chain": "n/a",
+      "website": "unknown",
+      "status": "fundraising",
+      "last_scan": "2026-03-28",
+      "metrics": {
+        "target_raise_usd": "35000000",
+        "portfolio_target": "20 early-stage startups",
+        "focus": "data tools, liquidity provision, compliance, infrastructure"
+      },
+      "recent_developments": [
+        {
+          "date": "2026-03-23",
+          "event": "Announced. Backed by Polymarket CEO Shayne Coplan, Kalshi CEO Tarek Mansour, Marc Andreessen (via Moneta Luna), Ribbit Capital's Micky Malka, Millennium Management PM.",
+          "significance": "critical"
+        }
+      ],
+      "competitive_position": "First dedicated prediction market VC fund. Infrastructure focus.",
+      "threat_to_lever": "Will fund competitors in prediction market infrastructure space.",
+      "opportunity_for_lever": "DIRECT INVESTOR PITCH TARGET. LEVER is infrastructure, exactly what 5cc Capital backs. Reach out to Adhi Rajaprabhakaran and Noah Zingler-Sternig."
+    }
+  ]
+}

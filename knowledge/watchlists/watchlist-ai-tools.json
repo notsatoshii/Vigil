@@ -1,0 +1,92 @@
+{
+  "last_updated": "2026-03-28T20:00:00Z",
+  "description": "AI models, agent frameworks, and dev tools relevant to Vigil system. Updated each RESEARCH scan.",
+  "tools": [
+    {
+      "name": "Claude Sonnet 4.6",
+      "provider": "Anthropic",
+      "status": "active - primary Vigil model",
+      "version": "4.6",
+      "context_window": "1M tokens",
+      "max_output": "128K (64K default)",
+      "last_scan": "2026-03-28",
+      "notes": "Powers all Vigil workstreams except ADVISOR. Current production model. Stable."
+    },
+    {
+      "name": "Claude Opus 4.6",
+      "provider": "Anthropic",
+      "status": "active - ADVISOR workstream",
+      "version": "4.6",
+      "context_window": "1M tokens",
+      "max_output": "128K (64K default)",
+      "task_horizon": "14.5 hours",
+      "last_scan": "2026-03-28",
+      "notes": "Most capable Claude model currently in API. Used for ADVISOR. Strong planning and long-horizon tasks."
+    },
+    {
+      "name": "Claude Mythos (Capybara)",
+      "provider": "Anthropic",
+      "status": "leaked, early access only",
+      "version": "above Opus 4.6",
+      "last_scan": "2026-03-28",
+      "leak_date": "2026-03-26",
+      "confirmed_by": "Anthropic via Fortune",
+      "capabilities": "Dramatically outperforms Opus 4.6 on coding, reasoning, cybersecurity. Currently cybersecurity defense use only.",
+      "availability": "No API yet. Piloting with select customers.",
+      "vigil_impact": "critical - when available, should replace Opus for SECURE workstream. May upgrade ADVISOR.",
+      "action": "Monitor Anthropic API announcements for Mythos access."
+    },
+    {
+      "name": "Claude Code",
+      "provider": "Anthropic",
+      "status": "active - core Vigil tool",
+      "version": "v2.1.76",
+      "last_scan": "2026-03-28",
+      "march_2026_features": [
+        "/loop command - recurring background task execution (cron-like)",
+        "/voice command - push-to-talk, 20 languages, hold spacebar to activate",
+        "Computer Use preview - point, click, navigate (Pro/Max plans)",
+        "1M token context now standard",
+        "64K default / 128K max output for Opus 4.6 and Sonnet 4.6",
+        "--bare flag for scripted -p calls (skips hooks, LSP, plugin sync)",
+        "/effort command with 'ultrathink' keyword for max compute",
+        "--channels flag for MCP message pushes"
+      ],
+      "known_bugs": [
+        "Rate limit drain bug reported March 26 - suspected but unconfirmed"
+      ],
+      "vigil_impact": "/loop could replace some OpenClaw cron jobs. Computer Use could enable visual dashboard verification."
+    },
+    {
+      "name": "GPT-5.4",
+      "provider": "OpenAI",
+      "status": "live",
+      "release_date": "2026-03-05",
+      "last_scan": "2026-03-28",
+      "ai_index_score": "57 (tied #1 with Gemini 3.1 Pro)",
+      "computer_use_success_rate": "75% (OSWorld), vs 72.4% human baseline",
+      "context_window": "1M tokens",
+      "key_feature": "Tool Search API for large toolset systems. Native computer use.",
+      "vigil_impact": "competitive intelligence only. We use Claude. But Tool Search architecture is worth monitoring for Vigil's tool routing design."
+    },
+    {
+      "name": "OpenClaw",
+      "provider": "Internal / server",
+      "status": "active - critical Vigil infrastructure",
+      "version": "2026.3.24",
+      "port": 18789,
+      "last_scan": "2026-03-28",
+      "notes": "OpenClaw gateway is the primary Claude session dispatcher for Vigil. Running stably since restart. Recent bug: cron list call blocked event loop (fixed 2026-03-28). cron jobs.json now read directly.",
+      "known_issues": [
+        "FIXED 2026-03-28: openclaw cron list shell call was blocking Node.js event loop in dashboard server.js under circuit breaker conditions. Fixed by direct fs.readFileSync on jobs.json."
+      ]
+    },
+    {
+      "name": "Scrapling",
+      "provider": "Third-party",
+      "status": "active - used by Vigil inbox pipeline",
+      "last_scan": "2026-03-28",
+      "notes": "Used for URL scraping and content ingestion via inbox watcher. 5 files processed successfully today."
+    }
+  ]
+}

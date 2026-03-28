@@ -1,0 +1,76 @@
+{
+  "last_updated": "2026-03-28T20:00:00Z",
+  "description": "Active geopolitical situations driving prediction market demand. Updated each RESEARCH scan.",
+  "active_situations": [
+    {
+      "name": "US-Iran War / Strait of Hormuz Crisis",
+      "status": "active",
+      "started": "2026-02-28",
+      "day_number": 28,
+      "last_scan": "2026-03-28",
+      "summary": "US-Israel military strikes on Iran since Feb 28. Nuclear sites hit. Strait of Hormuz near-closed (70% tanker traffic drop, 150+ ships anchored). Houthis re-entered conflict March 28. Iran threatening full Hormuz blockade.",
+      "key_upcoming_dates": [
+        {
+          "date": "2026-04-06",
+          "event": "Trump's deadline for Iran energy infrastructure strikes OR peace deal. Binary outcome: strikes or ceasefire.",
+          "prediction_market_impact": "critical - either outcome generates new markets"
+        }
+      ],
+      "current_oil_prices": {
+        "wti_usd": 99.64,
+        "brent_usd": 112.57,
+        "daily_change_pct": 5.46,
+        "date": "2026-03-28"
+      },
+      "prediction_market_volumes": {
+        "polymarket_geopolitics_total": "464500000+",
+        "market_count": "540+"
+      },
+      "supply_disruption": "4.5-5M barrels/day lost, doubling by mid-April",
+      "prediction_market_demand": "critical - highest since Ukraine war started"
+    },
+    {
+      "name": "Ukraine-Russia War",
+      "status": "ongoing",
+      "started": "2022-02-24",
+      "last_scan": "2026-03-28",
+      "summary": "Year 4 of conflict. Peace talks stalled as US attention diverted to Iran. 96% Polymarket odds of no ceasefire by March 31.",
+      "prediction_market_demand": "medium - lower than Iran war but persistent"
+    },
+    {
+      "name": "Venezuela Post-Maduro",
+      "status": "developing",
+      "started": "2026-01-03",
+      "last_scan": "2026-03-28",
+      "summary": "Maduro seized Jan 3 by US forces. 66% odds Delcy Rodriguez leads by end 2026.",
+      "prediction_market_demand": "medium - lower volume, but ongoing political uncertainty"
+    },
+    {
+      "name": "US 2026 Midterm Elections",
+      "status": "upcoming",
+      "election_date": "2026-11",
+      "last_scan": "2026-03-28",
+      "summary": "Markets already active. $4.1M Balance of Power market on Polymarket. Conditional markets launched March 2026. Volume expected to surge 6-9 months before November.",
+      "prediction_market_demand": "growing - Polymarket reported 15% WoW growth on conditional election markets since February"
+    },
+    {
+      "name": "NYC Mayoral Election",
+      "status": "recent",
+      "last_scan": "2026-03-28",
+      "summary": "$150M+ in prediction market volume. Largest single election market to date.",
+      "prediction_market_demand": "completed"
+    }
+  ],
+  "central_bank_calendar": [
+    {
+      "institution": "Federal Reserve",
+      "last_decision": "2026-03-18",
+      "decision": "Hold at 3.5-3.75% (11-1 vote)",
+      "next_projected": "2026-05",
+      "projected_action": "1 cut projected in 2026",
+      "inflation_forecast": "2.7% PCE",
+      "gdp_forecast": "2.4%",
+      "prediction_market_demand": "medium - rate decision markets active"
+    }
+  ]
+}

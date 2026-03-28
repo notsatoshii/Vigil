@@ -4,6 +4,18 @@
 ## Prediction Market Regulation (as of 2026-03-28)
 **Sources**: Prediction Index Annual Report 2025-2026 (published 2026-03-04); Web scan 2026-03-28 (CFTC.gov, CNBC, NPR, Fortune, Congress.gov, state AG offices)
 
+## Regulatory Updates (Evening Scan: 2026-03-28 20:00 UTC)
+
+### DEATH BETS Act: War/Assassination Markets Face Federal Ban
+Rep. Mike Levin (House) and Sen. Adam Schiff (Senate) introduced the DEATH BETS Act March 10-12. Would amend the CEA to explicitly prohibit CFTC-registered platforms from listing contracts on terrorism, assassination, war, or death. Kalshi's "Khamenei out as Supreme Leader" market ($54M volume) was cited directly. Additional bills: BETS OFF Act (Hickenlooper/Murphy, adds government action contracts), STOP Corrupt Bets Act (Raskin/Merkley, adds elections and sports). Republican-controlled Congress makes near-term passage unlikely, but signals regulatory risk is real for war/geopolitics contracts.
+**LEVER implication**: If DEATH BETS Act passes, Polymarket may be forced to delist Iran war markets. LEVER oracle sources get thinner. XMarket should avoid listing contract categories in legislative crossfire. Crypto/macro/technology milestones are safer categories.
+
+### CFTC ANPR (March 16): Comment Deadline April 30
+Published in Federal Register as 2026-05105. Principles-based framework seeking comment on: legitimate economic purpose, allowable event types, manipulation prevention, adequacy of current rules. April 30 deadline is 33 days out. Kalshi, Polymarket, and institutional backers will submit extensive comments that shape the final regulatory framework.
+**LEVER implication**: CEO workstream should review the ANPR. Consider submitting comments positioning LEVER as DeFi infrastructure (not a prediction market exchange). Short submission could provide brand-building value with regulators.
+
+---
+
 ### CFTC (United States): Supportive but Under Pressure
 - **January 2026**: Chairman Michael Selig announced four-part agenda to support responsible development of event contract markets
 - **Key action**: Withdrew the 2024 proposed rule that would have prohibited political/sports contracts

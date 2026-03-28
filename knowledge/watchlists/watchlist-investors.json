@@ -1,0 +1,130 @@
+{
+  "last_updated": "2026-03-28T20:00:00Z",
+  "description": "VCs and institutional investors active in prediction markets, DeFi, and AI+crypto. Updated each RESEARCH scan.",
+  "investors": [
+    {
+      "name": "Sequoia Capital",
+      "type": "VC",
+      "thesis_relevant": true,
+      "recent_activity": [
+        {
+          "date": "2026-03-24",
+          "action": "Led Kalshi Series E at $22B valuation.",
+          "significance": "critical"
+        }
+      ],
+      "prediction_market_exposure": "Kalshi Series E (lead)",
+      "notes": "Sequoia leading a $1B round into prediction markets validates the sector at the highest tier."
+    },
+    {
+      "name": "CapitalG (Google)",
+      "type": "Corporate VC",
+      "thesis_relevant": true,
+      "recent_activity": [
+        {
+          "date": "2026-03-24",
+          "action": "Co-led Kalshi Series E.",
+          "significance": "high"
+        }
+      ],
+      "prediction_market_exposure": "Kalshi Series E (co-lead)",
+      "notes": "Google's growth equity arm in prediction markets. Unlikely to invest in DeFi-native competitors."
+    },
+    {
+      "name": "ICE (Intercontinental Exchange / NYSE parent)",
+      "type": "Strategic investor",
+      "thesis_relevant": true,
+      "recent_activity": [
+        {
+          "date": "2025",
+          "action": "Invested $2B in Polymarket at ~$8B valuation.",
+          "significance": "critical"
+        }
+      ],
+      "prediction_market_exposure": "Polymarket (primary backer)",
+      "notes": "Gives Polymarket NYSE-distribution-level institutional reach."
+    },
+    {
+      "name": "5cc Capital",
+      "type": "Prediction market VC",
+      "thesis_relevant": true,
+      "website": "unknown",
+      "partners": [
+        "Adhi Rajaprabhakaran (Kalshi trader)",
+        "Noah Zingler-Sternig (Kalshi former head of operations)"
+      ],
+      "recent_activity": [
+        {
+          "date": "2026-03-23",
+          "action": "Launched $35M fund. First dedicated prediction market infrastructure VC. Backed by Polymarket CEO, Kalshi CEO, Marc Andreessen (Moneta Luna), Ribbit Capital (Micky Malka), Millennium Management PM.",
+          "significance": "critical"
+        }
+      ],
+      "target_portfolio": "data tools, liquidity provision, compliance systems, infrastructure (NOT just exchanges)",
+      "lever_fit": "DIRECT MATCH. LEVER is infrastructure. Pitch immediately.",
+      "outreach_priority": "URGENT"
+    },
+    {
+      "name": "ARK Venture Fund (ARK Invest)",
+      "type": "Fund",
+      "thesis_relevant": true,
+      "recent_activity": [
+        {
+          "date": "2026-03",
+          "action": "Participated in Kalshi Series E. Announced systematic integration of Kalshi data for portfolio management and hedging.",
+          "significance": "high"
+        }
+      ],
+      "prediction_market_exposure": "Kalshi Series E participant",
+      "notes": "ARK is a prediction market believer (data and hedging use case). Not a primary early-stage DeFi VC, but signal."
+    },
+    {
+      "name": "YZi Labs (formerly Binance Labs)",
+      "type": "Corporate VC",
+      "thesis_relevant": true,
+      "recent_activity": [
+        {
+          "date": "2026",
+          "action": "Led $25M into Opinion (BNB prediction market: $5M seed + $20M follow-on).",
+          "significance": "high"
+        },
+        {
+          "date": "2026",
+          "action": "Backed predict.fun (which acquired Probable).",
+          "significance": "medium"
+        }
+      ],
+      "prediction_market_exposure": "Opinion ($25M), predict.fun (follow-on)",
+      "notes": "YZi Labs is the kingmaker on BNB Chain for prediction markets. Already deployed capital. XMarket competes with their portfolio companies. Unlikely LP for XMarket, but important to watch.",
+      "lever_fit": "conflict of interest with XMarket. Low probability for investment."
+    },
+    {
+      "name": "1confirmation",
+      "type": "VC",
+      "thesis_relevant": true,
+      "recent_activity": [
+        {
+          "date": "2025",
+          "action": "Led $10M seed into Limitless Exchange (Base prediction market).",
+          "significance": "medium"
+        }
+      ],
+      "prediction_market_exposure": "Limitless Exchange",
+      "notes": "Has prediction market interest. Limitless is on Base (same as LEVER). Monitor for potential conflict."
+    },
+    {
+      "name": "Ribbit Capital",
+      "type": "VC (fintech specialist)",
+      "thesis_relevant": true,
+      "key_contact": "Micky Malka (founder)",
+      "recent_activity": [
+        {
+          "date": "2026-03-23",
+          "action": "Micky Malka invested in 5cc Capital (first prediction market VC fund).",
+          "significance": "high"
+        }
+      ],
+      "notes": "Fintech VC with growing prediction market interest via 5cc Capital LP position."
+    }
+  ]
+}

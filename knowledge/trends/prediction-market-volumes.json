@@ -1,0 +1,55 @@
+{
+  "description": "Weekly prediction market volume snapshots. Updated each RESEARCH scan.",
+  "last_updated": "2026-03-28T20:00:00Z",
+  "unit": "USD",
+  "snapshots": [
+    {
+      "date": "2026-03-28",
+      "period": "week",
+      "total_sector_volume": "5900000000",
+      "polymarket_volume": "2500000000",
+      "polymarket_share_pct": 43,
+      "polymarket_30d_volume": "9550000000",
+      "notes": "NCAA March Madness driving sports surge (+32% WoW). Iran war geopolitics markets active ($464M+, 540+ markets). Polymarket fee expansion effective March 30.",
+      "source": "DeFiRate aggregated data, CoinDesk"
+    },
+    {
+      "date": "2026-03-01",
+      "period": "snapshot",
+      "polymarket_notable": "Record $500M+ on US-Iran war markets (Polymarket traders bet $529M on US-Iran war at peak)",
+      "notes": "Record geopolitics volume driven by Feb 28 US-Israel strikes on Iran.",
+      "source": "CoinDesk March 1 2026"
+    },
+    {
+      "date": "2026-01",
+      "period": "month",
+      "total_sector_volume": "17200000000",
+      "notes": "January 2026 all-time high for monthly sector volume.",
+      "source": "Prediction Index Annual Report 2025-2026"
+    },
+    {
+      "date": "2025",
+      "period": "year",
+      "total_sector_volume": "100000000000+",
+      "notes": "Full year 2025 notional trading volume.",
+      "source": "Prediction Index Annual Report 2025-2026"
+    },
+    {
+      "date": "2024",
+      "period": "year",
+      "notes": "2026 projection of $40B represents 400% increase over 2024 levels.",
+      "source": "Prediction Index Annual Report 2025-2026"
+    }
+  ],
+  "trends": {
+    "direction": "up",
+    "drivers": [
+      "Iran war (primary, March 2026)",
+      "US 2026 midterm elections (growing)",
+      "NCAA March Madness (seasonal, March)",
+      "Institutional adoption (structural)"
+    ],
+    "polymarket_election_conditional_markets": "15% WoW growth since February 2026",
+    "trajectory": "Volume elevated since 2025 US election cycle. No sign of reversion. Geopolitics has replaced elections as primary driver in March 2026."
+  }
+}

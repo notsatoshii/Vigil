@@ -1,0 +1,64 @@
+{
+  "description": "AI model capability and pricing trends. Updated each RESEARCH scan.",
+  "last_updated": "2026-03-28T20:00:00Z",
+  "current_leaderboard": [
+    {
+      "model": "GPT-5.4 Pro",
+      "provider": "OpenAI",
+      "release_date": "2026-03-05",
+      "ai_index_score": 57,
+      "rank": "tied #1",
+      "context": "1M tokens",
+      "computer_use": true,
+      "notes": "First model to natively surpass human performance on OSWorld (75% vs 72.4% human)"
+    },
+    {
+      "model": "Gemini 3.1 Pro",
+      "provider": "Google",
+      "ai_index_score": 57,
+      "rank": "tied #1",
+      "context": "1M tokens"
+    },
+    {
+      "model": "Claude Opus 4.6",
+      "provider": "Anthropic",
+      "rank": "top tier",
+      "context": "1M tokens",
+      "max_output": "128K",
+      "task_horizon": "14.5 hours",
+      "notes": "Powers Vigil ADVISOR. Strong long-horizon planning."
+    },
+    {
+      "model": "Claude Mythos (Capybara)",
+      "provider": "Anthropic",
+      "status": "leaked, early access",
+      "rank": "above Opus 4.6",
+      "notes": "Leaked March 26-27. Confirmed by Anthropic. Step change above Opus. Cybersecurity focus for early access."
+    },
+    {
+      "model": "Llama 4",
+      "provider": "Meta",
+      "rank": "best open-source",
+      "notes": "Strong agentic capabilities. Open weights."
+    }
+  ],
+  "snapshots": [
+    {
+      "date": "2026-03-28",
+      "notable_release": "GPT-5.4 (March 5), Claude Mythos leaked (March 26-27)",
+      "vigil_model": "Sonnet 4.6 (workstreams) + Opus 4.6 (ADVISOR)",
+      "notes": "No new Vigil model changes this scan. Mythos on watch for future upgrade path."
+    }
+  ],
+  "trends": {
+    "direction": "accelerating",
+    "key_observations": [
+      "Computer use is now standard capability (both GPT-5.4 and Claude Code)",
+      "1M token context is table stakes",
+      "14.5-hour task horizon (Opus 4.6) signals agentic work replacing human-hour tasks",
+      "Claude Mythos represents another step change; likely Q2-Q3 2026 release",
+      "Open source (Llama 4) within striking distance of frontier models"
+    ],
+    "vigil_implication": "Current stack is solid. No urgent upgrade needed. Watch for Mythos API access for SECURE and ADVISOR workstream improvements."
+  }
+}

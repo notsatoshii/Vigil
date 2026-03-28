@@ -1,0 +1,135 @@
+{
+  "last_updated": "2026-03-28T20:00:00Z",
+  "description": "Regulatory watchlist for prediction markets, DeFi, and stablecoin regulation.",
+  "entities": [
+    {
+      "name": "CFTC",
+      "jurisdiction": "United States (federal)",
+      "current_stance": "supportive",
+      "last_scan": "2026-03-28",
+      "key_personnel": "Chairman Michael Selig",
+      "recent_actions": [
+        {
+          "date": "2026-03-16",
+          "action": "Published ANPR (Advanced Notice of Proposed Rulemaking) for prediction markets. Seeking public comment on principles-based framework addressing manipulation, asymmetric information, and sensitive event categories.",
+          "comment_deadline": "2026-04-30",
+          "significance": "critical",
+          "federal_register": "2026-05105"
+        },
+        {
+          "date": "2026-03-12",
+          "action": "Issued Staff Advisory Letter No. 26-08 signaling supportive stance toward event-based derivatives including sports contracts.",
+          "significance": "high"
+        },
+        {
+          "date": "2026-01",
+          "action": "Chairman Selig announced four-part pro-event-contract agenda. Withdrew 2024 proposed rule that would have banned political/sports contracts.",
+          "significance": "critical"
+        }
+      ],
+      "risk_to_lever": "low from CFTC directly. CFTC sees prediction markets as legitimate commodities instruments.",
+      "monitoring_priority": "high"
+    },
+    {
+      "name": "US Congress (Democrats)",
+      "jurisdiction": "United States (federal)",
+      "current_stance": "hostile",
+      "last_scan": "2026-03-28",
+      "recent_actions": [
+        {
+          "date": "2026-03-10",
+          "action": "DEATH BETS Act introduced (bicameral: Rep. Mike Levin, Sen. Adam Schiff). Would ban CFTC-registered platforms from listing contracts on terrorism, assassination, war, or death.",
+          "bill_status": "introduced, committee review",
+          "significance": "high"
+        },
+        {
+          "date": "2026-03",
+          "action": "BETS OFF Act introduced (Sens. Hickenlooper, Murphy). Bans wagering on government actions, terrorism, war, assassination.",
+          "bill_status": "introduced",
+          "significance": "high"
+        },
+        {
+          "date": "2026-03",
+          "action": "STOP Corrupt Bets Act introduced (Raskin, Merkley). Bans prediction markets on elections, government actions, sports, military.",
+          "bill_status": "introduced",
+          "significance": "high"
+        },
+        {
+          "date": "2026-03-23",
+          "action": "Prediction Markets Are Gambling Act introduced (Sen. Schiff bipartisan with Sen. Curtis). Would effectively destroy most of Kalshi and Polymarket's business.",
+          "bill_status": "introduced",
+          "significance": "critical"
+        }
+      ],
+      "risk_to_lever": "medium. If war/geopolitics contracts are banned on US-regulated platforms, LEVER's oracle sources become thinner. Republican-controlled Congress makes passage unlikely in near term.",
+      "monitoring_priority": "high"
+    },
+    {
+      "name": "State AGs (39-state coalition)",
+      "jurisdiction": "United States (state level)",
+      "current_stance": "hostile",
+      "last_scan": "2026-03-28",
+      "recent_actions": [
+        {
+          "date": "2026-03-27",
+          "action": "Washington state filed civil lawsuit against Kalshi alleging illegal gambling.",
+          "significance": "medium"
+        },
+        {
+          "date": "2026-03-17",
+          "action": "Arizona AG Kris Mayes filed criminal charges against Kalshi. First-ever criminal charges against a prediction market.",
+          "significance": "high"
+        },
+        {
+          "date": "2026-Q1",
+          "action": "11 state cease-and-desist orders against Kalshi. 8+ state lawsuits. Coalition claims $600M in lost tax revenue.",
+          "significance": "high"
+        }
+      ],
+      "risk_to_lever": "low direct. LEVER is DeFi-native, not a CFTC-registered DCM. State AG enforcement targets Kalshi specifically (US-regulated entity). However, if Kalshi is forced to delist markets, LEVER loses the secondary oracle source.",
+      "monitoring_priority": "medium"
+    },
+    {
+      "name": "GENIUS Act / Stablecoin Regulation",
+      "jurisdiction": "United States (federal)",
+      "current_stance": "enacted",
+      "last_scan": "2026-03-28",
+      "recent_actions": [
+        {
+          "date": "2025-07",
+          "action": "GENIUS Act signed. First US federal stablecoin law. 100% reserve backing, monthly disclosures, full audit for >$50B issuers.",
+          "significance": "high"
+        },
+        {
+          "date": "2026-07",
+          "action": "Treasury Secretary Bessent confirmed final rules by July 2026.",
+          "significance": "medium",
+          "status": "upcoming"
+        },
+        {
+          "date": "2026-03-27",
+          "action": "Tether hired KPMG (full audit) and PwC (internal systems). USDT: $185B reserves, 80%+ in US Treasury Bills. Dramatically improved transparency.",
+          "significance": "medium"
+        }
+      ],
+      "risk_to_lever": "low near-term. USDT remains the primary collateral. Tether compliance improving. Risk if USDT is restricted for US users post-July 2026 rules.",
+      "monitoring_priority": "medium"
+    },
+    {
+      "name": "MiCA (EU)",
+      "jurisdiction": "European Union",
+      "current_stance": "enacted, enforcing",
+      "last_scan": "2026-03-28",
+      "recent_actions": [
+        {
+          "date": "2026-07-01",
+          "action": "USDT faces EU restrictions if Tether does not obtain MiCA authorization by deadline. Only USDC is MiCA-compliant among top-10 stablecoins.",
+          "significance": "medium",
+          "status": "upcoming"
+        }
+      ],
+      "risk_to_lever": "low near-term (LEVER not targeting EU users initially). Medium term if EU expansion is planned and USDT is restricted.",
+      "monitoring_priority": "low"
+    }
+  ]
+}

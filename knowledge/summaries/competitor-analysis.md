@@ -1,6 +1,20 @@
 # Competitor Analysis
 ## Auto-generated summary from knowledge graph. Updated on new source ingestion.
 
+## Evening Scan Updates (2026-03-28 20:00 UTC)
+
+### Kalshi: $22B Valuation, Margin Trading Approved (TODAY)
+Kalshi Series E: $1B+ from Sequoia Capital and CapitalG (co-leads), plus ARK Venture Fund. Valuation doubled from $11B to $22B in weeks. Affiliate Kinetic Markets LLC registered as NFA futures commission merchant March 24, enabling margin (non-fully-collateralized) trading for institutional clients. Still needs CFTC rulebook approval. ARK Invest announced systematic integration of Kalshi prediction data for portfolio hedging (March 26-27).
+**LEVER implication**: Kalshi's move into leveraged prediction exposure validates the market. They are TradFi-regulated; LEVER is DeFi-native. Different customer segments, same core thesis. Best possible fundraising signal.
+
+### 5cc Capital: First Prediction Market VC Fund ($35M, launched March 23)
+Former Kalshi employees Adhi Rajaprabhakaran and Noah Zingler-Sternig. Backed by: Polymarket CEO Shayne Coplan, Kalshi CEO Tarek Mansour, Marc Andreessen (Moneta Luna), Ribbit Capital's Micky Malka, Millennium Management PM. Targets infrastructure (data tools, liquidity, compliance), NOT exchanges. 20 early-stage startups over 2 years.
+**LEVER implication**: LEVER is exactly what 5cc Capital backs. This is a direct investor pitch target. CEO should reach out to Rajaprabhakaran and Zingler-Sternig immediately.
+
+### Polymarket Fee Expansion March 30: Targeting $1M/Day Revenue
+Taker fees expanding to 8 new categories. Current 30-day volume: $9.55B. Weekly sector total: $5.9B (Polymarket: 43% share). NCAA March Madness drove 32% WoW surge in sports category. Sports markets remain fee-free in geopolitics/world events.
+**LEVER implication**: Fee expansion makes high-volume traders more cost-sensitive. LEVER's fee structure (embedded in spread) could become a differentiator.
+
 ## Latest Intelligence (2026-03-28)
 
 ### Polymarket: Conditional Election Markets + Volume Surge

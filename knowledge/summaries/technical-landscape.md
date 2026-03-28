@@ -1,5 +1,14 @@
 # Technical Landscape
 
+## AI Model Landscape (Updated: 2026-03-28 20:00 UTC)
+
+### GPT-5.4 Released March 5, 2026: Native Computer Use
+OpenAI released GPT-5.4 on March 5 with first-class computer use capabilities (75% OSWorld success rate, vs 72.4% human baseline). 1M token context, Tool Search API for large toolsets, GPT-5.4 Pro for max compute. Tied #1 on AI Intelligence Index (57 pts) with Gemini 3.1 Pro. This is the direct competition to Claude Code's agentic capabilities.
+
+### Claude Code March 2026 Feature Burst (v2.1.76)
+New features this month: /loop command (recurring background task execution, cron-like), /voice push-to-talk (20 languages, spacebar hold), Computer Use preview for Pro/Max plans (point, click, navigate), 1M context standard, 64K default/128K max output, --bare flag for scripted calls, /effort with "ultrathink" for max compute. Known bug: rate limit drain reported March 26.
+**Vigil implication**: /loop could replace some OpenClaw cron jobs. Computer Use could enable visual dashboard verification.
+
 ## AI Model Landscape (Scan: 2026-03-28)
 
 ### Breaking: Claude Mythos (Capybara) Leaked (March 26-27, 2026)
