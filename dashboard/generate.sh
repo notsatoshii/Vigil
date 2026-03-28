@@ -74,7 +74,7 @@ CRON_JOBS=$(su - lever -c "openclaw cron list 2>/dev/null" | tail -n +2 | head -
 
 # Color helper
 status_color() {
-    if [ "$1" = "running" ] || [ "$1" = "healthy" ]; then echo "#00ff88"
+    if [ "$1" = "running" ] || [ "$1" = "healthy" ]; then echo "#E6FF2B"
     elif [ "$1" = "stopped" ] || [ "$1" = "problems_detected" ]; then echo "#ff4444"
     else echo "#ffaa00"; fi
 }
@@ -87,11 +87,14 @@ cat > "$OUTPUT" << HTMLEOF
 <meta charset="UTF-8">
 <meta http-equiv="refresh" content="60">
 <title>Vigil Command Center</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/bitcount-single-ink:vf@latest/index.css">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: #0a0a0f; color: #c8c8d0; font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace; font-size: 13px; padding: 20px; }
+body { background: #0a0a0f; color: #c8c8d0; font-family: 'Bitcount Single Ink Variable', 'Bitcount Single Ink', 'JetBrains Mono', monospace; font-size: 14px; padding: 20px; }
 .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; padding-bottom: 12px; margin-bottom: 20px; }
-.header h1 { color: #00ff88; font-size: 18px; font-weight: 600; letter-spacing: 2px; }
+.header-left { display: flex; align-items: center; gap: 12px; }
+.header-logo svg { height: 28px; width: 28px; display: block; }
+.header h1 { color: #E6FF2B; font-size: 20px; font-weight: 600; letter-spacing: 3px; }
 .header .time { color: #666; font-size: 11px; }
 .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
 .card { background: #111118; border: 1px solid #1a1a24; border-radius: 4px; padding: 16px; }
@@ -100,11 +103,11 @@ body { background: #0a0a0f; color: #c8c8d0; font-family: 'JetBrains Mono', 'Fira
 .metric:last-child { border-bottom: none; }
 .metric .label { color: #666; }
 .metric .value { font-weight: 600; }
-.green { color: #00ff88; }
+.green { color: #E6FF2B; }
 .red { color: #ff4444; }
 .yellow { color: #ffaa00; }
 .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
-.dot.green { background: #00ff88; }
+.dot.green { background: #E6FF2B; }
 .dot.red { background: #ff4444; }
 pre { white-space: pre-wrap; word-wrap: break-word; color: #999; font-size: 11px; line-height: 1.6; }
 .wide { grid-column: span 2; }
@@ -114,7 +117,10 @@ pre { white-space: pre-wrap; word-wrap: break-word; color: #999; font-size: 11px
 </head>
 <body>
 <div class="header">
+<div class="header-left">
+<div class="header-logo"><svg viewBox="0 0 271.513 271.513" xmlns="http://www.w3.org/2000/svg"><path fill="#E6FF2B" d="M195.72,156.11c21.84,0,39.6,17.77,39.6,39.6s-17.76,39.6-39.6,39.6-39.6-17.77-39.6-39.6,17.77-39.6,39.6-39.6Z"/><path fill="#E6FF2B" d="M75.78,271.51h119.96c41.85,0,75.78-33.93,75.78-75.78v-119.96C271.51,33.93,237.59,0,195.74,0h-119.96C33.93,0,0,33.93,0,75.78v119.96c0,41.85,33.93,75.78,75.78,75.78ZM142.54,75.8c0-29.37,23.81-53.18,53.18-53.18h0c29.37,0,53.18,23.81,53.18,53.18v119.92c0,29.37-23.81,53.18-53.18,53.18h0c-29.37,0-53.18-23.81-53.18-53.18v-119.92ZM22.62,75.8c0-29.37,23.81-53.18,53.18-53.18h0c29.37,0,53.18,23.81,53.18,53.18v119.92c0,29.37-23.81,53.18-53.18,53.18h0c-29.37,0-53.18-23.81-53.18-53.18v-119.92Z"/><path fill="#E6FF2B" d="M75.79,115.4c-21.84,0-39.6-17.77-39.6-39.6s17.76-39.6,39.6-39.6,39.6,17.77,39.6,39.6-17.77,39.6-39.6,39.6Z"/></svg></div>
 <h1>VIGIL</h1>
+</div>
 <div class="time">Updated: $TIMESTAMP | Uptime: $UPTIME</div>
 </div>
 <div class="grid">

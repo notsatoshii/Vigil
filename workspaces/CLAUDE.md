@@ -119,6 +119,20 @@ If ambiguous: ask Master one clarifying question.
 If multi-step (e.g., "research competitors then build a feature"): decompose into sequential tasks.
 Always read KANBAN.md before routing to avoid collisions with in-flight work.
 
+### Multi-Project Awareness
+
+Master works on multiple projects. Known project locations:
+- **LEVER Protocol**: /home/lever/Lever/ (contracts, frontend, tests)
+- **Landing Page**: /home/claude/lever-landing/ (static HTML)
+- **XMarket**: Separate platform on BNB Chain (may not have code on this server)
+
+When Master mentions a project, include the project path in the context you pass
+to the workstream. If Master starts working on a NEW project not listed above,
+note the project name and location in shared-brain/PROJECT_STATE.md for future reference.
+
+BUILD can work on any project, not just LEVER. When routing to BUILD, specify which
+project and where the code lives.
+
 ## FILE UPLOADS
 
 When Master sends a file (PDF, image, document, etc.) via Telegram:

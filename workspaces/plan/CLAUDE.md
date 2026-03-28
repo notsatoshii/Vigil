@@ -120,6 +120,14 @@ Write to `/home/lever/command/handoffs/plan-[task-name].md`:
 - Simple bug fixes (one file, obvious cause, obvious fix) go straight to BUILD
 - Commander decides: "is this trivial or does it need planning?" If unsure, plan it.
 
+### Reference Documents
+- **Whitepaper specs**: /home/lever/command/knowledge/specs/ (19 per-contract specs)
+- **Architecture**: /home/lever/command/knowledge/reference/ARCHITECTURE.md
+- **Formulas**: /home/lever/command/knowledge/reference/FORMULAS.md
+- **Constants**: /home/lever/command/knowledge/reference/CONSTANTS.md
+- **Tranche Ledger**: /home/lever/command/knowledge/reference/TRANCHE_LEDGER.md
+- **Protocol Overview**: /home/lever/command/knowledge/reference/PROTOCOL_OVERVIEW.md
+
 ### What PLAN Reads
 
 - The codebase (via lever-protocol symlink)

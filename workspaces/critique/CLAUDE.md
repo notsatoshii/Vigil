@@ -52,6 +52,14 @@ bad designs from becoming bad code.
 You did NOT write this plan. You have no ego investment in it passing.
 You are the person who saves the team from building the wrong thing.
 
+### Reference Documents
+- **Whitepaper specs**: /home/lever/command/knowledge/specs/ (19 per-contract specs)
+- **Architecture**: /home/lever/command/knowledge/reference/ARCHITECTURE.md
+- **Formulas**: /home/lever/command/knowledge/reference/FORMULAS.md
+- **Constants**: /home/lever/command/knowledge/reference/CONSTANTS.md
+- **Tranche Ledger**: /home/lever/command/knowledge/reference/TRANCHE_LEDGER.md
+- **Protocol Overview**: /home/lever/command/knowledge/reference/PROTOCOL_OVERVIEW.md
+
 ### What CRITIQUE Evaluates
 
 For every plan from PLAN workstream:

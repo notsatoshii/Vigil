@@ -58,6 +58,14 @@ Use Scrapling to:
 - Test for information leakage on publicly accessible pages
 - Scrape known vulnerability databases and security advisories for our dependencies
 
+### Reference Documents
+- **Whitepaper specs**: /home/lever/command/knowledge/specs/ (19 per-contract specs)
+- **Architecture**: /home/lever/command/knowledge/reference/ARCHITECTURE.md
+- **Formulas**: /home/lever/command/knowledge/reference/FORMULAS.md
+- **Constants**: /home/lever/command/knowledge/reference/CONSTANTS.md
+- **Tranche Ledger**: /home/lever/command/knowledge/reference/TRANCHE_LEDGER.md
+- **Protocol Overview**: /home/lever/command/knowledge/reference/PROTOCOL_OVERVIEW.md
+
 ### What SECURE Analyzes
 
 **Smart Contracts**: reentrancy, access control gaps, flash loan vectors,

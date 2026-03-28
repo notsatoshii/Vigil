@@ -4,11 +4,14 @@
 <meta charset="UTF-8">
 <meta http-equiv="refresh" content="60">
 <title>Vigil Command Center</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/bitcount-single-ink:vf@latest/index.css">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: #0a0a0f; color: #c8c8d0; font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace; font-size: 13px; padding: 20px; }
+body { background: #0a0a0f; color: #c8c8d0; font-family: 'Bitcount Single Ink Variable', 'Bitcount Single Ink', 'JetBrains Mono', monospace; font-size: 14px; padding: 20px; }
 .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; padding-bottom: 12px; margin-bottom: 20px; }
-.header h1 { color: #00ff88; font-size: 18px; font-weight: 600; letter-spacing: 2px; }
+.header-left { display: flex; align-items: center; gap: 12px; }
+.header-logo svg { height: 28px; width: 28px; display: block; }
+.header h1 { color: #E6FF2B; font-size: 20px; font-weight: 600; letter-spacing: 3px; }
 .header .time { color: #666; font-size: 11px; }
 .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
 .card { background: #111118; border: 1px solid #1a1a24; border-radius: 4px; padding: 16px; }
@@ -17,11 +20,11 @@ body { background: #0a0a0f; color: #c8c8d0; font-family: 'JetBrains Mono', 'Fira
 .metric:last-child { border-bottom: none; }
 .metric .label { color: #666; }
 .metric .value { font-weight: 600; }
-.green { color: #00ff88; }
+.green { color: #E6FF2B; }
 .red { color: #ff4444; }
 .yellow { color: #ffaa00; }
 .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
-.dot.green { background: #00ff88; }
+.dot.green { background: #E6FF2B; }
 .dot.red { background: #ff4444; }
 pre { white-space: pre-wrap; word-wrap: break-word; color: #999; font-size: 11px; line-height: 1.6; }
 .wide { grid-column: span 2; }
@@ -31,17 +34,20 @@ pre { white-space: pre-wrap; word-wrap: break-word; color: #999; font-size: 11px
 </head>
 <body>
 <div class="header">
+<div class="header-left">
+<div class="header-logo"><svg viewBox="0 0 271.513 271.513" xmlns="http://www.w3.org/2000/svg"><path fill="#E6FF2B" d="M195.72,156.11c21.84,0,39.6,17.77,39.6,39.6s-17.76,39.6-39.6,39.6-39.6-17.77-39.6-39.6,17.77-39.6,39.6-39.6Z"/><path fill="#E6FF2B" d="M75.78,271.51h119.96c41.85,0,75.78-33.93,75.78-75.78v-119.96C271.51,33.93,237.59,0,195.74,0h-119.96C33.93,0,0,33.93,0,75.78v119.96c0,41.85,33.93,75.78,75.78,75.78ZM142.54,75.8c0-29.37,23.81-53.18,53.18-53.18h0c29.37,0,53.18,23.81,53.18,53.18v119.92c0,29.37-23.81,53.18-53.18,53.18h0c-29.37,0-53.18-23.81-53.18-53.18v-119.92ZM22.62,75.8c0-29.37,23.81-53.18,53.18-53.18h0c29.37,0,53.18,23.81,53.18,53.18v119.92c0,29.37-23.81,53.18-53.18,53.18h0c-29.37,0-53.18-23.81-53.18-53.18v-119.92Z"/><path fill="#E6FF2B" d="M75.79,115.4c-21.84,0-39.6-17.77-39.6-39.6s17.76-39.6,39.6-39.6,39.6,17.77,39.6,39.6-17.77,39.6-39.6,39.6Z"/></svg></div>
 <h1>VIGIL</h1>
-<div class="time">Updated: 2026-03-28T12:28:02Z | Uptime: 2 weeks, 2 days, 7 hours, 58 minutes</div>
+</div>
+<div class="time">Updated: 2026-03-28T12:44:42Z | Uptime: 2 weeks, 2 days, 8 hours, 15 minutes</div>
 </div>
 <div class="grid">
 
 <div class="card">
 <h2>System Health</h2>
 <div class="metric"><span class="label">Status</span><span class="value" style="color: #ff4444">problems_detected</span></div>
-<div class="metric"><span class="label">RAM</span><span class="value">4991MB / 15993MB (31%)</span></div>
+<div class="metric"><span class="label">RAM</span><span class="value">8986MB / 15993MB (56%)</span></div>
 <div class="metric"><span class="label">Disk</span><span class="value">35G / 193G (18%)</span></div>
-<div class="metric"><span class="label">CPU Load</span><span class="value">0.52</span></div>
+<div class="metric"><span class="label">CPU Load</span><span class="value">2.06</span></div>
 <div class="metric"><span class="label">Last Check</span><span class="value" style="font-size:10px">2026-03-28T12:00:01Z</span></div>
 </div>
 
@@ -60,7 +66,7 @@ pre { white-space: pre-wrap; word-wrap: break-word; color: #999; font-size: 11px
 <h2>Workstreams</h2>
 <div class="metric"><span class="label">Active Sessions</span><span class="value green">2</span></div>
 <div class="metric"><span class="label">Pending Approvals</span><span class="value">0</span></div>
-<div class="metric"><span class="label">Knowledge Sources</span><span class="value">3</span></div>
+<div class="metric"><span class="label">Knowledge Sources</span><span class="value">4</span></div>
 <div class="metric"><span class="label">Knowledge Entities</span><span class="value">7</span></div>
 </div>
 
@@ -80,15 +86,16 @@ pre { white-space: pre-wrap; word-wrap: break-word; color: #999; font-size: 11px
 <pre>[2026-03-28T08:10:00Z] MIGRATION | Phase 0: Foundation
 [2026-03-28T10:55:18Z] RESEARCH | Inbox ingestion: test-note.txt
 [2026-03-28T12:01:54Z] RESEARCH | Inbox ingestion: 20260328-115423-PredictionIndex2025-2026.pdf
-[2026-03-28T12:04:32Z] RESEARCH | Inbox ingestion: 20260328-115813-PredictionIndex2025-2026.pdf</pre>
+[2026-03-28T12:04:32Z] RESEARCH | Inbox ingestion: 20260328-115813-PredictionIndex2025-2026.pdf
+[2026-03-28T12:36:23Z] RESEARCH | Inbox ingestion: 20260328-123557-photo-20260328-123557.jpg</pre>
 </div>
 
 <div class="card full">
 <h2>Heartbeat Schedule</h2>
-<pre>7b8a9ff2-f64a-4013-a54d-d90de236be60 research-evening-scan    cron 0 20 * * * (exact)          in 8h      -          idle      isolated  research   -
-3a316005-650f-4e3b-96cb-799e7e5d5ae4 operate-vigil-selfcheck  cron 0 0,12 * * * (exact)        in 12h     28m ago    error     isolated  operate    -
-f87ff4c9-c636-4b9f-b54f-fb611c89e4b9 advisor-daily-brief      cron 0 6 * * * (exact)           in 18h     -          idle      isolated  advisor    -
-017b644c-8ed2-4547-95d6-a54318f7035e research-morning-scan    cron 0 8 * * * (exact)           in 20h     -          idle      isolated  research   -
+<pre>7b8a9ff2-f64a-4013-a54d-d90de236be60 research-evening-scan    cron 0 20 * * * (exact)          in 7h      -          idle      isolated  research   -
+3a316005-650f-4e3b-96cb-799e7e5d5ae4 operate-vigil-selfcheck  cron 0 0,12 * * * (exact)        in 11h     45m ago    error     isolated  operate    -
+f87ff4c9-c636-4b9f-b54f-fb611c89e4b9 advisor-daily-brief      cron 0 6 * * * (exact)           in 17h     -          idle      isolated  advisor    -
+017b644c-8ed2-4547-95d6-a54318f7035e research-morning-scan    cron 0 8 * * * (exact)           in 19h     -          idle      isolated  research   -
 b60eb2f2-1a45-420a-8317-c122cdcf5e5e secure-weekly-audit      cron 0 3 * * 1 (exact)           in 2d      -          idle      isolated  secure     -
 b86c78dd-3cf6-4a7a-91e6-bcd1e92cfa55 ceo-weekly-brief         cron 0 7 * * 1 (exact)           in 2d      -          idle      isolated  ceo        -
 2e8fc18f-6d3e-4323-bda0-2868512cb733 improve-weekly-review    cron 0 9 * * 3 (exact)           in 4d      -          idle      isolated  improve    -</pre>

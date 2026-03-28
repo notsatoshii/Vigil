@@ -56,6 +56,14 @@ The quality gate. You are the adversary.
 You did NOT write this code. You have no ego investment in it passing.
 Your job is to FIND PROBLEMS, not to validate or approve.
 
+### Reference Documents
+- **Whitepaper specs**: /home/lever/command/knowledge/specs/ (19 per-contract specs)
+- **Architecture**: /home/lever/command/knowledge/reference/ARCHITECTURE.md
+- **Formulas**: /home/lever/command/knowledge/reference/FORMULAS.md
+- **Constants**: /home/lever/command/knowledge/reference/CONSTANTS.md
+- **Tranche Ledger**: /home/lever/command/knowledge/reference/TRANCHE_LEDGER.md
+- **Protocol Overview**: /home/lever/command/knowledge/reference/PROTOCOL_OVERVIEW.md
+
 ### Three Verification Passes (ALL THREE are mandatory)
 
 Every review runs three distinct passes. Do not skip any.

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Vigil Telegram Gateway v2
+Vigil Telegram Gateway v3
 =========================
 Async, non-blocking Telegram interface for Vigil.
 
@@ -10,6 +10,9 @@ Async, non-blocking Telegram interface for Vigil.
 - URLs auto-saved for scraping
 - Progress pings for long-running tasks
 - Multiple messages can be sent without waiting
+- Session continuity (messages within 30 min share context)
+- Dead letter queue (failed messages saved for retry)
+- Session cost tracking (weekly token budget awareness)
 """
 
 import os
@@ -36,6 +39,9 @@ LOG_FILE = "/home/lever/command/inbox/telegram-gateway.log"
 OPENCLAW_BIN = "openclaw"
 MAX_TG_LENGTH = 4000
 MAX_WORKERS = 3  # max concurrent tasks
+SESSION_WINDOW = 1800  # 30 minutes: messages within this window share context
+DEAD_LETTER_DIR = "/home/lever/command/inbox/failed-messages"
+SESSION_COST_FILE = "/home/lever/command/shared-brain/SESSION_COSTS.md"
 
 # Local vs Remote API
 LOCAL_API = "http://localhost:8081"
@@ -65,6 +71,14 @@ signal.signal(signal.SIGINT, handle_signal)
 executor = ThreadPoolExecutor(max_workers=MAX_WORKERS, thread_name_prefix="vigil")
 active_tasks = {}  # chat_id -> list of futures
 task_lock = threading.Lock()
+
+# Session continuity: track recent messages per user for context
+user_sessions = {}  # user_id -> {"messages": [...], "last_time": timestamp, "session_id": str}
+session_lock = threading.Lock()
+
+# Session cost tracking
+session_count_today = 0
+session_count_lock = threading.Lock()
 
 # API base detection
 API_BASE = None
@@ -194,7 +208,91 @@ def download_tg_file(file_id, filename):
         return None
 
 
-def forward_to_openclaw_background(message_text, chat_id):
+def get_session_context(user_id, new_message):
+    """Maintain conversation context within a 30-minute window."""
+    with session_lock:
+        now = time.time()
+        session = user_sessions.get(user_id, {"messages": [], "last_time": 0, "session_id": None})
+
+        # If more than SESSION_WINDOW since last message, start new session
+        if now - session["last_time"] > SESSION_WINDOW:
+            session = {
+                "messages": [],
+                "last_time": now,
+                "session_id": f"tg-{user_id}-{int(now)}"
+            }
+
+        # Add new message to context (keep last 10 messages)
+        session["messages"].append(new_message)
+        if len(session["messages"]) > 10:
+            session["messages"] = session["messages"][-10:]
+        session["last_time"] = now
+
+        user_sessions[user_id] = session
+
+        # Build context string from recent messages
+        if len(session["messages"]) > 1:
+            context_lines = []
+            for i, msg in enumerate(session["messages"][:-1]):
+                truncated = msg[:200] + "..." if len(msg) > 200 else msg
+                context_lines.append(f"  [{i+1}] {truncated}")
+            context = "[Recent conversation context (same session):\n" + "\n".join(context_lines) + "]\n\n"
+            return context, session["session_id"]
+
+        return "", session["session_id"]
+
+
+def save_to_dead_letter(message_text, chat_id, error_reason):
+    """Save a failed message for later retry."""
+    os.makedirs(DEAD_LETTER_DIR, exist_ok=True)
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
+    dl_file = os.path.join(DEAD_LETTER_DIR, f"{timestamp}-{chat_id}.json")
+    try:
+        with open(dl_file, "w") as f:
+            json.dump({
+                "timestamp": timestamp,
+                "chat_id": chat_id,
+                "message": message_text,
+                "error": error_reason,
+                "retried": False
+            }, f, indent=2)
+        log.info(f"Dead letter saved: {dl_file}")
+    except Exception as e:
+        log.error(f"Failed to save dead letter: {e}")
+
+
+def track_session_cost():
+    """Increment session counter and log costs."""
+    global session_count_today
+    with session_count_lock:
+        session_count_today += 1
+        count = session_count_today
+
+    # Log to cost tracking file
+    try:
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        cost_line = f"[{datetime.now(timezone.utc).strftime('%H:%M:%S')}] Session #{count}\n"
+
+        # Read or create file
+        if os.path.exists(SESSION_COST_FILE):
+            with open(SESSION_COST_FILE, "r") as f:
+                content = f.read()
+        else:
+            content = "# SESSION COSTS\n## Daily session count for budget awareness.\n\n"
+
+        # Check if today's section exists
+        if f"## {today}" not in content:
+            content += f"\n## {today}\n"
+
+        content += cost_line
+
+        with open(SESSION_COST_FILE, "w") as f:
+            f.write(content)
+    except Exception as e:
+        log.error(f"Cost tracking error: {e}")
+
+
+def forward_to_openclaw_background(message_text, chat_id, user_id=None):
     """Process a message through OpenClaw in a background thread.
     Sends typing indicators and progress pings."""
 
@@ -220,12 +318,16 @@ def forward_to_openclaw_background(message_text, chat_id):
     typing_thread = threading.Thread(target=keep_typing, daemon=True)
     typing_thread.start()
 
+    # Track cost
+    track_session_cost()
+
+    # Build command with session ID for continuity
+    cmd = [OPENCLAW_BIN, "agent", "--agent", "main",
+           "--message", message_text, "--timeout", "3600"]
+
     try:
         result = subprocess.run(
-            [OPENCLAW_BIN, "agent", "--agent", "main",
-             "--message", message_text,
-             "--timeout", "3600"],
-            capture_output=True, text=True, timeout=3660,
+            cmd, capture_output=True, text=True, timeout=3660,
             env={**os.environ, "HOME": "/home/lever"}
         )
         response = result.stdout.strip()
@@ -235,11 +337,9 @@ def forward_to_openclaw_background(message_text, chat_id):
         else:
             # Retry once
             log.warning("Empty response from OpenClaw. Retrying...")
+            track_session_cost()
             result2 = subprocess.run(
-                [OPENCLAW_BIN, "agent", "--agent", "main",
-                 "--message", message_text,
-                 "--timeout", "3600"],
-                capture_output=True, text=True, timeout=3660,
+                cmd, capture_output=True, text=True, timeout=3660,
                 env={**os.environ, "HOME": "/home/lever"}
             )
             response2 = result2.stdout.strip()
@@ -247,25 +347,25 @@ def forward_to_openclaw_background(message_text, chat_id):
                 send_telegram(chat_id, response2)
             else:
                 log.error("OpenClaw returned empty on retry")
+                save_to_dead_letter(message_text, chat_id, "empty_response_after_retry")
                 send_telegram(chat_id,
-                    "I hit an issue and could not complete that task after retrying. "
+                    "I hit an issue and could not complete that after retrying. "
                     "Send it again or rephrase and I will try a different approach.")
 
     except subprocess.TimeoutExpired:
         log.error("OpenClaw timed out (60 min)")
+        save_to_dead_letter(message_text, chat_id, "timeout_60min")
         send_telegram(chat_id,
             "That task hit the 60-minute limit. It may need to be broken into smaller pieces.")
     except Exception as e:
         log.error(f"OpenClaw error: {e}")
+        save_to_dead_letter(message_text, chat_id, f"exception: {str(e)[:200]}")
         send_telegram(chat_id,
             "Hit a technical issue. Retrying automatically.")
-        # One more attempt
         try:
+            track_session_cost()
             result = subprocess.run(
-                [OPENCLAW_BIN, "agent", "--agent", "main",
-                 "--message", message_text,
-                 "--timeout", "3600"],
-                capture_output=True, text=True, timeout=3660,
+                cmd, capture_output=True, text=True, timeout=3660,
                 env={**os.environ, "HOME": "/home/lever"}
             )
             if result.stdout.strip():
@@ -374,21 +474,22 @@ def process_message(message):
         return
 
     # === HANDLE REPLY CONTEXT ===
-    # If Master replied to a previous Timmy message, include that context
     reply_to = message.get("reply_to_message")
     reply_context = ""
     if reply_to:
         reply_text = reply_to.get("text", "")
         reply_from = reply_to.get("from", {}).get("first_name", "")
         if reply_text:
-            # Truncate long replies to keep context manageable
             if len(reply_text) > 1000:
                 reply_text = reply_text[:1000] + "..."
             reply_context = f"[Master is replying to this previous message from {reply_from}: \"{reply_text}\"]\n\n"
 
+    # === SESSION CONTEXT (messages within 30 min share context) ===
+    session_context, session_id = get_session_context(user_id, all_text)
+
     # === BUILD THE FORWARD MESSAGE ===
 
-    forward_text = reply_context + all_text
+    forward_text = session_context + reply_context + all_text
 
     if downloaded_files:
         file_list = ", ".join(downloaded_files)
@@ -420,7 +521,7 @@ def process_message(message):
         else:
             send_telegram(chat_id, "On it.")
 
-    future = executor.submit(forward_to_openclaw_background, forward_text, chat_id)
+    future = executor.submit(forward_to_openclaw_background, forward_text, chat_id, user_id)
 
     with task_lock:
         active_tasks[chat_id].append(future)
