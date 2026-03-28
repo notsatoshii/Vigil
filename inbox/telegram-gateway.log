@@ -1,0 +1,8 @@
+2026-03-28 11:27:29,127 [INFO] Vigil Telegram Gateway started
+2026-03-28 11:27:29,128 [INFO] Authorized user: 422985839
+2026-03-28 11:27:29,128 [INFO] Inbox: /home/lever/command/inbox/incoming
+2026-03-28 11:28:00,720 [INFO] Received signal 15, shutting down...
+2026-03-28 11:28:01,136 [INFO] Telegram Gateway stopped
+2026-03-28 11:28:01,221 [INFO] Vigil Telegram Gateway started
+2026-03-28 11:28:01,222 [INFO] Authorized user: 422985839
+2026-03-28 11:28:01,222 [INFO] Inbox: /home/lever/command/inbox/incoming
