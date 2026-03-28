@@ -1,0 +1,18 @@
+{
+  "tasks": {
+    "lever-bug-1": {
+      "task_id": "lever-bug-1",
+      "title": "LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs entryPI) causing 38 winners, 0 losers",
+      "stage": "planning",
+      "agent_pid": 2628112,
+      "dispatched_at": 1774705336.165407,
+      "plan_file": "",
+      "critique_file": "",
+      "build_file": "",
+      "verify_file": "",
+      "attempts": 0
+    }
+  },
+  "sessions_today": 1,
+  "last_reset_date": "2026-03-28"
+}

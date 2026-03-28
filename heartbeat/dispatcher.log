@@ -47,3 +47,46 @@ Meta's next frontier model pushed from March to May+ 2026. Cannot match GPT-5.4 
 - [Trending Topics](https://www.trendingtopics.eu/meta-delays-avocado-ai-model-again-might-even-license-gemini-from-google/)
 
 **Knowledge graph updated**: Source entry saved, `technical-landscape.md` updated with full model leaderboard and Claude Code changelog.
+[2026-03-28T13:38:19Z] === Dispatcher run: 0 active, 5 slots available ===
+[2026-03-28T13:38:19Z] KANBAN: backlog=11 planned=0 progress=0 review=0
+[2026-03-28T13:38:19Z] DISPATCH: plan - Plan the implementation for this task from the KANBAN BACKLOG: LEVER-BUG-1: [CRI...
+Password: [2026-03-28T13:38:19Z] DISPATCH: improve - Do a quick product review. Open the LEVER frontend at http://localhost:3000 in t...
+[2026-03-28T13:38:19Z] DISPATCH: operate - Run a system check. Read all Vigil logs (telegram-gateway.log, inbox.log, health...
+[2026-03-28T13:38:19Z] DISPATCH: research - Quick intelligence check. Pick one item from your watchlist coverage areas and d...
+[2026-03-28T13:38:19Z] Dispatched 4 tasks. Done.
+Password: Password: Password: su: Authentication failure
+su: Authentication failure
+su: Authentication failure
+su: Authentication failure
+[2026-03-28T13:38:23Z] === Dispatcher run: 0 active, 5 slots available ===
+[2026-03-28T13:38:23Z] KANBAN: backlog=11 planned=0 progress=0 review=0
+[2026-03-28T13:38:23Z] DISPATCH: plan - Plan the implementation for this task from the KANBAN BACKLOG: LEVER-BUG-1: [CRI...
+Password: [2026-03-28T13:38:23Z] DISPATCH: improve - Do a quick product review. Open the LEVER frontend at http://localhost:3000 in t...
+[2026-03-28T13:38:23Z] DISPATCH: operate - Run a system check. Read all Vigil logs (telegram-gateway.log, inbox.log, health...
+[2026-03-28T13:38:23Z] DISPATCH: research - Quick intelligence check. Pick one item from your watchlist coverage areas and d...
+[2026-03-28T13:38:23Z] Dispatched 4 tasks. Done.
+Password: Password: Password: su: Authentication failure
+su: Authentication failure
+su: Authentication failure
+su: Authentication failure
+Done. Here's the system status:
+
+**All services: healthy**
+- openclaw-gateway, vigil-telegram, vigil-dashboard, vigil-inbox: running
+- lever-frontend, lever-oracle, lever-accrue-keeper, caddy: running
+- Disk: 18%, RAM: 44%, Load: 0.50 - all well within limits
+- Inbox pipeline: processing cleanly (PDFs and images ingested today)
+
+**Two bugs found and fixed:**
+
+1. **`health-escalate.sh` (critical)**: When openclaw-gateway went down at 12:00, the auto-restart failed with "Failed to connect to bus: No medium found" because the script used `systemctl --user restart` for what is actually a system-level service. Fixed to use `systemctl restart` for all services.
+
+2. **`dispatcher.sh` (functional)**: KANBAN count functions had `|| echo 0` after `grep -c`. Since `grep -c` already prints `0` on no matches (just exits 1), the fallback fired and produced `"0\n0"` -- causing the `[: integer expression expected` errors in the log and silently breaking PLANNED/PROGRESS/REVIEW dispatch logic. Fixed with `; return 0`.
+
+Both fixes committed and pushed.
+
+Session terminated, killing shell...
+Session terminated, killing shell... ...killed.
+ ...killed.
+
+Session terminated, killing shell... ...killed.

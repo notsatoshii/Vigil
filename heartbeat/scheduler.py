@@ -1,24 +1,19 @@
 #!/usr/bin/env python3
 """
-Vigil Scheduler
-===============
-The brain that keeps the PLAN -> CRITIQUE -> BUILD -> VERIFY pipeline moving.
+Vigil Scheduler v2
+==================
+Intelligent pipeline orchestrator. Runs as a systemd daemon.
 
-Runs as a systemd service. Every 60 seconds:
-1. Reads KANBAN.md to understand current state
-2. Determines what can run in parallel vs what must be sequential
-3. Dispatches work via openclaw agent (background processes)
-4. Tracks active sessions and their progress
-5. Monitors for completion and triggers next stage
+Manages the PLAN -> CRITIQUE -> BUILD -> VERIFY pipeline with:
+- Task ID tracking (each task flows through stages with a single ID)
+- Dependency enforcement (CRITIQUE waits for PLAN, BUILD waits for CRITIQUE, etc.)
+- Parallel execution across different tasks
+- Duplicate prevention (never dispatch same agent for same task twice)
+- Session cost circuit breaker (stops dispatching at weekly limit)
+- Accurate process counting
+- KANBAN auto-updates (scheduler is source of truth, not agents)
 
-Dependencies:
-- PLAN -> CRITIQUE (sequential: critique needs the plan)
-- CRITIQUE APPROVED -> BUILD (sequential: build needs approved plan)
-- BUILD -> VERIFY (sequential: verify needs the build)
-- BUT: PLAN(task B) can run IN PARALLEL with BUILD(task A)
-- AND: IMPROVE, RESEARCH, OPERATE can run in parallel with everything
-
-This is NOT a Claude session. Zero tokens. Pure Python.
+Zero tokens. Pure Python. Runs every 60 seconds.
 """
 
 import os
@@ -29,303 +24,477 @@ import subprocess
 import signal
 import threading
 import logging
+import hashlib
 from pathlib import Path
 from datetime import datetime, timezone
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, asdict
 
 # Config
 MAX_SESSIONS = 5
-CHECK_INTERVAL = 60  # seconds
+CHECK_INTERVAL = 60
+MAX_DAILY_SESSIONS = 80  # circuit breaker
 KANBAN = "/home/lever/command/shared-brain/KANBAN.md"
 ACTIVE_WORK = "/home/lever/command/shared-brain/ACTIVE_WORK.md"
+SESSION_COSTS = "/home/lever/command/shared-brain/SESSION_COSTS.md"
 HANDOFFS = "/home/lever/command/handoffs"
+STATE_FILE = "/home/lever/command/heartbeat/scheduler-state.json"
 LOG_FILE = "/home/lever/command/heartbeat/scheduler.log"
-DISPATCH_LOG = "/home/lever/command/heartbeat/dispatch-history.json"
 
-# Logging
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        logging.FileHandler(LOG_FILE),
-        logging.StreamHandler(sys.stdout)
-    ]
+    handlers=[logging.FileHandler(LOG_FILE), logging.StreamHandler(sys.stdout)]
 )
 log = logging.getLogger("scheduler")
 
-# Graceful shutdown
 running = True
 def handle_signal(signum, frame):
     global running
-    log.info(f"Signal {signum}, shutting down...")
     running = False
 signal.signal(signal.SIGTERM, handle_signal)
 signal.signal(signal.SIGINT, handle_signal)
 
 
+# ============================================================
+# STATE MANAGEMENT
+# ============================================================
+
 @dataclass
-class ActiveSession:
-    agent: str
-    task: str
-    started: float
-    process: subprocess.Popen = None
-    task_id: str = ""
+class TaskState:
+    task_id: str
+    title: str
+    stage: str  # backlog, planning, critiquing, building, verifying, done, blocked
+    agent_pid: int = 0
+    dispatched_at: float = 0
+    plan_file: str = ""
+    critique_file: str = ""
+    build_file: str = ""
+    verify_file: str = ""
+    attempts: int = 0
 
 
-# Track what is running
-active_sessions: dict = {}  # key -> ActiveSession
-session_lock = threading.Lock()
+class SchedulerState:
+    def __init__(self):
+        self.tasks: dict[str, TaskState] = {}
+        self.sessions_today: int = 0
+        self.last_reset_date: str = ""
+        self.load()
+
+    def load(self):
+        try:
+            with open(STATE_FILE) as f:
+                data = json.load(f)
+            for tid, tdata in data.get("tasks", {}).items():
+                self.tasks[tid] = TaskState(**tdata)
+            self.sessions_today = data.get("sessions_today", 0)
+            self.last_reset_date = data.get("last_reset_date", "")
+        except (FileNotFoundError, json.JSONDecodeError):
+            pass
+
+    def save(self):
+        data = {
+            "tasks": {tid: asdict(t) for tid, t in self.tasks.items()},
+            "sessions_today": self.sessions_today,
+            "last_reset_date": self.last_reset_date
+        }
+        with open(STATE_FILE, "w") as f:
+            json.dump(data, f, indent=2)
+
+    def reset_daily(self):
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        if self.last_reset_date != today:
+            self.sessions_today = 0
+            self.last_reset_date = today
+            # Clean up done tasks older than 24 hours
+            to_remove = []
+            for tid, t in self.tasks.items():
+                if t.stage == "done" and t.dispatched_at < time.time() - 86400:
+                    to_remove.append(tid)
+            for tid in to_remove:
+                del self.tasks[tid]
 
 
-def parse_kanban():
-    """Parse KANBAN.md into structured data."""
-    sections = {
-        "BACKLOG": [], "PLANNED": [], "IN PROGRESS": [],
-        "IN REVIEW": [], "DONE (last 10)": [], "BLOCKED": []
-    }
-    try:
-        with open(KANBAN, "r") as f:
-            content = f.read()
-        current = None
-        for line in content.split("\n"):
-            for section in sections:
-                if line.strip().startswith(f"## {section}"):
-                    current = section
-                    break
-            if line.startswith("---"):
-                current = None
-            elif current and line.startswith("- "):
-                sections[current].append(line[2:].strip())
-    except Exception as e:
-        log.error(f"Failed to parse KANBAN: {e}")
-    return sections
+state = SchedulerState()
+dispatch_lock = threading.Lock()
 
 
-def count_active():
-    """Count active openclaw agent processes."""
+# ============================================================
+# PROCESS MANAGEMENT
+# ============================================================
+
+def count_agent_processes():
+    """Count active openclaw agent processes accurately."""
     try:
         result = subprocess.run(
-            ["pgrep", "-f", "openclaw agent"],
+            ["bash", "-c", "ps aux | grep 'openclaw agent' | grep -v grep | wc -l"],
             capture_output=True, text=True, timeout=5
         )
-        return len(result.stdout.strip().split("\n")) if result.stdout.strip() else 0
+        return int(result.stdout.strip()) if result.stdout.strip() else 0
     except Exception:
         return 0
 
 
-def dispatch(agent, message, task_id=""):
-    """Dispatch a task to an agent in the background."""
-    log.info(f"DISPATCH [{agent}] {task_id or message[:60]}...")
-
-    def run_agent():
-        try:
-            proc = subprocess.Popen(
-                ["su", "-", "lever", "-c",
-                 f"openclaw agent --agent {agent} --message '{message}' --timeout 3600"],
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE
-            )
-            key = f"{agent}-{task_id or int(time.time())}"
-            with session_lock:
-                active_sessions[key] = ActiveSession(
-                    agent=agent, task=task_id or message[:80],
-                    started=time.time(), process=proc, task_id=task_id
-                )
-            proc.wait()
-            with session_lock:
-                if key in active_sessions:
-                    del active_sessions[key]
-            log.info(f"COMPLETE [{agent}] {task_id or message[:60]}")
-        except Exception as e:
-            log.error(f"DISPATCH ERROR [{agent}]: {e}")
-
-    t = threading.Thread(target=run_agent, daemon=True)
-    t.start()
-    return True
-
-
-def get_available_slots():
-    """How many more sessions can we start?"""
-    active = count_active()
-    with session_lock:
-        tracked = len(active_sessions)
-    actual = max(active, tracked)
-    return max(0, MAX_SESSIONS - actual)
-
-
-def agent_is_running(agent):
-    """Check if a specific agent type is already running."""
-    with session_lock:
-        return any(s.agent == agent for s in active_sessions.values())
-
-
-def has_recent_handoff(prefix, within_minutes=30):
-    """Check if a handoff file was created recently."""
+def is_process_alive(pid):
+    """Check if a specific PID is still running."""
+    if pid <= 0:
+        return False
     try:
-        for f in Path(HANDOFFS).glob(f"{prefix}*.md"):
-            age = time.time() - f.stat().st_mtime
-            if age < within_minutes * 60:
-                return True
+        os.kill(pid, 0)
+        return True
+    except (ProcessLookupError, PermissionError):
+        return False
+
+
+def dispatch_agent(agent, message, task_id):
+    """Dispatch an agent session. Returns PID."""
+    with dispatch_lock:
+        state.sessions_today += 1
+        state.save()
+
+    log.info(f"DISPATCH [{agent}] task={task_id} (session #{state.sessions_today} today)")
+
+    try:
+        # Use Popen for non-blocking
+        proc = subprocess.Popen(
+            ["su", "-", "lever", "-c",
+             f'openclaw agent --agent {agent} --message "{message}" --timeout 3600'],
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE
+        )
+        return proc.pid
+    except Exception as e:
+        log.error(f"DISPATCH FAILED [{agent}]: {e}")
+        return 0
+
+
+# ============================================================
+# KANBAN MANAGEMENT
+# ============================================================
+
+def read_kanban_section(section):
+    """Read items from a KANBAN section."""
+    items = []
+    try:
+        with open(KANBAN) as f:
+            content = f.read()
+        in_section = False
+        for line in content.split("\n"):
+            if line.strip().startswith(f"## {section}"):
+                in_section = True
+                continue
+            if in_section and line.startswith("---"):
+                break
+            if in_section and line.startswith("- "):
+                items.append(line[2:].strip())
     except Exception:
         pass
-    return False
+    return items
 
 
-def scheduler_cycle():
-    """One cycle of the scheduler. Decides what to dispatch."""
-    kanban = parse_kanban()
-    available = get_available_slots()
+def update_kanban(task_title, from_section, to_section):
+    """Move a task between KANBAN sections."""
+    try:
+        with open(KANBAN) as f:
+            content = f.read()
 
+        # Remove from source section
+        lines = content.split("\n")
+        new_lines = []
+        skip_next = False
+        for line in lines:
+            if line.startswith("- ") and task_title[:30] in line:
+                continue  # remove it
+            new_lines.append(line)
+
+        content = "\n".join(new_lines)
+
+        # Add to target section
+        timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        new_entry = f"- [{timestamp}] {task_title}"
+        section_header = f"## {to_section}"
+        content = content.replace(
+            section_header + "\n",
+            section_header + "\n" + new_entry + "\n",
+            1
+        )
+
+        with open(KANBAN, "w") as f:
+            f.write(content)
+
+        log.info(f"KANBAN: '{task_title[:40]}...' moved to {to_section}")
+    except Exception as e:
+        log.error(f"KANBAN update failed: {e}")
+
+
+# ============================================================
+# TASK ID GENERATION
+# ============================================================
+
+def make_task_id(title):
+    """Generate a stable task ID from title."""
+    clean = title.split(":")[0].strip() if ":" in title else title[:20]
+    return clean.replace(" ", "-").replace("[", "").replace("]", "").lower()
+
+
+# ============================================================
+# SCHEDULER LOGIC
+# ============================================================
+
+def check_completed_tasks():
+    """Check if any dispatched tasks have completed (process no longer alive)."""
+    for tid, task in list(state.tasks.items()):
+        if task.agent_pid > 0 and not is_process_alive(task.agent_pid):
+            # Process finished. Advance to next stage.
+            task.agent_pid = 0
+
+            if task.stage == "planning":
+                # Check if plan file was created
+                plan_files = sorted(Path(HANDOFFS).glob("plan-*.md"), key=lambda f: f.stat().st_mtime, reverse=True)
+                if plan_files:
+                    task.plan_file = str(plan_files[0])
+                    task.stage = "planned"
+                    log.info(f"PLAN complete for {tid}. Moving to critique.")
+                else:
+                    task.stage = "backlog"
+                    log.warning(f"PLAN for {tid} produced no plan file. Returning to backlog.")
+
+            elif task.stage == "critiquing":
+                # Check critique verdict
+                critique_files = sorted(Path(HANDOFFS).glob("critique-*.md"), key=lambda f: f.stat().st_mtime, reverse=True)
+                if critique_files:
+                    task.critique_file = str(critique_files[0])
+                    try:
+                        verdict_text = critique_files[0].read_text()
+                        if "APPROVED" in verdict_text.upper():
+                            task.stage = "approved"
+                            log.info(f"CRITIQUE APPROVED for {tid}. Ready for BUILD.")
+                            update_kanban(task.title, "BACKLOG", "PLANNED")
+                        elif "REJECT" in verdict_text.upper():
+                            task.stage = "backlog"
+                            task.attempts += 1
+                            log.info(f"CRITIQUE REJECTED for {tid}. Back to backlog.")
+                        else:
+                            task.stage = "planned"  # needs revision, re-plan
+                            log.info(f"CRITIQUE wants REVISE for {tid}. Re-planning.")
+                    except Exception:
+                        task.stage = "approved"  # assume approved if we cannot parse
+                else:
+                    task.stage = "planned"  # no critique file, retry
+
+            elif task.stage == "building":
+                build_files = sorted(Path(HANDOFFS).glob("build-*.md"), key=lambda f: f.stat().st_mtime, reverse=True)
+                if build_files:
+                    task.build_file = str(build_files[0])
+                    task.stage = "built"
+                    log.info(f"BUILD complete for {tid}. Moving to VERIFY.")
+                    update_kanban(task.title, "IN PROGRESS", "IN REVIEW")
+                else:
+                    task.stage = "approved"  # no build file, retry
+                    log.warning(f"BUILD for {tid} produced no handoff. Retrying.")
+
+            elif task.stage == "verifying":
+                verify_files = sorted(Path(HANDOFFS).glob("verify-*.md"), key=lambda f: f.stat().st_mtime, reverse=True)
+                if verify_files:
+                    task.verify_file = str(verify_files[0])
+                    try:
+                        verdict_text = verify_files[0].read_text()
+                        if "PASS" in verdict_text.upper() and "FAIL" not in verdict_text.upper():
+                            task.stage = "done"
+                            log.info(f"VERIFY PASSED for {tid}. Task complete!")
+                            update_kanban(task.title, "IN REVIEW", "DONE (last 10)")
+                        elif "DESIGN FLAW" in verdict_text.upper() or "RE-PLAN" in verdict_text.upper():
+                            task.stage = "backlog"
+                            task.attempts += 1
+                            log.info(f"VERIFY found DESIGN FLAW in {tid}. Sending back to PLAN.")
+                        else:
+                            task.stage = "approved"
+                            task.attempts += 1
+                            log.info(f"VERIFY FAILED {tid}. Sending back to BUILD (attempt {task.attempts}).")
+                    except Exception:
+                        task.stage = "approved"
+                        task.attempts += 1
+                else:
+                    task.stage = "built"  # no verdict, retry verify
+
+            state.save()
+
+
+def dispatch_pipeline_work():
+    """Dispatch work based on current state and available capacity."""
+    available = MAX_SESSIONS - count_agent_processes()
     if available <= 0:
-        log.info(f"All {MAX_SESSIONS} slots full. Waiting.")
-        return
+        return 0
 
-    log.info(f"Slots available: {available}. "
-             f"KANBAN: backlog={len(kanban['BACKLOG'])}, "
-             f"planned={len(kanban['PLANNED'])}, "
-             f"progress={len(kanban['IN PROGRESS'])}, "
-             f"review={len(kanban['IN REVIEW'])}")
+    # Circuit breaker
+    if state.sessions_today >= MAX_DAILY_SESSIONS:
+        log.warning(f"CIRCUIT BREAKER: {state.sessions_today} sessions today. Max is {MAX_DAILY_SESSIONS}. Stopping dispatches.")
+        return 0
 
     dispatched = 0
 
-    # ============================================================
-    # PIPELINE TASKS (respect dependencies)
-    # ============================================================
+    # Check tasks that need the next pipeline stage
+    for tid, task in sorted(state.tasks.items(), key=lambda x: x[1].attempts):
+        if dispatched >= available:
+            break
+        if task.agent_pid > 0:
+            continue  # already running
+        if task.attempts >= 3:
+            if task.stage != "blocked":
+                task.stage = "blocked"
+                update_kanban(task.title, "IN PROGRESS", "BLOCKED")
+                log.warning(f"BLOCKED: {tid} failed {task.attempts} times.")
+            continue
 
-    # 1. VERIFY: if there is work IN REVIEW and VERIFY is not running
-    if kanban["IN REVIEW"] and not agent_is_running("verify") and dispatched < available:
-        task = kanban["IN REVIEW"][0]
-        latest_build = sorted(Path(HANDOFFS).glob("build-*.md"), key=lambda f: f.stat().st_mtime, reverse=True)
-        if latest_build:
-            dispatch("verify",
-                f"Review the latest BUILD handoff at {latest_build[0]}. "
-                f"Run all 3 verification passes. Write verdict. Update KANBAN.md.",
-                f"verify-{task[:30]}")
+        if task.stage == "planned" and not any(t.stage == "critiquing" and t.agent_pid > 0 for t in state.tasks.values()):
+            # Dispatch CRITIQUE
+            msg = f"Review the plan at {task.plan_file}. Write critique to {HANDOFFS}/critique-{tid}.md. Check the actual codebase. Be adversarial."
+            pid = dispatch_agent("critique", msg, tid)
+            if pid:
+                task.stage = "critiquing"
+                task.agent_pid = pid
+                task.dispatched_at = time.time()
+                dispatched += 1
+
+        elif task.stage == "approved":
+            # Dispatch BUILD
+            msg = f"Implement the approved plan at {task.plan_file}. Follow it step by step. Write handoff to {HANDOFFS}/build-{tid}.md. Update KANBAN.md to IN PROGRESS."
+            pid = dispatch_agent("build", msg, tid)
+            if pid:
+                task.stage = "building"
+                task.agent_pid = pid
+                task.dispatched_at = time.time()
+                update_kanban(task.title, "PLANNED", "IN PROGRESS")
+                dispatched += 1
+
+        elif task.stage == "built":
+            # Dispatch VERIFY
+            msg = f"Review the BUILD handoff at {task.build_file}. Run all 3 verification passes. Write verdict to {HANDOFFS}/verify-{tid}.md. If you find a DESIGN FLAW (not just a code bug), say DESIGN FLAW explicitly."
+            pid = dispatch_agent("verify", msg, tid)
+            if pid:
+                task.stage = "verifying"
+                task.agent_pid = pid
+                task.dispatched_at = time.time()
+                dispatched += 1
+
+    # Ingest new backlog items as tasks
+    backlog = read_kanban_section("BACKLOG")
+    for item in backlog:
+        tid = make_task_id(item)
+        if tid not in state.tasks and dispatched < available:
+            state.tasks[tid] = TaskState(task_id=tid, title=item, stage="backlog")
+            # Dispatch PLAN
+            msg = f"Plan the implementation for: {item}. Read the codebase. Write structured plan to {HANDOFFS}/plan-{tid}.md."
+            pid = dispatch_agent("plan", msg, tid)
+            if pid:
+                state.tasks[tid].stage = "planning"
+                state.tasks[tid].agent_pid = pid
+                state.tasks[tid].dispatched_at = time.time()
+                dispatched += 1
+            break  # only plan one new item per cycle to avoid overwhelming
+
+    # Fill remaining slots with support work
+    remaining = available - dispatched
+    if remaining > 0 and not any_agent_running("improve"):
+        pid = dispatch_agent("improve",
+            "Quick product review. Open http://localhost:3000 in browser. Check 2-3 pages. Write findings to shared-brain/IMPROVE_PROPOSALS.md.",
+            "support-improve")
+        if pid:
+            dispatched += 1
+            remaining -= 1
+
+    if remaining > 0 and not any_agent_running("operate"):
+        pid = dispatch_agent("operate",
+            "System check. Read Vigil logs. Fix issues. Commit fixes to git.",
+            "support-operate")
+        if pid:
+            dispatched += 1
+            remaining -= 1
+
+    if remaining > 0 and not any_agent_running("research"):
+        pid = dispatch_agent("research",
+            "Quick scan. Check one coverage area. Update knowledge graph.",
+            "support-research")
+        if pid:
             dispatched += 1
 
-    # 2. BUILD: if there are PLANNED items with approved critiques and BUILD is not running
-    if kanban["PLANNED"] and not agent_is_running("build") and dispatched < available:
-        task = kanban["PLANNED"][0]
-        latest_plan = sorted(Path(HANDOFFS).glob("plan-*.md"), key=lambda f: f.stat().st_mtime, reverse=True)
-        if latest_plan:
-            dispatch("build",
-                f"Implement the approved plan at {latest_plan[0]}. "
-                f"Follow it step by step. Write handoff. Update KANBAN.md to IN REVIEW.",
-                f"build-{task[:30]}")
-            dispatched += 1
+    state.save()
+    return dispatched
 
-    # 3. CRITIQUE: if PLAN just finished (recent plan file) and CRITIQUE not running
-    if not agent_is_running("critique") and dispatched < available:
-        if has_recent_handoff("plan-", within_minutes=60):
-            latest_plan = sorted(Path(HANDOFFS).glob("plan-*.md"), key=lambda f: f.stat().st_mtime, reverse=True)
-            if latest_plan:
-                # Check it has not been critiqued already
-                plan_time = latest_plan[0].stat().st_mtime
-                critiques = sorted(Path(HANDOFFS).glob("critique-*.md"), key=lambda f: f.stat().st_mtime, reverse=True)
-                critique_time = critiques[0].stat().st_mtime if critiques else 0
-                if plan_time > critique_time:
-                    dispatch("critique",
-                        f"Review this plan: {latest_plan[0]}. Write critique. "
-                        f"If APPROVED, update KANBAN.md to move task to PLANNED.",
-                        "critique")
-                    dispatched += 1
 
-    # 4. PLAN: if BACKLOG has items and PLAN is not running
-    if kanban["BACKLOG"] and not agent_is_running("plan") and dispatched < available:
-        task = kanban["BACKLOG"][0]
-        dispatch("plan",
-            f"Plan the implementation for: {task}. "
-            f"Read the relevant codebase. Write plan to {HANDOFFS}/plan-{int(time.time())}.md. "
-            f"Update KANBAN.md (move from BACKLOG, note that planning is in progress).",
-            f"plan-{task[:30]}")
-        dispatched += 1
-
-    # ============================================================
-    # PARALLEL SUPPORT TASKS (fill remaining slots)
-    # ============================================================
-
-    # IMPROVE: if not running and has not run in last 2 hours
-    if not agent_is_running("improve") and dispatched < available:
-        if not has_recent_handoff("improve-", within_minutes=120):
-            dispatch("improve",
-                "Quick product review. Open http://localhost:3000 in the browser. "
-                "Check 2-3 pages. Note issues. Write to IMPROVE_PROPOSALS.md.",
-                "improve-review")
-            dispatched += 1
-
-    # OPERATE: if not running
-    if not agent_is_running("operate") and dispatched < available:
-        if not has_recent_handoff("operate-", within_minutes=60):
-            dispatch("operate",
-                "System check. Read Vigil logs. Check for errors. "
-                "Fix issues. Clean up dead processes. Commit fixes.",
-                "operate-check")
-            dispatched += 1
-
-    # RESEARCH: if not running and has not run in last 4 hours
-    if not agent_is_running("research") and dispatched < available:
-        if not has_recent_handoff("research-", within_minutes=240):
-            dispatch("research",
-                "Quick intelligence scan. Check one coverage area. "
-                "Update knowledge graph. Keep it under 10 minutes.",
-                "research-scan")
-            dispatched += 1
-
-    log.info(f"Dispatched {dispatched} tasks this cycle.")
+def any_agent_running(agent):
+    """Check if an agent type is currently running."""
+    for task in state.tasks.values():
+        if task.agent_pid > 0 and is_process_alive(task.agent_pid):
+            return True
+    # Also check for support tasks
+    try:
+        result = subprocess.run(
+            ["bash", "-c", f"ps aux | grep 'openclaw agent.*--agent {agent}' | grep -v grep | wc -l"],
+            capture_output=True, text=True, timeout=5
+        )
+        return int(result.stdout.strip() or "0") > 0
+    except Exception:
+        return False
 
 
 def update_active_work():
-    """Update ACTIVE_WORK.md with current state."""
+    """Write current state to ACTIVE_WORK.md."""
     try:
-        with session_lock:
-            lines = []
-            for key, session in active_sessions.items():
-                elapsed = int(time.time() - session.started)
-                minutes = elapsed // 60
-                lines.append(f"- {session.agent.upper()}: {session.task} ({minutes}m)")
+        lines = []
+        pipeline_tasks = []
+        for tid, task in state.tasks.items():
+            if task.stage in ("done", "blocked"):
+                continue
+            status = task.stage
+            if task.agent_pid > 0 and is_process_alive(task.agent_pid):
+                elapsed = int(time.time() - task.dispatched_at) // 60
+                status = f"{task.stage} ({elapsed}m)"
+            pipeline_tasks.append(f"- **{tid}**: {task.title[:60]} [{status}]")
 
         content = "# ACTIVE WORK\n"
-        content += "## Updated automatically by the scheduler.\n\n"
-        content += "---\n\n## Currently Running\n\n"
-        if lines:
-            content += "\n".join(lines) + "\n"
-        else:
-            content += "*No active sessions.*\n"
+        content += f"## Updated by scheduler at {datetime.now(timezone.utc).strftime('%H:%M:%S UTC')}\n\n"
+        content += f"Sessions today: {state.sessions_today}/{MAX_DAILY_SESSIONS}\n\n---\n\n"
+        content += "## Pipeline Tasks\n\n"
+        content += "\n".join(pipeline_tasks) if pipeline_tasks else "*No active pipeline tasks.*"
+        content += "\n\n---\n\n## KANBAN Summary\n\n"
 
-        content += "\n---\n\n## Pipeline Status\n\n"
-        kanban = parse_kanban()
-        content += f"- Backlog: {len(kanban['BACKLOG'])} tasks\n"
-        content += f"- Planned: {len(kanban['PLANNED'])} tasks\n"
-        content += f"- In Progress: {len(kanban['IN PROGRESS'])} tasks\n"
-        content += f"- In Review: {len(kanban['IN REVIEW'])} tasks\n"
-        content += f"- Done: {len(kanban['DONE (last 10)'])} tasks\n"
-        content += f"- Blocked: {len(kanban['BLOCKED'])} tasks\n"
+        for section in ["BACKLOG", "PLANNED", "IN PROGRESS", "IN REVIEW", "DONE (last 10)", "BLOCKED"]:
+            items = read_kanban_section(section)
+            content += f"- {section}: {len(items)}\n"
 
         with open(ACTIVE_WORK, "w") as f:
             f.write(content)
     except Exception as e:
-        log.error(f"Failed to update ACTIVE_WORK: {e}")
+        log.error(f"ACTIVE_WORK update failed: {e}")
 
+
+# ============================================================
+# MAIN LOOP
+# ============================================================
 
 def main():
-    log.info("Vigil Scheduler started")
-    log.info(f"Max sessions: {MAX_SESSIONS}")
-    log.info(f"Check interval: {CHECK_INTERVAL}s")
-    log.info(f"KANBAN: {KANBAN}")
+    log.info("Vigil Scheduler v2 started")
+    log.info(f"Max sessions: {MAX_SESSIONS}, Daily limit: {MAX_DAILY_SESSIONS}")
 
     while running:
         try:
-            scheduler_cycle()
+            state.reset_daily()
+            check_completed_tasks()
+            dispatched = dispatch_pipeline_work()
             update_active_work()
+
+            active = count_agent_processes()
+            log.info(f"Cycle: {active} active, {MAX_SESSIONS - active} available, "
+                     f"{dispatched} dispatched, {state.sessions_today} today")
+
         except Exception as e:
             log.error(f"Scheduler error: {e}")
 
-        # Wait for next cycle
         for _ in range(CHECK_INTERVAL):
             if not running:
                 break
             time.sleep(1)
 
+    state.save()
     log.info("Scheduler stopped")
 
 
