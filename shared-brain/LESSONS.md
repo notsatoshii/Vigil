@@ -96,3 +96,11 @@ After redeploying ExecutionEngine with a new LeverageModelFixed, the environment
 
 ### Market Timestamp Misconfiguration Kills Leverage
 A market with resolution timestamp of 384 (far in the past) caused the M_market adjustment factor to drop to 0.001, capping effective leverage at 1x despite a 19.45x platform ceiling. The math: `19.45 * R_adjusted * 0.001 = ~0.02`, which floors to 1x. Always verify market resolution timestamps are set to realistic future dates when registering markets.
+
+### PnL Calculation: Use MTM Price, Not Raw Oracle Price (CRITICAL, from Master)
+PnL must be calculated using the mark-to-market (MTM) price and entry price, NOT the raw probability
+from Polymarket. The raw oracle price (PI) is the input to the pricing pipeline, but execution impact,
+fees, and adjustments create the actual entry/exit prices. PnL = direction * (exit_mtm_price - entry_mtm_price) * size.
+Using raw Polymarket PI directly for PnL calculation is WRONG because it ignores the execution price
+adjustments from the imbalance-delta model. The whitepaper may have this wrong.
+This is the root cause of LEVER-BUG-1 (38 winners, 0 losers).
