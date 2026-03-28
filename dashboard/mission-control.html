@@ -123,7 +123,7 @@ code,pre,.mono{font-family:'SF Mono','Fira Code','JetBrains Mono',monospace}
     <div class="ws-pills" id="ws-pills"></div>
   </div>
   <div class="status-right">
-    <div class="s">Sessions: <span class="n" id="h-sessions">-</span></div>
+    <div class="s">Active: <span class="n" id="h-sessions">-</span></div>
     <div class="s">RAM: <span class="n" id="h-ram">-</span></div>
     <div class="s"><span class="conn" id="conn"></span></div>
     <div class="s mono" id="h-ago" style="font-size:10px;color:#334155">--</div>
@@ -169,7 +169,7 @@ code,pre,.mono{font-family:'SF Mono','Fira Code','JetBrains Mono',monospace}
     <!-- Stats -->
     <div class="section">
       <div class="stat-row">
-        <div class="stat"><div class="stat-n" id="s-sessions">-</div><div class="stat-l">Sessions</div></div>
+        <div class="stat"><div class="stat-n" id="s-sessions">-</div><div class="stat-l">Today</div></div>
         <div class="stat"><div class="stat-n" id="s-sources">-</div><div class="stat-l">Sources</div></div>
         <div class="stat"><div class="stat-n" id="s-entities">-</div><div class="stat-l">Entities</div></div>
       </div>
@@ -241,7 +241,7 @@ function render(d) {
   orb.className = 'orb ' + (d.system.health === 'healthy' ? 'ok' : d.system.ramPct > 85 ? 'bad' : 'warn');
 
   // Header stats
-  document.getElementById('h-sessions').textContent = d.sessions.today;
+  document.getElementById('h-sessions').textContent = d.sessions.active;
   document.getElementById('h-ram').textContent = d.system.ramPct + '%';
 
   // Workstream pills (show which are active)
