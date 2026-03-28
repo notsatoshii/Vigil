@@ -1,3 +1,12 @@
 gstack/
 venv/
 .claude/
+inbox/incoming/*.pdf
+inbox/processing/*.pdf
+inbox/incoming/*.jpg
+inbox/incoming/*.png
+inbox/incoming/*.mp4
+inbox/incoming/*.ogg
+telegram-api-data/*.binlog
+telegram-api-data/**/*.binlog
+telegram-api-data/**/*.pdf

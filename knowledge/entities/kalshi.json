@@ -3,6 +3,9 @@
   "type": "competitor",
   "facts": [
     "Regulated prediction market exchange (CFTC-regulated in the US)",
+    "Fined users $15K-$20K and issued multi-year bans for insider trading in early 2026",
+    "Uses institutional market makers (e.g., SIG) for tight spreads in high-volume categories",
+    "Launched builder program partnering with Twitter influencers",
     "Part of the $13B monthly prediction market volume alongside Polymarket and PredictIt",
     "Offers spot (1x) exposure only -- no leverage infrastructure",
     "Potential future oracle source for LEVER Protocol"

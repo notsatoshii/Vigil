@@ -1,0 +1,118 @@
+{
+  "id": "20260328-115425-PredictionIndex-Annual-Report-2025-2026",
+  "ingestedAt": "2026-03-28T11:54:25Z",
+  "sourceFile": "/home/lever/command/inbox/processing/20260328-115423-PredictionIndex2025-2026.pdf",
+  "sourceType": "Primary (industry report)",
+  "reliability": "High (multi-author industry report with cited data, published by Prediction Index)",
+  "publishedDate": "2026-03-04",
+  "pages": 35,
+
+  "summary": [
+    "Prediction markets crossed $100B in notional trading volume in 2025; January 2026 set an all-time high of $17.2B monthly across major platforms. Global transaction activity projected to hit ~$40B in 2026, up 400% from 2024.",
+    "ICE (NYSE parent) led a $2B strategic investment in Polymarket at ~$8B valuation, signaling institutional legitimacy. Distribution channels now include Robinhood, Interactive Brokers, and Coinbase.",
+    "CFTC Chairman Michael Selig announced a four-part agenda to support event contracts (Jan 2026), withdrawing the 2024 proposed rule that would have banned political/sports contracts. Regulatory posture has shifted from exclusion to integration.",
+    "The report identifies 268 crypto prediction market projects; 45 use AMMs, 31 use CLOBs, only 11 use sportsbook mechanics. Markets are designed for coordination, not extraction.",
+    "Key 2026 themes: AI agent-driven trading, prediction markets as 'adhesive layer' for multi-asset crypto economy, insider trading tensions, user-generated markets (long tail), creator economy emergence, and graduation architectures solving cold-start problems."
+  ],
+
+  "entities": [
+    {"name": "Prediction Index", "type": "company", "role": "report publisher, tracks 268 prediction market projects"},
+    {"name": "Lililashka", "type": "person", "role": "Founder of Prediction Index"},
+    {"name": "Eric Rosenthal", "type": "person", "role": "Chief Strategy Officer, Prediction Index"},
+    {"name": "Polymarket", "type": "competitor", "role": "leading prediction market, $8B valuation, $2B ICE investment"},
+    {"name": "Kalshi", "type": "competitor", "role": "regulated prediction market, fined users for insider trading in early 2026"},
+    {"name": "Azuro", "type": "competitor", "role": "prediction market with unified LiquidityTree pool"},
+    {"name": "Precog", "type": "competitor", "role": "LS-LMSR AMM with locked LP positions until resolution"},
+    {"name": "Inframarkets", "type": "company", "role": "first prediction market built for energy sector on Solana"},
+    {"name": "Lorenzo F. Villa", "type": "person", "role": "Co-founder of Inframarkets"},
+    {"name": "Euphoria", "type": "company", "role": "tap-based trading product on MegaETH"},
+    {"name": "RedStone Oracles", "type": "company", "role": "$7B+ TVS, second-largest blockchain oracle by client count"},
+    {"name": "Marcin Kazmierczak", "type": "person", "role": "Co-founder of RedStone Oracles"},
+    {"name": "functionSPACE", "type": "company", "role": "building market-based oracle resolution"},
+    {"name": "PredictQ", "type": "company", "role": "prediction market creator/analytics platform"},
+    {"name": "Justin Herzig", "type": "person", "role": "CEO & Co-Founder of PredictQ"},
+    {"name": "Predik", "type": "company", "role": "implements graduation architecture (parimutuel to AMM)"},
+    {"name": "Gianluca Panza", "type": "person", "role": "Founder of Predik"},
+    {"name": "Vatic.trading", "type": "company", "role": "prediction market analysis/trading"},
+    {"name": "ICE (Intercontinental Exchange)", "type": "institution", "role": "NYSE parent, $2B strategic investment in Polymarket"},
+    {"name": "CFTC", "type": "regulator", "role": "shifted to pro-event-contract stance under Chairman Michael Selig"},
+    {"name": "Michael Selig", "type": "person", "role": "CFTC Chairman, announced four-part agenda for event contracts Jan 2026"},
+    {"name": "FanDuel", "type": "company", "role": "launched event contracts tied to financial benchmarks"},
+    {"name": "CME Group", "type": "company", "role": "launched event contracts tied to financial benchmarks"},
+    {"name": "Robinhood", "type": "company", "role": "distribution channel for prediction markets"},
+    {"name": "Interactive Brokers", "type": "company", "role": "distribution channel for prediction markets"},
+    {"name": "Coinbase", "type": "company", "role": "distribution channel for prediction markets"},
+    {"name": "Chainlink", "type": "company", "role": "oracle integration with Polymarket"},
+    {"name": "Parcl", "type": "company", "role": "real estate data provider, partnered with Polymarket for housing price markets"},
+    {"name": "MegaETH", "type": "protocol", "role": "execution environment for Euphoria, millisecond block finality"},
+    {"name": "Solana", "type": "protocol", "role": "chain for Inframarkets"},
+    {"name": "Coalition Greenwich", "type": "research_firm", "role": "73% of market structure specialists expect prediction data valuable to institutions within 2 years"},
+    {"name": "TS Imagine", "type": "company", "role": "published white paper on institutional adoption of event contracts (Feb 2026)"},
+    {"name": "XO Market", "type": "competitor", "role": "allows user-generated custom markets"},
+    {"name": "Hanami", "type": "person", "role": "ex-CGO of Foresee, authored epistemic convergence essay"},
+    {"name": "Blaise", "type": "person", "role": "Research Analyst at DeFi Scope, authored ecosystem design essay"},
+    {"name": "Overdrive Studio", "type": "company", "role": "supporting sports handicappers and connecting them with crypto audience"}
+  ],
+
+  "relationships": [
+    {"from": "ICE", "to": "Polymarket", "relationship": "invested $2B at ~$8B valuation"},
+    {"from": "Polymarket", "to": "Parcl", "relationship": "partnered for housing price prediction markets"},
+    {"from": "Polymarket", "to": "Chainlink", "relationship": "oracle integration"},
+    {"from": "CFTC", "to": "event contracts", "relationship": "shifted to supportive regulatory stance in Jan 2026"},
+    {"from": "Kalshi", "to": "insider trading enforcement", "relationship": "fined users $15K-$20K and issued multi-year bans in early 2026"},
+    {"from": "Inframarkets", "to": "Solana", "relationship": "built on"},
+    {"from": "Euphoria", "to": "MegaETH", "relationship": "built on"},
+    {"from": "RedStone Oracles", "to": "Euphoria", "relationship": "oracle infrastructure provider"},
+    {"from": "prediction markets", "to": "LEVER Protocol", "relationship": "LEVER adds leverage to prediction market positions (sector tailwind)"}
+  ],
+
+  "categories": ["market", "strategic", "financial", "technical"],
+
+  "keyMetrics": {
+    "totalVolumeNotional2025": "$100B+",
+    "janVolume2026AllTimeHigh": "$17.2B monthly",
+    "projectedVolume2026": "~$40B (400% up from 2024)",
+    "projectsTracked": 268,
+    "activeMarkets": "115K+",
+    "totalCumulativeVolume": "$120B",
+    "polymarketValuation": "~$8B",
+    "iceInvestmentInPolymarket": "$2B",
+    "tradingMechanisms": {"AMM": 45, "CLOB": 31, "sportsbook": 11, "other_hybrid": "remainder"},
+    "topTraderEarnings": "6-7 figures annually",
+    "profitConcentration": "0.04% of wallets capture ~70% of profits",
+    "professionalTraders": "50-200 globally",
+    "institutionalExpectation": "73% of market structure specialists expect prediction data valuable within 2 years (Coalition Greenwich)",
+    "redStoneTVS": "$7B+"
+  },
+
+  "keyThemes": {
+    "aiAgentTrading": "2026 prediction markets become agent-driven; humans set assumptions, AI executes. Pundit model weakens as claims become probability-backed.",
+    "institutionalAdoption": "Prop trading firms and macro funds using event contracts for hedging. Consuming price signal often without taking the trade.",
+    "regulatoryShift": "CFTC moving from prohibition to integration. Insider trading enforcement emerging as key tension.",
+    "adhesiveLayer": "Prediction markets as coordinating layer connecting spot, perps, RWAs, stablecoins. Prices feed risk models, trigger protocol responses.",
+    "coldStartSolution": "Graduation architecture: parimutuel discovery -> conversion event -> AMM/CLOB live trading. Only graduate markets with proven demand.",
+    "creatorEconomy": "Prediction market content creators emerging. On-chain verified track records solve trust problem that plagues sports betting touts.",
+    "epistemicConvergence": "Social networks becoming implicit belief markets; prediction markets becoming social networks. Convergence into epistemic markets.",
+    "energyVertical": "Energy most acute use case for event contracts. Grid becoming stochastic; existing hedging tools insufficient. Inframarkets targeting this.",
+    "userGeneratedMarkets": "Long tail of user-created markets may generate more signal than headline events. XO Market, Predik leading this.",
+    "oracleAsMarket": "functionSPACE argues oracle should be a market itself. Monad $53M resolution dispute on Polymarket illustrates the problem with UMA-based subjective resolution.",
+    "ecosystemDesign": "Liquidity is a symptom, not a cause. Markets fail from bad incentive design, unclear resolution, and governance unpredictability."
+  },
+
+  "workstreamTags": {
+    "CEO": "Major sector validation data for investor conversations: $100B volume, $8B Polymarket valuation, ICE investment, CFTC support, 73% institutional interest. LEVER positioned in fastest-growing segment of crypto.",
+    "BUILD": "Graduation architecture (parimutuel -> AMM) is worth studying for LEVER/XMarket. Also: Azuro's LiquidityTree for cross-market liquidity, Inframarkets' deterministic oracle resolution, user-generated markets pattern.",
+    "IMPROVE": "Euphoria's tap-based UX as onboarding reference. Creator economy infrastructure (verified track records, analytics). Prediction market UX reducing friction is a key theme.",
+    "ADVISOR": "Prediction markets are transitioning from 'betting' to 'information infrastructure.' LEVER's leveraged position product fits perfectly as the 'derivative layer atop outcome probabilities' the report describes. Strategic positioning should emphasize this narrative.",
+    "SECURE": "Insider trading enforcement is a growing concern. Monad resolution dispute highlights oracle manipulation risk. Wash trading allegations against Polymarket noted."
+  },
+
+  "analysisNotes": [
+    "ANALYSIS: This report is extremely bullish for LEVER Protocol's positioning. The entire industry is moving toward prediction markets as financial infrastructure, and the report explicitly identifies 'derivative layers (perps, options) expanding atop outcome probabilities' as the next evolution. That is literally what LEVER does.",
+    "ANALYSIS: The $8B Polymarket valuation and ICE investment establish prediction markets as a credible asset class for institutional VCs. This is direct social proof for LEVER fundraising.",
+    "ANALYSIS: The 'graduation architecture' concept from Predik is highly relevant to XMarket's market creation problem. Worth a deep dive by BUILD.",
+    "ANALYSIS: Insider trading tensions flagged by Kalshi's enforcement actions create regulatory risk for the sector but also competitive opportunity; platforms that handle this well will differentiate.",
+    "ANALYSIS: The 268 projects tracked means intense competition. LEVER's leverage angle is a genuine differentiator since no other platform offers leveraged exposure to prediction market outcomes.",
+    "CONTRARIAN VIEW: The $100B volume figure is notional and includes significant wash trading allegations. Real volume may be substantially lower. The 268 projects tracked likely includes many dead or near-dead projects. The 'institutional adoption' narrative is currently more about consuming price data than actually trading, which means the addressable market for trading infrastructure may be smaller than implied."
+  ]
+}

@@ -4,3 +4,7 @@
 [2026-03-28T10:55:18Z] SUCCESS: test-note.txt processed and moved to processed/
 [2026-03-28T11:54:25Z] Processing: 20260328-115423-PredictionIndex2025-2026.pdf (type: pdf)
 [2026-03-28T11:54:25Z] Spawning RESEARCH session for 20260328-115423-PredictionIndex2025-2026.pdf...
+[2026-03-28T12:01:54Z] SUCCESS: 20260328-115423-PredictionIndex2025-2026.pdf processed and moved to processed/
+[2026-03-28T12:01:56Z] Processing: 20260328-115813-PredictionIndex2025-2026.pdf (type: pdf)
+[2026-03-28T12:01:56Z] Spawning RESEARCH session for 20260328-115813-PredictionIndex2025-2026.pdf...
+[2026-03-28T12:04:32Z] SUCCESS: 20260328-115813-PredictionIndex2025-2026.pdf processed and moved to processed/

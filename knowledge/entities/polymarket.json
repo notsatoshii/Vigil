@@ -2,6 +2,12 @@
   "name": "Polymarket",
   "type": "competitor",
   "facts": [
+    "Valued at ~$8B after ICE (NYSE parent) led a $2B strategic investment (2025-2026)",
+    "Part of $100B+ notional prediction market volume in 2025; Jan 2026 = $17.2B all-time monthly high",
+    "Partnered with Parcl for housing price prediction markets (RWA integration)",
+    "Chainlink oracle integration for tamper-resistant data",
+    "Monad $53M resolution dispute highlighted UMA-based oracle weaknesses (Nov 2025)",
+    "Wash trading allegations noted in industry report (Prediction Index 2025-2026)",
     "Launched conditional markets for 2026 US midterm elections (March 2026)",
     "Volume growing 15% week-over-week since February 2026, implying ~2x increase over 6 weeks",
     "Leading prediction market platform with deep CLOB orderbooks",

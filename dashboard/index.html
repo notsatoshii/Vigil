@@ -32,17 +32,17 @@ pre { white-space: pre-wrap; word-wrap: break-word; color: #999; font-size: 11px
 <body>
 <div class="header">
 <h1>VIGIL</h1>
-<div class="time">Updated: 2026-03-28T11:59:56Z | Uptime: 2 weeks, 2 days, 7 hours, 30 minutes</div>
+<div class="time">Updated: 2026-03-28T12:12:24Z | Uptime: 2 weeks, 2 days, 7 hours, 43 minutes</div>
 </div>
 <div class="grid">
 
 <div class="card">
 <h2>System Health</h2>
-<div class="metric"><span class="label">Status</span><span class="value" style="color: #00ff88">healthy</span></div>
-<div class="metric"><span class="label">RAM</span><span class="value">5080MB / 15993MB (31%)</span></div>
+<div class="metric"><span class="label">Status</span><span class="value" style="color: #ff4444">problems_detected</span></div>
+<div class="metric"><span class="label">RAM</span><span class="value">5059MB / 15993MB (31%)</span></div>
 <div class="metric"><span class="label">Disk</span><span class="value">35G / 193G (18%)</span></div>
-<div class="metric"><span class="label">CPU Load</span><span class="value">0.85</span></div>
-<div class="metric"><span class="label">Last Check</span><span class="value" style="font-size:10px">2026-03-28T08:57:00Z</span></div>
+<div class="metric"><span class="label">CPU Load</span><span class="value">0.70</span></div>
+<div class="metric"><span class="label">Last Check</span><span class="value" style="font-size:10px">2026-03-28T12:00:01Z</span></div>
 </div>
 
 <div class="card">
@@ -57,7 +57,7 @@ pre { white-space: pre-wrap; word-wrap: break-word; color: #999; font-size: 11px
 <h2>Workstreams</h2>
 <div class="metric"><span class="label">Active Sessions</span><span class="value green">2</span></div>
 <div class="metric"><span class="label">Pending Approvals</span><span class="value">0</span></div>
-<div class="metric"><span class="label">Knowledge Sources</span><span class="value">1</span></div>
+<div class="metric"><span class="label">Knowledge Sources</span><span class="value">3</span></div>
 <div class="metric"><span class="label">Knowledge Entities</span><span class="value">7</span></div>
 </div>
 
@@ -75,13 +75,15 @@ pre { white-space: pre-wrap; word-wrap: break-word; color: #999; font-size: 11px
 <div class="card full">
 <h2>Recent Sessions</h2>
 <pre>[2026-03-28T08:10:00Z] MIGRATION | Phase 0: Foundation
-[2026-03-28T10:55:18Z] RESEARCH | Inbox ingestion: test-note.txt</pre>
+[2026-03-28T10:55:18Z] RESEARCH | Inbox ingestion: test-note.txt
+[2026-03-28T12:01:54Z] RESEARCH | Inbox ingestion: 20260328-115423-PredictionIndex2025-2026.pdf
+[2026-03-28T12:04:32Z] RESEARCH | Inbox ingestion: 20260328-115813-PredictionIndex2025-2026.pdf</pre>
 </div>
 
 <div class="card full">
 <h2>Heartbeat Schedule</h2>
-<pre>3a316005-650f-4e3b-96cb-799e7e5d5ae4 operate-vigil-selfcheck  cron 0 0,12 * * * (exact)        &lt;1m ago    -          running   isolated  operate    -
-7b8a9ff2-f64a-4013-a54d-d90de236be60 research-evening-scan    cron 0 20 * * * (exact)          in 8h      -          idle      isolated  research   -
+<pre>7b8a9ff2-f64a-4013-a54d-d90de236be60 research-evening-scan    cron 0 20 * * * (exact)          in 8h      -          idle      isolated  research   -
+3a316005-650f-4e3b-96cb-799e7e5d5ae4 operate-vigil-selfcheck  cron 0 0,12 * * * (exact)        in 12h     13m ago    error     isolated  operate    -
 f87ff4c9-c636-4b9f-b54f-fb611c89e4b9 advisor-daily-brief      cron 0 6 * * * (exact)           in 18h     -          idle      isolated  advisor    -
 017b644c-8ed2-4547-95d6-a54318f7035e research-morning-scan    cron 0 8 * * * (exact)           in 20h     -          idle      isolated  research   -
 b60eb2f2-1a45-420a-8317-c122cdcf5e5e secure-weekly-audit      cron 0 3 * * 1 (exact)           in 2d      -          idle      isolated  secure     -

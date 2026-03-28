@@ -404,21 +404,26 @@ def process_message(message):
     # === ROUTE TO OPENCLAW IN BACKGROUND ===
 
     log.info(f"Queuing for OpenClaw: {forward_text[:80]}...")
-    send_typing(chat_id)
-
-    future = executor.submit(forward_to_openclaw_background, forward_text, chat_id)
 
     with task_lock:
         if chat_id not in active_tasks:
             active_tasks[chat_id] = []
-        active_tasks[chat_id].append(future)
         # Clean up completed futures
         active_tasks[chat_id] = [f for f in active_tasks[chat_id] if not f.done()]
-
         queue_depth = len(active_tasks[chat_id])
-        if queue_depth > 1:
+
+    # Instant acknowledgment (only for text tasks, files already acknowledged above)
+    if not downloaded_files and not saved_urls:
+        if queue_depth > 0:
             send_telegram(chat_id,
-                f"Queued. {queue_depth - 1} task{'s' if queue_depth - 1 > 1 else ''} ahead of this one.")
+                f"On it. {queue_depth} task{'s' if queue_depth > 1 else ''} ahead of this, queuing.")
+        else:
+            send_telegram(chat_id, "On it.")
+
+    future = executor.submit(forward_to_openclaw_background, forward_text, chat_id)
+
+    with task_lock:
+        active_tasks[chat_id].append(future)
 
 
 def main():
