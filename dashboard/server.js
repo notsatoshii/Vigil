@@ -81,7 +81,7 @@ function collectServices() {
 function collectSessions() {
   const today = new Date().toISOString().split('T')[0];
   return {
-    active: shNum("su - lever -c \"openclaw health 2>/dev/null\" | grep 'Session store' | grep -o '[0-9]* entries' | grep -o '[0-9]*'"),
+    active: shNum("ps aux | grep 'openclaw agent' | grep -v grep | wc -l"),
     today: shNum(`grep -c "Session #" "${SESSION_COSTS}" 2>/dev/null`),
     pendingApprovals: shNum(`grep -c "^[^#*-].*PENDING" "${BRAIN}/INTENTIONS.md" 2>/dev/null`) + shNum(`grep -c "^[^#*-].*PENDING" "${BRAIN}/ADVISOR_BRIEFS.md" 2>/dev/null`),
     deadLetters: shNum("find /home/lever/command/inbox/failed-messages/ -name '*.json' 2>/dev/null | wc -l"),

@@ -253,3 +253,38 @@
 2026-03-28 14:21:39,666 [INFO] Vigil Scheduler v2 started
 2026-03-28 14:21:39,666 [INFO] Max sessions: 5, Daily limit: 80
 2026-03-28 14:21:39,707 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 8 today
+2026-03-28 14:21:49,750 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 8 today
+2026-03-28 14:21:59,797 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 8 today
+2026-03-28 14:22:09,843 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 8 today
+2026-03-28 14:22:19,882 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 8 today
+2026-03-28 14:22:29,926 [INFO] Cycle: 6 active, -1 available, 0 dispatched, 8 today
+2026-03-28 14:22:39,968 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 8 today
+2026-03-28 14:22:50,008 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 8 today
+2026-03-28 14:23:00,050 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 8 today
+2026-03-28 14:23:10,096 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 8 today
+2026-03-28 14:23:20,137 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 8 today
+2026-03-28 14:23:30,139 [INFO] PLAN complete for lever-bug-1. Moving to critique.
+2026-03-28 14:23:30,160 [INFO] DISPATCH [plan] task=lever-bug-5 (session #9 today)
+2026-03-28 14:23:30,160 [INFO] Support check: remaining=0, dispatched=1
+2026-03-28 14:23:30,181 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 9 today
+2026-03-28 14:23:40,222 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:23:50,262 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:24:00,304 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:24:10,342 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:24:20,383 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:24:30,425 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:24:40,467 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:24:50,508 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:25:00,548 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:25:10,588 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:25:20,634 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:25:30,676 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:25:40,729 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:25:50,772 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:26:00,814 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:26:10,856 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:26:20,910 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:26:30,956 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:26:40,997 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:26:51,037 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today
+2026-03-28 14:27:01,080 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 9 today

@@ -3,10 +3,10 @@
     "lever-bug-1": {
       "task_id": "lever-bug-1",
       "title": "LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs entryPI) causing 38 winners, 0 losers",
-      "stage": "planning",
-      "agent_pid": 2628112,
+      "stage": "planned",
+      "agent_pid": 0,
       "dispatched_at": 1774705336.165407,
-      "plan_file": "",
+      "plan_file": "/home/lever/command/handoffs/plan-lever-bug-1.md",
       "critique_file": "",
       "build_file": "",
       "verify_file": "",
@@ -47,8 +47,20 @@
       "build_file": "",
       "verify_file": "",
       "attempts": 0
+    },
+    "lever-bug-5": {
+      "task_id": "lever-bug-5",
+      "title": "LEVER-BUG-5: [CRITICAL] InsuranceFund decimal mismatch (WAD bootstrap + USDT deposits)",
+      "stage": "planning",
+      "agent_pid": 2684608,
+      "dispatched_at": 1774707810.1604064,
+      "plan_file": "",
+      "critique_file": "",
+      "build_file": "",
+      "verify_file": "",
+      "attempts": 0
     }
   },
-  "sessions_today": 8,
+  "sessions_today": 9,
   "last_reset_date": "2026-03-28"
 }
