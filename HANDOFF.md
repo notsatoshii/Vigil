@@ -1,0 +1,202 @@
+# VIGIL SYSTEM HANDOFF
+## Last Updated: March 28, 2026
+## Written by: Initial build session (Timmy/Claude Opus 4.6)
+
+---
+
+## WHAT EXISTS
+
+### Infrastructure
+- **Server**: Timmy-OpenClaw-16gb (16 GB RAM, 4 cores, 193 GB disk, Ubuntu Linux)
+- **OpenClaw Gateway**: v2026.3.24, running as systemd service under `lever` user, port 18789
+- **Telegram**: Connected, polling as @LeverPM_bot, Master paired (user ID 422985839)
+- **Caddy**: Port 80, reverse proxy to lever-frontend on :3000
+- **Vigil Dashboard**: Port 8080, static HTML regenerated every 60 seconds
+
+### Agents Registered (9 total)
+| Agent | Model | Workspace |
+|-------|-------|-----------|
+| main (Commander) | claude-cli/claude-sonnet-4-6 | /home/lever/command/workspaces/ |
+| build | claude-cli/claude-sonnet-4-6 | /home/lever/command/workspaces/build/ |
+| verify | claude-cli/claude-sonnet-4-6 | /home/lever/command/workspaces/verify/ |
+| secure | claude-cli/claude-sonnet-4-6 | /home/lever/command/workspaces/secure/ |
+| research | claude-cli/claude-sonnet-4-6 | /home/lever/command/workspaces/research/ |
+| operate | claude-cli/claude-sonnet-4-6 | /home/lever/command/workspaces/operate/ |
+| ceo | claude-cli/claude-sonnet-4-6 | /home/lever/command/workspaces/ceo/ |
+| advisor | claude-cli/claude-opus-4-6 | /home/lever/command/workspaces/advisor/ |
+| improve | claude-cli/claude-sonnet-4-6 | /home/lever/command/workspaces/improve/ |
+
+### Scheduled Jobs (OpenClaw cron)
+| Job | Agent | Schedule |
+|-----|-------|----------|
+| research-morning-scan | research | Daily 8am UTC |
+| research-evening-scan | research | Daily 8pm UTC |
+| advisor-daily-brief | advisor | Daily 6am UTC |
+| secure-weekly-audit | secure | Monday 3am UTC |
+| ceo-weekly-brief | ceo | Monday 7am UTC |
+| improve-weekly-review | improve | Wednesday 9am UTC |
+
+### System Cron (not OpenClaw)
+| Schedule | Script | Purpose |
+|----------|--------|---------|
+| Every 4 hours | heartbeat/health-escalate.sh | Tier 1/2 health check |
+| Every hour | /root/backup-lever.sh | Git backup to GitHub |
+| Every 30 min | /root/check-agents.sh | Build log staleness check |
+| Every 30 min | update-fallback-prices.sh | Oracle fallback prices |
+
+### Dependencies Installed
+| Tool | Version | Location |
+|------|---------|----------|
+| OpenClaw | 2026.3.24 | /usr/lib/node_modules/openclaw/ |
+| Bun | 1.3.11 | ~/.bun/bin/ |
+| gstack | latest | /home/lever/command/gstack/ (symlinked to ~/.claude/skills/) |
+| Scrapling | 0.4.2 | /home/lever/command/venv/ |
+| Node.js | v22.22.0 | System |
+| Python | 3.12.3 | System |
+
+### Services Status
+| Service | Status | Notes |
+|---------|--------|-------|
+| lever-frontend | Running | Port 3000, proxied via Caddy on 80 |
+| lever-oracle | Running | Oracle price keeper |
+| lever-accrue-keeper | Running | Borrow index accrual |
+| openclaw-gateway | Running | Port 18789, Telegram connected |
+| vigil-dashboard | Running | Port 8080, replaces lever-dashboard |
+| vigil-dashboard-gen | Timer | Regenerates HTML every 60s |
+| lever-bot | Stopped, disabled | Replaced by OpenClaw Commander |
+| lever-dashboard | Stopped, disabled | Replaced by Vigil dashboard |
+
+### Disabled Services (SACRED, never restart)
+lever-loop, lever-qa, lever-seeder, lever-watchdog
+
+---
+
+## WHAT WORKS
+
+1. OpenClaw gateway receives Telegram messages and responds as Timmy
+2. 9 agents registered with isolated workspaces and CLAUDE.md files
+3. Health check script runs clean, detects service failures, auto-restarts
+4. Dashboard serves on 8080 and auto-regenerates
+5. Heartbeat cron jobs scheduled for all recurring workstream tasks
+6. Shared brain files seeded with project context
+7. Git repo initialized and committed at /home/lever/command/
+
+---
+
+## WHAT NEEDS TESTING/WORK
+
+### Priority 1: Prove the dispatch flow
+The routing table in Commander's CLAUDE.md is written but the actual message-to-workstream-to-result flow has not been tested end-to-end. Need to:
+- Send a real task via Telegram ("fix the funding bug")
+- Verify Commander routes it to BUILD
+- Verify BUILD produces a handoff report
+- Verify VERIFY receives it and runs 3-pass review
+- Verify results come back to Telegram
+
+### Priority 2: New Vigil Git repo
+- Create a new GitHub repo for Vigil (separate from notsatoshii/Timmy)
+- Push the /home/lever/command/ repo to it
+- Set up hourly backup cron
+
+### Priority 3: Timmy repo cleanup
+- Remove all Vigil/AI system references from notsatoshii/Timmy
+- Clean up commit messages and file contents
+- Make it look like a standard LEVER Protocol repo
+
+### Priority 4: Inbox pipeline
+- File watcher (inotifywait) monitoring /home/lever/command/inbox/incoming/
+- Processing pipeline (detect type, extract text, spawn RESEARCH session)
+- Telegram file upload handling via OpenClaw
+
+### Priority 5: Knowledge graph seeding
+- RESEARCH needs to run its first scan and populate watchlists
+- Initial competitor data, market data, and trend baselines
+
+### Priority 6: Cross-workstream memory
+- Session memory files need to start accumulating
+- First few sessions build the muscle
+
+---
+
+## KEY DESIGN DECISIONS MADE
+
+1. **Fully autonomous BUILD -> VERIFY loop.** Only contract changes need Master approval.
+2. **SECURE creates draft intentions** for CRITICAL/HIGH findings, pending Master approval.
+3. **RESEARCH does not auto-create intentions.** Findings go in briefs. ADVISOR is the funnel.
+4. **CEO output lands in shared brain.** Master decides timing.
+5. **Caddy over Nginx.** Already installed, simpler.
+6. **Commander replaced lever-bot.** Same Telegram token, new code.
+7. **Flat file knowledge graph.** No database. Claude reads JSON/markdown natively. RAG layer deferred until scale requires it.
+8. **5 concurrent sessions** (up from spec's 3). RAM allows it.
+9. **Timmy is a smart-ass.** Dry humor, direct, confident. Personality evolves via TIMMY_PERSONALITY.md observation log.
+10. **All workstreams are "teammates who think."** Each has a tailored TEAMMATE MINDSET section.
+11. **IMPROVE is the 8th workstream.** Proactively explores the product via browser and proposes improvements.
+
+---
+
+## FILE STRUCTURE
+
+```
+/home/lever/command/
+  HANDOFF.md              <- this file
+  .gitignore
+  dashboard/
+    generate.sh           <- regenerates index.html every 60s
+    index.html            <- static dashboard
+  gstack/                 <- (gitignored) gstack installation
+  handoffs/               <- BUILD -> VERIFY handoff reports
+  heartbeat/
+    health-check.sh       <- Tier 1 health check
+    health-escalate.sh    <- Tier 2 escalation wrapper
+    build-verify-chain.sh <- BUILD -> VERIFY auto-chain
+    last-health-check.json
+  inbox/
+    incoming/             <- drop files here for ingestion
+    processing/
+    processed/
+    failed/
+  knowledge/
+    sources/              <- JSON per ingested source
+    entities/             <- JSON per entity
+    graphs/               <- relationship adjacency lists
+    summaries/            <- human-readable markdown summaries
+    watchlists/           <- RESEARCH persistent tracking
+    trends/               <- RESEARCH time-series data
+  shared-brain/
+    ACTIVE_WORK.md
+    ADVISOR_BRIEFS.md
+    CEO_TRACKER.md
+    CEO_WEEKLY.md
+    DECISIONS.md
+    DECISION_JOURNAL.md
+    IMPROVE_PROPOSALS.md
+    INTENTIONS.md
+    LESSONS.md
+    PROJECT_STATE.md
+    RECENT_SESSIONS.md
+    STAKEHOLDER_MAP.md
+    TIMMY_PERSONALITY.md
+  venv/                   <- (gitignored) Scrapling Python venv
+  workspaces/
+    CLAUDE.md             <- Commander
+    IDENTITY.md, USER.md, HEARTBEAT.md
+    build/CLAUDE.md       <- BUILD workstream
+    verify/CLAUDE.md      <- VERIFY workstream
+    secure/CLAUDE.md      <- SECURE workstream
+    research/CLAUDE.md    <- RESEARCH workstream
+    operate/CLAUDE.md     <- OPERATE workstream
+    ceo/CLAUDE.md         <- CEO workstream
+    advisor/CLAUDE.md     <- ADVISOR workstream
+    improve/CLAUDE.md     <- IMPROVE workstream
+```
+
+---
+
+## HOW TO RESUME WORK
+
+1. SSH into the server as `lever` user
+2. Read this file and shared-brain/PROJECT_STATE.md
+3. Check `openclaw health` to verify gateway is running
+4. Check `openclaw cron list` to see scheduled jobs
+5. Check shared-brain/ACTIVE_WORK.md for what is in flight
+6. Pick up from the "WHAT NEEDS TESTING/WORK" section above

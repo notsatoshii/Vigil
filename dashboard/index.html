@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="60">
+<title>Vigil Command Center</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0a0a0f; color: #c8c8d0; font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace; font-size: 13px; padding: 20px; }
+.header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; padding-bottom: 12px; margin-bottom: 20px; }
+.header h1 { color: #00ff88; font-size: 18px; font-weight: 600; letter-spacing: 2px; }
+.header .time { color: #666; font-size: 11px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.card { background: #111118; border: 1px solid #1a1a24; border-radius: 4px; padding: 16px; }
+.card h2 { color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; }
+.metric { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #1a1a24; }
+.metric:last-child { border-bottom: none; }
+.metric .label { color: #666; }
+.metric .value { font-weight: 600; }
+.green { color: #00ff88; }
+.red { color: #ff4444; }
+.yellow { color: #ffaa00; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+.dot.green { background: #00ff88; }
+.dot.red { background: #ff4444; }
+pre { white-space: pre-wrap; word-wrap: break-word; color: #999; font-size: 11px; line-height: 1.6; }
+.wide { grid-column: span 2; }
+.full { grid-column: span 3; }
+.badge { display: inline-block; background: #1a1a24; padding: 2px 8px; border-radius: 3px; font-size: 10px; margin: 2px; }
+</style>
+</head>
+<body>
+<div class="header">
+<h1>VIGIL</h1>
+<div class="time">Updated: 2026-03-28T09:41:49Z | Uptime: 2 weeks, 2 days, 5 hours, 12 minutes</div>
+</div>
+<div class="grid">
+
+<div class="card">
+<h2>System Health</h2>
+<div class="metric"><span class="label">Status</span><span class="value" style="color: #00ff88">healthy</span></div>
+<div class="metric"><span class="label">RAM</span><span class="value">6748MB / 15993MB (42%)</span></div>
+<div class="metric"><span class="label">Disk</span><span class="value">34G / 193G (18%)</span></div>
+<div class="metric"><span class="label">CPU Load</span><span class="value">1.05</span></div>
+<div class="metric"><span class="label">Last Check</span><span class="value" style="font-size:10px">2026-03-28T08:57:00Z</span></div>
+</div>
+
+<div class="card">
+<h2>Services</h2>
+<div class="metric"><span class="label"><span class="dot green"></span>lever-frontend</span><span class="value">:3000</span></div>
+<div class="metric"><span class="label"><span class="dot green"></span>lever-oracle</span><span class="value">keeper</span></div>
+<div class="metric"><span class="label"><span class="dot green"></span>lever-accrue</span><span class="value">keeper</span></div>
+<div class="metric"><span class="label"><span class="dot green"></span>openclaw-gw</span><span class="value">:18789</span></div>
+</div>
+
+<div class="card">
+<h2>Workstreams</h2>
+<div class="metric"><span class="label">Active Sessions</span><span class="value green">2</span></div>
+<div class="metric"><span class="label">Pending Approvals</span><span class="value">0</span></div>
+<div class="metric"><span class="label">Knowledge Sources</span><span class="value">0</span></div>
+<div class="metric"><span class="label">Knowledge Entities</span><span class="value">0</span></div>
+</div>
+
+<div class="card wide">
+<h2>Active Intentions</h2>
+<pre>
+1. Complete Vigil migration (Phase 1 through Phase 9)</pre>
+</div>
+
+<div class="card">
+<h2>Latest Advisor Brief</h2>
+<pre>*No briefs yet. ADVISOR workstream not yet operational.*</pre>
+</div>
+
+<div class="card full">
+<h2>Recent Sessions</h2>
+<pre>[2026-03-28T08:10:00Z] MIGRATION | Phase 0: Foundation</pre>
+</div>
+
+<div class="card full">
+<h2>Heartbeat Schedule</h2>
+<pre>7b8a9ff2-f64a-4013-a54d-d90de236be60 research-evening-scan    cron 0 20 * * * (exact)          in 10h     -          idle      isolated  research   -
+f87ff4c9-c636-4b9f-b54f-fb611c89e4b9 advisor-daily-brief      cron 0 6 * * * (exact)           in 20h     -          idle      isolated  advisor    -
+017b644c-8ed2-4547-95d6-a54318f7035e research-morning-scan    cron 0 8 * * * (exact)           in 22h     -          idle      isolated  research   -
+b60eb2f2-1a45-420a-8317-c122cdcf5e5e secure-weekly-audit      cron 0 3 * * 1 (exact)           in 2d      -          idle      isolated  secure     -
+b86c78dd-3cf6-4a7a-91e6-bcd1e92cfa55 ceo-weekly-brief         cron 0 7 * * 1 (exact)           in 2d      -          idle      isolated  ceo        -
+2e8fc18f-6d3e-4323-bda0-2868512cb733 improve-weekly-review    cron 0 9 * * 3 (exact)           in 4d      -          idle      isolated  improve    -</pre>
+</div>
+
+</div>
+</body>
+</html>
