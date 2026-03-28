@@ -1,0 +1,14 @@
+{
+  "name": "Azuro",
+  "type": "competitor",
+  "facts": [
+    "Decentralized prediction/betting protocol",
+    "Operates in the prediction market and sports betting vertical",
+    "Competitor to LEVER in the leveraged prediction market infrastructure space"
+  ],
+  "relationships": [
+    { "target": "lever-protocol", "relationship": "competitor in prediction market leverage" },
+    { "target": "polymarket", "relationship": "competitor in prediction market space" }
+  ],
+  "lastUpdated": "2026-03-28"
+}

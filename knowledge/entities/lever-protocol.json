@@ -1,0 +1,28 @@
+{
+  "name": "LEVER Protocol",
+  "type": "protocol",
+  "facts": [
+    "Synthetic leveraged perpetuals on prediction markets",
+    "Traders take 2-50x leveraged long/short positions on binary outcomes",
+    "References external prediction market prices (Polymarket) as oracle -- does NOT build own price discovery",
+    "Unified LP pool (LeverVault) backs all trades via ERC-4626 vault",
+    "16 core contracts + 3 libraries deployed on Base Sepolia (testnet), targeting Base mainnet",
+    "Solidity 0.8.24 with OpenZeppelin v5.6.1, solmate, forge-std",
+    "Fee split: 50% LP / 30% Protocol / 20% Insurance (deterministic)",
+    "Time-based risk compression forces leverage to 1x at resolution",
+    "No cross-margining -- each position has independent margin",
+    "No proxies in v1 -- immutable deployment pattern",
+    "Uses WAD (1e18) fixed-point math for all monetary values",
+    "Tranche ledger system for LP shares preserves yield identity across transfers",
+    "48-hour withdrawal queue with FIFO ordering",
+    "Addressable market opportunity: $65-130B based on 5-10x derivatives/spot ratio",
+    "Target LP APY: 175-400% from borrow fees before trader PnL"
+  ],
+  "relationships": [
+    { "target": "base-chain", "relationship": "deployed on (testnet: Base Sepolia, mainnet target: Base)" },
+    { "target": "polymarket", "relationship": "uses as primary oracle price source via CLOB Midpoint API" },
+    { "target": "xmarket", "relationship": "potential integration target / related prediction market protocol" },
+    { "target": "azuro", "relationship": "competitor in leveraged prediction market space" }
+  ],
+  "lastUpdated": "2026-03-28"
+}

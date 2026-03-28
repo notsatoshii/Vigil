@@ -1,0 +1,15 @@
+{
+  "name": "Base",
+  "type": "blockchain",
+  "facts": [
+    "Ethereum L2 built by Coinbase",
+    "LEVER Protocol is deployed on Base Sepolia (testnet, chain ID 84532)",
+    "Mainnet Base is the target for LEVER production deployment in Q2 2026",
+    "RPC endpoint for testnet: https://sepolia.base.org",
+    "RPC response time observed: ~781ms average"
+  ],
+  "relationships": [
+    { "target": "lever-protocol", "relationship": "hosts LEVER Protocol deployment" }
+  ],
+  "lastUpdated": "2026-03-28"
+}

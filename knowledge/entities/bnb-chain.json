@@ -1,0 +1,12 @@
+{
+  "name": "BNB Chain",
+  "type": "blockchain",
+  "facts": [
+    "EVM-compatible blockchain operated by Binance",
+    "Hosts XMarket prediction market protocol"
+  ],
+  "relationships": [
+    { "target": "xmarket", "relationship": "hosts XMarket deployment" }
+  ],
+  "lastUpdated": "2026-03-28"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Polymarket",
+  "type": "competitor",
+  "facts": [
+    "Leading prediction market platform with deep CLOB orderbooks",
+    "Part of the $13B monthly prediction market volume ecosystem",
+    "LEVER Protocol uses Polymarket CLOB Midpoint API as primary oracle source",
+    "Gamma API (Polymarket fallback) returned 0.0 for all markets during testing -- broken as backup",
+    "CLOB Orderbook midpoint returned static 0.5 due to empty books on low-volume markets",
+    "Offers spot (1x) exposure only -- no leverage infrastructure",
+    "Has WebSocket endpoints (wss://clob.polymarket.com/ws) but authentication not yet confirmed"
+  ],
+  "relationships": [
+    { "target": "lever-protocol", "relationship": "oracle price source for LEVER" },
+    { "target": "kalshi", "relationship": "competitor in prediction market space" }
+  ],
+  "lastUpdated": "2026-03-28"
+}

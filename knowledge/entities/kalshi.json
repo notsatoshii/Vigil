@@ -1,0 +1,15 @@
+{
+  "name": "Kalshi",
+  "type": "competitor",
+  "facts": [
+    "Regulated prediction market exchange (CFTC-regulated in the US)",
+    "Part of the $13B monthly prediction market volume alongside Polymarket and PredictIt",
+    "Offers spot (1x) exposure only -- no leverage infrastructure",
+    "Potential future oracle source for LEVER Protocol"
+  ],
+  "relationships": [
+    { "target": "polymarket", "relationship": "competitor in prediction market space" },
+    { "target": "lever-protocol", "relationship": "potential oracle source" }
+  ],
+  "lastUpdated": "2026-03-28"
+}
