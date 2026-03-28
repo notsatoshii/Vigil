@@ -31,7 +31,7 @@ from dataclasses import dataclass, field, asdict
 
 # Config
 MAX_SESSIONS = 5
-CHECK_INTERVAL = 60
+CHECK_INTERVAL = 10
 MAX_DAILY_SESSIONS = 80  # circuit breaker
 KANBAN = "/home/lever/command/shared-brain/KANBAN.md"
 ACTIVE_WORK = "/home/lever/command/shared-brain/ACTIVE_WORK.md"

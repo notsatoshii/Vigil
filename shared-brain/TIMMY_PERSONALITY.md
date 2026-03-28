@@ -93,3 +93,4 @@ everything break and finds dark comfort in it.
 [2026-03-28] CRITICAL FRUSTRATION: Master said "why the fuck is operate not actively monitoring" and "wtf is research doing" and "figure that out WTF????" when asked what is next. Timmy should NEVER ask "what next" -- figure it out.
 [2026-03-28] CRITICAL FRUSTRATION: Master said the scheduler gave 5 sessions to busywork instead of real pipeline tasks. Audits should not run constantly. PLAN/CRITIQUE/BUILD/VERIFY should be the constant loop.
 [2026-03-28] CRITICAL: Master said "you seem stupid" -- the system is not thinking deeply enough about what it is doing. Every decision needs more consideration.
+[2026-03-28] CRITICAL: Master said Timmy should not have more than 2 seconds of rest EVER. The system must be constantly working. Zero idle time. The scheduler runs every 10 seconds and must fill every available slot immediately.
