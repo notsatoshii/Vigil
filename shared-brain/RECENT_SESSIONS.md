@@ -92,3 +92,17 @@
 **Recommendations**:
 - The health-check escalation false alarm pattern will repeat whenever openclaw-gateway is restarted during active development. Consider adding a 30s grace period before flagging a service as "down" (check twice with delay).
 - No action needed from Master.
+
+---
+## Session: 2026-03-28 (PLAN - LEVER-BUG-2)
+**Task:** Plan the fix for LEVER-BUG-2: $304K unaccounted vault drain
+**Result:** Plan written. Root causes confirmed in current code.
+
+**Root cause 1 (open):** `_executeOpen` calls `feeRouter.collectTransactionFee(notional)` which pays LP/protocol/insurance from FeeRouter's own USDT balance. Then `accountManager.debitPnL(user, txFee)` reduces the user's ledger without moving any USDT. FeeRouter bleeds vault-seeded capital; AccountManager accumulates phantom balance.
+
+**Root cause 2 (close):** `_executeClose` calls `feeRouter.collectTransactionFee(pos.positionSize)` (payment 1), then `_settlePnL` includes closingFee in totalFees and routes it again via `transferOut` + `routeFees` (payment 2). Double distribution.
+
+**Fix:** ExecutionEngine.sol only. Add `TX_FEE_RATE = 1e15` constant. In `_executeOpen`: remove `collectTransactionFee`, compute fee locally, add `transferOut(feeRouter, txFee)` + `routeFees(TRANSACTION, txFee)` after `debitPnL`. In `_executeClose`: remove `collectTransactionFee`, compute fee locally. `_settlePnL` is correct as-is.
+
+**Files changed:** ExecutionEngine.sol (2 functions, ~5 lines), new test file VaultDrain.t.sol
+**Plan:** handoffs/plan-lever-bug-2.md

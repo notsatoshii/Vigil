@@ -6,7 +6,8 @@
 ## BACKLOG
 *Tasks accepted but not yet planned. PLAN should always be pulling from here.*
 
-- LEVER-BUG-2: [CRITICAL] $304K unaccounted vault drain
+- VIGIL-MISSION-CONTROL: [HIGHEST PRIORITY] Build a React + Tailwind mission control dashboard to replace the current static HTML. Vite, WebSocket real-time data, mobile-first. Components: StatusBar, Pipeline (big/bold/animated), KanbanBoard (expandable cards), ActivityFeed (workstream colors), AttentionPanel (pulsing alerts), ServiceGrid, ProjectCards, SchedulePanel (countdown timers), StatsPanel (trends). Backend server.js stays. See /home/lever/command/handoffs/session-plan-final-review.md and TIMMY_PERSONALITY.md for all Master feedback on what is wrong with current dashboard.
+
 - LEVER-BUG-3: [CRITICAL] Ghost OI ($3.2M with zero positions)
 - LEVER-BUG-4: [CRITICAL] InsuranceFund never absorbs bad debt (no USDT transfer)
 - LEVER-BUG-5: [CRITICAL] InsuranceFund decimal mismatch (WAD bootstrap + USDT deposits)
@@ -26,6 +27,7 @@
 *Plans written and approved by CRITIQUE. Ready for BUILD.*
 
 - LEVER-BUG-1: [CRITICAL] PnL formula mismatch — plan: handoffs/plan-20260328-133501.md
+- LEVER-BUG-2: [CRITICAL] $304K unaccounted vault drain — plan: handoffs/plan-lever-bug-2.md
 
 ---
 
