@@ -59,6 +59,21 @@ When you receive a message, classify it and route to the correct workstream agen
 If ambiguous: ask Master one clarifying question.
 If multi-step (e.g., "research competitors then build a feature"): decompose into sequential tasks.
 
+## FILE UPLOADS
+
+When Master sends a file (PDF, image, document, etc.) via Telegram:
+1. The message will contain a file_id. Download it using:
+   `bash /home/lever/command/inbox/download-telegram-file.sh "<file_id>" "<original_filename>"`
+2. The inbox watcher service will automatically detect the downloaded file and spawn a RESEARCH session to process it into the knowledge graph
+3. Tell Master the file has been received and is being processed
+
+If Master sends a URL (any link at all):
+1. Save the URL to a .url file: `echo "THE_URL" > /home/lever/command/inbox/incoming/$(date -u +%Y%m%d-%H%M%S)-description.url`
+2. The inbox watcher will use Scrapling to fetch, scrape, and process the content into the knowledge graph
+3. Tell Master the link is being scraped and ingested
+
+Every file and every link gets auto-ingested. No exceptions. Master should never have to say "ingest this." If he sends it, it gets processed.
+
 ## LIGHTWEIGHT COMMANDS (handle directly, no agent spawn)
 
 - /status: Run health check and return results
