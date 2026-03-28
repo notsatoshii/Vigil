@@ -2,105 +2,63 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="60">
-<title>Vigil Command Center</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/bitcount-single-ink:vf@latest/index.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vigil</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: #0a0a0f; color: #c8c8d0; font-family: 'Bitcount Single Ink Variable', 'Bitcount Single Ink', 'JetBrains Mono', monospace; font-size: 14px; padding: 20px; }
-.header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; padding-bottom: 12px; margin-bottom: 20px; }
-.header-left { display: flex; align-items: center; gap: 12px; }
-.header-logo img { height: 32px; display: block; filter: drop-shadow(0 0 6px rgba(255,100,0,.4)); }
-.header h1 { color: #E6FF2B; font-size: 20px; font-weight: 600; letter-spacing: 3px; }
-.header .time { color: #666; font-size: 11px; }
-.grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
-.card { background: #111118; border: 1px solid #1a1a24; border-radius: 4px; padding: 16px; }
-.card h2 { color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; }
-.metric { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #1a1a24; }
-.metric:last-child { border-bottom: none; }
-.metric .label { color: #666; }
-.metric .value { font-weight: 600; }
-.green { color: #E6FF2B; }
-.red { color: #ff4444; }
-.yellow { color: #ffaa00; }
-.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
-.dot.green { background: #E6FF2B; }
-.dot.red { background: #ff4444; }
-pre { white-space: pre-wrap; word-wrap: break-word; color: #999; font-size: 11px; line-height: 1.6; }
-.wide { grid-column: span 2; }
-.full { grid-column: span 3; }
-.badge { display: inline-block; background: #1a1a24; padding: 2px 8px; border-radius: 3px; font-size: 10px; margin: 2px; }
+:root{--bg:#08080d;--card:#0e0e15;--border:#1a1a24;--text:#c8c8d0;--dim:#555;--accent:#E6FF2B;--red:#ff4444;--amber:#ffaa00;--green:#22c55e}
+*{margin:0;padding:0;box-sizing:border-box}body{background:var(--bg);color:var(--text);font-family:'SF Mono','Fira Code','JetBrains Mono',monospace;font-size:13px}a{color:var(--accent);text-decoration:none}
+.header{padding:16px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)}.header-left{display:flex;align-items:center;gap:12px}.header h1{color:var(--accent);font-size:16px;letter-spacing:3px;font-weight:700}
+.health-orb{width:10px;height:10px;border-radius:50%;display:inline-block;animation:pulse 2s ease-in-out infinite}.health-orb.ok{background:var(--green);box-shadow:0 0 8px var(--green)}.health-orb.warn{background:var(--amber);box-shadow:0 0 8px var(--amber)}.health-orb.bad{background:var(--red);box-shadow:0 0 8px var(--red)}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+.header-meta{display:flex;gap:20px;font-size:11px;color:var(--dim)}.header-meta .stat{display:flex;align-items:center;gap:4px}.header-meta .num{color:var(--text);font-weight:600}
+.container{padding:16px 24px;display:flex;flex-direction:column;gap:16px}.row{display:grid;gap:16px}.row-2{grid-template-columns:2fr 1fr}.row-2eq{grid-template-columns:1fr 1fr}
+.card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:16px}.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.card-title{color:var(--dim);font-size:10px;text-transform:uppercase;letter-spacing:1.5px}
+.card-badge{font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600}.card-badge.green{background:rgba(34,197,94,.15);color:var(--green)}.card-badge.red{background:rgba(255,68,68,.15);color:var(--red)}.card-badge.amber{background:rgba(255,170,0,.15);color:var(--amber)}
+.narrative{font-size:14px;line-height:1.6;color:var(--text);margin-bottom:12px}.narrative strong{color:var(--accent);font-weight:600}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.svc{display:flex;align-items:center;gap:6px;font-size:11px;padding:6px 8px;background:var(--bg);border-radius:4px}.svc-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}.svc-dot.up{background:var(--green)}.svc-dot.down{background:var(--red);animation:pulse 1s ease-in-out infinite}.svc-name{color:var(--dim)}
+.pipeline{display:flex;align-items:center;gap:4px;margin:12px 0}.pipe-stage{flex:1;text-align:center;padding:8px 4px;font-size:10px;letter-spacing:1px;text-transform:uppercase;border-radius:4px;background:var(--bg);color:var(--dim);border:1px solid var(--border)}.pipe-stage.active{background:rgba(230,255,43,.1);color:var(--accent);border-color:var(--accent);animation:pulse 2s ease-in-out infinite}.pipe-stage.done{background:rgba(34,197,94,.1);color:var(--green);border-color:var(--green)}.pipe-arrow{color:var(--dim);font-size:10px}
+.kanban{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.kanban-col{background:var(--bg);border-radius:4px;padding:8px;min-height:60px}.kanban-col-title{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--dim);margin-bottom:8px;text-align:center}.kanban-item{font-size:10px;padding:4px 6px;background:var(--card);border-radius:3px;margin-bottom:4px;border-left:2px solid var(--border);word-break:break-word}.kanban-item.active{border-left-color:var(--accent)}.kanban-item.done{border-left-color:var(--green);opacity:.7}
+.feed{list-style:none}.feed-item{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:12px}.feed-item:last-child{border-bottom:none}.feed-time{color:var(--dim);font-size:10px;white-space:nowrap;min-width:60px}.feed-text{color:var(--text)}.feed-ws{color:var(--accent);font-weight:600;font-size:10px;text-transform:uppercase}
+.approval{padding:8px;background:var(--bg);border-radius:4px;margin-bottom:8px;border-left:3px solid var(--amber)}.approval-title{font-size:12px;font-weight:600;margin-bottom:4px}.approval-action{font-size:10px;color:var(--dim)}
+.stats-row{display:flex;gap:16px;flex-wrap:wrap}.stat-box{flex:1;min-width:80px;background:var(--bg);border-radius:4px;padding:10px;text-align:center}.stat-num{font-size:20px;font-weight:700;color:var(--accent)}.stat-label{font-size:9px;color:var(--dim);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+.project{display:flex;justify-content:space-between;align-items:center;padding:10px;background:var(--bg);border-radius:4px;margin-bottom:8px}.project-name{font-weight:600;font-size:13px}.project-status{font-size:10px;padding:2px 8px;border-radius:10px}.project-status.testnet{background:rgba(255,170,0,.15);color:var(--amber)}.project-status.live{background:rgba(34,197,94,.15);color:var(--green)}.project-detail{font-size:10px;color:var(--dim)}
+.upcoming-item{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border);font-size:11px}.upcoming-item:last-child{border-bottom:none}.upcoming-name{color:var(--text)}.upcoming-time{color:var(--dim)}
+.cmd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.cmd{font-size:10px;padding:4px 6px;background:var(--bg);border-radius:3px;color:var(--dim)}.cmd span{color:var(--accent)}
+@media(max-width:900px){.row-2,.row-2eq{grid-template-columns:1fr}.kanban{grid-template-columns:repeat(3,1fr)}.svc-grid{grid-template-columns:repeat(2,1fr)}.cmd-grid{grid-template-columns:repeat(2,1fr)}.header{flex-direction:column;gap:8px}.header-meta{flex-wrap:wrap}}
+@media(max-width:500px){.kanban{grid-template-columns:1fr 1fr}.svc-grid{grid-template-columns:1fr}body{font-size:12px}.container{padding:8px 12px}}
 </style>
 </head>
 <body>
-<div class="header">
-<div class="header-left">
-<div class="header-logo"><img src="vigil-logo.jpg" alt="Vigil"></div>
-<h1>VIGIL</h1>
+<div class="header"><div class="header-left"><span class="health-orb" id="health-orb"></span><h1>VIGIL</h1></div><div class="header-meta"><div class="stat">Sessions: <span class="num" id="sessions-today">0</span></div><div class="stat">RAM: <span class="num" id="ram-pct">0%</span></div><div class="stat">Disk: <span class="num" id="disk-pct">0%</span></div><div class="stat">CPU: <span class="num" id="cpu-load">0</span></div><div class="stat" id="updated-at" style="color:#333">loading...</div></div></div>
+<div class="container">
+<div class="row row-2"><div class="card"><div class="card-header"><span class="card-title">Status</span><span class="card-badge" id="health-badge">...</span></div><div class="narrative" id="narrative">Loading...</div><div class="svc-grid" id="services"></div></div><div class="card"><div class="card-header"><span class="card-title">Budget + Projects</span></div><div class="stats-row"><div class="stat-box"><div class="stat-num" id="sessions-num">0</div><div class="stat-label">Sessions Today</div></div><div class="stat-box"><div class="stat-num" id="sources-num">0</div><div class="stat-label">Sources</div></div><div class="stat-box"><div class="stat-num" id="entities-num">0</div><div class="stat-label">Entities</div></div></div><div style="margin-top:12px"><div class="card-title" style="margin-bottom:8px">Projects</div><div id="projects"></div></div></div></div>
+<div class="card"><div class="card-header"><span class="card-title">Pipeline + Task Board</span><span style="font-size:9px;color:var(--dim)">PLAN > CRITIQUE > BUILD > VERIFY</span></div><div class="pipeline" id="pipeline"></div><div class="kanban" id="kanban"></div></div>
+<div class="row row-2"><div class="card"><div class="card-header"><span class="card-title">Activity Feed</span></div><ul class="feed" id="feed"></ul></div><div class="card"><div class="card-header"><span class="card-title">Needs Attention</span><span class="card-badge" id="attention-badge">0</span></div><div id="approvals"></div><div style="margin-top:12px"><div class="card-title" style="margin-bottom:8px">Upcoming</div><div id="upcoming"></div></div></div></div>
+<div class="row row-2eq"><div class="card"><div class="card-header"><span class="card-title">Latest Advisor Brief</span></div><div class="narrative" id="advisor" style="font-size:12px;color:#999"></div></div><div class="card"><div class="card-header"><span class="card-title">Quick Commands (Telegram)</span></div><div class="cmd-grid"><div class="cmd"><span>/status</span> health</div><div class="cmd"><span>/brief</span> advisor</div><div class="cmd"><span>/approve N</span> accept</div><div class="cmd"><span>/reject N</span> decline</div><div class="cmd"><span>/intent list</span> queue</div><div class="cmd"><span>/intent add</span> new task</div></div><div style="margin-top:12px"><div class="card-title" style="margin-bottom:8px">Active Intentions</div><div id="intentions" style="font-size:11px;color:#999"></div></div></div></div>
 </div>
-<div class="time">Updated: 2026-03-28T12:45:44Z | Uptime: 2 weeks, 2 days, 8 hours, 16 minutes</div>
-</div>
-<div class="grid">
-
-<div class="card">
-<h2>System Health</h2>
-<div class="metric"><span class="label">Status</span><span class="value" style="color: #ff4444">problems_detected</span></div>
-<div class="metric"><span class="label">RAM</span><span class="value">9929MB / 15993MB (62%)</span></div>
-<div class="metric"><span class="label">Disk</span><span class="value">35G / 193G (18%)</span></div>
-<div class="metric"><span class="label">CPU Load</span><span class="value">1.88</span></div>
-<div class="metric"><span class="label">Last Check</span><span class="value" style="font-size:10px">2026-03-28T12:00:01Z</span></div>
-</div>
-
-<div class="card">
-<h2>Services</h2>
-<div class="metric"><span class="label"><span class="dot green"></span>lever-frontend</span><span class="value">:3000</span></div>
-<div class="metric"><span class="label"><span class="dot green"></span>lever-oracle</span><span class="value">keeper</span></div>
-<div class="metric"><span class="label"><span class="dot green"></span>lever-accrue</span><span class="value">keeper</span></div>
-<div class="metric"><span class="label"><span class="dot green"></span>openclaw-gw</span><span class="value">:18789</span></div>
-<div class="metric"><span class="label"><span class="dot green"></span>vigil-inbox</span><span class="value">watcher</span></div>
-<div class="metric"><span class="label"><span class="dot red"></span>vigil-telegram</span><span class="value">bot</span></div>
-<div class="metric"><span class="label"><span class="dot green"></span>caddy</span><span class="value">:80</span></div>
-</div>
-
-<div class="card">
-<h2>Workstreams</h2>
-<div class="metric"><span class="label">Active Sessions</span><span class="value green">2</span></div>
-<div class="metric"><span class="label">Pending Approvals</span><span class="value">0</span></div>
-<div class="metric"><span class="label">Knowledge Sources</span><span class="value">4</span></div>
-<div class="metric"><span class="label">Knowledge Entities</span><span class="value">7</span></div>
-</div>
-
-<div class="card wide">
-<h2>Active Intentions</h2>
-<pre>
-1. Complete Vigil migration (Phase 1 through Phase 9)</pre>
-</div>
-
-<div class="card">
-<h2>Latest Advisor Brief</h2>
-<pre>*No briefs yet. ADVISOR workstream not yet operational.*</pre>
-</div>
-
-<div class="card full">
-<h2>Recent Sessions</h2>
-<pre>[2026-03-28T08:10:00Z] MIGRATION | Phase 0: Foundation
-[2026-03-28T10:55:18Z] RESEARCH | Inbox ingestion: test-note.txt
-[2026-03-28T12:01:54Z] RESEARCH | Inbox ingestion: 20260328-115423-PredictionIndex2025-2026.pdf
-[2026-03-28T12:04:32Z] RESEARCH | Inbox ingestion: 20260328-115813-PredictionIndex2025-2026.pdf
-[2026-03-28T12:36:23Z] RESEARCH | Inbox ingestion: 20260328-123557-photo-20260328-123557.jpg</pre>
-</div>
-
-<div class="card full">
-<h2>Heartbeat Schedule</h2>
-<pre>7b8a9ff2-f64a-4013-a54d-d90de236be60 research-evening-scan    cron 0 20 * * * (exact)          in 7h      -          idle      isolated  research   -
-3a316005-650f-4e3b-96cb-799e7e5d5ae4 operate-vigil-selfcheck  cron 0 0,12 * * * (exact)        in 11h     46m ago    error     isolated  operate    -
-f87ff4c9-c636-4b9f-b54f-fb611c89e4b9 advisor-daily-brief      cron 0 6 * * * (exact)           in 17h     -          idle      isolated  advisor    -
-017b644c-8ed2-4547-95d6-a54318f7035e research-morning-scan    cron 0 8 * * * (exact)           in 19h     -          idle      isolated  research   -
-b60eb2f2-1a45-420a-8317-c122cdcf5e5e secure-weekly-audit      cron 0 3 * * 1 (exact)           in 2d      -          idle      isolated  secure     -
-b86c78dd-3cf6-4a7a-91e6-bcd1e92cfa55 ceo-weekly-brief         cron 0 7 * * 1 (exact)           in 2d      -          idle      isolated  ceo        -
-2e8fc18f-6d3e-4323-bda0-2868512cb733 improve-weekly-review    cron 0 9 * * 3 (exact)           in 4d      -          idle      isolated  improve    -</pre>
-</div>
-
-</div>
+<script>
+function ago(e){const s=Math.floor(Date.now()/1000)-e;if(s<60)return s+'s ago';if(s<3600)return Math.floor(s/60)+'m ago';if(s<86400)return Math.floor(s/3600)+'h ago';return Math.floor(s/86400)+'d ago'}
+function sv(n,u){return'<div class="svc"><span class="svc-dot '+(u?'up':'down')+'"></span><span class="svc-name">'+n+'</span></div>'}
+function kb(t,items,c){let h='<div class="kanban-col"><div class="kanban-col-title">'+t+'</div>';if(items&&items.length)items.forEach(function(i){h+='<div class="kanban-item '+c+'">'+i+'</div>'});else h+='<div style="font-size:10px;color:#333;text-align:center">-</div>';return h+'</div>'}
+async function refresh(){try{var r=await fetch('/data.json?'+Date.now());var d=await r.json();
+document.getElementById('health-orb').className='health-orb '+(d.system.health==='healthy'?'ok':d.system.ramPct>90?'bad':'warn');
+document.getElementById('sessions-today').textContent=d.sessions.today;document.getElementById('ram-pct').textContent=d.system.ramPct+'%';document.getElementById('disk-pct').textContent=d.system.diskPct+'%';document.getElementById('cpu-load').textContent=d.system.cpuLoad;document.getElementById('updated-at').textContent=ago(d.epoch);
+var hb=document.getElementById('health-badge');hb.textContent=d.system.health==='healthy'?'ALL SYSTEMS GO':'ISSUES DETECTED';hb.className='card-badge '+(d.system.health==='healthy'?'green':'red');
+var su=Object.values(d.services).filter(function(v){return v}).length,st=Object.keys(d.services).length;var nr='<strong>'+su+'/'+st+'</strong> services running. RAM <strong>'+d.system.ramPct+'%</strong>. <strong>'+d.sessions.today+'</strong> sessions today. ';if(d.sessions.deadLetters>0)nr+='<span style="color:var(--red)">'+d.sessions.deadLetters+' failed messages.</span> ';if(d.sessions.pendingApprovals>0)nr+='<strong style="color:var(--amber)">'+d.sessions.pendingApprovals+' items need approval.</strong>';document.getElementById('narrative').innerHTML=nr;
+var sn={leverFrontend:'frontend',leverOracle:'oracle',leverAccrue:'accrue',openclawGateway:'gateway',vigilInbox:'inbox',vigilTelegram:'telegram',vigilDashboard:'dashboard',caddy:'caddy'};var sh='';for(var k in d.services)sh+=sv(sn[k]||k,d.services[k]);document.getElementById('services').innerHTML=sh;
+document.getElementById('sessions-num').textContent=d.sessions.today;document.getElementById('sources-num').textContent=d.knowledge.sources;document.getElementById('entities-num').textContent=d.knowledge.entities;
+document.getElementById('projects').innerHTML='<div class="project"><div><div class="project-name">LEVER Protocol</div><div class="project-detail">'+d.projects.lever.bugsTotal+' audit items</div></div><span class="project-status testnet">TESTNET</span></div><div class="project"><div><div class="project-name">Landing Page</div><div class="project-detail">Redesign in progress</div></div><span class="project-status live">LIVE</span></div>';
+var stages=['PLAN','CRITIQUE','BUILD','VERIFY'];var ph='';stages.forEach(function(s,i){var c='';var ip=(d.kanban.inProgress||[]).join(' ').toUpperCase();if(ip.indexOf(s)>=0)c='active';if(i>0)ph+='<span class="pipe-arrow">></span>';ph+='<div class="pipe-stage '+c+'">'+s+'</div>'});document.getElementById('pipeline').innerHTML=ph;
+document.getElementById('kanban').innerHTML=kb('Backlog',d.kanban.planned,'')+kb('Planned',d.kanban.planned,'')+kb('In Progress',d.kanban.inProgress,'active')+kb('In Review',d.kanban.inReview,'active')+kb('Done',d.kanban.done,'done');
+var fh='';if(d.recentSessions&&d.recentSessions.length){d.recentSessions.reverse().forEach(function(s){var p=s.split('|');var t=p[0]?p[0].trim().replace(/[\[\]]/g,''):'';var rest=p.slice(1).join('|').trim();var ws=rest.split(' ')[0]||'';var desc=rest.substring(ws.length).trim();var ts=t;try{var dt=new Date(t);if(!isNaN(dt))ts=ago(Math.floor(dt.getTime()/1000))}catch(e){}fh+='<li class="feed-item"><span class="feed-time">'+ts+'</span><span class="feed-ws">'+ws+'</span><span class="feed-text">'+desc+'</span></li>'})}
+if(d.recentHandoffs&&d.recentHandoffs.length){d.recentHandoffs.forEach(function(h){fh+='<li class="feed-item"><span class="feed-time">'+ago(h.time)+'</span><span class="feed-ws">HANDOFF</span><span class="feed-text">'+h.name+'</span></li>'})}
+if(!fh)fh='<li class="feed-item"><span class="feed-text" style="color:var(--dim)">No recent activity</span></li>';document.getElementById('feed').innerHTML=fh;
+var ah='';if(d.sessions.pendingApprovals>0)ah+='<div class="approval"><div class="approval-title">'+d.sessions.pendingApprovals+' pending approval(s)</div><div class="approval-action">Send /approve N or /reject N on Telegram</div></div>';if(d.sessions.deadLetters>0)ah+='<div class="approval" style="border-left-color:var(--red)"><div class="approval-title">'+d.sessions.deadLetters+' failed message(s)</div><div class="approval-action">OPERATE will retry on next self-check</div></div>';if(!ah)ah='<div style="font-size:11px;color:var(--dim)">Nothing needs attention.</div>';document.getElementById('approvals').innerHTML=ah;
+var ac=d.sessions.pendingApprovals+d.sessions.deadLetters;var ab=document.getElementById('attention-badge');ab.textContent=ac;ab.className='card-badge '+(ac>0?'amber':'green');
+var uh='';if(d.nextJobs&&d.nextJobs.length)d.nextJobs.forEach(function(j){uh+='<div class="upcoming-item"><span class="upcoming-name">'+j.name+'</span><span class="upcoming-time">'+j.next+'</span></div>'});if(!uh)uh='<div style="font-size:11px;color:var(--dim)">No upcoming jobs</div>';document.getElementById('upcoming').innerHTML=uh;
+document.getElementById('advisor').innerHTML=(d.advisorSummary||'No briefs yet. First runs at 6am UTC.').replace(/\\n/g,'<br>');
+var ih='';if(d.intentions&&d.intentions.length)d.intentions.forEach(function(i){ih+='<div style="margin-bottom:4px">'+i+'</div>'});else ih='<div style="color:var(--dim)">No active intentions</div>';document.getElementById('intentions').innerHTML=ih;
+}catch(e){console.error('Refresh:',e)}}
+refresh();setInterval(refresh,30000);
+</script>
 </body>
 </html>

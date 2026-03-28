@@ -118,7 +118,7 @@ pre { white-space: pre-wrap; word-wrap: break-word; color: #999; font-size: 11px
 <body>
 <div class="header">
 <div class="header-left">
-<div class="header-logo"><img src="vigil-logo.jpg" alt="Vigil"></div>
+<div class="header-logo"><img src="vigil-logo.png" alt="Vigil"></div>
 <h1>VIGIL</h1>
 </div>
 <div class="time">Updated: $TIMESTAMP | Uptime: $UPTIME</div>
