@@ -221,3 +221,19 @@
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 18%, RAM 45%. Gateway stable. Scheduler at 52 dispatches today, 5 active. No errors. No issues found, no fixes needed.
+
+---
+## OPERATE | 2026-03-28 16:45-16:52 UTC
+
+**Task**: System check, log review.
+
+**Findings**:
+- All 8 services active: openclaw-gateway, vigil-telegram, vigil-dashboard, vigil-inbox, lever-frontend, lever-oracle, lever-accrue-keeper, caddy.
+- Disk 18%, RAM ~44%. Scheduler healthy, 56 sessions today, 0 active.
+- Inbox processing clean: 4 files processed successfully today.
+- 12:00 UTC health check found openclaw-gateway briefly down; health-escalate.sh failed to restart it ("Failed to connect to bus: No medium found" — transient DBUS cron issue). Service recovered on its own by 16:00. Documented in LESSONS.md.
+- LEVER-BUG-1 still BLOCKED on CRITIQUE REVISE decision (Master decision needed on exit formula).
+- No other issues found.
+
+**Actions**: Documented DBUS/cron transient issue in LESSONS.md.
+

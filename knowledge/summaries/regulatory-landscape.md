@@ -60,6 +60,17 @@ Two opposing forces are at play:
 
 Sports contracts are the flashpoint. The $600M lost state tax revenue estimate gives states a financial motive to fight. Criminal charges in Arizona escalate this beyond civil disputes.
 
+### Stablecoin Regulation (LEVER Collateral Risk)
+**GENIUS Act** (signed July 2025): First US federal stablecoin law. 100% reserve backing required, monthly disclosures, full audit for >$50B issuers. Treasury Secretary Bessent confirmed final rules by **July 2026**.
+
+**USDT status**: $185B reserves, 80%+ in US Treasury Bills. Tether hired KPMG for full audit and PwC for internal systems (March 27, 2026). Dramatically improved transparency vs historical concerns.
+
+**USAT**: Tether's US-regulated stablecoin, issued by Anchorage Digital Bank (OCC-chartered). Launched Jan 27, 2026. GENIUS Act compliant. ~20M in circulation (early, mostly institutional). On Ethereum only.
+
+**MiCA (EU)**: Full enforcement. Only USDC is MiCA-compliant among top-10 stablecoins. USDT NOT compliant. Authorization deadline **July 1, 2026**. USDT may face EU restrictions.
+
+**Stablecoin bifurcation**: USDT (global), USAT (US), USDC (EU). LEVER uses USDT only. Multi-collateral support needed for geographic expansion.
+
 ### Implications for LEVER/XMarket
 - **Sports is the lightning rod.** LEVER should position away from sports markets to avoid regulatory crossfire. Crypto, macro, and geopolitics are safer categories.
 - Insider trading enforcement will eventually extend to leveraged prediction products. LEVER needs to consider how leveraged positions interact with insider trading law.

@@ -1,13 +1,13 @@
 # ACTIVE WORK
-## Updated by scheduler at 16:45:00 UTC
+## Updated by scheduler at 16:55:03 UTC
 
-Sessions today: 50/80
+Sessions today: 56/80
 
 ---
 
 ## Pipeline Tasks
 
-- **lever-bug-1**: LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs  [critiquing (5m)]
+- **lever-bug-1**: LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs  [critiquing (8m)]
 - **lever-bug-2**: LEVER-BUG-2: [CRITICAL] $304K unaccounted vault drain [backlog]
 - **lever-bug-3**: LEVER-BUG-3: [CRITICAL] Ghost OI ($3.2M with zero positions) [planned]
 - **lever-bug-4**: LEVER-BUG-4: [CRITICAL] InsuranceFund never absorbs bad debt [planned]
@@ -18,7 +18,9 @@ Sessions today: 50/80
 - **lever-bug-8**: LEVER-BUG-8: [HIGH] No closing transaction fee (10bps forego [planned]
 - **lever-bug-9**: LEVER-BUG-9: [HIGH] Vault NAV missing unrealized PnL [planned]
 - **landing-mobile**: LANDING-MOBILE: Fix mobile scroll and side-scroll issues on  [planned]
-- **landing-design**: LANDING-DESIGN: Redesign landing page to be institutional an [planning (6m)]
+- **landing-design**: LANDING-DESIGN: Redesign landing page to be institutional an [planned]
+- **vigil-dashboard**: VIGIL-DASHBOARD: Complete dashboard overhaul. Real-time WebS [planned]
+- **vigil-verify-vision**: VIGIL-VERIFY-VISION: VERIFY must use Puppeteer/Chromium to t [planning (3m)]
 
 ---
 

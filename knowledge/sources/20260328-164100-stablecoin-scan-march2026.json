@@ -1,0 +1,89 @@
+{
+  "id": "20260328-164100-stablecoin-regulation-scan",
+  "ingestedAt": "2026-03-28T16:41:00Z",
+  "sourceType": "Web scan (official announcements, major outlets)",
+  "reliability": "High (Tether official, CoinDesk, Fortune, The Block)",
+  "scanType": "Focused scan: Stablecoin Regulation & USDT Risk (LEVER collateral dependency)",
+
+  "summary": [
+    "GENIUS Act signed July 2025: first US federal stablecoin law. Requires 100% reserve backing with liquid assets, monthly public disclosures, AML/KYC. Final rules by July 2026. Issuers over $50B in liabilities need full audits.",
+    "Tether hired KPMG to audit $185B USDT reserves and PwC for internal systems (March 27, 2026). 80%+ of reserves now in US Treasury Bills (vs. historical commercial paper). Major transparency upgrade.",
+    "Tether launched USAT (USA₮) on January 27, 2026: US-regulated stablecoin issued by Anchorage Digital Bank (OCC-chartered). Cantor Fitzgerald as reserve custodian. On Ethereum. ~20M in circulation, mostly institutional. GENIUS Act compliant. USDT continues globally.",
+    "EU MiCA in full enforcement. Only USDC is MiCA-compliant among top 10 stablecoins. USDT not compliant in EU. Authorization deadline July 1, 2026. This creates a USDT risk in EU markets but does not affect Base/US operations.",
+    "LEVER uses USDT as sole collateral. USDT is increasingly well-backed ($185B, 80%+ T-Bills, KPMG audit incoming) but faces regulatory bifurcation: USDT for global, USAT for US, USDC for EU. LEVER may need to support multiple stablecoins depending on market reach."
+  ],
+
+  "entities": [
+    {"name": "GENIUS Act", "type": "legislation", "role": "First US federal stablecoin law, signed July 2025. Final rules by July 2026."},
+    {"name": "USDT", "type": "stablecoin", "role": "LEVER's sole collateral. $185B reserves, 80%+ T-Bills, KPMG audit March 2026."},
+    {"name": "USAT (USA₮)", "type": "stablecoin", "role": "US-regulated Tether stablecoin via Anchorage Digital Bank. Launched Jan 27 2026. ~20M circulation."},
+    {"name": "USDC", "type": "stablecoin", "role": "Only MiCA-compliant top-10 stablecoin. Circle issued."},
+    {"name": "KPMG", "type": "company", "role": "Hired to audit Tether's $185B USDT reserves"},
+    {"name": "PwC", "type": "company", "role": "Hired to prepare Tether's internal systems for compliance"},
+    {"name": "Anchorage Digital Bank", "type": "company", "role": "OCC-chartered bank issuing USAT"},
+    {"name": "Cantor Fitzgerald", "type": "company", "role": "Reserve custodian for USAT"},
+    {"name": "Scott Bessent", "type": "person", "role": "US Treasury Secretary, confirmed final GENIUS Act rules by July 2026"},
+    {"name": "MiCA", "type": "regulation", "role": "EU crypto regulation, full enforcement. USDT non-compliant. Deadline July 1 2026."}
+  ],
+
+  "relationships": [
+    {"from": "USDT", "to": "LEVER Protocol", "relationship": "sole collateral asset for LeverVault"},
+    {"from": "GENIUS Act", "to": "USDT", "relationship": "requires 100% reserve, monthly disclosures, full audit for >$50B issuers"},
+    {"from": "GENIUS Act", "to": "USAT", "relationship": "USAT built for compliance"},
+    {"from": "MiCA", "to": "USDT", "relationship": "USDT not compliant; may be restricted in EU markets"},
+    {"from": "KPMG", "to": "Tether", "relationship": "auditing $185B reserves"},
+    {"from": "Anchorage Digital", "to": "USAT", "relationship": "issuer (OCC-chartered bank)"}
+  ],
+
+  "categories": ["financial", "legal", "technical"],
+
+  "keyMetrics": {
+    "usdtReserves": "$185B",
+    "usdtTBillPercent": "80%+",
+    "usatCirculation": "~20M (early stage)",
+    "geniusActSigned": "July 2025",
+    "geniusActFinalRules": "July 2026",
+    "micaDeadline": "July 1, 2026",
+    "micaCompliantTopStablecoins": "USDC only"
+  },
+
+  "leverCollateralRisk": {
+    "currentState": "LEVER uses USDT as sole collateral in LeverVault (ERC-4626)",
+    "positiveSignals": [
+      "USDT reserves now 80%+ US Treasury Bills (high quality)",
+      "KPMG full audit announced March 27 2026",
+      "GENIUS Act provides regulatory clarity (better than gray zone)",
+      "Tether launching USAT for US compliance shows proactive adaptation",
+      "$185B in reserves; systemic importance makes regulatory destruction unlikely"
+    ],
+    "risks": [
+      "Single collateral dependency: any USDT depeg cascades through entire protocol",
+      "USDT not MiCA-compliant: EU restrictions possible by July 2026",
+      "USAT is on Ethereum only; not clear if it will be on Base",
+      "If LEVER targets US users, USAT may be required instead of/alongside USDT",
+      "GENIUS Act final rules (July 2026) could impose requirements on DeFi protocols using stablecoins"
+    ],
+    "recommendedActions": [
+      "BUILD: Design LeverVault to support multiple collateral types (USDT, USDC, USAT) from v2 or via wrapper",
+      "ADVISOR: Monitor GENIUS Act final rules (July 2026) for DeFi protocol obligations",
+      "CEO: For investors, emphasize USDT's improved transparency (KPMG audit, T-Bill backing) while acknowledging multi-collateral as roadmap item",
+      "SECURE: Monitor USDT peg stability as part of ongoing risk framework"
+    ]
+  },
+
+  "workstreamTags": {
+    "BUILD": "LeverVault is USDT-only. For v1 this is fine. For v2/scaling, design should accommodate USDC and potentially USAT. The stablecoin landscape is bifurcating: USDT global, USAT US, USDC EU. Multi-collateral support will be needed for multi-market reach.",
+    "CEO": "Good news: USDT is safer than ever ($185B, 80% T-Bills, KPMG audit). The GENIUS Act provides regulatory clarity. Bad news: single collateral dependency is a risk investors will ask about. Answer: 'v1 is USDT for simplicity and liquidity. Multi-collateral (USDC, USAT) is on the roadmap for geographic expansion.'",
+    "ADVISOR": "July 2026 is a key regulatory date: both GENIUS Act final rules AND MiCA enforcement deadline. LEVER mainnet (Q2 2026) should launch before these deadlines to establish market position. Multi-collateral should be prioritized for Q3-Q4.",
+    "SECURE": "USDT depeg risk is low but non-zero. Insurance fund (20% of fees) provides some buffer. A USDT depeg scenario should be part of the risk framework."
+  },
+
+  "sources": [
+    {"title": "CoinDesk: Tether Hires KPMG for USDT Audit", "url": "https://www.coindesk.com/markets/2026/03/27/tether-hires-kpmg-for-usdt-audit-brings-in-pwc-as-it-gears-up-for-u-s-expansion", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Tether Official: USAT Launch", "url": "https://tether.io/news/tether-announces-the-launch-of-usat-the-federally-regulated-dollar-backed-stablecoin-made-in-america/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Fortune: Tether USAT vs Circle", "url": "https://fortune.com/2026/01/27/crypto-giant-tether-pushes-into-the-u-s-with-usat-stablecoin-to-challenge-circle/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "The Block: Anchorage USAT Attestation", "url": "https://www.theblock.co/post/391762/anchorage-usat-reserve-17-6-million-assets-backing-tether-us-stablecoin", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "KuCoin: Stablecoin Regulation 2026", "url": "https://www.kucoin.com/blog/en-stablecoin-regulation-updates-2026-genius-act-mica-enforcement-global-compliance-trends", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"},
+    {"title": "BVNK: Global Stablecoin Regulations 2026", "url": "https://bvnk.com/blog/global-stablecoin-regulations-2026", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"}
+  ]
+}

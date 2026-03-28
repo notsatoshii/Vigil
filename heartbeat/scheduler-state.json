@@ -4,8 +4,8 @@
       "task_id": "lever-bug-1",
       "title": "LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs entryPI) causing 38 winners, 0 losers",
       "stage": "critiquing",
-      "agent_pid": 2936632,
-      "dispatched_at": 1774715958.8397584,
+      "agent_pid": 2952037,
+      "dispatched_at": 1774716391.100579,
       "plan_file": "/home/lever/command/handoffs/plan-lever-bug-1.md",
       "critique_file": "/home/lever/command/handoffs/critique-lever-bug-1.md",
       "build_file": "",
@@ -135,9 +135,33 @@
     "landing-design": {
       "task_id": "landing-design",
       "title": "LANDING-DESIGN: Redesign landing page to be institutional and sophisticated",
-      "stage": "planning",
-      "agent_pid": 2934074,
+      "stage": "planned",
+      "agent_pid": 0,
       "dispatched_at": 1774715898.3085315,
+      "plan_file": "/home/lever/command/handoffs/plan-landing-design.md",
+      "critique_file": "",
+      "build_file": "",
+      "verify_file": "",
+      "attempts": 0
+    },
+    "vigil-dashboard": {
+      "task_id": "vigil-dashboard",
+      "title": "VIGIL-DASHBOARD: Complete dashboard overhaul. Real-time WebSocket, actual reactive data, KANBAN board visible, activity feed, pipeline visualization. Current dashboard is useless.",
+      "stage": "planned",
+      "agent_pid": 0,
+      "dispatched_at": 1774716320.6310449,
+      "plan_file": "/home/lever/command/handoffs/plan-vigil-dashboard.md",
+      "critique_file": "",
+      "build_file": "",
+      "verify_file": "",
+      "attempts": 0
+    },
+    "vigil-verify-vision": {
+      "task_id": "vigil-verify-vision",
+      "title": "VIGIL-VERIFY-VISION: VERIFY must use Puppeteer/Chromium to take screenshots and use Claude vision to verify visual/UI changes. Not just code review.",
+      "stage": "planning",
+      "agent_pid": 2962608,
+      "dispatched_at": 1774716692.6532984,
       "plan_file": "",
       "critique_file": "",
       "build_file": "",
@@ -145,6 +169,6 @@
       "attempts": 0
     }
   },
-  "sessions_today": 50,
+  "sessions_today": 56,
   "last_reset_date": "2026-03-28"
 }

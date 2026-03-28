@@ -104,3 +104,13 @@ not the raw oracle PI at time of entry. The current PI from the oracle is the co
 The bug was that the code used raw PI at entry instead of the impact-adjusted execution price,
 making every position appear profitable because the spread was not captured in the entry reference.
 The whitepaper formula is correct. The implementation was reading the wrong value for entry.
+
+### Health Escalation Script: "Failed to connect to bus: No medium found" (2026-03-28)
+The health-escalate.sh cron job ran at 12:00 UTC and found openclaw-gateway down. When it tried
+`sudo systemctl restart openclaw-gateway`, both the restart and the status check returned "Failed
+to connect to bus: No medium found". This appears to be a transient DBUS environment issue in the
+cron context (possibly dbus was momentarily unavailable or the service was in a broken state that
+blocked systemctl). The service recovered on its own by the 16:00 health check. This was a
+one-time event with no lasting impact. If this recurs, investigate whether DBUS_SYSTEM_BUS_ADDRESS
+needs to be explicitly set in the crontab, or whether openclaw-gateway needs a service dependency
+on dbus.
