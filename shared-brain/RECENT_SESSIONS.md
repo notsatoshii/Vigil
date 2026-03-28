@@ -48,3 +48,21 @@
 - LeverVault/ILeverVault: added getNetUnrealizedPnL() getter; ExecutionEngine now calls updateUnrealizedPnL on close (P06)
 **Files:** 10 contracts + 8 test files modified
 **Handoff:** /home/lever/command/handoffs/build-20260328-130802-audit-fixes-v2.md
+
+---
+## Session: 2026-03-28 (VERIFY - Audit Fixes P01-P06)
+**Task:** Independent review of BUILD handoff for LEVER-P01 through P06 fixes
+**Result:** PASS WITH CONCERNS — all 6 fixes correct, zero regressions
+**Verdict summary:**
+- P01/P02: depthThreshold=0 guards confirmed correct in both FundingRateEngine and BorrowFeeEngine
+- P03: ExecutionEngine fee routing confirmed — no collectTransactionFee, direct debit+transferOut+routeFees
+- P04: InsuranceFund recipient routing confirmed — USDT goes to leverVault, not caller
+- P05: routeUnmatchedFunding confirmed — receiveUnmatchedFunding called, depositRewards not called
+- P06: updateUnrealizedPnL on close confirmed — NAV updated correctly
+**Concerns (non-blocking):**
+- InsuranceFundFixed.sol ignores recipient (deploy InsuranceFund.sol, not InsuranceFundFixed.sol)
+- Closing fee routed as FeeType.BORROW instead of TRANSACTION (pre-existing)
+- P06 minimal fix: no update on open, intra-position drift not tracked (LEVER-008, acknowledged)
+- EXECUTION_ENGINE_ROLE must be granted on LeverVault and InsuranceFund post-deployment
+**Tests:** 6/6 audit tests pass. Full suite 1074/1078 (4 pre-existing PriceSmoothing failures)
+**Verdict:** /home/lever/command/handoffs/verify-verdict.md

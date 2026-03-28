@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-03-28T13:12:09Z",
-  "epoch": 1774703529,
+  "timestamp": "2026-03-28T13:29:24Z",
+  "epoch": 1774704564,
   "system": {
     "health": "healthy",
     "healthTime": "2026-03-28T13:09:19Z",
-    "ramUsed": 6077,
+    "ramUsed": 5127,
     "ramTotal": 15993,
-    "ramPct": 37,
+    "ramPct": 32,
     "diskPct": 18,
     "diskUsed": "35G",
     "diskTotal": "193G",
-    "cpuLoad": "1.21",
-    "uptime": "2 weeks, 2 days, 8 hours, 42 minutes"
+    "cpuLoad": "1.01",
+    "uptime": "2 weeks, 2 days, 9 hours, 0 minutes"
   },
   "services": {
     "leverFrontend": 1,
@@ -25,7 +25,7 @@
   },
   "sessions": {
     "active": 2,
-    "today": 4,
+    "today": 5,
     "pendingApprovals": 1,
     "pendingItems": "",
     "deadLetters": 0,
@@ -39,14 +39,14 @@
     "planned": [],
     "inProgress": [],
     "inReview": [],
-    "done": [],
+    "done": ["[2026-03-28] LEVER-P01: FundingRateEngine depthThreshold=0 guard — VERIFIED PASS","[2026-03-28] LEVER-P02: BorrowFeeEngine depthThreshold=0 guard — VERIFIED PASS","[2026-03-28] LEVER-P03: ExecutionEngine direct fee routing — VERIFIED PASS","[2026-03-28] LEVER-P04: InsuranceFund absorbBadDebt recipient routing — VERIFIED PASS","[2026-03-28] LEVER-P05: FundingRateEngine routeUnmatchedFunding correct function — VERIFIED PASS"],
     "blocked": []
   },
   "intentions": ["1. Complete Vigil migration (Phase 1 through Phase 9)"],
   "advisorSummary": "",
   "recentSessions": ["[2026-03-28T08:10:00Z] MIGRATION | Phase 0: Foundation","[2026-03-28T10:55:18Z] RESEARCH | Inbox ingestion: test-note.txt","[2026-03-28T12:01:54Z] RESEARCH | Inbox ingestion: 20260328-115423-PredictionIndex2025-2026.pdf","[2026-03-28T12:04:32Z] RESEARCH | Inbox ingestion: 20260328-115813-PredictionIndex2025-2026.pdf","[2026-03-28T12:36:23Z] RESEARCH | Inbox ingestion: 20260328-123557-photo-20260328-123557.jpg","[2026-03-28T12:47:13Z] RESEARCH | Inbox ingestion: 20260328-124624-pngwing.com 1.png"],
-  "recentHandoffs": [{"name":"build-landing-fixes-v2","time":1774703532,"summary":"All 8 issues from the screenshot review have been fixed in `/home/claude/lever-l"},{"name":"verify-verdict","time":1774703363,"summary":"No verdict file produced"},{"name":"build-20260328-130802-audit-fixes-v2","time":1774703325,"summary":"All 6 audit findings from AUDIT_FINDINGS_V2.md have been implemented."},{"name":"build-landing-overhaul-v2","time":1774702679,"summary":"Major visual overhaul of the LEVER landing page. Strip old grid system and vanil"},{"name":"plan-landing-page-overhaul-v2","time":1774700648,"summary":"The page should feel like walking into a private capital desk that happens to be"}],
-  "nextJobs": [{"name":"research-evening-scan","next":"in 7h"},{"name":"operate-vigil-selfcheck","next":"in 11h"},{"name":"advisor-daily-brief","next":"in 17h"},{"name":"research-morning-scan","next":"in 19h"},{"name":"secure-weekly-audit","next":"in 2d"},{"name":"ceo-weekly-brief","next":"in 2d"},{"name":"improve-weekly-review","next":"in 4d"}],
+  "recentHandoffs": [{"name":"verify-verdict","time":1774704408,"summary":"All 6 audit fixes implemented correctly. Build passes. Full test suite: 1074 pas"},{"name":"build-landing-polish-v2","time":1774703827,"summary":"Final visual polish pass on the LEVER landing page. Eight specific CSS and HTML "},{"name":"build-handoff","time":1774703792,"summary":"All changes were pre-approved as part of the audit fix mandate. Solidity files m"},{"name":"build-landing-fixes-v2","time":1774703532,"summary":"All 8 issues from the screenshot review have been fixed in `/home/claude/lever-l"},{"name":"build-20260328-130802-audit-fixes-v2","time":1774703325,"summary":"All 6 audit findings from AUDIT_FINDINGS_V2.md have been implemented."}],
+  "nextJobs": [{"name":"idle-task-picker","next":"in 28m"},{"name":"research-evening-scan","next":"in 7h"},{"name":"operate-vigil-selfcheck","next":"in 11h"},{"name":"advisor-daily-brief","next":"in 17h"},{"name":"research-morning-scan","next":"in 19h"},{"name":"secure-weekly-audit","next":"in 2d"},{"name":"ceo-weekly-brief","next":"in 2d"}],
   "projects": {
     "lever": {
       "status": "testnet",

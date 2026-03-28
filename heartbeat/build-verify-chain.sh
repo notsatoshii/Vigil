@@ -31,7 +31,7 @@ while [ "$FAILURE_COUNT" -lt "$MAX_FAILURES" ]; do
     VERIFY_RESULT=$(openclaw agent \
         --agent verify \
         --message "Review this BUILD handoff. Run all 3 verification passes (functional, visual, data). Write your verdict to /home/lever/command/handoffs/verify-verdict.md. Handoff contents: $HANDOFF_CONTENT" \
-        --token "$GATEWAY_TOKEN" \
+        \
         --timeout 1800 \
         --json 2>&1)
 
@@ -54,7 +54,7 @@ while [ "$FAILURE_COUNT" -lt "$MAX_FAILURES" ]; do
         openclaw agent \
             --agent main \
             --message "BUILD -> VERIFY chain complete. Verdict: $VERDICT. Notify Master on Telegram with a summary of what was built and the verification result." \
-            --token "$GATEWAY_TOKEN" \
+            \
             --timeout 120 2>&1 >> "$LOG"
 
         # Update RECENT_SESSIONS.md
@@ -77,7 +77,7 @@ while [ "$FAILURE_COUNT" -lt "$MAX_FAILURES" ]; do
         BUILD_RESULT=$(openclaw agent \
             --agent build \
             --message "VERIFY failed your work. Fix these issues and write an updated handoff to /home/lever/command/handoffs/build-handoff.md. VERIFY feedback: $FEEDBACK" \
-            --token "$GATEWAY_TOKEN" \
+            \
             --timeout 1800 \
             --json 2>&1)
 
@@ -98,7 +98,7 @@ LAST_FEEDBACK=$(cat /home/lever/command/handoffs/verify-verdict.md 2>/dev/null |
 openclaw agent \
     --agent main \
     --message "BUILD -> VERIFY loop is stuck. Failed $MAX_FAILURES times on the same issue. Tell Master on Telegram what the problem is and ask for guidance. Last VERIFY feedback: $LAST_FEEDBACK" \
-    --token "$GATEWAY_TOKEN" \
+    \
     --timeout 120 2>&1 >> "$LOG"
 
 exit 1

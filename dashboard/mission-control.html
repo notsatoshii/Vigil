@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Vigil</title>
+<style>
+:root{--bg:#06090f;--surface:#0c1119;--border:#1a2332;--text:#e2e8f0;--dim:#64748b;--muted:#334155;--accent:#38bdf8;--green:#22c55e;--amber:#f59e0b;--red:#ef4444;
+--ws-plan:#a78bfa;--ws-critique:#f472b6;--ws-build:#38bdf8;--ws-verify:#22c55e;--ws-research:#fbbf24;--ws-operate:#94a3b8;--ws-secure:#ef4444;--ws-ceo:#e2e8f0;--ws-advisor:#c084fc;--ws-improve:#2dd4bf;--ws-commander:#38bdf8;--ws-telegram:#38bdf8;--ws-migration:#64748b;--ws-handoff:#94a3b8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:14px;-webkit-font-smoothing:antialiased}
+code,pre,.mono{font-family:'SF Mono','Fira Code','JetBrains Mono',monospace}
+
+/* Status bar - always visible */
+.status-bar{position:sticky;top:0;z-index:100;background:var(--surface);border-bottom:1px solid var(--border);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(12px);background:rgba(12,17,25,0.92)}
+.status-left{display:flex;align-items:center;gap:14px}
+.orb{width:8px;height:8px;border-radius:50%;animation:breathe 3s ease-in-out infinite}
+.orb.ok{background:var(--green);box-shadow:0 0 10px rgba(34,197,94,0.3)}
+.orb.warn{background:var(--amber);box-shadow:0 0 10px rgba(245,158,11,0.3)}
+.orb.bad{background:var(--red);box-shadow:0 0 10px rgba(239,68,68,0.4)}
+@keyframes breathe{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.85)}}
+.logo{font-size:13px;letter-spacing:4px;font-weight:700;color:var(--accent)}
+.status-right{display:flex;gap:16px;font-size:11px;color:var(--dim);align-items:center}
+.status-right .s{display:flex;align-items:center;gap:4px}
+.status-right .n{color:var(--text);font-weight:600;font-family:'SF Mono',monospace}
+.ws-pills{display:flex;gap:3px}
+.ws-pill{width:6px;height:6px;border-radius:50%;opacity:0.3}
+.ws-pill.active{opacity:1;animation:breathe 2s ease-in-out infinite}
+
+/* Layout */
+.main{display:flex;max-width:1400px;margin:0 auto;min-height:calc(100vh - 45px)}
+.feed-col{flex:1;padding:16px 20px;border-right:1px solid var(--border);overflow-y:auto}
+.ctx-col{width:320px;padding:16px 20px;overflow-y:auto}
+
+/* Section headers */
+.section{margin-bottom:20px}
+.section-title{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:var(--dim);font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.section-title .count{background:var(--muted);color:var(--text);font-size:9px;padding:1px 6px;border-radius:8px;font-weight:600}
+
+/* Activity stream */
+.stream{list-style:none}
+.entry{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(26,35,50,0.5);animation:fadeIn 0.3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.entry:last-child{border-bottom:none}
+.entry-time{font-size:10px;color:var(--dim);min-width:50px;font-family:'SF Mono',monospace;padding-top:2px}
+.entry-badge{font-size:9px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;min-width:70px;padding-top:2px}
+.entry-body{flex:1;font-size:13px;line-height:1.5;color:var(--text)}
+.entry-status{font-size:11px;padding-top:2px}
+.entry-status .spinner{display:inline-block;width:12px;height:12px;border:2px solid var(--muted);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Pipeline */
+.pipeline{display:flex;align-items:center;gap:2px;margin:8px 0 16px}
+.pipe{flex:1;text-align:center;padding:8px 0;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;border-radius:6px;background:var(--surface);color:var(--muted);border:1px solid var(--border);transition:all 0.3s}
+.pipe.active{color:var(--accent);border-color:rgba(56,189,248,0.3);background:rgba(56,189,248,0.05);box-shadow:0 0 20px rgba(56,189,248,0.05)}
+.pipe.done{color:var(--green);border-color:rgba(34,197,94,0.2)}
+.pipe-arrow{color:var(--muted);font-size:12px}
+.pipe-count{display:block;font-size:14px;font-weight:700;margin-bottom:2px}
+
+/* Attention items */
+.attn{padding:10px 12px;background:var(--surface);border-radius:6px;margin-bottom:8px;border-left:3px solid var(--amber)}
+.attn.crit{border-left-color:var(--red)}
+.attn-title{font-size:12px;font-weight:600;margin-bottom:3px}
+.attn-sub{font-size:10px;color:var(--dim)}
+.attn-cmd{font-family:'SF Mono',monospace;color:var(--accent);font-size:10px;background:rgba(56,189,248,0.08);padding:1px 5px;border-radius:3px}
+
+/* Services */
+.svc-row{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:12px}
+.svc{font-size:10px;padding:4px 8px;border-radius:4px;display:flex;align-items:center;gap:5px;background:var(--surface);border:1px solid var(--border)}
+.svc.down{border-color:rgba(239,68,68,0.3)}
+.svc-dot{width:4px;height:4px;border-radius:50%}
+.svc-dot.up{background:var(--green)}
+.svc-dot.down{background:var(--red);animation:breathe 1s ease-in-out infinite}
+
+/* Stats */
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.stat{text-align:center;padding:12px 8px;background:var(--surface);border-radius:6px;border:1px solid var(--border)}
+.stat-n{font-size:20px;font-weight:700;color:var(--accent);font-family:'SF Mono',monospace}
+.stat-l{font-size:8px;color:var(--dim);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;font-weight:600}
+
+/* Projects */
+.proj{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;background:var(--surface);border-radius:6px;margin-bottom:6px;border:1px solid var(--border)}
+.proj-name{font-weight:600;font-size:12px}
+.proj-tag{font-size:8px;padding:2px 8px;border-radius:10px;font-weight:700;letter-spacing:0.5px}
+.proj-tag.testnet{background:rgba(245,158,11,0.1);color:var(--amber);border:1px solid rgba(245,158,11,0.15)}
+.proj-tag.live{background:rgba(34,197,94,0.1);color:var(--green);border:1px solid rgba(34,197,94,0.15)}
+.proj-sub{font-size:10px;color:var(--dim);margin-top:1px}
+
+/* Upcoming */
+.upcoming{font-size:11px}
+.upcoming div{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border)}
+.upcoming div:last-child{border-bottom:none}
+.upcoming .t{color:var(--accent);font-family:'SF Mono',monospace;font-size:10px}
+
+/* Commands */
+.cmds{display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:10px}
+.cmd{padding:5px 7px;background:var(--surface);border-radius:4px;color:var(--dim);border:1px solid var(--border)}
+.cmd code{color:var(--accent);font-weight:600}
+
+/* Connection indicator */
+.conn{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px rgba(34,197,94,0.3)}
+.conn.off{background:var(--red);box-shadow:0 0 6px rgba(239,68,68,0.3)}
+
+/* Mobile */
+@media(max-width:768px){
+.main{flex-direction:column}
+.feed-col{border-right:none;border-bottom:1px solid var(--border)}
+.ctx-col{width:100%}
+.status-bar{padding:8px 14px}
+.status-right{gap:10px;font-size:10px}
+.feed-col,.ctx-col{padding:12px 14px}
+.stat-row{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- Sticky status bar -->
+<div class="status-bar">
+  <div class="status-left">
+    <span class="orb" id="orb"></span>
+    <span class="logo">VIGIL</span>
+    <div class="ws-pills" id="ws-pills"></div>
+  </div>
+  <div class="status-right">
+    <div class="s">Sessions: <span class="n" id="h-sessions">-</span></div>
+    <div class="s">RAM: <span class="n" id="h-ram">-</span></div>
+    <div class="s"><span class="conn" id="conn"></span></div>
+    <div class="s mono" id="h-ago" style="font-size:10px;color:#334155">--</div>
+  </div>
+</div>
+
+<div class="main">
+  <!-- Feed column -->
+  <div class="feed-col">
+    <!-- Pipeline -->
+    <div class="section">
+      <div class="section-title">Pipeline</div>
+      <div class="pipeline" id="pipeline"></div>
+    </div>
+
+    <!-- Attention (only shows when items exist) -->
+    <div class="section" id="attn-section" style="display:none">
+      <div class="section-title">Needs Attention <span class="count" id="attn-count">0</span></div>
+      <div id="attn-items"></div>
+    </div>
+
+    <!-- Live activity stream -->
+    <div class="section">
+      <div class="section-title">Activity</div>
+      <ul class="stream" id="stream"></ul>
+    </div>
+  </div>
+
+  <!-- Context panel -->
+  <div class="ctx-col">
+    <!-- Services -->
+    <div class="section">
+      <div class="section-title">Services</div>
+      <div class="svc-row" id="svcs"></div>
+    </div>
+
+    <!-- Stats -->
+    <div class="section">
+      <div class="stat-row">
+        <div class="stat"><div class="stat-n" id="s-sessions">-</div><div class="stat-l">Sessions</div></div>
+        <div class="stat"><div class="stat-n" id="s-sources">-</div><div class="stat-l">Sources</div></div>
+        <div class="stat"><div class="stat-n" id="s-entities">-</div><div class="stat-l">Entities</div></div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="section">
+      <div class="section-title">Projects</div>
+      <div id="projects"></div>
+    </div>
+
+    <!-- Upcoming -->
+    <div class="section">
+      <div class="section-title">Scheduled</div>
+      <div class="upcoming" id="upcoming"></div>
+    </div>
+
+    <!-- Commands -->
+    <div class="section">
+      <div class="section-title">Commands</div>
+      <div class="cmds">
+        <div class="cmd"><code>/status</code> health</div>
+        <div class="cmd"><code>/brief</code> advisor</div>
+        <div class="cmd"><code>/approve N</code></div>
+        <div class="cmd"><code>/reject N</code></div>
+        <div class="cmd"><code>/intent add</code></div>
+        <div class="cmd"><code>/intent list</code></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const WS_URL = 'ws://' + location.host;
+let ws, lastEpoch = 0, reconnectTimer;
+const wsColors = {PLAN:'#a78bfa',CRITIQUE:'#f472b6',BUILD:'#38bdf8',VERIFY:'#22c55e',RESEARCH:'#fbbf24',OPERATE:'#94a3b8',SECURE:'#ef4444',CEO:'#e2e8f0',ADVISOR:'#c084fc',IMPROVE:'#2dd4bf',COMMANDER:'#38bdf8',TELEGRAM:'#64748b',MIGRATION:'#64748b',HANDOFF:'#94a3b8'};
+
+function ago(epoch) {
+  if (!epoch) return '--';
+  const s = Math.floor(Date.now()/1000) - epoch;
+  if (s < 0) return 'now';
+  if (s < 60) return s + 's';
+  if (s < 3600) return Math.floor(s/60) + 'm';
+  if (s < 86400) return Math.floor(s/3600) + 'h';
+  return Math.floor(s/86400) + 'd';
+}
+
+function connect() {
+  ws = new WebSocket(WS_URL);
+  ws.onopen = () => { document.getElementById('conn').className = 'conn'; };
+  ws.onclose = () => {
+    document.getElementById('conn').className = 'conn off';
+    reconnectTimer = setTimeout(connect, 3000);
+  };
+  ws.onerror = () => {};
+  ws.onmessage = (e) => {
+    try {
+      const msg = JSON.parse(e.data);
+      if (msg.type === 'update') render(msg.data);
+    } catch {}
+  };
+}
+
+function render(d) {
+  lastEpoch = d.epoch;
+
+  // Orb
+  const orb = document.getElementById('orb');
+  orb.className = 'orb ' + (d.system.health === 'healthy' ? 'ok' : d.system.ramPct > 85 ? 'bad' : 'warn');
+
+  // Header stats
+  document.getElementById('h-sessions').textContent = d.sessions.today;
+  document.getElementById('h-ram').textContent = d.system.ramPct + '%';
+
+  // Workstream pills (show which are active)
+  const allWs = ['PLAN','CRITIQUE','BUILD','VERIFY','SECURE','RESEARCH','OPERATE','CEO','ADVISOR','IMPROVE'];
+  const activeWs = (d.kanban?.inProgress || []).map(s => s.toUpperCase());
+  document.getElementById('ws-pills').innerHTML = allWs.map(w => {
+    const isActive = activeWs.some(a => a.includes(w));
+    return `<span class="ws-pill${isActive ? ' active' : ''}" style="background:${wsColors[w]}" title="${w}"></span>`;
+  }).join('');
+
+  // Pipeline
+  const stages = {PLAN:0,CRITIQUE:0,BUILD:0,VERIFY:0};
+  (d.kanban?.inProgress||[]).forEach(t => {
+    const u = t.toUpperCase();
+    for (const s of Object.keys(stages)) if (u.includes(s)) stages[s]++;
+  });
+  (d.kanban?.inReview||[]).forEach(() => stages.VERIFY++);
+  document.getElementById('pipeline').innerHTML = Object.entries(stages).map(([s,c],i) => {
+    const cls = c > 0 ? 'active' : (d.kanban?.done||[]).length > 0 && i < 3 ? '' : '';
+    return (i > 0 ? '<span class="pipe-arrow">&rsaquo;</span>' : '') +
+      `<div class="pipe ${cls}"><span class="pipe-count">${c}</span>${s}</div>`;
+  }).join('');
+
+  // Services
+  const svcNames = {frontend:'FE :3000',oracle:'Oracle',accrue:'Accrue',gateway:'GW :18789',inbox:'Inbox',telegram:'TG Bot',dashboard:'Dash :8080',caddy:'Caddy :80'};
+  document.getElementById('svcs').innerHTML = Object.entries(d.services).map(([k,v]) =>
+    `<div class="svc${v?'':' down'}"><span class="svc-dot ${v?'up':'down'}"></span>${svcNames[k]||k}</div>`
+  ).join('');
+
+  // Stats
+  document.getElementById('s-sessions').textContent = d.sessions.today;
+  document.getElementById('s-sources').textContent = d.knowledge.sources;
+  document.getElementById('s-entities').textContent = d.knowledge.entities;
+
+  // Attention
+  const attnItems = [];
+  if (d.sessions.pendingApprovals > 0) attnItems.push({title:`${d.sessions.pendingApprovals} pending approval(s)`,sub:'Review and act via Telegram',cmd:'/approve N',crit:false});
+  if (d.sessions.deadLetters > 0) attnItems.push({title:`${d.sessions.deadLetters} failed message(s)`,sub:'OPERATE will retry automatically',cmd:'',crit:true});
+  if (d.sessions.gatewayErrors > 3) attnItems.push({title:`${d.sessions.gatewayErrors} gateway errors today`,sub:'Check telegram-gateway.log',cmd:'/status',crit:false});
+
+  const attnSection = document.getElementById('attn-section');
+  if (attnItems.length > 0) {
+    attnSection.style.display = '';
+    document.getElementById('attn-count').textContent = attnItems.length;
+    document.getElementById('attn-items').innerHTML = attnItems.map(a =>
+      `<div class="attn${a.crit?' crit':''}"><div class="attn-title">${a.title}</div><div class="attn-sub">${a.sub}${a.cmd?' <span class="attn-cmd">'+a.cmd+'</span>':''}</div></div>`
+    ).join('');
+  } else {
+    attnSection.style.display = 'none';
+  }
+
+  // Activity stream
+  const entries = [];
+
+  // Add handoffs
+  if (d.activity?.handoffs) {
+    d.activity.handoffs.forEach(h => {
+      const ws = h.name.split('-')[0].toUpperCase();
+      entries.push({time:h.time, ws:ws==='PLAN'||ws==='BUILD'||ws==='VERIFY'||ws==='OPERATE'?ws:'HANDOFF', text:h.name.replace(/-/g,' ')+(h.summary?' : '+h.summary:''), done:true});
+    });
+  }
+
+  // Add sessions
+  if (d.activity?.sessions) {
+    d.activity.sessions.forEach(s => {
+      const parts = s.split('|');
+      const timeStr = parts[0]?.trim().replace(/[\[\]]/g,'') || '';
+      const rest = parts.slice(1).join('|').trim();
+      const ws = rest.split(' ')[0] || 'SYSTEM';
+      const desc = rest.substring(ws.length).trim();
+      let epoch = 0;
+      try { epoch = Math.floor(new Date(timeStr).getTime()/1000); } catch {}
+      entries.push({time:epoch, ws, text:desc, done:true});
+    });
+  }
+
+  // Sort by time, newest first
+  entries.sort((a,b) => b.time - a.time);
+
+  document.getElementById('stream').innerHTML = entries.slice(0, 15).map(e => {
+    const color = wsColors[e.ws] || '#64748b';
+    return `<li class="entry">
+      <span class="entry-time">${ago(e.time)}</span>
+      <span class="entry-badge" style="color:${color}">${e.ws}</span>
+      <span class="entry-body">${e.text}</span>
+      <span class="entry-status">${e.done ? '&#10003;' : '<span class="spinner"></span>'}</span>
+    </li>`;
+  }).join('') || '<li class="entry"><span class="entry-body" style="color:var(--dim)">No activity yet.</span></li>';
+
+  // Projects
+  document.getElementById('projects').innerHTML =
+    `<div class="proj"><div><div class="proj-name">LEVER Protocol</div><div class="proj-sub">${d.projects?.lever?.bugsTotal||12} audit items</div></div><span class="proj-tag testnet">TESTNET</span></div>` +
+    `<div class="proj"><div><div class="proj-name">Landing Page</div><div class="proj-sub">Redesign</div></div><span class="proj-tag live">ACTIVE</span></div>`;
+
+  // Upcoming
+  document.getElementById('upcoming').innerHTML = (d.upcoming||[]).map(j =>
+    `<div><span>${j.name.replace(/-/g,' ')}</span><span class="t">${j.next}</span></div>`
+  ).join('') || '<div style="color:var(--dim);font-size:11px">No scheduled jobs</div>';
+}
+
+// Live timestamp updater
+setInterval(() => {
+  if (lastEpoch) document.getElementById('h-ago').textContent = ago(lastEpoch);
+}, 1000);
+
+// Fallback: if WebSocket fails, poll data.json
+setInterval(async () => {
+  if (ws && ws.readyState === 1) return; // WS is working
+  try {
+    const r = await fetch('/data.json?' + Date.now());
+    const d = await r.json();
+    render(d);
+  } catch {}
+}, 15000);
+
+connect();
+</script>
+</body>
+</html>

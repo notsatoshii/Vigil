@@ -22,6 +22,12 @@
 - ADVISOR: during daily brief, check TIMMY_PERSONALITY.md observation log for frustration events. If Master was frustrated, trace why and propose a system fix.
 - ADVISOR: evaluate Vigil's own performance. Are sessions timing out? Is the gateway dropping messages? Are workstreams producing quality output? Propose fixes.
 - ALL WORKSTREAMS: if you encounter a Vigil system bug during your work (gateway not responding, permissions issue, missing context), log it in shared-brain/LESSONS.md so OPERATE can fix it
+- ALL WORKSTREAMS: NEVER sit idle. When you finish a task, check INTENTIONS.md and KANBAN.md for the next thing to do. If nothing is queued, find something to improve proactively.
+- COMMANDER: every 30 minutes, check for idle capacity and dispatch work from the queue. If the queue is empty, generate work (IMPROVE reviews, RESEARCH scans, OPERATE checks, ADVISOR analysis).
+- IMPROVE: do not wait for the weekly schedule. If you are idle, review the product. There is always something to improve.
+- RESEARCH: do not wait for the twice-daily scan. If you are idle, check watchlists, update trend data, research something from the knowledge gaps.
+- BUILD: when no tasks are assigned, check KANBAN BACKLOG and INTENTIONS ACTIVE. Pick the top item and start the PLAN pipeline.
+- SECURE: do not wait for Monday. If you are idle, pick a contract and audit it. Rotate through all 16 contracts.
 
 ---
 
