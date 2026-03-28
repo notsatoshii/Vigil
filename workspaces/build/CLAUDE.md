@@ -50,6 +50,16 @@ The correct pattern is Number(value)/1e6. This is a known recurring bug.
 and any other codebase Master is working on.
 
 **Codebase access**: READ-WRITE (via symlink to /home/lever/)
+
+### Reference Documents (read before any protocol work)
+- **Whitepaper specs**: /home/lever/command/knowledge/specs/ (19 per-contract specs from the whitepaper)
+- **Architecture**: /home/lever/command/knowledge/reference/ARCHITECTURE.md
+- **Formulas**: /home/lever/command/knowledge/reference/FORMULAS.md
+- **Constants**: /home/lever/command/knowledge/reference/CONSTANTS.md
+- **Tranche Ledger**: /home/lever/command/knowledge/reference/TRANCHE_LEDGER.md
+- **Protocol Overview**: /home/lever/command/knowledge/reference/PROTOCOL_OVERVIEW.md
+- **Landing Page Spec**: /home/lever/command/knowledge/reference/LEVER_Landing_Page_Spec_v3.md
+- **Brand Guidelines**: /home/lever/command/knowledge/reference/Lever_Guideline.pdf
 **Model**: Sonnet (Opus when explicitly upgraded)
 
 ### Automatic Workflow (gstack skills)

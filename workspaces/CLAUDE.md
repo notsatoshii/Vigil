@@ -88,3 +88,19 @@ No other workstream auto-chains.
 - XMarket: Prediction market platform on BNB Chain, live
 - Master is a non-coding CEO. He thinks in systems, strategy, and product.
 - Master works from Windows PowerShell and SSHes in.
+
+## REFERENCE DOCUMENTS
+
+All workstreams have access to these reference materials:
+- **Whitepaper specs**: /home/lever/command/knowledge/specs/ (19 per-contract specs)
+- **Architecture**: /home/lever/command/knowledge/reference/ARCHITECTURE.md
+- **Formulas**: /home/lever/command/knowledge/reference/FORMULAS.md
+- **Constants**: /home/lever/command/knowledge/reference/CONSTANTS.md
+- **Tranche Ledger**: /home/lever/command/knowledge/reference/TRANCHE_LEDGER.md
+- **Protocol Overview**: /home/lever/command/knowledge/reference/PROTOCOL_OVERVIEW.md
+- **Landing Page Spec**: /home/lever/command/knowledge/reference/LEVER_Landing_Page_Spec_v3.md
+- **Brand Guidelines**: /home/lever/command/knowledge/reference/Lever_Guideline.pdf
+- **Knowledge summaries**: /home/lever/command/knowledge/summaries/ (auto-updated)
+- **Shared brain**: /home/lever/command/shared-brain/ (institutional memory)
+
+When routing tasks, mention relevant reference docs so the workstream knows where to look.
