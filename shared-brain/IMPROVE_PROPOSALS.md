@@ -92,3 +92,40 @@ Additionally, the borrow rate is shown as "0.0200% per hour" in the market panel
 **Effort Estimate**: Medium (responsive redesign of header stats + bottom nav consideration)
 
 ---
+
+## Session: 2026-03-28 (Quick Spot-Check)
+Reviewed: Trade/Markets, Vault, Positions pages
+Browser: Chromium, 1440x900 desktop
+Confirmed: Proposals #1-#5 from the earlier session are still OPEN and unaddressed.
+
+---
+
+### PROPOSAL #6: Positions Empty State Has No Actionable CTA
+**Category**: UX
+**Page/Component**: Positions page, empty state
+**Status**: OPEN
+**Priority**: Ship now (tiny effort, meaningful UX improvement)
+
+**Current State**: The empty state reads "No Open Positions. You don't have any active positions yet. Go to Markets to find an opportunity, then open a position from Trading." The phrase "Go to Markets" is plain text; it does nothing. A user who lands on this tab fresh has to manually figure out how to navigate away.
+
+**Proposed Change**: Make "Go to Markets" a button or styled link that routes to the Trade tab. One line of code. The bar-chart-in-a-circle icon is generic; a more evocative empty state image would feel less like a 404 page, but the CTA is the critical fix.
+
+**User Impact**: New users, anyone landing on Positions for the first time.
+**Effort Estimate**: Small (30 minutes)
+
+---
+
+### PROPOSAL #7: Market Cards Show No Volume or Liquidity Signal
+**Category**: Data Visualization / UX
+**Page/Component**: Trade page, market card grid
+**Status**: OPEN
+**Priority**: Next sprint
+
+**Current State**: Each card shows category, name, probability, resolution countdown, max leverage, and Long/Short buttons. No volume, open interest, liquidity depth, or activity signal. Every market looks identical in terms of tradability, regardless of how much capital sits behind it.
+
+**Proposed Change**: Add a compact stat to each card showing OI or 24h volume for that specific market. Even a relative activity indicator (Low/Medium/High dot) would let a trader filter to markets worth entering. A market with $0 OI and one with $50K OI should not look the same. Polymarket shows volume prominently because it is the primary trust signal for a prediction market.
+
+**User Impact**: Any trader choosing which market to enter. Without this, picking a market is arbitrary.
+**Effort Estimate**: Medium (requires per-market OI/volume data on the trade page, may need additional aggregation)
+
+---

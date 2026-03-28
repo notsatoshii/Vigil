@@ -99,14 +99,39 @@ function collectKanban() {
       return match[1].split('\n').filter(l => l.startsWith('- ')).map(l => l.replace(/^- /, '').trim()).slice(0, 5);
     } catch { return []; }
   }
-  return {
+  const kanban = {
     backlog: getSection('BACKLOG'),
     planned: getSection('PLANNED'),
     inProgress: getSection('IN PROGRESS'),
     inReview: getSection('IN REVIEW'),
-    done: getSection('DONE \\(last 10\\)'),
+    done: getSection('DONE (last 10)'),
     blocked: getSection('BLOCKED')
   };
+
+  // Merge live scheduler state for in-progress tasks
+  try {
+    const stateFile = '/home/lever/command/heartbeat/scheduler-state.json';
+    const state = JSON.parse(fs.readFileSync(stateFile, 'utf-8'));
+    const tasks = state.tasks || {};
+    for (const [tid, task] of Object.entries(tasks)) {
+      const label = `${tid}: ${task.stage}`;
+      if (task.stage === 'planning' || task.stage === 'critiquing' || task.stage === 'building') {
+        if (!kanban.inProgress.some(i => i.includes(tid))) {
+          kanban.inProgress.push(`${tid} [${task.stage.toUpperCase()}]`);
+        }
+      } else if (task.stage === 'verifying') {
+        if (!kanban.inReview.some(i => i.includes(tid))) {
+          kanban.inReview.push(`${tid} [VERIFYING]`);
+        }
+      } else if (task.stage === 'blocked') {
+        if (!kanban.blocked.some(i => i.includes(tid))) {
+          kanban.blocked.push(`${tid} [BLOCKED after ${task.attempts} attempts]`);
+        }
+      }
+    }
+  } catch {}
+
+  return kanban;
 }
 
 function collectRecentActivity() {

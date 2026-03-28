@@ -139,6 +139,12 @@ code,pre,.mono{font-family:'SF Mono','Fira Code','JetBrains Mono',monospace}
       <div class="pipeline" id="pipeline"></div>
     </div>
 
+    <!-- KANBAN Board -->
+    <div class="section">
+      <div class="section-title">Task Board</div>
+      <div class="kanban" id="kanban" style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px"></div>
+    </div>
+
     <!-- Attention (only shows when items exist) -->
     <div class="section" id="attn-section" style="display:none">
       <div class="section-title">Needs Attention <span class="count" id="attn-count">0</span></div>
@@ -258,6 +264,28 @@ function render(d) {
     return (i > 0 ? '<span class="pipe-arrow">&rsaquo;</span>' : '') +
       `<div class="pipe ${cls}"><span class="pipe-count">${c}</span>${s}</div>`;
   }).join('');
+
+  // KANBAN Board
+  function kbCol(title, items, cls) {
+    var h = '<div style="background:var(--surface);border-radius:6px;padding:8px;min-height:50px">';
+    h += '<div style="font-size:8px;text-transform:uppercase;letter-spacing:1.5px;color:var(--dim);margin-bottom:6px;text-align:center;font-weight:700">' + title + ' <span style="color:var(--accent)">(' + (items?.length || 0) + ')</span></div>';
+    if (items && items.length) {
+      items.forEach(function(item) {
+        h += '<div style="font-size:10px;padding:5px 7px;background:var(--card);border-radius:4px;margin-bottom:3px;border-left:2px solid ' + (cls === 'active' ? 'var(--accent)' : cls === 'done' ? 'var(--green)' : cls === 'blocked' ? 'var(--red)' : 'var(--border)') + ';word-break:break-word;line-height:1.3">' + item.substring(0, 50) + '</div>';
+      });
+    } else {
+      h += '<div style="font-size:9px;color:#1a2435;text-align:center;padding:4px">&middot;</div>';
+    }
+    h += '</div>';
+    return h;
+  }
+  var kb = d.kanban || {};
+  document.getElementById('kanban').innerHTML =
+    kbCol('Backlog', kb.backlog, '') +
+    kbCol('Planned', kb.planned, '') +
+    kbCol('In Progress', kb.inProgress, 'active') +
+    kbCol('In Review', kb.inReview, 'active') +
+    kbCol('Done', kb.done, 'done');
 
   // Services
   const svcNames = {frontend:'FE :3000',oracle:'Oracle',accrue:'Accrue',gateway:'GW :18789',inbox:'Inbox',telegram:'TG Bot',dashboard:'Dash :8080',caddy:'Caddy :80'};
