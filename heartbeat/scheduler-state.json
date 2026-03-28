@@ -3,9 +3,9 @@
     "lever-bug-1": {
       "task_id": "lever-bug-1",
       "title": "LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs entryPI) causing 38 winners, 0 losers",
-      "stage": "critiquing",
-      "agent_pid": 2952037,
-      "dispatched_at": 1774716391.100579,
+      "stage": "planned",
+      "agent_pid": 0,
+      "dispatched_at": 1774718455.0948305,
       "plan_file": "/home/lever/command/handoffs/plan-lever-bug-1.md",
       "critique_file": "/home/lever/command/handoffs/critique-lever-bug-1.md",
       "build_file": "",
@@ -159,16 +159,28 @@
     "vigil-verify-vision": {
       "task_id": "vigil-verify-vision",
       "title": "VIGIL-VERIFY-VISION: VERIFY must use Puppeteer/Chromium to take screenshots and use Claude vision to verify visual/UI changes. Not just code review.",
-      "stage": "planning",
-      "agent_pid": 2962608,
+      "stage": "planned",
+      "agent_pid": 0,
       "dispatched_at": 1774716692.6532984,
-      "plan_file": "",
+      "plan_file": "/home/lever/command/handoffs/plan-vigil-verify-vision.md",
+      "critique_file": "",
+      "build_file": "",
+      "verify_file": "",
+      "attempts": 0
+    },
+    "vigil-self-improve": {
+      "task_id": "vigil-self-improve",
+      "title": "VIGIL-SELF-IMPROVE: System must continuously self-improve without Master having to point out every problem. Overseer must be more aggressive.",
+      "stage": "planned",
+      "agent_pid": 0,
+      "dispatched_at": 1774717356.0381243,
+      "plan_file": "/home/lever/command/handoffs/plan-vigil-self-improve.md",
       "critique_file": "",
       "build_file": "",
       "verify_file": "",
       "attempts": 0
     }
   },
-  "sessions_today": 56,
+  "sessions_today": 80,
   "last_reset_date": "2026-03-28"
 }

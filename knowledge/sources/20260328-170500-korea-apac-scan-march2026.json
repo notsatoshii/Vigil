@@ -1,0 +1,64 @@
+{
+  "id": "20260328-170500-korea-apac-crypto-scan",
+  "ingestedAt": "2026-03-28T17:05:00Z",
+  "sourceType": "Web scan (multiple sources)",
+  "reliability": "High (Korea Times, CoinDesk, Bloomberg, Tiger Research)",
+  "scanType": "Focused scan: Korea & APAC crypto market (Master's region, XMarket target)",
+
+  "summary": [
+    "Korea: $110B in crypto left Korea in 2025 due to strict trading rules. Second-phase crypto legislation (Digital Asset Basic Act) targeted for 2026 passage: covers stablecoins and tokenized securities. FSC gaining expanded enforcement powers over foreign operators serving Korean users. Stablecoin regulation requires 100% reserve backing.",
+    "Korea crypto ETFs: FSC intends to launch digital asset spot ETFs in 2026 as part of Economic Growth Strategy. Corporate crypto accounts being allowed. OTC market for tokenized assets expected. BCG estimates Korea's security token market could reach 367 trillion won ($250.8B) by 2030.",
+    "Korea exchange ownership caps: individuals max 20%, corporations max 34%. Major stakeholders at Upbit, Bithumb, Korbit must reduce holdings. Market maker legalization in progress to align with global standards.",
+    "Southeast Asia: Vietnam leads globally with 21% crypto ownership (3x global average). Thailand 18%, Philippines 13%. Region projected $10B crypto revenue in 2026. 45% stablecoin adoption increase expected. BNB Chain has strongest user base in this region (XMarket's target).",
+    "Bloomberg covered prediction market 'new challenger with Asia roots' (March 3, 2026). XMarket's APAC focus and creator model are positioned for a region with high crypto adoption but no dominant local prediction market (Opinion is BNB-native but not specifically APAC-branded)."
+  ],
+
+  "entities": [
+    {"name": "FSC (Financial Services Commission)", "type": "regulator", "role": "Korea's crypto regulator, expanding enforcement to foreign operators. Planning crypto ETFs."},
+    {"name": "Digital Asset Basic Act", "type": "legislation", "role": "Korea's second-phase crypto law covering stablecoins and tokenized securities, targeted 2026"},
+    {"name": "Upbit", "type": "exchange", "role": "Korea's largest exchange, facing ownership cap requirements"},
+    {"name": "Bithumb", "type": "exchange", "role": "Major Korean exchange, facing ownership cap requirements"},
+    {"name": "DPK (Democratic Party of Korea)", "type": "political", "role": "Ruling party pushing second-phase crypto legislation"},
+    {"name": "Vietnam", "type": "market", "role": "Global #1 crypto adoption (21% of population), key XMarket target"},
+    {"name": "Thailand", "type": "market", "role": "18% crypto ownership, favorable government stance"},
+    {"name": "Philippines", "type": "market", "role": "13% crypto ownership"}
+  ],
+
+  "relationships": [
+    {"from": "Korea Digital Asset Basic Act", "to": "XMarket", "relationship": "new stablecoin and tokenized securities rules may affect XMarket operations for Korean users"},
+    {"from": "Korea FSC", "to": "foreign crypto operators", "relationship": "expanding enforcement powers to demand reporting from foreign operators serving Korean users"},
+    {"from": "Vietnam crypto adoption", "to": "XMarket APAC strategy", "relationship": "21% adoption makes Vietnam a prime XMarket growth market"},
+    {"from": "BNB Chain", "to": "APAC user base", "relationship": "largest established user base in Korea, Vietnam, Southeast Asia"}
+  ],
+
+  "categories": ["strategic", "market", "legal"],
+
+  "keyMetrics": {
+    "koreaCryptoOutflow2025": "$110B",
+    "koreaETFTimeline": "2026 (FSC Economic Growth Strategy)",
+    "koreaTokenizedAssetMarket2030": "367 trillion won ($250.8B) (BCG estimate)",
+    "koreaOwnershipCapIndividual": "20%",
+    "koreaOwnershipCapCorporate": "34%",
+    "vietnamCryptoOwnership": "21% (global #1)",
+    "thailandCryptoOwnership": "18%",
+    "philippinesCryptoOwnership": "13%",
+    "seaCryptoRevenue2026": "$10B projected",
+    "stablecoinAdoptionIncreaseSEA": "45% expected"
+  },
+
+  "workstreamTags": {
+    "CEO": "Korea is opening up: crypto ETFs planned, corporate accounts coming, $250B tokenized asset market projected by 2030. But $110B left Korea in 2025 due to strict rules, and FSC is expanding enforcement to foreign operators. XMarket needs to monitor whether the Digital Asset Basic Act affects its ability to serve Korean users. For fundraising: Korea + APAC is the fastest-growing crypto region; XMarket is positioned as the native prediction market for this market.",
+    "ADVISOR": "Strategic tension: Korea is simultaneously opening (ETFs, corporate accounts) and tightening (ownership caps, foreign operator enforcement, 100% reserve stablecoin rules). XMarket should launch aggressively in Vietnam (21% adoption, less regulatory friction) while monitoring Korea's second-phase legislation. The LEVER + XMarket cross-chain story (Base for global leverage, BNB for APAC prediction markets) maps perfectly to regional adoption patterns.",
+    "BUILD": "Korea's Digital Asset Basic Act may require specific compliance features for serving Korean users. Monitor for KYC/AML requirements that could affect XMarket's user onboarding.",
+    "CEO": "Bloomberg covered an Asia-roots prediction market challenger (March 3, 2026). XMarket is getting media attention. This is a good sign for fundraising visibility."
+  },
+
+  "sources": [
+    {"title": "Korea Times: 2026 Crypto Expansion", "url": "https://www.koreatimes.co.kr/economy/cryptocurrency/20251225/why-2026-could-mark-cryptos-next-expansion-phase-in-korea", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "CoinDesk: $110B Left Korea", "url": "https://www.coindesk.com/business/2026/01/02/usd110-billion-in-crypto-left-south-korea-in-2025-owing-to-strict-trading-rules", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Tiger Research: Korea Crypto Regulatory Landscape 2026", "url": "https://reports.tiger-research.com/p/2026-korea-cryptocurrency-market-eng", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "KED Global: Korea Legalizing Market Makers", "url": "https://www.kedglobal.com/regulations/newsView/ked202603040007", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Bloomberg: Asia Prediction Market Challenger", "url": "https://www.bloomberg.com/news/articles/2026-03-03/prediction-market-boom-finds-a-new-challenger-with-asia-roots", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "AInvest: Korea 2026 Crypto Regulatory Shift", "url": "https://www.ainvest.com/news/south-korea-2026-crypto-regulatory-shift-strategic-opportunities-blockchain-cybersecurity-stablecoin-compliance-2512/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"}
+  ]
+}

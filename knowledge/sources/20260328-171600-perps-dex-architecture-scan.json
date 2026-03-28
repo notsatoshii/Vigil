@@ -1,0 +1,69 @@
+{
+  "id": "20260328-171600-perps-dex-architecture-scan",
+  "ingestedAt": "2026-03-28T17:16:00Z",
+  "sourceType": "Web scan (protocol docs, analytics, technical articles)",
+  "reliability": "High (DeFiLlama, protocol docs, technical analyses)",
+  "scanType": "Focused scan: Perps DEX architecture (closest technical analog to LEVER)",
+
+  "summary": [
+    "Hyperliquid: custom L1, $200B+ monthly volume, HLP vault at $380M TVL (6.93% APR). Active market-making vault (not passive). HLP generated 42% lifetime CAGR but dropped to 22% trailing 12-month. Sharpe ratio 5.2. Key risk: $4M HLP loss from trader exploiting liquidation mechanics.",
+    "GMX: Oracle-based pricing (no orderbook). GLP holders are direct counterparty to traders. No active hedging. More transparent and stable but less responsive. Original 'real yield' DeFi model.",
+    "Architecture is the moat, not features or tokenomics. Key lesson: execution speed, UI, and incentives only amplify what the core architecture allows. If the model mismanages liquidity, concentrates risk, or depends on perfect market conditions, no optimization fixes it.",
+    "On-chain perpetuals hit $1.5T+ monthly volume (Oct 2025), 18% of global derivatives market, up 52% YoY. Three architectural camps: orderbook (Hyperliquid, Lighter), AMM (GMX), and hybrid.",
+    "LEVER's LeverVault is closer to GMX's GLP than Hyperliquid's HLP: LP as counterparty, oracle-based pricing (PI), no active hedging by vault. But LEVER adds time-based risk compression and borrow fees that GMX lacks. LEVER's design is a hybrid informed by both."
+  ],
+
+  "entities": [
+    {"name": "Hyperliquid", "type": "protocol", "role": "Custom L1 perps DEX, $200B+ monthly volume, HLP vault $380M TVL"},
+    {"name": "HLP (Hyperliquidity Provider)", "type": "vault", "role": "Active market-making vault, 42% lifetime CAGR, $4M exploit loss incident"},
+    {"name": "GMX", "type": "protocol", "role": "AMM-based perps DEX, GLP counterparty model, oracle pricing"},
+    {"name": "GLP", "type": "vault", "role": "Passive LP-as-counterparty vault, direct PnL transfer between traders and LPs"},
+    {"name": "Lighter", "type": "protocol", "role": "Orderbook DEX with AMM-like mechanisms"},
+    {"name": "Aster", "type": "protocol", "role": "Intent-matching orderbook protocol"}
+  ],
+
+  "relationships": [
+    {"from": "LEVER LeverVault", "to": "GMX GLP", "relationship": "similar model: LP as counterparty, oracle pricing. LEVER adds time-based compression + borrow fees."},
+    {"from": "LEVER LeverVault", "to": "Hyperliquid HLP", "relationship": "different model: HLP is active market-making, LEVER is passive LP counterparty."},
+    {"from": "HLP exploit", "to": "LEVER risk model", "relationship": "lesson: liquidation mechanics can be gamed. LEVER's partial liquidation + insurance fund are defenses."}
+  ],
+
+  "categories": ["technical"],
+
+  "architecturalLessonsForLever": {
+    "fromHyperliquid": [
+      "Active vault strategies generate higher returns (42% CAGR) but introduce opacity and exploit risk ($4M loss).",
+      "LEVER's passive LP model is simpler and more transparent. This is a feature, not a limitation.",
+      "WebSocket-first data architecture enables sub-second execution. LEVER's oracle should use WebSocket.",
+      "Purpose-built execution environment matters. Base L2 gives LEVER low fees + Coinbase ecosystem."
+    ],
+    "fromGMX": [
+      "Oracle-based pricing (like LEVER's PI) avoids orderbook manipulation but creates oracle dependency risk.",
+      "LP-as-counterparty means LPs profit when traders lose and vice versa. LEVER's borrow fee 'ticking clock' tilts this in LP favor over time.",
+      "GLP's simplicity (deposit, earn real yield) drove massive adoption. LeverVault should be equally simple.",
+      "GMX proved 'real yield' narrative works for attracting LP capital. LEVER's 175-400% projected APY is the same narrative on steroids."
+    ],
+    "universalLessons": [
+      "Architecture > features > tokenomics. Get the core model right first.",
+      "Liquidation mechanics are the #1 exploit surface. LEVER's partial liquidation + insurance fund are correct.",
+      "LP returns must be real (from fees), not subsidized (from emissions). LEVER's deterministic fee split ensures this.",
+      "Risk transparency builds trust and retention. LEVER should publish real-time vault PnL, utilization, and risk metrics."
+    ]
+  },
+
+  "workstreamTags": {
+    "BUILD": "LEVER's LeverVault is closest to GMX's GLP model (passive LP counterparty, oracle pricing) but with LEVER-specific innovations (time-based compression, borrow fees, ERC-4626). This is the RIGHT architecture. Key lessons: (1) Liquidation mechanics are the #1 exploit surface, verify thoroughly. (2) Real-time vault metrics (PnL, utilization) should be exposed from day one. (3) WebSocket-first for oracle data.",
+    "CEO": "For investors familiar with DeFi: 'LEVER is the GMX for prediction markets.' GMX proved LP-as-counterparty with oracle pricing at scale ($200B+ perps market). LEVER applies the same proven model to the $21B prediction market sector, adding time-based risk compression and borrow fees that make LP returns more predictable.",
+    "ADVISOR": "On-chain perps hit $1.5T+ monthly, 18% of global derivatives. The model is proven. LEVER's innovation is applying it to prediction market outcomes instead of crypto spot prices. The architecture translates directly.",
+    "IMPROVE": "Hyperliquid's UI is the gold standard for perps. Study their position management, PnL display, and vault deposit UX for LeverVault design."
+  },
+
+  "sources": [
+    {"title": "CoinDesk: Hyperliquid Bear Market Playground", "url": "https://www.coindesk.com/business/2026/03/02/weekend-warriors-how-hyperliquid-became-retail-s-bear-market-playground", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "OnChain Times: Perp DEX Vaults Under the Hood", "url": "https://www.onchaintimes.com/perp-dex-vaults-a-look-under-the-hood/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "Medium: HLP $4M Meltdown Analysis", "url": "https://medium.com/@TypusFinance/hyperliquids-4m-lesson-inside-the-hlp-meltdown-f2223fbd3b42", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"},
+    {"title": "DataWallet: HLP vs GLP vs JLP", "url": "https://www.datawallet.com/crypto/hyperliquid-hlp-explained", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"},
+    {"title": "Antier: Perp DEX Models That Survive 2026", "url": "https://www.antiersolutions.com/blogs/top-5-perpetual-futures-dex-development-models-that-survive-2026/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"},
+    {"title": "QuillAudits: Perp DEX Architecture & Security", "url": "https://www.quillaudits.com/blog/dex/perp-dex-architecture-and-security", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"}
+  ]
+}

@@ -83,6 +83,18 @@ Polymarket made 2 acquisitions in 2 months:
 
 **LEVER oracle risk**: Dome's cross-platform API may become Polymarket-exclusive. Gamma API backup was broken (returning 0.0). LEVER must add Kalshi as secondary oracle and migrate to WebSocket before mainnet.
 
+### BNB Chain Prediction Market Landscape (XMarket Territory)
+| Platform | Backer | Volume | Model |
+|----------|--------|--------|-------|
+| **Opinion** | YZi Labs ($5M seed + $20M) | $653M/week peak (3rd globally) | Points system, mature |
+| **XMarket** | Master's project | Private Beta (Feb 27 2026) | Creator revenue share (50%), CLOB, APAC focus |
+| **predict.fun** | YZi Labs | Growing (acquired Probable) | Yield-generating prediction funds |
+| **PancakeSwap** | Native | Integrated | DEX-native prediction markets |
+
+**Consolidation alert**: predict.fun acquired Probable (PancakeSwap/YZi Labs incubated) in March 2026. YZi Labs is the kingmaker on BNB Chain, backing Opinion, predict.fun, and the original Probable incubation.
+
+**XMarket differentiator**: Only prediction market that pays creators revenue share (up to 50% of fees). Pre-sale investment model for market backers. This is a genuine innovation not seen in other platforms.
+
 **ANALYSIS**: Five billion-dollar companies entered prediction markets in the last 4 months. They bring massive existing user bases (FanDuel: 12M+, DraftKings: 20M+). The competitive landscape is no longer "Polymarket and a few others." It is now a sector with serious institutional money on both the crypto-native and TradFi sides. LEVER's leverage angle remains unique; nobody else offers leveraged exposure to prediction outcomes.
 
 ## Direct Competitors to LEVER (Leverage/Margin on Prediction Markets)

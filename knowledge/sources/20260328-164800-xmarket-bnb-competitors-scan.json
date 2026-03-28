@@ -1,0 +1,64 @@
+{
+  "id": "20260328-164800-xmarket-bnb-competitors-scan",
+  "ingestedAt": "2026-03-28T16:48:00Z",
+  "sourceType": "Web scan (official announcements, major outlets)",
+  "reliability": "High (GlobeNewsWire, The Defiant, CryptoTimes, Yahoo Finance)",
+  "scanType": "Focused scan: XMarket positioning & BNB Chain prediction market competitors",
+
+  "summary": [
+    "XMarket launched Private Beta on BNB Chain mainnet February 27, 2026. Creator-focused model: anyone can create markets and earn up to 50% of trading fees. CLOB model (not AMM). 100% revenue share-back during beta. APAC-focused (Korea, Vietnam, Southeast Asia). Running $20K USDT prize pool Beta Aura Sprint.",
+    "Opinion: $20M raise (previous round) + $5M seed from YZi Labs (CZ's fund). Third-largest prediction market by volume ($653M weekly at peak), trailing only Polymarket ($967M) and Kalshi ($902M). Major BNB Chain competitor to XMarket.",
+    "Predict.fun acquired Probable (PancakeSwap/YZi Labs incubated) in March 2026. Consolidation happening on BNB Chain. Predict.fun offers yield-generating prediction funds.",
+    "PancakeSwap integrated prediction markets. BNB Chain has at least 4 prediction market platforms now: Opinion, XMarket, predict.fun (absorbed Probable), and PancakeSwap native predictions.",
+    "XMarket's differentiator is the creator model (market creators earn revenue) and pre-sale investment model for market backers. This is unique in the prediction market space."
+  ],
+
+  "entities": [
+    {"name": "XMarket", "type": "project", "role": "Master's project. Private Beta on BNB Chain mainnet since Feb 27 2026. Creator-focused prediction market. CLOB model."},
+    {"name": "Opinion", "type": "competitor", "role": "Top BNB Chain prediction market. $20M + $5M from YZi Labs. $653M weekly volume at peak. Third globally."},
+    {"name": "YZi Labs", "type": "investor", "role": "CZ's fund. Backing Opinion, predict.fun, Probable on BNB Chain."},
+    {"name": "predict.fun", "type": "competitor", "role": "BNB Chain prediction market, acquired Probable. Yield-generating prediction funds."},
+    {"name": "Probable", "type": "competitor", "role": "Acquired by predict.fun. Originally incubated by PancakeSwap and YZi Labs. Zero-fee, fully on-chain."},
+    {"name": "PancakeSwap", "type": "protocol", "role": "Integrated prediction markets natively. BNB Chain DEX leader."},
+    {"name": "Airaa Agent", "type": "tool", "role": "Referenced in XMarket beta launch tweet"},
+    {"name": "Hash Global", "type": "company", "role": "Contributing to BNB Chain ecosystem growth alongside XMarket"}
+  ],
+
+  "relationships": [
+    {"from": "XMarket", "to": "BNB Chain", "relationship": "deployed on mainnet (Private Beta since Feb 27 2026)"},
+    {"from": "Opinion", "to": "YZi Labs", "relationship": "funded by ($5M seed + part of $20M raise)"},
+    {"from": "predict.fun", "to": "Probable", "relationship": "acquired (March 2026)"},
+    {"from": "Probable", "to": "PancakeSwap", "relationship": "originally incubated by"},
+    {"from": "XMarket", "to": "Opinion", "relationship": "direct competitor on BNB Chain"},
+    {"from": "XMarket", "to": "LEVER Protocol", "relationship": "same team (Master's projects). XMarket = spot prediction. LEVER = leverage layer."},
+    {"from": "LEVER Protocol", "to": "XMarket", "relationship": "potential integration: LEVER could offer leveraged positions on XMarket markets"}
+  ],
+
+  "categories": ["strategic", "market"],
+
+  "keyMetrics": {
+    "xmarketBetaLaunch": "2026-02-27",
+    "xmarketCreatorRevShare": "up to 50% of trading fees",
+    "xmarketBetaPrizePool": "$20K USDT",
+    "opinionWeeklyVolume": "$653M (at peak)",
+    "opinionFunding": "$20M + $5M seed (YZi Labs)",
+    "opinionGlobalRank": "3rd by volume (after Polymarket $967M and Kalshi $902M)",
+    "bnbChainPredictionPlatforms": 4
+  },
+
+  "workstreamTags": {
+    "CEO": "XMarket is live on BNB Chain mainnet. Competition is fierce: Opinion (YZi Labs backed, $653M weekly volume, third globally) is the dominant player. XMarket's creator model (revenue sharing with market creators) is a genuine differentiator. The LEVER+XMarket synergy story (spot prediction on BNB + leveraged positions on Base) is a powerful investor narrative.",
+    "ADVISOR": "BNB Chain prediction market consolidation is happening: predict.fun acquired Probable. Opinion dominates with YZi Labs backing. XMarket needs to differentiate aggressively on the creator economy angle before consolidation narrows the field. The XMarket->LEVER pipeline (create markets on XMarket, trade leveraged positions on LEVER) should be the strategic vision.",
+    "BUILD": "XMarket uses CLOB model. Interesting potential: could LEVER's OracleAdapter reference XMarket CLOB data as an additional oracle source alongside Polymarket? This would create a closed-loop ecosystem.",
+    "IMPROVE": "XMarket's 100% revenue share-back during beta is a strong growth hack. Opinion's points system drove $653M weekly volume. Study both approaches for LEVER's launch strategy."
+  },
+
+  "sources": [
+    {"title": "GlobeNewsWire: XMarket Beta Launch", "url": "https://www.globenewswire.com/news-release/2026/02/27/3246399/0/en/Xmarket-Launches-Beta-on-BNB-Chain-Mainnet.html", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Bitcoin News: XMarket Launch", "url": "https://news.bitcoin.com/xmarket-launches-beta-on-bnb-chain-mainnet-the-first-prediction-market-that-pays-creators-and-early-believers/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "The Defiant: Opinion Raises $20M", "url": "https://thedefiant.io/news/defi/top-bnb-chain-prediction-market-opinion-raises-usd20-million", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Yahoo Finance: PancakeSwap Prediction Markets / YZi Labs", "url": "https://finance.yahoo.com/news/yzi-labs-chases-prediction-market-123715767.html", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "CryptoTimes: Predict.fun Acquires Probable", "url": "https://www.cryptotimes.io/2026/03/04/predict-fun-acquires-probable-to-strengthen-bnb-chain-prediction-markets/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "AInvest: BNB 20K TPS + XMarket", "url": "https://www.ainvest.com/news/bnb-eyes-20-000-tps-xmarket-hash-global-bolster-ecosystem-growth-2603/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"}
+  ]
+}

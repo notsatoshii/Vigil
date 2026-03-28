@@ -43,6 +43,63 @@ Monthly prediction market volume surged from $1.2B (mid-2025) to $21B+ (early 20
 
 ---
 
+## CONTRARIAN VIEW: The Bear Case (Scan: 2026-03-28)
+
+### 1. Wash Trading Undermines the Data Layer
+Columbia University: ~25% of Polymarket volume is wash trading. Some weeks >90% in specific markets. If LEVER's PI is derived from artificial volume, prices are built on sand.
+**Mitigation**: CLOB midpoint (not volume-weighted) is resistant. Dual oracle (Polymarket + Kalshi) + circuit breaker on divergence.
+
+### 2. Regulatory Destruction is Possible
+20+ federal lawsuits. Bipartisan bills to ban sports/election/war contracts. 39 state AGs. Criminal charges in Arizona. Current $22B/$20B valuations may not price this in.
+**Mitigation**: LEVER is infrastructure, not a market creator. Focus on crypto/macro (not sports/elections). But if underlying platforms are banned, LEVER's oracle sources disappear.
+
+### 3. Leverage Amplifies Insider Trading
+A $10K insider position at 50x = $500K exposure. Regulators will notice. Leveraged prediction products may face specific restrictions.
+**Mitigation**: Per-user OI cap (20%), position limits, on-chain transparency for forensics.
+
+### 4. Thin Markets + Leverage = Danger
+$21B monthly volume is concentrated in a few headline markets. Long-tail markets are illiquid. Leveraged positions on thin markets create manipulation opportunities.
+**Mitigation**: LEVER's OI limits, 5% impact cap, market-specific leverage ceilings. List only sufficiently liquid markets.
+
+### 5. Ethical Backlash Growing
+NPR, Bloomberg covering "problems with prediction markets." Betting on wars and disasters crossing ethical lines. D&O liability risk emerging.
+**Mitigation**: Position as "risk management infrastructure" not "betting amplifier."
+
+### 6. Consumer Harm Classification
+Fed NY: sports betting increased credit delinquency 0.3pp. If leveraged prediction products get classified as high-risk consumer harm, mandatory restrictions follow.
+**Mitigation**: Built-in position limits, margin requirements, time-based compression are responsible design features.
+
+---
+
+## Korea & APAC Market (Scan: 2026-03-28)
+
+### Korea: Opening + Tightening Simultaneously
+- **$110B in crypto left Korea** in 2025 due to strict trading rules
+- **Digital Asset Basic Act** (second-phase): covers stablecoins and tokenized securities, targeted 2026 passage. 100% reserve-backed stablecoins required.
+- **Crypto ETFs**: FSC plans to launch spot digital asset ETFs in 2026 (Economic Growth Strategy)
+- **Corporate accounts**: being allowed for the first time
+- **Tokenized assets**: BCG estimates Korea's market could reach 367T won ($250.8B) by 2030
+- **Enforcement expanding**: FSC gaining power to demand reporting from foreign operators serving Korean users
+- **Exchange ownership caps**: individuals 20%, corporations 34%. Upbit, Bithumb, Korbit stakeholders must reduce.
+
+### Southeast Asia: Highest Crypto Adoption Globally
+| Country | Crypto Ownership | Notes |
+|---------|-----------------|-------|
+| Vietnam | 21% (global #1) | 3x global average. Prime XMarket target. |
+| Thailand | 18% | Favorable government stance |
+| Philippines | 13% | Strong remittance use case |
+- Region projected $10B crypto revenue in 2026
+- 45% stablecoin adoption increase expected
+- BNB Chain has strongest user base in this region
+
+### XMarket APAC Positioning
+- XMarket targets Korea, Vietnam, Southeast Asia specifically
+- Bloomberg covered "prediction market challenger with Asia roots" (March 3 2026)
+- No dominant APAC-branded prediction market exists; XMarket's creator model fills the gap
+- Risk: Korea's Digital Asset Basic Act may impose requirements on foreign operators
+
+---
+
 ## Prediction Market Sector Overview (as of 2026-03-28)
 **Sources**: Prediction Index Annual Report 2025-2026; Web scans 2026-03-28
 

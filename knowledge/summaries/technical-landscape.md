@@ -59,6 +59,55 @@ Broad release with first-class plugins, multi-agent workflows, file watching, re
 - **Reentrancy**: LeverVault and ExecutionEngine flows must be guarded.
 - **AI exploit tooling**: 72% autonomous exploit rate means AI-assisted fuzzing is essential pre-mainnet.
 
+## Oracle Infrastructure: Secondary Source Assessment (Scan: 2026-03-28)
+
+### Kalshi API (RECOMMENDED secondary oracle)
+- **REST API**: `trading-api.kalshi.com/trade-api/v2`, JWT auth
+- **WebSocket**: Real-time streaming available
+- **FIX protocol**: Also supported
+- **Data**: Event metadata, market prices, orderbook, trades, multivariate combos
+- **Recent**: Fractional trading (March 9 2026), order group WebSocket updates
+- **Effort**: Low-Medium (similar integration pattern to Polymarket CLOB)
+
+### Kalshi on Solana (via DFlow)
+- Tokenized thousands of event contracts as SPL tokens (Dec 1, 2025)
+- DFlow API: no API key needed for dev, JIT routing, $2M+ builder grants
+- Available on Jupiter Exchange
+- **EVM support announced "on the way"**: if Kalshi launches on Base, on-chain price feeds become possible
+
+### Dual-Oracle Architecture for LEVER
+| Source | Type | Auth | Real-Time | Status |
+|--------|------|------|-----------|--------|
+| Polymarket CLOB | Primary | Ed25519 | WebSocket (10 instruments) | Integrated |
+| Kalshi API | Secondary | JWT | WebSocket available | **TO DO** |
+| Kalshi EVM (Base) | Future | On-chain | Native | Monitor (no timeline) |
+
+**Circuit breaker**: Cross-reference Polymarket and Kalshi prices. Trigger halt on >X% divergence between sources. This provides manipulation resistance (attacker must corrupt both platforms simultaneously).
+
+---
+
+## Base DeFi Ecosystem: LP Partners & Integration Targets (Scan: 2026-03-28)
+
+### Key Protocols on Base
+| Protocol | TVL | Role for LEVER |
+|----------|-----|----------------|
+| **Morpho** | $2B+ (1,906% growth via Coinbase) | #1 integration target: lvUSDT as collateral in Morpho V2 lending market |
+| **Aerodrome** (merging with Velodrome -> "Aero" Q2 2026) | Dominant Base DEX | lvUSDT/USDT pool for LP token liquidity |
+| **Aave** | $27B total (multi-chain) | Long-term: lvUSDT collateral listing |
+| **Limitless** | $500M+ volume | Largest prediction market on Base; potential oracle source |
+
+### Integration Roadmap
+1. **Launch**: LEVER on Base mainnet with LeverVault (ERC-4626)
+2. **Morpho V2**: Propose lvUSDT lending market (LPs borrow against their vault positions)
+3. **Aerodrome/Aero**: Create lvUSDT/USDT pool (secondary liquidity for LP exit)
+4. **Coinbase App**: Target Coinbase integration for LeverVault deposits (the Morpho playbook: 1,906% growth)
+
+### Institutional Signals
+- Apollo Global: agreement for up to 90M MORPHO tokens over 48 months
+- JPMorgan: $100M tokenized money market fund on Ethereum
+- DeFi vault sector projected to exceed $15B TVL in 2026
+- LEVER's ERC-4626 standard positions it perfectly for institutional adoption
+
 ---
 
 ## LEVER Protocol Architecture and Stack

@@ -1,0 +1,79 @@
+{
+  "id": "20260328-171900-bear-case-contrarian-scan",
+  "ingestedAt": "2026-03-28T17:19:00Z",
+  "sourceType": "Web scan (multiple sources including academic research)",
+  "reliability": "High (NPR, Bloomberg, Columbia University, CNBC, Fortune)",
+  "scanType": "Focused scan: Prediction market bear case, risks, and failure modes (CONTRARIAN)",
+
+  "summary": [
+    "25% of Polymarket's historical volume may be wash trading (Columbia University study). Some weeks >90% of trades in election/sports markets flagged as suspicious. Polymarket charges no fees and requires no KYC, making it vulnerable. This directly undermines LEVER's oracle if PI is derived from artificial volume.",
+    "20+ federal lawsuits filed against prediction market companies. Bipartisan congressional bills to ban sports/election/war contracts. 39 state AGs in coalition. Arizona filed criminal charges. The regulatory risk is NOT priced in at current $22B/$20B Kalshi/Polymarket valuations.",
+    "Insider trading scandals are escalating: Maduro ouster ($400K+), Iran strike ($1.2M across 6 wallets), political candidate self-trading. When leveraged, these become amplified: a $10K insider position at 50x on LEVER = $500K exposure from insider info. LEVER may face heightened scrutiny.",
+    "Ethical criticism gaining traction: betting on wars, disasters, and human suffering. NPR, Bloomberg, and fintech outlets covering 'the problems with prediction markets.' D&O liability risk emerging for platform directors and officers.",
+    "Liquidity remains thin outside headline events. The $21B monthly volume is concentrated in a few high-profile markets. Long-tail markets (the majority) remain illiquid. LEVER amplifying thin-market positions could create dangerous price impact.",
+    "Fed NY study: sports betting increased credit delinquency by 0.3 percentage points. If applied to prediction markets broadly, regulators may classify leveraged prediction market products as high-risk consumer harm."
+  ],
+
+  "entities": [
+    {"name": "Columbia University Study", "type": "research", "role": "Found ~25% Polymarket volume is wash trading, some weeks >90% in specific markets"},
+    {"name": "NPR", "type": "media", "role": "Published 'The Problems With Prediction Markets' (Feb 19 2026)"},
+    {"name": "Federal Reserve Bank of New York", "type": "institution", "role": "Study finding sports betting increases credit delinquency"},
+    {"name": "D&O Diary", "type": "publication", "role": "Flagging directors & officers liability risk for prediction market platforms"}
+  ],
+
+  "riskMatrix": {
+    "regulatory_destruction": {
+      "probability": "Low-Medium",
+      "impact": "Catastrophic",
+      "description": "If Prediction Markets Are Gambling Act passes, most US-facing markets banned. CFTC support may not survive congressional override.",
+      "leverMitigation": "LEVER is a derivative infrastructure layer, not a market creator. May survive even if underlying platforms face restrictions. Focus on crypto/macro markets (not sports/elections) for regulatory safety."
+    },
+    "wash_trading_oracle_corruption": {
+      "probability": "Medium",
+      "impact": "High",
+      "description": "25% of Polymarket volume may be fake. If PI is derived from wash-traded markets, LEVER prices are based on artificial data.",
+      "leverMitigation": "Dual oracle (Polymarket + Kalshi). Circuit breaker on divergence. CLOB midpoint is more resistant than volume-based metrics (wash trades at market price don't move midpoint). Kalshi as CFTC-regulated backup has surveillance."
+    },
+    "insider_trading_amplification": {
+      "probability": "Medium-High",
+      "impact": "High",
+      "description": "Leverage amplifies insider trading profits. A $10K insider position at 50x = $500K exposure. Regulators may target leveraged products specifically.",
+      "leverMitigation": "Position limits (per-user OI cap at 20% of market). Cannot prevent insider trading on underlying markets but can limit exposure size. Transparent on-chain positions enable after-the-fact forensics."
+    },
+    "thin_market_manipulation": {
+      "probability": "Medium",
+      "impact": "Medium",
+      "description": "Long-tail markets have thin liquidity. Leveraged positions on thin markets create dangerous price impact and manipulation opportunities.",
+      "leverMitigation": "LEVER's OI limits, linear impact model (capped at 5%), and market-specific leverage ceilings (M_market adjustment) are designed for this. Only markets with sufficient liquidity should be listed."
+    },
+    "ethical_backlash": {
+      "probability": "Low",
+      "impact": "Medium",
+      "description": "Public sentiment turning against 'betting on wars and disasters.' Could affect fundraising narrative and platform reputation.",
+      "leverMitigation": "LEVER does not create markets. It provides financial infrastructure. Positioning as 'risk management and hedging tool' rather than 'betting amplifier' is key."
+    },
+    "consumer_harm_classification": {
+      "probability": "Low-Medium",
+      "impact": "High",
+      "description": "If regulators classify leveraged prediction products as high-risk consumer harm (like leveraged crypto), mandatory warnings, position limits, or bans could follow.",
+      "leverMitigation": "LEVER already has built-in position limits, margin requirements, and time-based leverage compression. These are responsible design choices that preempt regulatory concerns."
+    }
+  },
+
+  "workstreamTags": {
+    "CEO": "CRITICAL for investor prep. Investors WILL ask about: (1) wash trading (answer: dual oracle, CLOB midpoint resistant, Kalshi regulated backup), (2) regulatory risk (answer: infra layer not market creator, avoid sports/elections, crypto/macro focus), (3) insider trading amplification (answer: per-user position limits, on-chain transparency), (4) ethical concerns (answer: risk management infrastructure, not a betting platform). Have answers ready.",
+    "ADVISOR": "The bear case is real but manageable. Biggest risk: regulatory destruction if congressional bills pass. Biggest mitigation: LEVER is infrastructure, not a market. Position accordingly. Second biggest risk: oracle corruption from wash trading. Mitigation: dual oracle + circuit breaker.",
+    "BUILD": "Wash trading risk means CLOB midpoint is a better oracle metric than volume-weighted prices. Verify OracleAdapter uses midpoint (it does). Also: consider adding minimum liquidity thresholds for market listing on LEVER.",
+    "SECURE": "Insider trading amplification at 50x leverage is the #1 regulatory attack surface. Per-user OI limits (20%) and position-level caps help but may need additional safeguards like unusual-activity detection."
+  },
+
+  "sources": [
+    {"title": "NPR: The Problems With Prediction Markets", "url": "https://www.npr.org/2026/02/19/nx-s1-5719312/the-problems-with-prediction-markets", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Bloomberg: Wall Street Sees Obstacles", "url": "https://www.bloomberg.com/news/articles/2026-01-29/wall-street-pros-see-potential-obstacles-in-prediction-markets", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "CoinDesk: Polymarket 25% Wash Trading (Columbia Study)", "url": "https://www.coindesk.com/markets/2025/11/07/polymarket-s-trading-volume-may-be-25-fake-columbia-study-finds", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Fortune: Polymarket Wash Trading", "url": "https://fortune.com/2025/11/07/polymarket-wash-trading-inflated-prediction-markets-columbia-research/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "D&O Diary: Prediction Market D&O Risk", "url": "https://www.dandodiary.com/2026/03/articles/uncategorized/prediction-markets-and-emerging-do-risk/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "TheoryVC: The Problem With Prediction Markets", "url": "https://theoryvc.com/blog-posts/the-problem-with-prediction-markets-spencer-farrar", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"},
+    {"title": "FinTech Global: US Prediction Markets Risks", "url": "https://fintech.global/2026/02/25/us-prediction-markets-risks-and-regulation-ahead/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"}
+  ]
+}

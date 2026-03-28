@@ -1,0 +1,77 @@
+{
+  "id": "20260328-171400-kalshi-oracle-infrastructure-scan",
+  "ingestedAt": "2026-03-28T17:14:00Z",
+  "sourceType": "Web scan (official docs, Solana, QuickNode, DFlow)",
+  "reliability": "High (official platform docs and announcements)",
+  "scanType": "Focused scan: Kalshi as secondary oracle source for LEVER",
+
+  "summary": [
+    "Kalshi REST API available at trading-api.kalshi.com/trade-api/v2. JWT authentication. WebSocket feeds for real-time streaming. FIX protocol also available. Recent additions: fractional trading (March 9 2026), multivariate event combos, order group WebSocket updates.",
+    "DFlow Prediction Markets API: bridge between Kalshi and Solana. Tokenizes Kalshi positions as SPL tokens. No API key needed for development endpoints. JIT routing for best execution. Real tokens (not synthetic). $2M+ in builder grants available.",
+    "Kalshi tokenized thousands of event contracts on Solana via DFlow (launched Dec 1, 2025). Available on Jupiter Exchange. Positions are SPL tokens that can be traded, borrowed, lent, or used as collateral in DeFi.",
+    "EVM chain support announced as 'on the way.' If Kalshi positions become available as ERC-20 tokens on Base, LEVER could directly reference on-chain Kalshi prices as a secondary oracle, no cross-chain bridge needed.",
+    "Kalshi API has GetEvent endpoint returning mutual exclusivity, series metadata, and market data for building forecasts. This is the data LEVER's OracleAdapter would need for a secondary price feed."
+  ],
+
+  "entities": [
+    {"name": "Kalshi API v2", "type": "api", "role": "REST + WebSocket + FIX. JWT auth. Real-time event contract data. Base URL: trading-api.kalshi.com/trade-api/v2"},
+    {"name": "DFlow", "type": "protocol", "role": "Tokenizes Kalshi positions on Solana via Concurrent Liquidity Programs (CLPs). No API key for dev."},
+    {"name": "DFlow Prediction Markets API", "type": "api", "role": "Solana-native access to Kalshi liquidity. SPL token minting. Builder grants available."},
+    {"name": "Jupiter Exchange", "type": "protocol", "role": "Solana DEX where Kalshi tokenized positions trade"},
+    {"name": "Axiom Exchange", "type": "protocol", "role": "Coming soon for Kalshi tokenized positions on Solana"}
+  ],
+
+  "relationships": [
+    {"from": "Kalshi API", "to": "LEVER OracleAdapter", "relationship": "viable secondary oracle source (REST + WebSocket)"},
+    {"from": "DFlow", "to": "Kalshi", "relationship": "tokenization layer, bridges Kalshi to Solana"},
+    {"from": "Kalshi EVM support", "to": "Base chain", "relationship": "announced 'on the way'; would enable native on-chain Kalshi data on Base"},
+    {"from": "Kalshi tokenized positions", "to": "DeFi composability", "relationship": "positions as SPL tokens can be traded, borrowed, lent as collateral"}
+  ],
+
+  "categories": ["technical"],
+
+  "oracleIntegrationAssessment": {
+    "option1_kalshi_rest_api": {
+      "description": "Add Kalshi REST API as secondary price feed in OracleAdapter",
+      "endpoint": "trading-api.kalshi.com/trade-api/v2",
+      "auth": "JWT",
+      "dataAvailable": "Event metadata, market prices, orderbook, trades",
+      "realTime": "WebSocket available for streaming",
+      "effort": "Low-Medium. Similar integration pattern to Polymarket CLOB API.",
+      "pros": "CFTC-regulated data source, high reliability, different platform than primary (true diversification)",
+      "cons": "Kalshi markets may not perfectly overlap with Polymarket markets. Price discrepancies between platforms need smoothing.",
+      "recommendation": "BEST OPTION for secondary oracle. Start with REST, migrate to WebSocket."
+    },
+    "option2_dflow_solana": {
+      "description": "Read Kalshi prices from on-chain Solana SPL token positions via DFlow",
+      "auth": "No API key needed for dev endpoints",
+      "effort": "Medium-High. Cross-chain (Solana -> Base) requires bridge or off-chain relay.",
+      "pros": "On-chain verifiable prices, DeFi composable",
+      "cons": "Cross-chain complexity, Solana-to-Base bridge adds latency and risk",
+      "recommendation": "Not ideal for oracle. Better for future position composability."
+    },
+    "option3_wait_for_evm": {
+      "description": "Wait for Kalshi EVM support (announced 'on the way')",
+      "effort": "Zero until available, then Low",
+      "pros": "Native on-chain Kalshi data on Base without cross-chain bridge",
+      "cons": "No timeline announced. Cannot depend on for mainnet launch.",
+      "recommendation": "Monitor. If available before mainnet, integrate. Do not wait for it."
+    }
+  },
+
+  "workstreamTags": {
+    "BUILD": "ACTIONABLE: Kalshi REST API (trading-api.kalshi.com/trade-api/v2) is the best secondary oracle option. JWT auth, WebSocket available, CFTC-regulated data. Integration pattern is similar to Polymarket CLOB. Start with REST for price feeds, add WebSocket for real-time. Also: monitor Kalshi's EVM support announcement. If they launch on Base, on-chain price feeds become possible without cross-chain bridges. DFlow offers $2M+ in builder grants for Solana integration (less relevant for Base, but worth noting).",
+    "ADVISOR": "Dual-oracle (Polymarket + Kalshi) story is strong for investors: two independent, regulated price sources. If Polymarket API has an outage, Kalshi provides failover. This addresses the single-oracle dependency risk flagged in earlier scans.",
+    "CEO": "For investors: 'LEVER uses a dual-oracle system referencing both Polymarket and Kalshi, the two largest prediction market platforms, for price reliability and manipulation resistance.' This is a better answer than 'we use Polymarket.'",
+    "SECURE": "Dual oracle reduces manipulation risk: an attacker would need to manipulate both Polymarket AND Kalshi simultaneously. Cross-reference between sources can trigger circuit breaker on divergence."
+  },
+
+  "sources": [
+    {"title": "Solana: DFlow Prediction Markets API", "url": "https://solana.com/news/dflow-prediction-markets-api", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Kalshi Blog: Tokenized Predictions on Solana", "url": "https://news.kalshi.com/p/kalshi-solana-tokenized-predictions", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "The Block: Kalshi Tokenizes Thousands of Markets", "url": "https://www.theblock.co/post/380983/kalshi-tokenizes-thousands-of-its-prediction-markets-using-solana", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "DFlow Blog: Prediction Markets API", "url": "https://dflow.net/blog/prediction-markets-api", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "QuickNode: Kalshi on Solana via DFlow Guide", "url": "https://www.quicknode.com/guides/solana-development/3rd-party-integrations/kalshi-prediction-markets-with-dflow", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Kalshi API Docs", "url": "https://docs.kalshi.com/changelog", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"}
+  ]
+}

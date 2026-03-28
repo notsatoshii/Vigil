@@ -2,13 +2,20 @@
   "name": "XMarket",
   "type": "protocol",
   "facts": [
-    "Prediction market protocol on BNB Chain",
-    "Currently live in production",
-    "Part of the competitive landscape for prediction market infrastructure"
+    "Private Beta launched on BNB Chain mainnet February 27, 2026",
+    "Creator-focused prediction market: anyone can create markets and earn up to 50% of trading fees",
+    "Pre-sale investment model for market backers (unique in space)",
+    "CLOB model (not AMM): tighter spreads, better pricing, no impermanent loss",
+    "100% revenue share-back during beta launch",
+    "APAC-focused: Korea, Vietnam, Southeast Asia (BNB Chain's strongest user base)",
+    "Running $20K USDT Beta Aura Sprint prize pool",
+    "Master's project alongside LEVER Protocol"
   ],
   "relationships": [
-    { "target": "bnb-chain", "relationship": "deployed on" },
-    { "target": "lever-protocol", "relationship": "related protocol in prediction market ecosystem" },
+    { "target": "bnb-chain", "relationship": "deployed on mainnet (Private Beta)" },
+    { "target": "lever-protocol", "relationship": "same team; XMarket = spot prediction, LEVER = leverage layer" },
+    { "target": "opinion", "relationship": "direct competitor on BNB Chain (Opinion has $653M weekly volume, YZi Labs backed)" },
+    { "target": "predict-fun", "relationship": "competitor on BNB Chain (acquired Probable)" },
     { "target": "polymarket", "relationship": "competitor in prediction market space" }
   ],
   "lastUpdated": "2026-03-28"
