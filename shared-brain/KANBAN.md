@@ -6,6 +6,19 @@
 ## BACKLOG
 *Tasks accepted but not yet planned.*
 
+- LEVER-AUDIT: Complete remaining 6 critical bugs from March 23 audit (PnL formula, ghost OI, vault drain, InsuranceFund decimals, FeeRouter calls, zero liquidations)
+- LEVER-AUDIT-HIGH: Fix 2 HIGH bugs (closing TX fee, vault NAV missing unrealized PnL)
+- LANDING-MOBILE: Fix mobile scroll and side-scroll issues on landing page
+- LANDING-DESIGN: Make landing page institutional and sophisticated (not tacky grids)
+- RESEARCH-WATCHLISTS: Create initial watchlist JSON files for all 5 categories
+- RESEARCH-TRENDS: Seed initial time-series data for competitor volumes and DeFi TVL
+- SECURE-CONTRACTS: Full security audit of all 16 contracts (rotate through one at a time)
+- IMPROVE-FULL-REVIEW: Complete browser-based product review of LEVER frontend
+- IMPROVE-LANDING-REVIEW: Browser-based review of landing page on mobile and desktop
+- CEO-INVESTOR-DECK: Update investor pitch deck with new Prediction Index data ($100B volume, $8B Polymarket valuation)
+- OPERATE-CLEANUP: Clean up dead services (lever-dispatcher, lever-worker), stale tmux sessions
+- KNOWLEDGE-GAPS: Identify gaps in knowledge graph and assign RESEARCH to fill them
+
 ---
 
 ## PLANNED
