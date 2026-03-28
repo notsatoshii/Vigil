@@ -32,9 +32,26 @@ AUTHORIZED_USER_ID = 422985839
 INBOX_DIR = "/home/lever/command/inbox/incoming"
 STATE_FILE = "/home/lever/command/inbox/telegram-gateway-state.json"
 LOG_FILE = "/home/lever/command/inbox/telegram-gateway.log"
-API_BASE = f"https://api.telegram.org/bot{BOT_TOKEN}"
 OPENCLAW_BIN = "openclaw"
 MAX_TG_LENGTH = 4000
+
+# Use local Bot API server if available (removes 20MB file limit)
+LOCAL_API = "http://localhost:8081"
+REMOTE_API = "https://api.telegram.org"
+
+def get_api_base():
+    """Check if local Bot API server is running, fall back to remote."""
+    try:
+        req = urllib.request.Request(f"{LOCAL_API}/bot{BOT_TOKEN}/getMe")
+        with urllib.request.urlopen(req, timeout=2) as resp:
+            result = json.loads(resp.read().decode())
+            if result.get("ok"):
+                return f"{LOCAL_API}/bot{BOT_TOKEN}"
+    except Exception:
+        pass
+    return f"{REMOTE_API}/bot{BOT_TOKEN}"
+
+API_BASE = None  # Set on startup
 
 # Logging
 logging.basicConfig(
@@ -73,6 +90,11 @@ def save_state(state):
 
 def tg_api(method, params=None, data=None):
     """Call the Telegram Bot API."""
+    global API_BASE
+    if API_BASE is None:
+        API_BASE = get_api_base()
+        is_local = LOCAL_API in API_BASE
+        log.info(f"Using {'LOCAL' if is_local else 'REMOTE'} Bot API: {API_BASE[:50]}...")
     url = f"{API_BASE}/{method}"
     if params:
         url += "?" + "&".join(f"{k}={v}" for k, v in params.items())
@@ -124,14 +146,15 @@ def send_typing(chat_id):
 
 
 def download_tg_file(file_id, filename):
-    """Download a file from Telegram and save to inbox."""
+    """Download a file from Telegram and save to inbox.
+    In local mode, getFile returns an absolute path (no HTTP download needed).
+    In remote mode, downloads via HTTP (20MB limit applies)."""
     result = tg_api("getFile", {"file_id": file_id})
     if not result or not result.get("ok"):
         log.error(f"Could not get file path for {file_id}")
         return None
 
     file_path = result["result"]["file_path"]
-    download_url = f"https://api.telegram.org/file/bot{BOT_TOKEN}/{file_path}"
 
     safe_filename = "".join(c for c in filename if c.isalnum() or c in ".-_ ").strip()
     if not safe_filename:
@@ -139,6 +162,23 @@ def download_tg_file(file_id, filename):
 
     timestamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
     dest_path = os.path.join(INBOX_DIR, f"{timestamp}-{safe_filename}")
+
+    # Local mode: file_path is an absolute local path
+    if file_path.startswith("/"):
+        try:
+            import shutil
+            shutil.copy2(file_path, dest_path)
+            log.info(f"Copied (local): {safe_filename} -> {dest_path}")
+            return dest_path
+        except Exception as e:
+            log.error(f"Local copy failed: {safe_filename} - {e}")
+            return None
+
+    # Remote mode: download via HTTP
+    if LOCAL_API in (API_BASE or ""):
+        download_url = f"{LOCAL_API}/file/bot{BOT_TOKEN}/{file_path}"
+    else:
+        download_url = f"{REMOTE_API}/file/bot{BOT_TOKEN}/{file_path}"
 
     try:
         urllib.request.urlretrieve(download_url, dest_path)
