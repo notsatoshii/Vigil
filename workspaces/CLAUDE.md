@@ -119,3 +119,19 @@ All workstreams have access to these reference materials:
 - **Shared brain**: /home/lever/command/shared-brain/ (institutional memory)
 
 When routing tasks, mention relevant reference docs so the workstream knows where to look.
+
+## SESSION HANDOFFS
+
+Every workstream session MUST write a handoff when it finishes. Save to:
+/home/lever/command/handoffs/[workstream]-[timestamp].md
+
+Handoff format:
+- What was the task
+- What was done
+- What files were changed
+- What is left to do (if anything)
+- Any decisions made
+- Any issues found
+- Recommendations for next session
+
+This is non-negotiable. If a session ends without a handoff, context is lost.

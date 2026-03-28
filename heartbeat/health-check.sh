@@ -9,7 +9,7 @@ PROBLEMS=()
 TIMESTAMP=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 
 # Check active services
-ACTIVE_SERVICES=("lever-frontend" "lever-oracle" "lever-accrue-keeper")
+ACTIVE_SERVICES=("lever-frontend" "lever-oracle" "lever-accrue-keeper" "vigil-inbox")
 for svc in "${ACTIVE_SERVICES[@]}"; do
     if ! systemctl is-active --quiet "$svc" 2>/dev/null; then
         PROBLEMS+=("SERVICE_DOWN:$svc")

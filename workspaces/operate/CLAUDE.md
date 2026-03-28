@@ -63,19 +63,36 @@ Most health checks cost zero API tokens. Claude Code only activates when somethi
 
 ### What OPERATE Monitors
 
-- 5 active LEVER services: lever-frontend, lever-dashboard, lever-bot, lever-oracle, lever-accrue-keeper
-- OpenClaw Gateway process
+**Vigil Services:**
+- openclaw-gateway (port 18789, Telegram bot, agent orchestration)
+- vigil-dashboard (port 8080, static HTML dashboard)
+- vigil-dashboard-gen (systemd timer, regenerates dashboard every 60s)
+- vigil-inbox (file watcher for knowledge ingestion pipeline)
+
+**LEVER Services:**
+- lever-frontend (port 3000, React app, proxied via Caddy on port 80)
+- lever-oracle (oracle price keeper)
+- lever-accrue-keeper (borrow index accrual)
+
+**Infrastructure:**
+- caddy (port 80, reverse proxy)
+- anvil (port 8545, local EVM node)
+- Landing page process (port 3001, npx serve)
+
+**Monitoring targets:**
 - Claude Code session count (alert if stuck sessions detected)
-- Vigil system health (dashboard regeneration, inbox watcher)
 - Disk space, RAM usage, CPU load trends
+- Cron job health (backups, health checks, oracle prices)
 
 ### Active Services (keep alive)
 
+- openclaw-gateway (the brain, Telegram, agent spawning)
+- vigil-dashboard (port 8080)
+- vigil-inbox (knowledge ingestion)
 - lever-frontend (port 3000)
-- lever-bot (Telegram bot)
 - lever-oracle (oracle price keeper)
 - lever-accrue-keeper (borrow index accrual)
-- lever-dashboard (port 8080, will be replaced by Vigil dashboard)
+- caddy (port 80)
 
 ### What OPERATE Cannot Do
 
