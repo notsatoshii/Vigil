@@ -136,3 +136,17 @@ Someone made $400K+ on Maduro's ouster before it happened. Six wallets made $1.2
 - CFTC ANPR comment deadline (April 30) is worth monitoring; the final rules will shape what is legal infrastructure.
 
 Knowledge graph updated: full source entry saved, `regulatory-landscape.md` completely rewritten with the new reality.
+All clear. Here's the rundown:
+
+**Services**: All 8 active. No issues.
+
+**Resources**: Disk 18%, RAM 48%. Plenty of headroom.
+
+**Logs**:
+- Telegram gateway: clean. Tasks completing normally.
+- Inbox: all files processed (PDFs, images). Queue empty.
+- Health check: one false alarm at 12:00 caught openclaw-gateway mid-restart. Auto-restart script failed transiently ("bus not found") but service recovered on its own.
+
+**One thing fixed**: Cleared a stale `needs-escalation` file left over from the 12:00 false alarm. The subsequent health check at 13:09 already confirmed everything healthy, but the flag was never cleaned up.
+
+**One pattern to note**: The health check will false-alarm whenever openclaw-gateway restarts during active dev sessions. It's being restarted frequently today. Worth adding a double-check delay to the escalation script if this becomes noisy. No action needed from Master right now.
