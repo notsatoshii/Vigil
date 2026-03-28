@@ -130,19 +130,29 @@ def send_telegram(chat_id, text):
 
     for chunk in chunks:
         if chunk.strip():
-            tg_api("sendMessage", data={
+            # Try with Markdown first, fall back to plain text if it fails
+            result = tg_api("sendMessage", data={
                 "chat_id": chat_id,
                 "text": chunk,
                 "parse_mode": "Markdown"
             })
+            if not result or not result.get("ok"):
+                # Markdown parsing failed, send as plain text
+                tg_api("sendMessage", data={
+                    "chat_id": chat_id,
+                    "text": chunk
+                })
 
 
 def send_typing(chat_id):
     """Show typing indicator."""
-    tg_api("sendChatAction", data={
-        "chat_id": chat_id,
-        "action": "typing"
-    })
+    try:
+        tg_api("sendChatAction", params={
+            "chat_id": str(chat_id),
+            "action": "typing"
+        })
+    except Exception:
+        pass  # typing indicator is best-effort, never fail on it
 
 
 def download_tg_file(file_id, filename):
@@ -362,10 +372,17 @@ def process_message(message):
     if response:
         send_telegram(chat_id, response)
     else:
-        # Only send error if there was text to process (not just files)
-        if text.strip() and not downloaded_files:
+        # OpenClaw returned nothing. Retry once before telling Master.
+        log.warning("OpenClaw returned empty response. Retrying...")
+        send_typing(chat_id)
+        response = forward_to_openclaw(forward_text, chat_id)
+        if response:
+            send_telegram(chat_id, response)
+        else:
+            log.error("OpenClaw returned empty response on retry.")
             send_telegram(chat_id,
-                "Something went wrong processing that. Check the logs.")
+                "I hit an issue processing that. Diagnosing now and will retry automatically."
+                " If I do not follow up within 2 minutes, send the message again.")
 
 
 def main():
