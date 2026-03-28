@@ -6,6 +6,9 @@
 
 ## LEVER Protocol
 - **Status**: Testnet (Base Sepolia)
+- **Repo**: github.com/notsatoshii/Lever (public, BUSL-1.1 license)
+- **Local path**: /home/lever/Lever/ (migrated from /home/lever/lever-protocol/)
+- **Legacy repo**: github.com/notsatoshii/Timmy (deprecated, do not use for new work)
 - **Chain**: Base Sepolia (testnet), targeting Base (mainnet)
 - **Contracts**: 16 contracts + 3 libraries deployed. All core contracts verified and working.
 - **Recent**: Redeployed LeverVault, ExecutionEngine, SettlementEngine, LiquidationEngine on March 20, 2026 to fix constructor arg and vault pointer issues.
