@@ -1,0 +1,74 @@
+{
+  "id": "20260328-154200-funding-focused-scan",
+  "ingestedAt": "2026-03-28T15:42:00Z",
+  "sourceType": "Web scan (multiple sources)",
+  "reliability": "High (Bloomberg, Fortune, CoinDesk, The Block)",
+  "scanType": "Focused scan: Funding Rounds & Investors watchlist",
+
+  "summary": [
+    "Kalshi raised $1B at $22B valuation led by Coatue Management (March 19, 2026). Doubled from $11B in December. Estimated ~$1.5B annualized revenue. Valued at 14-15x revenue.",
+    "Polymarket exploring raise at ~$20B valuation (up from $8B ICE-led round). Kalshi now modestly ahead on paper.",
+    "5c(c) Capital: first VC fund dedicated to prediction market startups. Raising $35M to back ~20 early-stage companies over 2 years. Focus: infra, data tools, liquidity, compliance (NOT exchanges). Backed by Kalshi CEO Tarek Mansour, Polymarket CEO Shayne Coplan, Marc Andreessen (via Moneta Luna), Micky Malka (Ribbit Capital), Kyle Samani (ex-Multicoin). First close within a month.",
+    "Mastercard acquired BVNK (stablecoin infra) for up to $1.8B. Stablecoins and payments are the strongest VC theme in 2026.",
+    "Notable DeFi derivatives projects attracting attention: Paradex (zero-fee ZK perps), Boros (funding rate derivatives), World Markets (unified margin DEX), Ostium (RWA perps)."
+  ],
+
+  "entities": [
+    {"name": "Kalshi", "type": "competitor", "role": "$22B valuation, $1B raise from Coatue, ~$1.5B annualized revenue"},
+    {"name": "Coatue Management", "type": "investor", "role": "Led Kalshi's $1B round at $22B valuation"},
+    {"name": "Polymarket", "type": "competitor", "role": "Exploring ~$20B valuation raise"},
+    {"name": "5c(c) Capital", "type": "investor", "role": "First prediction market VC fund. $35M target, ~20 investments, infra focus"},
+    {"name": "Adhi Rajaprabhakaran", "type": "person", "role": "5c(c) Capital partner, former Kalshi market maker trader"},
+    {"name": "Noah Zingler-Sternig", "type": "person", "role": "5c(c) Capital partner, former Kalshi head of operations"},
+    {"name": "Tarek Mansour", "type": "person", "role": "Kalshi CEO, backer of 5c(c) Capital"},
+    {"name": "Shayne Coplan", "type": "person", "role": "Polymarket CEO, backer of 5c(c) Capital"},
+    {"name": "Marc Andreessen", "type": "person", "role": "5c(c) Capital backer via Moneta Luna fund"},
+    {"name": "Micky Malka", "type": "person", "role": "Ribbit Capital founder, 5c(c) Capital backer"},
+    {"name": "Kyle Samani", "type": "person", "role": "Former Multicoin Capital managing partner, 5c(c) Capital backer"},
+    {"name": "Millennium Management", "type": "investor", "role": "Portfolio manager among 5c(c) Capital's 20+ early backers"},
+    {"name": "BVNK", "type": "company", "role": "Stablecoin infra, acquired by Mastercard for up to $1.8B"},
+    {"name": "Paradex", "type": "protocol", "role": "Zero-fee ZK perps, DeFi derivatives"},
+    {"name": "Boros", "type": "protocol", "role": "Funding rate derivatives"},
+    {"name": "World Markets", "type": "protocol", "role": "Unified margin DEX"},
+    {"name": "Ostium", "type": "protocol", "role": "RWA perpetuals"}
+  ],
+
+  "relationships": [
+    {"from": "Coatue Management", "to": "Kalshi", "relationship": "led $1B round at $22B valuation"},
+    {"from": "5c(c) Capital", "to": "prediction market ecosystem", "relationship": "first dedicated VC fund, investing in infra/data/liquidity/compliance"},
+    {"from": "Tarek Mansour", "to": "5c(c) Capital", "relationship": "backer (Kalshi CEO backing a fund that invests in prediction market infra)"},
+    {"from": "Shayne Coplan", "to": "5c(c) Capital", "relationship": "backer (Polymarket CEO backing same fund)"},
+    {"from": "Marc Andreessen", "to": "5c(c) Capital", "relationship": "backer via Moneta Luna"},
+    {"from": "Mastercard", "to": "BVNK", "relationship": "acquired for up to $1.8B"},
+    {"from": "LEVER Protocol", "to": "5c(c) Capital", "relationship": "LEVER is exactly the kind of prediction market infra startup this fund targets"}
+  ],
+
+  "categories": ["financial", "strategic"],
+
+  "keyMetrics": {
+    "kalshiValuation": "$22B (doubled from $11B in Dec)",
+    "kalshiRaiseAmount": "$1B",
+    "kalshiAnnualizedRevenue": "~$1.5B",
+    "kalshiRevenueMultiple": "14-15x",
+    "polymarketTargetValuation": "~$20B",
+    "fiveccCapitalTarget": "$35M",
+    "fiveccTargetInvestments": "~20 startups over 2 years",
+    "bvnkAcquisition": "up to $1.8B by Mastercard"
+  },
+
+  "workstreamTags": {
+    "CEO": "CRITICAL FUNDRAISING INTEL: (1) 5c(c) Capital is the FIRST dedicated prediction market VC fund, raising $35M, first close within a month. LEVER fits their thesis perfectly (prediction market infra, not an exchange). Backed by both Kalshi and Polymarket CEOs plus Andreessen and Ribbit. This is a warm target. (2) Kalshi at $22B and Polymarket at ~$20B set the comp range. LEVER as derivative infrastructure on top of these platforms can cite these as TAM anchors. (3) Coatue leading at 14-15x revenue multiple is the valuation benchmark.",
+    "ADVISOR": "The prediction market sector has crossed from 'emerging' to 'institutional' territory. $22B Kalshi + $20B Polymarket + $2B ICE investment + dedicated VC fund = this is now a recognized asset class. LEVER's fundraising window is open NOW.",
+    "BUILD": "Paradex (zero-fee ZK perps), Boros (funding rate derivatives), Ostium (RWA perps) are worth studying as DeFi derivatives architectural references.",
+    "SECURE": "Kalshi raising at $22B despite criminal charges in Arizona and regulatory pressure shows investor confidence in the sector, but also that regulatory risk is being priced as manageable, not existential."
+  },
+
+  "sources": [
+    {"title": "Bloomberg: Kalshi $22B Valuation", "url": "https://www.bloomberg.com/news/articles/2026-03-19/kalshi-gets-1-billion-in-new-funding-at-22-billion-valuation", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "The Block: Kalshi $1B Coatue Round", "url": "https://www.theblock.co/post/394498/kalshi-raises-over-1-billion-at-22-billion-valuation-in-ongoing-coatue-led-round-reports", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Fortune: 5c(c) Capital Fund", "url": "https://fortune.com/2026/03/23/kalshi-polymarket-5cc-capital-prediction-market-fund-raise/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "CoinDesk: 5c(c) Capital Launch", "url": "https://www.coindesk.com/markets/2026/03/23/prediction-market-boom-spurs-new-vc-fund-backed-by-polymarket-kalshi-ceos/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Fortune: Kalshi vs Polymarket Valuation", "url": "https://fortune.com/2026/03/20/kalshi-locks-in-22-billion-valuation-gaining-slight-edge-over-its-rival-polymarket/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Bloomberg: 5c(c) Capital", "url": "https://www.bloomberg.com/news/articles/2026-03-23/kalshi-polymarket-founders-back-new-prediction-market-vc-fund", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"}
+  ]
+}

@@ -1,13 +1,20 @@
 # Investor Research
 ## LEVER Protocol -- Key Narrative Points
 
-### Market Opportunity
+### Market Opportunity (UPDATED 2026-03-28)
 
-- **$13B monthly spot volume** across prediction markets (Polymarket, Kalshi, PredictIt)
-- **$65-130B addressable market** based on traditional derivatives-to-spot ratios (5-10x multiplier)
-- Prediction markets are the only liquid trading vertical with zero leverage infrastructure
+- **$21B+ monthly volume** across prediction markets (up from $1.2B in mid-2025; 17x growth in 8 months)
+- **$100B+ notional volume** in 2025; January 2026 set all-time high of $17.2B monthly
+- **Kalshi: $22B valuation** ($1B raise from Coatue, March 2026); **Polymarket: ~$20B valuation** (exploring raise)
+- **5c(c) Capital**: first dedicated prediction market VC fund ($35M), backed by both Kalshi and Polymarket CEOs, Marc Andreessen, Ribbit Capital, ex-Multicoin. Focus: prediction market infrastructure (NOT exchanges). LEVER fits this thesis perfectly. First close within weeks.
+- **268 projects tracked** globally (Prediction Index), but ZERO offer leveraged exposure. LEVER is the only leverage layer.
+- **$105-210B addressable market** based on derivatives-to-spot ratios (5-10x on $21B monthly)
 - Traditional derivatives offer 20-100x leverage across equities, commodities, currencies -- prediction markets have none
-- Fastest-growing DeFi segment with institutional adoption accelerating
+- DEX-to-CEX perps ratio tripled from 6.3% to 18.7%, validating on-chain derivatives demand
+- 5 billion-dollar TradFi companies entered prediction markets in last 4 months (FanDuel, DraftKings, Fanatics, Crypto.com, Plus500)
+- **Comp multiples**: Kalshi at 14-15x annualized revenue (~$1.5B)
+- **Sector tailwinds**: CFTC supportive, ICE invested $2B in Polymarket, 73% of institutional market structure specialists expect prediction data valuable within 2 years (Coalition Greenwich)
+- **Demand drivers**: Iran war (Day 28, $464.5M Polymarket geopolitics volume), 2026 midterm elections, geopolitical instability creating structural demand
 
 ### What LEVER Does
 
@@ -40,11 +47,19 @@ When the insurance fund exceeds 20% of TVL, the split shifts to 50/50/0 (LP and 
 
 ### Competitive Advantages
 
-**vs. Ultramarkets (direct competitor):**
-- Unified liquidity pool (single vault for all markets) vs. per-market fragmented pools
-- Oracle-based pricing (references Polymarket) vs. bootstrapping new orderbooks
-- Continuous time-based risk curves vs. static risk parameters
-- Deterministic, transparent fee structure
+**vs. Ultramarkets (direct competitor, up to 10x):**
+- 50x max leverage vs. Ultramarkets' 10x cap
+- Continuous time-based risk curves vs. binary pre-resolution auto-close
+- Unified ERC-4626 vault (institutional LP standard) vs. simpler LP model
+- Oracle-based pricing (references Polymarket) vs. unknown oracle approach
+- Deterministic, transparent 50/30/20 fee structure
+- Ultramarkets has no disclosed funding; LEVER can move faster with capital
+
+**vs. Limitless Exchange (adjacent, on Base, $10M seed from Coinbase Ventures/1confirmation):**
+- Limitless is binary options-style with zero-day expiry; NOT leveraged perpetuals
+- Largest prediction market on Base ($500M+ volume); potential integration target
+- Risk: if Limitless adds leverage, they become direct competitor with Coinbase backing
+- LEVER references external prices (Polymarket); Limitless creates its own markets
 
 **vs. Traditional prediction markets (Polymarket, Kalshi):**
 - 2-50x capital efficiency vs. 1x spot only

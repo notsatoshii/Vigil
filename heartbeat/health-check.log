@@ -10,3 +10,6 @@ Failed to connect to bus: No medium found
 Failed to connect to bus: No medium found
 [2026-03-28T12:00:01Z] FAILED: Could not restart openclaw-gateway after 2 attempts.
 [2026-03-28T12:00:01Z] Escalation needed. OPERATE session should be spawned.
+[2026-03-28T16:00:01Z] Running health check...
+[2026-03-28T16:00:01Z] Health check: healthy (0 problems)
+[2026-03-28T16:00:01Z] All clear.

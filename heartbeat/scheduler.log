@@ -787,3 +787,440 @@
 2026-03-28 15:44:31,968 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
 2026-03-28 15:44:42,010 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
 2026-03-28 15:44:52,053 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:45:02,124 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:45:12,164 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:45:22,205 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:45:32,245 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:45:42,286 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:45:52,327 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:46:02,369 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:46:12,413 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:46:22,474 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:46:32,521 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:46:42,561 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:46:52,600 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:47:02,642 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:47:12,686 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:47:22,725 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:47:32,776 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:47:42,826 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:47:52,873 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 22 today
+2026-03-28 15:48:02,897 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 15:48:02,940 [INFO] DISPATCH [operate] task=support-operate (session #23 today)
+2026-03-28 15:48:02,971 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 23 today
+2026-03-28 15:48:12,972 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-28 15:48:13,021 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 23 today
+2026-03-28 15:48:23,072 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 23 today
+2026-03-28 15:48:33,117 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 23 today
+2026-03-28 15:48:43,160 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 23 today
+2026-03-28 15:48:53,248 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 23 today
+2026-03-28 15:49:03,293 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 23 today
+2026-03-28 15:49:13,315 [INFO] DISPATCH [critique] task=lever-bug-1 (session #24 today)
+2026-03-28 15:49:13,318 [INFO] Support check: remaining=0, dispatched=1
+2026-03-28 15:49:13,343 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 24 today
+2026-03-28 15:49:23,344 [INFO] VERIFY found DESIGN FLAW in lever-bug-2. Sending back to PLAN.
+2026-03-28 15:49:23,383 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 24 today
+2026-03-28 15:49:33,425 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 24 today
+2026-03-28 15:49:43,472 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 24 today
+2026-03-28 15:49:53,514 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 24 today
+2026-03-28 15:50:03,559 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 24 today
+2026-03-28 15:50:13,604 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 24 today
+2026-03-28 15:50:23,645 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 24 today
+2026-03-28 15:50:33,698 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 24 today
+2026-03-28 15:50:43,746 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 24 today
+2026-03-28 15:50:53,790 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 24 today
+2026-03-28 15:51:03,830 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 24 today
+2026-03-28 15:51:13,870 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 24 today
+2026-03-28 15:51:23,893 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 15:51:23,972 [INFO] DISPATCH [research] task=support-research (session #25 today)
+2026-03-28 15:51:24,002 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 25 today
+2026-03-28 15:51:34,044 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:51:44,089 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:51:54,129 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:52:04,176 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:52:14,220 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:52:24,265 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:52:34,308 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:52:44,351 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:52:54,404 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:53:04,450 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:53:14,495 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:53:24,551 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:53:34,589 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:53:44,629 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:53:54,681 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:54:04,722 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:54:14,764 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:54:24,808 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:54:34,854 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:54:44,896 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:54:54,939 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:55:04,984 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:55:15,029 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:55:25,074 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:55:35,117 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:55:45,170 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:55:55,209 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:56:05,268 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:56:15,311 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:56:25,363 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:56:35,407 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:56:45,450 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:56:55,490 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:57:05,544 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:57:15,585 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:57:25,633 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:57:35,673 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:57:45,723 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:57:55,767 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:58:05,806 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:58:15,857 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:58:25,900 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:58:35,942 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:58:45,986 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:58:56,028 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:59:06,111 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:59:16,152 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:59:26,199 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 25 today
+2026-03-28 15:59:36,224 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 15:59:36,298 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 25 today
+2026-03-28 15:59:46,301 [INFO] PLAN complete for lever-bug-6. Moving to critique.
+2026-03-28 15:59:46,323 [INFO] DISPATCH [plan] task=lever-bug-7 (session #26 today)
+2026-03-28 15:59:46,323 [INFO] Support check: remaining=0, dispatched=1
+2026-03-28 15:59:46,347 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 26 today
+2026-03-28 15:59:56,393 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 26 today
+2026-03-28 16:00:06,457 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 26 today
+2026-03-28 16:00:16,480 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:00:16,501 [INFO] DISPATCH [improve] task=support-improve (session #27 today)
+2026-03-28 16:00:16,523 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 27 today
+2026-03-28 16:00:26,573 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:00:36,627 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:00:46,674 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:00:56,718 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:01:06,762 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:01:16,804 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:01:26,849 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:01:36,895 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:01:46,939 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:01:56,980 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:02:07,031 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:02:17,073 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:02:27,116 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:02:37,159 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:02:47,204 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:02:57,252 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:03:07,300 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:03:17,360 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:03:27,406 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:03:37,448 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:03:47,490 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:03:57,533 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:04:07,589 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:04:17,646 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:04:27,690 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:04:37,732 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:04:47,782 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:04:57,824 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:05:07,873 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:05:17,917 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:05:27,965 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:05:38,010 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 27 today
+2026-03-28 16:05:48,035 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:05:48,079 [INFO] DISPATCH [operate] task=support-operate (session #28 today)
+2026-03-28 16:05:48,099 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 28 today
+2026-03-28 16:05:58,152 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 28 today
+2026-03-28 16:06:08,195 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 28 today
+2026-03-28 16:06:18,219 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:06:18,295 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 28 today
+2026-03-28 16:06:28,298 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-28 16:06:28,319 [INFO] DISPATCH [critique] task=lever-bug-1 (session #29 today)
+2026-03-28 16:06:28,320 [INFO] Support check: remaining=0, dispatched=1
+2026-03-28 16:06:28,340 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 29 today
+2026-03-28 16:06:38,383 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 29 today
+2026-03-28 16:06:48,427 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 29 today
+2026-03-28 16:06:58,471 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 29 today
+2026-03-28 16:07:08,512 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 29 today
+2026-03-28 16:07:18,554 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 29 today
+2026-03-28 16:07:28,597 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 29 today
+2026-03-28 16:07:38,645 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 29 today
+2026-03-28 16:07:48,687 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 29 today
+2026-03-28 16:07:58,730 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 29 today
+2026-03-28 16:08:08,781 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 29 today
+2026-03-28 16:08:18,801 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:08:18,857 [INFO] DISPATCH [research] task=support-research (session #30 today)
+2026-03-28 16:08:18,877 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 30 today
+2026-03-28 16:08:28,927 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:08:38,966 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:08:49,020 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:08:59,089 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:09:09,135 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:09:19,182 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:09:29,223 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:09:39,265 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:09:49,312 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:09:59,351 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:10:09,416 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:10:19,458 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:10:29,504 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:10:39,545 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:10:49,588 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:10:59,627 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:11:09,670 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:11:19,713 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:11:29,752 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:11:39,793 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:11:49,838 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:11:59,887 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:12:09,933 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:12:19,976 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:12:30,027 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:12:40,070 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:12:50,132 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:13:00,172 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:13:10,214 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:13:20,261 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:13:30,310 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:13:40,366 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 30 today
+2026-03-28 16:13:50,388 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:13:50,469 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 30 today
+2026-03-28 16:14:00,471 [INFO] PLAN complete for lever-bug-7. Moving to critique.
+2026-03-28 16:14:00,494 [INFO] DISPATCH [plan] task=lever-bug-8 (session #31 today)
+2026-03-28 16:14:00,496 [INFO] Support check: remaining=0, dispatched=1
+2026-03-28 16:14:00,521 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 31 today
+2026-03-28 16:14:10,567 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 31 today
+2026-03-28 16:14:20,589 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:14:20,613 [INFO] DISPATCH [improve] task=support-improve (session #32 today)
+2026-03-28 16:14:20,634 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 32 today
+2026-03-28 16:14:30,681 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 32 today
+2026-03-28 16:14:40,725 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 32 today
+2026-03-28 16:14:50,764 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 32 today
+2026-03-28 16:15:00,810 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 32 today
+2026-03-28 16:15:10,851 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 32 today
+2026-03-28 16:15:20,903 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 32 today
+2026-03-28 16:15:30,952 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 32 today
+2026-03-28 16:15:40,995 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 32 today
+2026-03-28 16:15:51,049 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 32 today
+2026-03-28 16:16:01,096 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 32 today
+2026-03-28 16:16:11,149 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 32 today
+2026-03-28 16:16:21,195 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 32 today
+2026-03-28 16:16:31,245 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 32 today
+2026-03-28 16:16:41,296 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 32 today
+2026-03-28 16:16:51,339 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 32 today
+2026-03-28 16:17:01,377 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:17:01,429 [INFO] DISPATCH [operate] task=support-operate (session #33 today)
+2026-03-28 16:17:01,471 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 33 today
+2026-03-28 16:17:11,511 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 33 today
+2026-03-28 16:17:21,535 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:17:21,612 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 33 today
+2026-03-28 16:17:31,616 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-28 16:17:31,638 [INFO] DISPATCH [critique] task=lever-bug-1 (session #34 today)
+2026-03-28 16:17:31,638 [INFO] Support check: remaining=0, dispatched=1
+2026-03-28 16:17:31,660 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 34 today
+2026-03-28 16:17:41,719 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 34 today
+2026-03-28 16:17:51,775 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 34 today
+2026-03-28 16:18:01,827 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 34 today
+2026-03-28 16:18:11,869 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 34 today
+2026-03-28 16:18:21,914 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 34 today
+2026-03-28 16:18:31,956 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 34 today
+2026-03-28 16:18:41,983 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:18:42,060 [INFO] DISPATCH [research] task=support-research (session #35 today)
+2026-03-28 16:18:42,096 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 35 today
+2026-03-28 16:18:52,146 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:19:02,206 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:19:12,247 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:19:22,294 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:19:32,342 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:19:42,386 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:19:52,428 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:20:02,472 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:20:12,517 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:20:22,635 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:20:32,677 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:20:42,721 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:20:52,763 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:21:02,808 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:21:12,854 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:21:22,903 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:21:32,944 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:21:42,989 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:21:53,032 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:22:03,078 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:22:13,136 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:22:23,177 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:22:33,221 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:22:43,266 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:22:53,313 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:23:03,369 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:23:13,416 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:23:23,465 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-28 16:23:33,486 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:23:33,564 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 35 today
+2026-03-28 16:23:43,565 [INFO] PLAN complete for lever-bug-8. Moving to critique.
+2026-03-28 16:23:43,588 [INFO] DISPATCH [plan] task=lever-bug-9 (session #36 today)
+2026-03-28 16:23:43,590 [INFO] Support check: remaining=0, dispatched=1
+2026-03-28 16:23:43,611 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 36 today
+2026-03-28 16:23:53,640 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:23:53,669 [INFO] DISPATCH [improve] task=support-improve (session #37 today)
+2026-03-28 16:23:53,705 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 37 today
+2026-03-28 16:24:03,750 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 37 today
+2026-03-28 16:24:13,777 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:24:13,823 [INFO] DISPATCH [operate] task=support-operate (session #38 today)
+2026-03-28 16:24:13,858 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 38 today
+2026-03-28 16:24:23,901 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 38 today
+2026-03-28 16:24:33,969 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:24:34,071 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 38 today
+2026-03-28 16:24:44,075 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-28 16:24:44,100 [INFO] DISPATCH [critique] task=lever-bug-1 (session #39 today)
+2026-03-28 16:24:44,104 [INFO] Support check: remaining=0, dispatched=1
+2026-03-28 16:24:44,142 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 39 today
+2026-03-28 16:24:54,185 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-28 16:25:04,230 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-28 16:25:14,279 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-28 16:25:24,322 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-28 16:25:34,369 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-28 16:25:44,412 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-28 16:25:54,435 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:25:54,499 [INFO] DISPATCH [research] task=support-research (session #40 today)
+2026-03-28 16:25:54,521 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 40 today
+2026-03-28 16:26:04,574 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:26:14,625 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:26:24,676 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:26:34,738 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:26:44,780 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:26:54,828 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:27:04,871 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:27:14,926 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:27:24,969 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:27:35,011 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:27:45,054 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:27:55,097 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:28:05,142 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:28:15,184 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:28:25,227 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:28:35,274 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:28:45,321 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:28:55,370 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:29:05,412 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:29:15,455 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:29:25,499 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:29:35,542 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:29:45,588 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:29:55,628 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:30:05,673 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:30:15,721 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:30:25,764 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:30:35,816 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:30:45,858 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:30:55,903 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-28 16:31:05,924 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:31:06,001 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 40 today
+2026-03-28 16:31:16,002 [INFO] PLAN complete for lever-bug-9. Moving to critique.
+2026-03-28 16:31:16,034 [INFO] DISPATCH [plan] task=landing-mobile (session #41 today)
+2026-03-28 16:31:16,035 [INFO] Support check: remaining=0, dispatched=1
+2026-03-28 16:31:16,069 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 41 today
+2026-03-28 16:31:26,126 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 41 today
+2026-03-28 16:31:36,150 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:31:36,169 [INFO] DISPATCH [improve] task=support-improve (session #42 today)
+2026-03-28 16:31:36,195 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 42 today
+2026-03-28 16:31:46,245 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-28 16:31:56,266 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:31:56,303 [INFO] DISPATCH [operate] task=support-operate (session #43 today)
+2026-03-28 16:31:56,326 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 43 today
+2026-03-28 16:32:06,358 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:32:06,434 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 43 today
+2026-03-28 16:32:16,437 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-28 16:32:16,473 [INFO] DISPATCH [critique] task=lever-bug-1 (session #44 today)
+2026-03-28 16:32:16,477 [INFO] Support check: remaining=0, dispatched=1
+2026-03-28 16:32:16,513 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 44 today
+2026-03-28 16:32:26,556 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 44 today
+2026-03-28 16:32:36,607 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 44 today
+2026-03-28 16:32:46,646 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 44 today
+2026-03-28 16:32:56,694 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 44 today
+2026-03-28 16:33:06,744 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 44 today
+2026-03-28 16:33:16,788 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 44 today
+2026-03-28 16:33:26,831 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 44 today
+2026-03-28 16:33:36,882 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 44 today
+2026-03-28 16:33:46,923 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 44 today
+2026-03-28 16:33:56,967 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 44 today
+2026-03-28 16:34:07,011 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 44 today
+2026-03-28 16:34:17,056 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 44 today
+2026-03-28 16:34:27,079 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:34:27,133 [INFO] DISPATCH [research] task=support-research (session #45 today)
+2026-03-28 16:34:27,155 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 45 today
+2026-03-28 16:34:37,205 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:34:47,245 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:34:57,290 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:35:07,335 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:35:17,376 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:35:27,416 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:35:37,460 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:35:47,511 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:35:57,591 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:36:07,632 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:36:17,676 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:36:27,723 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:36:37,768 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:36:47,809 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:36:57,855 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:37:07,919 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:37:17,965 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:37:28,014 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:37:38,061 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:37:48,104 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:37:58,149 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 45 today
+2026-03-28 16:38:08,171 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:38:08,250 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 45 today
+2026-03-28 16:38:18,254 [INFO] PLAN complete for landing-mobile. Moving to critique.
+2026-03-28 16:38:18,299 [INFO] DISPATCH [plan] task=landing-design (session #46 today)
+2026-03-28 16:38:18,308 [INFO] Support check: remaining=0, dispatched=1
+2026-03-28 16:38:18,394 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 46 today
+2026-03-28 16:38:28,453 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 46 today
+2026-03-28 16:38:38,480 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:38:38,503 [INFO] DISPATCH [improve] task=support-improve (session #47 today)
+2026-03-28 16:38:38,527 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 47 today
+2026-03-28 16:38:48,616 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 47 today
+2026-03-28 16:38:58,638 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:38:58,678 [INFO] DISPATCH [operate] task=support-operate (session #48 today)
+2026-03-28 16:38:58,702 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 48 today
+2026-03-28 16:39:08,728 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:39:08,815 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 48 today
+2026-03-28 16:39:18,818 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-28 16:39:18,839 [INFO] DISPATCH [critique] task=lever-bug-1 (session #49 today)
+2026-03-28 16:39:18,839 [INFO] Support check: remaining=0, dispatched=1
+2026-03-28 16:39:18,862 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 49 today
+2026-03-28 16:39:28,910 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 49 today
+2026-03-28 16:39:38,950 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 49 today
+2026-03-28 16:39:48,992 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 49 today
+2026-03-28 16:39:59,042 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 49 today
+2026-03-28 16:40:09,089 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 49 today
+2026-03-28 16:40:19,137 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 49 today
+2026-03-28 16:40:29,177 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 49 today
+2026-03-28 16:40:39,219 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 49 today
+2026-03-28 16:40:49,264 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 49 today
+2026-03-28 16:40:59,307 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 49 today
+2026-03-28 16:41:09,334 [INFO] Support check: remaining=1, dispatched=0
+2026-03-28 16:41:09,395 [INFO] DISPATCH [research] task=support-research (session #50 today)
+2026-03-28 16:41:09,415 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 50 today
+2026-03-28 16:41:19,465 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:41:29,511 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:41:39,568 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:41:49,615 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:41:59,658 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:42:09,710 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:42:19,751 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:42:29,805 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:42:39,852 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:42:49,901 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:42:59,943 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:43:09,985 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:43:20,029 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:43:30,071 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:43:40,113 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:43:50,159 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:44:00,204 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:44:10,250 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:44:20,326 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:44:30,375 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:44:40,413 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:44:50,455 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today
+2026-03-28 16:45:00,498 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 50 today

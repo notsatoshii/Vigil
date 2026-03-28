@@ -34,6 +34,33 @@ Broad release with first-class plugins, multi-agent workflows, file watching, re
 
 ---
 
+## DeFi Security Landscape (Scan: 2026-03-28)
+
+### Q1 2026: $137M Lost Across 15 Incidents
+| Protocol | Loss | Attack Vector |
+|----------|------|---------------|
+| Step Finance | $27.3M | TBD |
+| Truebit | $26.2M | TBD |
+| Resolv Labs | $25M+ | Compromised AWS KMS key (infra, not code) |
+| SwapNet | $13.4M | TBD |
+| MakinaFi | $4.13M (1,299 ETH) | Smart contract exploit |
+| FOOM Cash | $2.3M | Smart contract vulnerability ($1.8M recovered) |
+
+### Dominant Attack Vectors (2026)
+1. **Social engineering / key compromise** has replaced code exploits as #1 vector
+2. **Access control** remains #1 by dollar losses ($953.2M in 2024)
+3. **Oracle manipulation** is #2: $52M across 37 incidents in 2024
+4. **AI-assisted attacks**: GPT-5.3-Codex exploited 72% of vulnerabilities autonomously
+
+### LEVER-Specific Security Risks
+- **Key management**: Keeper and oracle bot private keys are the Resolv-equivalent attack surface. Must use HSM or multi-sig.
+- **Oracle manipulation**: OracleAdapter uses smoothing but needs circuit breaker for abnormal price movements.
+- **Access control**: OpenZeppelin AccessControl with ADMIN/KEEPER/ORACLE/MARKET_MANAGER roles is the correct pattern. Verify completeness.
+- **Reentrancy**: LeverVault and ExecutionEngine flows must be guarded.
+- **AI exploit tooling**: 72% autonomous exploit rate means AI-assisted fuzzing is essential pre-mainnet.
+
+---
+
 ## LEVER Protocol Architecture and Stack
 
 ### What LEVER Is

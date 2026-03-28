@@ -53,5 +53,5 @@
 ## BLOCKED
 *Cannot proceed. Include reason and who can unblock.*
 
-- LEVER-BUG-1: [CRITICAL] PnL formula mismatch — CRITIQUE verdict: REVISE (2nd review of revised plan). Plan now uses execution prices (correct direction per LESSONS.md), but exit-side formula diverges from Master's stated formula (double-impact vs single-impact). Master must confirm exit formula before BUILD starts. See: handoffs/critique-lever-bug-1.md
+- LEVER-BUG-1: [CRITICAL] PnL formula mismatch — CRITIQUE verdict: REVISE (3rd review, verified against actual codebase). Three blockers: (1) exit formula diverges from LESSONS.md (double vs single impact, Master must decide), (2) LEVER-P06 makes Phase 2 without Phase 3 unsafe (vault NAV drift), (3) all plan line numbers stale (P03/P04/P06 shifted code). See: handoffs/critique-lever-bug-1.md
 

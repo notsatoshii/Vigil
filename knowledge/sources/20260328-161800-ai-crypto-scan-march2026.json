@@ -1,0 +1,64 @@
+{
+  "id": "20260328-161800-ai-crypto-intersection-scan",
+  "ingestedAt": "2026-03-28T16:18:00Z",
+  "sourceType": "Web scan (multiple sources)",
+  "reliability": "High (CoinDesk, Finance Magnates, TradingView)",
+  "scanType": "Focused scan: AI + Crypto / AI Agents in Prediction Markets",
+
+  "summary": [
+    "14 of 20 most profitable Polymarket wallets are bots. Prediction markets are becoming a 'bot playground.' Most bots exploit structural arbitrage (YES+NO < $1, cross-platform arb, logical mismatches) rather than superior predictions.",
+    "Polystrat (by Olas): AI agent on Polymarket since Feb 2026. 4,200+ trades in first month, up to 376% returns on individual trades. Self-custodied, runs 24/7. An automated bot generated $150K across 8,894 trades without human intervention.",
+    "DeFAI (DeFi + AI) is now a $22.8B token market. Added $10B in value in a single week this year. Virtual Protocol: 23,500+ active wallets, $479M in AI-driven economic activity.",
+    "Trust Wallet launched TWAK (Trust Wallet Agent Kit) on March 27: AI-powered trade execution across 25+ blockchains, non-custodial. EIP-7702 enables session keys for safe agent trading without exposing private keys. Walbi launched no-code AI trading agents (describe strategy in plain language).",
+    "Crypto trading platforms are racing to deploy AI agents, with job losses mounting. CZ (Changpeng Zhao) says AI agents will dominate crypto payments. The trajectory mirrors forex: human speculation -> machine-driven liquidity and price formation."
+  ],
+
+  "entities": [
+    {"name": "Polystrat", "type": "ai_agent", "role": "AI agent on Polymarket, 4,200+ trades in first month, up to 376% returns"},
+    {"name": "Olas", "type": "protocol", "role": "AI agent infrastructure, built Polystrat"},
+    {"name": "Virtual Protocol", "type": "protocol", "role": "23,500+ active wallets, $479M AI-driven economic activity"},
+    {"name": "TWAK (Trust Wallet Agent Kit)", "type": "tool", "role": "AI trade execution across 25+ chains, launched March 27 2026"},
+    {"name": "Walbi", "type": "tool", "role": "No-code AI trading agents, plain language strategy description"},
+    {"name": "EIP-7702", "type": "standard", "role": "Session keys for safe AI agent trading without exposing private keys"},
+    {"name": "DeFAI", "type": "concept", "role": "DeFi + AI convergence, $22.8B token market"},
+    {"name": "Changpeng Zhao (CZ)", "type": "person", "role": "Says AI agents will dominate crypto payments, using OpenClaw"}
+  ],
+
+  "relationships": [
+    {"from": "AI trading bots", "to": "Polymarket", "relationship": "14 of 20 most profitable wallets are bots"},
+    {"from": "Polystrat", "to": "Polymarket", "relationship": "AI agent trading on platform, 4,200+ trades/month"},
+    {"from": "AI agents", "to": "LEVER Protocol", "relationship": "AI agents will be significant users of leveraged prediction market positions; LEVER needs API-first design for agent integration"},
+    {"from": "EIP-7702", "to": "AI agent security", "relationship": "enables scoped session keys for safe autonomous trading"},
+    {"from": "TWAK", "to": "Trust Wallet", "relationship": "AI agent SDK for 220M Trust Wallet users"}
+  ],
+
+  "categories": ["technical", "strategic", "market"],
+
+  "keyMetrics": {
+    "botDominance": "14 of 20 most profitable Polymarket wallets are bots",
+    "polystratTrades": "4,200+ in first month",
+    "polystratMaxReturn": "376% on individual trades",
+    "automatedBotProfit": "$150K across 8,894 trades (no human intervention)",
+    "defaiMarketCap": "$22.8B",
+    "defaiWeeklyGrowthPeak": "$10B added in one week",
+    "virtualProtocolWallets": "23,500+",
+    "virtualProtocolActivity": "$479M",
+    "trustWalletUsers": "220M (TWAK target base)"
+  },
+
+  "workstreamTags": {
+    "BUILD": "CRITICAL: LEVER must be designed API-first for AI agent integration. 14/20 top Polymarket wallets are bots. If LEVER's leveraged positions are not easily accessible to AI agents, we miss the dominant user segment. EIP-7702 session keys should be supported. Consider: can an AI agent open, manage, and close leveraged positions programmatically?",
+    "ADVISOR": "The prediction market -> bot playground trajectory means LEVER's real users may be AI agents, not humans directly. Product strategy should account for this: API quality, programmatic position management, and agent-friendly documentation matter more than UI for power users.",
+    "CEO": "DeFAI is a $22.8B market. AI agents on prediction markets are the growth vector. LEVER as the leverage layer for AI agent trading is a powerful narrative for fundraising: 'AI agents need leverage to maximize capital efficiency on prediction markets, and LEVER is the only infrastructure that provides it.'",
+    "IMPROVE": "Walbi's no-code agent creation (plain language -> trading strategy) is a UX pattern worth studying. Could LEVER offer 'describe your thesis, we build the leveraged position' via AI?"
+  },
+
+  "sources": [
+    {"title": "CoinDesk: AI Agents Rewriting Prediction Market Trading", "url": "https://www.coindesk.com/tech/2026/03/15/ai-agents-are-quietly-rewriting-prediction-market-trading", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "CoinDesk: AI Helping Retail Exploit Prediction Market Glitches", "url": "https://www.coindesk.com/markets/2026/02/21/how-ai-is-helping-retail-traders-exploit-prediction-market-glitches-to-make-easy-money", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Finance Magnates: Bot Playground", "url": "https://www.financemagnates.com/trending/prediction-markets-are-turning-into-a-bot-playground/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "CoinDesk: Crypto Platforms Racing to Deploy AI Agents", "url": "https://www.coindesk.com/business/2026/03/19/crypto-trading-platforms-race-to-deploy-ai-agents-job-losses-to-artificial-intelligence-will-continue-to-mount", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "MEXC: Trust Wallet TWAK Launch", "url": "https://www.mexc.com/news/986197", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"},
+    {"title": "FinTech Weekly: CZ on AI Agents", "url": "https://www.fintechweekly.com/news/changpeng-zhao-ai-agents-crypto-payments-kimi-openclaw-march-2026", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"}
+  ]
+}

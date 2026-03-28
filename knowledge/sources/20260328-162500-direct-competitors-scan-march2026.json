@@ -1,0 +1,77 @@
+{
+  "id": "20260328-162500-direct-competitors-scan",
+  "ingestedAt": "2026-03-28T16:25:00Z",
+  "sourceType": "Web scan (multiple sources)",
+  "reliability": "High (official sites, VC announcements, major outlets)",
+  "scanType": "Focused scan: Direct competitors to LEVER (leveraged/margin prediction markets)",
+
+  "summary": [
+    "Ultramarkets: 'The Margin Layer for Prediction Markets.' Up to 10x long/short on events. Gap risk eliminated via pre-resolution auto-close. LP yield from trading fees and liquidations with zero directional exposure. Founded by Emmanuel Njoku. No public funding info found. Website live at ultramarkets.xyz. DIRECT COMPETITOR to LEVER.",
+    "Limitless Exchange: $10M seed round led by 1confirmation, with Coinbase Ventures, DCG, F-Prime, Collider, Arrington Capital. BUILT ON BASE. $500M+ total trading volume. Largest prediction market on Base. Short-term fast price markets (15-min, 10-min, 1-min). NOT leveraged positions, but binary options-style with zero-day expiry. Less direct competitor but on the same chain.",
+    "Nettyworth: $200M+ connected wallet value. Using prediction market positions as collateral for lending. AI-based portfolio underwriting. 2% origination fee. Complementary to LEVER, not competitive (lending vs leverage).",
+    "Kalshi tokenized prediction market positions on Solana (Dec 2025), creating on-chain composability. This is the infrastructure that makes DeFi protocols like LEVER possible on Kalshi data.",
+    "The 'prediction markets as untapped collateral pool' thesis is gaining mainstream attention (TheStreet, Yahoo Finance, Medium articles March 2026). Prediction market capital cannot be borrowed against, leveraged, or redeployed. LEVER and Nettyworth address different parts of this gap."
+  ],
+
+  "entities": [
+    {"name": "Ultramarkets", "type": "competitor", "role": "Direct competitor: 'margin layer for prediction markets,' up to 10x, pre-resolution auto-close"},
+    {"name": "Emmanuel Njoku", "type": "person", "role": "Founder of Ultramarkets"},
+    {"name": "Limitless Exchange", "type": "competitor", "role": "Largest prediction market on Base, $10M seed from 1confirmation/Coinbase Ventures, $500M+ volume, binary options-style"},
+    {"name": "1confirmation", "type": "investor", "role": "Led Limitless $10M seed"},
+    {"name": "Coinbase Ventures", "type": "investor", "role": "Participated in Limitless $10M seed"},
+    {"name": "DCG (Digital Currency Group)", "type": "investor", "role": "Participated in Limitless $10M seed"},
+    {"name": "F-Prime", "type": "investor", "role": "Participated in Limitless $10M seed"},
+    {"name": "Arrington Capital", "type": "investor", "role": "Participated in Limitless $10M seed"},
+    {"name": "Nettyworth", "type": "company", "role": "Prediction market positions as collateral for lending, $200M+ connected wallet value, AI portfolio underwriting"},
+    {"name": "Aly Madhavji", "type": "person", "role": "Author of 'prediction markets as untapped collateral pool' thesis (TheStreet/Yahoo Finance)"},
+    {"name": "Opinion", "type": "competitor", "role": "YZi Labs-backed prediction market on BNB Chain mainnet (Oct 2025)"}
+  ],
+
+  "relationships": [
+    {"from": "Ultramarkets", "to": "LEVER Protocol", "relationship": "direct competitor: both offer leveraged positions on prediction markets"},
+    {"from": "Limitless Exchange", "to": "Base", "relationship": "largest prediction market on Base; same chain as LEVER"},
+    {"from": "Coinbase Ventures", "to": "Limitless", "relationship": "investor; Coinbase backing a Base prediction market"},
+    {"from": "Nettyworth", "to": "LEVER Protocol", "relationship": "complementary: Nettyworth does lending against positions, LEVER does leverage for trading"},
+    {"from": "Kalshi", "to": "Solana", "relationship": "tokenized positions on Solana, creating on-chain composability"}
+  ],
+
+  "categories": ["strategic", "market", "financial"],
+
+  "competitiveComparison": {
+    "lever_vs_ultramarkets": {
+      "ultramarkets_max_leverage": "10x",
+      "lever_max_leverage": "2-50x (compresses with time)",
+      "ultramarkets_risk_model": "Pre-resolution auto-close (gap risk elimination)",
+      "lever_risk_model": "Continuous time-based compression + borrow fee ticking clock",
+      "ultramarkets_lp_model": "Zero directional exposure for LPs",
+      "lever_lp_model": "Unified ERC-4626 vault, LP as counterparty, 175-400% APY target",
+      "ultramarkets_funding": "Unknown (no public rounds found)",
+      "lever_funding": "Pre-seed",
+      "key_differentiators": "LEVER offers higher max leverage (50x vs 10x), continuous risk curves vs binary auto-close, ERC-4626 standard for institutional LP integration, deterministic fee structure (50/30/20 split)"
+    },
+    "lever_vs_limitless": {
+      "limitless_type": "Binary options-style short-term markets (1-min to zero-day expiry)",
+      "lever_type": "Leveraged perpetual positions on external prediction market prices",
+      "overlap": "Low. Limitless creates its own markets with fast expiry. LEVER references external Polymarket prices with variable timeframes.",
+      "limitless_chain": "Base (same as LEVER)",
+      "limitless_funding": "$10M seed (1confirmation, Coinbase Ventures, DCG)",
+      "risk": "Limitless is well-funded and on Base. If they add leverage features, they become a direct competitor."
+    }
+  },
+
+  "workstreamTags": {
+    "CEO": "CRITICAL: Ultramarkets is the direct competitor. Up to 10x leverage vs LEVER's 50x. Key differentiator is LEVER's continuous risk curves and higher max leverage. Limitless is on Base with $10M from Coinbase Ventures and $500M+ volume, but is binary options-style not leverage. Investor pitch must clearly differentiate from both. Nettyworth is complementary (lending vs leverage) and could be a future integration partner.",
+    "BUILD": "Study Ultramarkets' pre-resolution auto-close mechanism. This is an alternative approach to LEVER's time-based compression. Both solve the same problem (gap risk at resolution) differently. Also: Limitless on Base is the largest prediction market on our chain. Potential integration target (LEVER could offer leveraged positions on Limitless markets).",
+    "ADVISOR": "Competitive landscape is: Ultramarkets (direct, 10x max, unknown funding), Limitless (adjacent, on Base, $10M, $500M volume), Nettyworth (complementary, lending). LEVER's moat is higher leverage (50x), continuous risk model, and ERC-4626 institutional LP standard. The 'prediction markets as untapped collateral' thesis going mainstream is a tailwind.",
+    "IMPROVE": "Check Ultramarkets.xyz UX for comparison. Limitless has achieved $500M volume on Base with a simple UX. What can we learn?"
+  },
+
+  "sources": [
+    {"title": "Ultramarkets Official", "url": "https://www.ultramarkets.xyz/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "VentureBurn: Limitless $10M Raise", "url": "https://ventureburn.com/limitless-raises-10-million/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "DappRadar: Limitless on Base Guide", "url": "https://dappradar.com/blog/the-ultimate-guide-to-defi-prediction-markets-with-limitless-on-base", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "TheStreet: Prediction Markets Untapped Collateral", "url": "https://www.thestreet.com/crypto/innovation/why-prediction-markets-are-the-largest-untapped-collateral-pool-in-defi-", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "CryptoSlate: Limitless Seed Round", "url": "https://cryptoslate.com/press-releases/limitless-prediction-market-closes-10m-seed-round-ahead-of-lmts-token-launch/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "ETF.com: Limitless $10M", "url": "https://www.etf.com/sections/news/limitless-prediction-market-closes-10m-seed-round-ahead-lmts-token-launch", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"}
+  ]
+}

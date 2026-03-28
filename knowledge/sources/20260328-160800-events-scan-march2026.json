@@ -1,0 +1,61 @@
+{
+  "id": "20260328-160800-events-focused-scan",
+  "ingestedAt": "2026-03-28T16:08:00Z",
+  "sourceType": "Web scan (multiple sources)",
+  "reliability": "High (official event sites)",
+  "scanType": "Focused scan: Industry Events & Networking",
+
+  "summary": [
+    "Prediction Conference: Las Vegas, April 22-24, 2026. 300 curated seats. Dedicated prediction market event. THIS IS THE MUST-ATTEND for LEVER. Intimate format means high-quality networking with prediction market builders, traders, investors.",
+    "Paris Blockchain Week: April 15-16, Carrousel du Louvre. 10,000+ attendees. Major European crypto event. Good for fundraising if targeting European VCs.",
+    "Bitcoin 2026: Las Vegas, April 27-29. 40,000+ attendees, 5,000 orgs, 500 speakers. Massive but Bitcoin-focused. Less directly relevant but high visibility.",
+    "TOKEN2049 Dubai: April 29-30. 15,000+ attendees. Major global crypto event. Strong Asian and Middle Eastern VC presence.",
+    "Consensus Miami: May 5-7, Miami Beach Convention Center. 20,000+ attendees. 10th anniversary. Largest crypto conference in the Americas. Includes EasyA hackathon.",
+    "SBC Summit Americas: Fort Lauderdale, June 9-11. New dedicated Prediction Markets Forum. Intersection of prediction markets and sports betting industry."
+  ],
+
+  "entities": [
+    {"name": "Prediction Conference", "type": "event", "role": "Las Vegas April 22-24 2026, 300 curated seats, prediction market focused"},
+    {"name": "Paris Blockchain Week", "type": "event", "role": "Paris April 15-16 2026, 10,000+ attendees"},
+    {"name": "Bitcoin 2026", "type": "event", "role": "Las Vegas April 27-29 2026, 40,000+ attendees"},
+    {"name": "TOKEN2049 Dubai", "type": "event", "role": "Dubai April 29-30 2026, 15,000+ attendees"},
+    {"name": "Consensus Miami", "type": "event", "role": "Miami May 5-7 2026, 20,000+ attendees, 10th anniversary"},
+    {"name": "SBC Summit Americas", "type": "event", "role": "Fort Lauderdale June 9-11 2026, new Prediction Markets Forum"},
+    {"name": "Solana Frontier Hackathon", "type": "event", "role": "Online April 6 - May 11 2026, largest online crypto startup competition"},
+    {"name": "Chainlink Convergence Hackathon", "type": "event", "role": "Tracks for DeFi, prediction markets, AI agents"}
+  ],
+
+  "relationships": [
+    {"from": "Prediction Conference", "to": "LEVER Protocol", "relationship": "highest-value event for networking with prediction market ecosystem"},
+    {"from": "Prediction Conference", "to": "5c(c) Capital", "relationship": "5c(c) Capital investors likely attending; prime fundraising opportunity"},
+    {"from": "Consensus Miami", "to": "crypto fundraising", "relationship": "largest Americas crypto event, high VC density"}
+  ],
+
+  "categories": ["strategic"],
+
+  "upcomingCalendar": [
+    {"date": "2026-04-06", "event": "Solana Frontier Hackathon starts (online, runs to May 11)"},
+    {"date": "2026-04-15", "event": "Paris Blockchain Week (April 15-16, Paris)"},
+    {"date": "2026-04-22", "event": "Prediction Conference (April 22-24, Las Vegas) *** PRIORITY ***"},
+    {"date": "2026-04-27", "event": "Bitcoin 2026 (April 27-29, Las Vegas)"},
+    {"date": "2026-04-29", "event": "TOKEN2049 Dubai (April 29-30, Dubai)"},
+    {"date": "2026-04-30", "event": "CFTC ANPR comment deadline"},
+    {"date": "2026-05-05", "event": "Consensus Miami (May 5-7, Miami)"},
+    {"date": "2026-06-09", "event": "SBC Summit Americas (June 9-11, Fort Lauderdale) - Prediction Markets Forum"}
+  ],
+
+  "workstreamTags": {
+    "CEO": "PRIORITY: Prediction Conference (Las Vegas, April 22-24) is the #1 event. Only 300 curated seats. 5c(c) Capital investors will likely be there. This is where LEVER should be presented. If budget allows, Consensus Miami (May 5-7) is the big-tent event for broader crypto VC exposure. April is packed: Paris Blockchain Week, Prediction Conference, Bitcoin 2026, and TOKEN2049 all within 2 weeks.",
+    "ADVISOR": "April-May 2026 is a critical conference window. Prediction Conference (April 22-24) + Consensus Miami (May 5-7) is the optimal two-event strategy for LEVER's fundraising push. Note: CFTC ANPR comment deadline is April 30, same week as Bitcoin 2026 and TOKEN2049.",
+    "BUILD": "Chainlink Convergence Hackathon has prediction market and DeFi tracks. Could be useful for recruiting or visibility. Solana Frontier Hackathon is Solana-focused (not Base) but may surface competitors."
+  },
+
+  "sources": [
+    {"title": "Prediction Conference Official", "url": "https://predictionmarketsconference.com/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Paris Blockchain Week", "url": "https://www.parisblockchainweek.com/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Bitcoin 2026", "url": "https://2026.b.tc/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Consensus Miami / Coinme Guide", "url": "https://coinme.com/blog/top-cryptocurrency-conferences-events-2026", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "SBC Summit Americas Prediction Markets Forum", "url": "https://sbcevents.com/events/sbc-summit-americas-prediction-markets-blog/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Predict 2026", "url": "https://predict2026.org/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"}
+  ]
+}

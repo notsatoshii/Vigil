@@ -1,0 +1,88 @@
+{
+  "id": "20260328-163400-polymarket-infrastructure-scan",
+  "ingestedAt": "2026-03-28T16:34:00Z",
+  "sourceType": "Web scan (official announcements, major outlets)",
+  "reliability": "High (Polymarket official, Fortune, CoinDesk, The Block)",
+  "scanType": "Focused scan: Polymarket API & Infrastructure (LEVER oracle dependency)",
+
+  "summary": [
+    "Polymarket acquired TWO infrastructure startups in 2026: Dome (Feb 19, unified prediction market API, YC Fall 2025, ex-Alchemy founders, $5.2M raised) and Brahma (March 18, DeFi execution/settlement, $1B+ tx processed). Polymarket is aggressively building its developer and infrastructure stack.",
+    "Polymarket US launched with CFTC approval (Nov 2025). Operates as intermediated contract market via futures commission merchants. NFA regulatory agreement. Three-tier surveillance system. Ed25519 authentication. This is a fully regulated US exchange now.",
+    "CLOB API: 23 REST endpoints, 2 WebSocket endpoints, 60 req/min public rate limit, WebSocket virtually unrestricted (10 instruments simultaneously). US API no longer geoblocked. All data available to developers.",
+    "Dome acquisition is directly relevant to LEVER: Dome was 'a unified API for prediction markets' working across Polymarket, Kalshi, and others. Now it is part of Polymarket. LEVER should monitor whether this unified API becomes Polymarket-exclusive or stays cross-platform. If it stays cross-platform, LEVER could use it for multi-source oracle aggregation.",
+    "Brahma phasing out all existing products within 30 days of acquisition (March 18). Users instructed to migrate. Brahma's execution and settlement tech is being absorbed into Polymarket's backend. This should improve Polymarket's reliability (positive for LEVER's oracle)."
+  ],
+
+  "entities": [
+    {"name": "Dome", "type": "company", "role": "Unified prediction market API. YC Fall 2025. Acquired by Polymarket Feb 19 2026. $5.2M raised ($500K YC + $4.7M seed)."},
+    {"name": "Kunal Roy", "type": "person", "role": "Dome co-founder, ex-Alchemy founding engineer"},
+    {"name": "Kurush Dubash", "type": "person", "role": "Dome co-founder, ex-Alchemy founding engineer"},
+    {"name": "Brahma", "type": "company", "role": "DeFi execution/settlement infra. $1B+ tx volume. Acquired by Polymarket March 18 2026."},
+    {"name": "Tenconi", "type": "person", "role": "Brahma founder"},
+    {"name": "Akanshu Jain", "type": "person", "role": "Brahma co-founder"},
+    {"name": "Bapi Reddy Karri", "type": "person", "role": "Brahma co-founder"},
+    {"name": "Polymarket US", "type": "platform", "role": "CFTC-regulated DCM, intermediated access via FCMs, NFA regulatory agreement"},
+    {"name": "National Futures Association (NFA)", "type": "regulator", "role": "Regulatory services agreement with Polymarket US"}
+  ],
+
+  "relationships": [
+    {"from": "Polymarket", "to": "Dome", "relationship": "acquired Feb 19 2026; unified API for prediction markets"},
+    {"from": "Polymarket", "to": "Brahma", "relationship": "acquired March 18 2026; execution and settlement infrastructure"},
+    {"from": "Dome", "to": "LEVER Protocol", "relationship": "Dome's unified API could serve as multi-source oracle aggregation for LEVER (if it stays cross-platform post-acquisition)"},
+    {"from": "Polymarket US", "to": "CFTC", "relationship": "regulated as designated contract market"},
+    {"from": "Polymarket US", "to": "NFA", "relationship": "regulatory services agreement"},
+    {"from": "Polymarket CLOB API", "to": "LEVER OracleAdapter", "relationship": "LEVER's primary oracle source; 23 REST + 2 WebSocket endpoints"}
+  ],
+
+  "categories": ["technical", "strategic"],
+
+  "keyMetrics": {
+    "polymarketAPIEndpoints": "23 REST + 2 WebSocket",
+    "publicRateLimit": "60 req/min",
+    "webSocketInstrumentLimit": 10,
+    "domeRaised": "$5.2M ($500K YC + $4.7M seed)",
+    "brahmaVolume": "$1B+ transactions processed",
+    "polymarketAcquisitions2026": 2
+  },
+
+  "leverOracleRiskAssessment": {
+    "currentDependency": "LEVER's OracleAdapter uses Polymarket CLOB Midpoint API as primary oracle source",
+    "positiveSignals": [
+      "Polymarket investing heavily in infrastructure (2 acquisitions in 2 months)",
+      "CLOB API now available in US (no geoblocking), Ed25519 auth",
+      "WebSocket virtually unrestricted for real-time data",
+      "Brahma acquisition should improve settlement reliability",
+      "CFTC regulation adds stability and trust to the data source"
+    ],
+    "risks": [
+      "Single oracle dependency: if Polymarket API changes breaking, LEVER's pricing fails",
+      "Dome (unified API) now owned by Polymarket; cross-platform data access may become exclusive",
+      "Rate limit (60 req/min) may be insufficient at scale without WebSocket migration",
+      "Polymarket US requires Ed25519 auth; LEVER must ensure compliance with API TOS",
+      "Gamma API (backup) was previously returning 0.0 for all markets (broken)"
+    ],
+    "recommendedActions": [
+      "BUILD: Migrate to WebSocket for real-time CLOB data (virtually no rate limit vs 60 req/min REST)",
+      "BUILD: Add Kalshi as secondary oracle source (they tokenized positions on Solana; API may be available)",
+      "BUILD: Verify Gamma API backup status; if still broken, replace with alternative fallback",
+      "BUILD: Monitor Dome's post-acquisition API changes; if it stays cross-platform, evaluate as multi-source aggregator",
+      "ADVISOR: Evaluate Polymarket US API TOS for derivative product usage; ensure LEVER's oracle usage is compliant"
+    ]
+  },
+
+  "workstreamTags": {
+    "BUILD": "CRITICAL: Polymarket acquired Dome (unified prediction market API) and Brahma (settlement infra). Both strengthen Polymarket as an oracle source BUT increase dependency risk. Actions: (1) Migrate OracleAdapter to WebSocket for real-time data. (2) Add Kalshi as secondary oracle. (3) Check if Dome's cross-platform API survives the acquisition. (4) Verify Gamma API backup status.",
+    "ADVISOR": "Polymarket is consolidating the prediction market infrastructure stack through acquisitions. This makes them a stronger oracle source but also a more powerful gatekeeper. LEVER should diversify oracle sources before mainnet. Also: verify that using Polymarket's API for a derivative product is compliant with their TOS and CFTC regulations.",
+    "CEO": "Polymarket's infrastructure buildout (2 acquisitions, CFTC regulation, $9.55B/month volume) validates them as a reliable oracle source. But single-source dependency is a risk investors will ask about. Answer: 'Primary source is Polymarket CLOB with WebSocket, with Kalshi as secondary oracle, and circuit breaker protections.'",
+    "SECURE": "Ed25519 authentication for Polymarket US API. LEVER's oracle bot keys must be secured accordingly. WebSocket connections need TLS and reconnection logic for production reliability."
+  },
+
+  "sources": [
+    {"title": "Fortune: Polymarket Acquires Brahma", "url": "https://fortune.com/2026/03/18/exclusive-polymarket-acquires-the-startup-brahma/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "The Block: Polymarket Acquires Dome", "url": "https://www.theblock.co/post/390546/polymarket-buys-fresh-prediction-market-api-startup-dome-marking-second-official-acquisition", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "CoinDesk: Polymarket CFTC US Return", "url": "https://www.coindesk.com/business/2025/11/25/polymarket-secures-cftc-approval-for-regulated-u-s-return", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "BusinessWire: Polymarket Market Integrity Rules", "url": "https://www.businesswire.com/news/home/20260320997513/en/Polymarket-Publishes-Enhanced-Market-Integrity-Rules-Across-Its-DeFi-Platform-and-CFTC-Regulated-U.S.-Exchange", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "QuantVPS: Polymarket US API Guide", "url": "https://www.quantvps.com/blog/polymarket-us-api-available", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"},
+    {"title": "Brahma Blog: Joins Polymarket", "url": "https://brahma.fi/blog/brahma-joins-polymarket", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"}
+  ]
+}

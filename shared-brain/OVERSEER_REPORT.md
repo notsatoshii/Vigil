@@ -4,6 +4,111 @@
 
 ---
 
+## 2026-03-28 16:01 UTC
+
+### 1. EFFICIENCY: 5/10 (down from 6/10)
+
+**Sessions today:** 32 dispatched out of 80 cap. System running since 08:10 UTC (nearly 8 hours). That is 4 sessions/hour. Not terrible for a day that included a full system migration, but the pipeline is choking on its own backlog.
+
+**The big number:** 6 CRITICAL bugs are sitting in "planned" with pid=0 (BUG-3, BUG-4, BUG-5, BUG-6, BUG-7, plus VIGIL-MISSION-CONTROL). All have completed plans. None are being critiqued or built. The scheduler is maxed at 5 active sessions, but those 5 slots are occupied by: BUG-1 (critiquing, again), BUG-8 (planning), and 3 support tasks (operate, research, improve).
+
+**Support tasks are eating pipeline slots.** The scheduler dispatched support-operate, support-research, and support-improve in the last 15 minutes, consuming 3 of 5 slots. Meanwhile 6 planned critical bugs sit idle. Support tasks should NOT block pipeline progression. This is a scheduling priority inversion.
+
+**The plan_file bug from last report is STILL NOT FIXED.** BUG-3 and BUG-4 still point to `plan-20260328-133419.md` (the BUG-2 plan). This was flagged 2 hours ago as CRITICAL. Nobody fixed it. If the scheduler dispatches critique for BUG-3 or BUG-4 with these wrong references, CRITIQUE will review the wrong plan and either waste a session or, worse, approve the wrong fix.
+
+**BUG-2 regressed to "backlog."** It was IN REVIEW on the KANBAN (VERIFY passed), but the scheduler shows stage "backlog" with pid=0. The KANBAN says IN REVIEW. The scheduler says backlog. Which is it? If VERIFY passed (and it did, with a clean PASS verdict), BUG-2 should be DONE. Someone needs to reconcile this.
+
+---
+
+### 2. QUALITY: 7/10
+
+**Good:**
+- VERIFY (BUG-2): Thorough, well-structured verdict. 4 regression tests validated, each mapped to specific bug scenarios. Coverage assessment is real, not hand-wavy. This is how VERIFY should work.
+- PLAN (BUG-6, BUG-7): Both completed with detailed root cause analysis and scoped fixes. BUG-6 identifies FeeRouter being called by Liquidation/Settlement without USDT transfer. BUG-7 traces zero liquidations to unset depthThreshold. Good work.
+- CRITIQUE (BUG-1, 3rd review): Caught the LEVER-P06 ordering constraint that makes Phase 2 without Phase 3 unsafe. This is a genuinely important catch. The vault NAV drift from mismatched realized/unrealized PnL formulas would have been subtle and damaging.
+
+**Concern:**
+- PLAN is still deferring contract interface questions to BUILD. The BUG-3 open question about PositionManager (from last report) was not resolved. Now BUG-7 plan is 18KB. Are these plans getting bloated? A good plan for a depthThreshold setter should not need 18KB. Plans should be tight: root cause, fix, test strategy. Not dissertations.
+
+**Concern:**
+- IMPROVE proposals are accumulating with no action. 3 proposals (header stats bug, price confusion, vault APY) are OPEN with no scheduled work. The header stats bug (Proposal #1) is labeled "Ship now" priority. It is a first-impression-killer for investor demos. Nobody has picked it up.
+
+---
+
+### 3. BOTTLENECKS: BUG-1 is STILL stuck (4+ hours)
+
+**BUG-1 has been in critique for 4 hours.** The scheduler shows stage "critiquing" with pid 2865523. The latest critique file (15:47) says REVISE with 3 blockers. The scheduler dispatched a new critique session at 16:06. This is the THIRD critique cycle for BUG-1. It keeps bouncing between PLAN and CRITIQUE because:
+
+1. The plan's exit formula diverges from LESSONS.md (double vs single impact). Master must decide.
+2. LEVER-P06 makes shipping Phase 2 without Phase 3 unsafe (vault NAV drift).
+3. All line numbers in the plan are stale.
+
+**This will keep looping forever without Master input.** Issue #1 is a design decision, not a code question. CRITIQUE correctly identifies it. PLAN cannot resolve it. The system has no mechanism to escalate "needs Master decision" items. BUG-1 should be BLOCKED in the scheduler (not burning sessions on re-critiques) with a clear question for Master.
+
+**Previous report's Action Items #1-5: Status**
+1. Fix scheduler-state.json plan_file references: NOT DONE.
+2. Dispatch CRITIQUE for BUG-3 and BUG-4: NOT DONE. Still sitting at planned.
+3. Dispatch PLAN revision for BUG-1: Partially done (critique re-dispatched, but the fundamental issue remains).
+4. Add CRITIQUE->PLAN revision loop: NOT DONE.
+5. PLAN should verify contract interfaces: NOT DONE.
+
+Zero of five action items completed in 2 hours. The system does not act on its own oversight reports. This is a meta-problem.
+
+---
+
+### 4. RECURRING PROBLEMS: Scheduler data integrity
+
+**Same bug, same report, twice now.** The wrong plan_file references for BUG-3 and BUG-4 were flagged at 14:01. It is 16:01. Still broken. The scheduler wrote these values incorrectly when the tasks were initially registered, and no process exists to validate or correct them. If this is a code bug in the scheduler, it needs a code fix. If it is a one-time data corruption, someone needs to manually edit the JSON.
+
+**BUG-1 critique loop** is also recurring. This is the 3rd critique cycle. The system is burning Opus sessions re-critiquing a plan that needs a human decision, not another AI review.
+
+---
+
+### 5. SYSTEM HEALTH: Stable but with cron issues
+
+- 16:00 health check: healthy, 0 problems. Good.
+- 12:00 health check had a gateway failure, could not restart (bus connection error). Resolved itself by 16:00. The health-escalate.sh fix from earlier (using sudo for systemctl) was committed (9995fab).
+- Scheduler running at capacity (5/5 slots). Load is fine. RAM is fine.
+- Cron jobs for operate-selfcheck and overseer previously timed out (noted in RECENT_SESSIONS). Overseer timeout was 1800s. These are long-running analysis tasks; timeouts may need increasing or the tasks need to be more focused.
+
+---
+
+### 6. WASTED WORK: YES
+
+**Support tasks are displacing critical bug work.** At 16:05-16:14, the scheduler dispatched: support-operate (#28), critique for BUG-1 (#29, 3rd cycle), support-research (#30), plan for BUG-8 (#31), support-improve (#32). That is 3 support tasks and 1 redundant critique, consuming 4 of 5 slots. Meanwhile:
+
+- BUG-3 (CRITICAL, Ghost OI): planned, idle for 2.5 hours
+- BUG-4 (CRITICAL, InsuranceFund bad debt): planned, idle for 2.5 hours
+- BUG-5 (CRITICAL, decimal mismatch): planned, idle for 1 hour
+- BUG-6 (CRITICAL, FeeRouter without USDT): planned, idle since completion
+- BUG-7 (CRITICAL, zero liquidations): planned, just completed
+
+**Support tasks should run only when pipeline slots are actually free.** The scheduler is treating support-operate, support-research, and support-improve as equal priority to pipeline work. They are not. A system health check (when health was just confirmed clear at 16:00) is not more important than advancing a CRITICAL bug fix through critique.
+
+**BUG-8 is being planned while BUG-3 through BUG-7 have not even entered critique.** This is FIFO violation. The scheduler is planning new work instead of advancing existing work through the pipeline. Plans without critique are inventory, not progress.
+
+---
+
+### ACTIONS REQUIRED (ordered by priority)
+
+| # | Action | Who | Priority | Status |
+|---|--------|-----|----------|--------|
+| 1 | Fix scheduler-state.json: BUG-3 plan_file -> plan-lever-bug-3.md, BUG-4 plan_file -> plan-lever-bug-4.md | OPERATE | CRITICAL | OVERDUE (flagged 2h ago) |
+| 2 | Mark BUG-2 as DONE in scheduler (VERIFY passed, KANBAN says IN REVIEW, scheduler says backlog) | OPERATE | HIGH | NEW |
+| 3 | Mark BUG-1 as BLOCKED in scheduler with reason "needs Master decision on exit formula" | OPERATE | HIGH | NEW |
+| 4 | Dispatch CRITIQUE for BUG-3 and BUG-4 immediately (2.5 hours idle with approved plans) | Scheduler | HIGH | OVERDUE |
+| 5 | Prioritize pipeline tasks over support tasks in scheduler (support should only fill idle slots) | Scheduler code fix | HIGH | NEW |
+| 6 | Stop re-critiquing BUG-1 until the plan is actually revised with the CRITIQUE feedback | Scheduler | MEDIUM | NEW |
+| 7 | Pick up IMPROVE Proposal #1 (empty header stats, investor demo killer) | BUILD/PLAN | MEDIUM | NEW |
+
+---
+
+### VERDICT
+
+The pipeline is producing good plans and good critiques, but nothing is flowing through to BUILD. We have 6 CRITICAL planned bugs gathering dust while the scheduler burns slots on support tasks and redundant BUG-1 re-critiques. The system is diagnosing well and executing poorly. The scheduler needs a priority model: pipeline advancement first, support tasks second, and a hard stop on re-critiquing tasks that need human input. If this does not change, we will end the day with 8 great plans and zero bugs actually fixed (beyond the P01-P06 batch from this morning).
+
+---
+
 ## 2026-03-28 14:01 UTC (Inaugural Report)
 
 ### 1. EFFICIENCY: 6/10

@@ -19,6 +19,30 @@ Monthly prediction market volume surged from $1.2B (mid-2025) to $21B+ (early 20
 
 ---
 
+## AI Agents in Prediction Markets (Scan: 2026-03-28)
+
+### The Bot Takeover Is Already Here
+- **14 of 20** most profitable Polymarket wallets are bots
+- Polystrat (Olas): 4,200+ trades in first month, up to 376% returns per trade
+- One automated bot: $150K profit across 8,894 trades, zero human intervention
+- Most bots exploit structural arbitrage (YES+NO < $1, cross-platform arb) rather than superior predictions
+- Trajectory mirrors forex: human speculation -> machine-driven liquidity
+
+### DeFAI Market
+- DeFi + AI convergence = $22.8B token market (added $10B in one week at peak)
+- Virtual Protocol: 23,500+ active wallets, $479M AI-driven activity
+- Trust Wallet launched TWAK (March 27): AI trade execution across 25+ chains for 220M users
+- EIP-7702: session keys for safe AI agent trading without exposing private keys
+- Walbi: no-code AI agents (describe strategy in plain language)
+
+### Implications for LEVER
+- **LEVER's real power users may be AI agents, not humans.** API-first design is essential.
+- AI agents need leverage to maximize capital efficiency on prediction markets. LEVER is the only infrastructure that provides it.
+- EIP-7702 session key support should be on the BUILD roadmap.
+- Fundraising narrative: "The leverage layer for AI agent trading on prediction markets."
+
+---
+
 ## Prediction Market Sector Overview (as of 2026-03-28)
 **Sources**: Prediction Index Annual Report 2025-2026; Web scans 2026-03-28
 

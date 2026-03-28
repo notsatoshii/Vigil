@@ -1,173 +1,183 @@
 # Critique: LEVER-BUG-1 — PnL Formula Mismatch (entryPrice vs entryPI)
-## Date: 2026-03-28T14:57:00Z
-## Plan reviewed: handoffs/plan-lever-bug-1.md
-## Supersedes: critique-lever-bug-2.md (reviewed earlier draft of this plan)
+## Date: 2026-03-28T15:28:00Z
+## Plan reviewed: handoffs/plan-lever-bug-1.md (unchanged since 14:23 UTC)
+## Supersedes: critique at 14:57 UTC (same file, pre-codebase-sync)
+## Codebase verified against: /home/lever/lever-protocol @ commit 9f77cc990
 
 ---
 
 ### Verdict: REVISE
 
-This plan is substantially improved over the earlier drafts. The phased approach is sound, the correct formula direction (execution price, not raw PI) aligns with LESSONS.md, and the tests target the right properties. Two issues block approval: the exit-side formula departs from LESSONS.md, and Phase 3 has an unscoped infrastructure change that will block BUILD.
+This plan is architecturally sound and correctly aligns with Master's LESSONS.md clarification. Three issues block approval: (1) the exit-side formula departs from LESSONS.md, (2) LEVER-P06 creates a Phase 2/Phase 3 ordering constraint the plan explicitly gets wrong, and (3) every line number in the plan is stale because the critique workspace symlink points to an old backup, not the actual codebase.
 
 ---
 
 ### What Is Good
 
-- Correctly reconciles with LESSONS.md and Master's clarification. The plan now uses `pos.entryPrice` (execution price) for PnL, not `pos.entryPI` (raw PI). This is the right direction.
-- Phased approach (rename, then ExecutionEngine, then MarginEngine, then SettlementEngine separately) is clean and allows incremental rollback.
-- `exitPrice` is already computed at line 350 and currently discarded for PnL. Reusing it is free.
-- `pos.entryPrice` is already stored at open. No new storage needed.
-- SettlementEngine correctly scoped out as a design decision for Master.
-- Correct observation that Phase 2 can ship independently if Phase 3 is complicated.
-- Test cases are well-targeted: round-trip spread test, cross-engine consistency, regression guard.
+- Correctly reconciles with LESSONS.md: uses `pos.entryPrice` (execution price), not `pos.entryPI` (raw PI).
+- Phased approach is clean and allows incremental rollback.
+- `exitPrice` is already computed at line 359 (actual) and currently discarded for PnL. Reusing it is free.
+- SettlementEngine correctly scoped out as a design decision requiring Master input.
+- Good test structure targeting the right properties.
+- Correctly identifies that `_computePnL` parameter names are misleading and proposes rename first.
 
 ---
 
 ### Issues Found
 
-**1. [CRITICAL] Exit-side formula departs from LESSONS.md**
+**1. [CRITICAL] LEVER-P06 makes "ship Phase 2 without Phase 3" unsafe**
 
-The plan's formula: `PnL = direction * (exitPrice_execution - entryPrice_execution) * size`
+The plan says (Rollback Plan section): "if Phase 3 is complicated by circular deps, ship Phase 2 first and file Phase 3 separately."
+
+This is no longer safe. LEVER-P06 (applied in commit 91d86cd21, verified and merged) added lines 385-389 in `_executeClose`:
+
+```solidity
+// FIX LEVER-P06: Remove this position's unrealized PnL from vault NAV tracking.
+int256 currentUnrealized = leverVault.getNetUnrealizedPnL();
+leverVault.updateUnrealizedPnL(currentUnrealized - pnl);
+```
+
+This subtracts the realized `pnl` from the vault's running unrealized PnL total. If Phase 2 changes `pnl` to use execution prices but Phase 3 has NOT updated MarginEngine (which computes the unrealized PnL that feeds this total), the subtraction is mismatched:
+
+- Unrealized PnL was tracked using raw-PI formula (MarginEngine, unmodified)
+- Realized PnL subtracted using execution-price formula (ExecutionEngine, Phase 2)
+- Difference = impact spread per position, accumulating with every close
+- Vault NAV drifts by the cumulative impact spread of all closed positions
+
+This means Phase 2 and Phase 3 must ship TOGETHER, not separately. The rollback plan must be revised: either both phases deploy in the same transaction (upgrade proxy pattern) or Phase 3 is a prerequisite for Phase 2, not a follow-up.
+
+The plan does not mention LEVER-P06 at all. It was written before P06 was applied.
+
+---
+
+**2. [CRITICAL] Exit-side formula departs from LESSONS.md**
+
+(Unchanged from prior critique; restated because plan has not been revised.)
 
 LESSONS.md line 101 (from Master): `PnL = direction * (current_PI - entry_execution_price) * size`
 
-LESSONS.md explicitly says: "The current PI from the oracle is the correct mark price." This means raw oracle PI as exit reference, execution price as entry reference. The plan uses execution-adjusted exit prices on BOTH sides.
+The plan's formula: `PnL = direction * (exitPrice_execution - entryPrice_execution) * size`
 
-The difference is the close-side execution impact. Using the plan's formula:
-- Long close: `exitPrice = pi * (1 - impact)` (lower than raw pi)
-- Short close: `exitPrice = pi * (1 + impact)` (higher than raw pi)
+LESSONS.md says "The current PI from the oracle is the correct mark price" for exit. The plan uses execution-adjusted exit prices on both sides, charging the spread twice per round trip.
 
-The plan charges traders the spread on BOTH open AND close. LESSONS.md charges them only on open.
+At 2% impact, PI = 0.50, size = $10K:
+- LESSONS.md formula (single-impact): round-trip PnL = -$100
+- Plan formula (double-impact): round-trip PnL = -$200
 
-Numerical example at 2% impact, PI = 0.50, size = 10000 USDT:
-- LESSONS.md: round-trip PnL = (0.50 - 0.51) * 10000 = -$100 (entry spread only)
-- Plan: round-trip PnL = (0.49 - 0.51) * 10000 = -$200 (double spread)
-
-This is not a subtle distinction. It is a 2x difference in the cost of every round trip. At typical volumes, this has a major impact on trader economics and vault revenue.
-
-There are valid arguments for both approaches:
-- Double-impact (plan's formula): mirrors traditional bid-ask spread. Correct if the vault is a market maker that charges spread on both legs.
-- Single-impact (LESSONS.md): correct if the exit impact is a theoretical price (no counterparty executes at that price; the vault just pays PnL). The execution impact at open is real (the trader "bought" at a worse price); at close, the vault settles at mark.
-
-The plan needs to resolve this with Master before BUILD starts. LESSONS.md is authoritative and explicit. If the plan's double-impact model is correct, LESSONS.md must be updated. If LESSONS.md is correct, line 353 should be: `_computePnL(pos.isLong, pi, pos.entryPrice, pos.positionSize)` (raw pi for exit, entryPrice for entry).
-
-**Fix:** Add this as a decision point. Propose both options to Master with the numerical impact. Do not assume double-impact. If Master chooses single-impact (LESSONS.md formula), Phase 2 becomes simpler (just swap `pos.entryPI` to `pos.entryPrice` on line 353, keep `pi` as exit) and Phase 3 becomes trivial (MarginEngine changes one line, no external call needed).
+Master must confirm which is correct before BUILD starts. If LESSONS.md formula (single-impact) is chosen:
+- Phase 2 becomes: swap `pos.entryPI` to `pos.entryPrice` on line 362 (actual). Keep `pi` as exit. One word change.
+- Phase 3 becomes: swap `pos.entryPI` to `pos.entryPrice` on MarginEngine line 369. One word change. No new function, no new dependency, no gas increase, no circular dependency concern.
+- The LEVER-P06 ordering issue (finding 1) also disappears because MarginEngine and ExecutionEngine would both change by the same delta (entryPI to entryPrice), keeping the subtraction aligned.
 
 ---
 
-**2. [HIGH] Phase 3 circular dependency is larger than described; MarginEngine has no ExecutionEngine reference at all**
+**3. [HIGH] All line numbers in the plan are stale (shifted ~9-19 lines)**
 
-I read MarginEngine.sol. The constructor takes 6 addresses: `admin`, `positionManager`, `oracle`, `marketRegistry`, `borrowFeeEngine`, `fundingRateEngine`. There is no ExecutionEngine import, no IExecutionEngine import, no stored reference.
+The plan was written against the old backup at `/home/lever/Lever` (commit c68e797). The actual codebase at `/home/lever/lever-protocol` (commit 9f77cc990) has LEVER-P03, P04, and P06 applied, which inserted new code and shifted line numbers:
 
-Adding `computeHypotheticalExitPrice` requires:
-- Adding `IExecutionEngine` import to MarginEngine.sol
-- Adding `IExecutionEngine executionEngine` state variable
-- Modifying the constructor (breaking change) or adding a `setExecutionEngine` setter with admin ACL
-- Updating the deployment script to pass ExecutionEngine address to MarginEngine
-- Updating IMarginEngine if constructor changes
+| Plan references | Actual line (lever-protocol) | What changed |
+|---|---|---|
+| Line 350: exitPrice computed | **Line 359** | +9 from P03 open-fee expansion |
+| Line 353: PnL computation | **Line 362** | +9 |
+| Lines 364-370: bad debt waterfall | **Lines 375-383** | +11; also P04 changed `absorbBadDebt` to 3 args |
+| Lines 543-553: `_computePnL` | **Lines 562-572** | +19 from P03+P04+P06 additions |
+| Lines 295-305: `_executeOpen` fee code | **Lines 298-315** | Completely rewritten by P03 |
 
-The plan says "BUILD must check whether a new getter on ExecutionEngine creates a circular import." It is not a circular import issue (Solidity interfaces don't create cycles). It is an infrastructure issue: MarginEngine has never had a reference to ExecutionEngine, and adding one is a constructor change that affects deployment order and all existing deployment scripts.
+BUILD will be looking at the wrong lines. Also, the plan's Step 3 code snippet shows `feeRouter.collectTransactionFee(pos.positionSize)` at "line 358" as the closing fee; the actual code at line 370 is `pos.positionSize * TX_FEE_RATE / WAD` (already fixed by P03). The plan does not reference the P03 local fee computation.
 
-The plan lists this as an open question but does not scope the work. BUILD will hit this at Step 4 and stall.
-
-**Fix:** Either scope the MarginEngine constructor change explicitly (including deployment script updates and migration path), OR, choose the single-impact model from LESSONS.md, which eliminates Phase 3 entirely. With the LESSONS.md formula, MarginEngine only needs to change `pos.entryPI` to `pos.entryPrice` on line 369, one line, no external call, no new dependency.
-
----
-
-**3. [HIGH] Phase 3 adds gas cost to 4 hot paths**
-
-`_computeEquity` is called in 4 places within MarginEngine:
-- `computeEquity()` (external view, used by LiquidationEngine in 3 places)
-- `isLiquidatable()` (called during every liquidation attempt)
-- `isInDangerZone()` (monitoring/UI)
-- `canRemoveCollateral()` (called during collateral removal)
-
-The proposed `computeHypotheticalExitPrice` call adds an external call to ExecutionEngine, which internally calls `_computeExecutionPrice`, which reads from `oiLimits` (external) and `marketRegistry` (external) for imbalance delta computation. That is 2-3 additional external SLOAD chains per equity computation.
-
-LiquidationEngine calls `marginEngine.computeEquity()` at least twice per liquidation (isLiquidatable check + actual liquidation). Additional gas per liquidation attempt: estimated 10-15K gas from the new external calls. At scale, this matters.
-
-**Fix:** If the single-impact model is chosen (LESSONS.md formula), this issue disappears (no external call needed; just change which Position field is read). If double-impact is confirmed, at minimum note the gas cost increase in the plan and verify it does not push any transaction near the block gas limit.
+**Fix:** Update all line references to match the actual codebase at `/home/lever/lever-protocol`. Also update the "Current Code State" section to reflect P03, P04, and P06 changes. The critique workspace symlink (`/home/lever/command/workspaces/critique/lever-protocol -> /home/lever/Lever`) should be updated to point to the actual repo.
 
 ---
 
-**4. [MEDIUM] IExecutionEngine.sol not listed in files-to-modify**
+**4. [HIGH] Phase 3 circular dependency: MarginEngine has no ExecutionEngine reference**
 
-The plan adds `computeHypotheticalExitPrice` to ExecutionEngine but does not list `contracts/interfaces/IExecutionEngine.sol` in files-to-modify. MarginEngine will call this function through the interface. The interface must be updated.
+(Unchanged from prior critique.)
 
----
+MarginEngine's constructor takes: `admin`, `positionManager`, `oracle`, `marketRegistry`, `borrowFeeEngine`, `fundingRateEngine`. No ExecutionEngine import, no state variable, no constructor arg.
 
-**5. [MEDIUM] Test 5b zero-sum assertion is imprecise**
+Adding `computeHypotheticalExitPrice` requires: import + state variable + constructor change (or admin setter) + deployment script update.
 
-The plan says: "Verify: pnl(long) + pnl(short) approximately equals -(2 * spread_cost)."
+However, note that `IExecutionEngine.previewExecution()` already does exactly what the proposed `computeHypotheticalExitPrice` would do (calls `_computeExecutionPrice` internally). If MarginEngine gets an ExecutionEngine reference, it can call the existing `previewExecution` instead of a new function. The plan's proposed new view function is redundant.
 
-With the plan's double-impact formula and flat market (pi_open = pi_close = 0.50, 2% impact):
-- Long PnL = (0.49 - 0.51) * size = -0.02 * size
-- Short PnL = -(0.51 - 0.49) * size = -0.02 * size
-- Sum = -0.04 * size
-
-That is 4x the single-side spread, not 2x. "2 * spread_cost" is ambiguous. If spread_cost = impact * pi * size, then sum = -4 * spread_cost. If spread_cost = (entryPrice - exitPrice) * size per side (i.e., 2*impact*pi*size), then sum = -2 * spread_cost. BUILD will have to guess.
-
-**Fix:** Define spread_cost explicitly in the test description with exact WAD arithmetic. Include the expected numerical value for the test parameters.
+**This issue ONLY applies if the double-impact formula is chosen.** If single-impact (LESSONS.md formula) is chosen, Phase 3 is a one-line change with no new dependencies.
 
 ---
 
-**6. [LOW] Test 5e ("winners and losers both exist") may be testing the wrong thing**
+**5. [MEDIUM] `absorbBadDebt` signature changed in LEVER-P04**
 
-The test opens 5 longs and 5 shorts, moves PI from 50% to 80%, and asserts both winners and losers exist. With ANY correct PnL formula (raw PI or execution price), longs will win and shorts will lose when PI goes up. The 38-0 bug was not about "no losers in the event log" but about losers getting pushed into bad debt via inflated losses, making them appear as insurance claims rather than losses.
+The plan discusses bad debt routing "at line 364-370" with the old signature. The actual code at line 378:
+```solidity
+(, uint256 remainder) = insuranceFund.absorbBadDebt(pos.marketId, badDebt, address(leverVault));
+```
 
-The test as described will pass with the old raw-PI formula too, since it only checks that some PnL values are positive and some negative. It does not reproduce the specific mechanism of the 38-0 bug.
+Three-argument version (added `address(leverVault)` as recipient). The plan's edge case discussion references the old 2-arg interface. While this does not affect the PnL fix directly, BUILD should be aware of the changed signature when reading around the close flow.
 
-**Fix:** Tighten the assertion. After closing all positions, verify that the sum of realized PnL is bounded (not wildly negative) and that no position triggers bad debt when it should not. That is the actual property that 38-0 violated.
+---
+
+**6. [MEDIUM] Test 5b zero-sum assertion is imprecise**
+
+(Unchanged from prior critique.)
+
+"pnl(long) + pnl(short) approximately equals -(2 * spread_cost)" is ambiguous. With double-impact on flat market:
+- Long: (pi*(1-imp) - pi*(1+imp)) * size = -2*pi*imp*size
+- Short: -(pi*(1+imp) - pi*(1-imp)) * size = -2*pi*imp*size
+- Sum = -4*pi*imp*size
+
+Define spread_cost explicitly in WAD arithmetic with the test parameters.
+
+---
+
+**7. [LOW] Test 5e does not reproduce the 38-0 mechanism**
+
+(Unchanged from prior critique.)
+
+Opening 5 longs and 5 shorts with PI moving 50% to 80% will always produce long winners and short losers regardless of formula. The test passes trivially with any PnL implementation. The 38-0 bug was about all positions appearing as winners (inflated profits absorbing impact), not about directional trades having the wrong sign. Tighten assertions to check that the loser side actually shows negative PnL proportional to the PI move, not just "some negative PnL exists."
 
 ---
 
 ### Missing Steps
 
-- Resolve exit-side formula with Master: raw PI (LESSONS.md) or execution-adjusted exitPrice (plan's formula)
-- If double-impact confirmed: scope MarginEngine constructor change, deployment script updates, and IExecutionEngine.sol interface update
-- If single-impact confirmed: Phase 3 simplifies to a one-line change in MarginEngine (entryPI to entryPrice), no new dependencies, no gas increase. Rewrite Steps 4 accordingly.
-- Assess gas impact of Phase 3 under the double-impact model
-- Exact numerical values for test 5b assertions
+- Account for LEVER-P06's `updateUnrealizedPnL` interaction. Either mandate Phase 2+3 atomic deployment, or (if single-impact is chosen) verify that the MarginEngine one-line change aligns the subtraction.
+- Update all line references to match `/home/lever/lever-protocol` @ commit 9f77cc990.
+- Resolve exit formula with Master (single-impact vs double-impact). This is the key decision that determines whether Phase 3 is trivial or complex.
+- If double-impact: use existing `previewExecution` instead of adding `computeHypotheticalExitPrice`. Scope MarginEngine constructor/deployment changes.
+- Note P03 and P04 changes in "Current Code State" section so BUILD sees the actual code.
 
 ---
 
 ### Edge Cases Not Covered
 
-- **Position opened before the fix, closed after the fix:** If `pos.entryPrice` was stored correctly at open (it was, per `_storePosition`), old positions will get the new PnL formula at close. Their unrealized PnL in MarginEngine will change once Phase 3 is deployed. Verify this does not trigger unexpected liquidations on existing positions (equity shifts downward by the impact amount).
-- **Impact asymmetry between open and close:** The imbalance delta can differ at close time vs open time. A position that opened in a balanced market may close in a highly imbalanced one, creating a large impact at close. With double-impact, this asymmetry is passed to the trader. With single-impact (LESSONS.md), it is not.
+- **Positions opened before the fix, closed after:** The `entryPrice` stored at open is already correct (set by `_computeExecutionPrice`). But unrealized PnL for existing open positions will shift when MarginEngine changes formula. This could trigger unexpected liquidations (equity drops by the impact amount). BUILD should check: are there currently open positions on testnet? If so, how many, and what is their cumulative impact exposure?
+- **LEVER-P06 vault NAV drift under partial deployment:** As described in finding 1. Not an edge case; it is a guaranteed bug if Phase 2 ships without Phase 3.
 
 ---
 
 ### Simpler Alternative
 
-If Master confirms the LESSONS.md formula (single-impact, raw PI for exit):
+If Master confirms the LESSONS.md formula (single-impact: raw PI exit, execution price entry):
 
-**Phase 2 becomes:** Change line 353 from `_computePnL(pos.isLong, pi, pos.entryPI, ...)` to `_computePnL(pos.isLong, pi, pos.entryPrice, ...)`. One word change.
+**Phase 2:** Line 362 (actual): change `pos.entryPI` to `pos.entryPrice`. One word.
+**Phase 3:** MarginEngine line 369: change `pos.entryPI` to `pos.entryPrice`. One word.
 
-**Phase 3 becomes:** Change MarginEngine line 369 from `int256(pos.entryPI)` to `int256(pos.entryPrice)`. One word change. No new function, no new import, no new dependency, no gas increase.
-
-Total code change: 2 lines in 2 files + the Phase 1 rename + tests. Effort: small, not medium.
-
-The double-impact model is valid too, but carries significantly more complexity (new view function, new dependency chain, deployment change, gas increase). Unless Master specifically wants close-side impact charged, the simpler model matches his stated formula and avoids all Phase 3 complexity.
+No new function. No new dependency. No gas increase. No circular dependency. No interface change. Phase 2 and Phase 3 can ship together trivially, fixing the P06 ordering issue. Effort: small (2-3 hours including tests).
 
 ---
 
 ### Revised Effort Estimate
 
-- If single-impact (LESSONS.md formula): **Small** (2-3 hours). Two one-line changes + tests.
-- If double-impact (plan's formula): **Medium** (4-6 hours) as stated, plus deployment script work not currently scoped.
+- Single-impact (LESSONS.md formula): **Small** (2-3 hours). Two one-word changes + tests.
+- Double-impact (plan's formula): **Medium-Large** (6-8 hours). Includes MarginEngine constructor change, deployment script update, P06 ordering analysis, and test infrastructure for the new external call path.
 
 ---
 
 ### Recommendation
 
-**Do not send to BUILD yet.** Two items to resolve first:
+**Do not send to BUILD yet.** Three items to resolve:
 
-1. **Master must confirm the exit-side formula.** Present both options:
-   - (a) Single-impact (LESSONS.md): `PnL = direction * (current_PI - pos.entryPrice) * size`. Simpler, 2 lines changed.
-   - (b) Double-impact (plan): `PnL = direction * (exitPrice - pos.entryPrice) * size`. More complete market model, but 3 files changed + new dependency chain.
-   Update LESSONS.md if option (b) is chosen (the current lesson explicitly says raw PI for exit).
+1. **Master must confirm exit formula.** Single-impact (LESSONS.md: `pi - pos.entryPrice`) or double-impact (plan: `exitPrice - pos.entryPrice`). If single-impact, most of the complexity in this plan evaporates.
 
-2. **If double-impact is chosen:** scope the MarginEngine constructor change, IExecutionEngine.sol update, and deployment script updates in the implementation steps. BUILD cannot do Phase 3 without this.
+2. **PLAN must account for LEVER-P06.** The rollback plan's "ship Phase 2 first" option is unsafe. Phase 2 and Phase 3 must deploy together, or the vault NAV tracker drifts.
 
-Once the exit formula is confirmed, resubmit for CRITIQUE review. If option (a) is chosen, this should approve immediately. The work is clear, scoped, and small.
+3. **PLAN must update line references** to match the actual codebase at `/home/lever/lever-protocol`. Also update the "Current Code State" section to reflect P03, P04, and P06 changes. The critique workspace symlink should be fixed.
+
+Once these are resolved, resubmit for CRITIQUE. If single-impact is chosen and line numbers are updated, this should approve on next pass.

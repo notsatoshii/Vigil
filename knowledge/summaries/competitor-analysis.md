@@ -74,7 +74,42 @@ CONTRARIAN VIEW: $100B notional includes wash trading. 268 projects likely inclu
 | OG | Crypto.com | Feb 2026 | Sports, politics, entertainment, economics, parlays |
 | Plus500 Futures | Plus500 | Feb 2026 | Prediction markets |
 
+### Polymarket Infrastructure Buildout (Oracle Dependency Watch)
+Polymarket made 2 acquisitions in 2 months:
+- **Dome** (Feb 19): Unified API for prediction markets (Polymarket + Kalshi + others). YC Fall 2025. Ex-Alchemy founders. $5.2M raised. This was the cross-platform API layer; now Polymarket-owned.
+- **Brahma** (March 18): DeFi execution/settlement infra. $1B+ tx processed. Phasing out existing products in 30 days.
+- **Polymarket US**: CFTC-regulated DCM. NFA regulatory agreement. Three-tier surveillance. Ed25519 API auth.
+- **API**: 23 REST endpoints + 2 WebSocket, 60 req/min public, WebSocket virtually unrestricted.
+
+**LEVER oracle risk**: Dome's cross-platform API may become Polymarket-exclusive. Gamma API backup was broken (returning 0.0). LEVER must add Kalshi as secondary oracle and migrate to WebSocket before mainnet.
+
 **ANALYSIS**: Five billion-dollar companies entered prediction markets in the last 4 months. They bring massive existing user bases (FanDuel: 12M+, DraftKings: 20M+). The competitive landscape is no longer "Polymarket and a few others." It is now a sector with serious institutional money on both the crypto-native and TradFi sides. LEVER's leverage angle remains unique; nobody else offers leveraged exposure to prediction outcomes.
+
+## Direct Competitors to LEVER (Leverage/Margin on Prediction Markets)
+
+### Ultramarkets (DIRECT COMPETITOR)
+- **What**: "The Margin Layer for Prediction Markets." Up to 10x long/short on events.
+- **Risk model**: Pre-resolution auto-close (eliminates gap risk)
+- **LP model**: Zero directional exposure for LPs, yield from fees and liquidations
+- **Founder**: Emmanuel Njoku
+- **Funding**: Unknown (no public rounds found)
+- **Chain**: Unknown
+- **LEVER differentiators**: Higher max leverage (50x vs 10x), continuous time-based risk curves (vs binary auto-close), ERC-4626 institutional LP standard, deterministic 50/30/20 fee split, tranche ledger system
+- [ultramarkets.xyz](https://www.ultramarkets.xyz/)
+
+### Limitless Exchange (ADJACENT, ON BASE)
+- **What**: Largest prediction market on Base. Binary options-style short-term markets (1-min to zero-day expiry). NOT leveraged positions.
+- **Funding**: $10M seed led by 1confirmation, with Coinbase Ventures, DCG, F-Prime, Arrington Capital
+- **Volume**: $500M+ total, 25x growth Aug-Sep 2025
+- **Chain**: Base (same as LEVER)
+- **Risk**: If they add leverage features, they become a direct competitor. Coinbase Ventures backing is significant.
+- **Opportunity**: Potential integration target (LEVER could offer leveraged positions on Limitless markets)
+- [limitless.exchange](https://limitless.exchange/)
+
+### Nettyworth (COMPLEMENTARY)
+- **What**: Prediction market positions as collateral for lending. AI-based portfolio underwriting.
+- **Metrics**: $200M+ connected wallet value, 2% origination fee
+- **Relationship to LEVER**: Complementary, not competitive. They do lending against positions; LEVER does leverage for trading. Could be a future integration partner.
 
 ## Known Competitors (from spec)
 - Polymarket (prediction market, used as oracle source)

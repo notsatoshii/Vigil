@@ -4,8 +4,8 @@
       "task_id": "lever-bug-1",
       "title": "LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs entryPI) causing 38 winners, 0 losers",
       "stage": "critiquing",
-      "agent_pid": 2785012,
-      "dispatched_at": 1774711697.249904,
+      "agent_pid": 2936632,
+      "dispatched_at": 1774715958.8397584,
       "plan_file": "/home/lever/command/handoffs/plan-lever-bug-1.md",
       "critique_file": "/home/lever/command/handoffs/critique-lever-bug-1.md",
       "build_file": "",
@@ -15,14 +15,14 @@
     "lever-bug-2": {
       "task_id": "lever-bug-2",
       "title": "LEVER-BUG-2: [CRITICAL] $304K unaccounted vault drain",
-      "stage": "verifying",
-      "agent_pid": 2804741,
+      "stage": "backlog",
+      "agent_pid": 0,
       "dispatched_at": 1774712269.9077284,
       "plan_file": "/home/lever/command/handoffs/plan-20260328-133419.md",
       "critique_file": "/home/lever/command/handoffs/critique-lever-bug-2.md",
       "build_file": "/home/lever/command/handoffs/build-lever-bug-2.md",
-      "verify_file": "",
-      "attempts": 0
+      "verify_file": "/home/lever/command/handoffs/verify-lever-bug-2.md",
+      "attempts": 1
     },
     "lever-bug-3": {
       "task_id": "lever-bug-3",
@@ -75,9 +75,69 @@
     "lever-bug-6": {
       "task_id": "lever-bug-6",
       "title": "LEVER-BUG-6: [CRITICAL] FeeRouter called without USDT by Liquidation/Settlement",
-      "stage": "planning",
-      "agent_pid": 2816672,
+      "stage": "planned",
+      "agent_pid": 0,
       "dispatched_at": 1774712611.6435335,
+      "plan_file": "/home/lever/command/handoffs/plan-lever-bug-6.md",
+      "critique_file": "",
+      "build_file": "",
+      "verify_file": "",
+      "attempts": 0
+    },
+    "lever-bug-7": {
+      "task_id": "lever-bug-7",
+      "title": "LEVER-BUG-7: [CRITICAL] Zero liquidations (depthThreshold unset)",
+      "stage": "planned",
+      "agent_pid": 0,
+      "dispatched_at": 1774713586.3238237,
+      "plan_file": "/home/lever/command/handoffs/plan-lever-bug-7.md",
+      "critique_file": "",
+      "build_file": "",
+      "verify_file": "",
+      "attempts": 0
+    },
+    "lever-bug-8": {
+      "task_id": "lever-bug-8",
+      "title": "LEVER-BUG-8: [HIGH] No closing transaction fee (10bps foregone)",
+      "stage": "planned",
+      "agent_pid": 0,
+      "dispatched_at": 1774714440.4961543,
+      "plan_file": "/home/lever/command/handoffs/plan-lever-bug-8.md",
+      "critique_file": "",
+      "build_file": "",
+      "verify_file": "",
+      "attempts": 0
+    },
+    "lever-bug-9": {
+      "task_id": "lever-bug-9",
+      "title": "LEVER-BUG-9: [HIGH] Vault NAV missing unrealized PnL",
+      "stage": "planned",
+      "agent_pid": 0,
+      "dispatched_at": 1774715023.590365,
+      "plan_file": "/home/lever/command/handoffs/plan-lever-bug-9.md",
+      "critique_file": "",
+      "build_file": "",
+      "verify_file": "",
+      "attempts": 0
+    },
+    "landing-mobile": {
+      "task_id": "landing-mobile",
+      "title": "LANDING-MOBILE: Fix mobile scroll and side-scroll issues on landing page",
+      "stage": "planned",
+      "agent_pid": 0,
+      "dispatched_at": 1774715476.035369,
+      "plan_file": "/home/lever/command/handoffs/plan-landing-mobile.md",
+      "critique_file": "",
+      "build_file": "",
+      "verify_file": "",
+      "attempts": 0
+    },
+    "landing-design": {
+      "task_id": "landing-design",
+      "title": "LANDING-DESIGN: Redesign landing page to be institutional and sophisticated",
+      "stage": "planning",
+      "agent_pid": 2934074,
+      "dispatched_at": 1774715898.3085315,
       "plan_file": "",
       "critique_file": "",
       "build_file": "",
@@ -85,6 +145,6 @@
       "attempts": 0
     }
   },
-  "sessions_today": 22,
+  "sessions_today": 50,
   "last_reset_date": "2026-03-28"
 }

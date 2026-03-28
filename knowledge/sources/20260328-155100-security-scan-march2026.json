@@ -1,0 +1,77 @@
+{
+  "id": "20260328-155100-security-focused-scan",
+  "ingestedAt": "2026-03-28T15:51:00Z",
+  "sourceType": "Web scan (multiple sources)",
+  "reliability": "High (security firms, OWASP, incident reports)",
+  "scanType": "Focused scan: DeFi Security & Vulnerabilities",
+
+  "summary": [
+    "Q1 2026 DeFi losses: $137M across 15 incidents. Top hacks: Step Finance ($27.3M), Truebit ($26.2M), Resolv ($25M+ via compromised AWS KMS key), SwapNet ($13.4M). Social engineering has replaced code exploits as dominant attack vector.",
+    "Resolv hack (March 22) is most relevant to LEVER: compromised private key (AWS KMS) allowed attacker to mint 80M USR tokens and drain $25M+. This is an infrastructure/key management attack, not a code bug. LEVER's keeper and oracle bot keys are the equivalent risk surface.",
+    "Oracle manipulation ranked #2 attack vector in 2024: $52M across 37 incidents. Flash loan price distortion, compromised data sources, TWAP exploitation. LEVER's OracleAdapter is the critical security surface. Multi-source aggregation, circuit breakers, and TWAP are recommended defenses (LEVER already uses smoothing).",
+    "Access control vulnerabilities remain #1 cause of financial losses: $953.2M in 2024. LEVER uses OpenZeppelin AccessControl with role separation (ADMIN, KEEPER, ORACLE, MARKET_MANAGER), which is the correct pattern.",
+    "AI models can now exploit 72% of smart contract vulnerabilities autonomously (GPT-5.3-Codex benchmark). This raises the bar for audit thoroughness. AI-assisted auditing tools should be part of LEVER's pre-mainnet security process."
+  ],
+
+  "entities": [
+    {"name": "Resolv Labs", "type": "protocol", "role": "Hacked March 22 via compromised AWS KMS key, $25M+ drained"},
+    {"name": "Step Finance", "type": "protocol", "role": "Hacked Q1 2026, $27.3M lost"},
+    {"name": "Truebit", "type": "protocol", "role": "Hacked Q1 2026, $26.2M lost"},
+    {"name": "SwapNet", "type": "protocol", "role": "Hacked Q1 2026, $13.4M lost"},
+    {"name": "IoTeX", "type": "protocol", "role": "Cross-chain bridge exploited Feb 21, now offering 100% compensation"},
+    {"name": "MakinaFi", "type": "protocol", "role": "Exploited Jan 20 2026, 1,299 ETH ($4.13M) stolen"},
+    {"name": "OWASP Smart Contract Top 10 2026", "type": "standard", "role": "Based on 122 incidents from 2025, $905.4M in losses"},
+    {"name": "GPT-5.3-Codex", "type": "ai_model", "role": "Exploited 72% of smart contract vulnerabilities in benchmark, fixed 41.5%"}
+  ],
+
+  "relationships": [
+    {"from": "Resolv hack", "to": "LEVER Protocol", "relationship": "analogous risk: compromised infrastructure keys (keeper/oracle bots) could enable similar attack on LEVER"},
+    {"from": "Oracle manipulation", "to": "LEVER OracleAdapter", "relationship": "OracleAdapter is LEVER's #1 security surface; uses smoothing but should verify multi-source and circuit breaker coverage"},
+    {"from": "AI exploit tools", "to": "smart contract security", "relationship": "72% autonomous exploit rate means AI-assisted auditing is now essential, not optional"}
+  ],
+
+  "categories": ["technical", "strategic"],
+
+  "keyMetrics": {
+    "q1_2026_defi_losses": "$137M",
+    "q1_2026_incidents": 15,
+    "oracleManipulationLosses2024": "$52M across 37 incidents",
+    "accessControlLosses2024": "$953.2M",
+    "aiExploitRate": "72% (GPT-5.3-Codex)",
+    "aiFix Rate": "41.5%",
+    "totalSmartContractLosses2024": "$1.42B across 149 incidents"
+  },
+
+  "leverSecurityChecklist": {
+    "criticalRisks": [
+      "Key management: Keeper and oracle bot private keys are the Resolv-equivalent attack surface. Must use hardware security modules or multi-sig, NOT raw AWS KMS alone.",
+      "Oracle manipulation: OracleAdapter's smoothing algorithm is a defense, but flash loan attacks and compromised Polymarket data could feed false PI values. Verify circuit breaker thresholds.",
+      "Access control: OpenZeppelin AccessControl is correct but must verify no functions are unprotected. ADMIN role key management is critical.",
+      "Reentrancy: LeverVault (ERC-4626) deposit/withdrawal flows and ExecutionEngine position open/close flows must be reentrancy-guarded.",
+      "AI-assisted attacks: 72% autonomous exploit rate means LEVER contracts will be targeted by AI tools. Pre-mainnet audit should include AI-assisted fuzzing."
+    ],
+    "recommendedActions": [
+      "SECURE workstream should audit key management for all bot/keeper/oracle infrastructure",
+      "Add circuit breaker to OracleAdapter if not present (halt on >X% price change in single update)",
+      "Verify all external-facing functions have proper access control modifiers",
+      "Run AI-assisted fuzzing (GPT-5.3-Codex or equivalent) against all contracts before mainnet",
+      "Establish incident response playbook (the '60-minute playbook' pattern from dev.to article)"
+    ]
+  },
+
+  "workstreamTags": {
+    "SECURE": "CRITICAL: Q1 2026 shows $137M lost. Resolv hack ($25M via key compromise) is directly relevant to LEVER's keeper/oracle bot infrastructure. Oracle manipulation is #2 attack vector. AI can now exploit 72% of vulnerabilities autonomously. Pre-mainnet security review must cover: key management, oracle circuit breakers, access control completeness, reentrancy, and AI-assisted fuzzing.",
+    "BUILD": "Verify OracleAdapter has circuit breaker for abnormal price movements. Verify all keeper/oracle bot keys use HSM or multi-sig. Run AI-assisted fuzzing before mainnet.",
+    "ADVISOR": "$137M in Q1 2026 DeFi losses is context for why LEVER needs security as a differentiator. Investors will ask about audit status.",
+    "CEO": "Security narrative for investors: LEVER uses immutable deployment (no proxy upgrade attacks), OpenZeppelin AccessControl, oracle smoothing, and plans for pre-mainnet AI-assisted audit. Differentiate from protocols that got hacked by cutting corners."
+  },
+
+  "sources": [
+    {"title": "CryptoRank: Q1 2026 DeFi Losses $137M", "url": "https://cryptorank.io/news/feed/8c57c-iotex-resolv-move-on-exploits-2026-defi-loss", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "DEV.to: Q1 2026 Exploit Pattern Analysis", "url": "https://dev.to/ohmygod/q1-2026-defi-exploit-pattern-analysis-137m-lost-5-attack-patterns-every-auditor-must-know-2mh", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"},
+    {"title": "OWASP Smart Contract Top 10 2026", "url": "https://owasp.org/www-project-smart-contract-top-10/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "CertiK: Oracle Wars", "url": "https://www.certik.com/resources/blog/oracle-wars-the-rise-of-price-manipulation-attacks", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "The Decoder: AI Exploits 72% of Vulnerabilities", "url": "https://the-decoder.com/new-benchmark-shows-ai-agents-can-exploit-most-smart-contract-vulnerabilities-on-their-own/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "Crypto Impact Hub: $112M Lost in 2 Months", "url": "https://cryptoimpacthub.com/crypto-hacks-scams-2026-roundup/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"}
+  ]
+}
