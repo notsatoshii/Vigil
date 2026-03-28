@@ -17,6 +17,9 @@
 - LEVER-BUG-9: [HIGH] Vault NAV missing unrealized PnL
 - LANDING-MOBILE: Fix mobile scroll and side-scroll issues on landing page
 - LANDING-DESIGN: Redesign landing page to be institutional and sophisticated
+- VIGIL-DASHBOARD: Complete dashboard overhaul. Real-time WebSocket, actual reactive data, KANBAN board visible, activity feed, pipeline visualization. Current dashboard is useless.
+- VIGIL-VERIFY-VISION: VERIFY must use Puppeteer/Chromium to take screenshots and use Claude vision to verify visual/UI changes. Not just code review.
+- VIGIL-SELF-IMPROVE: System must continuously self-improve without Master having to point out every problem. Overseer must be more aggressive.
 
 ---
 

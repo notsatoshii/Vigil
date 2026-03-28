@@ -23,8 +23,32 @@
       "build_file": "",
       "verify_file": "",
       "attempts": 0
+    },
+    "lever-bug-3": {
+      "task_id": "lever-bug-3",
+      "title": "LEVER-BUG-3: [CRITICAL] Ghost OI ($3.2M with zero positions)",
+      "stage": "planning",
+      "agent_pid": 2630791,
+      "dispatched_at": 1774705516.3198934,
+      "plan_file": "",
+      "critique_file": "",
+      "build_file": "",
+      "verify_file": "",
+      "attempts": 0
+    },
+    "lever-bug-4": {
+      "task_id": "lever-bug-4",
+      "title": "LEVER-BUG-4: [CRITICAL] InsuranceFund never absorbs bad debt (no USDT transfer)",
+      "stage": "planning",
+      "agent_pid": 2631785,
+      "dispatched_at": 1774705576.3677924,
+      "plan_file": "",
+      "critique_file": "",
+      "build_file": "",
+      "verify_file": "",
+      "attempts": 0
     }
   },
-  "sessions_today": 2,
+  "sessions_today": 4,
   "last_reset_date": "2026-03-28"
 }

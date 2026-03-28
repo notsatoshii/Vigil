@@ -375,21 +375,22 @@ def dispatch_pipeline_work():
                 task.dispatched_at = time.time()
                 dispatched += 1
 
-    # Ingest new backlog items as tasks
-    backlog = read_kanban_section("BACKLOG")
-    for item in backlog:
-        tid = make_task_id(item)
-        if tid not in state.tasks and dispatched < available:
-            state.tasks[tid] = TaskState(task_id=tid, title=item, stage="backlog")
-            # Dispatch PLAN
-            msg = f"Plan the implementation for: {item}. Read the codebase. Write structured plan to {HANDOFFS}/plan-{tid}.md."
-            pid = dispatch_agent("plan", msg, tid)
-            if pid:
-                state.tasks[tid].stage = "planning"
-                state.tasks[tid].agent_pid = pid
-                state.tasks[tid].dispatched_at = time.time()
-                dispatched += 1
-            break  # only plan one new item per cycle to avoid overwhelming
+    # Ingest new backlog items as tasks (only ONE at a time, only if no PLAN is running)
+    any_planning = any(t.stage == "planning" and t.agent_pid > 0 for t in state.tasks.values())
+    if not any_planning and dispatched < available:
+        backlog = read_kanban_section("BACKLOG")
+        for item in backlog:
+            tid = make_task_id(item)
+            if tid not in state.tasks:
+                state.tasks[tid] = TaskState(task_id=tid, title=item, stage="backlog")
+                msg = f"Plan the implementation for: {item}. Read the codebase. Write structured plan to {HANDOFFS}/plan-{tid}.md."
+                pid = dispatch_agent("plan", msg, tid)
+                if pid:
+                    state.tasks[tid].stage = "planning"
+                    state.tasks[tid].agent_pid = pid
+                    state.tasks[tid].dispatched_at = time.time()
+                    dispatched += 1
+                break  # only one new PLAN per cycle
 
     # Fill remaining slots with support work
     remaining = available - dispatched
