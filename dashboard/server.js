@@ -218,13 +218,13 @@ function collectAdvisor() {
 
 function collectUpcoming() {
   try {
-    const raw = sh("openclaw cron list 2>/dev/null | tail -n +2 | head -7");
-    return raw.split('\n').filter(Boolean).map(line => {
-      const parts = line.trim().split(/\s{2,}/);
-      const name = parts[1] || '';
-      const nextMatch = line.match(/in\s+(\d+[hmd])/);
-      return { name, next: nextMatch ? nextMatch[0] : 'pending' };
-    });
+    const jobsFile = '/home/lever/.openclaw/cron/jobs.json';
+    const raw = fs.readFileSync(jobsFile, 'utf-8');
+    const data = JSON.parse(raw);
+    return (data.jobs || []).filter(j => j.enabled).slice(0, 7).map(j => ({
+      name: j.name || j.id,
+      next: j.schedule && j.schedule.expr ? j.schedule.expr : 'scheduled'
+    }));
   } catch { return []; }
 }
 
