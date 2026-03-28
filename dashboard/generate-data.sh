@@ -56,6 +56,7 @@ kanban_section() {
     done | sed 's/,$//'
 }
 
+KANBAN_BACKLOG=$(kanban_section "BACKLOG")
 KANBAN_PLANNED=$(kanban_section "PLANNED")
 KANBAN_PROGRESS=$(kanban_section "IN PROGRESS")
 KANBAN_REVIEW=$(kanban_section "IN REVIEW")
@@ -149,6 +150,7 @@ cat > "$OUTPUT" << JSONEOF
     "entities": $ENTITIES_COUNT
   },
   "kanban": {
+    "backlog": [$KANBAN_BACKLOG],
     "planned": [$KANBAN_PLANNED],
     "inProgress": [$KANBAN_PROGRESS],
     "inReview": [$KANBAN_REVIEW],

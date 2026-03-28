@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-03-28T13:49:20Z",
-  "epoch": 1774705760,
+  "timestamp": "2026-03-28T13:56:45Z",
+  "epoch": 1774706205,
   "system": {
     "health": "healthy",
     "healthTime": "2026-03-28T13:09:19Z",
-    "ramUsed": 7203,
+    "ramUsed": 7593,
     "ramTotal": 15993,
-    "ramPct": 45,
+    "ramPct": 47,
     "diskPct": 18,
     "diskUsed": "35G",
     "diskTotal": "193G",
-    "cpuLoad": "0.56",
-    "uptime": "2 weeks, 2 days, 9 hours, 20 minutes"
+    "cpuLoad": "1.16",
+    "uptime": "2 weeks, 2 days, 9 hours, 27 minutes"
   },
   "services": {
     "leverFrontend": 1,
@@ -32,10 +32,11 @@
     "gatewayErrors": 3
   },
   "knowledge": {
-    "sources": 6,
+    "sources": 7,
     "entities": 7
   },
   "kanban": {
+    "backlog": ["LEVER-BUG-2: [CRITICAL] $304K unaccounted vault drain","LEVER-BUG-3: [CRITICAL] Ghost OI ($3.2M with zero positions)","LEVER-BUG-4: [CRITICAL] InsuranceFund never absorbs bad debt (no USDT transfer)","LEVER-BUG-5: [CRITICAL] InsuranceFund decimal mismatch (WAD bootstrap + USDT deposits)","LEVER-BUG-6: [CRITICAL] FeeRouter called without USDT by Liquidation/Settlement"],
     "planned": ["LEVER-BUG-1: [CRITICAL] PnL formula mismatch — plan: handoffs/plan-20260328-133419.md"],
     "inProgress": [],
     "inReview": [],
@@ -46,7 +47,7 @@
   "advisorSummary": "",
   "recentSessions": ["[2026-03-28T08:10:00Z] MIGRATION | Phase 0: Foundation","[2026-03-28T10:55:18Z] RESEARCH | Inbox ingestion: test-note.txt","[2026-03-28T12:01:54Z] RESEARCH | Inbox ingestion: 20260328-115423-PredictionIndex2025-2026.pdf","[2026-03-28T12:04:32Z] RESEARCH | Inbox ingestion: 20260328-115813-PredictionIndex2025-2026.pdf","[2026-03-28T12:36:23Z] RESEARCH | Inbox ingestion: 20260328-123557-photo-20260328-123557.jpg","[2026-03-28T12:47:13Z] RESEARCH | Inbox ingestion: 20260328-124624-pngwing.com 1.png"],
   "recentHandoffs": [{"name":"session-plan-final-review","time":1774705655,"summary":"Before building anything new, test what exists:"},{"name":"plan-20260328-133419","time":1774705603,"summary":"The whitepaper specifies PnL as a function of raw probability index values:"},{"name":"verify-verdict","time":1774704408,"summary":"All 6 audit fixes implemented correctly. Build passes. Full test suite: 1074 pas"},{"name":"build-landing-polish-v2","time":1774703827,"summary":"Final visual polish pass on the LEVER landing page. Eight specific CSS and HTML "},{"name":"build-handoff","time":1774703792,"summary":"All changes were pre-approved as part of the audit fix mandate. Solidity files m"}],
-  "nextJobs": [{"name":"overseer","next":"in 12m"},{"name":"operate-selfcheck","next":"in 56m"},{"name":"research-evening-scan","next":"in 6h"},{"name":"advisor-daily-brief","next":"in 16h"},{"name":"research-morning-scan","next":"in 18h"},{"name":"secure-weekly-audit","next":"in 2d"},{"name":"ceo-weekly-brief","next":"in 2d"}],
+  "nextJobs": [{"name":"overseer","next":"in 4m"},{"name":"operate-selfcheck","next":"in 49m"},{"name":"research-evening-scan","next":"in 6h"},{"name":"advisor-daily-brief","next":"in 16h"},{"name":"research-morning-scan","next":"in 18h"},{"name":"secure-weekly-audit","next":"in 2d"},{"name":"ceo-weekly-brief","next":"in 2d"}],
   "projects": {
     "lever": {
       "status": "testnet",

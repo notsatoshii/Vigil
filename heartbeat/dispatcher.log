@@ -105,3 +105,34 @@ Done. Here is what I found in the quick review:
 5. **Medium: Mobile first impression is bare** (four empty stat cards dominate the viewport before any real content). Backlog.
 
 The two most pressing ones are #1 and #4 -- both directly affect demo quality and both look like bugs rather than design choices.
+Done. Here is the scan:
+
+---
+
+## Regulatory Scan (March 28, 2026)
+
+The regulatory picture has gotten significantly more complex since the Prediction Index report was published three weeks ago. The situation is now bifurcated:
+
+**1. CFTC is building the framework (SUPPORTIVE)**
+Published an Advanced Notice of Proposed Rulemaking on March 16. Comment period open until April 30. Principles-based approach. Chairman Selig publicly backs Kalshi in state legal fights.
+- [CFTC ANPR](https://www.cftc.gov/PressRoom/PressReleases/9194-26) | [CoinDesk](https://www.coindesk.com/policy/2026/03/12/prediction-markets-get-tailored-u-s-guidance-from-former-foe-cftc)
+
+**2. Congress is trying to kill sports/election contracts (HOSTILE)**
+"Prediction Markets Are Gambling Act" introduced March 23 by Schiff/Curtis (bipartisan). Would ban contracts on sports, elections, war. A separate Merkley/Raskin bill targets the same. If either passes, it guts Kalshi and Polymarket's business.
+- [CNBC](https://www.cnbc.com/2026/03/26/prediction-markets-sports-election-war-legislation-kalshi-polymarket.html) | [Axios](https://www.axios.com/2026/03/26/prediction-market-ban-bill-jeff-merkley)
+
+**3. States are going criminal (AGGRESSIVE)**
+Arizona AG filed 20 criminal charges against Kalshi (first-ever criminal case). Michigan AG sued. 39 state AGs formed coalition. 11 states issued cease-and-desists. States claim $600M in lost gambling tax revenue.
+- [NPR](https://www.npr.org/2026/03/17/nx-s1-5751165/kalshi-criminal-charges-arizona) | [Michigan AG](https://www.michigan.gov/ag/news/press-releases/2026/03/05/ag-nessel-files-lawsuit-against-kalshi)
+
+**4. Insider trading is the scandal driving all of this**
+Someone made $400K+ on Maduro's ouster before it happened. Six wallets made $1.2M on the Iran strike (one account "Magamyman" traded 71 minutes before news, profited $553K). These incidents are the political ammunition behind every bill.
+- [Harvard Law](https://corpgov.law.harvard.edu/2026/03/25/from-iran-to-taylor-swift-informed-trading-in-prediction-markets/) | [Fortune](https://fortune.com/2026/03/24/kalshi-polymarket-congress-senate-updated-policies-insider-trading-gambling/)
+
+**So what for LEVER:**
+- Sports is the kill zone. LEVER should stay far away from sports market contracts.
+- Crypto, macro, and geopolitical categories are NOT targeted by any of these bills.
+- Insider trading enforcement WILL eventually reach leveraged prediction products. Worth flagging to ADVISOR now.
+- CFTC ANPR comment deadline (April 30) is worth monitoring; the final rules will shape what is legal infrastructure.
+
+Knowledge graph updated: full source entry saved, `regulatory-landscape.md` completely rewritten with the new reality.

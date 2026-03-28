@@ -50,3 +50,9 @@
 *For record keeping.*
 
 *None yet.*
+
+## URGENT (immediate autonomous work)
+
+1. VIGIL-DASHBOARD must be dramatically improved. It needs to be a real mission control. The KANBAN must be visible with real data. The pipeline must show tasks flowing. Activity must be live. This is the HIGHEST priority Vigil self-improvement task. OPERATE and BUILD should work on this immediately.
+2. All 5 session slots must ALWAYS be full. The scheduler runs every 10 seconds. If a slot opens, fill it within 10 seconds with the next priority task.
+3. VERIFY must use Puppeteer to take actual screenshots and evaluate them visually. Not just code review.
