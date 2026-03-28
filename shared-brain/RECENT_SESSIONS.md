@@ -3,6 +3,16 @@
 
 ---
 
+### [2026-03-28T13:47:00Z] PLAN | LEVER-BUG-4: InsuranceFund bad debt absorption
+- **Task**: Plan fix for InsuranceFund never absorbing bad debt
+- **Outcome**: SUCCESS
+- **Root cause 1**: Constructor sets `_balance = INSURANCE_BOOTSTRAP` (10,000e6) with no actual USDT transfer. Phantom balance causes safeTransfer to revert when real USDT < computed insurancePaid.
+- **Root cause 2**: `absorbBadDebt` sends USDT to `msg.sender` (LiquidationEngine/SettlementEngine) instead of `address(leverVault)`. Engine never forwards it. Vault never receives insurance coverage.
+- **Fix designed**: InsuranceFund.sol only. (1) Set `_balance = 0` in constructor. (2) Change `usdt.safeTransfer(msg.sender, ...)` to `usdt.safeTransfer(address(leverVault), ...)`. 2 lines, 1 file.
+- **Note**: Bootstrap funding should happen at deploy time via admin transferring USDT and calling deposit().
+
+---
+
 ### [2026-03-28T13:45:00Z] PLAN | LEVER-BUG-3: Ghost OI
 - **Task**: Plan fix for ghost OI ($3.2M in OILimits with zero open positions)
 - **Outcome**: SUCCESS
@@ -115,3 +125,19 @@
 
 **Files changed:** ExecutionEngine.sol (2 functions, ~5 lines), new test file VaultDrain.t.sol
 **Plan:** handoffs/plan-lever-bug-2.md
+
+---
+## OPERATE | 2026-03-28 14:55-14:57 UTC
+
+**Task**: System check, log review.
+
+**Findings**:
+- All 8 services ACTIVE. No issues.
+- Disk: 18% / RAM: 52% (7.8G/15G). Healthy.
+- Inbox: clean, no pending files. All 5 ingestion jobs today completed successfully.
+- Telegram gateway: stable since 11:58 (v2). Processing tasks normally. Two long tasks (2089s, 2409s) completed without error.
+- Scheduler: 5 active sessions, 10 dispatched today. Running smoothly.
+- Health check log: unchanged since 12:00 false alarm (next cron run at 16:00). Stale `needs-escalation` flag was already cleared by prior OPERATE session.
+- Gateway journal: no errors since 14:00. One informational note about headless Chrome WebGL (expected).
+
+**Issues**: None. System is healthy.
