@@ -218,7 +218,7 @@ function collectAdvisor() {
 
 function collectUpcoming() {
   try {
-    const raw = sh("su - lever -c \"openclaw cron list 2>/dev/null\" | tail -n +2 | head -7");
+    const raw = sh("openclaw cron list 2>/dev/null | tail -n +2 | head -7");
     return raw.split('\n').filter(Boolean).map(line => {
       const parts = line.trim().split(/\s{2,}/);
       const name = parts[1] || '';
