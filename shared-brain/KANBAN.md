@@ -25,7 +25,7 @@
 ## PLANNED
 *Plans written and approved by CRITIQUE. Ready for BUILD.*
 
-- LEVER-BUG-1: [CRITICAL] PnL formula mismatch — plan: handoffs/plan-20260328-133419.md
+- LEVER-BUG-1: [CRITICAL] PnL formula mismatch — plan: handoffs/plan-20260328-133501.md
 
 ---
 

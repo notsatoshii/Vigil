@@ -108,13 +108,12 @@ function collectKanban() {
     blocked: getSection('BLOCKED')
   };
 
-  // Merge live scheduler state for in-progress tasks
+  // Merge live scheduler state for pipeline tasks
   try {
     const stateFile = '/home/lever/command/heartbeat/scheduler-state.json';
     const state = JSON.parse(fs.readFileSync(stateFile, 'utf-8'));
     const tasks = state.tasks || {};
     for (const [tid, task] of Object.entries(tasks)) {
-      const label = `${tid}: ${task.stage}`;
       if (task.stage === 'planning' || task.stage === 'critiquing' || task.stage === 'building') {
         if (!kanban.inProgress.some(i => i.includes(tid))) {
           kanban.inProgress.push(`${tid} [${task.stage.toUpperCase()}]`);
@@ -126,6 +125,20 @@ function collectKanban() {
       } else if (task.stage === 'blocked') {
         if (!kanban.blocked.some(i => i.includes(tid))) {
           kanban.blocked.push(`${tid} [BLOCKED after ${task.attempts} attempts]`);
+        }
+      }
+    }
+  } catch {}
+
+  // Merge live running agent processes (support tasks)
+  try {
+    const psResult = sh("ps aux | grep 'openclaw agent' | grep -v grep | sed 's/.*--agent //' | cut -d' ' -f1 | sort -u");
+    const running = psResult.split('\n').filter(Boolean);
+    for (const agent of running) {
+      const upper = agent.toUpperCase();
+      if (!['PLAN', 'CRITIQUE', 'BUILD', 'VERIFY'].includes(upper)) {
+        if (!kanban.inProgress.some(i => i.toUpperCase().includes(upper))) {
+          kanban.inProgress.push(`${upper} [ACTIVE]`);
         }
       }
     }
