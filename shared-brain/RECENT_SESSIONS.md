@@ -3,6 +3,15 @@
 
 ---
 
+### [2026-03-28T13:45:00Z] PLAN | LEVER-BUG-3: Ghost OI
+- **Task**: Plan fix for ghost OI ($3.2M in OILimits with zero open positions)
+- **Outcome**: SUCCESS
+- **Root cause identified**: Redeployment artifact. PositionManager cleared on redeploy; OILimits retained stale accumulators. All normal decrement paths verified correct.
+- **Fix designed**: Improve adminResetMarketOI with (a) on-chain position count check via PositionManager, (b) per-user OI reset via affectedUsers[] param. Add Forge diagnostic + reset scripts. 4 new tests.
+- **Key finding**: Current adminResetMarketOI (LEVER-006/P06) exists but has two defects: no on-chain verification, _userOI not cleared.
+- **Open question**: PositionManager is in protected list. BUILD must check if getMarketPositions() already exists before adding getMarketPositionCount(). If PositionManager cannot be modified, track position count inside OILimits directly.
+- **Handoff**: /home/lever/command/handoffs/plan-lever-bug-3.md
+
 ### [2026-03-28T08:10:00Z] MIGRATION | Phase 0: Foundation
 - **Task**: Create Vigil directory structure and seed shared brain files
 - **Outcome**: SUCCESS
