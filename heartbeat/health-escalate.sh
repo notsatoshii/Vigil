@@ -48,16 +48,10 @@ while IFS= read -r problem; do
         # Attempt restart (max 2 tries)
         for attempt in 1 2; do
             echo "[$TIMESTAMP] Restarting $SVC (attempt $attempt)..." >> "$LOG_FILE"
-            if [[ "$SVC" == "openclaw-gateway" ]]; then
-                systemctl --user restart "$SVC" 2>> "$LOG_FILE"
-            else
-                systemctl restart "$SVC" 2>> "$LOG_FILE"
-            fi
+            systemctl restart "$SVC" 2>> "$LOG_FILE"
             sleep 3
-            if [[ "$SVC" == "openclaw-gateway" ]]; then
-                systemctl --user is-active --quiet "$SVC" && break
-            else
-                systemctl is-active --quiet "$SVC" && break
+            if systemctl is-active --quiet "$SVC"; then
+                break
             fi
             if [ "$attempt" -eq 2 ]; then
                 echo "[$TIMESTAMP] FAILED: Could not restart $SVC after 2 attempts." >> "$LOG_FILE"

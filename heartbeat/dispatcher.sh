@@ -31,19 +31,19 @@ dispatch() {
 
 # Check what is in each KANBAN stage
 backlog_count() {
-    grep -c "^- " <(sed -n '/^## BACKLOG/,/^---/p' "$KANBAN") 2>/dev/null || echo 0
+    grep -c "^- " <(sed -n '/^## BACKLOG/,/^---/p' "$KANBAN") 2>/dev/null; return 0
 }
 
 planned_count() {
-    grep -c "^- " <(sed -n '/^## PLANNED/,/^---/p' "$KANBAN") 2>/dev/null || echo 0
+    grep -c "^- " <(sed -n '/^## PLANNED/,/^---/p' "$KANBAN") 2>/dev/null; return 0
 }
 
 in_progress_count() {
-    grep -c "^- " <(sed -n '/^## IN PROGRESS/,/^---/p' "$KANBAN") 2>/dev/null || echo 0
+    grep -c "^- " <(sed -n '/^## IN PROGRESS/,/^---/p' "$KANBAN") 2>/dev/null; return 0
 }
 
 in_review_count() {
-    grep -c "^- " <(sed -n '/^## IN REVIEW/,/^---/p' "$KANBAN") 2>/dev/null || echo 0
+    grep -c "^- " <(sed -n '/^## IN REVIEW/,/^---/p' "$KANBAN") 2>/dev/null; return 0
 }
 
 # Get the top backlog item
