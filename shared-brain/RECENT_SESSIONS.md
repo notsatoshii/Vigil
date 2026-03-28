@@ -3,6 +3,30 @@
 
 ---
 
+### [2026-03-28T15:08:00Z] OPERATE | System check + dashboard fix
+
+- **Task**: Full system self-check, log review, fix any issues found
+- **Outcome**: ONE FIX APPLIED. All services up.
+- **Bug fixed**: vigil-dashboard server.js called `su - lever -c "openclaw cron list"` to collect upcoming cron jobs. The `lever` user has no password set, so this produced continuous PAM auth failures in system journal (every ~10 seconds). Fixed by removing the `su - lever -c` wrapper since the service already runs as `lever`. Restarted vigil-dashboard. Auth failures stopped. Committed and pushed.
+- **Services**: All 8 active. openclaw-gateway (1.2G RAM, 2h 46m uptime since last restart), vigil-telegram (316M, clean), vigil-dashboard (restarted, clean), lever-frontend (1d+ uptime, serving traffic), lever-oracle (5d uptime), lever-accrue-keeper (2d uptime), caddy (assumed active).
+- **Resources**: Disk 18% (/dev/vda1, 35G/193G), RAM 43% used (6.9G/16G), 9G available. No pressure.
+- **Cron status**: operate-selfcheck and overseer both show "error" (job execution timed out). operate-selfcheck timeout is 600s; overseer timeout was 1800s. Both are non-critical (next run scheduled). No action taken.
+- **Root claude sessions**: 3 sleeping root-owned claude processes consuming ~3.2G RAM total (PIDs 1151018/Mar22, 1312428/Mar26, 2375109/08:11). Likely Master SSH sessions or long-running tasks. Not killed -- root-owned, sleeping, RAM not under pressure.
+- **Log highlights**: Telegram gateway had 2 empty-response retries during restarts (normal). Inbox pipeline clean, 5 files processed. Task completions up to 3572s (dashboard work). Scheduler at 13-14 sessions today, running normally.
+- **KANBAN**: LEVER-BUG-2 IN PROGRESS (BUILD dispatched 15:07). LEVER-BUG-1 BLOCKED (critique verdict REVISE). LEVER-BUG-3, BUG-4 PLANNED.
+
+---
+
+### [2026-03-28T14:56:00Z] OPERATE | System check (routine)
+- **Task**: Full log review, service check, fix any issues
+- **Outcome**: ALL CLEAR. No new issues found.
+- **Services**: All 8 active (openclaw-gateway, vigil-telegram, vigil-dashboard, vigil-inbox, lever-frontend, lever-oracle, lever-accrue-keeper, caddy)
+- **Resources**: Disk 18%, RAM 52%, Load 0.39
+- **Logs**: Telegram gateway clean, inbox pipeline clean (5 files processed today), scheduler running 10s cycles with 5 slots filled
+- **Note**: Previous OPERATE session (13:38) fixed two bugs: (1) dispatcher.sh KANBAN count parsing `|| echo 0` producing "0\n0", (2) health-escalate.sh using `systemctl --user` for system-level openclaw-gateway service. Dispatcher.sh since replaced by scheduler.py. Health-escalate fix confirmed persisted.
+
+---
+
 ### [2026-03-28T13:47:00Z] PLAN | LEVER-BUG-4: InsuranceFund bad debt absorption
 - **Task**: Plan fix for InsuranceFund never absorbing bad debt
 - **Outcome**: SUCCESS
