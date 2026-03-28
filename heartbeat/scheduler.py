@@ -191,8 +191,12 @@ def read_kanban_section(section):
 
 
 def update_kanban(task_title, from_section, to_section):
-    """Move a task between KANBAN sections."""
+    """Move a task between KANBAN sections. Uses lockfile to prevent corruption."""
+    lockfile = "/tmp/vigil-kanban.lock"
+    import fcntl
     try:
+        lock_fd = open(lockfile, 'w')
+        fcntl.flock(lock_fd, fcntl.LOCK_EX)
         with open(KANBAN) as f:
             content = f.read()
 
@@ -223,6 +227,11 @@ def update_kanban(task_title, from_section, to_section):
         log.info(f"KANBAN: '{task_title[:40]}...' moved to {to_section}")
     except Exception as e:
         log.error(f"KANBAN update failed: {e}")
+    finally:
+        try:
+            fcntl.flock(lock_fd, fcntl.LOCK_UN)
+            lock_fd.close()
+        except: pass
 
 
 # ============================================================
