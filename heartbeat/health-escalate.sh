@@ -46,11 +46,13 @@ while IFS= read -r problem; do
         fi
 
         # Attempt restart (max 2 tries)
+        # Note: this script runs as root via cron; sudo is not needed and causes
+        # "Failed to connect to bus: No medium found" in non-interactive sessions.
         for attempt in 1 2; do
             echo "[$TIMESTAMP] Restarting $SVC (attempt $attempt)..." >> "$LOG_FILE"
-            sudo systemctl restart "$SVC" 2>> "$LOG_FILE"
+            systemctl restart "$SVC" 2>> "$LOG_FILE"
             sleep 3
-            if sudo systemctl is-active --quiet "$SVC"; then
+            if systemctl is-active --quiet "$SVC"; then
                 break
             fi
             if [ "$attempt" -eq 2 ]; then
