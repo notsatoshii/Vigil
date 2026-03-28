@@ -1,0 +1,5 @@
+2026-03-28 13:37:03,532 [INFO] Vigil Scheduler started
+2026-03-28 13:37:03,532 [INFO] Max sessions: 5
+2026-03-28 13:37:03,532 [INFO] Check interval: 60s
+2026-03-28 13:37:03,532 [INFO] KANBAN: /home/lever/command/shared-brain/KANBAN.md
+2026-03-28 13:37:03,552 [INFO] All 5 slots full. Waiting.

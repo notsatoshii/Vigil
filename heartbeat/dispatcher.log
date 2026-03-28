@@ -1,0 +1,49 @@
+[2026-03-28T13:34:19Z] === Dispatcher run: 0 active, 5 slots available ===
+[2026-03-28T13:34:19Z] KANBAN: backlog=11 planned=0
+0 progress=0
+0 review=0
+0
+[2026-03-28T13:34:19Z] DISPATCH: plan - Plan the implementation for this task from the KANBAN BACKLOG: LEVER-BUG-1: [CRI...
+[2026-03-28T13:34:19Z] DISPATCH: improve - Do a quick product review. Open the LEVER frontend at http://localhost:3000 in t...
+[2026-03-28T13:34:19Z] DISPATCH: operate - Run a system check. Read all Vigil logs (telegram-gateway.log, inbox.log, health...
+[2026-03-28T13:34:19Z] DISPATCH: research - Quick intelligence check. Pick one item from your watchlist coverage areas and d...
+[2026-03-28T13:34:19Z] Dispatched 4 tasks. Done.
+[2026-03-28T13:35:01Z] === Dispatcher run: 0 active, 5 slots available ===
+[2026-03-28T13:35:01Z] KANBAN: backlog=11 planned=0
+0 progress=0
+0 review=0
+0
+[2026-03-28T13:35:01Z] DISPATCH: plan - Plan the implementation for this task from the KANBAN BACKLOG: LEVER-BUG-1: [CRI...
+/home/lever/command/heartbeat/dispatcher.sh: line 93: [: 0
+0: integer expression expected
+[2026-03-28T13:35:01Z] DISPATCH: improve - Do a quick product review. Open the LEVER frontend at http://localhost:3000 in t...
+[2026-03-28T13:35:01Z] DISPATCH: operate - Run a system check. Read all Vigil logs (telegram-gateway.log, inbox.log, health...
+[2026-03-28T13:35:01Z] DISPATCH: research - Quick intelligence check. Pick one item from your watchlist coverage areas and d...
+[2026-03-28T13:35:01Z] Dispatched 4 tasks. Done.
+Done. Here is the scan:
+
+---
+
+## AI Tools & Models Scan (March 28, 2026)
+
+**1. BREAKING: Claude Mythos (Capybara) leaked (March 26-27)**
+Anthropic accidentally revealed a new model tier ABOVE Opus. Confirmed to Fortune as "the most capable we've built to date." Dramatically outperforms Opus 4.6 on coding, reasoning, and cybersecurity. New fourth pricing tier (above Opus), no public access yet. Piloting with select customers for cybersecurity defense. The leak caused cybersecurity stocks to sell off.
+- **So what for us**: This is the model that could meaningfully upgrade Vigil's capabilities. Monitor API access timeline closely. When it drops, ADVISOR should evaluate cost/benefit of upgrading our agent stack.
+- [Fortune](https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/) | [SiliconANGLE](https://siliconangle.com/2026/03/27/anthropic-launch-new-claude-mythos-model-advanced-reasoning-features/) | [CoinDesk](https://www.coindesk.com/markets/2026/03/27/anthropic-s-massive-claude-mythos-leak-reveals-a-new-ai-model-that-could-be-a-cybersecurity-nightmare)
+
+**2. Claude Code at v2.1.76: /loop, /voice, Computer Use**
+New /loop command turns Claude Code into a recurring monitor (lightweight cron). Voice mode is push-to-talk. Computer Use preview lets Claude click and navigate your screen. Rate limit drain bug reported March 26.
+- **So what for us**: /loop is already in our toolkit. Computer Use could automate browser-based testing. The rate limit bug may explain any recent session burn; watch for a fix.
+- [MacRumors](https://www.macrumors.com/2026/03/26/claude-code-users-rapid-rate-limit-drain-bug/)
+
+**3. OpenAI GPT-5.4 released (March 5)**
+1M token context, record benchmark scores (83% GDPval), 33% fewer errors vs GPT-5.2. Ties Gemini 3.1 Pro at #1 on the Intelligence Index (57 pts). Codex broad release March 27 with multi-agent workflows.
+- **So what for us**: Competitive pressure validates our choice of Anthropic but Codex multi-agent is worth watching as a potential alternative architecture for Vigil-like systems.
+- [TechCrunch](https://techcrunch.com/2026/03/05/openai-launches-gpt-5-4-with-pro-and-thinking-versions/)
+
+**4. Meta delays Avocado, may license Gemini**
+Meta's next frontier model pushed from March to May+ 2026. Cannot match GPT-5.4 or Gemini 3.1. Reportedly considering licensing Gemini from Google.
+- **So what for us**: Meta falling behind means Llama 4 (open-source) remains the best self-hosted option but the frontier gap widens. Not directly actionable.
+- [Trending Topics](https://www.trendingtopics.eu/meta-delays-avocado-ai-model-again-might-even-license-gemini-from-google/)
+
+**Knowledge graph updated**: Source entry saved, `technical-landscape.md` updated with full model leaderboard and Claude Code changelog.

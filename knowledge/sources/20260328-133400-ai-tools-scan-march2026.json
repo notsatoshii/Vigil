@@ -1,0 +1,66 @@
+{
+  "id": "20260328-133400-ai-tools-focused-scan",
+  "ingestedAt": "2026-03-28T13:34:00Z",
+  "sourceType": "Web scan (multiple sources)",
+  "reliability": "High (multiple credible outlets confirming)",
+  "scanType": "Focused scan: AI Tools and Models watchlist",
+
+  "summary": [
+    "Anthropic accidentally leaked 'Claude Mythos' (codename Capybara), a new tier ABOVE Opus. Dramatically better at coding, reasoning, and cybersecurity. Currently piloting with select customers for cybersecurity defense. No public release or pricing yet.",
+    "Claude Code updated to v2.1.76 in March 2026: /loop command (recurring tasks), /voice mode (push-to-talk), Computer Use preview, 1M context window, Opus 4.6 default, max output increased to 64K (128K upper bound). Rate limit drain bug reported March 26.",
+    "OpenAI released GPT-5.4 (March 5): 1M token context, record benchmark scores, 33% fewer claim errors vs GPT-5.2. Codex broad release (March 27) with plugins and multi-agent workflows.",
+    "Google Gemini 3.1 Pro ties GPT-5.4 Pro at top of AI Intelligence Index (57 points). Gemini 3.1 Flash Live in preview for real-time multimodal voice/video.",
+    "Meta delayed 'Avocado' model from March to May 2026 minimum; cannot match competitor performance. May license Google Gemini instead."
+  ],
+
+  "entities": [
+    {"name": "Claude Mythos (Capybara)", "type": "ai_model", "role": "Anthropic's new top-tier model above Opus, leaked March 26-27 2026"},
+    {"name": "Claude Opus 4.6", "type": "ai_model", "role": "Current top Anthropic model; Mythos dramatically outperforms it"},
+    {"name": "Claude Code", "type": "tool", "role": "Updated to v2.1.76 with /loop, /voice, Computer Use, 1M context"},
+    {"name": "GPT-5.4", "type": "ai_model", "role": "OpenAI's latest, released March 5 2026, 1M context, record benchmarks"},
+    {"name": "GPT-5.4 Pro", "type": "ai_model", "role": "Ties Gemini 3.1 Pro at #1 on AI Intelligence Index"},
+    {"name": "Gemini 3.1 Pro", "type": "ai_model", "role": "Google's top model, tied #1 on Intelligence Index at 57 points"},
+    {"name": "Gemini 3.1 Flash Live", "type": "ai_model", "role": "Real-time multimodal voice/video, preview for developers"},
+    {"name": "Meta Avocado", "type": "ai_model", "role": "Delayed from March to May 2026, cannot match competitors"},
+    {"name": "Llama 4", "type": "ai_model", "role": "Meta's open-source with agentic capabilities, no vendor lock-in"},
+    {"name": "OpenAI Codex", "type": "tool", "role": "Broad release March 27, plugins, multi-agent workflows"},
+    {"name": "Anthropic", "type": "company", "role": "Claude model family, Mythos leak caused cybersecurity stock selloff"},
+    {"name": "OpenAI", "type": "company", "role": "GPT-5.4 release, Codex update"},
+    {"name": "Google", "type": "company", "role": "Gemini 3.1 Pro/Flash Live"},
+    {"name": "Meta", "type": "company", "role": "Avocado delayed, Llama 4 open-source"}
+  ],
+
+  "relationships": [
+    {"from": "Claude Mythos", "to": "Claude Opus 4.6", "relationship": "new tier above, dramatically outperforms on coding/reasoning/cybersecurity"},
+    {"from": "GPT-5.4 Pro", "to": "Gemini 3.1 Pro", "relationship": "tied at #1 on AI Intelligence Index (57 points)"},
+    {"from": "Meta Avocado", "to": "Gemini", "relationship": "Meta may license Gemini due to Avocado delays"},
+    {"from": "Claude Code", "to": "Vigil system", "relationship": "our operational infrastructure, now at v2.1.76"}
+  ],
+
+  "categories": ["technical", "strategic"],
+
+  "keyMetrics": {
+    "claudeCodeVersion": "2.1.76",
+    "claudeCodeContextWindow": "1M tokens",
+    "claudeCodeMaxOutput": "64K default, 128K upper bound",
+    "gpt54ContextWindow": "1M tokens",
+    "gpt54ErrorReduction": "33% fewer claim errors vs GPT-5.2",
+    "aiIntelligenceIndexTop": "57 points (GPT-5.4 Pro = Gemini 3.1 Pro)"
+  },
+
+  "workstreamTags": {
+    "BUILD": "Claude Code /loop and Computer Use could automate more of our CI/CD and monitoring. Worth exploring.",
+    "ADVISOR": "Claude Mythos (above Opus) could be a significant capability jump for Vigil if/when available via API. Monitor pricing and access.",
+    "SECURE": "Mythos leak is cybersecurity-focused; the model excels at finding vulnerabilities. Could be valuable for SECURE workstream auditing when available.",
+    "CEO": "AI model race is accelerating; all major players now at 1M context. Vigil runs on cutting-edge infrastructure; this is a differentiator worth mentioning to investors."
+  },
+
+  "sources": [
+    {"title": "Fortune: Anthropic Mythos Leak", "url": "https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "SiliconANGLE: Claude Mythos Advanced Reasoning", "url": "https://siliconangle.com/2026/03/27/anthropic-launch-new-claude-mythos-model-advanced-reasoning-features/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "TechCrunch: GPT-5.4 Launch", "url": "https://techcrunch.com/2026/03/05/openai-launches-gpt-5-4-with-pro-and-thinking-versions/", "dateAccessed": "2026-03-28", "sourceType": "Primary", "reliability": "High"},
+    {"title": "MacRumors: Claude Code Rate Limit Bug", "url": "https://www.macrumors.com/2026/03/26/claude-code-users-rapid-rate-limit-drain-bug/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"},
+    {"title": "Trending Topics: Meta Avocado Delay", "url": "https://www.trendingtopics.eu/meta-delays-avocado-ai-model-again-might-even-license-gemini-from-google/", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "Medium"},
+    {"title": "CoinDesk: Mythos Cybersecurity Impact", "url": "https://www.coindesk.com/markets/2026/03/27/anthropic-s-massive-claude-mythos-leak-reveals-a-new-ai-model-that-could-be-a-cybersecurity-nightmare", "dateAccessed": "2026-03-28", "sourceType": "Secondary", "reliability": "High"}
+  ]
+}

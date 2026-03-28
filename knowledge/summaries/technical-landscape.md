@@ -1,4 +1,39 @@
 # Technical Landscape
+
+## AI Model Landscape (Scan: 2026-03-28)
+
+### Breaking: Claude Mythos (Capybara) Leaked (March 26-27, 2026)
+Anthropic accidentally revealed a new model tier ABOVE Opus called "Mythos" (internal codename: Capybara). Confirmed by Anthropic to Fortune. Key details:
+- Dramatically outperforms Opus 4.6 on coding, reasoning, and cybersecurity benchmarks
+- New fourth product tier (above Haiku/Sonnet/Opus), expected to be pricier
+- Currently piloting with select customers for cybersecurity defense only
+- No public release date or API pricing yet
+- Leak caused cybersecurity stocks to sell off (model excels at finding vulnerabilities)
+- **Vigil implication**: When available, Mythos could significantly upgrade our agent capabilities. Monitor API access closely.
+
+### Current Model Leaderboard (March 2026)
+| Model | Provider | Context | Notes |
+|-------|----------|---------|-------|
+| GPT-5.4 Pro | OpenAI | 1M tokens | Tied #1 on AI Intelligence Index (57 pts). Released March 5. |
+| Gemini 3.1 Pro | Google | 1M tokens | Tied #1 on AI Intelligence Index (57 pts). |
+| Claude Opus 4.6 | Anthropic | 1M tokens | Powers Vigil. 64K default output, 128K upper bound. |
+| Llama 4 | Meta | varies | Best open-source; strong agentic capabilities. |
+| Meta Avocado | Meta | TBD | Delayed from March to May+ 2026. May license Gemini. |
+
+### Claude Code Updates (v2.1.76, March 2026)
+- **/loop command**: Recurring task execution on intervals (lightweight cron)
+- **/voice mode**: Push-to-talk with spacebar, 10+ new languages
+- **Computer Use preview**: Point, click, navigate (Pro/Max plans)
+- **1M token context window** now standard
+- **Max output**: 64K default, 128K upper bound for Opus 4.6/Sonnet 4.6
+- **Windows support**: PowerShell tool preview
+- **Bug alert**: Users reporting rapid rate limit drain (March 26), suspected bug
+
+### OpenAI Codex (March 27, 2026)
+Broad release with first-class plugins, multi-agent workflows, file watching, remote websocket connections. Competing directly with Claude Code's agent capabilities.
+
+---
+
 ## LEVER Protocol Architecture and Stack
 
 ### What LEVER Is

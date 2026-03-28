@@ -1,31 +1,19 @@
 # ACTIVE WORK
-## What is in flight right now. Updated by every workstream at session start/end.
-## Commander reads this before routing to avoid collisions.
+## Updated automatically by the scheduler.
 
 ---
 
 ## Currently Running
-*Workstream, task, started, status.*
 
-*Nothing active.*
-
----
-
-## Recently Completed (last 48 hours)
-*Workstream, task, completed, outcome.*
-
-[2026-03-28] MIGRATION | Vigil system build (Phase 0 through Phase 8) | In progress
+*No active sessions.*
 
 ---
 
-## Blocked / Waiting
-*Workstream, task, blocked by what, since when.*
+## Pipeline Status
 
-*Nothing blocked.*
-
----
-
-## Queue (next up)
-*Workstream, task, priority, waiting since.*
-
-*Queue empty. Heartbeat will pick from INTENTIONS.md when idle.*
+- Backlog: 11 tasks
+- Planned: 0 tasks
+- In Progress: 0 tasks
+- In Review: 0 tasks
+- Done: 6 tasks
+- Blocked: 0 tasks
