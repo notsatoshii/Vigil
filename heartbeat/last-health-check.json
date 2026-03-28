@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-03-28T08:57:00Z",
+  "status": "healthy",
+  "problems": [],
+  "disk_percent": 17,
+  "ram_percent": 39,
+  "ram_used_mb": 6361,
+  "ram_total_mb": 15993,
+  "frontend_http": "200",
+  "stuck_sessions": 0
+}
