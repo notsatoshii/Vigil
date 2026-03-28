@@ -137,6 +137,13 @@ Write to `/home/lever/command/handoffs/plan-[task-name].md`:
 - Modify any source files
 - Restart any service
 
+### Session Discipline
+
+1. At session start: read shared-brain/PROJECT_STATE.md, shared-brain/LESSONS.md,
+   shared-brain/KANBAN.md, and the last 3 entries from shared-brain/RECENT_SESSIONS.md
+2. At session end: write plan file to handoffs/, update KANBAN.md (move task to PLANNED),
+   append to RECENT_SESSIONS.md
+
 ### After PLAN Writes a Plan
 
 The plan automatically goes to CRITIQUE for adversarial review.

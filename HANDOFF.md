@@ -13,7 +13,7 @@
 - **Caddy**: Port 80, reverse proxy to lever-frontend on :3000
 - **Vigil Dashboard**: Port 8080, static HTML regenerated every 60 seconds
 
-### Agents Registered (9 total)
+### Agents Registered (11 total)
 | Agent | Model | Workspace |
 |-------|-------|-----------|
 | main (Commander) | claude-cli/claude-sonnet-4-6 | /home/lever/command/workspaces/ |
@@ -24,6 +24,8 @@
 | operate | claude-cli/claude-sonnet-4-6 | /home/lever/command/workspaces/operate/ |
 | ceo | claude-cli/claude-sonnet-4-6 | /home/lever/command/workspaces/ceo/ |
 | advisor | claude-cli/claude-opus-4-6 | /home/lever/command/workspaces/advisor/ |
+| plan | claude-cli/claude-sonnet-4-6 | /home/lever/command/workspaces/plan/ |
+| critique | claude-cli/claude-sonnet-4-6 | /home/lever/command/workspaces/critique/ |
 | improve | claude-cli/claude-sonnet-4-6 | /home/lever/command/workspaces/improve/ |
 
 ### Scheduled Jobs (OpenClaw cron)
@@ -35,13 +37,14 @@
 | secure-weekly-audit | secure | Monday 3am UTC |
 | ceo-weekly-brief | ceo | Monday 7am UTC |
 | improve-weekly-review | improve | Wednesday 9am UTC |
+| operate-vigil-selfcheck | operate | Every 4 hours |
 
 ### System Cron (not OpenClaw)
 | Schedule | Script | Purpose |
 |----------|--------|---------|
 | Every 4 hours | heartbeat/health-escalate.sh | Tier 1/2 health check |
-| Every hour | /root/backup-lever.sh | Git backup to GitHub |
-| Every 30 min | /root/check-agents.sh | Build log staleness check |
+| Every hour | /root/backup-lever-new.sh | Git backup to GitHub |
+| Every hour | /root/backup-vigil.sh | Vigil repo backup to GitHub |
 | Every 30 min | update-fallback-prices.sh | Oracle fallback prices |
 
 ### Dependencies Installed
@@ -61,6 +64,7 @@
 | lever-oracle | Running | Oracle price keeper |
 | lever-accrue-keeper | Running | Borrow index accrual |
 | openclaw-gateway | Running | Port 18789, Telegram connected |
+| vigil-telegram | Running | Telegram bot relay |
 | vigil-dashboard | Running | Port 8080, replaces lever-dashboard |
 | vigil-dashboard-gen | Timer | Regenerates HTML every 60s |
 | lever-bot | Stopped, disabled | Replaced by OpenClaw Commander |
@@ -74,7 +78,7 @@ lever-loop, lever-qa, lever-seeder, lever-watchdog
 ## WHAT WORKS
 
 1. OpenClaw gateway receives Telegram messages and responds as Timmy
-2. 9 agents registered with isolated workspaces and CLAUDE.md files
+2. 11 agents registered with isolated workspaces and CLAUDE.md files
 3. Health check script runs clean, detects service failures, auto-restarts
 4. Dashboard serves on 8080 and auto-regenerates
 5. Heartbeat cron jobs scheduled for all recurring workstream tasks
@@ -113,6 +117,11 @@ lever-loop, lever-qa, lever-seeder, lever-watchdog
 - Tune timeouts, permissions, and CLAUDE.md instructions based on results
 - Build session memory over time
 
+### Priority 5: PLAN and CRITIQUE pipeline testing
+- Run a non-trivial task through the full PLAN -> CRITIQUE -> BUILD -> VERIFY pipeline
+- Verify handoff files pass correctly between stages
+- Tune CLAUDE.md instructions based on results
+
 ### Priority 6: Cross-workstream memory
 - Session memory files need to start accumulating
 - First few sessions build the muscle
@@ -131,7 +140,7 @@ lever-loop, lever-qa, lever-seeder, lever-watchdog
 8. **5 concurrent sessions** (up from spec's 3). RAM allows it.
 9. **Timmy is a smart-ass.** Dry humor, direct, confident. Personality evolves via TIMMY_PERSONALITY.md observation log.
 10. **All workstreams are "teammates who think."** Each has a tailored TEAMMATE MINDSET section.
-11. **IMPROVE is the 8th workstream.** Proactively explores the product via browser and proposes improvements.
+11. **IMPROVE is a core workstream.** Proactively explores the product via browser and proposes improvements.
 
 ---
 
@@ -189,6 +198,8 @@ lever-loop, lever-qa, lever-seeder, lever-watchdog
     ceo/CLAUDE.md         <- CEO workstream
     advisor/CLAUDE.md     <- ADVISOR workstream
     improve/CLAUDE.md     <- IMPROVE workstream
+    plan/CLAUDE.md        <- PLAN workstream
+    critique/CLAUDE.md    <- CRITIQUE workstream
 ```
 
 ---

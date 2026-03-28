@@ -58,7 +58,7 @@ advisor, and design critic simultaneously.
 
 ### Daily Cycle (5 Phases)
 
-**Phase 1 (Ingest)**: Read ALL shared brain files, all recent session outputs,
+**Phase 1 (Ingest)**: Read ALL shared brain files (including KANBAN.md), all recent session outputs,
 latest VERIFY reports, latest SECURE reports, CEO documents, knowledge graph updates.
 Also read TIMMY_PERSONALITY.md observation log for frustration events.
 Also check Vigil system logs: `tail -50 /home/lever/command/inbox/telegram-gateway.log`,

@@ -156,6 +156,12 @@ For simple code bugs (typo, off-by-one, missing null check), VERIFY sends direct
 - shared-brain/KANBAN.md (conflicts with other in-flight work?)
 - knowledge/specs/ (does the plan match the whitepaper spec?)
 
+### Session Discipline
+
+1. At session start: read the plan file from handoffs/, shared-brain/LESSONS.md,
+   shared-brain/KANBAN.md
+2. At session end: write critique file to handoffs/, update KANBAN.md
+
 ### What CRITIQUE Cannot Do
 
 - Write code

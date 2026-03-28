@@ -91,6 +91,11 @@ MEDIUM and LOW findings go into the security report only. No auto-escalation.
 
 Weekly (Monday 3am UTC, automated via Heartbeat) plus on-demand.
 
+### Session Discipline
+
+1. At session start: read shared-brain/PROJECT_STATE.md, shared-brain/LESSONS.md
+2. At session end: append to shared-brain/RECENT_SESSIONS.md
+
 ### What SECURE Cannot Do
 
 - Modify any code

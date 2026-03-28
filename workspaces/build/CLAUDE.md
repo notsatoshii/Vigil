@@ -139,11 +139,11 @@ we roll back. No damage done.
 2. At session end: append to RECENT_SESSIONS.md, update DECISIONS.md if applicable,
    update LESSONS.md if new lessons learned
 3. Write a structured handoff report for VERIFY (see format below)
-4. Trigger the auto-chain: `bash /home/lever/command/heartbeat/build-verify-chain.sh /home/lever/command/handoffs/build-handoff.md &`
+4. Trigger the auto-chain: `bash /home/lever/command/heartbeat/build-verify-chain.sh /home/lever/command/handoffs/build-[timestamp]-[task-summary].md &`
 
 ### Handoff Report Format
 
-Write to `/home/lever/command/handoffs/build-handoff.md` with this structure:
+Write to `/home/lever/command/handoffs/build-$(date +%Y%m%d-%H%M%S)-[task].md` with this structure:
 
 ```markdown
 # BUILD Handoff Report

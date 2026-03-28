@@ -22,9 +22,9 @@ Master (Telegram / SSH / Browser)
          +-- Runs Heartbeat cron for proactive/autonomous work
          +-- Processes file uploads into knowledge system
          |
-         +------+------+------+------+------+------+------+------+
-         |      |      |      |      |      |      |      |      |
-       BUILD  VERIFY SECURE RESEARCH OPERATE  CEO  ADVISOR IMPROVE
+         +------+------+------+------+------+------+------+------+------+------+
+         |      |      |      |      |      |      |      |      |      |      |
+       BUILD  VERIFY  PLAN CRITIQUE SECURE RESEARCH OPERATE  CEO  ADVISOR IMPROVE
          |      |      |      |      |      |      |      |
     (each is an isolated Claude Code workspace with its own
      CLAUDE.md, session history, codebase access level, and
@@ -43,22 +43,32 @@ Every Telegram message hits Commander (the main agent). Commander classifies int
 | Research, web lookup, market data, competitors | RESEARCH |
 | Server health, services, logs, infrastructure | OPERATE |
 | Documents, fundraising, marketing, meetings, strategy | CEO |
+| New features, significant changes, architecture decisions | PLAN |
+| Adversarial review of plans before BUILD starts | CRITIQUE |
 | Big picture review, cross-project analysis, system improvement | ADVISOR |
 | Product improvements, UX, UI suggestions, feature ideas | IMPROVE |
 
 ### Auto-Chaining
 
-BUILD always chains to VERIFY after completion. This is automatic. BUILD finishes, writes a handoff report, exits. Vigil spawns a VERIFY session that independently reviews the work with three verification passes (functional, visual, data). If VERIFY fails, it sends feedback straight back to BUILD. The loop runs until VERIFY passes or escalates after 3 failures.
+The full pipeline is: PLAN -> CRITIQUE -> BUILD -> VERIFY.
 
-No other workstream auto-chains.
+When a non-trivial task arrives, Commander routes it to PLAN. PLAN produces a structured implementation plan. CRITIQUE reviews the plan adversarially (APPROVED, REVISE, or REJECT). Once approved, BUILD implements the plan. BUILD finishes, writes a handoff report, exits. Vigil spawns a VERIFY session that independently reviews the work with three verification passes (functional, visual, data). If VERIFY fails with a code bug, it sends feedback straight back to BUILD. If VERIFY identifies a design flaw, it routes back to PLAN for re-architecture. The loop runs until VERIFY passes or escalates after 3 failures.
 
-## The Eight Workstreams
+Simple bug fixes skip PLAN/CRITIQUE and go directly to BUILD.
+
+## The Ten Workstreams
 
 ### BUILD
 Senior engineer. Implements features, fixes bugs, writes code. Fully autonomous except for Solidity contract changes (requires approval). Uses gstack's office-hours, engineering review, and self-review processes automatically.
 
 ### VERIFY
 Quality gate. Three mandatory verification passes on every review: (1) functional (tests, contract calls, behavioral correctness), (2) visual (browser QA via Puppeteer/Chromium, screenshots, layout checks), (3) data (on-screen values match contract state, decimal precision, no stale data). Adversarial by design.
+
+### PLAN
+Technical architect. Receives non-trivial tasks and produces structured implementation plans. Reads the actual codebase before planning. Maps dependencies, edge cases, ripple effects, and rollback strategies. Every plan specifies exactly what files change, in what order, and why. Plans go to CRITIQUE for adversarial review before BUILD starts.
+
+### CRITIQUE
+Adversarial plan reviewer. The quality gate between planning and execution. Assumes every plan has flaws and tries to find them. Evaluates correctness, completeness, consistency, edge cases, ripple effects, simplicity, test coverage, and rollback safety. Verdicts: APPROVED (send to BUILD), REVISE (send back to PLAN with specific feedback), or REJECT (fundamental rethinking needed).
 
 ### SECURE
 Paranoid security engineer. Weekly automated audits plus on-demand. Analyzes smart contracts (reentrancy, access control, flash loans, oracle manipulation), frontend (XSS, exposed secrets), infrastructure (exposed ports, API security), and economic attacks (MEV, sandwich, sybil). CRITICAL/HIGH findings auto-create draft intentions pending approval.

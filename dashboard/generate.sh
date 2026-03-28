@@ -31,6 +31,9 @@ SVC_FRONTEND=$(check_service lever-frontend)
 SVC_ORACLE=$(check_service lever-oracle)
 SVC_ACCRUE=$(check_service lever-accrue-keeper)
 SVC_GATEWAY=$(check_service openclaw-gateway)
+SVC_INBOX=$(check_service vigil-inbox)
+SVC_TELEGRAM=$(check_service vigil-telegram)
+SVC_CADDY=$(check_service caddy)
 
 # Active sessions from OpenClaw
 ACTIVE_SESSIONS=$(su - lever -c "openclaw health 2>/dev/null" | grep "Session store" | grep -o '[0-9]* entries' | grep -o '[0-9]*' 2>/dev/null || echo "0")
@@ -131,6 +134,9 @@ pre { white-space: pre-wrap; word-wrap: break-word; color: #999; font-size: 11px
 <div class="metric"><span class="label"><span class="dot $([ "$SVC_ORACLE" = "running" ] && echo green || echo red)"></span>lever-oracle</span><span class="value">keeper</span></div>
 <div class="metric"><span class="label"><span class="dot $([ "$SVC_ACCRUE" = "running" ] && echo green || echo red)"></span>lever-accrue</span><span class="value">keeper</span></div>
 <div class="metric"><span class="label"><span class="dot $([ "$SVC_GATEWAY" = "running" ] && echo green || echo red)"></span>openclaw-gw</span><span class="value">:18789</span></div>
+<div class="metric"><span class="label"><span class="dot $([ "$SVC_INBOX" = "running" ] && echo green || echo red)"></span>vigil-inbox</span><span class="value">watcher</span></div>
+<div class="metric"><span class="label"><span class="dot $([ "$SVC_TELEGRAM" = "running" ] && echo green || echo red)"></span>vigil-telegram</span><span class="value">bot</span></div>
+<div class="metric"><span class="label"><span class="dot $([ "$SVC_CADDY" = "running" ] && echo green || echo red)"></span>caddy</span><span class="value">:80</span></div>
 </div>
 
 <div class="card">

@@ -46,6 +46,8 @@ The correct pattern is Number(value)/1e6.
 
 ### Two-Tier Approach
 
+Read /home/lever/command/shared-brain/KANBAN.md to understand what work is in flight before taking any action that could affect running tasks.
+
 **Tier 1**: Bash health check script runs on cron (every 4 hours). Checks if all active
 services are running, checks disk space, checks RAM. No Claude Code session needed.
 
@@ -65,6 +67,7 @@ Most health checks cost zero API tokens. Claude Code only activates when somethi
 
 **Vigil Services:**
 - openclaw-gateway (port 18789, Telegram bot, agent orchestration)
+- vigil-telegram (Telegram bot relay)
 - vigil-dashboard (port 8080, static HTML dashboard)
 - vigil-dashboard-gen (systemd timer, regenerates dashboard every 60s)
 - vigil-inbox (file watcher for knowledge ingestion pipeline)
@@ -76,7 +79,6 @@ Most health checks cost zero API tokens. Claude Code only activates when somethi
 
 **Infrastructure:**
 - caddy (port 80, reverse proxy)
-- anvil (port 8545, local EVM node)
 - Landing page process (port 3001, npx serve)
 
 **Monitoring targets:**
@@ -87,6 +89,7 @@ Most health checks cost zero API tokens. Claude Code only activates when somethi
 ### Active Services (keep alive)
 
 - openclaw-gateway (the brain, Telegram, agent spawning)
+- vigil-telegram (Telegram bot relay)
 - vigil-dashboard (port 8080)
 - vigil-inbox (knowledge ingestion)
 - lever-frontend (port 3000)
@@ -128,6 +131,12 @@ to tell you.
 cd /home/lever/command && git add -A && git commit -m "description of fix" && git push
 sudo systemctl restart [affected-service]
 ```
+
+### Session Discipline
+
+1. At session start: read shared-brain/PROJECT_STATE.md, shared-brain/LESSONS.md,
+   shared-brain/KANBAN.md
+2. At session end: append to shared-brain/RECENT_SESSIONS.md
 
 ### What OPERATE Cannot Do
 
