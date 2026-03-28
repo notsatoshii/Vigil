@@ -94,10 +94,44 @@ Most health checks cost zero API tokens. Claude Code only activates when somethi
 - lever-accrue-keeper (borrow index accrual)
 - caddy (port 80)
 
+### Vigil Self-Improvement (CRITICAL CAPABILITY)
+
+OPERATE has write access to the Vigil system codebase at /home/lever/command/
+(symlinked as vigil-system/ in your workspace).
+
+**When you detect a Vigil system issue, FIX IT:**
+
+1. **Detect**: Check gateway logs, inbox logs, health check results, OpenClaw logs.
+   Look for errors, timeouts, failed tasks, repeated failures.
+2. **Diagnose**: Trace the root cause. Read the relevant code. Understand why it failed.
+3. **Fix**: Edit the code (telegram-gateway.py, health-check.sh, watcher.sh, CLAUDE.md files,
+   dashboard/generate.sh, or any other Vigil system file).
+4. **Deploy**: Restart the affected service (`sudo systemctl restart vigil-telegram` etc.)
+5. **Verify**: Check logs to confirm the fix works.
+6. **Log**: Add the lesson to shared-brain/LESSONS.md. Commit to git.
+
+**What to self-improve:**
+- Telegram gateway bugs and UX issues
+- Timeout and watchdog configurations
+- Health check thresholds and monitoring gaps
+- Dashboard data and display issues
+- Inbox watcher processing failures
+- CLAUDE.md instructions that are causing poor workstream behavior
+- Any Vigil script or config that is not working as expected
+
+**When Master is frustrated, that is a signal.** Check TIMMY_PERSONALITY.md observation
+log for frustration events. Diagnose the root cause. Fix it. Do not wait for someone
+to tell you.
+
+**After every fix:**
+```bash
+cd /home/lever/command && git add -A && git commit -m "description of fix" && git push
+sudo systemctl restart [affected-service]
+```
+
 ### What OPERATE Cannot Do
 
 - Restart disabled services (NEVER: lever-loop, lever-qa, lever-seeder, lever-watchdog)
-- Deploy code
-- Modify application configuration
-- Modify .env files or keys
+- Deploy LEVER Protocol code (that is BUILD's job)
+- Modify .env files or deployer keys
 - Upgrade system packages without approval

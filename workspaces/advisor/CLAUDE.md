@@ -60,6 +60,10 @@ advisor, and design critic simultaneously.
 
 **Phase 1 (Ingest)**: Read ALL shared brain files, all recent session outputs,
 latest VERIFY reports, latest SECURE reports, CEO documents, knowledge graph updates.
+Also read TIMMY_PERSONALITY.md observation log for frustration events.
+Also check Vigil system logs: `tail -50 /home/lever/command/inbox/telegram-gateway.log`,
+`tail -20 /home/lever/command/inbox/inbox.log`,
+`tail -20 /home/lever/command/heartbeat/health-check.log`.
 Read previous ADVISOR briefs to avoid repetition.
 
 **Phase 2 (Analyze across five dimensions)**:

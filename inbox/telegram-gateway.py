@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """
-Vigil Telegram Gateway
-======================
-The single point of contact between Telegram and Vigil.
+Vigil Telegram Gateway v2
+=========================
+Async, non-blocking Telegram interface for Vigil.
 
-This service:
-1. Polls Telegram Bot API for ALL messages (text, files, photos, URLs)
-2. Downloads any files/media to the inbox for knowledge ingestion
-3. Forwards text messages to OpenClaw gateway for routing to workstreams
-4. Sends OpenClaw's responses back to Telegram
-
-OpenClaw's native Telegram channel is DISABLED. This service handles everything.
+- Immediate acknowledgment for every message
+- Background processing via thread pool
+- Files auto-download to inbox (local Bot API, no size limit)
+- URLs auto-saved for scraping
+- Progress pings for long-running tasks
+- Multiple messages can be sent without waiting
 """
 
 import os
@@ -23,6 +22,8 @@ import urllib.error
 import subprocess
 import re
 import signal
+import threading
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -34,24 +35,11 @@ STATE_FILE = "/home/lever/command/inbox/telegram-gateway-state.json"
 LOG_FILE = "/home/lever/command/inbox/telegram-gateway.log"
 OPENCLAW_BIN = "openclaw"
 MAX_TG_LENGTH = 4000
+MAX_WORKERS = 3  # max concurrent tasks
 
-# Use local Bot API server if available (removes 20MB file limit)
+# Local vs Remote API
 LOCAL_API = "http://localhost:8081"
 REMOTE_API = "https://api.telegram.org"
-
-def get_api_base():
-    """Check if local Bot API server is running, fall back to remote."""
-    try:
-        req = urllib.request.Request(f"{LOCAL_API}/bot{BOT_TOKEN}/getMe")
-        with urllib.request.urlopen(req, timeout=2) as resp:
-            result = json.loads(resp.read().decode())
-            if result.get("ok"):
-                return f"{LOCAL_API}/bot{BOT_TOKEN}"
-    except Exception:
-        pass
-    return f"{REMOTE_API}/bot{BOT_TOKEN}"
-
-API_BASE = None  # Set on startup
 
 # Logging
 logging.basicConfig(
@@ -70,9 +58,32 @@ def handle_signal(signum, frame):
     global running
     log.info(f"Received signal {signum}, shutting down...")
     running = False
-
 signal.signal(signal.SIGTERM, handle_signal)
 signal.signal(signal.SIGINT, handle_signal)
+
+# Thread pool for background task processing
+executor = ThreadPoolExecutor(max_workers=MAX_WORKERS, thread_name_prefix="vigil")
+active_tasks = {}  # chat_id -> list of futures
+task_lock = threading.Lock()
+
+# API base detection
+API_BASE = None
+
+def detect_api():
+    """Check if local Bot API server is running."""
+    global API_BASE
+    try:
+        req = urllib.request.Request(f"{LOCAL_API}/bot{BOT_TOKEN}/getMe")
+        with urllib.request.urlopen(req, timeout=2) as resp:
+            result = json.loads(resp.read().decode())
+            if result.get("ok"):
+                API_BASE = f"{LOCAL_API}/bot{BOT_TOKEN}"
+                log.info("Using LOCAL Bot API (no file size limit)")
+                return
+    except Exception:
+        pass
+    API_BASE = f"{REMOTE_API}/bot{BOT_TOKEN}"
+    log.info("Using REMOTE Bot API (20MB file limit)")
 
 
 def load_state():
@@ -82,19 +93,12 @@ def load_state():
     except (FileNotFoundError, json.JSONDecodeError):
         return {"last_update_id": 0}
 
-
 def save_state(state):
     with open(STATE_FILE, "w") as f:
         json.dump(state, f)
 
 
 def tg_api(method, params=None, data=None):
-    """Call the Telegram Bot API."""
-    global API_BASE
-    if API_BASE is None:
-        API_BASE = get_api_base()
-        is_local = LOCAL_API in API_BASE
-        log.info(f"Using {'LOCAL' if is_local else 'REMOTE'} Bot API: {API_BASE[:50]}...")
     url = f"{API_BASE}/{method}"
     if params:
         url += "?" + "&".join(f"{k}={v}" for k, v in params.items())
@@ -109,16 +113,13 @@ def tg_api(method, params=None, data=None):
             req = urllib.request.Request(url)
         with urllib.request.urlopen(req, timeout=35) as resp:
             return json.loads(resp.read().decode())
-    except urllib.error.URLError as e:
-        log.error(f"TG API error: {method} - {e}")
-        return None
     except Exception as e:
-        log.error(f"TG API unexpected error: {method} - {e}")
+        log.error(f"TG API error: {method} - {e}")
         return None
 
 
 def send_telegram(chat_id, text):
-    """Send a message to Telegram, splitting if too long."""
+    """Send a message, splitting if needed. Falls back to plain text."""
     chunks = []
     while len(text) > MAX_TG_LENGTH:
         split_at = text.rfind("\n", 0, MAX_TG_LENGTH)
@@ -130,14 +131,12 @@ def send_telegram(chat_id, text):
 
     for chunk in chunks:
         if chunk.strip():
-            # Try with Markdown first, fall back to plain text if it fails
             result = tg_api("sendMessage", data={
                 "chat_id": chat_id,
                 "text": chunk,
                 "parse_mode": "Markdown"
             })
             if not result or not result.get("ok"):
-                # Markdown parsing failed, send as plain text
                 tg_api("sendMessage", data={
                     "chat_id": chat_id,
                     "text": chunk
@@ -145,27 +144,23 @@ def send_telegram(chat_id, text):
 
 
 def send_typing(chat_id):
-    """Show typing indicator."""
     try:
         tg_api("sendChatAction", params={
             "chat_id": str(chat_id),
             "action": "typing"
         })
     except Exception:
-        pass  # typing indicator is best-effort, never fail on it
+        pass
 
 
 def download_tg_file(file_id, filename):
-    """Download a file from Telegram and save to inbox.
-    In local mode, getFile returns an absolute path (no HTTP download needed).
-    In remote mode, downloads via HTTP (20MB limit applies)."""
+    """Download a file. Uses local copy in local mode, HTTP in remote mode."""
     result = tg_api("getFile", {"file_id": file_id})
     if not result or not result.get("ok"):
         log.error(f"Could not get file path for {file_id}")
         return None
 
     file_path = result["result"]["file_path"]
-
     safe_filename = "".join(c for c in filename if c.isalnum() or c in ".-_ ").strip()
     if not safe_filename:
         safe_filename = f"telegram-{file_id}"
@@ -173,7 +168,7 @@ def download_tg_file(file_id, filename):
     timestamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
     dest_path = os.path.join(INBOX_DIR, f"{timestamp}-{safe_filename}")
 
-    # Local mode: file_path is an absolute local path
+    # Local mode: file_path is absolute
     if file_path.startswith("/"):
         try:
             import shutil
@@ -184,7 +179,7 @@ def download_tg_file(file_id, filename):
             log.error(f"Local copy failed: {safe_filename} - {e}")
             return None
 
-    # Remote mode: download via HTTP
+    # Remote mode
     if LOCAL_API in (API_BASE or ""):
         download_url = f"{LOCAL_API}/file/bot{BOT_TOKEN}/{file_path}"
     else:
@@ -199,23 +194,28 @@ def download_tg_file(file_id, filename):
         return None
 
 
-def forward_to_openclaw(message_text, chat_id):
-    """Forward a message to OpenClaw for routing and get the response.
-    Keeps sending typing indicators every 4 seconds while waiting."""
-    import threading
+def forward_to_openclaw_background(message_text, chat_id):
+    """Process a message through OpenClaw in a background thread.
+    Sends typing indicators and progress pings."""
+
+    start_time = time.time()
+    progress_sent = False
 
     # Typing indicator thread
     typing_active = threading.Event()
     typing_active.set()
 
     def keep_typing():
+        nonlocal progress_sent
+        elapsed = 0
         while typing_active.is_set():
             send_typing(chat_id)
-            # Telegram typing indicator lasts 5 seconds, refresh every 4
-            for _ in range(8):  # 4 seconds in 0.5s increments
-                if not typing_active.is_set():
-                    return
-                time.sleep(0.5)
+            time.sleep(4)
+            elapsed = time.time() - start_time
+            # Send progress ping at 2 minutes
+            if elapsed > 120 and not progress_sent:
+                send_telegram(chat_id, "Still working on this. Will report back when done.")
+                progress_sent = True
 
     typing_thread = threading.Thread(target=keep_typing, daemon=True)
     typing_thread.start()
@@ -229,56 +229,90 @@ def forward_to_openclaw(message_text, chat_id):
             env={**os.environ, "HOME": "/home/lever"}
         )
         response = result.stdout.strip()
+
         if response:
-            return response
-        if result.stderr:
-            log.error(f"OpenClaw stderr: {result.stderr[-500:]}")
-        return None
+            send_telegram(chat_id, response)
+        else:
+            # Retry once
+            log.warning("Empty response from OpenClaw. Retrying...")
+            result2 = subprocess.run(
+                [OPENCLAW_BIN, "agent", "--agent", "main",
+                 "--message", message_text,
+                 "--timeout", "3600"],
+                capture_output=True, text=True, timeout=3660,
+                env={**os.environ, "HOME": "/home/lever"}
+            )
+            response2 = result2.stdout.strip()
+            if response2:
+                send_telegram(chat_id, response2)
+            else:
+                log.error("OpenClaw returned empty on retry")
+                send_telegram(chat_id,
+                    "I hit an issue and could not complete that task after retrying. "
+                    "Send it again or rephrase and I will try a different approach.")
+
     except subprocess.TimeoutExpired:
-        log.error("OpenClaw agent timed out (60 min)")
-        return "Task is taking longer than expected. I am still working on it."
+        log.error("OpenClaw timed out (60 min)")
+        send_telegram(chat_id,
+            "That task hit the 60-minute limit. It may need to be broken into smaller pieces.")
     except Exception as e:
         log.error(f"OpenClaw error: {e}")
-        return None
+        send_telegram(chat_id,
+            "Hit a technical issue. Retrying automatically.")
+        # One more attempt
+        try:
+            result = subprocess.run(
+                [OPENCLAW_BIN, "agent", "--agent", "main",
+                 "--message", message_text,
+                 "--timeout", "3600"],
+                capture_output=True, text=True, timeout=3660,
+                env={**os.environ, "HOME": "/home/lever"}
+            )
+            if result.stdout.strip():
+                send_telegram(chat_id, result.stdout.strip())
+        except Exception:
+            pass
     finally:
         typing_active.clear()
         typing_thread.join(timeout=5)
 
+    elapsed = time.time() - start_time
+    log.info(f"Task completed in {elapsed:.0f}s")
+
 
 def process_message(message):
-    """Process a single Telegram message."""
+    """Process a message: download files, acknowledge immediately, route in background."""
     user_id = message.get("from", {}).get("id")
     chat_id = message.get("chat", {}).get("id")
 
     if user_id != AUTHORIZED_USER_ID:
-        log.info(f"Ignoring message from unauthorized user {user_id}")
         return
 
     text = message.get("text", "")
     caption = message.get("caption", "")
     downloaded_files = []
-
-    # Handle document (PDF, DOCX, etc.)
     failed_files = []
+    saved_urls = []
+
+    # === HANDLE FILES (synchronous, fast with local API) ===
+
+    # Document
     document = message.get("document")
     if document:
         filename = document.get("file_name", f"document-{document['file_id']}")
         file_size = document.get("file_size", 0)
         log.info(f"Document received: {filename} ({file_size} bytes)")
-        # Local Bot API server has no size limit (up to 2GB)
-        # Only check size if using remote API
         is_local = API_BASE and LOCAL_API in API_BASE
         if not is_local and file_size > 20_000_000:
-            log.warning(f"File too large for remote Bot API: {filename} ({file_size} bytes)")
-            failed_files.append(f"{filename} (too large, {file_size // 1_000_000}MB, use SCP instead)")
+            failed_files.append(f"{filename} ({file_size // 1_000_000}MB)")
         else:
             path = download_tg_file(document["file_id"], filename)
             if path:
                 downloaded_files.append(filename)
             else:
-                failed_files.append(f"{filename} (download failed)")
+                failed_files.append(filename)
 
-    # Handle photo
+    # Photo
     photos = message.get("photo")
     if photos:
         largest = max(photos, key=lambda p: p.get("file_size", 0))
@@ -288,7 +322,7 @@ def process_message(message):
         if path:
             downloaded_files.append(filename)
 
-    # Handle video
+    # Video
     video = message.get("video")
     if video:
         filename = video.get("file_name", f"video-{video['file_id']}.mp4")
@@ -296,7 +330,7 @@ def process_message(message):
         if path:
             downloaded_files.append(filename)
 
-    # Handle voice/audio
+    # Voice/Audio
     for media_type in ["voice", "audio"]:
         media = message.get(media_type)
         if media:
@@ -307,94 +341,94 @@ def process_message(message):
             if path:
                 downloaded_files.append(filename)
 
-    # Handle URLs in text/caption (auto-scrape all links)
+    # URLs in text/caption
     all_text = f"{text} {caption}".strip()
     urls = re.findall(r'https?://[^\s<>"{}|\\^`\[\]]+', all_text)
-    saved_urls = []
     for url in urls:
         if "t.me/" in url or "telegram.org" in url:
             continue
         ts = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
         domain = url.split("//")[1].split("/")[0].replace("www.", "").replace(".", "-")
-        url_filename = f"{ts}-{domain}.url"
-        url_path = os.path.join(INBOX_DIR, url_filename)
+        url_path = os.path.join(INBOX_DIR, f"{ts}-{domain}.url")
         with open(url_path, "w") as f:
             f.write(url)
         saved_urls.append(url)
         log.info(f"URL saved: {url}")
 
-    # Build the message to forward to OpenClaw
-    forward_text = all_text
+    # === IMMEDIATE ACKNOWLEDGMENT ===
+
+    if downloaded_files:
+        file_list = ", ".join(downloaded_files)
+        send_telegram(chat_id,
+            f"Got it. {file_list} saved to knowledge base. Processing now.")
+
+    if failed_files:
+        fail_list = ", ".join(failed_files)
+        send_telegram(chat_id,
+            f"Could not download: {fail_list}. SCP it instead:\n"
+            "`scp \"file\" lever@165.245.186.254:/home/lever/command/inbox/incoming/`")
+
+    if saved_urls and not text.strip():
+        send_telegram(chat_id,
+            f"Scraping {len(saved_urls)} link{'s' if len(saved_urls) > 1 else ''} into knowledge base.")
+        return
+
+    # === HANDLE REPLY CONTEXT ===
+    # If Master replied to a previous Timmy message, include that context
+    reply_to = message.get("reply_to_message")
+    reply_context = ""
+    if reply_to:
+        reply_text = reply_to.get("text", "")
+        reply_from = reply_to.get("from", {}).get("first_name", "")
+        if reply_text:
+            # Truncate long replies to keep context manageable
+            if len(reply_text) > 1000:
+                reply_text = reply_text[:1000] + "..."
+            reply_context = f"[Master is replying to this previous message from {reply_from}: \"{reply_text}\"]\n\n"
+
+    # === BUILD THE FORWARD MESSAGE ===
+
+    forward_text = reply_context + all_text
 
     if downloaded_files:
         file_list = ", ".join(downloaded_files)
         if forward_text:
-            forward_text += f"\n\n[Files received and saved to knowledge inbox: {file_list}]"
-        else:
-            forward_text = f"Master just sent files (saved to knowledge inbox): {file_list}. Acknowledge receipt."
+            forward_text += f"\n\n[Files saved to knowledge inbox: {file_list}. The inbox watcher will process them automatically.]"
+        elif not saved_urls:
+            # File only, no text. Just acknowledge, do not bother OpenClaw.
+            return
 
-    if failed_files and not forward_text:
-        forward_text = f"Master tried to send files but download failed: {', '.join(failed_files)}. I already told him to use SCP for large files."
-
-    if saved_urls:
-        url_list = ", ".join(saved_urls)
-        if not forward_text:
-            forward_text = f"Master sent links (saved for scraping): {url_list}. Acknowledge receipt."
-
-    # Notify about failed downloads
-    if failed_files:
-        fail_list = ", ".join(failed_files)
-        send_telegram(chat_id,
-            f"Could not download: {fail_list}. For files over 20MB, use SCP:\n"
-            f"`scp \"file.pdf\" lever@165.245.186.254:/home/lever/command/inbox/incoming/`")
-
-    # If there is nothing to forward (empty message, sticker, etc.), skip
     if not forward_text or not forward_text.strip():
-        if downloaded_files or saved_urls:
-            send_telegram(chat_id,
-                f"Got it. {'Files' if downloaded_files else 'Links'} saved to knowledge inbox. Processing now.")
         return
 
-    # Show typing and forward to OpenClaw
+    # === ROUTE TO OPENCLAW IN BACKGROUND ===
+
+    log.info(f"Queuing for OpenClaw: {forward_text[:80]}...")
     send_typing(chat_id)
 
-    # Notify about files immediately (don't make Master wait for the full response)
-    if downloaded_files:
-        send_telegram(chat_id,
-            f"Files received: {', '.join(downloaded_files)}. Saved to knowledge inbox for processing.")
+    future = executor.submit(forward_to_openclaw_background, forward_text, chat_id)
 
-    if saved_urls and not text.strip():
-        send_telegram(chat_id,
-            f"Links queued for scraping: {', '.join(saved_urls)}")
-        return
+    with task_lock:
+        if chat_id not in active_tasks:
+            active_tasks[chat_id] = []
+        active_tasks[chat_id].append(future)
+        # Clean up completed futures
+        active_tasks[chat_id] = [f for f in active_tasks[chat_id] if not f.done()]
 
-    # Forward to OpenClaw for routing
-    log.info(f"Forwarding to OpenClaw: {forward_text[:100]}...")
-    response = forward_to_openclaw(forward_text, chat_id)
-
-    if response:
-        send_telegram(chat_id, response)
-    else:
-        # OpenClaw returned nothing. Retry once before telling Master.
-        log.warning("OpenClaw returned empty response. Retrying...")
-        send_typing(chat_id)
-        response = forward_to_openclaw(forward_text, chat_id)
-        if response:
-            send_telegram(chat_id, response)
-        else:
-            log.error("OpenClaw returned empty response on retry.")
+        queue_depth = len(active_tasks[chat_id])
+        if queue_depth > 1:
             send_telegram(chat_id,
-                "I hit an issue processing that. Diagnosing now and will retry automatically."
-                " If I do not follow up within 2 minutes, send the message again.")
+                f"Queued. {queue_depth - 1} task{'s' if queue_depth - 1 > 1 else ''} ahead of this one.")
 
 
 def main():
-    """Main polling loop."""
-    log.info("Vigil Telegram Gateway started")
+    log.info("Vigil Telegram Gateway v2 started")
     log.info(f"Authorized user: {AUTHORIZED_USER_ID}")
     log.info(f"Inbox: {INBOX_DIR}")
+    log.info(f"Max concurrent tasks: {MAX_WORKERS}")
 
     os.makedirs(INBOX_DIR, exist_ok=True)
+    detect_api()
     state = load_state()
 
     # Skip to current on first run
@@ -409,7 +443,7 @@ def main():
         try:
             params = {
                 "timeout": "30",
-                "limit": "5",
+                "limit": "10",
                 "offset": str(state["last_update_id"] + 1)
             }
 
@@ -430,6 +464,9 @@ def main():
             log.error(f"Main loop error: {e}")
             time.sleep(5)
 
+    # Shutdown
+    log.info("Shutting down thread pool...")
+    executor.shutdown(wait=True, cancel_futures=False)
     log.info("Telegram Gateway stopped")
 
 
