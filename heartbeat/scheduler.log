@@ -23,3 +23,14 @@
 2026-03-28 13:46:47,461 [INFO] Vigil Scheduler v2 started
 2026-03-28 13:46:47,461 [INFO] Max sessions: 5, Daily limit: 80
 2026-03-28 13:46:47,503 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 4 today
+2026-03-28 13:47:47,552 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 4 today
+2026-03-28 13:48:47,601 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 4 today
+2026-03-28 13:48:54,603 [INFO] Scheduler stopped
+2026-03-28 13:48:54,672 [INFO] Vigil Scheduler v2 started
+2026-03-28 13:48:54,672 [INFO] Max sessions: 5, Daily limit: 80
+2026-03-28 13:48:54,672 [INFO] PLAN complete for lever-bug-2. Moving to critique.
+2026-03-28 13:48:54,673 [INFO] PLAN complete for lever-bug-3. Moving to critique.
+2026-03-28 13:48:54,674 [INFO] PLAN complete for lever-bug-4. Moving to critique.
+2026-03-28 13:48:54,695 [INFO] DISPATCH [critique] task=lever-bug-2 (session #5 today)
+2026-03-28 13:48:54,718 [INFO] Cycle: 2 active, 3 available, 1 dispatched, 5 today
+2026-03-28 13:49:54,774 [INFO] Cycle: 2 active, 3 available, 0 dispatched, 5 today

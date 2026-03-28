@@ -83,11 +83,10 @@ done | sed 's/,$//')
 ADVISOR_SUMMARY=$(sed -n '/^## Latest Brief/,/^---/{/^## Latest/d;/^---/d;/^\*/d;p;}' "$BRAIN/ADVISOR_BRIEFS.md" 2>/dev/null | head -5 | sed 's/"/\\"/g' | tr '\n' '|' | sed 's/|$//;s/|/\\n/g')
 
 # Upcoming cron jobs with actual next-run times
-NEXT_JOBS=$(su - lever -c "openclaw cron list 2>/dev/null" | tail -n +2 | head -7 | while read -r id name schedule next_label rest; do
-    # Extract the "in Xh" or "in Xd" part
-    next_time=$(echo "$rest" | grep -o 'in [0-9]*[hmd]' | head -1)
-    [ -z "$next_time" ] && next_time="pending"
-    printf '{"name":"%s","next":"%s"},' "$name" "$next_time"
+NEXT_JOBS=$(su - lever -c "openclaw cron list 2>/dev/null" | tail -n +2 | head -7 | while IFS= read -r line; do
+    name=$(echo "$line" | awk '{print $2}')
+    next_time=$(echo "$line" | grep -oP 'in \K[0-9]+[hmd]' || echo "pending")
+    [ -n "$name" ] && printf '{"name":"%s","next":"in %s"},' "$name" "$next_time"
 done | sed 's/,$//')
 
 # Recent handoffs (last 5) with clean summaries

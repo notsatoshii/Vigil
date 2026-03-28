@@ -15,10 +15,10 @@
     "lever-bug-2": {
       "task_id": "lever-bug-2",
       "title": "LEVER-BUG-2: [CRITICAL] $304K unaccounted vault drain",
-      "stage": "planning",
-      "agent_pid": 2628956,
-      "dispatched_at": 1774705396.2183042,
-      "plan_file": "",
+      "stage": "critiquing",
+      "agent_pid": 2634499,
+      "dispatched_at": 1774705734.6961834,
+      "plan_file": "/home/lever/command/handoffs/plan-20260328-133419.md",
       "critique_file": "",
       "build_file": "",
       "verify_file": "",
@@ -27,10 +27,10 @@
     "lever-bug-3": {
       "task_id": "lever-bug-3",
       "title": "LEVER-BUG-3: [CRITICAL] Ghost OI ($3.2M with zero positions)",
-      "stage": "planning",
-      "agent_pid": 2630791,
+      "stage": "planned",
+      "agent_pid": 0,
       "dispatched_at": 1774705516.3198934,
-      "plan_file": "",
+      "plan_file": "/home/lever/command/handoffs/plan-20260328-133419.md",
       "critique_file": "",
       "build_file": "",
       "verify_file": "",
@@ -39,16 +39,16 @@
     "lever-bug-4": {
       "task_id": "lever-bug-4",
       "title": "LEVER-BUG-4: [CRITICAL] InsuranceFund never absorbs bad debt (no USDT transfer)",
-      "stage": "planning",
-      "agent_pid": 2631785,
+      "stage": "planned",
+      "agent_pid": 0,
       "dispatched_at": 1774705576.3677924,
-      "plan_file": "",
+      "plan_file": "/home/lever/command/handoffs/plan-20260328-133419.md",
       "critique_file": "",
       "build_file": "",
       "verify_file": "",
       "attempts": 0
     }
   },
-  "sessions_today": 4,
+  "sessions_today": 5,
   "last_reset_date": "2026-03-28"
 }

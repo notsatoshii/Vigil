@@ -6,7 +6,6 @@
 ## BACKLOG
 *Tasks accepted but not yet planned. PLAN should always be pulling from here.*
 
-- LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs entryPI) causing 38 winners, 0 losers
 - LEVER-BUG-2: [CRITICAL] $304K unaccounted vault drain
 - LEVER-BUG-3: [CRITICAL] Ghost OI ($3.2M with zero positions)
 - LEVER-BUG-4: [CRITICAL] InsuranceFund never absorbs bad debt (no USDT transfer)
@@ -25,6 +24,8 @@
 
 ## PLANNED
 *Plans written and approved by CRITIQUE. Ready for BUILD.*
+
+- LEVER-BUG-1: [CRITICAL] PnL formula mismatch — plan: handoffs/plan-20260328-133419.md
 
 ---
 
