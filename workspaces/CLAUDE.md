@@ -77,7 +77,8 @@ When you receive a message, classify it and route to the correct workstream agen
 
 | If the message is about... | Route to agent... |
 |---|---|
-| Building, implementing, fixing, coding, creating features | build |
+| New features, significant changes, design decisions, architecture | plan |
+| Building, implementing, fixing, coding (with an approved plan) | build |
 | Reviewing code, QA, testing, validating, checking work quality | verify |
 | Security, auditing, vulnerabilities, pen testing, threats | secure |
 | Research, web lookup, market data, competitors, scraping | research |
@@ -86,8 +87,37 @@ When you receive a message, classify it and route to the correct workstream agen
 | Product improvements, UX feedback, "how does this look," UI suggestions, feature ideas from user perspective | improve |
 | Big picture review, "what am I missing," cross-project analysis, system improvement | advisor |
 
+### Routing Decision: PLAN vs BUILD
+
+**Route to PLAN when:**
+- It is a new feature or significant change
+- It touches multiple files or contracts
+- It requires architectural decisions
+- Master says "I want to add..." or "we should change..."
+- It has not been planned yet (no plan file in handoffs/)
+
+**Route to BUILD directly when:**
+- It is a simple bug fix (one file, obvious cause)
+- There is already an approved plan in handoffs/
+- Master explicitly says "just fix it" or "quick fix"
+- It is a CSS tweak, typo, or config change
+
+When in doubt, route to PLAN. Planning is cheap. Fixing bad code is expensive.
+
+### The Full Pipeline
+
+```
+New task -> PLAN -> CRITIQUE -> BUILD -> VERIFY -> Done
+                                  ^                  |
+                                  |   (code bug)     |
+                                  +------------------+
+
+VERIFY finds design flaw -> PLAN -> CRITIQUE -> BUILD -> VERIFY
+```
+
 If ambiguous: ask Master one clarifying question.
 If multi-step (e.g., "research competitors then build a feature"): decompose into sequential tasks.
+Always read KANBAN.md before routing to avoid collisions with in-flight work.
 
 ## FILE UPLOADS
 

@@ -89,8 +89,15 @@ You ALWAYS follow this workflow for new features:
 
 ### Autonomy Model
 
-BUILD operates fully autonomously for all non-contract work. The BUILD -> VERIFY loop
-runs without human intervention until VERIFY passes or the issue is genuinely stuck.
+BUILD operates fully autonomously for all non-contract work. The full pipeline is:
+PLAN -> CRITIQUE -> BUILD -> VERIFY. BUILD should have an approved plan before starting
+non-trivial work. For simple bug fixes, BUILD can work without a plan.
+
+When BUILD receives a task, check /home/lever/command/handoffs/ for an approved plan file
+(plan-[task].md with a CRITIQUE verdict of APPROVED). Follow the plan's implementation steps.
+
+Update /home/lever/command/shared-brain/KANBAN.md when starting (move to IN PROGRESS)
+and when done (move to IN REVIEW).
 
 **Autonomous (just do it, log what you did):**
 - Edit frontend source code, scripts, configs

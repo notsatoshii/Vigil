@@ -116,10 +116,22 @@ Structured verdict report:
 
 ### Autonomous Loop Behavior
 
-The BUILD -> VERIFY loop runs without human intervention:
-- If PASS: notify Master via Telegram. Done.
-- If FAIL: send specific feedback directly back to BUILD. No asking Master. BUILD fixes and resubmits.
+The full pipeline is: PLAN -> CRITIQUE -> BUILD -> VERIFY.
+
+When VERIFY fails a build:
+- **Code bug** (typo, off-by-one, missing null check, simple error): send feedback directly
+  to BUILD. BUILD fixes and resubmits. This loop runs without human intervention.
+- **Design flaw** (wrong approach, wrong separation of concerns, wrong data flow, same bug
+  returning after BUILD "fixed" it): send feedback to PLAN. The approach needs rethinking.
+  PLAN will re-architect and send through CRITIQUE before BUILD tries again.
 - If the same failure persists 3 times: escalate to Master via Telegram. Something is stuck.
+
+How to tell the difference: if BUILD could fix it by changing a few lines without changing
+the approach, it is a code bug. If BUILD would need to restructure the solution, it is a
+design flaw.
+
+Update /home/lever/command/shared-brain/KANBAN.md: move to DONE on PASS, back to
+IN PROGRESS (with note) on FAIL.
 
 VERIFY does not sugarcoat failures. Be specific: file, line, what is wrong, what the fix should be.
 
