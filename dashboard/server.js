@@ -108,37 +108,55 @@ function collectKanban() {
     blocked: getSection('BLOCKED')
   };
 
-  // Merge live scheduler state for pipeline tasks
+  // Merge live scheduler state for pipeline tasks (with full detail)
   try {
     const stateFile = '/home/lever/command/heartbeat/scheduler-state.json';
     const state = JSON.parse(fs.readFileSync(stateFile, 'utf-8'));
     const tasks = state.tasks || {};
     for (const [tid, task] of Object.entries(tasks)) {
-      if (task.stage === 'planning' || task.stage === 'critiquing' || task.stage === 'building') {
-        if (!kanban.inProgress.some(i => i.includes(tid))) {
-          kanban.inProgress.push(`${tid} [${task.stage.toUpperCase()}]`);
-        }
+      const elapsed = task.dispatched_at ? Math.floor((Date.now()/1000 - task.dispatched_at) / 60) : 0;
+      const timeStr = elapsed > 0 ? ` (${elapsed}m)` : '';
+      const detail = task.title || tid;
+
+      if (task.stage === 'planning') {
+        kanban.inProgress.push(`PLAN: ${detail}${timeStr}|||Planning implementation approach. Reading codebase and writing structured plan to ${task.plan_file || 'handoffs/'}.`);
+      } else if (task.stage === 'critiquing') {
+        kanban.inProgress.push(`CRITIQUE: ${detail}${timeStr}|||Adversarial review of plan at ${task.plan_file || 'unknown'}. Checking correctness, completeness, edge cases, and ripple effects.`);
+      } else if (task.stage === 'building') {
+        kanban.inProgress.push(`BUILD: ${detail}${timeStr}|||Implementing approved plan. Following step-by-step instructions from ${task.plan_file || 'unknown'}.`);
       } else if (task.stage === 'verifying') {
-        if (!kanban.inReview.some(i => i.includes(tid))) {
-          kanban.inReview.push(`${tid} [VERIFYING]`);
-        }
+        kanban.inReview.push(`VERIFY: ${detail}${timeStr}|||Running 3-pass verification: functional tests, visual browser QA, data accuracy check on ${task.build_file || 'latest build'}.`);
       } else if (task.stage === 'blocked') {
-        if (!kanban.blocked.some(i => i.includes(tid))) {
-          kanban.blocked.push(`${tid} [BLOCKED after ${task.attempts} attempts]`);
+        kanban.blocked.push(`${detail}|||BLOCKED after ${task.attempts} failed attempts. Needs manual intervention or redesign.`);
+      } else if (task.stage === 'planned') {
+        if (!kanban.planned.some(i => i.includes(tid))) {
+          kanban.planned.push(`${detail}|||Plan written at ${task.plan_file || 'unknown'}. Awaiting CRITIQUE review.`);
         }
       }
     }
   } catch {}
 
-  // Merge live running agent processes (support tasks)
+  // Merge live running support agent processes (with detail)
   try {
-    const psResult = sh("ps aux | grep 'openclaw agent' | grep -v grep | sed 's/.*--agent //' | cut -d' ' -f1 | sort -u");
-    const running = psResult.split('\n').filter(Boolean);
-    for (const agent of running) {
-      const upper = agent.toUpperCase();
-      if (!['PLAN', 'CRITIQUE', 'BUILD', 'VERIFY'].includes(upper)) {
-        if (!kanban.inProgress.some(i => i.toUpperCase().includes(upper))) {
-          kanban.inProgress.push(`${upper} [ACTIVE]`);
+    const psResult = sh("ps aux | grep 'openclaw agent' | grep -v grep");
+    const lines = psResult.split('\n').filter(Boolean);
+    for (const line of lines) {
+      const agentMatch = line.match(/--agent\s+(\w+)/);
+      const msgMatch = line.match(/--message\s+"?([^"]{0,200})/);
+      if (!agentMatch) continue;
+      const agent = agentMatch[1].toUpperCase();
+      const msg = msgMatch ? msgMatch[1].substring(0, 150) : 'Working...';
+
+      if (!['PLAN', 'CRITIQUE', 'BUILD', 'VERIFY'].includes(agent)) {
+        // Get elapsed time from process
+        const pidMatch = line.match(/^\S+\s+(\d+)/);
+        let elapsed = '';
+        if (pidMatch) {
+          const etimes = sh(`ps -o etimes= -p ${pidMatch[1]} 2>/dev/null`).trim();
+          if (etimes) elapsed = ` (${Math.floor(parseInt(etimes)/60)}m)`;
+        }
+        if (!kanban.inProgress.some(i => i.toUpperCase().includes(agent))) {
+          kanban.inProgress.push(`${agent}${elapsed}|||${msg}`);
         }
       }
     }
