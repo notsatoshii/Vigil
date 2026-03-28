@@ -1,0 +1,4 @@
+[2026-03-28T10:54:05Z] Inbox watcher started. Monitoring: /home/lever/command/inbox/incoming
+[2026-03-28T10:54:16Z] Processing: test-note.txt (type: txt)
+[2026-03-28T10:54:16Z] Spawning RESEARCH session for test-note.txt...
+[2026-03-28T10:55:18Z] SUCCESS: test-note.txt processed and moved to processed/

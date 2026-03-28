@@ -1,0 +1,48 @@
+{
+  "id": "20260328-105416-test-note",
+  "ingestedAt": "2026-03-28T10:54:16Z",
+  "sourceFile": "/home/lever/command/inbox/processing/test-note.txt",
+  "sourceType": "Internal note",
+  "reliability": "Medium (single internal note, unverified)",
+
+  "summary": [
+    "Polymarket has launched conditional markets for the 2026 US midterm elections.",
+    "Volume growth has been 15% week-over-week since February 2026.",
+    "Conditional markets represent a new product type for Polymarket, expanding beyond simple binary resolution.",
+    "The timing (March 2026) suggests Polymarket is positioning early for midterm election demand.",
+    "Sustained 15% WoW growth over ~6 weeks implies roughly 2x volume increase since February start."
+  ],
+
+  "entities": [
+    { "name": "Polymarket", "type": "competitor", "role": "launching conditional election markets" },
+    { "name": "2026 US Midterm Elections", "type": "event", "role": "subject of new market vertical" },
+    { "name": "Conditional Markets", "type": "product_feature", "role": "new market type launched by Polymarket" }
+  ],
+
+  "relationships": [
+    { "from": "Polymarket", "to": "2026 US Midterm Elections", "relationship": "created conditional markets for" },
+    { "from": "Conditional Markets", "to": "Polymarket", "relationship": "new product type introduced by" },
+    { "from": "2026 US Midterm Elections", "to": "prediction market demand", "relationship": "major demand driver for" }
+  ],
+
+  "categories": ["competitors", "prediction-markets", "elections", "product-features", "volume-trends"],
+
+  "keyMetrics": {
+    "volumeGrowthWoW": "15%",
+    "growthStartDate": "2026-02",
+    "impliedVolumeMultiplier": "~2x since February (6 weeks at 15% WoW)"
+  },
+
+  "workstreamTags": {
+    "CEO": "Competitive intelligence: Polymarket expanding product surface ahead of midterm cycle.",
+    "BUILD": "Conditional markets as a product feature worth evaluating for LEVER or XMarket.",
+    "IMPROVE": "Polymarket UX pattern for conditional markets worth studying.",
+    "ADVISOR": "Volume acceleration signals election cycle demand is heating up earlier than expected."
+  },
+
+  "analysisNotes": [
+    "ANALYSIS: 15% WoW sustained since February is notable. At that pace Polymarket doubles volume every ~5 weeks. If sustained through the November 2026 midterms, this is a major volume event for the prediction market sector.",
+    "ANALYSIS: Conditional markets (e.g. 'If Party X wins the Senate, will candidate Y win State Z?') are more complex instruments than simple binaries. This signals Polymarket is moving upmarket toward sophisticated traders, not just retail.",
+    "CONTRARIAN VIEW: Conditional markets add complexity that could hurt UX for casual users. If this product is for power users only, the volume gains may be narrow and not represent overall platform health."
+  ]
+}

@@ -2,6 +2,8 @@
   "name": "Polymarket",
   "type": "competitor",
   "facts": [
+    "Launched conditional markets for 2026 US midterm elections (March 2026)",
+    "Volume growing 15% week-over-week since February 2026, implying ~2x increase over 6 weeks",
     "Leading prediction market platform with deep CLOB orderbooks",
     "Part of the $13B monthly prediction market volume ecosystem",
     "LEVER Protocol uses Polymarket CLOB Midpoint API as primary oracle source",

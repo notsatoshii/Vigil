@@ -83,34 +83,35 @@ lever-loop, lever-qa, lever-seeder, lever-watchdog
 
 ---
 
+## WHAT HAS BEEN DONE
+
+- Dispatch flow tested: Telegram messages reach Commander, route to workstreams, responses come back
+- Vigil Git repo: github.com/notsatoshii/Vigil, pushed, hourly backup cron active
+- Lever Git repo: github.com/notsatoshii/Lever, pushed, hourly backup cron active (clean, no AI refs)
+- Inbox pipeline: Built and running as systemd service (vigil-inbox). File watcher on incoming/ dir.
+- Lever user has full sudo access (no more permission issues)
+- All project locations mapped in PROJECT_STATE.md
+
 ## WHAT NEEDS TESTING/WORK
 
-### Priority 1: Prove the dispatch flow
-The routing table in Commander's CLAUDE.md is written but the actual message-to-workstream-to-result flow has not been tested end-to-end. Need to:
-- Send a real task via Telegram ("fix the funding bug")
-- Verify Commander routes it to BUILD
-- Verify BUILD produces a handoff report
-- Verify VERIFY receives it and runs 3-pass review
-- Verify results come back to Telegram
+### Priority 1: Timmy repo archival
+- Archive github.com/notsatoshii/Timmy on GitHub
+- Stop the hourly backup cron for the old repo
+- Low risk, just cleanup
 
-### Priority 2: New Vigil Git repo
-- Create a new GitHub repo for Vigil (separate from notsatoshii/Timmy)
-- Push the /home/lever/command/ repo to it
-- Set up hourly backup cron
-
-### Priority 3: Timmy repo cleanup
-- Remove all Vigil/AI system references from notsatoshii/Timmy
-- Clean up commit messages and file contents
-- Make it look like a standard LEVER Protocol repo
-
-### Priority 4: Inbox pipeline
-- File watcher (inotifywait) monitoring /home/lever/command/inbox/incoming/
-- Processing pipeline (detect type, extract text, spawn RESEARCH session)
-- Telegram file upload handling via OpenClaw
-
-### Priority 5: Knowledge graph seeding
+### Priority 2: Knowledge graph seeding
 - RESEARCH needs to run its first scan and populate watchlists
 - Initial competitor data, market data, and trend baselines
+- First evening scan fires at 8pm UTC tonight
+
+### Priority 3: Telegram file upload handling
+- OpenClaw should pass files sent via Telegram to the inbox pipeline
+- Needs testing: send a PDF or image to Timmy on Telegram
+
+### Priority 4: Hardening through use
+- Run real tasks through each workstream
+- Tune timeouts, permissions, and CLAUDE.md instructions based on results
+- Build session memory over time
 
 ### Priority 6: Cross-workstream memory
 - Session memory files need to start accumulating

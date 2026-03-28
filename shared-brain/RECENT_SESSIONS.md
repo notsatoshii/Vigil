@@ -10,3 +10,8 @@
 - **Files Changed**: All new files under /home/lever/command/
 - **Decisions**: Use Caddy over Nginx, Commander replaces lever-bot, new dashboard replaces lever-dashboard
 - **Lessons**: None (initial setup)
+
+### [2026-03-28T10:55:18Z] RESEARCH | Inbox ingestion: test-note.txt
+- **Task**: Knowledge ingestion from inbox
+- **Outcome**: SUCCESS
+- **Source**: test-note.txt (txt)
