@@ -32,7 +32,7 @@ from dataclasses import dataclass, field, asdict
 # Config
 MAX_SESSIONS = 5
 CHECK_INTERVAL = 10
-MAX_DAILY_SESSIONS = 80  # circuit breaker
+MAX_DAILY_SESSIONS = 200  # circuit breaker
 KANBAN = "/home/lever/command/shared-brain/KANBAN.md"
 ACTIVE_WORK = "/home/lever/command/shared-brain/ACTIVE_WORK.md"
 SESSION_COSTS = "/home/lever/command/shared-brain/SESSION_COSTS.md"
@@ -421,16 +421,23 @@ def dispatch_pipeline_work():
                     dispatched += 1
                 break  # only one new PLAN per cycle
 
-    # Fill remaining slots with support work (15-minute cooldown per support task)
-    SUPPORT_COOLDOWN = 900  # 15 minutes between support task runs
+    # Fill remaining slots with support work (2-hour cooldown per support task)
+    # ONLY run support if no pipeline tasks are ready to advance
+    SUPPORT_COOLDOWN = 7200  # 2 hours between support task runs
+    pipeline_stages_ready = {"planned", "approved", "built"}
+    pipeline_work_waiting = any(
+        t.stage in pipeline_stages_ready and t.agent_pid == 0 and t.attempts < 3
+        for t in state.tasks.values()
+        if not t.task_id.startswith("support-")
+    )
     now = time.time()
     remaining = available - dispatched
-    log.info(f"Support check: remaining={remaining}, dispatched={dispatched}")
+    log.info(f"Support check: remaining={remaining}, dispatched={dispatched}, pipeline_waiting={pipeline_work_waiting}")
 
     improve_last = state.tasks.get("support-improve")
     improve_ready = (not improve_last or
                      (improve_last.agent_pid == 0 and now - improve_last.dispatched_at >= SUPPORT_COOLDOWN))
-    if remaining > 0 and improve_ready and not any_agent_running("improve"):
+    if remaining > 0 and improve_ready and not any_agent_running("improve") and not pipeline_work_waiting:
         pid = dispatch_agent("improve",
             "Quick product review. Open http://localhost:3000 in browser. Check 2-3 pages. Write findings to shared-brain/IMPROVE_PROPOSALS.md.",
             "support-improve")
@@ -445,7 +452,7 @@ def dispatch_pipeline_work():
     operate_last = state.tasks.get("support-operate")
     operate_ready = (not operate_last or
                      (operate_last.agent_pid == 0 and now - operate_last.dispatched_at >= SUPPORT_COOLDOWN))
-    if remaining > 0 and operate_ready and not any_agent_running("operate"):
+    if remaining > 0 and operate_ready and not any_agent_running("operate") and not pipeline_work_waiting:
         pid = dispatch_agent("operate",
             "System check. Read Vigil logs. Fix issues. Commit fixes to git.",
             "support-operate")
@@ -460,7 +467,7 @@ def dispatch_pipeline_work():
     research_last = state.tasks.get("support-research")
     research_ready = (not research_last or
                       (research_last.agent_pid == 0 and now - research_last.dispatched_at >= SUPPORT_COOLDOWN))
-    if remaining > 0 and research_ready and not any_agent_running("research"):
+    if remaining > 0 and research_ready and not any_agent_running("research") and not pipeline_work_waiting:
         pid = dispatch_agent("research",
             "Quick scan. Check one coverage area. Update knowledge graph.",
             "support-research")
