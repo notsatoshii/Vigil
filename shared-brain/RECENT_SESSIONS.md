@@ -467,3 +467,23 @@
 **Inbox**: No backlog. All files processed.
 
 **No fixes needed this cycle.** Previous checks (03:45, 04:11, 04:38) already addressed the solc OOM pattern and escalated to Master.
+
+---
+## OPERATE | 2026-03-29 09:47-09:53 UTC (covering 05:11-09:47 gap)
+
+**Task**: System check, log review covering 4+ hour gap.
+
+**Current state**: All 8 services active. Disk 19%, RAM 34% (stable). No solc processes. Scheduler at 87 dispatches today, 5 active.
+
+**Events during the gap**:
+1. **Rate limit hit 06:41-08:00**: Claude Code hit daily API limit ("resets 8am UTC"). Sessions dispatched during this window failed immediately with zero API usage. Scheduler kept dispatching into the rate limit.
+2. **OOM kill at 08:59**: Another solc-triggered OOM (total dmesg count now reset after gateway restarts). Gateway auto-recovered at 08:59, then again at 09:14.
+3. **04:00 health check**: Flagged RAM_HIGH at 99% (during solc OOM storm). Created needs-escalation file. Cleared (stale, RAM now 34%).
+4. **08:00 health check**: Passed healthy.
+5. **Master active at 08:15**: Back to work, conversation flowing normally.
+6. **Telegram getUpdates timeout at 08:58**: Correlated with OOM event.
+
+**Ongoing issues (unchanged)**:
+- Oracle keeper out of gas (escalated to Master)
+- Solc OOM pattern (documented, workstreams adapting to targeted tests)
+- Scheduler does not respect rate limits or memory pressure
