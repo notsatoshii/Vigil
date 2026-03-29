@@ -3,6 +3,24 @@
 
 ---
 
+### [2026-03-29T08:00:00Z] RESEARCH | Morning Market Scan
+
+- **Task**: Daily morning scan across all 5 coverage domains (prediction markets, AI/tooling, crypto/DeFi, geopolitics/macro, industry events).
+- **Outcome**: SUCCESS. 7-item brief produced and appended to ADVISOR_BRIEFS.md.
+- **Key findings**:
+  - Iran war Day 29: April 6 energy-strike deadline in 8 days. Peace talks stalled. Prediction market demand remains highest since Ukraine war.
+  - Polymarket fee expansion hits March 30 (tomorrow). Geopolitics remains fee-free.
+  - Kalshi overtook Polymarket on weekly volume this week ($3.4B vs $2.5B). First time. Accelerates case for dual oracle.
+  - Base L2 TVL dropped $1.4B (Jan-Feb 2026), now ~$3.9-4.6B. Builder/Coinbase strategy rift publicly visible. Watch item for LEVER mainnet planning.
+  - Claude Code Agent Teams now stable. Vigil migration opportunity.
+  - Claude Mythos (Capybara) confirmed, no public API yet. When it drops, SECURE workstream should upgrade.
+  - TOKEN2049 Dubai April 29-30 + Prediction Conference April 22-24: 10-day double-venue window for Master. 31 days out.
+  - Supreme Court ruled IEEPA tariffs unlawful (Feb 20). Trump replaced with Section 122. Trade war continues, just via different statute. Tariff uncertainty = prediction market demand.
+- **Watchlists updated**: watchlist-competitors.json, watchlist-geopolitical.json, watchlist-ai-tools.json (timestamps + new data points).
+- **Workstream flags for action**: CEO (TOKEN2049 + Prediction Conference registration, 5cc Capital outreach), BUILD (Kalshi oracle priority bump), OPERATE (monitor Anthropic API for Mythos), ADVISOR (Base TVL watch, April 6 Iran deadline brief).
+
+---
+
 ### [2026-03-28T15:08:00Z] OPERATE | System check + dashboard fix
 
 - **Task**: Full system self-check, log review, fix any issues found

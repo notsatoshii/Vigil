@@ -4,6 +4,118 @@
 
 ---
 
+## 2026-03-29 08:05 UTC (Day 2, 8 Hours In)
+
+### 1. EFFICIENCY: 3/10 (up from 0, but still bad)
+
+**Two circuit breaker trips in one day.** The system burned through 80 sessions TWICE today (160 total), hitting the breaker at ~00:37 and again by ~07:59.
+
+**Phase 1 (00:00-00:37): Total waste, identical to yesterday.**
+- 20 CRITIQUE sessions on lever-bug-1 (REVISE loop, fix not yet applied)
+- ~60 support sessions (operate, improve, research)
+- Zero BUILD. Zero pipeline progress.
+- Burned 80 sessions in 37 minutes.
+
+**Phase 2 (03:31-07:59): Actual progress finally happened.**
+The REVISE loop fix took effect. BUILD finally ran. Breakdown of 80 sessions:
+- 14 BUILD sessions (bugs 3,4,5,7,8,9 + mission-control + landing + dashboard + verify-vision + self-improve + bug-1 + bug-6)
+- 14 VERIFY sessions
+- 17 CRITIQUE sessions
+- ~35 support sessions (operate/improve/research)
+
+**28 pipeline sessions out of 80 (35%).** This is the first time the pipeline has produced meaningful output from the scheduler. But 35 support sessions (44%) is still absurd. That is 35 health checks, improvement scans, and research runs in 4.5 hours when nothing changed.
+
+**The system is now DEAD again.** Circuit breaker at 80. Zero active sessions. 5 available slots, 0 dispatched. Will be dead until midnight reset.
+
+### 2. QUALITY: 6/10 (improved)
+
+**BUILD is doing real work now.** Handoffs exist for bugs 3, 4, 5, 7, 8, 9. VERIFY is finding real issues:
+- BUG-7: PASS. Gate check on unconfigured markets. Clean.
+- BUG-8: PASS. Closing fee fix. Clean.
+- BUG-3: PASS. Ghost OI reset with on-chain safety check. Solid.
+- BUG-5: PASS WITH CONCERNS. VERIFY had to discover what BUILD did by reading git diffs because BUILD did not write a handoff file. This is the second time VERIFY flagged missing handoffs. BUILD must write handoffs.
+- BUG-4: PASS. InsuranceFund recipient routing verified.
+
+**VERIFY is doing its job.** Reports are thorough, checking actual code changes, running test suites, flagging non-blocking concerns. This is the quality standard the system should maintain.
+
+**BUILD handoff discipline is inconsistent.** BUG-5 had no handoff file. BUG-9 has a handoff. BUG-7 has a handoff. Some do, some don't. BUILD CLAUDE.md should enforce: "No handoff = incomplete task."
+
+**Data integrity in scheduler-state.json: STILL broken.**
+- This has been flagged in EVERY Overseer report since the system launched (8 reports now).
+- BUG-2 is still stage "backlog" when it should be "done."
+- Wrong plan_file references may have been fixed by the Phase 2 dispatches (BUILD ran for those bugs), but the underlying problem persists: the scheduler does not update state correctly on completion.
+
+### 3. BOTTLENECKS: The REVISE loop is fixed. Support spam remains.
+
+**The REVISE loop on BUG-1 is fixed.** LESSONS.md documents the fix (scheduler.py increments attempts on REVISE). But it burned 20 more sessions before the fix took effect in Phase 2. The fix was applied between Phase 1 and Phase 2 (~00:37 to ~03:31 gap).
+
+**Support task spam is the remaining bottleneck.** In Phase 2's 80 sessions:
+- 35 operate sessions: How many health checks does this system need in 4.5 hours? Zero issues found. The server is fine. Operate should cap at 3/day.
+- 36 improve sessions (across both phases): Scanning the same frontend for improvements repeatedly. Diminishing returns after scan #1.
+- 32 research sessions (across both phases): Valuable once or twice a day. Not 32 times.
+
+**Pipeline is now looping correctly** (plan -> critique -> build -> verify), but it's fighting support tasks for slots. Every support session that runs is a BUILD session that doesn't.
+
+### 4. RECURRING PROBLEMS: Some fixed, core issues persist
+
+| Issue | Times Flagged | Status |
+|---|---|---|
+| REVISE loop burning sessions | 6 | FIXED (scheduler.py patch) |
+| Scheduler support-over-pipeline priority | 8 | OPEN |
+| BUG-2 not marked DONE in state | 8 | OPEN |
+| RECENT_SESSIONS.md bloat (470+ lines) | 4 | OPEN |
+| Per-workstream daily session caps | 3 | OPEN |
+| BUILD missing handoff files | 2 | OPEN |
+| Overseer reports not actionable | 3 | OPEN |
+
+**Progress:** The REVISE loop fix is real. BUILD is running. VERIFY is verifying. The pipeline works when it gets slots. The problem is now purely about slot allocation.
+
+### 5. SYSTEM HEALTH: Stable but OOM history is concerning
+
+- All services healthy (08:00 check: 0 problems)
+- RAM currently stable, but 5 OOM kills happened between 03:49 and 04:36 from solc-0.8.24 compilations
+- Oracle keeper was out of gas at 03:15 (escalated to Master, status unknown)
+- Telegram gateway had 8 getUpdates timeouts between 03:48 and 04:52, correlated with memory pressure
+- Two stale root-owned claude processes (Mar 22, Mar 26) still consuming ~14% RAM. Nobody has killed them.
+
+**The solc OOM pattern is a ticking bomb.** Every BUILD session that runs `forge build` on LEVER Protocol consumes 3-5GB. Two simultaneous compilations guarantee OOM. The system survived today because OOM kills are self-recovering, but it causes telegram gateway disruptions and wastes the killed session's work.
+
+### 6. WASTED WORK
+
+**Day 2 total: 160 sessions (two breaker trips)**
+- Phase 1: 80 sessions, ~0 productive (0%)
+- Phase 2: 80 sessions, ~28 productive (35%)
+- Combined: ~28 productive of 160 (17.5%)
+
+**Day 1 + Day 2 combined: 240 sessions, ~38 productive (15.8%)**
+
+**Support waste in Phase 2 alone: 35 sessions.** If those 35 support sessions were BUILD/VERIFY instead, we could have completed the remaining IN REVIEW items (bugs 1, 2, 6, 9, landing, dashboard) and moved to deployment testing.
+
+### 7. REQUIRED FIXES
+
+**P0 (before Day 3 midnight reset):**
+1. **Cap support sessions per day:** max 4 OPERATE, max 4 IMPROVE, max 4 RESEARCH. That is 12 support sessions max, leaving 68 for pipeline. Currently spending 100+ on support.
+2. **Reserve 3/5 slots for pipeline tasks.** Support tasks can use at most 2 concurrent slots.
+3. **Kill the two stale root claude processes** (PIDs 1151018 and 1312428). They are from March 22 and 26. They are not doing anything useful and consume 14% RAM that could prevent OOM kills during BUILD.
+
+**P1 (quality):**
+4. **Enforce BUILD handoff files.** Add to BUILD CLAUDE.md: "Every BUILD session MUST write a handoff file. No exceptions."
+5. **Prune RECENT_SESSIONS.md.** It is 470+ lines. Should be 30 entries max per ADVISOR rules. The 20+ identical OPERATE "no issues found" entries from yesterday are pure noise.
+6. **Add memory limit for BUILD sessions** or limit concurrent solc compilations. Two forge builds = OOM kill guaranteed.
+
+**P2 (systemic):**
+7. The Overseer has now written 8 reports. The "cap support sessions" and "reserve pipeline slots" items have been in every single one. If these are not fixed before Day 3, the Overseer is burning sessions to write reports that document the same unfixed problems. At that point, shut it down and reassign those sessions to BUILD.
+
+### Verdict
+
+Day 2 is a split story. Phase 1 was a total loss (20 more critique loops before the fix kicked in). Phase 2 was the first time the scheduler produced real pipeline output: 14 BUILD sessions, 14 VERIFY sessions, multiple bugs verified and advancing.
+
+The system CAN work. Phase 2 proved it. But it works at 35% efficiency when it should be at 70%+. The fix is simple and has been stated 8 times: cap support, reserve pipeline slots. Until that happens, the system will keep burning half its budget on health checks that say "healthy."
+
+The system is dead again until midnight. 14 items sit IN REVIEW. Zero slots available. The pipeline stalls while the scheduler logs CIRCUIT BREAKER every 10 seconds.
+
+---
+
 ## 2026-03-29 02:01 UTC (Day 2, 2 Hours In)
 
 ### 1. EFFICIENCY: 0/10

@@ -7,6 +7,100 @@
 
 ---
 
+### RESEARCH MORNING SCAN | 2026-03-29 08:00 UTC
+
+---
+
+#### SCAN SUMMARY
+
+Morning. Today is Sunday March 29, 2026. The world has not calmed down. Iran peace talks are still stuck, crypto is still in extreme fear, and Polymarket's taker fee expansion hits tomorrow. Seven key items below.
+
+---
+
+#### ITEM 1: IRAN WAR DAY 29 - APRIL 6 DEADLINE APPROACHING (8 DAYS)
+
+- **What**: Iran rejected the US 15-point proposal as "maximalist and unreasonable," offered a counter-proposal requiring Strait of Hormuz control and war reparations. No direct talks. Trump extended the energy-infrastructure strike pause to April 6 at 8pm ET. Pakistan, Turkey, Saudi Arabia, Egypt facilitating back-channel this weekend.
+- **Source**: [NPR, March 26](https://www.npr.org/2026/03/26/nx-s1-5761882/iran-war-peace-conditions) | [Al Jazeera liveblog, March 28](https://www.aljazeera.com/news/liveblog/2026/3/28/iran-war-live-trump-again-slams-natos-lack-of-support-for-war-on-tehran) | Date accessed: 2026-03-29 | Primary | High
+- **So What For Us**: April 6 is a binary market event. Strikes proceed = oil spike, more prediction market volume, more LEVER TAM. Peace deal = different market dynamics but geopolitics volume stays elevated. Either way, 540+ active Polymarket geopolitics markets generating $464.5M+ volume. The uncertainty machine is still running.
+- **Suggested Action**: No action required. Monitor Polymarket geopolitics volume through April 6 for trend data. ADVISOR should flag if oil crosses $110 Brent (macro contagion risk for Base/BNB deployments).
+- **Trend Context**: Day 29 of the war. Prediction market monthly volume has not declined since the war started. Counter-cyclical thesis holding perfectly.
+
+---
+
+#### ITEM 2: POLYMARKET FEE EXPANSION HITS TOMORROW (MARCH 30)
+
+- **What**: Polymarket taker fees expand to 8 new categories (finance, politics, economics, culture, weather, tech, mentions, other) effective March 30. Geopolitics and world events remain fee-free. Current 30-day volume: $9.55B per BingX data (DeFi Rate shows $6.6B as of March 28, a -3.2% dip from last week). Projected daily revenue: $800K-$1M.
+- **Source**: [BingX/Phemex coverage](https://phemex.com/news/article/polymarket-projects-1m-daily-revenue-with-new-fee-structure-68935) | [DeFi Rate aggregated data](https://defirate.com/prediction-markets/) | Date accessed: 2026-03-29 | Secondary | High
+- **So What For Us**: Two effects. (1) Polymarket becomes more expensive; fee-sensitive traders feel pressure, which could push volume toward lower-cost platforms. (2) Maker rebates in new categories incentivize resting orders, which deepens CLOB liquidity and improves the PI oracle quality for LEVER. Net: modest positive for us.
+- **Suggested Action**: No immediate action. Track whether Polymarket volume drops post-fee-expansion (measure April 1-7 vs March 22-28). If significant drop detected, flag for CEO as evidence of fee elasticity in the sector.
+- **Trend Context**: Kalshi had $10.4B in 30-day volume vs Polymarket's $9.55B. Kalshi now edging ahead on volume. This is a first. Competition between the two is tightening.
+
+---
+
+#### ITEM 3: BASE L2 TVL DECLINE - COINBASE STRATEGY RIFT
+
+- **What**: Base TVL dropped from $5.3B (January 2026) to approximately $3.9B as of mid-February 2026, a $1.4B decline. Unusual for Base: founders and investors are publicly criticizing Coinbase leadership over strategy direction. TVL stabilizing around $3.9-4.6B range in March.
+- **Source**: [BeInCrypto, March 2026](https://beincrypto.com/base-tvl-decline-coinbase-strategy-2026/) | [The Block, 2026 L2 Outlook](https://www.theblock.co/post/383329/2026-layer-2-outlook) | Date accessed: 2026-03-29 | Secondary | Medium
+- **So What For Us**: LEVER deploys on Base. A $1.4B TVL decline indicates friction in the Base ecosystem. If institutional LPs have reduced Base exposure, fundraising for LEVER's vault may see headwinds. The good news: the decline appears to be narrative/political, not a fundamental failure. Base still holds 46% of L2 market DEX volume.
+- **Suggested Action**: ADVISOR should factor Base TVL trajectory into LEVER mainnet timing. If Base TVL recovers to $5B+ by Q2, the ecosystem thesis remains strong. Monitor monthly. BUILD should not change any technical plans based on this alone.
+- **Trend Context**: BNB Chain TVL at $7.8B, still healthy. XMarket is on the stronger-TVL chain. LEVER is targeting the chain with a short-term dip; this is a watch item, not an alarm.
+
+---
+
+#### ITEM 4: CLAUDE MYTHOS (CAPYBARA) - API RELEASE TIMELINE NOW MATTERS
+
+- **What**: Anthropic confirmed Claude Mythos (codenamed Capybara) exists. Described as "a step change above Opus" with "dramatically higher scores on every benchmark." Currently available only to a small group of early-access customers in a cybersecurity defense context. No public API yet. SiliconAngle reporting Anthropic is building toward a formal launch with "advanced reasoning features." Claude Code Agent Teams stabilized in March after critical bugs (nested teammate spawning, memory leak) were patched in early March. Agent Teams now production-stable per Releasebot release notes.
+- **Source**: [Fortune, March 26](https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/) | [SiliconAngle, March 27](https://siliconangle.com/2026/03/27/anthropic-launch-new-claude-mythos-model-advanced-reasoning-features/) | [Claude Code Agent Teams docs](https://code.claude.com/docs/en/agent-teams) | Date accessed: 2026-03-29 | Primary | High
+- **So What For Us**: Two things. (1) When Mythos API drops, SECURE workstream should upgrade immediately (cybersecurity specialty is exactly what SECURE needs). ADVISOR should also consider Mythos for strategic analysis. (2) Claude Code Agent Teams are now stable. Vigil's multi-session architecture is functionally an agent team already. Experimenting with the official Agent Teams feature could replace some of our OpenClaw orchestration overhead.
+- **Suggested Action**: OPERATE: monitor Anthropic API changelog for Mythos access. BUILD/ADVISOR: evaluate Claude Code Agent Teams as a potential replacement for OpenClaw cron-dispatched sessions. Could simplify the orchestration layer significantly.
+- **Trend Context**: The AI model release cycle is accelerating. GPT-5.4 (March 5), Gemini 3.1 Pro (March), Claude Mythos (imminent). Vigil was built on Sonnet 4.6; staying current with model releases is now a quarterly maintenance task.
+
+---
+
+#### ITEM 5: SUPREME COURT TARIFF RULING - TRADE WAR RESTRUCTURED, NOT ENDED
+
+- **What**: The Supreme Court ruled 6-3 on February 20 that IEEPA does not authorize presidential tariffs (Learning Resources Inc. v. Trump). Trump immediately replaced IEEPA tariffs with Section 122 (15% global tariff, 150-day limit) and retained Section 232/301 tariffs. Net result: tariffs continue but via different legal authority, now requiring congressional approval after 150 days. Section 301 investigations targeting China, EU, Korea, Vietnam, Thailand continue. Trump-Xi summit scheduled for April with boosted Chinese leverage post-ruling.
+- **Source**: [CNBC, March 26](https://www.cnbc.com/2026/03/26/trump-supreme-court-tariffs-barrett-gorsuch-trade-ieepa-ruling.html) | [CNBC, Feb 23](https://www.cnbc.com/2026/02/23/what-supreme-court-tariff-ruling-means-for-global-trade-us-economy.html) | Date accessed: 2026-03-29 | Primary | High
+- **So What For Us**: Section 301 investigations target Korea and Vietnam specifically, XMarket's two largest APAC markets. If tariffs escalate on Korea, USD outflows from Korean crypto holders increase (they already lost $110B in 2025), which is actually a tailwind for APAC crypto adoption and XMarket volume. The Trump-Xi summit in April is a prediction market event (will they reach a deal?). Polymarket already has 317 tariff/trade war markets active.
+- **Suggested Action**: CEO: the tariff structure change (IEEPA -> Section 122) is worth understanding for investor conversations. The 150-day clock on Section 122 expires in mid-July 2026, creating a congressional vote deadline. That is another prediction market catalyst. Note for ADVISOR.
+- **Trend Context**: Trade war uncertainty is the third pillar driving prediction market demand (alongside Iran war and elections). Even a partial resolution creates new markets ("will Congress extend tariffs?" etc.).
+
+---
+
+#### ITEM 6: TOKEN2049 DUBAI - 31 DAYS OUT (APRIL 29-30)
+
+- **What**: TOKEN2049 Dubai 2026 confirmed for April 29-30 at Madinat Jumeirah. 15,000+ attendees, 200+ speakers, 4,000+ businesses, 70%+ C-level. TOKEN2049 Week runs April 27 to May 3 with surrounding side events. Prediction Conference in Las Vegas (April 22-24) overlaps the same travel window.
+- **Source**: [TOKEN2049 website](https://www.token2049.com/dubai) | [TOKEN2049 Week](https://week.token2049.com/) | Date accessed: 2026-03-29 | Primary | High
+- **So What For Us**: TOKEN2049 Dubai is the premier crypto capital-raise event of H1 2026. If Master is pitching LEVER to institutional crypto investors, this is the venue. The adjacent prediction market opportunity: Prediction Conference (Las Vegas, April 22-24) is 7 days before TOKEN2049 Dubai. A 10-day trip covering both is plausible.
+- **Suggested Action**: CEO: evaluate whether a Las Vegas (April 22-24) to Dubai (April 29-30) trip makes sense. That is two tier-1 venues in 10 days: one prediction-market-specialist (5cc Capital LPs are likely at Prediction Conference), one crypto-capital (institutional investors at TOKEN2049). Time to decide is now, both are 30 days out.
+- **Trend Context**: Last scan confirmed Prediction Conference registration open (300 seats, may fill). TOKEN2049 Dubai sold out in 2025. Early registration is critical.
+
+---
+
+#### ITEM 7: KALSHI VOLUME NOW EXCEEDS POLYMARKET (WEEK OF MARCH 28)
+
+- **What**: Per DeFi Rate aggregated data (accessed March 29), weekly prediction market volume: Kalshi $3.4B (57% share) vs Polymarket $2.5B (43% share). This is a role reversal from the historical norm where Polymarket dominated. Kalshi March Madness weekend alone: $800M. Kalshi 30-day total reported at $10.4B vs Polymarket $9.55B.
+- **Source**: [DeFi Rate aggregated data](https://defirate.com/prediction-markets/) | Date accessed: 2026-03-29 | Primary | High
+- **So What For Us**: Kalshi overtaking Polymarket on weekly volume matters for LEVER's oracle strategy. If Kalshi becomes the dominant volume source, prioritizing the Kalshi API for secondary oracle (or even primary in some markets) becomes more important. Also relevant for investor conversations: the "Polymarket vs Kalshi" duopoly narrative helps frame the market.
+- **Suggested Action**: BUILD: accelerate the Kalshi API secondary oracle integration. If Kalshi is now #1 on volume some weeks, the oracle priority should reflect that (dual oracle, equal weight). This was already in the backlog but deserves a bump.
+- **Trend Context**: Kalshi volume growth is driven by sports (March Madness, MLB season starting) and institutional activity. Polymarket volume is driven by geopolitics. They are serving different demand pools. Both are growing; the sector is not zero-sum.
+
+---
+
+#### CONTRARIAN VIEW (MORNING SCAN)
+
+The counter-cyclical prediction market thesis is real and confirmed by data. But watch these two risks that are getting closer:
+
+1. **Sports kill zone expanding**: Washington state Kalshi suit (March 27) and Nevada temporary restraining order (week prior) are specifically targeting sports contracts. If Kalshi loses its sports business in multiple states, prediction market volume growth slows materially (sports is the largest category). LEVER is safe because we are not touching sports, but overall sector momentum depends partly on sports volume.
+
+2. **Base TVL fragility**: A $1.4B TVL drop in 6 weeks on our target deployment chain is unusual. It is a political/narrative issue right now, not a technical one. But if it continues through Q2, LEVER's LP vault fundraising case weakens. Watch the May TVL numbers carefully.
+
+---
+
+*Sources cited above. All web data accessed 2026-03-29 08:00 UTC. Previous brief: RESEARCH EVENING SCAN 2026-03-28 20:00 UTC.*
+
+---
+
 ### RESEARCH EVENING SCAN | 2026-03-28 20:00 UTC
 
 ---

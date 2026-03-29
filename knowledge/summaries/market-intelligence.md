@@ -1,6 +1,23 @@
 # Market Intelligence
 ## Auto-generated summary from knowledge graph. Updated on new source ingestion.
 
+## Morning Scan Updates (2026-03-29 08:00 UTC)
+
+### Kalshi Now #1 on Weekly Volume
+DeFi Rate data (March 29): Kalshi $3.4B weekly (57%) vs Polymarket $2.5B (43%). First time Kalshi has led on weekly volume. Polymarket 30-day still strong at $9.55B but Kalshi 30-day now reported at $10.4B. Volume competition is tightening rapidly.
+**LEVER impact**: Dual oracle with equal Kalshi/Polymarket weighting now justified by volume data, not just redundancy rationale.
+
+### Base L2 TVL Decline - Watch Item
+Base TVL dropped from $5.3B (January) to ~$3.9B (mid-February). Attributed to strategy/narrative rift between Base builders and Coinbase leadership. TVL holding in $3.9-4.6B range in March. BNB Chain TVL at $7.8B (stable). LEVER deploys on Base; LP vault fundraising may face ecosystem headwinds if decline continues through Q2.
+
+### Iran War: April 6 Binary Event Approaching
+Day 29 (March 29). Iran rejected US proposal. Mediators active. Trump extended pause to April 6 8pm ET. Binary outcome: energy strikes or peace deal. Either outcome creates new prediction market activity. Oil: Brent $101.89.
+
+### Supreme Court Tariff Ruling (Feb 20): IEEPA Struck Down
+Trump replaced IEEPA tariffs with Section 122 (15% global, 150-day limit) same day as ruling. Section 301/232 continue. Trade war restructured, not ended. Section 122 clock expires mid-July 2026 (congressional vote required). Another prediction market catalyst.
+
+---
+
 ## Geopolitical Demand Drivers (Scan: 2026-03-28)
 
 ### Active Conflicts Driving Prediction Market Volume

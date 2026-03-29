@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-28T20:00:00Z",
+  "last_updated": "2026-03-29T08:00:00Z",
   "description": "Prediction market competitor tracking. Updated on each RESEARCH scan.",
   "entities": [
     {
@@ -12,10 +12,11 @@
       "metrics": {
         "30d_volume_usd": "9550000000",
         "weekly_volume_usd": "2500000000",
-        "market_share_pct": 43,
+        "weekly_market_share_pct_2026_03_29": 43,
         "valuation_usd": "8000000000",
         "daily_revenue_target_usd": "1000000",
-        "active_markets": "115000+"
+        "active_markets": "115000+",
+        "note_2026_03_29": "Kalshi overtook Polymarket on weekly volume this week ($3.4B Kalshi vs $2.5B Polymarket). First time Polymarket has been #2 on weekly volume."
       },
       "recent_developments": [
         {

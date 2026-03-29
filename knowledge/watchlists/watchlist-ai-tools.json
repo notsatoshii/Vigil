@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-28T20:00:00Z",
+  "last_updated": "2026-03-29T08:00:00Z",
   "description": "AI models, agent frameworks, and dev tools relevant to Vigil system. Updated each RESEARCH scan.",
   "tools": [
     {
@@ -55,7 +55,8 @@
       "known_bugs": [
         "Rate limit drain bug reported March 26 - suspected but unconfirmed"
       ],
-      "vigil_impact": "/loop could replace some OpenClaw cron jobs. Computer Use could enable visual dashboard verification."
+      "vigil_impact": "/loop could replace some OpenClaw cron jobs. Computer Use could enable visual dashboard verification. Agent Teams (CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS) now stable after March early-month patches (nested spawning bug and memory leak fixed). Vigil multi-session architecture could migrate to native Agent Teams, reducing OpenClaw orchestration overhead.",
+      "agent_teams_status": "production-stable as of March 2026. Requires v2.1.32+. Disabled by default. Enable via CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS in settings.json."
     },
     {
       "name": "GPT-5.4",

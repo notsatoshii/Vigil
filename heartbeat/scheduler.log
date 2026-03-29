@@ -11602,3 +11602,721 @@
 2026-03-29 07:44:44,572 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
 2026-03-29 07:44:54,591 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
 2026-03-29 07:44:54,611 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:45:04,629 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:45:04,647 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:45:14,665 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:45:14,685 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:45:24,704 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:45:24,721 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:45:34,739 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:45:34,757 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:45:44,776 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:45:44,794 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:45:54,812 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:45:54,828 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:46:04,847 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:46:04,865 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:46:14,885 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:46:14,903 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:46:24,923 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:46:24,947 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:46:34,968 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:46:34,985 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:46:45,004 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:46:45,022 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:46:55,043 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:46:55,069 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:47:05,093 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:47:05,111 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:47:15,130 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:47:15,146 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:47:25,165 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:47:25,181 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:47:35,201 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:47:35,219 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:47:45,257 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:47:45,277 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:47:55,295 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:47:55,312 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:48:05,331 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:48:05,348 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:48:15,367 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:48:15,385 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:48:25,405 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:48:25,425 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:48:35,444 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:48:35,464 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:48:45,483 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:48:45,501 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:48:55,528 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:48:55,571 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:49:05,596 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:49:05,616 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:49:15,641 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:49:15,657 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:49:25,677 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:49:25,695 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:49:35,714 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:49:35,733 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:49:45,752 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:49:45,769 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:49:55,789 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:49:55,807 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:50:05,826 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:50:05,844 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:50:15,864 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:50:15,884 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:50:25,903 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:50:25,920 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:50:35,938 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:50:35,955 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:50:45,974 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:50:45,990 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:50:56,009 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:50:56,026 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:51:06,044 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:51:06,060 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:51:16,079 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:51:16,096 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:51:26,114 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:51:26,138 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:51:36,157 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:51:36,174 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:51:46,195 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:51:46,212 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:51:56,232 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:51:56,256 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:52:06,277 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:52:06,295 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:52:16,314 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:52:16,331 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:52:26,350 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:52:26,368 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:52:36,388 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:52:36,405 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:52:46,426 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:52:46,446 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:52:56,464 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:52:56,481 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:53:06,500 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:53:06,518 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:53:16,540 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:53:16,560 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:53:26,580 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:53:26,598 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:53:36,618 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:53:36,639 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:53:46,658 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:53:46,674 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:53:56,699 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:53:56,719 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:54:06,739 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:54:06,756 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:54:16,775 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:54:16,798 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:54:26,837 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:54:26,861 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:54:36,882 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:54:36,898 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:54:46,921 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:54:46,958 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:54:56,980 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:54:56,998 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:55:07,018 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:55:07,036 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:55:17,057 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:55:17,081 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:55:27,105 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:55:27,124 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:55:37,143 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:55:37,160 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:55:47,178 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:55:47,195 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:55:57,213 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:55:57,229 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:56:07,252 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:56:07,274 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:56:17,294 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:56:17,312 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:56:27,331 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:56:27,347 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:56:37,366 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:56:37,383 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:56:47,402 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:56:47,418 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:56:57,436 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:56:57,453 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:57:07,475 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:57:07,494 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:57:17,513 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:57:17,539 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:57:27,560 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:57:27,577 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:57:37,597 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:57:37,615 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:57:47,638 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:57:47,657 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:57:57,675 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:57:57,696 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:58:07,715 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:58:07,732 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:58:17,754 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:58:17,771 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:58:27,789 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:58:27,805 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:58:37,824 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:58:37,841 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:58:47,863 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:58:47,884 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:58:57,907 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:58:57,925 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:59:07,944 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:59:07,962 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:59:17,981 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:59:17,998 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:59:28,017 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:59:28,035 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:59:38,054 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:59:38,072 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:59:48,096 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:59:48,113 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 07:59:58,132 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 07:59:58,151 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:00:08,169 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:00:08,185 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:00:18,205 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:00:18,223 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:00:28,251 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:00:28,276 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:00:38,295 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:00:38,322 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:00:48,341 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:00:48,359 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:00:58,378 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:00:58,396 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:01:08,415 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:01:08,434 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:01:18,453 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:01:18,473 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:01:28,492 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:01:28,510 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:01:38,529 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:01:38,546 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:01:48,566 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:01:48,582 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:01:58,600 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:01:58,616 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:02:08,634 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:02:08,651 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:02:18,669 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:02:18,687 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:02:28,709 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:02:28,732 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:02:38,752 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:02:38,769 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:02:48,788 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:02:48,804 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:02:58,826 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:02:58,843 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:03:08,882 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:03:08,900 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:03:18,919 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:03:18,936 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:03:28,956 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:03:28,974 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:03:38,992 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:03:39,008 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:03:49,027 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:03:49,046 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:03:59,064 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:03:59,081 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:04:09,100 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:04:09,116 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:04:19,136 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:04:19,152 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:04:29,170 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:04:29,188 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:04:39,206 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:04:39,224 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:04:49,242 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:04:49,259 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:04:59,277 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:04:59,294 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:05:09,312 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:05:09,329 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:05:19,347 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:05:19,363 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:05:29,383 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:05:29,404 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:05:39,426 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:05:39,444 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:05:49,468 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:05:49,486 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:05:59,504 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:05:59,523 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:06:09,542 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:06:09,563 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:06:19,593 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:06:19,622 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:06:29,640 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:06:29,657 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:06:39,676 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:06:39,701 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:06:49,721 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:06:49,739 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:06:59,758 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:06:59,776 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:07:09,798 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:07:09,819 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:07:19,839 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:07:19,857 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:07:29,877 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:07:29,896 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:07:39,916 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:07:39,933 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:07:49,952 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:07:49,970 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:07:59,989 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:08:00,007 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:08:10,026 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:08:10,043 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:08:20,065 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:08:20,082 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:08:30,104 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:08:30,124 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:08:40,156 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:08:40,175 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:08:50,195 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:08:50,213 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:09:00,231 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:09:00,247 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:09:10,265 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:09:10,282 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:09:20,300 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:09:20,317 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:09:30,335 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:09:30,351 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:09:40,370 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:09:40,388 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:09:50,406 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:09:50,423 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:10:00,444 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:10:00,463 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:10:10,481 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:10:10,498 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:10:20,517 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:10:20,534 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:10:30,553 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:10:30,569 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:10:40,588 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:10:40,606 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:10:50,624 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:10:50,641 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:11:00,659 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:11:00,675 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:11:10,694 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:11:10,710 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:11:20,729 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:11:20,745 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:11:30,765 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:11:30,784 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:11:40,805 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:11:40,821 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:11:50,839 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:11:50,856 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:12:00,875 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:12:00,898 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:12:10,917 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:12:10,935 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:12:20,955 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:12:20,971 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:12:30,994 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:12:31,011 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:12:41,031 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:12:41,047 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:12:51,067 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:12:51,083 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:13:01,102 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:13:01,121 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:13:11,143 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:13:11,165 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:13:21,184 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:13:21,201 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:13:31,220 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:13:31,237 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:13:41,257 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:13:41,275 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:13:51,294 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:13:51,312 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:14:01,333 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:14:01,356 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:14:11,375 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:14:11,393 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:14:21,412 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:14:21,428 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:14:31,447 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:14:31,465 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:14:41,485 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:14:41,502 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:14:51,528 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:14:51,551 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:15:01,570 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:15:01,594 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:15:11,613 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:15:11,632 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:15:21,653 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:15:21,672 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:15:31,693 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:15:31,711 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:15:41,731 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:15:41,747 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:15:51,767 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:15:51,784 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:16:01,803 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:16:01,821 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:16:11,839 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:16:11,856 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:16:21,874 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:16:21,892 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:16:31,911 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:16:31,929 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:16:41,948 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:16:41,964 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:16:51,983 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:16:51,999 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:17:02,020 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:17:02,039 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:17:12,059 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:17:12,077 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:17:22,096 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:17:22,120 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:17:32,139 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:17:32,156 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:17:42,177 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:17:42,194 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:17:52,213 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:17:52,229 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:18:02,249 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:18:02,267 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:18:12,288 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:18:12,305 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:18:22,325 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:18:22,344 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:18:32,369 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:18:32,387 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:18:42,407 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:18:42,425 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:18:52,444 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:18:52,462 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:19:02,481 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:19:02,500 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:19:12,524 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:19:12,541 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:19:22,560 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:19:22,579 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:19:32,614 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:19:32,644 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:19:42,663 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:19:42,680 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:19:52,701 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:19:52,721 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:20:02,738 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:20:02,754 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:20:12,775 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:20:12,791 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:20:22,810 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:20:22,827 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:20:32,845 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:20:32,862 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:20:42,881 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:20:42,899 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:20:52,917 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:20:52,933 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:21:02,962 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:21:02,980 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:21:12,999 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:21:13,016 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:21:23,035 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:21:23,051 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:21:33,069 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:21:33,086 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:21:43,105 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:21:43,122 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:21:53,140 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:21:53,157 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:22:03,178 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:22:03,199 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:22:13,218 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:22:13,235 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:22:23,254 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:22:23,275 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:22:33,309 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:22:33,337 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:22:43,356 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:22:43,374 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:22:53,392 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:22:53,408 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:23:03,434 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:23:03,451 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:23:13,469 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:23:13,485 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:23:23,503 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:23:23,522 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:23:33,541 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:23:33,558 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:23:43,579 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:23:43,598 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:23:53,618 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:23:53,636 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:24:03,655 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:24:03,672 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:24:13,692 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:24:13,722 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:24:23,740 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:24:23,757 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:24:33,776 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:24:33,793 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:24:43,813 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:24:43,832 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:24:53,851 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:24:53,874 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:25:03,895 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:25:03,916 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:25:13,936 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:25:13,954 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:25:23,976 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:25:23,993 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:25:34,012 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:25:34,029 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:25:44,050 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:25:44,071 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:25:54,091 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:25:54,109 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:26:04,129 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:26:04,146 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:26:14,165 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:26:14,183 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:26:24,202 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:26:24,220 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:26:34,240 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:26:34,258 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:26:44,280 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:26:44,301 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:26:54,321 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:26:54,337 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:27:04,356 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:27:04,372 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:27:14,393 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:27:14,412 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:27:24,432 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:27:24,449 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:27:34,468 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:27:34,490 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:27:44,523 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:27:44,542 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:27:54,560 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:27:54,576 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:28:04,595 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:28:04,613 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:28:14,633 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:28:14,653 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:28:24,679 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:28:24,700 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:28:34,719 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:28:34,736 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:28:44,754 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:28:44,771 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:28:54,791 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:28:54,812 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:29:04,831 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:29:04,847 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:29:14,869 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:29:14,891 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:29:24,910 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:29:24,928 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:29:34,950 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:29:34,967 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:29:44,986 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:29:45,004 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:29:55,025 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:29:55,043 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:30:05,063 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:30:05,080 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:30:15,099 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:30:15,116 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:30:25,135 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:30:25,152 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:30:35,171 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:30:35,188 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:30:45,207 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:30:45,224 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:30:55,243 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:30:55,260 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:31:05,280 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:31:05,298 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:31:15,320 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:31:15,341 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:31:25,359 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:31:25,383 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:31:35,401 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:31:35,417 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:31:45,436 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:31:45,457 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:31:55,476 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:31:55,493 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:32:05,512 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:32:05,531 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:32:15,549 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:32:15,573 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:32:25,592 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:32:25,609 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:32:35,629 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:32:35,647 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:32:45,665 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:32:45,686 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:32:55,710 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:32:55,728 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:33:05,746 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:33:05,762 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:33:15,781 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:33:15,799 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:33:25,820 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:33:25,839 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:33:35,859 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:33:35,878 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:33:45,898 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:33:45,916 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:33:55,934 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:33:55,950 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:34:05,970 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:34:05,988 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:34:16,006 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:34:16,023 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:34:26,042 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:34:26,060 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:34:36,079 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:34:36,096 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:34:46,115 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:34:46,132 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:34:56,150 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:34:56,166 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:35:06,186 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:35:06,203 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:35:16,225 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:35:16,243 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:35:26,262 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:35:26,280 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:35:36,299 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:35:36,316 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:35:46,336 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:35:46,361 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:35:56,382 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:35:56,400 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:36:06,420 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:36:06,438 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:36:16,458 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:36:16,475 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:36:26,494 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:36:26,509 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:36:36,530 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:36:36,546 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:36:46,566 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:36:46,589 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:36:56,607 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:36:56,622 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:37:06,641 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:37:06,659 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:37:16,679 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:37:16,702 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:37:26,725 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:37:26,745 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:37:36,767 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:37:36,791 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:37:46,811 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:37:46,828 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:37:56,847 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:37:56,863 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:38:06,888 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:38:06,905 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:38:16,923 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:38:16,941 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:38:26,961 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:38:26,977 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:38:36,996 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:38:37,013 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:38:47,033 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:38:47,050 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:38:57,069 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:38:57,086 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:39:07,112 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:39:07,130 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:39:17,148 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:39:17,166 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:39:27,185 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:39:27,202 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:39:37,224 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:39:37,242 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:39:47,260 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:39:47,276 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:39:57,295 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:39:57,312 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:40:07,331 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:40:07,348 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:40:17,370 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:40:17,389 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:40:27,407 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:40:27,422 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:40:37,445 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:40:37,463 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:40:47,483 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:40:47,500 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:40:57,520 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:40:57,538 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:41:07,558 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:41:07,576 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:41:17,595 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:41:17,612 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:41:27,631 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:41:27,649 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:41:37,668 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:41:37,686 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:41:47,706 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:41:47,735 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:41:57,755 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:41:57,777 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:42:07,802 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:42:07,819 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:42:17,837 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:42:17,854 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:42:27,873 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:42:27,892 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:42:37,911 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:42:37,930 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:42:47,951 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:42:47,969 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:42:57,989 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:42:58,006 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:43:08,026 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:43:08,043 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:43:18,062 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:43:18,078 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:43:28,097 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:43:28,114 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:43:38,135 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:43:38,152 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:43:48,172 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:43:48,188 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:43:58,212 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:43:58,229 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:44:08,248 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:44:08,265 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:44:18,290 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:44:18,312 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:44:28,343 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:44:28,394 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:44:38,414 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:44:38,431 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:44:48,450 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:44:48,467 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 08:44:58,486 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 08:44:58,502 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today

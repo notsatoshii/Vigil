@@ -1,14 +1,14 @@
 {
-  "last_updated": "2026-03-28T20:00:00Z",
+  "last_updated": "2026-03-29T08:00:00Z",
   "description": "Active geopolitical situations driving prediction market demand. Updated each RESEARCH scan.",
   "active_situations": [
     {
       "name": "US-Iran War / Strait of Hormuz Crisis",
       "status": "active",
       "started": "2026-02-28",
-      "day_number": 30,
-      "last_scan": "2026-03-29T03:19Z",
-      "summary": "Day 30 (one month mark). Ceasefire rejected but NEW DIPLOMATIC TRACK: Turkey, Pakistan, Saudi Arabia, Egypt talks this weekend in Pakistan. Meanwhile war continues: 8 impact sites in Tel Aviv (including university, 1 killed), strikes on Iranian steel/cement factories in Isfahan. 15 US troops wounded at Saudi base. Houthis claimed 2 missile attacks on Israel. Casualties: 1,900+ killed in Iran, 1,189+ in Lebanon (124 children). Trump 'very disappointed' with NATO response. Oil: Brent $101.89.",
+      "day_number": 29,
+      "last_scan": "2026-03-29T08:00Z",
+      "summary": "Day 29. Iran rejected US 15-point ceasefire proposal as 'maximalist and unreasonable.' Iran counter-offer demands Strait of Hormuz control + war reparations. No direct US-Iran talks; mediators (Pakistan, Turkey, Saudi Arabia, Egypt) active. Trump extended energy-infrastructure strike pause to April 6 at 8pm ET. Oil: Brent $101.89. Polymarket geopolitics: 540+ markets, $464.5M+ volume.",
       "key_upcoming_dates": [
         {
           "date": "2026-04-06",
