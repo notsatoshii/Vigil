@@ -353,3 +353,18 @@
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 18%, RAM 41%. Gateway had 6 spawn failures at 00:21:38 ("spawn claude ENOENT") caused by Claude Code auto-update replacing the /usr/bin/claude symlink at the exact same second. Transient, self-resolved immediately. No errors after 00:22. Scheduler at 38 dispatches, 3 active sessions. No fixes needed.
+
+---
+## OPERATE | 2026-03-29 02:45 UTC
+
+**Task**: Self-check cron (scheduler.log, gateway log, health-check.log, inbox.log).
+
+**Findings**:
+- All 8 services: ACTIVE (openclaw-gateway, vigil-telegram, vigil-dashboard, vigil-inbox, lever-frontend, lever-oracle, lever-accrue-keeper, caddy)
+- Disk: 18% used (159G free). RAM: 4GB used / 15GB total. Both healthy.
+- Circuit breaker: LOCKED at 80/80 sessions. Burned through by 00:37 UTC (critique REVISE loop ran before fix 20ab23d took effect). Will reset at midnight UTC.
+- Fix 20ab23d (REVISE attempts increment) is live. Will prevent loop recurrence from tomorrow.
+- Gateway restarted at 02:12 UTC. Came back clean. Startup model warmup warning ("Unknown model: claude-cli/claude-sonnet-4-6") is a benign WARN, not affecting dispatch.
+- lever-bug-1: BLOCKED in KANBAN (awaiting Master input on exit formula decision).
+- Health checks at 16:00, 20:00, 00:00: all passed healthy.
+- No fixes needed this cycle.
