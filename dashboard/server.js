@@ -320,14 +320,19 @@ const server = http.createServer((req, res) => {
   // Serve static files
   let filePath;
   if (req.url === '/' || req.url === '/index.html') {
-    filePath = path.join(DASHBOARD_DIR, 'mission-control.html');
+    // Serve React app from dist/ if it exists, otherwise fall back to legacy HTML
+    const distIndex = path.join(DASHBOARD_DIR, 'dist', 'index.html');
+    filePath = fs.existsSync(distIndex) ? distIndex : path.join(DASHBOARD_DIR, 'mission-control.html');
   } else if (req.url === '/data.json') {
     // Legacy support
     res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
     res.end(JSON.stringify(currentData));
     return;
   } else {
-    filePath = path.join(DASHBOARD_DIR, req.url.split('?')[0]);
+    // Try dist/ first (Vite-built assets), fall back to root
+    const urlPath = req.url.split('?')[0];
+    const distPath = path.join(DASHBOARD_DIR, 'dist', urlPath);
+    filePath = fs.existsSync(distPath) ? distPath : path.join(DASHBOARD_DIR, urlPath);
   }
 
   const ext = path.extname(filePath);
