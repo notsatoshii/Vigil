@@ -4,6 +4,98 @@
 
 ---
 
+## 2026-03-29 02:01 UTC (Day 2, 2 Hours In)
+
+### 1. EFFICIENCY: 0/10
+
+**All 80 sessions burned. System is dead again.** The daily session limit hit and the scheduler has been logging CIRCUIT BREAKER warnings every 10 seconds since. 5 slots available, 0 active, 0 dispatched. This is identical to how Day 1 ended.
+
+**Day 2 burned 80 sessions in roughly 2 hours.** That is worse than Day 1, which at least spread its waste over 8 hours. The REVISE loop bug on BUG-1 was fixed (good, documented in LESSONS.md), but the damage was already done: 20 of those 80 sessions were BUG-1 critique cycles that went nowhere because the task is BLOCKED on a Master decision.
+
+**Session budget accountability for Day 2 (80 sessions, ~2 hours):**
+- ~20 sessions on BUG-1 critique loops (REVISE loop before fix kicked in): pure waste, task is BLOCKED
+- Remaining ~60 sessions on support tasks (operate, improve, research) and scheduling overhead
+- **Zero BUILD sessions dispatched. Zero pipeline progress. Again.**
+
+### 2. QUALITY: N/A (nothing to evaluate)
+
+No BUILD ran. No VERIFY ran. No code shipped. There is nothing to evaluate.
+
+The only positive: the REVISE loop bug was caught and fixed (scheduler.py now increments attempts on REVISE). This is documented in LESSONS.md. The circuit breaker correctly stopped the bleeding at 80.
+
+### 3. BOTTLENECKS: Same three, unchanged for 26+ hours
+
+**Bottleneck 1: Scheduler prioritizes support over pipeline.** This has been flagged in every single Overseer report since the system launched. BUG-3 and BUG-4 have approved plans in handoffs/. They have had approved plans for over 12 hours. BUILD has never been dispatched for either.
+
+**Bottleneck 2: scheduler-state.json data integrity.** Still broken. Confirmed just now:
+- BUG-2: stage "backlog" (should be "done"; has build AND verify handoffs, KANBAN says IN REVIEW)
+- BUG-3: plan_file points to `plan-20260328-133419.md` (BUG-2's old plan, wrong file). Real plan: `plan-lever-bug-3.md`
+- BUG-4: plan_file points to `plan-20260328-133419.md` (BUG-2's old plan, wrong file). Real plan: `plan-lever-bug-4.md`
+- BUG-1: stage is now "blocked" (fixed from last report, good)
+
+If BUILD were ever dispatched for BUG-3 or BUG-4, it would read the wrong plan file and produce garbage. This has been flagged 6 times across reports.
+
+**Bottleneck 3: BUG-1 needs Master, not more critique.** The critique verdict is REVISE with 3 blockers that only Master can resolve (exit formula: double vs single impact). The system burned 20+ sessions re-critiquing this before the circuit breaker on attempts kicked in. It is correctly BLOCKED now, but Master has not been notified.
+
+### 4. RECURRING PROBLEMS: Report #7, zero fixes implemented
+
+**Every action item from every previous Overseer report remains open.** Here is the count:
+
+| Issue | Times Flagged | Status |
+|---|---|---|
+| Scheduler support-over-pipeline priority | 5 | OPEN |
+| BUG-3/BUG-4 wrong plan_file | 6 | OPEN |
+| BUG-2 not marked DONE | 5 | OPEN |
+| BUG-1 not escalated to Master | 5 | OPEN |
+| RECENT_SESSIONS.md bloat | 3 | OPEN |
+| Session caps per workstream type | 2 | OPEN |
+
+**The Overseer process is itself wasted work.** It identifies real problems. Nobody reads the reports. Nobody acts on them. This session is burning tokens to write findings that will be ignored, just like the previous 6.
+
+### 5. SYSTEM HEALTH: Infrastructure fine. Scheduling broken.
+
+- All services healthy (00:00 UTC check: 0 problems)
+- Gateway, telegram, dashboard, frontend, oracle, keeper, caddy all running
+- Scheduler running but hitting circuit breaker every 10 seconds (expected, daily limit reached)
+- Last Master interaction: ~15:35 UTC March 28 (10.5 hours ago). Master is sleeping.
+- Disk 18%, RAM stable. No resource pressure.
+
+### 6. WASTED WORK: Almost all of it, for two consecutive days
+
+**Day 1: 80 sessions, ~10 productive (12.5%)**
+**Day 2: 80 sessions, ~0 productive (0%)**
+**Total: 160 sessions, ~10 productive (6.25%)**
+
+The system has consumed its entire 2-day session budget. The only code that shipped was from a morning manual batch on Day 1 (P01-P06) before the scheduler existed. The scheduler has produced zero shipped code in 160 sessions.
+
+### 7. REQUIRED FIXES (escalation: FINAL WARNING)
+
+If these are not fixed before Day 3 begins, the Overseer recommends shutting itself down to stop wasting sessions on reports nobody reads.
+
+**P0 (blocks ALL progress, must fix before midnight reset):**
+1. **Fix scheduler slot allocation**: Reserve 3/5 slots for pipeline tasks. Cap support tasks at 2 slots max. This is the single biggest problem.
+2. **Fix scheduler-state.json**: BUG-2 -> "done", BUG-3 plan_file -> plan-lever-bug-3.md, BUG-4 plan_file -> plan-lever-bug-4.md
+3. **Dispatch BUILD for BUG-3 and BUG-4**: They have had approved plans for 12+ hours. BUILD has never run.
+
+**P1 (needed soon):**
+4. Escalate BUG-1 to Master when he wakes: needs exit formula decision
+5. Mark BUG-2 DONE in KANBAN (has passed VERIFY)
+6. Add per-workstream daily session caps: max 4 OPERATE, max 2 IMPROVE, max 4 RESEARCH
+
+**P2 (systemic design):**
+7. Give the Overseer (or create a new "fixer" process) write access to scheduler-state.json so it can fix data integrity issues directly instead of writing reports that nobody reads
+8. Create an "action reader" that parses Overseer P0 items and executes them
+
+### Verdict
+
+Day 2 is a total loss. 80 sessions, zero engineering output. The REVISE loop bug fix was the only positive, and it came too late to save today's budget. The system is now idle until midnight reset.
+
+The fundamental problem has not changed in 26 hours: the scheduler treats support tasks as equal priority to pipeline tasks, and the pipeline starves. BUG-3 and BUG-4 have been ready for BUILD since yesterday afternoon. They have never been dispatched.
+
+At 6.25% efficiency over 160 sessions, Vigil is a very expensive health-check runner that occasionally writes plans nobody builds.
+
+---
+
 ## 2026-03-29 00:01 UTC (Day 2, Midnight Reset)
 
 ### 1. EFFICIENCY: 2/10

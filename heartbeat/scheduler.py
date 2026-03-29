@@ -402,30 +402,54 @@ def dispatch_pipeline_work():
                     dispatched += 1
                 break  # only one new PLAN per cycle
 
-    # Fill remaining slots with support work
+    # Fill remaining slots with support work (60-minute cooldown per support task)
+    SUPPORT_COOLDOWN = 3600  # 60 minutes between support task runs
+    now = time.time()
     remaining = available - dispatched
     log.info(f"Support check: remaining={remaining}, dispatched={dispatched}")
-    if remaining > 0 and not any_agent_running("improve"):
+
+    improve_last = state.tasks.get("support-improve")
+    improve_ready = (not improve_last or
+                     (improve_last.agent_pid == 0 and now - improve_last.dispatched_at >= SUPPORT_COOLDOWN))
+    if remaining > 0 and improve_ready and not any_agent_running("improve"):
         pid = dispatch_agent("improve",
             "Quick product review. Open http://localhost:3000 in browser. Check 2-3 pages. Write findings to shared-brain/IMPROVE_PROPOSALS.md.",
             "support-improve")
         if pid:
+            if "support-improve" not in state.tasks:
+                state.tasks["support-improve"] = TaskState(task_id="support-improve", title="support-improve", stage="backlog")
+            state.tasks["support-improve"].dispatched_at = now
+            state.tasks["support-improve"].agent_pid = pid
             dispatched += 1
             remaining -= 1
 
-    if remaining > 0 and not any_agent_running("operate"):
+    operate_last = state.tasks.get("support-operate")
+    operate_ready = (not operate_last or
+                     (operate_last.agent_pid == 0 and now - operate_last.dispatched_at >= SUPPORT_COOLDOWN))
+    if remaining > 0 and operate_ready and not any_agent_running("operate"):
         pid = dispatch_agent("operate",
             "System check. Read Vigil logs. Fix issues. Commit fixes to git.",
             "support-operate")
         if pid:
+            if "support-operate" not in state.tasks:
+                state.tasks["support-operate"] = TaskState(task_id="support-operate", title="support-operate", stage="backlog")
+            state.tasks["support-operate"].dispatched_at = now
+            state.tasks["support-operate"].agent_pid = pid
             dispatched += 1
             remaining -= 1
 
-    if remaining > 0 and not any_agent_running("research"):
+    research_last = state.tasks.get("support-research")
+    research_ready = (not research_last or
+                      (research_last.agent_pid == 0 and now - research_last.dispatched_at >= SUPPORT_COOLDOWN))
+    if remaining > 0 and research_ready and not any_agent_running("research"):
         pid = dispatch_agent("research",
             "Quick scan. Check one coverage area. Update knowledge graph.",
             "support-research")
         if pid:
+            if "support-research" not in state.tasks:
+                state.tasks["support-research"] = TaskState(task_id="support-research", title="support-research", stage="backlog")
+            state.tasks["support-research"].dispatched_at = now
+            state.tasks["support-research"].agent_pid = pid
             dispatched += 1
 
     state.save()
