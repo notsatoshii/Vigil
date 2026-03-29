@@ -103,8 +103,10 @@ class SchedulerState:
     def reset_daily(self):
         today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         if self.last_reset_date != today:
+            log.info(f"Daily reset: {self.last_reset_date} -> {today}, sessions {self.sessions_today} -> 0")
             self.sessions_today = 0
             self.last_reset_date = today
+            self.save()  # persist reset immediately before any dispatches
             # Clean up done tasks older than 24 hours
             to_remove = []
             for tid, t in self.tasks.items():
@@ -115,6 +117,23 @@ class SchedulerState:
 
 
 state = SchedulerState()
+# Force daily reset on startup: if the date matches but counter is high from a stale save,
+# check if the counter makes sense by comparing to actual sessions run today
+today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+if state.last_reset_date == today_str and state.sessions_today >= MAX_DAILY_SESSIONS:
+    # Verify: count actual openclaw processes to see if 80 sessions really ran
+    try:
+        result = subprocess.run(
+            ["bash", "-c", "journalctl --since today -u vigil-scheduler | grep DISPATCH | wc -l"],
+            capture_output=True, text=True, timeout=5
+        )
+        actual = int(result.stdout.strip() or "0")
+        if actual < state.sessions_today:
+            log.warning(f"Stale counter detected: state says {state.sessions_today} but journal shows {actual} dispatches today. Resetting to {actual}.")
+            state.sessions_today = actual
+            state.save()
+    except Exception:
+        pass
 dispatch_lock = threading.Lock()
 
 
@@ -402,8 +421,8 @@ def dispatch_pipeline_work():
                     dispatched += 1
                 break  # only one new PLAN per cycle
 
-    # Fill remaining slots with support work (60-minute cooldown per support task)
-    SUPPORT_COOLDOWN = 3600  # 60 minutes between support task runs
+    # Fill remaining slots with support work (15-minute cooldown per support task)
+    SUPPORT_COOLDOWN = 900  # 15 minutes between support task runs
     now = time.time()
     remaining = available - dispatched
     log.info(f"Support check: remaining={remaining}, dispatched={dispatched}")

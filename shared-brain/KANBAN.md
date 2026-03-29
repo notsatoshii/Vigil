@@ -24,12 +24,12 @@
 ## PLANNED
 *Plans written and approved by CRITIQUE. Ready for BUILD.*
 
-- LEVER-BUG-3: [CRITICAL] Ghost OI (stale OI with zero positions) — plan: handoffs/plan-lever-bug-3.md
-- LEVER-BUG-4: [CRITICAL] InsuranceFund never absorbs bad debt — plan: handoffs/plan-lever-bug-4.md
 
 ---
 
 ## IN PROGRESS
+- [2026-03-29] LEVER-BUG-4: [CRITICAL] InsuranceFund never absorbs bad debt (no USDT transfer)
+- [2026-03-29] LEVER-BUG-3: [CRITICAL] Ghost OI ($3.2M with zero positions)
 
 ---
 

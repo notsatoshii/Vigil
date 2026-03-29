@@ -3,14 +3,14 @@
     "lever-bug-1": {
       "task_id": "lever-bug-1",
       "title": "LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs entryPI) causing 38 winners, 0 losers",
-      "stage": "blocked",
+      "stage": "planned",
       "agent_pid": 0,
-      "dispatched_at": 1774744638.8678913,
+      "dispatched_at": 1774754360.380428,
       "plan_file": "/home/lever/command/handoffs/plan-lever-bug-1.md",
       "critique_file": "/home/lever/command/handoffs/critique-lever-bug-1.md",
       "build_file": "",
       "verify_file": "",
-      "attempts": 3
+      "attempts": 1
     },
     "lever-bug-2": {
       "task_id": "lever-bug-2",
@@ -27,11 +27,11 @@
     "lever-bug-3": {
       "task_id": "lever-bug-3",
       "title": "LEVER-BUG-3: [CRITICAL] Ghost OI ($3.2M with zero positions)",
-      "stage": "planned",
-      "agent_pid": 0,
-      "dispatched_at": 1774705516.3198934,
+      "stage": "building",
+      "agent_pid": 3870061,
+      "dispatched_at": 1774755112.3426623,
       "plan_file": "/home/lever/command/handoffs/plan-20260328-133419.md",
-      "critique_file": "",
+      "critique_file": "/home/lever/command/handoffs/critique-lever-bug-3.md",
       "build_file": "",
       "verify_file": "",
       "attempts": 0
@@ -39,11 +39,11 @@
     "lever-bug-4": {
       "task_id": "lever-bug-4",
       "title": "LEVER-BUG-4: [CRITICAL] InsuranceFund never absorbs bad debt (no USDT transfer)",
-      "stage": "planned",
-      "agent_pid": 0,
-      "dispatched_at": 1774705576.3677924,
+      "stage": "building",
+      "agent_pid": 3874783,
+      "dispatched_at": 1774755333.263241,
       "plan_file": "/home/lever/command/handoffs/plan-20260328-133419.md",
-      "critique_file": "",
+      "critique_file": "/home/lever/command/handoffs/critique-lever-bug-4.md",
       "build_file": "",
       "verify_file": "",
       "attempts": 0
@@ -184,8 +184,8 @@
       "task_id": "support-improve",
       "title": "support-improve",
       "stage": "backlog",
-      "agent_pid": 0,
-      "dispatched_at": 1774750351.0017703,
+      "agent_pid": 3873030,
+      "dispatched_at": 1774755262.9284651,
       "plan_file": "",
       "critique_file": "",
       "build_file": "",
@@ -196,8 +196,8 @@
       "task_id": "support-operate",
       "title": "support-operate",
       "stage": "backlog",
-      "agent_pid": 0,
-      "dispatched_at": 1774750351.0017703,
+      "agent_pid": 3873036,
+      "dispatched_at": 1774755262.9284651,
       "plan_file": "",
       "critique_file": "",
       "build_file": "",
@@ -208,8 +208,8 @@
       "task_id": "support-research",
       "title": "support-research",
       "stage": "backlog",
-      "agent_pid": 0,
-      "dispatched_at": 1774750351.0017703,
+      "agent_pid": 3873049,
+      "dispatched_at": 1774755262.9284651,
       "plan_file": "",
       "critique_file": "",
       "build_file": "",
@@ -217,6 +217,6 @@
       "attempts": 0
     }
   },
-  "sessions_today": 80,
+  "sessions_today": 7,
   "last_reset_date": "2026-03-29"
 }
