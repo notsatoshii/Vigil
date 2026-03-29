@@ -8,6 +8,9 @@ LOG_FILE="/home/lever/command/heartbeat/health-check.log"
 REPORT_FILE="/home/lever/command/heartbeat/last-health-check.json"
 TIMESTAMP=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 
+# Fix systemctl in cron: DBUS is not connected by default in non-interactive sessions
+export DBUS_SYSTEM_BUS_ADDRESS=unix:path=/run/dbus/system_bus_socket
+
 echo "[$TIMESTAMP] Running health check..." >> "$LOG_FILE"
 
 # Run Tier 1 check
