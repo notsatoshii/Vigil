@@ -381,3 +381,17 @@
 2. **Oracle keeper out of gas** (CRITICAL): lever-oracle wallet has ~529 gwei, needs ~840 gwei per tx. ALL price pushes failing since at least 03:15. Every market price update is rejected. Testnet ETH faucet refill needed. OPERATE cannot modify .env or fund wallets per policy.
 
 **Other findings**: All 8 services active. Disk 18%, RAM 31%. Gateway stable, Master active (conversation at 03:08). Scheduler dispatching new day (1 session). Model warmup warning for claude-cli/claude-sonnet-4-6 at 02:12 (recurring, non-critical).
+
+---
+## OPERATE | 2026-03-29 03:45-03:50 UTC
+
+**Task**: System check, log review.
+
+**Issues found**:
+1. **Gateway OOM-killed at 03:49** (self-recovered): Root cause was `solc-0.8.24` (Solidity compiler in a BUILD session) consuming 5.5GB RSS. Kernel OOM killer terminated it. Gateway auto-restarted within 5 seconds and is healthy. Scheduler was oversubscribed at 6 active (limit 5), contributing to memory pressure. Now back to 5 active.
+2. **Oracle still out of gas**: All price pushes still failing. Needs testnet ETH. Already escalated to Master.
+3. **Telegram getUpdates timeout at 03:48**: Likely caused by the OOM event. Transient.
+
+**Other findings**: All 8 services active post-recovery. Disk 18%, RAM 54%. Gateway log shows `getUpdates timed out` at 03:48 (pre-OOM). Scheduler at 8 dispatches today.
+
+**Recommendation**: Consider adding a memory limit (MemoryMax) to openclaw-gateway.service, or limiting solc compilation concurrency to prevent future OOM kills.
