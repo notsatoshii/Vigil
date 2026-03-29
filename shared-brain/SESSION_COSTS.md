@@ -32,3 +32,6 @@
 [08:23:51] Session #23
 [08:24:12] Session #24
 [08:49:51] Session #25
+[12:58:55] Session #26
+[12:59:12] Session #27
+[12:59:20] Session #28

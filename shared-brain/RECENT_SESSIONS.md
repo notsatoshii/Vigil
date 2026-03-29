@@ -3,6 +3,18 @@
 
 ---
 
+### [2026-03-29T08:15:00Z] COMMANDER | Full pipeline session
+
+- **Task**: Proactive system check, bug pipeline, landing page fix, FE diagnosis
+- **Outcome**: SUCCESS. All 9 critical LEVER bugs resolved and pushed.
+- **FE diagnosis**: Deployer wallet empty since March 23. No oracle updates or fee accruals for 6 days. Duplicate keeper PID 3676320 (root) causes nonce collisions.
+- **BLOCKED**: Need Base Sepolia ETH to `0x0e4D636c6D79c380A137f28EF73E054364cd5434` + `sudo kill 3676320`
+- **BUG-1**: VERIFY PASS (concern: SettlementEngine still uses entryPI, needs Master decision)
+- **BUG-6**: VERIFY PASS (concern: EXECUTION_ENGINE_ROLE not granted on-chain yet)
+- **Landing page mobile**: 6 CSS/JS fixes applied
+
+---
+
 ### [2026-03-29T08:00:00Z] RESEARCH | Morning Market Scan
 
 - **Task**: Daily morning scan across all 5 coverage domains (prediction markets, AI/tooling, crypto/DeFi, geopolitics/macro, industry events).
