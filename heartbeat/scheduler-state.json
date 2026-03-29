@@ -3,14 +3,14 @@
     "lever-bug-1": {
       "task_id": "lever-bug-1",
       "title": "LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs entryPI) causing 38 winners, 0 losers",
-      "stage": "building",
-      "agent_pid": 127472,
-      "dispatched_at": 1774777827.385268,
+      "stage": "backlog",
+      "agent_pid": 0,
+      "dispatched_at": 1774779002.71352,
       "plan_file": "/home/lever/command/handoffs/plan-lever-bug-1-v2.md",
       "critique_file": "/home/lever/command/handoffs/critique-lever-bug-1-v2.md",
-      "build_file": "",
-      "verify_file": "",
-      "attempts": 0
+      "build_file": "/home/lever/command/handoffs/build-lever-bug-1.md",
+      "verify_file": "/home/lever/command/handoffs/verify-lever-bug-1.md",
+      "attempts": 1
     },
     "lever-bug-2": {
       "task_id": "lever-bug-2",
@@ -75,14 +75,14 @@
     "lever-bug-6": {
       "task_id": "lever-bug-6",
       "title": "LEVER-BUG-6: [CRITICAL] FeeRouter called without USDT by Liquidation/Settlement",
-      "stage": "building",
-      "agent_pid": 127473,
-      "dispatched_at": 1774777827.3866494,
+      "stage": "backlog",
+      "agent_pid": 0,
+      "dispatched_at": 1774779394.4785838,
       "plan_file": "/home/lever/command/handoffs/plan-lever-bug-6-v2.md",
       "critique_file": "/home/lever/command/handoffs/critique-lever-bug-6-v2.md",
-      "build_file": "",
-      "verify_file": "",
-      "attempts": 0
+      "build_file": "/home/lever/command/handoffs/build-lever-bug-6.md",
+      "verify_file": "/home/lever/command/handoffs/verify-lever-bug-6.md",
+      "attempts": 1
     },
     "lever-bug-7": {
       "task_id": "lever-bug-7",
@@ -123,35 +123,35 @@
     "landing-mobile": {
       "task_id": "landing-mobile",
       "title": "LANDING-MOBILE: Fix mobile scroll and side-scroll issues on landing page",
-      "stage": "built",
+      "stage": "done",
       "agent_pid": 0,
-      "dispatched_at": 1774762352.657151,
+      "dispatched_at": 1774777897.7121878,
       "plan_file": "/home/lever/command/handoffs/plan-landing-mobile.md",
       "critique_file": "/home/lever/command/handoffs/critique-landing-mobile.md",
       "build_file": "/home/lever/command/handoffs/build-landing-mobile.md",
-      "verify_file": "",
+      "verify_file": "/home/lever/command/handoffs/verify-landing-mobile.md",
       "attempts": 0
     },
     "landing-design": {
       "task_id": "landing-design",
       "title": "LANDING-DESIGN: Redesign landing page to be institutional and sophisticated",
-      "stage": "planned",
-      "agent_pid": 0,
-      "dispatched_at": 1774762392.8307025,
+      "stage": "verifying",
+      "agent_pid": 192977,
+      "dispatched_at": 1774780941.2108116,
       "plan_file": "/home/lever/command/handoffs/plan-landing-design.md",
-      "critique_file": "",
-      "build_file": "",
+      "critique_file": "/home/lever/command/handoffs/critique-landing-design.md",
+      "build_file": "/home/lever/command/handoffs/build-landing-design.md",
       "verify_file": "",
       "attempts": 0
     },
     "vigil-dashboard": {
       "task_id": "vigil-dashboard",
       "title": "VIGIL-DASHBOARD: Complete dashboard overhaul. Real-time WebSocket, actual reactive data, KANBAN board visible, activity feed, pipeline visualization. Current dashboard is useless.",
-      "stage": "planned",
-      "agent_pid": 0,
-      "dispatched_at": 1774762433.008117,
+      "stage": "building",
+      "agent_pid": 184389,
+      "dispatched_at": 1774780489.3061047,
       "plan_file": "/home/lever/command/handoffs/plan-vigil-dashboard.md",
-      "critique_file": "",
+      "critique_file": "/home/lever/command/handoffs/critique-vigil-dashboard.md",
       "build_file": "",
       "verify_file": "",
       "attempts": 0
@@ -159,9 +159,9 @@
     "vigil-verify-vision": {
       "task_id": "vigil-verify-vision",
       "title": "VIGIL-VERIFY-VISION: VERIFY must use Puppeteer/Chromium to take screenshots and use Claude vision to verify visual/UI changes. Not just code review.",
-      "stage": "planned",
-      "agent_pid": 0,
-      "dispatched_at": 1774762473.3033483,
+      "stage": "critiquing",
+      "agent_pid": 184390,
+      "dispatched_at": 1774780489.307535,
       "plan_file": "/home/lever/command/handoffs/plan-vigil-verify-vision.md",
       "critique_file": "",
       "build_file": "",
@@ -217,6 +217,6 @@
       "attempts": 0
     }
   },
-  "sessions_today": 85,
+  "sessions_today": 94,
   "last_reset_date": "2026-03-29"
 }

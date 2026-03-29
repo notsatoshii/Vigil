@@ -47,16 +47,38 @@ function collectSystemData() {
   const ramTotal = parseInt(memInfo[0]) || 1;
   const ramUsed = parseInt(memInfo[1]) || 0;
 
+  // Step 3: Use native JSON.parse instead of shelling out to python3
+  const healthData = (() => {
+    try {
+      const hc = JSON.parse(fs.readFileSync(HEALTH_JSON, 'utf-8'));
+      return { health: hc.status || 'unknown', healthTime: hc.timestamp || '' };
+    } catch { return { health: 'unknown', healthTime: '' }; }
+  })();
+
+  // Step 8: Scheduler health from scheduler-state.json
+  const schedulerRunning = parseInt(sh("ps aux | grep 'scheduler.py' | grep -v grep | wc -l"), 10) > 0;
+  const schedulerLastDispatch = (() => {
+    try {
+      const state = JSON.parse(fs.readFileSync('/home/lever/command/heartbeat/scheduler-state.json', 'utf-8'));
+      let latest = 0;
+      for (const task of Object.values(state.tasks || {})) {
+        if (task.dispatched_at && task.dispatched_at > latest) latest = task.dispatched_at;
+      }
+      return latest > 0 ? Math.floor(latest) : 0;
+    } catch { return 0; }
+  })();
+
   return {
-    health: sh("cat " + HEALTH_JSON + " 2>/dev/null | python3 -c \"import json,sys; print(json.load(sys.stdin)['status'])\" 2>/dev/null") || 'unknown',
-    healthTime: sh("cat " + HEALTH_JSON + " 2>/dev/null | python3 -c \"import json,sys; print(json.load(sys.stdin)['timestamp'])\" 2>/dev/null") || '',
+    ...healthData,
     ramUsed, ramTotal,
     ramPct: Math.round(ramUsed * 100 / ramTotal),
     diskPct: shNum("df / --output=pcent | tail -1 | tr -d ' %'"),
     diskUsed: sh("df -h / --output=used | tail -1 | tr -d ' '"),
     diskTotal: sh("df -h / --output=size | tail -1 | tr -d ' '"),
     cpuLoad: sh("cat /proc/loadavg | awk '{print $1}'"),
-    uptime: sh("uptime -p | sed 's/up //'")
+    uptime: sh("uptime -p | sed 's/up //'"),
+    schedulerRunning,
+    schedulerLastDispatch
   };
 }
 
@@ -80,12 +102,28 @@ function collectServices() {
 
 function collectSessions() {
   const today = new Date().toISOString().split('T')[0];
+
+  // Step 1: Count sessions for today only by finding today's date section
+  const todaySessionCount = (() => {
+    try {
+      const content = fs.readFileSync(SESSION_COSTS, 'utf-8');
+      const todaySection = content.split(`## ${today}`)[1];
+      if (!todaySection) return 0;
+      const nextSection = todaySection.indexOf('\n## ');
+      const section = nextSection > -1 ? todaySection.substring(0, nextSection) : todaySection;
+      return (section.match(/Session #/g) || []).length;
+    } catch { return 0; }
+  })();
+
+  // Step 2: Count gateway errors for today only (log format: "2026-03-29 HH:MM:SS,ms [ERROR]")
+  const todayGatewayErrors = shNum(`grep -c "^${today}.*\\[ERROR\\]" "${INBOX_LOG}" 2>/dev/null`);
+
   return {
     active: shNum("ps aux | grep 'openclaw agent' | grep -v grep | wc -l"),
-    today: shNum(`grep -c "Session #" "${SESSION_COSTS}" 2>/dev/null`),
+    today: todaySessionCount,
     pendingApprovals: shNum(`grep -c "^[^#*-].*PENDING" "${BRAIN}/INTENTIONS.md" 2>/dev/null`) + shNum(`grep -c "^[^#*-].*PENDING" "${BRAIN}/ADVISOR_BRIEFS.md" 2>/dev/null`),
     deadLetters: shNum("find /home/lever/command/inbox/failed-messages/ -name '*.json' 2>/dev/null | wc -l"),
-    gatewayErrors: shNum(`grep -c "ERROR" "${INBOX_LOG}" 2>/dev/null`)
+    gatewayErrors: todayGatewayErrors
   };
 }
 
@@ -96,7 +134,8 @@ function collectKanban() {
       const regex = new RegExp(`## ${section.replace(/[()]/g, '\\$&')}\\n([\\s\\S]*?)(?=\\n## |$)`);
       const match = content.match(regex);
       if (!match) return [];
-      return match[1].split('\n').filter(l => l.startsWith('- ')).map(l => l.replace(/^- /, '').trim()).slice(0, 5);
+      // Step 6: Increased from 5 to 20 so frontend decides truncation
+      return match[1].split('\n').filter(l => l.startsWith('- ')).map(l => l.replace(/^- /, '').trim()).slice(0, 20);
     } catch { return []; }
   }
   const kanban = {
@@ -219,13 +258,64 @@ function collectAdvisor() {
 function collectUpcoming() {
   try {
     const jobsFile = '/home/lever/.openclaw/cron/jobs.json';
-    const raw = fs.readFileSync(jobsFile, 'utf-8');
-    const data = JSON.parse(raw);
+    const data = JSON.parse(fs.readFileSync(jobsFile, 'utf-8'));
+    const now = Date.now();
+
+    // Step 4: Compute human-readable next-run from nextRunAtMs timestamp
+    function formatNextRun(job) {
+      const nextMs = job.state && job.state.nextRunAtMs;
+      if (!nextMs) return 'unknown';
+      const diffMs = nextMs - now;
+      const diffSec = Math.floor(Math.abs(diffMs) / 1000);
+      const diffMin = Math.floor(diffSec / 60);
+      const diffHr = Math.floor(diffMin / 60);
+      const diffDay = Math.floor(diffHr / 24);
+      if (diffMs < 0) {
+        // Overdue
+        if (diffMin < 60) return `${diffMin}m overdue`;
+        if (diffHr < 24) return `${diffHr}h overdue`;
+        return `${diffDay}d overdue`;
+      } else {
+        if (diffMin < 60) return `in ${diffMin}m`;
+        if (diffHr < 24) return `in ${diffHr}h`;
+        return `in ${diffDay}d`;
+      }
+    }
+
+    function getStatus(job) {
+      if (!job.state) return 'idle';
+      if (job.state.lastRunStatus === 'error') return 'error';
+      if (job.state.consecutiveErrors && job.state.consecutiveErrors > 0) return 'error';
+      return 'idle';
+    }
+
     return (data.jobs || []).filter(j => j.enabled).slice(0, 7).map(j => ({
       name: j.name || j.id,
-      next: j.schedule && j.schedule.expr ? j.schedule.expr : 'scheduled'
+      next: formatNextRun(j),
+      status: getStatus(j)
     }));
   } catch { return []; }
+}
+
+// Step 7: Pipeline stage counts from scheduler state
+function collectPipeline() {
+  const stages = { plan: 0, critique: 0, build: 0, verify: 0 };
+  const details = { plan: [], critique: [], build: [], verify: [] };
+  const stageMap = { planning: 'plan', critiquing: 'critique', building: 'build', verifying: 'verify' };
+
+  try {
+    const state = JSON.parse(fs.readFileSync('/home/lever/command/heartbeat/scheduler-state.json', 'utf-8'));
+    for (const [tid, task] of Object.entries(state.tasks || {})) {
+      const stage = stageMap[task.stage];
+      if (stage) {
+        stages[stage]++;
+        const elapsed = task.dispatched_at ? Math.floor((Date.now() / 1000 - task.dispatched_at) / 60) : 0;
+        details[stage].push({ id: tid, title: task.title || tid, elapsed });
+      }
+    }
+  } catch {}
+
+  return { stages, details };
 }
 
 function collectKnowledge() {
@@ -248,10 +338,20 @@ function collectAll() {
     advisorSummary: collectAdvisor(),
     activity: collectRecentActivity(),
     upcoming: collectUpcoming(),
-    projects: {
-      lever: { status: 'testnet', bugsTotal: 12 },
-      landing: { status: 'active' }
-    }
+    pipeline: collectPipeline(),
+    // Step 5: Derive bug count from KANBAN.md instead of hardcoding
+    projects: (() => {
+      try {
+        const kanban = fs.readFileSync(`${BRAIN}/KANBAN.md`, 'utf-8');
+        const leverBugs = (kanban.match(/LEVER-BUG-/g) || []).length;
+        return {
+          lever: { status: 'testnet', bugsTotal: leverBugs },
+          landing: { status: 'active' }
+        };
+      } catch {
+        return { lever: { status: 'testnet', bugsTotal: 0 }, landing: { status: 'active' } };
+      }
+    })()
   };
 }
 

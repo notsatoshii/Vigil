@@ -4,8 +4,13 @@
   "unit": "USD",
   "snapshots": [
     {
-      "date": "2026-03-29",
-      "period": "snapshot",
+      "date": "2026-03-29T09:47Z",
+      "period": "weekly_update",
+      "combined_weekly_record": "$5.9B (Kalshi $3.4B + Polymarket $2.5B)",
+      "kalshi_weekly_volume": "3400000000",
+      "kalshi_weekly_share": "57.2%",
+      "polymarket_weekly_volume": "2540000000",
+      "polymarket_weekly_share": "42.8%",
       "polymarket_active_markets": 1382,
       "polymarket_geopolitics_volume": "464500000+",
       "polymarket_tariff_markets": 116,
@@ -15,7 +20,7 @@
       "crypto_market_conditions": "BTC $66,246 (-3.85%), ETH $1,985 (-4.05%), Fear&Greed 12 (extreme fear)",
       "oil_brent": "$101.89 (+4.8%)",
       "iran_ceasefire_status": "REJECTED by Iran",
-      "notes": "KEY DECOUPLING: prediction market volume at ATH despite crypto bear market. Iran rejected ceasefire, war escalating. Polymarket fee expansion goes live March 30. Three structural uncertainty pillars: Iran war, tariffs, midterm elections.",
+      "notes": "COMBINED WEEKLY RECORD: $5.9B (Kalshi $3.4B + Polymarket $2.5B). Kalshi overtook Polymarket for first time on weekly volume, driven by March Madness sports trading. Kalshi at 57.2% weekly share. KEY DECOUPLING: prediction market volume at ATH despite crypto bear market. Polymarket fee expansion goes live March 30.",
       "source": "Polymarket.com, CBS News, CoinGabbar, multiple outlets"
     },
     {

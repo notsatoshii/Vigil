@@ -4,6 +4,90 @@
 
 ---
 
+## 2026-03-29 10:01 UTC (Day 2, 10 Hours In)
+
+### 1. EFFICIENCY: 5/10 (improving, but idle slots are wasted)
+
+**89 sessions burned today. Currently 2-3 active, 2-3 slots idle, 0 dispatched.**
+
+The scheduler log tells the story: for the last 5+ minutes, `pipeline_waiting=True` and `dispatched=0`. Translation: there are tasks waiting in the pipeline, slots are available, but nothing is being dispatched. This is the scheduler sitting on its hands.
+
+**What ran since last report (08:05):**
+- BUILD lever-bug-1: completed (handoff at 10:09). Good work, 5 regression tests, 167 passed.
+- BUILD lever-bug-6: completed (handoff at 10:15). Three-layer accounting fix, solid.
+- VERIFY landing-mobile: completed, PASS (10:23). Moved to DONE.
+- VERIFY lever-bug-9: completed (10:20).
+- CRITIQUE landing-design: completed, APPROVED with notes (10:25).
+- lever-bug-1 and lever-bug-6 both now in VERIFY stage, agents running.
+
+That is 6 meaningful pipeline sessions in 2 hours. Decent velocity. But the system has burned 89 total sessions today. Where did the other 83 go? If 35+ were support sessions (as the 08:05 report documented), the ratio is still terrible.
+
+**Current state: 2 active sessions (verify for bug-1 and bug-6), 3 idle slots, nothing dispatched.** LANDING-DESIGN is APPROVED by CRITIQUE and sitting in IN REVIEW with no BUILD dispatched. VIGIL-DASHBOARD, VIGIL-VERIFY-VISION, and VIGIL-SELF-IMPROVE are all "planned" but not moving. The scheduler has work to give out and is not giving it out.
+
+**Root cause hypothesis:** The scheduler may not be auto-advancing CRITIQUE APPROVED tasks to BUILD. Or it may be prioritizing something else. Either way, slots are idle with approved plans waiting.
+
+### 2. QUALITY: 7/10 (solid improvement)
+
+**BUILD is writing real code and real tests.** Both bug-1 and bug-6 handoffs are excellent:
+- Bug-1: Single-impact PnL formula, 5 regression tests, 167 tests pass. Known risks clearly documented (SettlementEngine out of scope, existing position equity shift). This is what a good handoff looks like.
+- Bug-6: Three-layer fix (liquidation fee double-spend, settlement collateral double-counting, settlement fee transfer). 4 new tests, 44 audit tests pass. Role grant dependency flagged.
+- CRITIQUE on landing-design: Thoughtful. Called out two irreversible creative decisions (canvas removal, flywheel replacement) that need Master confirmation. Suggested a Phase 1 lite fallback. This is CRITIQUE adding value, not rubber-stamping.
+
+**VERIFY is doing its job.** Landing-mobile PASS was quick and clean. Bug-9 verify completed.
+
+**Data integrity in scheduler-state.json: STILL BROKEN (9th consecutive report).**
+- lever-bug-2: stage "backlog" but KANBAN says DONE (VERIFIED PASS). Has verify_file set.
+- lever-bug-3: stage "backlog" but KANBAN says DONE. verify_file points to verify-lever-bug-4.md (WRONG FILE).
+- lever-bug-4: stage "backlog" but KANBAN says DONE. Same cross-linked verify file.
+- lever-bug-5: build_file points to build-liquid-physics.md (WRONG FILE, should be build-lever-bug-5.md).
+- lever-bug-1: attempts=0 despite burning 20+ critique cycles yesterday. The attempts counter was reset somewhere.
+
+This is not cosmetic. If the scheduler reads stale stages, it may re-dispatch completed work or skip tasks that need attention.
+
+### 3. BOTTLENECKS: Scheduler dispatch gap
+
+**The pipeline is not stuck, it is stalled at the dispatch layer.** The work exists:
+- LANDING-DESIGN: CRITIQUE APPROVED, needs BUILD dispatch
+- VIGIL-DASHBOARD: planned, needs dispatch
+- VIGIL-VERIFY-VISION: planned, needs dispatch
+
+But the scheduler is logging `dispatched=0` every 10 seconds with available slots. Something in the dispatch logic is not matching these tasks to available slots.
+
+**BUG-1 and BUG-6 are in VERIFY now.** If both pass, 7 of 9 audit bugs will be DONE. The two remaining items in IN REVIEW (BUG-1 and BUG-6) should resolve within the hour.
+
+### 4. RECURRING PROBLEMS
+
+**scheduler-state.json data integrity.** Flagged in every report since system launch. Never fixed. The scheduler.py code does not reliably update task stages on completion. This causes:
+- Phantom "backlog" tasks that are actually done
+- Wrong file references
+- Attempt counters that reset
+- Potential re-dispatch of completed work
+
+This needs to be a PLAN task, not a footnote. Every Overseer report wastes time re-diagnosing the same issue.
+
+**Support session ratio.** Still consuming ~40% of daily sessions on health checks, improve scans, and research when nothing has changed. The support check runs every 10 seconds and dispatches nothing. This is polling waste.
+
+### 5. SYSTEM HEALTH: Acceptable
+
+- **RAM**: Hit 99% at 04:00 UTC (health check flagged it). Recovered by 08:00. The 3 sleeping root-owned claude processes (3.2G total) from yesterday are likely still there.
+- **Telegram gateway**: Multiple getUpdates timeouts between 03:48 and 04:52 (7 timeouts in 1 hour), then again at 08:58. These correlate with the 99% RAM event. Gateway recovers on its own but the timeouts mean messages could be delayed.
+- **Health check DBUS fix**: Confirmed working (no DBUS errors in today's logs). The fix from yesterday held.
+- **All services**: Running as of 08:00 check.
+
+### 6. WASTED WORK: Moderate
+
+- **Idle slots with waiting tasks** is the primary waste right now. 2-3 slots idle while LANDING-DESIGN sits APPROVED. If those slots ran BUILD on landing-design + VIGIL-DASHBOARD, we would have 2 more items progressing.
+- **Support session spam** continues but is less visible in the current low-activity window.
+
+### ACTIONS REQUIRED
+
+1. **FIX SCHEDULER DISPATCH**: Why is `dispatched=0` when `pipeline_waiting=True` and slots are available? This is the single biggest efficiency problem right now.
+2. **FIX scheduler-state.json sync**: Bugs 2,3,4,5 should be stage "done". Attempt counters should not reset. Wrong file references should be corrected. Create a PLAN task for this.
+3. **LANDING-DESIGN needs Master confirmation**: CRITIQUE flagged two creative decisions (canvas removal, flywheel replacement) that need Master input before BUILD proceeds. Surface this to Master.
+4. **RAM monitoring**: The 04:00 spike to 99% needs investigation. Check if root claude processes are still alive and whether they can be cleaned up.
+
+---
+
 ## 2026-03-29 08:05 UTC (Day 2, 8 Hours In)
 
 ### 1. EFFICIENCY: 3/10 (up from 0, but still bad)

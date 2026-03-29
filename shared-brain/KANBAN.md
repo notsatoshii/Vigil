@@ -17,22 +17,23 @@
 ---
 
 ## IN PROGRESS
-- [2026-03-29] LEVER-BUG-6: [CRITICAL] FeeRouter called without USDT by Liquidation/Settlement
-- [2026-03-29] LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs entryPI) causing 38 winners, 0 losers
-
+- [2026-03-29] VIGIL-DASHBOARD: Complete dashboard overhaul. Real-time WebSocket, actual reactive data, KANBAN board visible, activity feed, pipeline visualization. Current dashboard is useless.
 
 ---
 
 ## IN REVIEW
+- [2026-03-29] LANDING-DESIGN: Redesign landing page to be institutional and sophisticated
+- [2026-03-29] LANDING-DESIGN: Precision Black redesign. 1629->931 lines. Handoff: handoffs/build-landing-design.md
+- [2026-03-29] LEVER-BUG-6: [CRITICAL] Fee accounting fixed in LiquidationEngine + SettlementEngine. Handoff: handoffs/build-lever-bug-6.md
+- [2026-03-29] LEVER-BUG-1: [CRITICAL] PnL single-impact formula + code changes committed. Handoff: handoffs/build-lever-bug-1.md
 - [2026-03-29] VIGIL-SELF-IMPROVE: System must continuously self-improve without Master having to point out every problem. Overseer must be more aggressive.
 - [2026-03-29] VIGIL-VERIFY-VISION: VERIFY must use Puppeteer/Chromium to take screenshots and use Claude vision to verify visual/UI changes. Not just code review.
-- [2026-03-29] VIGIL-DASHBOARD: Complete dashboard overhaul. Real-time WebSocket, actual reactive data, KANBAN board visible, activity feed, pipeline visualization.
-- [2026-03-29] LANDING-DESIGN: Redesign landing page to be institutional and sophisticated
-- [2026-03-29] LANDING-MOBILE: Fix mobile scroll and side-scroll issues on landing page
 
 ---
 
 ## DONE (last 10)
+- [2026-03-29] LANDING-DESIGN: Precision Black redesign complete. Handoff: handoffs/build-20260329-landing-design.md
+- [2026-03-29] LANDING-MOBILE: Fix mobile scroll and side-scroll issues on landing page
 - [2026-03-29] LEVER-BUG-2: $304K vault drain — VERIFIED PASS
 - [2026-03-29] LEVER-BUG-3: Ghost OI — VERIFIED PASS
 - [2026-03-29] LEVER-BUG-4: InsuranceFund bad debt absorption — VERIFIED PASS
