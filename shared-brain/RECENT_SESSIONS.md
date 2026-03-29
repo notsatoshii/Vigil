@@ -429,3 +429,23 @@
 **Immediate need**: Reduce max concurrent sessions from 5 to 3, or add memory-aware scheduling. This is burning tokens on sessions that get OOM-killed before completing.
 
 **Oracle**: Still out of gas (escalated to Master, no change).
+
+---
+
+## OPERATE Self-Check — 2026-03-29 05:03 UTC
+
+**Status**: All clear.
+
+**Services**: openclaw-gateway, vigil-dashboard (:8080), lever-frontend (:3000), landing (:3001), vigil-inbox, vigil-telegram — all responding.
+
+**RAM**: Recovered. Was 99% at 04:00 (solc OOM pattern documented in previous checks). Now 35% used (5.3GB/15GB). No active solc processes.
+
+**Pipeline**: Active. 34 sessions today. Bugs 7/8/9 in progress, bugs 3/4/5 back in PLAN loop after VERIFY design flaw findings. Normal pipeline churn.
+
+**Disk**: 19% used (35G/193G). No concern.
+
+**Stuck sessions**: Two old root-owned claude processes (Mar22 PID 1151018, Mar26 PID 1312428) consuming ~14% RAM total. Running in pts/8 and pts/11. Not killing without Master authorization — they may be legitimate terminal sessions. Monitoring.
+
+**Inbox**: No backlog. All files processed.
+
+**No fixes needed this cycle.** Previous checks (03:45, 04:11, 04:38) already addressed the solc OOM pattern and escalated to Master.

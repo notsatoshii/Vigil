@@ -8,7 +8,6 @@
 
 
 - LEVER-BUG-6: [CRITICAL] FeeRouter called without USDT by Liquidation/Settlement — CRITIQUE: REVISE. Settlement vault funding amount is wrong (funds delta after fee, but fee also leaves as USDT; must fund grossProfit = delta + fee like ExecutionEngine does). LiquidationEngine fix is correct. See critique-lever-bug-6.md
-- LEVER-BUG-8: [HIGH] No closing transaction fee (10bps foregone)
 - LEVER-BUG-9: [HIGH] Vault NAV missing unrealized PnL
 - LANDING-MOBILE: Fix mobile scroll and side-scroll issues on landing page
 - LANDING-DESIGN: Redesign landing page to be institutional and sophisticated
@@ -25,12 +24,13 @@
 ---
 
 ## IN PROGRESS
-- [2026-03-29] LEVER-BUG-7: [CRITICAL] Zero liquidations (depthThreshold unset)
+- [2026-03-29] LEVER-BUG-8: [HIGH] No closing transaction fee (10bps foregone)
 - [2026-03-29] VIGIL-MISSION-CONTROL: React dashboard built, deployed to :8080. Handoff: handoffs/build-vigil-mission-control.md
 
 ---
 
 ## IN REVIEW
+- [2026-03-29] LEVER-BUG-7: [CRITICAL] Zero liquidations (depthThreshold unset)
 - [2026-03-29] LEVER-BUG-4: [CRITICAL] InsuranceFund never absorbs bad debt (no USDT transfer)
 - [2026-03-29] LEVER-BUG-3: [CRITICAL] Ghost OI ($3.2M with zero positions)
 - [2026-03-29] LEVER-BUG-5: [CRITICAL] InsuranceFund decimal mismatch (WAD bootstrap + USDT deposits)
