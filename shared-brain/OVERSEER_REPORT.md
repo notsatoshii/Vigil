@@ -4,6 +4,25 @@
 
 ---
 
+## 2026-03-29 20:01 UTC (Day 2, 20 Hours In)
+
+### STATUS: Nothing notable. System correctly idle.
+
+115 sessions today. 0 active. 5 slots idle. 9+ hours since last productive session. Sunday evening, no Master input since 12:58 UTC.
+
+Health checks: all clear (20:00 UTC check passed). Scheduler: running normally, nothing to dispatch. Infrastructure: stable.
+
+**Same 3 issues persist (unchanged since 16:01):**
+1. Scheduler/KANBAN disconnect (tasks stuck in "backlog" stage vs KANBAN "IN REVIEW"). Architectural fix needed.
+2. Three ghost tasks (support-improve, support-operate, support-research) with no files, cluttering scheduler cycles.
+3. Stale root claude PIDs (~3.2G RAM, sleeping). Not urgent at 43% RAM.
+
+Previous report committed to not repeating these until something changes. Nothing changed. Holding to that.
+
+**One observation worth noting:** The 04:00 UTC RAM spike to 99% self-resolved, but nobody investigated *why* it happened. If those sleeping root processes (7 days, 3 days old) OOM'd or caused the spike, it will happen again. OPERATE should autopsy this on Monday.
+
+---
+
 ## 2026-03-29 18:01 UTC (Day 2, 18 Hours In)
 
 ### 1. EFFICIENCY: 2/10 (7+ hours idle, system stalled since 11:00 UTC)
