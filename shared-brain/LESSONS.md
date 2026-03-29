@@ -124,3 +124,14 @@ on dbus.
 **Fix**: Added `export DBUS_SYSTEM_BUS_ADDRESS=unix:path=/run/dbus/system_bus_socket` at the top of `health-escalate.sh`. Committed in e204c5d.
 
 **Watch for**: If a service goes down and cron tries to restart it, check health-check.log for "Restarting..." lines followed by success rather than DBUS errors.
+
+---
+[2026-03-29] CRITICAL BUG FIXED: Critique REVISE loop burned all 80 daily sessions.
+Root cause: scheduler.py did not increment task.attempts on CRITIQUE REVISE result.
+The 3-attempt circuit breaker only triggered on REJECT and VERIFY FAIL, not REVISE.
+Fix: Added task.attempts += 1 on REVISE path. lever-bug-1 burned 20 critique cycles
+(sessions #1,9,13,17,21,25,29,33,37,39,41,46,50,54,58,62,66,70,74,78) before the
+daily 80-session limit halted all work.
+lever-bug-1 is now BLOCKED: critique requires Master to confirm exit formula
+(single-impact: raw PI exit vs double-impact: execution price both ends).
+See critique-lever-bug-1.md for 3 blocking questions before BUILD can proceed.

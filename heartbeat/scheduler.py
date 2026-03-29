@@ -283,7 +283,8 @@ def check_completed_tasks():
                             log.info(f"CRITIQUE REJECTED for {tid}. Back to backlog.")
                         else:
                             task.stage = "planned"  # needs revision, re-plan
-                            log.info(f"CRITIQUE wants REVISE for {tid}. Re-planning.")
+                            task.attempts += 1
+                            log.info(f"CRITIQUE wants REVISE for {tid}. Re-planning. (attempt {task.attempts})")
                     except Exception:
                         task.stage = "approved"  # assume approved if we cannot parse
                 else:
