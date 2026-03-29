@@ -88,6 +88,14 @@ CONTRARIAN VIEW: $100B notional includes wash trading. 268 projects likely inclu
 | OG | Crypto.com | Feb 2026 | Sports, politics, entertainment, economics, parlays |
 | Plus500 Futures | Plus500 | Feb 2026 | Prediction markets |
 
+### Polymarket Fee Expansion: TOMORROW March 30 (Updated 2026-03-29)
+- Taker fees expanding to 8 new categories (Politics, Finance, Economics, Culture, Weather, Tech, Mentions, Other)
+- **Geopolitics and World Events remain FREE** (LEVER's primary market category)
+- Revenue: $800K-$1M/day projected. $365M/year at current volume.
+- Maker Rebates: 0% maker fees + daily USDC rebates (Finance 50%, others 25%)
+- Early evidence: Sports fee introduction showed NO volume decline. Crypto slight pullback within variance.
+- **LEVER impact**: POSITIVE. Maker rebates incentivize resting orders = deeper CLOB = better PI quality for LEVER's oracle.
+
 ### Polymarket Infrastructure Buildout (Oracle Dependency Watch)
 Polymarket made 2 acquisitions in 2 months:
 - **Dome** (Feb 19): Unified API for prediction markets (Polymarket + Kalshi + others). YC Fall 2025. Ex-Alchemy founders. $5.2M raised. This was the cross-platform API layer; now Polymarket-owned.

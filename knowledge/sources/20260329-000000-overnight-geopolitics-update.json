@@ -1,0 +1,47 @@
+{
+  "id": "20260329-000000-overnight-geopolitics-update",
+  "ingestedAt": "2026-03-29T00:00:00Z",
+  "sourceType": "Web scan (major news outlets)",
+  "reliability": "High (CBS News, Al Jazeera, HuffPost, Economic Times)",
+  "scanType": "Overnight update: Geopolitics (Iran war, prediction market impact)",
+
+  "summary": [
+    "Iran REJECTED the US 15-point ceasefire proposal. Called talks 'illogical.' No negotiations planned. Witkoff/Kushner diplomatic push has stalled.",
+    "Trump extended pause on Iranian energy infrastructure strikes (still targeting April 6 deadline). Netanyahu continuing strikes independently. Houthis hit Israel again. Fire at Kuwait airport after drones hit fuel tank. Three journalists killed in Israeli strike in Lebanon.",
+    "Oil spiking: Brent crude $101.89 (+4.8%), US crude $94.48 (+4.6%). Strait of Hormuz blockade threat ongoing. LPG shortage emerging.",
+    "Prediction market activity: Polymarket hosting 1,382 active markets. Geopolitics driving volume: Yemen markets ($1M 24h), Houthi markets ($1M 24h), UFC ($10M 24h). Iran ceasefire odds likely dropping after rejection.",
+    "Net assessment: war is escalating, not de-escalating. April 6 energy strike deadline remains but Iran's rejection makes a deal less likely. Oil above $100 creates broader economic uncertainty that drives MORE prediction market demand."
+  ],
+
+  "entities": [
+    {"name": "Steve Witkoff", "type": "person", "role": "US special envoy, presented 15-point peace proposal to Iran"},
+    {"name": "Jared Kushner", "type": "person", "role": "Leading push for 1-month ceasefire in Iran war"}
+  ],
+
+  "keyMetrics": {
+    "brentCrude": "$101.89 (+4.8%)",
+    "usCrude": "$94.48 (+4.6%)",
+    "polymarketActiveMarkets": 1382,
+    "iranCeasefireStatus": "REJECTED by Iran",
+    "energyStrikeDeadline": "April 6 (extended)"
+  },
+
+  "marketImpact": {
+    "prediction_markets": "Iran rejection = more uncertainty = more trading volume. Expect geopolitics markets to spike.",
+    "oil": "Above $100/barrel. If Strait of Hormuz blocked or energy strikes proceed April 6, could go significantly higher.",
+    "crypto": "Bitcoin typically inverse-correlated with geopolitical risk in short term but prediction market volume is a separate driver.",
+    "lever_relevance": "Elevated geopolitical uncertainty is the strongest possible environment for prediction market demand. LEVER launching into this environment is well-timed."
+  },
+
+  "workstreamTags": {
+    "CEO": "Oil above $100, Iran ceasefire rejected, war escalating. Prediction market demand at peak. This is the macro backdrop for LEVER's fundraising: 'We are building leverage infrastructure for a $21B+ market that is growing because the world is uncertain, and uncertainty is not going away.'",
+    "ADVISOR": "April 6 remains the key date. If energy strikes proceed after Iran's rejection, expect oil price shock and a new wave of prediction market activity. LEVER should be ready to launch into this momentum, not after it fades."
+  },
+
+  "sources": [
+    {"title": "CBS News: Trump Extends Pause, Witkoff 15-Point Plan", "url": "https://www.cbsnews.com/live-updates/iran-war-trump-israel-tehran-denies-ceasefire-talks-strait-of-hormuz/", "dateAccessed": "2026-03-29", "sourceType": "Primary", "reliability": "High"},
+    {"title": "HuffPost: Iran Rejects US Ceasefire Plan", "url": "https://www.huffpost.com/entry/iran-us-ceasefire-proposal_n_69c3af2de4b0e447525b057d", "dateAccessed": "2026-03-29", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "Al Jazeera: Iran War Live", "url": "https://www.aljazeera.com/news/liveblog/2026/3/28/iran-war-live-trump-again-slams-natos-lack-of-support-for-war-on-tehran", "dateAccessed": "2026-03-29", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Mediaite: Kushner Pushing 1-Month Ceasefire", "url": "https://www.mediaite.com/politics/jared-kushner-and-steve-witkoff-reportedly-leading-us-push-for-month-long-ceasefire-in-iran-war/", "dateAccessed": "2026-03-29", "sourceType": "Secondary", "reliability": "Medium"}
+  ]
+}

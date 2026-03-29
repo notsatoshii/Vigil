@@ -1,0 +1,47 @@
+{
+  "id": "20260329-001000-tariffs-trade-policy-scan",
+  "ingestedAt": "2026-03-29T00:10:00Z",
+  "sourceType": "Web scan (Tax Foundation, Polymarket, major outlets)",
+  "reliability": "High (Tax Foundation, JP Morgan, TheStreet, Fox Business)",
+  "scanType": "Focused scan: Trump tariffs & trade policy as prediction market demand driver",
+
+  "summary": [
+    "Trump tariffs are the largest US tax increase as % of GDP since 1993. Average $1,500/household in 2026. Supreme Court ruled IEEPA tariffs unlawful in early 2026. Being replaced with Section 122/301/232 investigations targeting China, EU, Korea, Vietnam, Thailand, and others.",
+    "Polymarket: 116 active tariff markets ($9.7M volume) + 201 trade war markets ($15.4M volume) = 317 markets, $25.1M combined volume. Active prediction categories with ongoing trading interest.",
+    "Supreme Court tariff ruling odds: ~28-32% chance Trump wins. Down 9-14 points after oral arguments. Major binary outcome with financial implications. If Court rules against: threatens 1/3 of proposed military budget.",
+    "New Section 301 investigations (March 11, 2026) targeting Korea, Vietnam, Thailand among others. These are XMarket's APAC target markets. Trade policy uncertainty in APAC creates BOTH risk (regulatory disruption) and opportunity (prediction market demand).",
+    "Tariff stimulus check odds: 44% before 2027 on Kalshi ($1.7M traded). Rising toward 30% by late summer 2026. Unique prediction market product category."
+  ],
+
+  "entities": [
+    {"name": "IEEPA Tariffs", "type": "policy", "role": "Ruled unlawful by Supreme Court early 2026, being replaced with Section 122/301/232"},
+    {"name": "Section 301 Investigations", "type": "policy", "role": "New investigations March 11 2026 targeting China, EU, Korea, Vietnam, Thailand, others"},
+    {"name": "Supreme Court", "type": "institution", "role": "Ruled IEEPA tariffs unlawful; ongoing tariff cases"}
+  ],
+
+  "categories": ["strategic", "market"],
+
+  "keyMetrics": {
+    "tariffTaxIncrease": "Largest since 1993, $1,500/household",
+    "polymarketTariffMarkets": 116,
+    "polymarketTariffVolume": "$9.7M",
+    "polymarketTradeWarMarkets": 201,
+    "polymarketTradeWarVolume": "$15.4M",
+    "combinedTariffTradeVolume": "$25.1M",
+    "supremeCourtTrumpTariffOdds": "28-32% (down 9-14 pts)",
+    "tariffStimulusCheckOdds": "44% before 2027"
+  },
+
+  "workstreamTags": {
+    "CEO": "Tariffs are a third major uncertainty driver alongside Iran war and elections. 317 active markets, $25.1M volume. Trade policy uncertainty is structural (Section 301 investigations just launched March 11 against 12+ countries). This reinforces the 'uncertainty is LEVER's TAM' thesis.",
+    "ADVISOR": "Section 301 investigations target Korea, Vietnam, Thailand. These are XMarket's APAC markets. Trade disruption could affect crypto flows in the region. But it also creates prediction market demand: 'Will tariffs hit Korea/Vietnam?' is a tradeable question. XMarket could create creator-driven markets on APAC trade policy.",
+    "BUILD": "Tariff and trade war markets are a natural category for LEVER. 317 active Polymarket markets with $25.1M volume. These are binary outcomes (tariff imposed or not, deal reached or not) with clear resolution criteria. Ideal for leveraged positions."
+  },
+
+  "sources": [
+    {"title": "Tax Foundation: Trump Tariff Tracker", "url": "https://taxfoundation.org/research/all/federal/trump-tariffs-trade-war/", "dateAccessed": "2026-03-29", "sourceType": "Primary", "reliability": "High"},
+    {"title": "TheStreet: Supreme Court Tariff Odds Reset", "url": "https://www.thestreet.com/markets/polymarket-kalshi-supreme-court-tariff-ruling-bets-reset-amid-greenland-europe-tariffs", "dateAccessed": "2026-03-29", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "Fox Business: Prediction Markets Bet Against Tariffs", "url": "https://www.foxbusiness.com/politics/prediction-market-traders-bet-against-trumps-tariffs-supreme-court-ruling-looms", "dateAccessed": "2026-03-29", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "Euronews: Tariff Winners and Losers", "url": "https://www.euronews.com/business/2026/03/26/the-biggest-winners-and-losers-of-the-tariff-war-as-ai-related-trade-skyrockets", "dateAccessed": "2026-03-29", "sourceType": "Secondary", "reliability": "High"}
+  ]
+}

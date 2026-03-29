@@ -1,0 +1,58 @@
+{
+  "id": "20260329-000200-crypto-market-conditions",
+  "ingestedAt": "2026-03-29T00:02:00Z",
+  "sourceType": "Web scan (multiple sources)",
+  "reliability": "High (Bloomberg, Yahoo Finance, CoinGabbar)",
+  "scanType": "Focused scan: Crypto market conditions (fundraising and DeFi environment)",
+
+  "summary": [
+    "BTC at $66,246 (-3.85% 24h), ETH at $1,985 (-4.05%). Total crypto market $2.37T (-3.1%). Fear & Greed Index at 12 (EXTREME FEAR). Trading volume $107B. BTC dominance 56.1%.",
+    "Iran war is the primary driver: since Feb 28 strikes, Iran conflict has overridden every crypto rally. 89% BTC-S&P500 correlation, 95% BTC-gold correlation during March 19 selloff. Crypto is trading as a risk asset correlated with macro.",
+    "Oil is the transmission mechanism: Brent went from $81.40 to $106.41 (30.72% increase) in first 3 weeks of March. Strait of Hormuz effectively closed. Oil above $100 keeps inflation elevated, Fed cannot cut rates, money moves away from risk assets.",
+    "$1B+ in crypto liquidations over 24 hours on one Trump Iran post. 85% hit long positions. BTC swung from $68K to $71K and back on ceasefire headlines. Extreme headline sensitivity.",
+    "Despite crypto price weakness, prediction market volume is AT ALL-TIME HIGHS ($21B+ monthly). This is the key decoupling: prediction market demand is driven by uncertainty, not by BTC price. LEVER's thesis does NOT depend on a crypto bull market."
+  ],
+
+  "entities": [
+    {"name": "Bitcoin", "type": "asset", "role": "$66,246, -3.85% 24h, extreme fear"},
+    {"name": "Ethereum", "type": "asset", "role": "$1,985, -4.05% 24h"},
+    {"name": "Fear & Greed Index", "type": "indicator", "role": "12 = extreme fear, potential accumulation phase"}
+  ],
+
+  "categories": ["financial", "market"],
+
+  "keyMetrics": {
+    "btcPrice": "$66,246 (-3.85%)",
+    "ethPrice": "$1,985 (-4.05%)",
+    "totalCryptoMarketCap": "$2.37T (-3.1%)",
+    "fearGreedIndex": 12,
+    "btcDominance": "56.1%",
+    "tradingVolume24h": "$107B",
+    "brentCrude": "$101.89 (+4.8%)",
+    "brentMarchLow": "$81.40",
+    "brentMarchHigh": "$106.41",
+    "cryptoLiquidations24h": "$1B+ (on single Trump post)",
+    "predictionMarketMonthlyVolume": "$21B+ (despite crypto downturn)"
+  },
+
+  "fundingImplications": {
+    "shortTerm": "Extreme fear + declining prices = tougher fundraising environment for typical crypto projects. VCs may be more cautious on timing.",
+    "leverSpecific": "LEVER has a COUNTER-CYCLICAL argument: prediction market volume is at ATH despite crypto downturn. Uncertainty DRIVES demand for prediction markets. LEVER is not betting on BTC price going up; it is betting on the world being uncertain. That is a much stronger thesis in a risk-off environment.",
+    "baseChainImpact": "ETH at ~$2K means Base TVL may compress in USD terms (though not necessarily in token terms). Morpho and Aerodrome still functional. DeFi infrastructure unaffected by price.",
+    "timing": "Counterintuitively, a fear environment may be GOOD for LEVER's fundraising pitch: 'Even in a crypto bear market, prediction market volume is $21B+ because geopolitical uncertainty is structural. LEVER is infrastructure for uncertainty, not speculation on crypto prices.'"
+  },
+
+  "workstreamTags": {
+    "CEO": "Market is in extreme fear (index at 12). BUT: this is actually GOOD for LEVER's pitch. Prediction market volume is at $21B+ ATH while BTC is down. The decoupling is the story: LEVER does not need a bull market. It needs an uncertain world. We have that in abundance. Lead with this in investor conversations: 'Our TAM grows with uncertainty, not with BTC price.'",
+    "ADVISOR": "Crypto bear market with prediction market bull market = unique positioning opportunity. LEVER should lean into the counter-cyclical narrative. Most DeFi projects struggle to pitch during fear markets. LEVER thrives because its demand driver (geopolitical uncertainty) is the same thing causing the fear.",
+    "BUILD": "ETH at $1,985 does not affect Base smart contract functionality. Gas costs actually decrease in bear markets. Good environment for deploying and testing without cost pressure."
+  },
+
+  "sources": [
+    {"title": "CoinGabbar: Crypto Market Update March 28", "url": "https://www.coingabbar.com/en/crypto-currency-news/latest-crypto-market-update-today-march-28-btc-eth-price-fell", "dateAccessed": "2026-03-29", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "247WallSt: Iran War Overriding Every Crypto Rally", "url": "https://247wallst.com/investing/2026/03/23/bitcoin-and-xrp-price-why-the-u-s-and-iran-war-keeps-overriding-every-crypto-rally/", "dateAccessed": "2026-03-29", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "Bloomberg: Oil, Gold, Silver Spike on Crypto Hyperliquid", "url": "https://www.bloomberg.com/news/articles/2026-03-07/crypto-markets-track-war-risk-as-iran-conflict-endures", "dateAccessed": "2026-03-29", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Yahoo Finance: Iran War Oil Bitcoin Falling", "url": "https://finance.yahoo.com/news/iran-war-oil-price-surge-131045129.html", "dateAccessed": "2026-03-29", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "OANDA MarketPulse: Crypto Recovery Amid War", "url": "https://www.marketpulse.com/markets/crypto-recovery-amid-ongoing-war-eth-btc-checkup/", "dateAccessed": "2026-03-29", "sourceType": "Secondary", "reliability": "Medium"}
+  ]
+}

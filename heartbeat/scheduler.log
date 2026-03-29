@@ -6151,3 +6151,819 @@
 2026-03-28 23:44:44,681 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
 2026-03-28 23:44:54,701 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
 2026-03-28 23:44:54,719 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:45:04,739 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:45:04,755 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:45:14,775 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:45:14,791 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:45:24,808 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:45:24,824 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:45:34,843 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:45:34,860 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:45:44,878 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:45:44,894 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:45:54,912 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:45:54,928 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:46:04,946 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:46:04,963 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:46:14,982 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:46:14,998 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:46:25,017 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:46:25,033 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:46:35,052 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:46:35,071 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:46:45,089 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:46:45,106 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:46:55,124 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:46:55,140 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:47:05,157 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:47:05,173 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:47:15,191 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:47:15,206 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:47:25,229 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:47:25,246 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:47:35,265 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:47:35,281 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:47:45,300 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:47:45,317 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:47:55,336 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:47:55,352 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:48:05,372 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:48:05,389 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:48:15,418 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:48:15,440 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:48:25,459 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:48:25,475 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:48:35,493 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:48:35,509 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:48:45,528 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:48:45,543 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:48:55,562 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:48:55,579 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:49:05,599 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:49:05,625 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:49:15,643 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:49:15,660 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:49:25,678 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:49:25,694 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:49:35,713 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:49:35,729 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:49:45,748 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:49:45,764 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:49:55,784 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:49:55,804 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:50:05,823 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:50:05,840 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:50:15,858 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:50:15,875 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:50:25,893 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:50:25,908 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:50:35,927 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:50:35,944 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:50:45,963 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:50:45,981 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:50:55,999 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:50:56,017 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:51:06,035 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:51:06,052 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:51:16,070 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:51:16,087 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:51:26,106 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:51:26,122 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:51:36,142 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:51:36,158 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:51:46,176 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:51:46,191 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:51:56,209 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:51:56,224 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:52:06,245 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:52:06,260 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:52:16,278 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:52:16,294 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:52:26,312 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:52:26,328 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:52:36,347 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:52:36,368 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:52:46,386 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:52:46,403 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:52:56,421 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:52:56,437 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:53:06,455 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:53:06,471 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:53:16,490 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:53:16,507 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:53:26,528 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:53:26,548 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:53:36,569 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:53:36,585 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:53:46,603 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:53:46,618 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:53:56,637 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:53:56,652 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:54:06,671 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:54:06,687 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:54:16,706 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:54:16,723 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:54:26,744 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:54:26,765 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:54:36,785 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:54:36,800 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:54:46,820 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:54:46,837 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:54:56,856 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:54:56,872 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:55:06,892 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:55:06,910 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:55:16,929 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:55:16,946 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:55:26,964 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:55:26,980 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:55:36,999 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:55:37,017 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:55:47,036 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:55:47,052 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:55:57,071 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:55:57,090 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:56:07,109 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:56:07,126 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:56:17,144 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:56:17,159 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:56:27,178 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:56:27,193 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:56:37,212 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:56:37,228 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:56:47,251 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:56:47,269 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:56:57,287 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:56:57,303 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:57:07,322 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:57:07,342 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:57:17,360 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:57:17,376 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:57:27,394 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:57:27,410 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:57:37,432 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:57:37,453 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:57:47,471 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:57:47,486 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:57:57,504 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:57:57,521 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:58:07,542 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:58:07,557 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:58:17,575 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:58:17,590 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:58:27,610 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:58:27,627 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:58:37,645 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:58:37,661 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:58:47,679 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:58:47,695 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:58:57,713 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:58:57,729 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:59:07,748 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:59:07,764 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:59:17,785 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:59:17,800 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:59:27,819 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:59:27,835 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:59:37,853 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:59:37,868 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:59:47,886 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:59:47,903 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-28 23:59:57,922 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-28 23:59:57,938 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:00:07,958 [INFO] DISPATCH [critique] task=lever-bug-1 (session #1 today)
+2026-03-29 00:00:07,959 [INFO] Support check: remaining=4, dispatched=1
+2026-03-29 00:00:07,983 [INFO] DISPATCH [improve] task=support-improve (session #2 today)
+2026-03-29 00:00:08,002 [INFO] DISPATCH [operate] task=support-operate (session #3 today)
+2026-03-29 00:00:08,026 [INFO] DISPATCH [research] task=support-research (session #4 today)
+2026-03-29 00:00:08,045 [INFO] Cycle: 4 active, 1 available, 4 dispatched, 4 today
+2026-03-29 00:00:18,076 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:00:18,159 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 4 today
+2026-03-29 00:00:28,179 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:00:28,247 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 4 today
+2026-03-29 00:00:38,267 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:00:38,302 [INFO] DISPATCH [operate] task=support-operate (session #5 today)
+2026-03-29 00:00:38,337 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 5 today
+2026-03-29 00:00:48,360 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:00:48,437 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 5 today
+2026-03-29 00:00:58,456 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:00:58,520 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 5 today
+2026-03-29 00:01:08,541 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:01:08,559 [INFO] DISPATCH [improve] task=support-improve (session #6 today)
+2026-03-29 00:01:08,619 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 6 today
+2026-03-29 00:01:18,638 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:01:18,708 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 6 today
+2026-03-29 00:01:28,728 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:01:28,799 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 6 today
+2026-03-29 00:01:38,819 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:01:38,886 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 6 today
+2026-03-29 00:01:48,905 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:01:48,974 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 6 today
+2026-03-29 00:01:58,993 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:01:59,062 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 6 today
+2026-03-29 00:02:09,083 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:02:09,157 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 6 today
+2026-03-29 00:02:19,176 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:02:19,223 [INFO] DISPATCH [research] task=support-research (session #7 today)
+2026-03-29 00:02:19,241 [INFO] Cycle: 4 active, 1 available, 1 dispatched, 7 today
+2026-03-29 00:02:29,262 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:02:29,348 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 7 today
+2026-03-29 00:02:39,367 [INFO] Support check: remaining=3, dispatched=0
+2026-03-29 00:02:39,400 [INFO] DISPATCH [operate] task=support-operate (session #8 today)
+2026-03-29 00:02:39,433 [INFO] Cycle: 3 active, 2 available, 1 dispatched, 8 today
+2026-03-29 00:02:49,435 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:02:49,455 [INFO] DISPATCH [critique] task=lever-bug-1 (session #9 today)
+2026-03-29 00:02:49,455 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:02:49,535 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 9 today
+2026-03-29 00:02:59,555 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:02:59,642 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 9 today
+2026-03-29 00:03:09,662 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:03:09,680 [INFO] DISPATCH [improve] task=support-improve (session #10 today)
+2026-03-29 00:03:09,730 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 10 today
+2026-03-29 00:03:19,757 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:03:19,827 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:03:29,849 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:03:29,923 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:03:39,942 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:03:40,011 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:03:50,036 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:03:50,113 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:04:00,134 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:04:00,208 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:04:10,228 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:04:10,299 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:04:20,318 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:04:20,385 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:04:30,405 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:04:30,476 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:04:40,519 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:04:40,638 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:04:50,659 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:04:50,724 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:05:00,745 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:05:00,814 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:05:10,835 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:05:10,905 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:05:20,925 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:05:20,992 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:05:31,013 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:05:31,079 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:05:41,100 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:05:41,172 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:05:51,191 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:05:51,258 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:06:01,277 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:06:01,345 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:06:11,368 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:06:11,465 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 10 today
+2026-03-29 00:06:21,485 [INFO] Support check: remaining=3, dispatched=0
+2026-03-29 00:06:21,519 [INFO] DISPATCH [operate] task=support-operate (session #11 today)
+2026-03-29 00:06:21,537 [INFO] DISPATCH [research] task=support-research (session #12 today)
+2026-03-29 00:06:21,566 [INFO] Cycle: 6 active, -1 available, 2 dispatched, 12 today
+2026-03-29 00:06:31,586 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:06:31,655 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 12 today
+2026-03-29 00:06:41,675 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:06:41,753 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 12 today
+2026-03-29 00:06:51,755 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:06:51,776 [INFO] DISPATCH [critique] task=lever-bug-1 (session #13 today)
+2026-03-29 00:06:51,776 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:06:51,854 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 13 today
+2026-03-29 00:07:01,873 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:07:01,940 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 13 today
+2026-03-29 00:07:11,959 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:07:11,976 [INFO] DISPATCH [improve] task=support-improve (session #14 today)
+2026-03-29 00:07:12,028 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 14 today
+2026-03-29 00:07:22,051 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:07:22,137 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:07:32,159 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:07:32,230 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:07:42,249 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:07:42,315 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:07:52,335 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:07:52,402 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:08:02,422 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:08:02,495 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:08:12,514 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:08:12,581 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:08:22,600 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:08:22,663 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:08:32,682 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:08:32,745 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:08:42,783 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:08:42,859 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:08:52,884 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:08:52,953 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:09:02,973 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:09:03,042 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:09:13,064 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:09:13,144 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:09:23,164 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:09:23,235 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:09:33,254 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:09:33,319 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:09:43,338 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:09:43,408 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:09:53,427 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:09:53,497 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:10:03,517 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:10:03,590 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 14 today
+2026-03-29 00:10:13,611 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:10:13,663 [INFO] DISPATCH [research] task=support-research (session #15 today)
+2026-03-29 00:10:13,682 [INFO] Cycle: 4 active, 1 available, 1 dispatched, 15 today
+2026-03-29 00:10:23,709 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:10:23,745 [INFO] DISPATCH [operate] task=support-operate (session #16 today)
+2026-03-29 00:10:23,782 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 16 today
+2026-03-29 00:10:33,802 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:10:33,872 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 16 today
+2026-03-29 00:10:43,874 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:10:43,892 [INFO] DISPATCH [critique] task=lever-bug-1 (session #17 today)
+2026-03-29 00:10:43,893 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:10:43,962 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 17 today
+2026-03-29 00:10:53,982 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:10:54,052 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 17 today
+2026-03-29 00:11:04,072 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:11:04,098 [INFO] DISPATCH [improve] task=support-improve (session #18 today)
+2026-03-29 00:11:04,152 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 18 today
+2026-03-29 00:11:14,172 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:11:14,237 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 18 today
+2026-03-29 00:11:24,256 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:11:24,321 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 18 today
+2026-03-29 00:11:34,341 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:11:34,406 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 18 today
+2026-03-29 00:11:44,426 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:11:44,494 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 18 today
+2026-03-29 00:11:54,515 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:11:54,599 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 18 today
+2026-03-29 00:12:04,618 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:12:04,680 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 18 today
+2026-03-29 00:12:14,700 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:12:14,768 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 18 today
+2026-03-29 00:12:24,788 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:12:24,840 [INFO] DISPATCH [research] task=support-research (session #19 today)
+2026-03-29 00:12:24,857 [INFO] Cycle: 4 active, 1 available, 1 dispatched, 19 today
+2026-03-29 00:12:34,876 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:12:34,908 [INFO] DISPATCH [operate] task=support-operate (session #20 today)
+2026-03-29 00:12:34,942 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 20 today
+2026-03-29 00:12:44,972 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:12:45,043 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 20 today
+2026-03-29 00:12:55,045 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:12:55,063 [INFO] DISPATCH [critique] task=lever-bug-1 (session #21 today)
+2026-03-29 00:12:55,064 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:12:55,132 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 21 today
+2026-03-29 00:13:05,156 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:13:05,224 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 21 today
+2026-03-29 00:13:15,244 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:13:15,261 [INFO] DISPATCH [improve] task=support-improve (session #22 today)
+2026-03-29 00:13:15,317 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 22 today
+2026-03-29 00:13:25,336 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:13:25,404 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 22 today
+2026-03-29 00:13:35,423 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:13:35,494 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 22 today
+2026-03-29 00:13:45,513 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:13:45,582 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 22 today
+2026-03-29 00:13:55,601 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:13:55,669 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 22 today
+2026-03-29 00:14:05,688 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:14:05,755 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 22 today
+2026-03-29 00:14:15,774 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:14:15,840 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 22 today
+2026-03-29 00:14:25,861 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:14:25,930 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 22 today
+2026-03-29 00:14:35,950 [INFO] Support check: remaining=3, dispatched=0
+2026-03-29 00:14:35,984 [INFO] DISPATCH [operate] task=support-operate (session #23 today)
+2026-03-29 00:14:36,003 [INFO] DISPATCH [research] task=support-research (session #24 today)
+2026-03-29 00:14:36,023 [INFO] Cycle: 5 active, 0 available, 2 dispatched, 24 today
+2026-03-29 00:14:46,047 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:14:46,114 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 24 today
+2026-03-29 00:14:56,133 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:14:56,208 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 24 today
+2026-03-29 00:15:06,212 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:15:06,233 [INFO] DISPATCH [critique] task=lever-bug-1 (session #25 today)
+2026-03-29 00:15:06,233 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:15:06,312 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 25 today
+2026-03-29 00:15:16,339 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:15:16,432 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 25 today
+2026-03-29 00:15:26,451 [INFO] Support check: remaining=3, dispatched=0
+2026-03-29 00:15:26,469 [INFO] DISPATCH [improve] task=support-improve (session #26 today)
+2026-03-29 00:15:26,487 [INFO] DISPATCH [operate] task=support-operate (session #27 today)
+2026-03-29 00:15:26,523 [INFO] Cycle: 6 active, -1 available, 2 dispatched, 27 today
+2026-03-29 00:15:36,543 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:15:36,610 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 27 today
+2026-03-29 00:15:46,630 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:15:46,702 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 27 today
+2026-03-29 00:15:56,722 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:15:56,794 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 27 today
+2026-03-29 00:16:06,821 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:16:06,910 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 27 today
+2026-03-29 00:16:16,929 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:16:16,998 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 27 today
+2026-03-29 00:16:27,018 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:16:27,088 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 27 today
+2026-03-29 00:16:37,107 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:16:37,175 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 27 today
+2026-03-29 00:16:47,195 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:16:47,248 [INFO] DISPATCH [research] task=support-research (session #28 today)
+2026-03-29 00:16:47,267 [INFO] Cycle: 4 active, 1 available, 1 dispatched, 28 today
+2026-03-29 00:16:57,289 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:16:57,373 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 28 today
+2026-03-29 00:17:07,374 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:17:07,394 [INFO] DISPATCH [critique] task=lever-bug-1 (session #29 today)
+2026-03-29 00:17:07,395 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:17:07,477 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 29 today
+2026-03-29 00:17:17,499 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:17:17,573 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 29 today
+2026-03-29 00:17:27,593 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:17:27,611 [INFO] DISPATCH [improve] task=support-improve (session #30 today)
+2026-03-29 00:17:27,665 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 30 today
+2026-03-29 00:17:37,685 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:17:37,718 [INFO] DISPATCH [operate] task=support-operate (session #31 today)
+2026-03-29 00:17:37,755 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 31 today
+2026-03-29 00:17:47,776 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:17:47,848 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 31 today
+2026-03-29 00:17:57,868 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:17:57,970 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 31 today
+2026-03-29 00:18:07,989 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:18:08,058 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 31 today
+2026-03-29 00:18:18,078 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:18:18,148 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 31 today
+2026-03-29 00:18:28,168 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:18:28,237 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 31 today
+2026-03-29 00:18:38,258 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:18:38,327 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 31 today
+2026-03-29 00:18:48,364 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:18:48,445 [INFO] DISPATCH [research] task=support-research (session #32 today)
+2026-03-29 00:18:48,465 [INFO] Cycle: 4 active, 1 available, 1 dispatched, 32 today
+2026-03-29 00:18:58,484 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:18:58,552 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 32 today
+2026-03-29 00:19:08,553 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:19:08,578 [INFO] DISPATCH [critique] task=lever-bug-1 (session #33 today)
+2026-03-29 00:19:08,578 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:19:08,665 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 33 today
+2026-03-29 00:19:18,687 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:19:18,756 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 33 today
+2026-03-29 00:19:28,777 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:19:28,796 [INFO] DISPATCH [improve] task=support-improve (session #34 today)
+2026-03-29 00:19:28,856 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 34 today
+2026-03-29 00:19:38,876 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:19:38,912 [INFO] DISPATCH [operate] task=support-operate (session #35 today)
+2026-03-29 00:19:38,947 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 35 today
+2026-03-29 00:19:48,967 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:19:49,038 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 35 today
+2026-03-29 00:19:59,058 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:19:59,128 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 35 today
+2026-03-29 00:20:09,147 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:20:09,215 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 35 today
+2026-03-29 00:20:19,235 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:20:19,306 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 35 today
+2026-03-29 00:20:29,326 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:20:29,395 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 35 today
+2026-03-29 00:20:39,419 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:20:39,513 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 35 today
+2026-03-29 00:20:49,533 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:20:49,597 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 35 today
+2026-03-29 00:20:59,617 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:20:59,671 [INFO] DISPATCH [research] task=support-research (session #36 today)
+2026-03-29 00:20:59,695 [INFO] Cycle: 4 active, 1 available, 1 dispatched, 36 today
+2026-03-29 00:21:09,716 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:21:09,787 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 36 today
+2026-03-29 00:21:19,807 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:21:19,877 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 36 today
+2026-03-29 00:21:29,880 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:21:29,909 [INFO] DISPATCH [critique] task=lever-bug-1 (session #37 today)
+2026-03-29 00:21:29,910 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:21:30,000 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 37 today
+2026-03-29 00:21:40,028 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:21:40,054 [INFO] DISPATCH [improve] task=support-improve (session #38 today)
+2026-03-29 00:21:40,159 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 38 today
+2026-03-29 00:21:50,180 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:21:50,250 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 38 today
+2026-03-29 00:22:00,274 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:22:00,354 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 38 today
+2026-03-29 00:22:10,356 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:22:10,376 [INFO] DISPATCH [critique] task=lever-bug-1 (session #39 today)
+2026-03-29 00:22:10,377 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:22:10,444 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 39 today
+2026-03-29 00:22:20,465 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:22:20,483 [INFO] DISPATCH [improve] task=support-improve (session #40 today)
+2026-03-29 00:22:20,543 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 40 today
+2026-03-29 00:22:30,564 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:22:30,635 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 40 today
+2026-03-29 00:22:40,636 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:22:40,655 [INFO] DISPATCH [critique] task=lever-bug-1 (session #41 today)
+2026-03-29 00:22:40,656 [INFO] Support check: remaining=2, dispatched=1
+2026-03-29 00:22:40,692 [INFO] DISPATCH [operate] task=support-operate (session #42 today)
+2026-03-29 00:22:40,732 [INFO] Cycle: 6 active, -1 available, 2 dispatched, 42 today
+2026-03-29 00:22:50,753 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:22:50,825 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 42 today
+2026-03-29 00:23:00,848 [INFO] Support check: remaining=3, dispatched=0
+2026-03-29 00:23:00,873 [INFO] DISPATCH [improve] task=support-improve (session #43 today)
+2026-03-29 00:23:00,907 [INFO] DISPATCH [research] task=support-research (session #44 today)
+2026-03-29 00:23:00,925 [INFO] Cycle: 5 active, 0 available, 2 dispatched, 44 today
+2026-03-29 00:23:10,945 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:23:11,013 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 44 today
+2026-03-29 00:23:21,032 [INFO] Support check: remaining=3, dispatched=0
+2026-03-29 00:23:21,066 [INFO] DISPATCH [operate] task=support-operate (session #45 today)
+2026-03-29 00:23:21,104 [INFO] Cycle: 4 active, 1 available, 1 dispatched, 45 today
+2026-03-29 00:23:31,106 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:23:31,124 [INFO] DISPATCH [critique] task=lever-bug-1 (session #46 today)
+2026-03-29 00:23:31,125 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:23:31,195 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 46 today
+2026-03-29 00:23:41,214 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:23:41,280 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 46 today
+2026-03-29 00:23:51,300 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:23:51,381 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 46 today
+2026-03-29 00:24:01,406 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:24:01,427 [INFO] DISPATCH [improve] task=support-improve (session #47 today)
+2026-03-29 00:24:01,488 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 47 today
+2026-03-29 00:24:11,510 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:24:11,585 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 47 today
+2026-03-29 00:24:21,605 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:24:21,671 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 47 today
+2026-03-29 00:24:31,691 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:24:31,759 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 47 today
+2026-03-29 00:24:41,779 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:24:41,843 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 47 today
+2026-03-29 00:24:51,864 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:24:51,936 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 47 today
+2026-03-29 00:25:01,955 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:25:02,028 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 47 today
+2026-03-29 00:25:12,048 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:25:12,100 [INFO] DISPATCH [research] task=support-research (session #48 today)
+2026-03-29 00:25:12,118 [INFO] Cycle: 4 active, 1 available, 1 dispatched, 48 today
+2026-03-29 00:25:22,137 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:25:22,209 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 48 today
+2026-03-29 00:25:32,231 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:25:32,299 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 48 today
+2026-03-29 00:25:42,320 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:25:42,354 [INFO] DISPATCH [operate] task=support-operate (session #49 today)
+2026-03-29 00:25:42,391 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 49 today
+2026-03-29 00:25:52,412 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:25:52,488 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 49 today
+2026-03-29 00:26:02,510 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:26:02,575 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 49 today
+2026-03-29 00:26:12,577 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:26:12,597 [INFO] DISPATCH [critique] task=lever-bug-1 (session #50 today)
+2026-03-29 00:26:12,597 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:26:12,678 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 50 today
+2026-03-29 00:26:22,697 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:26:22,762 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 50 today
+2026-03-29 00:26:32,781 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:26:32,797 [INFO] DISPATCH [improve] task=support-improve (session #51 today)
+2026-03-29 00:26:32,848 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 51 today
+2026-03-29 00:26:42,879 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:26:42,953 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 51 today
+2026-03-29 00:26:52,974 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:26:53,042 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 51 today
+2026-03-29 00:27:03,061 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:27:03,125 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 51 today
+2026-03-29 00:27:13,147 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:27:13,212 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 51 today
+2026-03-29 00:27:23,232 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:27:23,296 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 51 today
+2026-03-29 00:27:33,315 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:27:33,364 [INFO] DISPATCH [research] task=support-research (session #52 today)
+2026-03-29 00:27:33,383 [INFO] Cycle: 4 active, 1 available, 1 dispatched, 52 today
+2026-03-29 00:27:43,403 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:27:43,440 [INFO] DISPATCH [operate] task=support-operate (session #53 today)
+2026-03-29 00:27:43,494 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 53 today
+2026-03-29 00:27:53,514 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:27:53,579 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 53 today
+2026-03-29 00:28:03,581 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:28:03,605 [INFO] DISPATCH [critique] task=lever-bug-1 (session #54 today)
+2026-03-29 00:28:03,608 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:28:03,708 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 54 today
+2026-03-29 00:28:13,741 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:28:13,816 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 54 today
+2026-03-29 00:28:23,836 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:28:23,854 [INFO] DISPATCH [improve] task=support-improve (session #55 today)
+2026-03-29 00:28:23,923 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 55 today
+2026-03-29 00:28:33,946 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:28:34,032 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 55 today
+2026-03-29 00:28:44,052 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:28:44,121 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 55 today
+2026-03-29 00:28:54,141 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:28:54,209 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 55 today
+2026-03-29 00:29:04,229 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:29:04,298 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 55 today
+2026-03-29 00:29:14,318 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:29:14,395 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 55 today
+2026-03-29 00:29:24,415 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:29:24,494 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 55 today
+2026-03-29 00:29:34,513 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:29:34,579 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 55 today
+2026-03-29 00:29:44,602 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:29:44,695 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 55 today
+2026-03-29 00:29:54,715 [INFO] Support check: remaining=3, dispatched=0
+2026-03-29 00:29:54,749 [INFO] DISPATCH [operate] task=support-operate (session #56 today)
+2026-03-29 00:29:54,768 [INFO] DISPATCH [research] task=support-research (session #57 today)
+2026-03-29 00:29:54,791 [INFO] Cycle: 5 active, 0 available, 2 dispatched, 57 today
+2026-03-29 00:30:04,810 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:30:04,882 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 57 today
+2026-03-29 00:30:14,903 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:30:14,967 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 57 today
+2026-03-29 00:30:24,968 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:30:24,988 [INFO] DISPATCH [critique] task=lever-bug-1 (session #58 today)
+2026-03-29 00:30:24,989 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:30:25,062 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 58 today
+2026-03-29 00:30:35,080 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:30:35,150 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 58 today
+2026-03-29 00:30:45,170 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:30:45,187 [INFO] DISPATCH [improve] task=support-improve (session #59 today)
+2026-03-29 00:30:45,241 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 59 today
+2026-03-29 00:30:55,260 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:30:55,328 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 59 today
+2026-03-29 00:31:05,348 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:31:05,415 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 59 today
+2026-03-29 00:31:15,436 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:31:15,510 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 59 today
+2026-03-29 00:31:25,530 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:31:25,600 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 59 today
+2026-03-29 00:31:35,619 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:31:35,693 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 59 today
+2026-03-29 00:31:45,714 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:31:45,784 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 59 today
+2026-03-29 00:31:55,804 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:31:55,855 [INFO] DISPATCH [research] task=support-research (session #60 today)
+2026-03-29 00:31:55,872 [INFO] Cycle: 4 active, 1 available, 1 dispatched, 60 today
+2026-03-29 00:32:05,894 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:32:05,937 [INFO] DISPATCH [operate] task=support-operate (session #61 today)
+2026-03-29 00:32:05,981 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 61 today
+2026-03-29 00:32:16,000 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:32:16,082 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 61 today
+2026-03-29 00:32:26,084 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:32:26,103 [INFO] DISPATCH [critique] task=lever-bug-1 (session #62 today)
+2026-03-29 00:32:26,104 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:32:26,173 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 62 today
+2026-03-29 00:32:36,193 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:32:36,263 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 62 today
+2026-03-29 00:32:46,294 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:32:46,313 [INFO] DISPATCH [improve] task=support-improve (session #63 today)
+2026-03-29 00:32:46,375 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 63 today
+2026-03-29 00:32:56,396 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:32:56,473 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 63 today
+2026-03-29 00:33:06,493 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:33:06,557 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 63 today
+2026-03-29 00:33:16,576 [INFO] Support check: remaining=3, dispatched=0
+2026-03-29 00:33:16,608 [INFO] DISPATCH [operate] task=support-operate (session #64 today)
+2026-03-29 00:33:16,626 [INFO] DISPATCH [research] task=support-research (session #65 today)
+2026-03-29 00:33:16,645 [INFO] Cycle: 5 active, 0 available, 2 dispatched, 65 today
+2026-03-29 00:33:26,663 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:33:26,728 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 65 today
+2026-03-29 00:33:36,747 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:33:36,811 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 65 today
+2026-03-29 00:33:46,814 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:33:46,843 [INFO] DISPATCH [critique] task=lever-bug-1 (session #66 today)
+2026-03-29 00:33:46,844 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:33:46,932 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 66 today
+2026-03-29 00:33:56,952 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:33:56,969 [INFO] DISPATCH [improve] task=support-improve (session #67 today)
+2026-03-29 00:33:57,034 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 67 today
+2026-03-29 00:34:07,058 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:34:07,094 [INFO] DISPATCH [operate] task=support-operate (session #68 today)
+2026-03-29 00:34:07,130 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 68 today
+2026-03-29 00:34:17,151 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:34:17,222 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 68 today
+2026-03-29 00:34:27,241 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:34:27,314 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 68 today
+2026-03-29 00:34:37,335 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:34:37,405 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 68 today
+2026-03-29 00:34:47,424 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:34:47,473 [INFO] DISPATCH [research] task=support-research (session #69 today)
+2026-03-29 00:34:47,491 [INFO] Cycle: 4 active, 1 available, 1 dispatched, 69 today
+2026-03-29 00:34:57,512 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:34:57,577 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 69 today
+2026-03-29 00:35:07,596 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:35:07,665 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 69 today
+2026-03-29 00:35:17,667 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:35:17,687 [INFO] DISPATCH [critique] task=lever-bug-1 (session #70 today)
+2026-03-29 00:35:17,687 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:35:17,756 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 70 today
+2026-03-29 00:35:27,779 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:35:27,806 [INFO] DISPATCH [improve] task=support-improve (session #71 today)
+2026-03-29 00:35:27,870 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 71 today
+2026-03-29 00:35:37,889 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:35:37,934 [INFO] DISPATCH [operate] task=support-operate (session #72 today)
+2026-03-29 00:35:37,981 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 72 today
+2026-03-29 00:35:48,007 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:35:48,058 [INFO] DISPATCH [research] task=support-research (session #73 today)
+2026-03-29 00:35:48,077 [INFO] Cycle: 4 active, 1 available, 1 dispatched, 73 today
+2026-03-29 00:35:58,096 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:35:58,163 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 73 today
+2026-03-29 00:36:08,183 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:36:08,254 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 73 today
+2026-03-29 00:36:18,257 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:36:18,275 [INFO] DISPATCH [critique] task=lever-bug-1 (session #74 today)
+2026-03-29 00:36:18,276 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:36:18,345 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 74 today
+2026-03-29 00:36:28,366 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:36:28,386 [INFO] DISPATCH [improve] task=support-improve (session #75 today)
+2026-03-29 00:36:28,461 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 75 today
+2026-03-29 00:36:38,484 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:36:38,524 [INFO] DISPATCH [operate] task=support-operate (session #76 today)
+2026-03-29 00:36:38,562 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 76 today
+2026-03-29 00:36:48,582 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:36:48,632 [INFO] DISPATCH [research] task=support-research (session #77 today)
+2026-03-29 00:36:48,650 [INFO] Cycle: 4 active, 1 available, 1 dispatched, 77 today
+2026-03-29 00:36:58,677 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 00:36:58,754 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 77 today
+2026-03-29 00:37:08,777 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:37:08,844 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 77 today
+2026-03-29 00:37:18,847 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:37:18,867 [INFO] DISPATCH [critique] task=lever-bug-1 (session #78 today)
+2026-03-29 00:37:18,868 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 00:37:18,967 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 78 today
+2026-03-29 00:37:28,986 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:37:29,002 [INFO] DISPATCH [improve] task=support-improve (session #79 today)
+2026-03-29 00:37:29,059 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 79 today
+2026-03-29 00:37:39,081 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 00:37:39,126 [INFO] DISPATCH [operate] task=support-operate (session #80 today)
+2026-03-29 00:37:39,162 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 80 today
+2026-03-29 00:37:49,183 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:37:49,201 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 80 today
+2026-03-29 00:37:59,222 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:37:59,239 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 80 today
+2026-03-29 00:38:09,260 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:38:09,278 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 80 today
+2026-03-29 00:38:19,296 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:38:19,312 [INFO] Cycle: 2 active, 3 available, 0 dispatched, 80 today
+2026-03-29 00:38:29,314 [INFO] CRITIQUE wants REVISE for lever-bug-1. Re-planning.
+2026-03-29 00:38:29,332 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:38:29,353 [INFO] Cycle: 2 active, 3 available, 0 dispatched, 80 today
+2026-03-29 00:38:39,373 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:38:39,393 [INFO] Cycle: 1 active, 4 available, 0 dispatched, 80 today
+2026-03-29 00:38:49,413 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:38:49,430 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:38:59,448 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:38:59,464 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:39:09,482 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:39:09,498 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:39:19,516 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:39:19,532 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:39:29,550 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:39:29,566 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:39:39,586 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:39:39,603 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:39:49,622 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:39:49,640 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:39:59,660 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:39:59,679 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:40:09,696 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:40:09,711 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:40:19,729 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:40:19,744 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:40:29,763 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:40:29,780 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:40:39,797 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:40:39,813 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:40:49,831 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:40:49,850 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:40:59,869 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:40:59,885 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:41:09,904 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:41:09,925 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:41:19,943 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:41:19,959 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:41:29,977 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:41:29,992 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:41:40,010 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:41:40,027 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:41:50,045 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:41:50,061 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:42:00,079 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:42:00,097 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:42:10,116 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:42:10,133 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:42:20,150 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:42:20,167 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:42:30,190 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:42:30,208 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:42:40,226 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:42:40,241 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:42:50,259 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:42:50,275 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:43:00,296 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:43:00,313 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:43:10,333 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:43:10,350 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:43:20,369 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:43:20,387 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:43:30,405 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:43:30,422 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:43:40,450 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:43:40,468 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:43:50,486 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:43:50,502 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:44:00,520 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:44:00,537 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:44:10,555 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:44:10,570 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:44:20,588 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:44:20,603 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:44:30,621 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:44:30,636 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:44:40,655 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:44:40,674 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:44:50,692 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:44:50,708 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today
+2026-03-29 00:45:00,726 [WARNING] CIRCUIT BREAKER: 80 sessions today. Max is 80. Stopping dispatches.
+2026-03-29 00:45:00,742 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 80 today

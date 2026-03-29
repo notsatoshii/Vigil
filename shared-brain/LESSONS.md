@@ -114,3 +114,13 @@ blocked systemctl). The service recovered on its own by the 16:00 health check. 
 one-time event with no lasting impact. If this recurs, investigate whether DBUS_SYSTEM_BUS_ADDRESS
 needs to be explicitly set in the crontab, or whether openclaw-gateway needs a service dependency
 on dbus.
+
+## 2026-03-29: systemctl DBUS failure in cron (FIXED)
+
+**Symptom**: `health-escalate.sh` attempted service restarts during an outage (openclaw-gateway down 2026-03-28 12:00 UTC) but failed with "Failed to connect to bus: No medium found".
+
+**Root cause**: Cron runs without a full user session, so DBUS_SYSTEM_BUS_ADDRESS is not set. `systemctl` needs this env var to connect to the system bus.
+
+**Fix**: Added `export DBUS_SYSTEM_BUS_ADDRESS=unix:path=/run/dbus/system_bus_socket` at the top of `health-escalate.sh`. Committed in e204c5d.
+
+**Watch for**: If a service goes down and cron tries to restart it, check health-check.log for "Restarting..." lines followed by success rather than DBUS errors.

@@ -1,0 +1,33 @@
+{
+  "id": "20260329-001800-prediction-conference-details",
+  "ingestedAt": "2026-03-29T00:18:00Z",
+  "sourceType": "Web scan",
+  "reliability": "High (official sites, Twitter)",
+  "scanType": "Focused scan: Prediction Conference registration details",
+
+  "summary": [
+    "Prediction Conference: Las Vegas, April 22-24, 2026. 300 curated seats. Website: predictionmarketsconference.com. Specific speakers/agenda not publicly listed yet but curated format implies high-quality attendees.",
+    "Kalshi CEO Tarek Mansour tweeted about hosting 'our first Prediction Market Conference' with researchers, economists, policymakers, traders. This appears to be the same or closely related event.",
+    "Key people likely attending: Tarek Mansour (Kalshi CEO, 5c(c) Capital backer), Shayne Coplan (Polymarket CEO, 5c(c) Capital backer, spoke at MIT Sloan March 7), 5c(c) Capital partners (Adhi Rajaprabhakaran, Noah Zingler-Sternig, both ex-Kalshi).",
+    "Other prediction market events: SBC Summit Americas (June 9-11, Prediction Markets Forum with Robin Hanson, Chris Gerlacher), Predict 2026 (December 7-9, Las Vegas).",
+    "MIT Sloan panel 'Prediction Markets at the Crossroads' (March 7) featured Shayne Coplan (Polymarket CEO), Nate Silver, Chad Millman (Action Network), Ric Best (Susquehanna head of prediction markets). These are the industry power players."
+  ],
+
+  "entities": [
+    {"name": "Prediction Conference", "type": "event", "role": "April 22-24 Las Vegas, 300 seats, predictionmarketsconference.com"},
+    {"name": "Robin Hanson", "type": "person", "role": "George Mason University, prediction market pioneer, speaking at SBC Summit June 11"},
+    {"name": "Nate Silver", "type": "person", "role": "Statistician, spoke at MIT Sloan prediction markets panel March 7"},
+    {"name": "Ric Best", "type": "person", "role": "Head of Prediction Markets at Susquehanna (SIG), spoke at MIT Sloan March 7"},
+    {"name": "Chad Millman", "type": "person", "role": "Co-founder of The Action Network, spoke at MIT Sloan March 7"}
+  ],
+
+  "workstreamTags": {
+    "CEO": "ACTION REQUIRED: Register at predictionmarketsconference.com NOW. 300 seats, curated. Kalshi CEO hosting. 5c(c) Capital founders (ex-Kalshi) almost certainly attending. This is where LEVER gets in front of the first dedicated prediction market VC fund. Prepare: (1) 5-minute pitch, (2) updated deck with March 2026 data ($21B volume, $22B Kalshi, counter-cyclical thesis), (3) Ultramarkets competitive differentiation (50x vs 10x)."
+  },
+
+  "sources": [
+    {"title": "Prediction Conference Official", "url": "https://predictionmarketsconference.com/", "dateAccessed": "2026-03-29", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Tarek Mansour Tweet", "url": "https://x.com/mansourtarek_/status/2003816967862653018", "dateAccessed": "2026-03-29", "sourceType": "Primary", "reliability": "High"},
+    {"title": "MIT Sloan: Prediction Markets at Crossroads", "url": "https://www.sloansportsconference.com/event/prediction-markets-at-the-crossroads-sports-regulation-and-what-comes-next", "dateAccessed": "2026-03-29", "sourceType": "Primary", "reliability": "High"}
+  ]
+}

@@ -1,8 +1,23 @@
 {
   "description": "Weekly prediction market volume snapshots. Updated each RESEARCH scan.",
-  "last_updated": "2026-03-28T20:00:00Z",
+  "last_updated": "2026-03-29T00:14:00Z",
   "unit": "USD",
   "snapshots": [
+    {
+      "date": "2026-03-29",
+      "period": "snapshot",
+      "polymarket_active_markets": 1382,
+      "polymarket_geopolitics_volume": "464500000+",
+      "polymarket_tariff_markets": 116,
+      "polymarket_tariff_volume": "9700000",
+      "polymarket_trade_war_markets": 201,
+      "polymarket_trade_war_volume": "15400000",
+      "crypto_market_conditions": "BTC $66,246 (-3.85%), ETH $1,985 (-4.05%), Fear&Greed 12 (extreme fear)",
+      "oil_brent": "$101.89 (+4.8%)",
+      "iran_ceasefire_status": "REJECTED by Iran",
+      "notes": "KEY DECOUPLING: prediction market volume at ATH despite crypto bear market. Iran rejected ceasefire, war escalating. Polymarket fee expansion goes live March 30. Three structural uncertainty pillars: Iran war, tariffs, midterm elections.",
+      "source": "Polymarket.com, CBS News, CoinGabbar, multiple outlets"
+    },
     {
       "date": "2026-03-28",
       "period": "week",
@@ -50,6 +65,12 @@
       "Institutional adoption (structural)"
     ],
     "polymarket_election_conditional_markets": "15% WoW growth since February 2026",
-    "trajectory": "Volume elevated since 2025 US election cycle. No sign of reversion. Geopolitics has replaced elections as primary driver in March 2026."
+    "counter_cyclical_thesis": "CONFIRMED 2026-03-29: prediction market volume at ATH while crypto market is in extreme fear (Fear&Greed 12). Demand driven by uncertainty, not BTC price. LEVER's TAM grows with geopolitical instability, not with bull markets.",
+    "three_structural_pillars": {
+      "iran_war": "$464.5M+ Polymarket volume, 540+ markets, ongoing",
+      "tariffs_trade": "$25.1M Polymarket volume, 317 markets, Section 301 investigations",
+      "midterm_elections": "$4.1M+ and growing, conditional markets with 15% WoW growth"
+    },
+    "trajectory": "Volume elevated since 2025 US election cycle. No sign of reversion. Geopolitics has replaced elections as primary driver in March 2026. Iran ceasefire rejection (March 28) extends uncertainty indefinitely."
   }
 }

@@ -1,0 +1,138 @@
+{
+  "description": "Critical upcoming dates for LEVER/XMarket across all coverage areas. Consolidated from 24 RESEARCH scans on 2026-03-28/29.",
+  "last_updated": "2026-03-29T00:16:00Z",
+
+  "dates": [
+    {
+      "date": "2026-03-30",
+      "event": "Polymarket taker fee expansion (8 new categories)",
+      "category": "competitor",
+      "impact": "Geopolitics stays free (good for LEVER oracle). $1M/day revenue. Maker rebates incentivize deeper CLOB (better PI quality).",
+      "action": "Monitor volume impact post-expansion"
+    },
+    {
+      "date": "2026-04-06",
+      "event": "Trump deadline: Iran energy infrastructure strikes OR peace deal",
+      "category": "geopolitics",
+      "impact": "Binary outcome. Strikes = oil shock + more prediction market volume. Deal = different market dynamics. Either way, prediction demand stays elevated.",
+      "action": "Watch for ceasefire breakthrough or escalation"
+    },
+    {
+      "date": "2026-04-06",
+      "event": "Solana Frontier Hackathon starts (runs to May 11)",
+      "category": "events",
+      "impact": "Low direct relevance (Solana, not Base). May surface competitors.",
+      "action": "Monitor for prediction market entries"
+    },
+    {
+      "date": "2026-04-15",
+      "event": "Paris Blockchain Week (April 15-16, Paris)",
+      "category": "events",
+      "impact": "10,000+ attendees. European VCs. Secondary priority.",
+      "action": "Attend if targeting European investors"
+    },
+    {
+      "date": "2026-04-22",
+      "event": "Prediction Conference (April 22-24, Las Vegas) *** PRIORITY ***",
+      "category": "events",
+      "impact": "300 curated seats. Dedicated prediction market event. 5c(c) Capital backers likely attending. LEVER's #1 fundraising opportunity.",
+      "action": "SECURE A SEAT IMMEDIATELY. Register at predictionmarketsconference.com. Prepare pitch deck with updated March 2026 data. Note: Kalshi CEO Tarek Mansour tweeted about hosting 'our first Prediction Market Conference' - 5c(c) Capital founders (ex-Kalshi) almost certainly attending. Shayne Coplan (Polymarket CEO) spoke at MIT Sloan in March - likely at this event too."
+    },
+    {
+      "date": "2026-04-27",
+      "event": "Bitcoin 2026 (April 27-29, Las Vegas)",
+      "category": "events",
+      "impact": "40,000+ attendees. High visibility. Bitcoin-focused. Less directly relevant.",
+      "action": "Optional. Same city as Prediction Conference (combine travel)."
+    },
+    {
+      "date": "2026-04-29",
+      "event": "TOKEN2049 Dubai (April 29-30)",
+      "category": "events",
+      "impact": "15,000+ attendees. Asian/ME VC density.",
+      "action": "Relevant for XMarket APAC fundraising"
+    },
+    {
+      "date": "2026-04-30",
+      "event": "CFTC ANPR comment deadline (prediction market regulation)",
+      "category": "regulatory",
+      "impact": "Public comments close. Final rules shape what is legal prediction market infrastructure. Prediction market regulation will be the hottest topic at all April events.",
+      "action": "Monitor submissions for industry positioning signals"
+    },
+    {
+      "date": "2026-05-05",
+      "event": "Consensus Miami (May 5-7, Miami Beach Convention Center)",
+      "category": "events",
+      "impact": "20,000+ attendees. 10th anniversary. Largest Americas crypto conference. Broad VC density.",
+      "action": "Second priority event after Prediction Conference. Good for follow-up meetings."
+    },
+    {
+      "date": "2026-05-TBD",
+      "event": "Next FOMC rate decision",
+      "category": "macro",
+      "impact": "1 cut projected for 2026. If Iran war persists and oil stays above $100, rate hold likely. Affects crypto and DeFi liquidity.",
+      "action": "Monitor Fed statements for rate guidance"
+    },
+    {
+      "date": "2026-05-TBD",
+      "event": "5c(c) Capital first close (within weeks of March 23 announcement)",
+      "category": "funding",
+      "impact": "First dedicated prediction market VC fund closing. LEVER pitch window narrowing.",
+      "action": "CEO: outreach to Adhi Rajaprabhakaran and Noah Zingler-Sternig BEFORE first close"
+    },
+    {
+      "date": "2026-06-09",
+      "event": "SBC Summit Americas (June 9-11, Fort Lauderdale)",
+      "category": "events",
+      "impact": "New Prediction Markets Forum. Sports betting industry crossover.",
+      "action": "Monitor for regulatory signals on sports prediction market classification"
+    },
+    {
+      "date": "2026-Q2",
+      "event": "LEVER Protocol mainnet launch target (Base)",
+      "category": "product",
+      "impact": "Must launch before July regulatory deadlines. Q2 = April-June window.",
+      "action": "BUILD: target April-May for mainnet readiness"
+    },
+    {
+      "date": "2026-Q2",
+      "event": "Aerodrome + Velodrome merge into 'Aero' (Base DEX)",
+      "category": "base_ecosystem",
+      "impact": "Unified Base DEX liquidity. LEVER should have lvUSDT/USDT pool ready.",
+      "action": "BUILD: coordinate timing with Aero launch for LP token liquidity"
+    },
+    {
+      "date": "2026-07-01",
+      "event": "MiCA authorization deadline (EU)",
+      "category": "regulatory",
+      "impact": "USDT may face EU restrictions. Only USDC is MiCA-compliant. Affects LEVER if targeting EU users.",
+      "action": "Low urgency for v1 (not targeting EU). Plan multi-collateral (USDC) for v2."
+    },
+    {
+      "date": "2026-07",
+      "event": "GENIUS Act final rules (US stablecoin regulation)",
+      "category": "regulatory",
+      "impact": "Determines stablecoin compliance requirements. May affect USDT usage in US DeFi.",
+      "action": "Monitor for DeFi protocol obligations around stablecoin usage"
+    },
+    {
+      "date": "2026-11",
+      "event": "US 2026 Midterm Elections",
+      "category": "geopolitics",
+      "impact": "Primary prediction market demand driver for H2 2026. Volume expected to surge 3-6 months before. Conditional markets already growing 15% WoW.",
+      "action": "LEVER should be live and established well before midterm volume surge"
+    }
+  ],
+
+  "critical_path": [
+    "NOW: CEO outreach to 5c(c) Capital (first close imminent)",
+    "NOW: Secure Prediction Conference seat (April 22-24, 300 seats only)",
+    "March 30: Monitor Polymarket fee expansion impact on volume",
+    "April 6: Iran deadline (market-moving either way)",
+    "April 22-24: Prediction Conference (investor meetings)",
+    "April 30: CFTC comment deadline",
+    "May 5-7: Consensus Miami (follow-up meetings)",
+    "Q2: LEVER mainnet launch (before July regulatory deadlines)",
+    "July: GENIUS Act + MiCA deadlines"
+  ]
+}

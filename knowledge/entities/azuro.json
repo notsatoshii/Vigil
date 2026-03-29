@@ -2,13 +2,17 @@
   "name": "Azuro",
   "type": "competitor",
   "facts": [
-    "Decentralized prediction/betting protocol",
-    "Operates in the prediction market and sports betting vertical",
-    "Competitor to LEVER in the leveraged prediction market infrastructure space"
+    "Decentralized prediction/betting infrastructure protocol on Polygon and Gnosis",
+    "$370M+ total trading volume, 20+ live applications built on top, 4,500+ LPs",
+    "Top revenue-generating protocol on Polygon (competing with Curve and AAVE)",
+    "Unified LiquidityTree pool reducing fragmentation across markets",
+    "Infrastructure layer model: other frontends build on Azuro (not direct consumer platform)",
+    "Token (AZUR) at $0.001123 as of March 2026",
+    "Sports-focused, no leverage offering"
   ],
   "relationships": [
-    { "target": "lever-protocol", "relationship": "competitor in prediction market leverage" },
-    { "target": "polymarket", "relationship": "competitor in prediction market space" }
+    { "target": "lever-protocol", "relationship": "not direct competitor (no leverage); potential integration partner" },
+    { "target": "polymarket", "relationship": "competitor in prediction market space (different chain)" }
   ],
   "lastUpdated": "2026-03-28"
 }

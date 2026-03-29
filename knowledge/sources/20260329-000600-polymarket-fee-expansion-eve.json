@@ -1,0 +1,50 @@
+{
+  "id": "20260329-000600-polymarket-fee-expansion-eve",
+  "ingestedAt": "2026-03-29T00:06:00Z",
+  "sourceType": "Web scan (Polymarket docs, analytics, news outlets)",
+  "reliability": "High (official Polymarket docs, Phemex, Pine Analytics)",
+  "scanType": "Focused scan: Polymarket fee expansion (goes live March 30 - TOMORROW)",
+
+  "summary": [
+    "TOMORROW (March 30): Polymarket expands taker fees to 8 new categories (Politics, Finance, Economics, Culture, Weather, Tech, Mentions, Other/General). Total fee-bearing categories: 10. GEOPOLITICS AND WORLD EVENTS REMAIN FREE.",
+    "Revenue projection: $800K-$1M daily from fees. Based on $9.55B trailing 30-day volume.",
+    "Maker Rebates Program: makers (resting orders) pay ZERO fees and receive daily USDC rebates funded by taker fees. Rebate rates: Finance 50%, all others 25%. This incentivizes market-making and deepens orderbooks.",
+    "Early evidence from Crypto and Sports fee rollouts: Sports showed NO volume decline. Crypto saw only slight pullback within normal variance. Fee introduction is not killing volume.",
+    "Crypto category fee increased from 1.56% to 1.80% (15% increase on existing traders).",
+    "Geopolitics/world events staying fee-free is strategically important: this is the highest-volume category ($464.5M+) and keeping it free maintains Polymarket's dominance in the war/conflict markets that are driving current demand."
+  ],
+
+  "leverImplications": {
+    "oracleImpact": "Fees should not materially affect LEVER's oracle quality. CLOB midpoint pricing is determined by resting orders (makers), and makers are INCENTIVIZED by rebates. More maker liquidity = tighter spreads = better PI quality for LEVER.",
+    "volumeRisk": "If fees cause volume decline in specific categories, those markets may become less liquid for LEVER to reference. Monitor post-March-30 volume by category.",
+    "competitiveOpportunity": "Polymarket ending zero-fee era may push some price-sensitive traders to alternatives. XMarket (fee-free during beta) and Limitless could benefit. But the maker rebate program should retain serious liquidity providers.",
+    "geopoliticsFreeIsGood": "Geopolitics staying fee-free means the highest-volume category (Iran war, Ukraine, elections) remains maximally liquid. This is LEVER's primary market category."
+  },
+
+  "feeStructureDetails": {
+    "feeModel": "Dynamic, probability-based taker fees",
+    "makerFee": "0% (makers pay nothing)",
+    "makerRebates": {"Finance": "50%", "Sports": "25%", "Politics": "25%", "Economics": "25%", "Culture": "25%", "Weather": "25%", "Tech": "25%", "Mentions": "25%", "Other": "25%"},
+    "feeFreeCategoriesRemaining": ["Geopolitics", "World Events"],
+    "totalFeeCategories": 10,
+    "revenueProjection": "$800K-$1M daily",
+    "payoutCurrency": "USDC",
+    "payoutFrequency": "Daily"
+  },
+
+  "workstreamTags": {
+    "BUILD": "POSITIVE for LEVER's oracle: Polymarket's maker rebate program incentivizes resting orders (the source of CLOB midpoint data). More maker liquidity = tighter spreads = better PI quality. Monitor post-March-30 volume to verify no category-specific decline. Geopolitics staying free is ideal for LEVER's primary market focus.",
+    "CEO": "Polymarket generating $800K-$1M/day from fees validates prediction market monetization. At $365M/year revenue, that supports the $20B valuation at ~55x revenue (growth premium). LEVER's 50/30/20 fee split generates revenue from day one; cite Polymarket's fee model as proof of monetization thesis.",
+    "ADVISOR": "Polymarket ending free trading is a market maturation signal. Fee introduction without volume decline (early evidence) means the market has pricing power. This is positive for the entire sector including LEVER: if users accept prediction market fees, they will accept leverage fees.",
+    "IMPROVE": "Polymarket's maker rebate UX (daily USDC payouts, proportional to executed maker volume) is a reference for how LEVER should display LP rewards. Simple, transparent, daily."
+  },
+
+  "sources": [
+    {"title": "Polymarket Docs: Fees", "url": "https://docs.polymarket.com/trading/fees", "dateAccessed": "2026-03-29", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Polymarket Docs: Maker Rebates", "url": "https://docs.polymarket.com/polymarket-learn/trading/maker-rebates-program", "dateAccessed": "2026-03-29", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Phemex: $1M Daily Revenue", "url": "https://phemex.com/news/article/polymarket-projects-1m-daily-revenue-with-new-fee-structure-68935", "dateAccessed": "2026-03-29", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "Pine Analytics: Fee Rollout Analysis", "url": "https://pineanalytics.substack.com/p/polymarket-fee-rollout", "dateAccessed": "2026-03-29", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "CoinCu: Fee Expansion Details", "url": "https://coincu.com/news/polymarket-fee-expansion-march-30-2026/", "dateAccessed": "2026-03-29", "sourceType": "Secondary", "reliability": "Medium"},
+    {"title": "iGaming Business: Sports Fee Debate", "url": "https://igamingbusiness.com/prediction-markets/polymarket-sports-fee-hike-2026/", "dateAccessed": "2026-03-29", "sourceType": "Secondary", "reliability": "Medium"}
+  ]
+}

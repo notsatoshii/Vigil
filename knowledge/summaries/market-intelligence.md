@@ -4,9 +4,25 @@
 ## Geopolitical Demand Drivers (Scan: 2026-03-28)
 
 ### Active Conflicts Driving Prediction Market Volume
-1. **Iran War (Day 28)**: US-Israel strikes since Feb 28. Nuclear sites hit. 1,900+ Iranian dead, 1,142+ in Lebanon. Houthis entered war March 28. Trump delayed energy strikes to April 6. Iran threatening Strait of Hormuz blockade. **$464.5M+ volume across 540 Polymarket geopolitics markets.**
+1. **Iran War (Day 29, updated 2026-03-29)**: Iran REJECTED US 15-point ceasefire proposal, called talks "illogical." War escalating, not de-escalating. Oil spiking: Brent $101.89 (+4.8%), US crude $94.48 (+4.6%). Houthis hit Israel again. Kuwait airport fire from drone strike. Trump extended energy strike pause to April 6 but deal now less likely. Kushner/Witkoff diplomatic push stalled. **$464.5M+ volume across 540+ Polymarket geopolitics markets.**
 2. **Ukraine-Russia (Year 4)**: Peace talks stalled; US attention diverted to Iran. 96% Polymarket odds of no ceasefire by March 31. Multi-layered enforcement framework proposed but no progress.
 3. **Venezuela**: Maduro seized Jan 3. 66% odds Delcy Rodriguez leads by end 2026.
+
+### Crypto Market Conditions (2026-03-29)
+- BTC: $66,246 (-3.85%), ETH: $1,985 (-4.05%), Total: $2.37T (-3.1%)
+- Fear & Greed: **12 (EXTREME FEAR)**. BTC dominance 56.1%.
+- Iran war overriding every crypto rally. 89% BTC-S&P500 correlation. $1B+ liquidations on single Trump post.
+- Oil above $100 -> Fed cannot cut -> money exits risk assets -> BTC drops. This is the macro loop.
+- **KEY DECOUPLING**: Prediction market volume at $21B+ ATH despite crypto bear market. Demand driven by uncertainty, not BTC price. LEVER's thesis is counter-cyclical.
+
+### Tariffs & Trade War (Scan: 2026-03-29)
+- Trump tariffs = largest US tax increase since 1993 ($1,500/household)
+- Supreme Court ruled IEEPA tariffs unlawful; being replaced with Section 122/301/232
+- New Section 301 investigations (March 11) targeting China, EU, **Korea, Vietnam, Thailand** (XMarket's APAC markets)
+- Polymarket: 317 tariff/trade war markets, $25.1M combined volume
+- Supreme Court ruling odds: 28-32% Trump wins (down 9-14 pts)
+- Tariff stimulus check: 44% before 2027 ($1.7M traded on Kalshi)
+- **Third structural uncertainty driver** alongside Iran war and elections
 
 ### Key Date: April 6, 2026
 Trump's deadline for Iran energy infrastructure strikes. If strikes proceed: oil price shock, more prediction market volume. If peace deal: different market dynamics. Either way, prediction market demand stays elevated.
@@ -102,6 +118,22 @@ Fed NY: sports betting increased credit delinquency 0.3pp. If leveraged predicti
 
 ## Prediction Market Sector Overview (as of 2026-03-28)
 **Sources**: Prediction Index Annual Report 2025-2026; Web scans 2026-03-28
+
+### Category Growth Ranking (Scan: 2026-03-29)
+Volume is diversifying. Fastest incremental growth in 2026 comes from NON-SPORTS categories:
+
+| Category | Growth Speed | LEVER Priority | Regulatory Risk |
+|----------|-------------|----------------|-----------------|
+| Economics / Macro | Fastest growing | **HIGH** (binary outcomes, clear resolution) | Low |
+| Social & Culture | Fast growing | Medium (entertainment markets) | Low |
+| Crypto | High volume, stable | **HIGH** (native audience, clear data feeds) | Low |
+| Politics | High volume, seasonal | Medium (midterms H2 2026) | **HIGH** (congressional bills) |
+| Geopolitics | Highest absolute volume | **HIGH** ($464.5M, fee-free on Polymarket) | Medium (DEATH BETS Act) |
+| Sports | Largest flow engine | **LOW** (regulatory kill zone) | **CRITICAL** (39 state AGs, criminal charges) |
+| Weather | Emerging | Low (novel, less liquid) | Low |
+| Tech & Science | Growing | Medium (AI-related markets) | Low |
+
+**LEVER listing strategy**: Economics + Crypto + Geopolitics first. These are the highest-growth, lowest-regulatory-risk categories with the deepest oracle liquidity. Avoid sports entirely. Add politics cautiously for midterm cycle.
 
 ### Volume and Growth
 - $100B+ notional trading volume in 2025
