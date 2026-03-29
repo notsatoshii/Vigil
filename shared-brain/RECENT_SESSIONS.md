@@ -411,3 +411,21 @@
 **Root cause**: Scheduler allows 5 concurrent sessions, but even one solc compilation uses 33% of total RAM. Two simultaneous compilations guarantee OOM.
 
 **Recommended fix**: Add memory cgroup limit to BUILD sessions, or reduce max concurrent sessions when BUILD tasks are in the pipeline.
+
+---
+## OPERATE | 2026-03-29 04:38-04:44 UTC
+
+**Task**: System check, log review.
+
+**CRITICAL: Recurring solc OOM crisis**:
+- 5 OOM kills today (03:49, 04:09, 04:36, plus 2 more from dmesg)
+- RAM at 96% RIGHT NOW: 3 simultaneous solc-0.8.24 processes (3.3GB + 2.8GB + 0.8GB = 6.9GB)
+- Scheduler oversubscribed: 8 active sessions, -3 available (limit is 5)
+- Gateway has been OOM-killed and auto-restarted 4+ times
+- Telegram getUpdates timeouts correlate with memory pressure
+
+**Root cause confirmed**: Every BUILD session that runs `forge test` or `forge build` on the LEVER Protocol codebase spawns solc-0.8.24 which consumes 3-5GB. With multiple BUILD sessions concurrent, RAM is exhausted. The scheduler does not account for memory when dispatching.
+
+**Immediate need**: Reduce max concurrent sessions from 5 to 3, or add memory-aware scheduling. This is burning tokens on sessions that get OOM-killed before completing.
+
+**Oracle**: Still out of gas (escalated to Master, no change).
