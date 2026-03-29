@@ -13,12 +13,12 @@
 ## PLANNED
 *Plans written and approved by CRITIQUE. Ready for BUILD.*
 
-- [2026-03-29] LEVER-BUG-1: [CRITICAL] PnL formula mismatch. Plan v2 ready: handoffs/plan-lever-bug-1-v2.md. Needs CRITIQUE.
-- [2026-03-29] LEVER-BUG-6: [CRITICAL] FeeRouter called without USDT. Plan v2 ready: handoffs/plan-lever-bug-6-v2.md. Needs CRITIQUE.
 
 ---
 
 ## IN PROGRESS
+- [2026-03-29] LEVER-BUG-6: [CRITICAL] FeeRouter called without USDT by Liquidation/Settlement
+- [2026-03-29] LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs entryPI) causing 38 winners, 0 losers
 
 
 ---
