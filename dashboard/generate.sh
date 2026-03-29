@@ -36,7 +36,7 @@ SVC_TELEGRAM=$(check_service vigil-telegram)
 SVC_CADDY=$(check_service caddy)
 
 # Active sessions from OpenClaw
-ACTIVE_SESSIONS=$(su - lever -c "openclaw health 2>/dev/null" | grep "Session store" | grep -o '[0-9]* entries' | grep -o '[0-9]*' 2>/dev/null || echo "0")
+ACTIVE_SESSIONS=$(sudo -u lever openclaw health 2>/dev/null | grep "Session store" | grep -o '[0-9]* entries' | grep -o '[0-9]*' 2>/dev/null || echo "0")
 
 # Latest health check
 if [ -f "$HEALTH" ]; then
@@ -70,7 +70,7 @@ SOURCES_COUNT=$(find /home/lever/command/knowledge/sources/ -name "*.json" 2>/de
 ENTITIES_COUNT=$(find /home/lever/command/knowledge/entities/ -name "*.json" 2>/dev/null | wc -l)
 
 # Cron schedule
-CRON_JOBS=$(su - lever -c "openclaw cron list 2>/dev/null" | tail -n +2 | head -10 | sed 's/</\&lt;/g; s/>/\&gt;/g' || echo "No cron jobs")
+CRON_JOBS=$(sudo -u lever openclaw cron list 2>/dev/null | tail -n +2 | head -10 | sed 's/</\&lt;/g; s/>/\&gt;/g' || echo "No cron jobs")
 
 # Color helper
 status_color() {

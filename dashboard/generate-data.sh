@@ -33,7 +33,7 @@ if [ -f "$HEALTH" ]; then
 fi
 
 # Active sessions
-ACTIVE_SESSIONS=$(su - lever -c "openclaw health 2>/dev/null" | grep "Session store" | grep -o '[0-9]* entries' | grep -o '[0-9]*' 2>/dev/null || echo "0")
+ACTIVE_SESSIONS=$(sudo -u lever openclaw health 2>/dev/null | grep "Session store" | grep -o '[0-9]* entries' | grep -o '[0-9]*' 2>/dev/null || echo "0")
 
 # Session costs today
 TODAY=$(date -u +%Y-%m-%d)
@@ -84,7 +84,7 @@ done | sed 's/,$//')
 ADVISOR_SUMMARY=$(sed -n '/^## Latest Brief/,/^---/{/^## Latest/d;/^---/d;/^\*/d;p;}' "$BRAIN/ADVISOR_BRIEFS.md" 2>/dev/null | head -5 | sed 's/"/\\"/g' | tr '\n' '|' | sed 's/|$//;s/|/\\n/g')
 
 # Upcoming cron jobs with actual next-run times
-NEXT_JOBS=$(su - lever -c "openclaw cron list 2>/dev/null" | tail -n +2 | head -7 | while IFS= read -r line; do
+NEXT_JOBS=$(sudo -u lever openclaw cron list 2>/dev/null | tail -n +2 | head -7 | while IFS= read -r line; do
     name=$(echo "$line" | awk '{print $2}')
     next_time=$(echo "$line" | grep -oP 'in \K[0-9]+[hmd]' || echo "pending")
     [ -n "$name" ] && printf '{"name":"%s","next":"in %s"},' "$name" "$next_time"

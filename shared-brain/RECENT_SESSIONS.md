@@ -368,3 +368,16 @@
 - lever-bug-1: BLOCKED in KANBAN (awaiting Master input on exit formula decision).
 - Health checks at 16:00, 20:00, 00:00: all passed healthy.
 - No fixes needed this cycle.
+
+---
+## OPERATE | 2026-03-29 03:19-03:28 UTC
+
+**Task**: System check, log review, fix issues.
+
+**Issues found and fixed**:
+1. **Dashboard `su - lever` PAM failures** (fixed): Both `generate-data.sh` and `generate.sh` used `su - lever -c "..."` which fails with PAM auth errors when run as root from systemd. Replaced all 4 instances with `sudo -u lever ...`. Dashboard restarted.
+
+**Issues found, escalation needed**:
+2. **Oracle keeper out of gas** (CRITICAL): lever-oracle wallet has ~529 gwei, needs ~840 gwei per tx. ALL price pushes failing since at least 03:15. Every market price update is rejected. Testnet ETH faucet refill needed. OPERATE cannot modify .env or fund wallets per policy.
+
+**Other findings**: All 8 services active. Disk 18%, RAM 31%. Gateway stable, Master active (conversation at 03:08). Scheduler dispatching new day (1 session). Model warmup warning for claude-cli/claude-sonnet-4-6 at 02:12 (recurring, non-critical).
