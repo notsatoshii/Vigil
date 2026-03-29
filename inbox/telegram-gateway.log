@@ -182,3 +182,12 @@ What happened whils...
 2026-03-29 03:42:33,638 [INFO] Queuing for OpenClaw: [Recent conversation context (same session):
   [1] Hola GM
   [2] What happened w...
+2026-03-29 03:48:01,403 [ERROR] TG API error: getUpdates - timed out
+2026-03-29 03:49:39,920 [INFO] Task completed in 550s
+2026-03-29 03:52:12,773 [INFO] Task completed in 579s
+2026-03-29 03:55:20,503 [ERROR] TG API error: getUpdates - timed out
+2026-03-29 04:02:28,680 [ERROR] TG API error: getUpdates - timed out
+2026-03-29 04:03:42,102 [ERROR] TG API error: getUpdates - timed out
+2026-03-29 04:09:54,377 [ERROR] TG API error: getUpdates - timed out
+2026-03-29 04:42:34,221 [ERROR] TG API error: getUpdates - timed out
+2026-03-29 04:44:19,643 [ERROR] TG API error: getUpdates - timed out
