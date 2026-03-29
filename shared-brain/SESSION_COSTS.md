@@ -25,3 +25,6 @@
 [03:17:31] Session #16
 [03:40:29] Session #17
 [03:42:33] Session #18
+[05:39:44] Session #19
+[05:43:20] Session #20
+[05:43:35] Session #21

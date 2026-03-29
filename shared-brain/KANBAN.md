@@ -7,13 +7,6 @@
 *Tasks accepted but not yet planned. PLAN should always be pulling from here.*
 
 
-- LEVER-BUG-6: [CRITICAL] FeeRouter called without USDT by Liquidation/Settlement — CRITIQUE: REVISE. Settlement vault funding amount is wrong (funds delta after fee, but fee also leaves as USDT; must fund grossProfit = delta + fee like ExecutionEngine does). LiquidationEngine fix is correct. See critique-lever-bug-6.md
-- LEVER-BUG-9: [HIGH] Vault NAV missing unrealized PnL
-- LANDING-MOBILE: Fix mobile scroll and side-scroll issues on landing page
-- LANDING-DESIGN: Redesign landing page to be institutional and sophisticated
-- VIGIL-DASHBOARD: Complete dashboard overhaul. Real-time WebSocket, actual reactive data, KANBAN board visible, activity feed, pipeline visualization. Current dashboard is useless.
-- VIGIL-VERIFY-VISION: VERIFY must use Puppeteer/Chromium to take screenshots and use Claude vision to verify visual/UI changes. Not just code review.
-- VIGIL-SELF-IMPROVE: System must continuously self-improve without Master having to point out every problem. Overseer must be more aggressive.
 
 ---
 
@@ -24,12 +17,20 @@
 ---
 
 ## IN PROGRESS
-- [2026-03-29] LEVER-BUG-8: [HIGH] No closing transaction fee (10bps foregone)
 - [2026-03-29] VIGIL-MISSION-CONTROL: React dashboard built, deployed to :8080. Handoff: handoffs/build-vigil-mission-control.md
 
 ---
 
 ## IN REVIEW
+- [2026-03-29] LEVER-BUG-6: [CRITICAL] FeeRouter called without USDT by Liquidation/Settlement
+- [2026-03-29] LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs entryPI) causing 38 winners, 0 losers
+- [2026-03-29] VIGIL-SELF-IMPROVE: System must continuously self-improve without Master having to point out every problem. Overseer must be more aggressive.
+- [2026-03-29] VIGIL-VERIFY-VISION: VERIFY must use Puppeteer/Chromium to take screenshots and use Claude vision to verify visual/UI changes. Not just code review.
+- [2026-03-29] VIGIL-DASHBOARD: Complete dashboard overhaul. Real-time WebSocket, actual reactive data, KANBAN board visible, activity feed, pipeline visualization. Current dashboard is useless.
+- [2026-03-29] LANDING-DESIGN: Redesign landing page to be institutional and sophisticated
+- [2026-03-29] LANDING-MOBILE: Fix mobile scroll and side-scroll issues on landing page
+- [2026-03-29] LEVER-BUG-9: [HIGH] Vault NAV missing unrealized PnL
+- [2026-03-29] LEVER-BUG-8: [HIGH] Closing fee FeeType classification fixed. Handoff: handoffs/build-lever-bug-8.md
 - [2026-03-29] LEVER-BUG-7: [CRITICAL] Zero liquidations (depthThreshold unset)
 - [2026-03-29] LEVER-BUG-4: [CRITICAL] InsuranceFund never absorbs bad debt (no USDT transfer)
 - [2026-03-29] LEVER-BUG-3: [CRITICAL] Ghost OI ($3.2M with zero positions)
@@ -54,5 +55,4 @@
 ## BLOCKED
 *Cannot proceed. Include reason and who can unblock.*
 
-- LEVER-BUG-1: [CRITICAL] PnL formula mismatch — CRITIQUE verdict: REVISE (3rd review, verified against actual codebase). Three blockers: (1) exit formula diverges from LESSONS.md (double vs single impact, Master must decide), (2) LEVER-P06 makes Phase 2 without Phase 3 unsafe (vault NAV drift), (3) all plan line numbers stale (P03/P04/P06 shifted code). See: handoffs/critique-lever-bug-1.md
 

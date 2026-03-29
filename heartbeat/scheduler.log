@@ -9704,3 +9704,453 @@
 2026-03-29 05:03:55,457 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 34 today
 2026-03-29 05:04:05,494 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 34 today
 2026-03-29 05:04:15,532 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 34 today
+2026-03-29 05:04:25,569 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 34 today
+2026-03-29 05:04:35,605 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 34 today
+2026-03-29 05:04:45,643 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 34 today
+2026-03-29 05:04:55,665 [INFO] DISPATCH [verify] task=lever-bug-7 (session #35 today)
+2026-03-29 05:04:55,666 [INFO] Support check: remaining=0, dispatched=1
+2026-03-29 05:04:55,686 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 35 today
+2026-03-29 05:05:05,726 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:05:15,765 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:05:25,801 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:05:35,848 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:05:45,887 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:05:55,932 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:06:05,970 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:06:16,008 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:06:26,048 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:06:36,095 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:06:46,136 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:06:56,173 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:07:06,209 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:07:16,247 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:07:26,284 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:07:36,325 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:07:46,364 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:07:56,403 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:08:06,441 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:08:16,482 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:08:26,525 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:08:36,562 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:08:46,604 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:08:56,647 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:09:06,684 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:09:16,763 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:09:26,802 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:09:36,840 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:09:46,884 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:09:56,922 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:10:06,963 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:10:17,005 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:10:27,042 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:10:37,080 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:10:47,119 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:10:57,156 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:11:07,196 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 35 today
+2026-03-29 05:11:17,217 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:11:17,238 [INFO] DISPATCH [operate] task=support-operate (session #36 today)
+2026-03-29 05:11:17,262 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 36 today
+2026-03-29 05:11:27,265 [INFO] BUILD complete for lever-bug-8. Moving to VERIFY.
+2026-03-29 05:11:27,266 [INFO] KANBAN: 'LEVER-BUG-8: [HIGH] No closing transacti...' moved to IN REVIEW
+2026-03-29 05:11:27,304 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:11:37,350 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:11:47,390 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:11:57,432 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:12:07,497 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:12:17,535 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:12:27,576 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:12:37,615 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:12:47,663 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:12:57,700 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:13:07,737 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:13:17,776 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:13:27,814 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:13:37,856 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:13:47,894 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:13:57,930 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:14:07,971 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:14:18,011 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:14:28,054 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:14:38,093 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 36 today
+2026-03-29 05:14:48,113 [INFO] DISPATCH [verify] task=lever-bug-8 (session #37 today)
+2026-03-29 05:14:48,114 [INFO] Support check: remaining=0, dispatched=1
+2026-03-29 05:14:48,132 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 37 today
+2026-03-29 05:14:58,136 [INFO] CRITIQUE APPROVED for lever-bug-9. Ready for BUILD.
+2026-03-29 05:14:58,136 [INFO] KANBAN: 'LEVER-BUG-9: [HIGH] Vault NAV missing un...' moved to PLANNED
+2026-03-29 05:14:58,180 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 37 today
+2026-03-29 05:15:08,218 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 37 today
+2026-03-29 05:15:18,239 [INFO] DISPATCH [build] task=lever-bug-9 (session #38 today)
+2026-03-29 05:15:18,240 [INFO] KANBAN: 'LEVER-BUG-9: [HIGH] Vault NAV missing un...' moved to IN PROGRESS
+2026-03-29 05:15:18,240 [INFO] Support check: remaining=0, dispatched=1
+2026-03-29 05:15:18,260 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 38 today
+2026-03-29 05:15:28,282 [INFO] DISPATCH [critique] task=landing-mobile (session #39 today)
+2026-03-29 05:15:28,282 [INFO] Support check: remaining=0, dispatched=1
+2026-03-29 05:15:28,300 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 39 today
+2026-03-29 05:15:38,340 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:15:48,378 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:15:58,426 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:16:08,480 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:16:18,522 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:16:28,562 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:16:38,600 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:16:48,640 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:16:58,690 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:17:08,731 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:17:18,773 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:17:28,815 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:17:38,853 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:17:48,893 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:17:58,931 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:18:08,975 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:18:19,013 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:18:29,053 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:18:39,094 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 39 today
+2026-03-29 05:18:49,115 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:18:49,134 [INFO] DISPATCH [improve] task=support-improve (session #40 today)
+2026-03-29 05:18:49,155 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 40 today
+2026-03-29 05:18:59,161 [INFO] VERIFY found DESIGN FLAW in lever-bug-7. Sending back to PLAN.
+2026-03-29 05:18:59,204 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-29 05:19:09,243 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 40 today
+2026-03-29 05:19:19,264 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:19:19,284 [INFO] DISPATCH [research] task=support-research (session #41 today)
+2026-03-29 05:19:19,306 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 41 today
+2026-03-29 05:19:29,349 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 41 today
+2026-03-29 05:19:39,394 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 41 today
+2026-03-29 05:19:49,434 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 41 today
+2026-03-29 05:19:59,473 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 41 today
+2026-03-29 05:20:09,513 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 41 today
+2026-03-29 05:20:19,585 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 41 today
+2026-03-29 05:20:29,624 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 41 today
+2026-03-29 05:20:39,670 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 41 today
+2026-03-29 05:20:49,689 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:20:49,707 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:20:59,710 [INFO] VERIFY found DESIGN FLAW in lever-bug-8. Sending back to PLAN.
+2026-03-29 05:20:59,730 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:20:59,750 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:21:09,773 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:21:09,792 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:21:19,812 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:21:19,833 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:21:29,852 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:21:29,870 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:21:39,892 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:21:39,911 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:21:49,931 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:21:49,948 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:21:59,969 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:21:59,988 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:22:10,010 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:22:10,035 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:22:20,055 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:22:20,073 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:22:30,093 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:22:30,112 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:22:40,138 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:22:40,157 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:22:50,178 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:22:50,196 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:23:00,217 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:23:00,235 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:23:10,256 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:23:10,276 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:23:20,304 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:23:20,323 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:23:30,344 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:23:30,363 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:23:40,384 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:23:40,403 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:23:50,426 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:23:50,452 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:24:00,473 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:24:00,499 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:24:10,518 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:24:10,537 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:24:20,560 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:24:20,585 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:24:30,605 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:24:30,623 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:24:40,643 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:24:40,662 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:24:50,687 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:24:50,705 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:25:00,725 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:25:00,743 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:25:10,766 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:25:10,784 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:25:20,805 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:25:20,824 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:25:30,848 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:25:30,871 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:25:40,891 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:25:40,909 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:25:50,933 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:25:50,957 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:26:00,977 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:26:00,996 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:26:11,018 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:26:11,038 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 41 today
+2026-03-29 05:26:21,059 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:26:21,080 [INFO] DISPATCH [operate] task=support-operate (session #42 today)
+2026-03-29 05:26:21,114 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 42 today
+2026-03-29 05:26:31,162 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:26:41,199 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:26:51,241 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:27:01,288 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:27:11,331 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:27:21,369 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:27:31,406 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:27:41,447 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:27:51,486 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:28:01,536 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:28:11,576 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:28:21,621 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:28:31,668 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:28:41,707 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:28:51,756 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:29:01,794 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:29:11,836 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:29:21,875 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:29:31,914 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 42 today
+2026-03-29 05:29:41,938 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:29:41,958 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 42 today
+2026-03-29 05:29:51,960 [INFO] BUILD complete for lever-bug-9. Moving to VERIFY.
+2026-03-29 05:29:51,960 [INFO] KANBAN: 'LEVER-BUG-9: [HIGH] Vault NAV missing un...' moved to IN REVIEW
+2026-03-29 05:29:51,980 [INFO] DISPATCH [verify] task=lever-bug-9 (session #43 today)
+2026-03-29 05:29:51,980 [INFO] Support check: remaining=0, dispatched=1
+2026-03-29 05:29:51,998 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 43 today
+2026-03-29 05:30:02,039 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 43 today
+2026-03-29 05:30:12,079 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 43 today
+2026-03-29 05:30:22,118 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 43 today
+2026-03-29 05:30:32,159 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 43 today
+2026-03-29 05:30:42,197 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 43 today
+2026-03-29 05:30:52,234 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 43 today
+2026-03-29 05:31:02,276 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 43 today
+2026-03-29 05:31:12,316 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 43 today
+2026-03-29 05:31:22,368 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 43 today
+2026-03-29 05:31:32,407 [INFO] Cycle: 5 active, 0 available, 0 dispatched, 43 today
+2026-03-29 05:31:42,428 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:31:42,447 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 43 today
+2026-03-29 05:31:52,449 [INFO] CRITIQUE APPROVED for landing-mobile. Ready for BUILD.
+2026-03-29 05:31:52,449 [INFO] KANBAN: 'LANDING-MOBILE: Fix mobile scroll and si...' moved to PLANNED
+2026-03-29 05:31:52,474 [INFO] DISPATCH [build] task=landing-mobile (session #44 today)
+2026-03-29 05:31:52,475 [INFO] KANBAN: 'LANDING-MOBILE: Fix mobile scroll and si...' moved to IN PROGRESS
+2026-03-29 05:31:52,476 [INFO] Support check: remaining=0, dispatched=1
+2026-03-29 05:31:52,498 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 44 today
+2026-03-29 05:32:02,521 [INFO] DISPATCH [critique] task=landing-design (session #45 today)
+2026-03-29 05:32:02,522 [INFO] Support check: remaining=0, dispatched=1
+2026-03-29 05:32:02,543 [INFO] Cycle: 5 active, 0 available, 1 dispatched, 45 today
+2026-03-29 05:32:12,574 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 05:32:12,594 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 45 today
+2026-03-29 05:32:22,615 [INFO] Support check: remaining=4, dispatched=0
+2026-03-29 05:32:22,634 [INFO] Cycle: 1 active, 4 available, 0 dispatched, 45 today
+2026-03-29 05:32:32,637 [INFO] VERIFY found DESIGN FLAW in lever-bug-9. Sending back to PLAN.
+2026-03-29 05:32:32,638 [INFO] BUILD complete for landing-mobile. Moving to VERIFY.
+2026-03-29 05:32:32,639 [INFO] KANBAN: 'LANDING-MOBILE: Fix mobile scroll and si...' moved to IN REVIEW
+2026-03-29 05:32:32,656 [INFO] DISPATCH [verify] task=landing-mobile (session #46 today)
+2026-03-29 05:32:32,657 [INFO] Support check: remaining=4, dispatched=1
+2026-03-29 05:32:32,675 [INFO] Cycle: 1 active, 4 available, 1 dispatched, 46 today
+2026-03-29 05:32:42,677 [INFO] CRITIQUE APPROVED for landing-design. Ready for BUILD.
+2026-03-29 05:32:42,677 [INFO] KANBAN: 'LANDING-DESIGN: Redesign landing page to...' moved to PLANNED
+2026-03-29 05:32:42,697 [INFO] DISPATCH [build] task=landing-design (session #47 today)
+2026-03-29 05:32:42,698 [INFO] KANBAN: 'LANDING-DESIGN: Redesign landing page to...' moved to IN PROGRESS
+2026-03-29 05:32:42,698 [INFO] DISPATCH [critique] task=vigil-dashboard (session #48 today)
+2026-03-29 05:32:42,699 [INFO] Support check: remaining=2, dispatched=2
+2026-03-29 05:32:42,724 [INFO] Cycle: 3 active, 2 available, 2 dispatched, 48 today
+2026-03-29 05:32:52,745 [INFO] Support check: remaining=3, dispatched=0
+2026-03-29 05:32:52,764 [INFO] Cycle: 2 active, 3 available, 0 dispatched, 48 today
+2026-03-29 05:33:02,766 [INFO] VERIFY found DESIGN FLAW in landing-mobile. Sending back to PLAN.
+2026-03-29 05:33:02,787 [INFO] Support check: remaining=4, dispatched=0
+2026-03-29 05:33:02,809 [INFO] Cycle: 1 active, 4 available, 0 dispatched, 48 today
+2026-03-29 05:33:12,810 [INFO] BUILD complete for landing-design. Moving to VERIFY.
+2026-03-29 05:33:12,811 [INFO] KANBAN: 'LANDING-DESIGN: Redesign landing page to...' moved to IN REVIEW
+2026-03-29 05:33:12,830 [INFO] DISPATCH [verify] task=landing-design (session #49 today)
+2026-03-29 05:33:12,830 [INFO] Support check: remaining=4, dispatched=1
+2026-03-29 05:33:12,849 [INFO] Cycle: 1 active, 4 available, 1 dispatched, 49 today
+2026-03-29 05:33:22,851 [INFO] CRITIQUE APPROVED for vigil-dashboard. Ready for BUILD.
+2026-03-29 05:33:22,851 [INFO] KANBAN: 'VIGIL-DASHBOARD: Complete dashboard over...' moved to PLANNED
+2026-03-29 05:33:22,877 [INFO] DISPATCH [build] task=vigil-dashboard (session #50 today)
+2026-03-29 05:33:22,878 [INFO] KANBAN: 'VIGIL-DASHBOARD: Complete dashboard over...' moved to IN PROGRESS
+2026-03-29 05:33:22,878 [INFO] DISPATCH [critique] task=vigil-verify-vision (session #51 today)
+2026-03-29 05:33:22,879 [INFO] Support check: remaining=2, dispatched=2
+2026-03-29 05:33:22,898 [INFO] Cycle: 3 active, 2 available, 2 dispatched, 51 today
+2026-03-29 05:33:32,920 [INFO] Support check: remaining=3, dispatched=0
+2026-03-29 05:33:32,945 [INFO] Cycle: 2 active, 3 available, 0 dispatched, 51 today
+2026-03-29 05:33:42,946 [INFO] VERIFY found DESIGN FLAW in landing-design. Sending back to PLAN.
+2026-03-29 05:33:42,966 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:33:42,984 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 51 today
+2026-03-29 05:33:52,987 [INFO] BUILD complete for vigil-dashboard. Moving to VERIFY.
+2026-03-29 05:33:52,987 [INFO] KANBAN: 'VIGIL-DASHBOARD: Complete dashboard over...' moved to IN REVIEW
+2026-03-29 05:33:52,988 [INFO] CRITIQUE APPROVED for vigil-verify-vision. Ready for BUILD.
+2026-03-29 05:33:52,988 [INFO] KANBAN: 'VIGIL-VERIFY-VISION: VERIFY must use Pup...' moved to PLANNED
+2026-03-29 05:33:53,006 [INFO] DISPATCH [verify] task=vigil-dashboard (session #52 today)
+2026-03-29 05:33:53,008 [INFO] DISPATCH [build] task=vigil-verify-vision (session #53 today)
+2026-03-29 05:33:53,009 [INFO] KANBAN: 'VIGIL-VERIFY-VISION: VERIFY must use Pup...' moved to IN PROGRESS
+2026-03-29 05:33:53,010 [INFO] DISPATCH [critique] task=vigil-self-improve (session #54 today)
+2026-03-29 05:33:53,013 [INFO] Support check: remaining=2, dispatched=3
+2026-03-29 05:33:53,037 [INFO] DISPATCH [improve] task=support-improve (session #55 today)
+2026-03-29 05:33:53,065 [INFO] Cycle: 4 active, 1 available, 4 dispatched, 55 today
+2026-03-29 05:34:03,085 [INFO] Support check: remaining=1, dispatched=0
+2026-03-29 05:34:03,104 [INFO] Cycle: 4 active, 1 available, 0 dispatched, 55 today
+2026-03-29 05:34:13,141 [INFO] Support check: remaining=3, dispatched=0
+2026-03-29 05:34:13,206 [INFO] Cycle: 2 active, 3 available, 0 dispatched, 55 today
+2026-03-29 05:34:23,208 [INFO] CRITIQUE APPROVED for vigil-self-improve. Ready for BUILD.
+2026-03-29 05:34:23,208 [INFO] KANBAN: 'VIGIL-SELF-IMPROVE: System must continuo...' moved to PLANNED
+2026-03-29 05:34:23,229 [INFO] DISPATCH [build] task=vigil-self-improve (session #56 today)
+2026-03-29 05:34:23,230 [INFO] KANBAN: 'VIGIL-SELF-IMPROVE: System must continuo...' moved to IN PROGRESS
+2026-03-29 05:34:23,231 [INFO] DISPATCH [critique] task=lever-bug-1 (session #57 today)
+2026-03-29 05:34:23,231 [INFO] Support check: remaining=3, dispatched=2
+2026-03-29 05:34:23,253 [INFO] DISPATCH [research] task=support-research (session #58 today)
+2026-03-29 05:34:23,278 [INFO] Cycle: 5 active, 0 available, 3 dispatched, 58 today
+2026-03-29 05:34:33,280 [INFO] VERIFY found DESIGN FLAW in vigil-dashboard. Sending back to PLAN.
+2026-03-29 05:34:33,281 [INFO] BUILD complete for vigil-verify-vision. Moving to VERIFY.
+2026-03-29 05:34:33,281 [INFO] KANBAN: 'VIGIL-VERIFY-VISION: VERIFY must use Pup...' moved to IN REVIEW
+2026-03-29 05:34:33,302 [INFO] DISPATCH [verify] task=vigil-verify-vision (session #59 today)
+2026-03-29 05:34:33,303 [INFO] Support check: remaining=1, dispatched=1
+2026-03-29 05:34:33,331 [INFO] Cycle: 4 active, 1 available, 1 dispatched, 59 today
+2026-03-29 05:34:43,358 [INFO] Support check: remaining=3, dispatched=0
+2026-03-29 05:34:43,388 [INFO] Cycle: 2 active, 3 available, 0 dispatched, 59 today
+2026-03-29 05:34:53,390 [INFO] CRITIQUE APPROVED for lever-bug-1. Ready for BUILD.
+2026-03-29 05:34:53,390 [INFO] KANBAN: 'LEVER-BUG-1: [CRITICAL] PnL formula mism...' moved to PLANNED
+2026-03-29 05:34:53,391 [INFO] BUILD complete for vigil-self-improve. Moving to VERIFY.
+2026-03-29 05:34:53,392 [INFO] KANBAN: 'VIGIL-SELF-IMPROVE: System must continuo...' moved to IN REVIEW
+2026-03-29 05:34:53,410 [INFO] DISPATCH [verify] task=vigil-self-improve (session #60 today)
+2026-03-29 05:34:53,411 [INFO] DISPATCH [build] task=lever-bug-1 (session #61 today)
+2026-03-29 05:34:53,412 [INFO] KANBAN: 'LEVER-BUG-1: [CRITICAL] PnL formula mism...' moved to IN PROGRESS
+2026-03-29 05:34:53,413 [INFO] DISPATCH [critique] task=lever-bug-6 (session #62 today)
+2026-03-29 05:34:53,414 [INFO] Support check: remaining=2, dispatched=3
+2026-03-29 05:34:53,435 [INFO] Cycle: 3 active, 2 available, 3 dispatched, 62 today
+2026-03-29 05:35:03,440 [INFO] VERIFY found DESIGN FLAW in vigil-verify-vision. Sending back to PLAN.
+2026-03-29 05:35:03,462 [INFO] Support check: remaining=2, dispatched=0
+2026-03-29 05:35:03,492 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 62 today
+2026-03-29 05:35:13,516 [INFO] Support check: remaining=4, dispatched=0
+2026-03-29 05:35:13,534 [INFO] Cycle: 1 active, 4 available, 0 dispatched, 62 today
+2026-03-29 05:35:23,535 [INFO] CRITIQUE APPROVED for lever-bug-6. Ready for BUILD.
+2026-03-29 05:35:23,536 [INFO] KANBAN: 'LEVER-BUG-6: [CRITICAL] FeeRouter called...' moved to PLANNED
+2026-03-29 05:35:23,537 [INFO] VERIFY found DESIGN FLAW in vigil-self-improve. Sending back to PLAN.
+2026-03-29 05:35:23,555 [INFO] DISPATCH [build] task=lever-bug-6 (session #63 today)
+2026-03-29 05:35:23,556 [INFO] KANBAN: 'LEVER-BUG-6: [CRITICAL] FeeRouter called...' moved to IN PROGRESS
+2026-03-29 05:35:23,556 [INFO] Support check: remaining=4, dispatched=1
+2026-03-29 05:35:23,580 [INFO] Cycle: 1 active, 4 available, 1 dispatched, 63 today
+2026-03-29 05:35:33,584 [INFO] BUILD complete for lever-bug-1. Moving to VERIFY.
+2026-03-29 05:35:33,585 [INFO] KANBAN: 'LEVER-BUG-1: [CRITICAL] PnL formula mism...' moved to IN REVIEW
+2026-03-29 05:35:33,606 [INFO] DISPATCH [verify] task=lever-bug-1 (session #64 today)
+2026-03-29 05:35:33,606 [INFO] Support check: remaining=3, dispatched=1
+2026-03-29 05:35:33,628 [INFO] Cycle: 2 active, 3 available, 1 dispatched, 64 today
+2026-03-29 05:35:43,648 [INFO] Support check: remaining=4, dispatched=0
+2026-03-29 05:35:43,667 [INFO] Cycle: 1 active, 4 available, 0 dispatched, 64 today
+2026-03-29 05:35:53,669 [INFO] BUILD complete for lever-bug-6. Moving to VERIFY.
+2026-03-29 05:35:53,670 [INFO] KANBAN: 'LEVER-BUG-6: [CRITICAL] FeeRouter called...' moved to IN REVIEW
+2026-03-29 05:35:53,688 [INFO] DISPATCH [verify] task=lever-bug-6 (session #65 today)
+2026-03-29 05:35:53,689 [INFO] Support check: remaining=4, dispatched=1
+2026-03-29 05:35:53,706 [INFO] Cycle: 1 active, 4 available, 1 dispatched, 65 today
+2026-03-29 05:36:03,711 [INFO] VERIFY found DESIGN FLAW in lever-bug-1. Sending back to PLAN.
+2026-03-29 05:36:03,734 [INFO] Support check: remaining=4, dispatched=0
+2026-03-29 05:36:03,754 [INFO] Cycle: 1 active, 4 available, 0 dispatched, 65 today
+2026-03-29 05:36:13,772 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:36:13,792 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:36:23,794 [INFO] VERIFY found DESIGN FLAW in lever-bug-6. Sending back to PLAN.
+2026-03-29 05:36:23,812 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:36:23,830 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:36:33,848 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:36:33,866 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:36:43,885 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:36:43,903 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:36:53,924 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:36:53,943 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:37:03,970 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:37:03,991 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:37:14,011 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:37:14,031 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:37:24,049 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:37:24,067 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:37:34,085 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:37:34,102 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:37:44,120 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:37:44,137 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:37:54,156 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:37:54,172 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:38:04,195 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:38:04,213 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:38:14,233 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:38:14,252 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:38:24,272 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:38:24,290 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:38:34,309 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:38:34,327 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:38:44,346 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:38:44,365 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:38:54,385 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:38:54,405 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:39:04,424 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:39:04,441 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:39:14,460 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:39:14,476 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:39:24,495 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:39:24,512 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:39:34,532 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:39:34,550 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:39:44,574 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:39:44,592 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:39:54,612 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:39:54,630 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:40:04,649 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:40:04,667 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:40:14,686 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:40:14,704 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:40:24,723 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:40:24,741 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:40:34,765 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:40:34,784 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:40:44,803 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:40:44,821 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:40:54,840 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:40:54,858 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:41:04,877 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:41:04,896 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:41:14,923 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:41:14,942 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 65 today
+2026-03-29 05:41:24,961 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:41:24,981 [INFO] DISPATCH [operate] task=support-operate (session #66 today)
+2026-03-29 05:41:25,002 [INFO] Cycle: 1 active, 4 available, 1 dispatched, 66 today
+2026-03-29 05:41:35,021 [INFO] Support check: remaining=4, dispatched=0
+2026-03-29 05:41:35,038 [INFO] Cycle: 1 active, 4 available, 0 dispatched, 66 today
+2026-03-29 05:41:45,057 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:41:45,075 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:41:55,094 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:41:55,110 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:42:05,128 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:42:05,145 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:42:15,165 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:42:15,182 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:42:25,203 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:42:25,236 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:42:35,256 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:42:35,273 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:42:45,293 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:42:45,309 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:42:55,328 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:42:55,346 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:43:05,364 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:43:05,381 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:43:15,400 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:43:15,417 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:43:25,441 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:43:25,466 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:43:35,485 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:43:35,503 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:43:45,528 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:43:45,546 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:43:55,565 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:43:55,583 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:44:05,627 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:44:05,654 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:44:15,675 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:44:15,692 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:44:25,712 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:44:25,730 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:44:35,749 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:44:35,767 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:44:45,786 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:44:45,804 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
+2026-03-29 05:44:55,822 [INFO] Support check: remaining=5, dispatched=0
+2026-03-29 05:44:55,842 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 66 today
