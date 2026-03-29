@@ -395,3 +395,19 @@
 **Other findings**: All 8 services active post-recovery. Disk 18%, RAM 54%. Gateway log shows `getUpdates timed out` at 03:48 (pre-OOM). Scheduler at 8 dispatches today.
 
 **Recommendation**: Consider adding a memory limit (MemoryMax) to openclaw-gateway.service, or limiting solc compilation concurrency to prevent future OOM kills.
+
+---
+## OPERATE | 2026-03-29 04:11-04:23 UTC
+
+**Task**: System check, log review.
+
+**Issues found**:
+1. **Third OOM kill at 04:09** (self-recovered): Again caused by `solc-0.8.24` consuming 5GB+. Gateway auto-restarted. A fourth solc instance is running RIGHT NOW (PID 3923881, 5GB RSS, 100% CPU since 04:17). It will trigger another OOM kill soon.
+2. **Telegram getUpdates timeouts**: 4 timeouts between 03:55 and 04:09. Correlated with memory pressure from solc compilations.
+3. **Oracle still out of gas**: Unchanged, already escalated.
+
+**Pattern**: BUILD sessions running `forge test` or `forge build` spawn `solc-0.8.24` which consumes 5GB+ on the LEVER Protocol codebase. With 5 concurrent sessions and other processes, this exceeds 15GB RAM every time. Three OOM kills in the last 30 minutes.
+
+**Root cause**: Scheduler allows 5 concurrent sessions, but even one solc compilation uses 33% of total RAM. Two simultaneous compilations guarantee OOM.
+
+**Recommended fix**: Add memory cgroup limit to BUILD sessions, or reduce max concurrent sessions when BUILD tasks are in the pipeline.
