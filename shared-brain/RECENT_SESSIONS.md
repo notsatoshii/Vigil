@@ -510,3 +510,26 @@
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 27%. System stable after overnight OOM storm. No solc processes. No escalation flags. Gateway clean since 09:14. Scheduler at 103 dispatches today, 1 active (winding down). Pipeline healthy: VERIFY sessions completing, tests passing. No issues found, no fixes needed.
+
+---
+## OPERATE | 2026-03-29 12:00 UTC
+
+**Task**: Routine selfcheck (cron-triggered).
+
+**Findings**:
+- All 8 services: active (openclaw-gateway, vigil-telegram, vigil-dashboard, vigil-inbox, lever-frontend, lever-oracle, lever-accrue-keeper, caddy)
+- RAM: 4.0Gi used / 15Gi total (27%). Healthy.
+- Disk: 35G / 193G (19%). Healthy.
+- Load: 0.48, 0.52, 0.52. Normal.
+- Scheduler: 103 dispatches today, 0 active. Idle/winding down.
+- Inbox: No new items, last processed 2026-03-28. Clean.
+- Gateway: No recent errors. Clean.
+- OVERSEER_ACTIONS: No pending items.
+- Frustration log: All prior events from 2026-03-28/29 (5 entries). No new frustrations.
+
+**Fixed**:
+- selfcheck-fast.sh BUG A: pgrep pattern was `claude.*operate` (never matched `openclaw agent --agent operate`). Fixed to `openclaw.*operate`.
+- selfcheck-fast.sh BUG B: gateway log awk cutoff used ISO T-format (`+%Y-%m-%dT%H:%M`) but log uses space format. Fixed to `+%Y-%m-%d %H:%M`. Recent errors now correctly detected.
+- Both bugs flagged by VERIFY post-BUILD on 2026-03-29 11:08. Committed: 35d3d42. Pushed.
+
+**No escalation needed.**
