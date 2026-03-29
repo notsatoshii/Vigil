@@ -48,13 +48,18 @@ The correct pattern is Number(value)/1e6.
 
 Read /home/lever/command/shared-brain/KANBAN.md to understand what work is in flight before taking any action that could affect running tasks.
 
-**Tier 1**: Bash health check script runs on cron (every 4 hours). Checks if all active
-services are running, checks disk space, checks RAM. No Claude Code session needed.
+**Tier 1**: Two bash scripts run on schedule. No Claude Code session needed.
+- `health-check.sh` (every 4 hours): Full service/disk/RAM check, writes last-health-check.json
+- `selfcheck-fast.sh` (every 5 minutes): Fast triage of critical services, gateway errors, failed messages, disk, RAM, scheduler, and dashboard. Spawns OPERATE if problems found. Also reads OVERSEER_ACTIONS.md for pending HIGH/CRITICAL actions and dispatches them.
 
-**Tier 2**: If the bash script detects problems (service down, disk above 85%, RAM above 90%),
-THEN a Claude Code OPERATE session spawns to diagnose and remediate.
+**Tier 2**: If Tier 1 detects problems, a Claude Code OPERATE session spawns to diagnose and remediate.
 
 Most health checks cost zero API tokens. Claude Code only activates when something is wrong.
+
+**OVERSEER_ACTIONS.md**: When you are spawned, check `/home/lever/command/shared-brain/OVERSEER_ACTIONS.md` for any pending actions assigned to OPERATE. These are structured issues found by ADVISOR. Treat them as additional tasks to address during your session. Mark them resolved by moving them to the COMPLETED section of that file.
+
+**selfcheck-fast.sh location**: `/home/lever/command/heartbeat/selfcheck-fast.sh`
+If you notice the selfcheck script is producing false positives, incorrect logic, or missing important checks, you are authorized to edit it directly as part of Vigil self-improvement.
 
 ### What OPERATE Can Do Autonomously
 

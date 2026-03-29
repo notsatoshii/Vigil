@@ -135,50 +135,50 @@
     "landing-design": {
       "task_id": "landing-design",
       "title": "LANDING-DESIGN: Redesign landing page to be institutional and sophisticated",
-      "stage": "verifying",
-      "agent_pid": 192977,
+      "stage": "done",
+      "agent_pid": 0,
       "dispatched_at": 1774780941.2108116,
       "plan_file": "/home/lever/command/handoffs/plan-landing-design.md",
       "critique_file": "/home/lever/command/handoffs/critique-landing-design.md",
       "build_file": "/home/lever/command/handoffs/build-landing-design.md",
-      "verify_file": "",
+      "verify_file": "/home/lever/command/handoffs/verify-landing-design.md",
       "attempts": 0
     },
     "vigil-dashboard": {
       "task_id": "vigil-dashboard",
       "title": "VIGIL-DASHBOARD: Complete dashboard overhaul. Real-time WebSocket, actual reactive data, KANBAN board visible, activity feed, pipeline visualization. Current dashboard is useless.",
-      "stage": "building",
-      "agent_pid": 184389,
-      "dispatched_at": 1774780489.3061047,
+      "stage": "done",
+      "agent_pid": 0,
+      "dispatched_at": 1774781142.0774057,
       "plan_file": "/home/lever/command/handoffs/plan-vigil-dashboard.md",
       "critique_file": "/home/lever/command/handoffs/critique-vigil-dashboard.md",
-      "build_file": "",
-      "verify_file": "",
+      "build_file": "/home/lever/command/handoffs/build-vigil-dashboard.md",
+      "verify_file": "/home/lever/command/handoffs/verify-vigil-dashboard.md",
       "attempts": 0
     },
     "vigil-verify-vision": {
       "task_id": "vigil-verify-vision",
       "title": "VIGIL-VERIFY-VISION: VERIFY must use Puppeteer/Chromium to take screenshots and use Claude vision to verify visual/UI changes. Not just code review.",
-      "stage": "critiquing",
-      "agent_pid": 184390,
-      "dispatched_at": 1774780489.307535,
+      "stage": "done",
+      "agent_pid": 0,
+      "dispatched_at": 1774781794.9241683,
       "plan_file": "/home/lever/command/handoffs/plan-vigil-verify-vision.md",
-      "critique_file": "",
-      "build_file": "",
-      "verify_file": "",
+      "critique_file": "/home/lever/command/handoffs/critique-vigil-verify-vision.md",
+      "build_file": "/home/lever/command/handoffs/build-vigil-verify-vision.md",
+      "verify_file": "/home/lever/command/handoffs/verify-vigil-verify-vision.md",
       "attempts": 0
     },
     "vigil-self-improve": {
       "task_id": "vigil-self-improve",
       "title": "VIGIL-SELF-IMPROVE: System must continuously self-improve without Master having to point out every problem. Overseer must be more aggressive.",
-      "stage": "planned",
+      "stage": "backlog",
       "agent_pid": 0,
-      "dispatched_at": 1774762493.4113603,
+      "dispatched_at": 1774782377.4010992,
       "plan_file": "/home/lever/command/handoffs/plan-vigil-self-improve.md",
-      "critique_file": "",
-      "build_file": "",
-      "verify_file": "",
-      "attempts": 0
+      "critique_file": "/home/lever/command/handoffs/critique-vigil-self-improve.md",
+      "build_file": "/home/lever/command/handoffs/build-vigil-self-improve.md",
+      "verify_file": "/home/lever/command/handoffs/verify-vigil-self-improve.md",
+      "attempts": 1
     },
     "support-improve": {
       "task_id": "support-improve",
@@ -217,6 +217,6 @@
       "attempts": 0
     }
   },
-  "sessions_today": 94,
+  "sessions_today": 100,
   "last_reset_date": "2026-03-29"
 }

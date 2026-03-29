@@ -1,7 +1,7 @@
 # ACTIVE WORK
-## Updated by scheduler at 10:44:51 UTC
+## Updated by scheduler at 11:44:56 UTC
 
-Sessions today: 94/200
+Sessions today: 100/200
 
 ---
 
@@ -16,10 +16,7 @@ Sessions today: 94/200
 - **lever-bug-7**: LEVER-BUG-7: [CRITICAL] Zero liquidations (depthThreshold un [backlog]
 - **lever-bug-8**: LEVER-BUG-8: [HIGH] No closing transaction fee (10bps forego [backlog]
 - **lever-bug-9**: LEVER-BUG-9: [HIGH] Vault NAV missing unrealized PnL [backlog]
-- **landing-design**: LANDING-DESIGN: Redesign landing page to be institutional an [verifying (2m)]
-- **vigil-dashboard**: VIGIL-DASHBOARD: Complete dashboard overhaul. Real-time WebS [building (10m)]
-- **vigil-verify-vision**: VIGIL-VERIFY-VISION: VERIFY must use Puppeteer/Chromium to t [critiquing (10m)]
-- **vigil-self-improve**: VIGIL-SELF-IMPROVE: System must continuously self-improve wi [planned]
+- **vigil-self-improve**: VIGIL-SELF-IMPROVE: System must continuously self-improve wi [backlog]
 - **support-improve**: support-improve [backlog]
 - **support-operate**: support-operate [backlog]
 - **support-research**: support-research [backlog]
@@ -30,7 +27,7 @@ Sessions today: 94/200
 
 - BACKLOG: 0
 - PLANNED: 0
-- IN PROGRESS: 1
-- IN REVIEW: 6
-- DONE (last 10): 11
+- IN PROGRESS: 0
+- IN REVIEW: 7
+- DONE (last 10): 14
 - BLOCKED: 0

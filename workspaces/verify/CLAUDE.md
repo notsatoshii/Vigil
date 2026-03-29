@@ -80,11 +80,48 @@ Tests, contract calls, and behavioral correctness.
 
 #### Pass 2: Visual/Design Verification
 Open the browser via Puppeteer/Chromium and look at it like a user.
-- Navigate to affected pages (/qa with browser)
-- Screenshot before/after states
-- Check UI layout is not broken
+Use these exact commands (work from any directory):
+
+**Full-page screenshots at 3 viewports (desktop 1920x1080, tablet 768x1024, mobile 375x812):**
+```
+node /home/lever/command/tools/screenshot.js <url> [output-dir]
+# Default output: /tmp/verify-screenshots/
+# Produces: desktop-fold.png, desktop-full.png, tablet-fold.png, tablet-full.png,
+#            mobile-fold.png, mobile-full.png, console.log
+# Example:
+node /home/lever/command/tools/screenshot.js http://localhost:3001
+node /home/lever/command/tools/screenshot.js http://localhost:3000 /tmp/verify-screenshots/
+```
+
+**Screenshot a specific UI section by CSS selector:**
+```
+node /home/lever/command/tools/screenshot-section.js <url> <selector> [output.png]
+# Example:
+node /home/lever/command/tools/screenshot-section.js http://localhost:3001 ".hero-section" /tmp/verify-screenshots/hero.png
+node /home/lever/command/tools/screenshot-section.js http://localhost:3000 "#position-panel" /tmp/verify-screenshots/position-panel.png
+```
+
+**Review screenshots with Claude vision:**
+```
+Read /tmp/verify-screenshots/desktop-fold.png
+Read /tmp/verify-screenshots/mobile-fold.png
+Read /tmp/verify-screenshots/desktop-full.png
+```
+
+**Check for overflow and layout issues in the console log:**
+```
+grep -i OVERFLOW /tmp/verify-screenshots/console.log
+grep -i ERROR /tmp/verify-screenshots/console.log
+grep -i WARN /tmp/verify-screenshots/console.log
+```
+
+Checklist for this pass:
+- Navigate to affected pages and capture screenshots
+- Review desktop-fold.png and mobile-fold.png visually (use Read tool on the PNG)
+- Check UI layout is not broken at any viewport
 - Verify design consistency (spacing, alignment, responsive behavior)
-- Check console for errors or warnings
+- Check console.log for errors or warnings (zero tolerance for JS errors)
+- Check console.log for OVERFLOW signals (layout breaking out of bounds)
 - Evaluate UX flow: does it feel right? Is the information hierarchy correct?
 - Run /plan-design-review for UI-impacting changes
 
@@ -117,8 +154,18 @@ Assume bugs exist. Use /review on all changed files.
 
 ### Output
 
-Structured verdict report:
-- **PASS**: Code is clean, tests pass, browser QA clean. Master notified via Telegram.
+Structured verdict report. For any frontend or UI change, the verdict MUST include screenshot evidence in this format:
+
+```
+## Screenshot Evidence
+- Desktop fold: /tmp/verify-screenshots/desktop-fold.png [CLEAN / ISSUES FOUND]
+- Mobile fold:  /tmp/verify-screenshots/mobile-fold.png  [CLEAN / ISSUES FOUND]
+- Console errors: [count] (grep -i ERROR /tmp/verify-screenshots/console.log)
+- Overflow check: [CLEAN / lines found] (grep -i OVERFLOW /tmp/verify-screenshots/console.log)
+```
+
+Verdict types:
+- **PASS**: Code is clean, tests pass, browser QA clean, screenshots reviewed. Master notified via Telegram.
 - **FAIL**: Specific issues with file and line references. Goes straight back to BUILD automatically.
 - **PASS WITH CONCERNS**: Code works but has non-blocking issues worth noting. Master notified.
 

@@ -487,3 +487,19 @@
 - Oracle keeper out of gas (escalated to Master)
 - Solc OOM pattern (documented, workstreams adapting to targeted tests)
 - Scheduler does not respect rate limits or memory pressure
+
+---
+
+### [2026-03-29T11:05:00Z] BUILD | VIGIL-SELF-IMPROVE
+
+- **Task**: Implement continuous self-improvement infrastructure for Vigil system.
+- **Outcome**: SUCCESS. 5 deliverables created/modified.
+- **What was done**:
+  - Created selfcheck-fast.sh: fast bash triage (<3s runtime), checks 7 categories, OPERATE cooldown guard, dispatches OVERSEER_ACTIONS.md HIGH/CRITICAL items via dispatched-actions.log tracking
+  - Created watchdog.sh: 60-second loop watching scheduler.py + openclaw-gateway + zero-session poke
+  - Created OVERSEER_ACTIONS.md: structured action queue with ACTION|PRIORITY|AGENT|DESCRIPTION format
+  - Updated advisor/CLAUDE.md: narrowed overseer to 20-minute budget, 5 files only, top 3 issues, structured ACTION output. Full 5-phase cycle preserved for explicit daily brief requests.
+  - Updated operate/CLAUDE.md: added selfcheck-fast.sh and OVERSEER_ACTIONS.md references
+- **Skipped per critique**: scheduler.py Steps 4+5 already implemented (priority dispatch lines 363-422, idle-fill lines 424-477)
+- **Test**: selfcheck-fast.sh ran clean (0 problems, <3 seconds)
+- **Handoff**: /home/lever/command/handoffs/build-vigil-self-improve.md

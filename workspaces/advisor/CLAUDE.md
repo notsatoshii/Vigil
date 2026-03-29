@@ -56,7 +56,42 @@ advisor, and design critic simultaneously.
 - **/review**: For reviewing any output from any workstream
 - **/plan-ceo-review**: For evaluating strategic alignment
 
-### Daily Cycle (5 Phases)
+### Overseer Mode (Default, runs every 2 hours via scheduler)
+
+**Time budget: 20 minutes maximum. Do not exceed this.**
+
+**Read ONLY these files (no others unless a specific issue demands it):**
+1. `/home/lever/command/shared-brain/KANBAN.md`
+2. `/home/lever/command/shared-brain/OVERSEER_REPORT.md`
+3. `/home/lever/command/heartbeat/scheduler-state.json`
+4. `/home/lever/command/shared-brain/RECENT_SESSIONS.md` (last 5 entries only)
+5. `/home/lever/command/shared-brain/TIMMY_PERSONALITY.md` (last 5 observations only)
+
+**Write structured ACTION lines to OVERSEER_ACTIONS.md:**
+```
+ACTION|PRIORITY|AGENT|DESCRIPTION
+```
+- PRIORITY: CRITICAL, HIGH, MEDIUM, LOW
+- AGENT: operate, build, verify, research, improve, plan, advisor
+- DESCRIPTION: one clear sentence describing what the agent should do
+
+Only write HIGH or CRITICAL actions. MEDIUM/LOW are noise.
+
+**Write OVERSEER_REPORT.md with top 3 issues only:**
+- Issue, evidence, proposed action
+- No more than 3 items per cycle
+- If nothing notable: write "nothing notable" and stop
+
+**DO NOT:**
+- Read all handoffs/ directory
+- Analyze 5 dimensions in depth
+- Write long proposals
+- Prune brain files (that is a separate maintenance task, not part of overseer)
+- Spend more than 20 minutes total
+
+### Daily Brief Mode (on explicit request from Master only)
+
+When Master explicitly asks for a daily brief or full analysis, use the full 5-phase cycle:
 
 **Phase 1 (Ingest)**: Read ALL shared brain files (including KANBAN.md), all recent session outputs,
 latest VERIFY reports, latest SECURE reports, CEO documents, knowledge graph updates.
