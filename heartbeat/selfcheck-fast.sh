@@ -18,7 +18,7 @@ echo "[$TIMESTAMP] selfcheck-fast starting..." >> "$LOG_FILE"
 # ---------------------------------------------------------------
 # OPERATE cooldown check: do not pile up sessions
 # ---------------------------------------------------------------
-if pgrep -f "claude.*operate" > /dev/null 2>&1; then
+if pgrep -f "openclaw.*operate" > /dev/null 2>&1; then
   echo "[$TIMESTAMP] OPERATE already running, skipping" >> "$LOG_FILE"
   exit 0
 fi
@@ -38,7 +38,7 @@ done
 # ---------------------------------------------------------------
 GATEWAY_LOG="/home/lever/command/inbox/telegram-gateway.log"
 if [ -f "$GATEWAY_LOG" ]; then
-  RECENT_ERRORS=$(awk -v cutoff="$(date -u -d '5 minutes ago' +%Y-%m-%dT%H:%M)" \
+  RECENT_ERRORS=$(awk -v cutoff="$(date -u -d '5 minutes ago' '+%Y-%m-%d %H:%M')" \
     '$0 >= cutoff && /ERROR|CRITICAL|Traceback|Exception/' "$GATEWAY_LOG" 2>/dev/null | wc -l)
   if [ "${RECENT_ERRORS:-0}" -gt 0 ]; then
     PROBLEMS+=("GATEWAY_ERRORS:${RECENT_ERRORS}_in_last_5min")
@@ -134,7 +134,7 @@ if [ -f "$OVERSEER_ACTIONS" ]; then
     DESCRIPTION=$(echo "$line" | cut -d'|' -f4-)
 
     # Only dispatch if OPERATE is not already running (re-check in loop)
-    if pgrep -f "claude.*operate" > /dev/null 2>&1; then
+    if pgrep -f "openclaw.*operate" > /dev/null 2>&1; then
       echo "[$TIMESTAMP] OPERATE already running, skipping overseer action: $line" >> "$LOG_FILE"
       break
     fi
