@@ -785,3 +785,22 @@
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 15%. Gateway stable. Master sent Arbitrum docs URL at 12:04 (auto-ingested). 12:00 health check passed clean. Scheduler at 21 dispatches, 1 active. No errors. No issues found, no fixes needed.
+
+---
+## OPERATE | 2026-03-30 12:35 UTC
+
+**Task**: Full system self-check (manual dispatch from Commander).
+
+**Findings**:
+- All 8 services ACTIVE: openclaw-gateway, vigil-telegram, vigil-dashboard, vigil-inbox, lever-frontend, lever-oracle, lever-accrue-keeper, caddy.
+- Disk: 19% used (36G/193G). Healthy.
+- RAM: 2.1Gi used / 15Gi total (14%). Healthy. No stale processes eating memory.
+- Active Claude processes: 6 counted. Breakdown: 1 current OPERATE session (lever user), 1 root session from pts/11, plus 3 processes from a Mar27 root shell (npx serve / node serve for landing page on port 3001). No stale abandoned sessions.
+- Scheduler: 0 active, 5 available, 21 dispatched today. Clean. No errors.
+- Gateway: stable. Last activity 12:04 (Arbitrum URL ingested). Prior getUpdates timeouts (2026-03-29 03:48-04:51) were transient/self-healed.
+- Inbox: 2 URLs processed today at 12:04 and 12:07. Clean.
+- 12:00 health check: healthy, 0 problems, disk 19%, RAM 10%.
+- KANBAN: backlog empty, pipeline empty. All recent tasks verified DONE.
+- OVERSEER_ACTIONS pending: 1 MEDIUM (scheduler SIGUSR1 reload), 2 HIGH (auto-VERIFY dispatch for BUILD workstream, and Monday research scan). Research scan was dispatched earlier today. Both HIGH BUILD actions remain for BUILD workstream to pick up.
+- No frustration events noted in gateway log.
+- No fixes needed. System fully healthy.
