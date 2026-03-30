@@ -3,6 +3,23 @@
 
 ---
 
+### [2026-03-30T20:00:00Z] RESEARCH | Evening Market Scan
+
+- **Task**: Monday evening market scan across all 5 coverage domains (prediction markets, AI/tooling, crypto/DeFi, geopolitics/macro, industry events).
+- **Outcome**: SUCCESS. 7-item brief produced and appended to ADVISOR_BRIEFS.md.
+- **Key findings**:
+  - Iran war Day 31: Trump issued new energy-infrastructure ultimatum March 30. Pakistan direct-talks window expired. April 6 binary event (strikes vs ceasefire) is the week's biggest prediction market catalyst.
+  - Polymarket fee expansion confirmed live today. Portugal and Hungary bans now documented. Nuclear market removal confirmed. Regulatory fragility increasing.
+  - CRITICAL: Ultramarkets confirmed LIVE at app.ultramarkets.xyz with 900+ users. Previous assessment of "pre-launch" was wrong. Threat level upgraded to HIGH. This is no longer hypothetical.
+  - Claude Mythos timeline: Q3 2026 most likely for public API. 45% Polymarket odds for June 30. No action today.
+  - Base TVL recovered to $4.2B after Feb dip. Base holds 46.6% of all L2 DeFi TVL. Tailwind confirmed for LEVER mainnet.
+  - Kalshi now facing Nevada TRO, Washington lawsuit, and Arizona criminal charges. State AG campaign accelerating. LEVER permissionless architecture is a fundraising differentiator.
+  - Prediction Conference April 22-24 (Las Vegas) is 23 days out. 5cc Capital principals likely attending. CEO should register and plan in-person pitch.
+- **Watchlists updated**: watchlist-competitors.json (Ultramarkets live/900+ users, Kalshi state lawsuits, Polymarket bans), watchlist-geopolitical.json (Iran Day 31 evening update), watchlist-ai-tools.json (Mythos Q3 timeline).
+- **Workstream flags**: CEO (Prediction Conference registration, 5cc Capital meeting, Kalshi regulatory narrative for deck), BUILD (Ultramarkets now live - competitive urgency), ADVISOR (April 6 binary scenario brief), OPERATE (add Mythos API monthly check to overseer).
+
+---
+
 ### [2026-03-30T17:42:00Z] OPERATE | Self-Check (Scheduled)
 
 - **Task**: Cron self-check: scheduler, gateway, inbox, health-check logs, frustration events
@@ -892,3 +909,10 @@
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 20%. Gateway stable. 16:00 health check passed clean. Scheduler at 30 dispatches, 3 active. No errors. No issues found, no fixes needed.
+
+---
+## OPERATE | 2026-03-30 20:21-20:22 UTC
+
+**Task**: System check, log review.
+
+**Findings**: All 8 services active. Disk 19%, RAM 18%. Gateway stable. 20:00 health check passed clean. Scheduler at 33 dispatches, 2 active. No errors. No issues found, no fixes needed.
