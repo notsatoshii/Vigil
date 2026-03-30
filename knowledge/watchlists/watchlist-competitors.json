@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-29T08:00:00Z",
+  "last_updated": "2026-03-30T20:00:00Z",
   "description": "Prediction market competitor tracking. Updated on each RESEARCH scan.",
   "entities": [
     {
@@ -35,7 +35,7 @@
           "significance": "high"
         }
       ],
-      "competitive_position": "dominant, 43% market share, moving aggressively on monetization and institutional integration",
+      "competitive_position": "dominant, 43% market share, moving aggressively on monetization and institutional integration. BANNED in Portugal (Jan 2026) and Hungary. Nuclear detonation market removed in March 2026 under pressure.",
       "threat_to_lever": "Primary oracle source. If Polymarket delists categories under DEATH BETS Act or CFTC pressure, LEVER loses price feeds for those markets.",
       "opportunity_for_lever": "Taker fee expansion makes Polymarket more expensive. Fee-sensitive traders may migrate to lower-cost platforms."
     },
@@ -78,7 +78,7 @@
           "significance": "high"
         }
       ],
-      "competitive_position": "TradFi-native, CFTC-regulated, moving into margin trading for institutions. Valuation at $22B signals winner-take-most positioning in TradFi prediction markets.",
+      "competitive_position": "TradFi-native, CFTC-regulated, moving into margin trading for institutions. Valuation at $22B signals winner-take-most positioning in TradFi prediction markets. FACING: Nevada TRO (sports/elections/entertainment blocked), Washington state lawsuit, Arizona criminal charges (March 17). Responding by blocking politicians/athletes from trading their own markets.",
       "threat_to_lever": "Kalshi offering institutional leverage on prediction markets validates the market, but competes for institutional LP capital. Their Kinetic Markets FCM model is different from DeFi-native leverage.",
       "opportunity_for_lever": "LEVER is DeFi-native, permissionless, 24/7, 50x leverage vs Kalshi's margin collateral model. Different user segments (DeFi natives vs TradFi institutions). Fundraising narrative: LEVER is what Kalshi is for DeFi."
     },
@@ -115,9 +115,15 @@
         "max_leverage": "10x",
         "funding": "unknown"
       },
-      "recent_developments": [],
-      "competitive_position": "DIRECT LEVER COMPETITOR. Same thesis: leverage on prediction markets. Weaker implementation: 10x max vs LEVER's 50x, binary auto-close vs continuous risk curves.",
-      "threat_to_lever": "high - only known direct competitor for leveraged prediction market positions",
+      "recent_developments": [
+        {
+          "date": "2026-03-30",
+          "event": "CONFIRMED LIVE at app.ultramarkets.xyz. 900+ Polymarket traders on platform. App fully functional. Previously assessed as pre-launch. Status updated to live.",
+          "significance": "critical"
+        }
+      ],
+      "competitive_position": "DIRECT LEVER COMPETITOR. LIVE with 900+ users as of March 30, 2026. Positioning as margin layer for Polymarket. 10x max leverage, auto-close at resolution.",
+      "threat_to_lever": "HIGH (upgraded from medium - now confirmed live with traction)",
       "opportunity_for_lever": "LEVER has superior architecture (50x, ERC-4626, continuous risk curves, deterministic fee split). Need to get to market before Ultramarkets gains traction."
     },
     {

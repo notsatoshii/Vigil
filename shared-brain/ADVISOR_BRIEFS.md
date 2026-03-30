@@ -7,6 +7,114 @@
 
 ---
 
+### RESEARCH EVENING SCAN | 2026-03-30 20:00 UTC (Monday)
+
+7 items. Coverage: prediction markets, AI/tooling, crypto/DeFi, geopolitics, industry events.
+
+---
+
+#### ITEM 1: IRAN WAR DAY 31 - APRIL 6 DEADLINE IN 7 DAYS (CRITICAL)
+
+**What**: Trump issued a new ultimatum on March 30 via Truth Social: if the Strait of Hormuz is not reopened and a deal not reached "shortly," the US will destroy all of Iran's power plants, oil wells, Kharg Island, and desalination plants. Iran says the US proposal is "excessive and unreasonable" and demands Lebanon be included in any ceasefire terms. Pakistan 48-72h direct-talks window expired without contact. No direct US-Iran talks have occurred since the war began.
+
+**Source**: [MPR News - Trump ceasefire ultimatum March 30, 2026](https://www.mprnews.org/story/2026/03/30/trump-issues-new-threat-irans-civilian-infrastructure-if-ceasefire-isnt-reached) | Accessed 2026-03-30 | Primary | High reliability
+
+**So What For Us**: Oil executives and CNBC warn the Strait must reopen by mid-April or supply loss doubles from 4.5M bpd to 9M bpd. Brent peaked at $126/bbl, WTI at $94.48 today (down from peak, up 4.6% today). Polymarket geopolitics markets: $464M+ volume across 540+ markets. April 6 binary outcome (strikes vs. ceasefire) is the single biggest prediction market event this week.
+
+**Suggested Action**: CEO workstream should incorporate Iran war timeline and oil price range into investor narrative update. ADVISOR should brief April 6 outcome scenarios for XMarket/LEVER positioning. No BUILD action needed.
+
+**Trend Context**: Prediction market demand on geopolitical conflict has been at its highest since Ukraine 2022. Every day of war extension adds new markets. Ceasefire also creates high-volume resolution events. War continuing = sustained demand. Ceasefire = resolution spike then fade.
+
+---
+
+#### ITEM 2: POLYMARKET FEE EXPANSION NOW LIVE + PORTUGAL BAN (COMPETITOR UPDATE)
+
+**What**: Polymarket's taker fee expansion to 8 new categories (finance, politics, culture) hit on March 30. Simultaneously, Portugal banned Polymarket in January 2026 following $120M in presidential election bets, with Hungary also banning the platform. Portugal's law prohibits betting on political events, only allowing sports, casino, and horse racing. Polymarket has no local gambling license in either jurisdiction. Wikipedia additionally confirmed a March 2026 nuclear-detonation market was removed after $850K in bets amid Iran war.
+
+**Source**: [Yahoo Finance - Polymarket Portugal/Hungary ban](https://finance.yahoo.com/news/polymarket-banned-portugal-hungary-prediction-175111303.html) | Accessed 2026-03-30 | Secondary | High reliability
+
+**So What For Us**: Fee expansion makes Polymarket more expensive for takers in 8 new categories. Fee-sensitive traders may migrate. The Portugal and Hungary bans signal a growing regulatory vector: EU gambling law vs. prediction markets. This is a risk vector for XMarket (EU userbase). The nuclear market removal also signals Polymarket will self-censor politically sensitive markets under pressure, which creates gaps competitors can fill with permissionless alternatives.
+
+**Suggested Action**: CEO workstream should track Polymarket's fee model changes for investor deck competitive analysis. SECURE should flag EU gambling law as a regulatory risk item in the next security brief. IMPROVE should note that fee-sensitive UX is a differentiator worth surfacing.
+
+**Trend Context**: Polymarket is monetizing aggressively (Brahma acquisition, fee expansion, $8B valuation). This is the extractive phase. Platforms that went aggressive on fees post-growth often accelerated competitor adoption.
+
+---
+
+#### ITEM 3: ULTRAMARKETS NOW LIVE WITH 900+ USERS (DIRECT LEVER COMPETITOR - ELEVATED THREAT)
+
+**What**: Ultramarkets (ultramarkets.xyz) is confirmed live with a working app at app.ultramarkets.xyz. They report 900+ Polymarket traders on the platform. Positioning: "The Margin Layer for Prediction Markets," up to 10x leverage on Polymarket positions, auto-close at resolution to eliminate gap risk.
+
+**Source**: [Ultramarkets website](https://ultramarkets.xyz/) | Accessed 2026-03-30 | Primary | High reliability
+
+**So What For Us**: This is a direct LEVER competitor and they have traction (900+ users, live product). Last scan flagged them as "early/pre-launch." That assessment is now wrong. They are live. LEVER's advantages remain: 50x vs 10x leverage, ERC-4626 vault architecture, continuous risk curves vs binary auto-close, Base (lower fees) vs their unknown chain. But they are no longer hypothetical. They have users. The threat level increases from Medium to High.
+
+**Suggested Action**: BUILD should know this is now live and on users. PLAN should evaluate whether a "LEVER vs Ultramarkets" differentiation document belongs in the next pitch deck. CEO workstream should include Ultramarkets in competitive slides. We need to ship mainnet before they get to 10,000 users.
+
+**Trend Context**: ANALYSIS: The leveraged prediction market thesis is validated by both Kalshi's Kinetic Markets FCM (institutional margin) and Ultramarkets (retail margin on DeFi). LEVER is the only one doing this natively on-chain with ERC-4626 vault architecture and 50x. That window for "first mover with better architecture" is open, but narrowing.
+
+---
+
+#### ITEM 4: CLAUDE MYTHOS TIMELINE CLARIFIED - Q3 2026 LIKELY (AI TOOLING)
+
+**What**: Anthropic confirmed Claude Mythos (codename Capybara) after a March 26-27 data leak. No public API release date exists. Polymarket gives 45% odds of public release by June 30, 2026; consensus leans Q3 2026. Anthropic's possible IPO in October 2026 makes a general API release in late Q3 to Q4 2026 the most likely scenario. Current limited access is cybersecurity defense only. The model sits above Opus in a new "Capybara" tier and dramatically outperforms Opus 4.6 on coding, reasoning, and cybersecurity.
+
+**Source**: [SiliconANGLE - Claude Mythos launch details](https://siliconangle.com/2026/03/27/anthropic-launch-new-claude-mythos-model-advanced-reasoning-features/) | Accessed 2026-03-30 | Secondary | High reliability
+
+**So What For Us**: No API action possible yet. Vigil continues on Sonnet 4.6 / Opus 4.6 for now. When Mythos drops: upgrade SECURE workstream first (cybersecurity focus aligns with its announced pilot use case), then evaluate ADVISOR upgrade. No changes today.
+
+**Suggested Action**: OPERATE should add a monthly check: "has Mythos API gone public?" to the overseer watch items. No BUILD action today.
+
+**Trend Context**: Anthropic shipped 12+ models in March 2026, including GPT-5.4 variants, Gemini 3.1 Pro, and multiple xAI/Mistral releases. The March 10-16 "model avalanche" week is the fastest concentration of frontier model releases ever. Capability is compounding faster than adoption cycles.
+
+---
+
+#### ITEM 5: BASE L2 TVL RECOVERY - NOW $4.2B, LEVER MAINNET WINDOW IMPROVING (DEFI/CRYPTO)
+
+**What**: Base TVL peaked at $5.6B (October 2025), dropped to $3.9B (February 2026) amid Coinbase/builder strategy rift, and has recovered to $4.2B as of March 2026. Base now holds 46.6% of all L2 DeFi TVL and 62% of L2 fee revenue. Morpho has become a key growth driver with deposits rising from $354M to $2B. BNB Chain's opBNB activated the Fourier hard fork, doubling throughput with 250ms block intervals. BTC sits at $67K, ETH at $2,061. Crypto market cap at $2.42T, Fear and Greed Index at 8 (extreme fear).
+
+**Source**: [State of Ethereum L2 Ecosystem March 2026](https://ethreportseth.xyz/ethereum/state-of-ethereum-l2-ecosystem-march-2026/) | Accessed 2026-03-30 | Secondary | High reliability; [Blockchain Magazine BTC/ETH March 30](https://blockchainmagazine.net/crypto-market-today-2026-03-30/) | Accessed 2026-03-30 | Secondary | Medium reliability
+
+**So What For Us**: Base TVL recovery is positive for LEVER mainnet planning. The dip is over and Base is consolidating its L2 dominance. Fear and Greed at 8 (extreme fear) means LP capital is risk-off, which could slow LEVER vault fundraising if market conditions persist. BNB Chain's throughput improvement benefits XMarket transaction throughput and UX.
+
+**Suggested Action**: ADVISOR should include "Base TVL recovery + consolidation" in the next strategic brief as a positive tailwind for LEVER mainnet timing. CEO should reference Base dominance metrics in the investor deck when positioning LEVER's chain choice.
+
+**Trend Context**: Base's 46% L2 share and 42% of new Ethereum ecosystem developer activity represents a winner-take-most dynamic playing out in real time. LEVER's Base deployment was the right call.
+
+---
+
+#### ITEM 6: KALSHI BLOCKED BY NEVADA, SUED BY WASHINGTON - STATE LEGAL PRESSURE MOUNTING
+
+**What**: As of March 27-28, Nevada has a temporary restraining order blocking Kalshi from offering sports, election, and entertainment products in the state. Washington state separately filed suit under state gambling regulations. Arizona AG filed criminal charges in March 17. Kalshi's response: blocking politicians and athletes from trading in their own markets (announced March 23) as an insider-trading defense. Their $22B valuation and $1B Series E are unaffected, but the state-level legal campaign is accelerating.
+
+**Source**: [CoinDesk - Washington sues Kalshi March 28, 2026](https://www.coindesk.com/policy/2026/03/28/washington-sues-kalshi-as-states-ramp-up-legal-pressure-against-prediction-markets/) | Accessed 2026-03-30 | Primary | High reliability
+
+**So What For Us**: This is a major LEVER opportunity narrative. Kalshi is CFTC-regulated and US-only, making it vulnerable to state AG campaigns. LEVER is permissionless, decentralized, non-custodial. We cannot be sued by a state AG the same way. XMarket is on BNB Chain, outside US jurisdiction. This is a fundraising narrative: "we built the infrastructure that regulators cannot shut down with a single lawsuit."
+
+**Suggested Action**: CEO should add a "regulatory resilience" slide to the investor deck, contrasting Kalshi's state AG exposure with LEVER's permissionless architecture. SECURE should document this as a competitive regulatory advantage.
+
+**Trend Context**: Arizona, Nevada, Washington all in 6 weeks. This is not random; it is a coordinated state AG strategy. If Kalshi loses Nevada, it loses sports markets in the state and the precedent spreads. Kalshi $22B valuation depends on resolving this. LEVER avoids it entirely by design.
+
+---
+
+#### ITEM 7: PREDICTION CONFERENCE APRIL 22-24 + TOKEN2049 APRIL 29-30 (NETWORKING)
+
+**What**: Prediction Conference Las Vegas (April 22-24): 300 curated seats, leaders in prediction markets and market infrastructure. "Predict 2026" is a separate event for builders and researchers. SBC Summit Americas has a Prediction Markets Forum. TOKEN2049 Dubai (April 29-30) remains the primary crypto conference of Q1-Q2 2026. Both events are 23-31 days out.
+
+**Source**: [Prediction Conference 2026 official site](https://predictionmarketsconference.com/) | Accessed 2026-03-30 | Primary | High reliability; [Yahoo Finance - NEXT Summit NYC](https://finance.yahoo.com/news/next-summit-nyc-spotlight-prediction-182100382.html) | Accessed 2026-03-30 | Secondary | Medium reliability
+
+**So What For Us**: Prediction Conference April 22-24 is the more relevant event for LEVER/XMarket. TOKEN2049 is the broader crypto/investor event. If Master attends only one: Prediction Conference for relationships, TOKEN2049 for fundraising. 10-day double-venue window if he does both. 5cc Capital fund principals (Adhi Rajaprabhakaran, Noah Zingler-Sternig) will almost certainly be at Prediction Conference, making it the highest-priority venue for an in-person pitch.
+
+**Suggested Action**: CEO workstream should register Master for Prediction Conference April 22-24 (300 curated seats, may sell out) and plan a 5cc Capital in-person meeting for that event. TOKEN2049 Dubai registration should also be evaluated if fundraising is active.
+
+**Trend Context**: Prediction market conferences went from 0 dedicated events in 2024 to 4+ in 2026. The infrastructure layer is now a recognized sub-vertical. Being present and known at these events is table stakes for fundraising in this vertical.
+
+---
+
+**CONTRARIAN VIEW**: The prediction market boom looks unstoppable from the inside. The bear case: 80% of current volume is Iran war speculation. When the war ends (ceasefire or regime change), prediction market volumes could drop 40-60% in 60 days. The platforms that survive the post-war normalization will be the ones with durable category breadth (elections, sports, finance) not just geopolitics. LEVER needs to be live before the post-war volume reset so it captures the growth phase, not just inherits the hangover.
+
+---
+
 ### ADVISOR DAILY BRIEF | 2026-03-30 06:00 UTC (Monday)
 
 Morning, Master. Monday brief. The system is healthy and idle. Big sprint completed, two things need your attention.

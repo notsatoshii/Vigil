@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-29T08:00:00Z",
+  "last_updated": "2026-03-30T20:00:00Z",
   "description": "AI models, agent frameworks, and dev tools relevant to Vigil system. Updated each RESEARCH scan.",
   "tools": [
     {
@@ -32,9 +32,9 @@
       "leak_date": "2026-03-26",
       "confirmed_by": "Anthropic via Fortune",
       "capabilities": "Dramatically outperforms Opus 4.6 on coding, reasoning, cybersecurity. Currently cybersecurity defense use only.",
-      "availability": "No API yet. Piloting with select customers.",
+      "availability": "No API yet. Piloting with select customers (cybersecurity defense only). Polymarket gives 45% odds of public release by June 30, 2026. Consensus: Q3 2026. Possible IPO October 2026 may align with general API release late Q3/Q4.",
       "vigil_impact": "critical - when available, should replace Opus for SECURE workstream. May upgrade ADVISOR.",
-      "action": "Monitor Anthropic API announcements for Mythos access."
+      "action": "OPERATE to add monthly check: has Mythos API gone public? Check Anthropic release notes monthly."
     },
     {
       "name": "Claude Code",

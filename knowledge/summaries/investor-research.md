@@ -47,13 +47,13 @@ When the insurance fund exceeds 20% of TVL, the split shifts to 50/50/0 (LP and 
 
 ### Competitive Advantages
 
-**vs. Ultramarkets (direct competitor, up to 10x):**
+**vs. Ultramarkets (direct competitor, LIVE with 900+ users as of March 30 2026):**
 - 50x max leverage vs. Ultramarkets' 10x cap
 - Continuous time-based risk curves vs. binary pre-resolution auto-close
 - Unified ERC-4626 vault (institutional LP standard) vs. simpler LP model
 - Oracle-based pricing (references Polymarket) vs. unknown oracle approach
 - Deterministic, transparent 50/30/20 fee structure
-- Ultramarkets has no disclosed funding; LEVER can move faster with capital
+- **Ultramarkets has first-mover advantage but limited leverage (10x) and unknown funding. LEVER must accelerate mainnet to compete.**
 
 **vs. Limitless Exchange (adjacent, on Base, $10M seed from Coinbase Ventures/1confirmation):**
 - Limitless is binary options-style with zero-day expiry; NOT leveraged perpetuals

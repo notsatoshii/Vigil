@@ -123,15 +123,18 @@ Polymarket made 2 acquisitions in 2 months:
 
 ## Direct Competitors to LEVER (Leverage/Margin on Prediction Markets)
 
-### Ultramarkets (DIRECT COMPETITOR)
+### Ultramarkets (DIRECT COMPETITOR) *** NOW LIVE ***
+- **Status**: CONFIRMED LIVE at app.ultramarkets.xyz with 900+ Polymarket traders (as of March 30, 2026)
 - **What**: "The Margin Layer for Prediction Markets." Up to 10x long/short on events.
 - **Risk model**: Pre-resolution auto-close (eliminates gap risk)
 - **LP model**: Zero directional exposure for LPs, yield from fees and liquidations
 - **Founder**: Emmanuel Njoku
 - **Funding**: Unknown (no public rounds found)
 - **Chain**: Unknown
+- **Threat level**: **HIGH** (upgraded from medium; now live with traction)
 - **LEVER differentiators**: Higher max leverage (50x vs 10x), continuous time-based risk curves (vs binary auto-close), ERC-4626 institutional LP standard, deterministic 50/30/20 fee split, tranche ledger system
-- [ultramarkets.xyz](https://www.ultramarkets.xyz/)
+- **URGENCY**: Ultramarkets has first-mover advantage with 900+ users. LEVER must accelerate mainnet timeline.
+- [app.ultramarkets.xyz](https://www.app.ultramarkets.xyz/)
 
 ### Limitless Exchange (ADJACENT, ON BASE)
 - **What**: Largest prediction market on Base. Binary options-style short-term markets (1-min to zero-day expiry). NOT leveraged positions.

@@ -185,7 +185,7 @@
       "title": "support-improve",
       "stage": "backlog",
       "agent_pid": 0,
-      "dispatched_at": 1774894859.5097177,
+      "dispatched_at": 1774902060.5785756,
       "plan_file": "",
       "critique_file": "",
       "build_file": "",
@@ -197,7 +197,7 @@
       "title": "support-operate",
       "stage": "backlog",
       "agent_pid": 0,
-      "dispatched_at": 1774894859.5097177,
+      "dispatched_at": 1774902060.5785756,
       "plan_file": "",
       "critique_file": "",
       "build_file": "",
@@ -209,7 +209,7 @@
       "title": "support-research",
       "stage": "backlog",
       "agent_pid": 0,
-      "dispatched_at": 1774894859.5097177,
+      "dispatched_at": 1774902060.5785756,
       "plan_file": "",
       "critique_file": "",
       "build_file": "",
@@ -217,6 +217,6 @@
       "attempts": 0
     }
   },
-  "sessions_today": 30,
+  "sessions_today": 33,
   "last_reset_date": "2026-03-30"
 }

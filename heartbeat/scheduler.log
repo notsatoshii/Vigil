@@ -37511,3 +37511,722 @@
 2026-03-30 19:44:51,146 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
 2026-03-30 19:45:01,168 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
 2026-03-30 19:45:01,189 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:45:11,211 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:45:11,233 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:45:21,256 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:45:21,276 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:45:31,296 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:45:31,315 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:45:41,336 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:45:41,354 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:45:51,377 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:45:51,397 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:46:01,424 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:46:01,446 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:46:11,466 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:46:11,486 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:46:21,508 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:46:21,527 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:46:31,549 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:46:31,570 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:46:41,590 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:46:41,610 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:46:51,640 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:46:51,667 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:47:01,688 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:47:01,715 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:47:11,743 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:47:11,770 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:47:21,790 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:47:21,809 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:47:31,830 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:47:31,852 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:47:41,874 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:47:41,892 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:47:51,913 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:47:51,932 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:48:01,971 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:48:01,998 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:48:12,021 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:48:12,041 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:48:22,085 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:48:22,124 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:48:32,144 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:48:32,163 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:48:42,183 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:48:42,206 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:48:52,226 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:48:52,245 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:49:02,267 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:49:02,297 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:49:12,324 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:49:12,353 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:49:22,374 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:49:22,393 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:49:32,416 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:49:32,438 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:49:42,459 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:49:42,477 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:49:52,497 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:49:52,516 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:50:02,544 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:50:02,574 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:50:12,594 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:50:12,613 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:50:22,633 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:50:22,653 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:50:32,678 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:50:32,696 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:50:42,717 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:50:42,736 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:50:52,758 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:50:52,777 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:51:02,804 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:51:02,826 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:51:12,847 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:51:12,872 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:51:22,894 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:51:22,914 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:51:32,936 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:51:32,961 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:51:42,981 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:51:43,004 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:51:53,025 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:51:53,045 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:52:03,065 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:52:03,088 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:52:13,111 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:52:13,154 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:52:23,179 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:52:23,199 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:52:33,248 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:52:33,273 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:52:43,292 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:52:43,310 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:52:53,331 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:52:53,351 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:53:03,379 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:53:03,405 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:53:13,430 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:53:13,451 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:53:23,470 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:53:23,491 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:53:33,511 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:53:33,535 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:53:43,560 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:53:43,583 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:53:53,607 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:53:53,628 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:54:03,649 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:54:03,668 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:54:13,692 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:54:13,715 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:54:23,735 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:54:23,753 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:54:33,776 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:54:33,797 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:54:43,816 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:54:43,833 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:54:53,858 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:54:53,877 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:55:03,903 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:55:03,922 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:55:13,975 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:55:13,995 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:55:24,015 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:55:24,036 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:55:34,056 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:55:34,075 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:55:44,096 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:55:44,120 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:55:54,140 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:55:54,160 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:56:04,186 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:56:04,207 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:56:14,227 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:56:14,251 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:56:24,272 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:56:24,293 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:56:34,320 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:56:34,339 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:56:44,370 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:56:44,399 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:56:54,419 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:56:54,438 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:57:04,458 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:57:04,477 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:57:14,497 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:57:14,515 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:57:24,534 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:57:24,554 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:57:34,578 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:57:34,602 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:57:44,623 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:57:44,644 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:57:54,664 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:57:54,682 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:58:04,702 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:58:04,723 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:58:14,745 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:58:14,764 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:58:24,787 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:58:24,808 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:58:34,832 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:58:34,850 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:58:44,869 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:58:44,888 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:58:54,910 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:58:54,930 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:59:04,949 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:59:04,967 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:59:14,988 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:59:15,007 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:59:25,033 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:59:25,055 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:59:35,077 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:59:35,098 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:59:45,117 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:59:45,135 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 19:59:55,156 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 19:59:55,175 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:00:05,201 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:00:05,228 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:00:15,255 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:00:15,275 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:00:25,301 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:00:25,323 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:00:35,343 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:00:35,364 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:00:45,392 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:00:45,413 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:00:55,436 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:00:55,458 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:01:05,480 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:01:05,501 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:01:15,526 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:01:15,546 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:01:25,576 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:01:25,600 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:01:35,620 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:01:35,640 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:01:45,667 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:01:45,694 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:01:55,713 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:01:55,732 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:02:05,775 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:02:05,805 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:02:15,825 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:02:15,844 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:02:25,866 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:02:25,885 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:02:35,907 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:02:35,930 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:02:45,952 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:02:45,975 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:02:56,005 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:02:56,023 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:03:06,044 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:03:06,062 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:03:16,081 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:03:16,099 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:03:26,119 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:03:26,137 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:03:36,159 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:03:36,179 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:03:46,204 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:03:46,227 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:03:56,249 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:03:56,267 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:04:06,289 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:04:06,310 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:04:16,332 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:04:16,355 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:04:26,375 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:04:26,396 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:04:36,416 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:04:36,434 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:04:46,454 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:04:46,474 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:04:56,499 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:04:56,523 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:05:06,545 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:05:06,569 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:05:16,595 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:05:16,613 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:05:26,635 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:05:26,656 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:05:36,677 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:05:36,696 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:05:46,718 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:05:46,739 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:05:56,760 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:05:56,785 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:06:06,806 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:06:06,827 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:06:16,848 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:06:16,868 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:06:26,889 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:06:26,910 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:06:36,931 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:06:36,952 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:06:46,973 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:06:46,992 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:06:57,013 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:06:57,033 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:07:07,052 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:07:07,070 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:07:17,091 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:07:17,111 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:07:27,130 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:07:27,151 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:07:37,176 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:07:37,196 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:07:47,220 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:07:47,240 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:07:57,260 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:07:57,280 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:08:07,300 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:08:07,318 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:08:17,338 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:08:17,357 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:08:27,377 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:08:27,398 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:08:37,419 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:08:37,442 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:08:47,463 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:08:47,484 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:08:57,504 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:08:57,528 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:09:07,554 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:09:07,573 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:09:17,593 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:09:17,619 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:09:27,637 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:09:27,656 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:09:37,676 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:09:37,695 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:09:47,714 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:09:47,731 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:09:57,755 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:09:57,782 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:10:07,803 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:10:07,823 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:10:17,843 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:10:17,861 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:10:27,882 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:10:27,904 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:10:37,932 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:10:37,955 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:10:47,978 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:10:47,998 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:10:58,017 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:10:58,036 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:11:08,056 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:11:08,080 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:11:18,103 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:11:18,125 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:11:28,145 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:11:28,169 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:11:38,189 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:11:38,209 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:11:48,229 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:11:48,247 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:11:58,268 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:11:58,287 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:12:08,310 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:12:08,329 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:12:18,349 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:12:18,367 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:12:28,387 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:12:28,406 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:12:38,428 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:12:38,447 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:12:48,472 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:12:48,492 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:12:58,517 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:12:58,536 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:13:08,557 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:13:08,578 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:13:18,599 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:13:18,618 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:13:28,639 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:13:28,658 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:13:38,680 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:13:38,699 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:13:48,720 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:13:48,738 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:13:58,768 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:13:58,788 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:14:08,812 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:14:08,832 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:14:18,854 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:14:18,879 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:14:28,898 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:14:28,920 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:14:38,951 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:14:38,987 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:14:49,008 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:14:49,028 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:14:59,053 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:14:59,072 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:15:09,095 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:15:09,115 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:15:19,136 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:15:19,155 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:15:29,175 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:15:29,193 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:15:39,215 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:15:39,239 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:15:49,259 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:15:49,279 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:15:59,298 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:15:59,318 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:16:09,339 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:16:09,363 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:16:19,385 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:16:19,404 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:16:29,424 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:16:29,441 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:16:39,462 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:16:39,480 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:16:49,500 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:16:49,520 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:16:59,542 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:16:59,567 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:17:09,587 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:17:09,606 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:17:19,629 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:17:19,656 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:17:29,675 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:17:29,694 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:17:39,713 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:17:39,730 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:17:49,750 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:17:49,778 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:17:59,797 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:17:59,815 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:18:09,834 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:18:09,851 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:18:19,872 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:18:19,891 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:18:29,911 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:18:29,930 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:18:39,955 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:18:39,975 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:18:49,994 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:18:50,013 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:19:00,035 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:19:00,055 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:19:10,077 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:19:10,096 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:19:20,126 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:19:20,152 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:19:30,172 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:19:30,190 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:19:40,214 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:19:40,232 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:19:50,252 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:19:50,271 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:20:00,298 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:20:00,323 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:20:10,348 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:20:10,367 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:20:20,387 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:20:20,406 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:20:30,446 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:20:30,475 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:20:40,498 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:20:40,518 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:20:50,537 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:20:50,555 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 30 today
+2026-03-30 20:21:00,578 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:21:00,606 [INFO] DISPATCH [improve] task=support-improve (session #31 today)
+2026-03-30 20:21:00,631 [INFO] DISPATCH [operate] task=support-operate (session #32 today)
+2026-03-30 20:21:00,664 [INFO] DISPATCH [research] task=support-research (session #33 today)
+2026-03-30 20:21:00,690 [INFO] Cycle: 3 active, 2 available, 3 dispatched, 33 today
+2026-03-30 20:21:10,715 [INFO] Support check: remaining=2, dispatched=0, pipeline_waiting=False
+2026-03-30 20:21:10,735 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 33 today
+2026-03-30 20:21:20,764 [INFO] Support check: remaining=2, dispatched=0, pipeline_waiting=False
+2026-03-30 20:21:20,787 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 33 today
+2026-03-30 20:21:30,813 [INFO] Support check: remaining=2, dispatched=0, pipeline_waiting=False
+2026-03-30 20:21:30,841 [INFO] Cycle: 3 active, 2 available, 0 dispatched, 33 today
+2026-03-30 20:21:40,887 [INFO] Support check: remaining=3, dispatched=0, pipeline_waiting=False
+2026-03-30 20:21:40,914 [INFO] Cycle: 2 active, 3 available, 0 dispatched, 33 today
+2026-03-30 20:21:50,938 [INFO] Support check: remaining=3, dispatched=0, pipeline_waiting=False
+2026-03-30 20:21:50,961 [INFO] Cycle: 2 active, 3 available, 0 dispatched, 33 today
+2026-03-30 20:22:00,982 [INFO] Support check: remaining=4, dispatched=0, pipeline_waiting=False
+2026-03-30 20:22:01,005 [INFO] Cycle: 1 active, 4 available, 0 dispatched, 33 today
+2026-03-30 20:22:11,027 [INFO] Support check: remaining=4, dispatched=0, pipeline_waiting=False
+2026-03-30 20:22:11,047 [INFO] Cycle: 1 active, 4 available, 0 dispatched, 33 today
+2026-03-30 20:22:21,071 [INFO] Support check: remaining=4, dispatched=0, pipeline_waiting=False
+2026-03-30 20:22:21,091 [INFO] Cycle: 1 active, 4 available, 0 dispatched, 33 today
+2026-03-30 20:22:31,117 [INFO] Support check: remaining=4, dispatched=0, pipeline_waiting=False
+2026-03-30 20:22:31,138 [INFO] Cycle: 1 active, 4 available, 0 dispatched, 33 today
+2026-03-30 20:22:41,165 [INFO] Support check: remaining=4, dispatched=0, pipeline_waiting=False
+2026-03-30 20:22:41,191 [INFO] Cycle: 1 active, 4 available, 0 dispatched, 33 today
+2026-03-30 20:22:51,215 [INFO] Support check: remaining=4, dispatched=0, pipeline_waiting=False
+2026-03-30 20:22:51,235 [INFO] Cycle: 1 active, 4 available, 0 dispatched, 33 today
+2026-03-30 20:23:01,257 [INFO] Support check: remaining=4, dispatched=0, pipeline_waiting=False
+2026-03-30 20:23:01,276 [INFO] Cycle: 1 active, 4 available, 0 dispatched, 33 today
+2026-03-30 20:23:11,303 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:23:11,327 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:23:21,350 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:23:21,375 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:23:31,395 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:23:31,412 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:23:41,433 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:23:41,457 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:23:51,478 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:23:51,498 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:24:01,523 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:24:01,545 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:24:11,565 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:24:11,586 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:24:21,604 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:24:21,622 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:24:31,646 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:24:31,666 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:24:41,692 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:24:41,718 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:24:51,739 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:24:51,758 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:25:01,785 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:25:01,809 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:25:11,830 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:25:11,851 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:25:21,872 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:25:21,892 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:25:31,915 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:25:31,936 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:25:41,955 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:25:41,973 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:25:51,995 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:25:52,015 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:26:02,040 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:26:02,061 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:26:12,082 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:26:12,101 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:26:22,124 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:26:22,145 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:26:32,165 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:26:32,184 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:26:42,209 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:26:42,228 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:26:52,249 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:26:52,268 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:27:02,295 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:27:02,322 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:27:12,341 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:27:12,359 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:27:22,382 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:27:22,405 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:27:32,424 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:27:32,444 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:27:42,466 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:27:42,487 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:27:52,509 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:27:52,529 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:28:02,549 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:28:02,568 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:28:12,590 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:28:12,610 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:28:22,636 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:28:22,656 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:28:32,677 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:28:32,697 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:28:42,720 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:28:42,741 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:28:52,765 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:28:52,784 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:29:02,810 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:29:02,835 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:29:12,855 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:29:12,875 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:29:22,896 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:29:22,916 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:29:32,942 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:29:32,960 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:29:42,980 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:29:43,001 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:29:53,023 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:29:53,042 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:30:03,067 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:30:03,087 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:30:13,110 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:30:13,129 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:30:23,154 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:30:23,189 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:30:33,209 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:30:33,228 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:30:43,249 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:30:43,274 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:30:53,294 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:30:53,320 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:31:03,345 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:31:03,364 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:31:13,383 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:31:13,402 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:31:23,422 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:31:23,440 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:31:33,461 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:31:33,481 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:31:43,503 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:31:43,525 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:31:53,557 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:31:53,594 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:32:03,624 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:32:03,645 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:32:13,664 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:32:13,681 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:32:23,701 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:32:23,719 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:32:33,738 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:32:33,759 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:32:43,780 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:32:43,799 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:32:53,819 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:32:53,838 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:33:03,858 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:33:03,882 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:33:13,903 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:33:13,925 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:33:23,947 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:33:23,974 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:33:33,996 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:33:34,016 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:33:44,038 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:33:44,056 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:33:54,076 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:33:54,097 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:34:04,117 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:34:04,142 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:34:14,161 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:34:14,178 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:34:24,198 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:34:24,215 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:34:34,237 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:34:34,264 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:34:44,288 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:34:44,308 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:34:54,335 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:34:54,361 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:35:04,383 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:35:04,401 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:35:14,420 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:35:14,438 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:35:24,457 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:35:24,475 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:35:34,496 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:35:34,515 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:35:44,535 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:35:44,558 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:35:54,580 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:35:54,606 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:36:04,629 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:36:04,648 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:36:14,669 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:36:14,688 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:36:24,708 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:36:24,734 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:36:34,756 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:36:34,780 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:36:44,807 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:36:44,825 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:36:54,847 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:36:54,868 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:37:04,891 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:37:04,915 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:37:14,939 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:37:14,959 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:37:24,985 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:37:25,005 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:37:35,026 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:37:35,044 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:37:45,068 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:37:45,087 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:37:55,108 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:37:55,135 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:38:05,161 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:38:05,187 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:38:15,207 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:38:15,226 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:38:25,245 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:38:25,262 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:38:35,283 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:38:35,301 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:38:45,321 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:38:45,340 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:38:55,360 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:38:55,378 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:39:05,399 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:39:05,418 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:39:15,437 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:39:15,456 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:39:25,476 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:39:25,496 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:39:35,515 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:39:35,534 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:39:45,554 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:39:45,573 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:39:55,594 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:39:55,614 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:40:05,666 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:40:05,703 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:40:15,726 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:40:15,744 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:40:25,763 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:40:25,781 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:40:35,800 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:40:35,819 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:40:45,840 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:40:45,859 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:40:55,878 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:40:55,898 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:41:05,917 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:41:05,936 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:41:15,957 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:41:15,979 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:41:26,000 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:41:26,019 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:41:36,040 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:41:36,061 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:41:46,087 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:41:46,108 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:41:56,128 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:41:56,148 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:42:06,169 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:42:06,192 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:42:16,211 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:42:16,230 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:42:26,249 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:42:26,267 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:42:36,297 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:42:36,321 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:42:46,344 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:42:46,367 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:42:56,389 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:42:56,408 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:43:06,429 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:43:06,447 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:43:16,468 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:43:16,487 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:43:26,508 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:43:26,528 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:43:36,548 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:43:36,566 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:43:46,591 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:43:46,613 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:43:56,634 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:43:56,655 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:44:06,680 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:44:06,700 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:44:16,722 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:44:16,742 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:44:26,761 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:44:26,779 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:44:36,800 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:44:36,818 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:44:46,839 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:44:46,858 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
+2026-03-30 20:44:56,878 [INFO] Support check: remaining=5, dispatched=0, pipeline_waiting=False
+2026-03-30 20:44:56,901 [INFO] Cycle: 0 active, 5 available, 0 dispatched, 33 today
