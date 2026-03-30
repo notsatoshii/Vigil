@@ -656,3 +656,10 @@
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 22%. New day, scheduler reset. 3 health checks since last scan all passed clean (16:00, 20:00, 00:00). Gateway stable, no errors. Scheduler just dispatched 3 support sessions for new day. System stable. No issues found, no fixes needed.
+
+---
+## OPERATE | 2026-03-30 02:20-02:22 UTC
+
+**Task**: System check, log review.
+
+**ISSUE**: solc-0.8.24 back at 69% RAM (11.3GB, PID 1224761, running since 02:06). Same OOM pattern from yesterday. 2.3GB available. OOM kill imminent. All 8 services currently active. Scheduler at 6 dispatches, 3 active. No gateway errors yet. Oracle still out of gas (unchanged).
