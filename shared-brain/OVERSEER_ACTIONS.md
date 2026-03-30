@@ -23,6 +23,7 @@ When an action is resolved, move it to the COMPLETED section below (or delete it
 
 ## PENDING ACTIONS
 
+ACTION|MEDIUM|build|Scheduler has no signal-based reload: manual edits to scheduler-state.json are overwritten by in-memory state unless the service is stopped first. Add a SIGUSR1 handler to reload state from disk (no restart needed). Low urgency now that the correct stop-edit-start procedure is documented.
 
 
 ---
@@ -30,6 +31,7 @@ When an action is resolved, move it to the COMPLETED section below (or delete it
 ## COMPLETED ACTIONS
 
 ACTION|CRITICAL|operate|Manually corrected scheduler-state.json: all 9 lever-bug tasks + vigil-self-improve had verified handoffs but were stuck at "backlog". Updated to "done". vigil-self-improve VERIFY FAIL was stale (bugs already fixed in commit 35d3d42). Scheduler should now pick up new work.
+ACTION|CRITICAL|operate|[2026-03-30 02:19] Root cause of repeated reversion found: scheduler.py writes in-memory state every cycle; manual disk edits are overwritten if service stays running. Fix: stop service, edit file, start service. All 9 lever-bug tasks + vigil-self-improve confirmed "done". Service restarted and state verified stable. Ghost support-* tasks are expected behavior (cooldown anchors), not bugs.
 
 ACTION|HIGH|operate|Killed stale root claude PIDs 1151018 (Mar 22, ~1GB) and 1312428 (Mar 26, ~1.2GB). Both were abandoned SSH sessions. RAM freed: ~2.2GB (23% -> ~11% used).
 ACTION|HIGH|operate|Removed ghost tasks support-improve, support-operate, support-research from scheduler-state.json. All had empty plan/build/verify files and 0 attempts.

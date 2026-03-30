@@ -3,7 +3,7 @@
     "lever-bug-1": {
       "task_id": "lever-bug-1",
       "title": "LEVER-BUG-1: [CRITICAL] PnL formula mismatch (entryPrice vs entryPI) causing 38 winners, 0 losers",
-      "stage": "backlog",
+      "stage": "done",
       "agent_pid": 0,
       "dispatched_at": 1774779002.71352,
       "plan_file": "/home/lever/command/handoffs/plan-lever-bug-1-v2.md",
@@ -15,7 +15,7 @@
     "lever-bug-2": {
       "task_id": "lever-bug-2",
       "title": "LEVER-BUG-2: [CRITICAL] $304K unaccounted vault drain",
-      "stage": "backlog",
+      "stage": "done",
       "agent_pid": 0,
       "dispatched_at": 1774712269.9077284,
       "plan_file": "/home/lever/command/handoffs/plan-20260328-133419.md",
@@ -27,7 +27,7 @@
     "lever-bug-3": {
       "task_id": "lever-bug-3",
       "title": "LEVER-BUG-3: [CRITICAL] Ghost OI ($3.2M with zero positions)",
-      "stage": "backlog",
+      "stage": "done",
       "agent_pid": 0,
       "dispatched_at": 1774758723.3378224,
       "plan_file": "/home/lever/command/handoffs/plan-20260328-133419.md",
@@ -39,7 +39,7 @@
     "lever-bug-4": {
       "task_id": "lever-bug-4",
       "title": "LEVER-BUG-4: [CRITICAL] InsuranceFund never absorbs bad debt (no USDT transfer)",
-      "stage": "backlog",
+      "stage": "done",
       "agent_pid": 0,
       "dispatched_at": 1774759044.8358412,
       "plan_file": "/home/lever/command/handoffs/plan-20260328-133419.md",
@@ -51,7 +51,7 @@
     "lever-bug-5": {
       "task_id": "lever-bug-5",
       "title": "LEVER-BUG-5: [CRITICAL] InsuranceFund decimal mismatch (WAD bootstrap + USDT deposits)",
-      "stage": "backlog",
+      "stage": "done",
       "agent_pid": 0,
       "dispatched_at": 1774757879.691654,
       "plan_file": "/home/lever/command/handoffs/plan-lever-bug-5.md",
@@ -75,7 +75,7 @@
     "lever-bug-6": {
       "task_id": "lever-bug-6",
       "title": "LEVER-BUG-6: [CRITICAL] FeeRouter called without USDT by Liquidation/Settlement",
-      "stage": "backlog",
+      "stage": "done",
       "agent_pid": 0,
       "dispatched_at": 1774779394.4785838,
       "plan_file": "/home/lever/command/handoffs/plan-lever-bug-6-v2.md",
@@ -87,7 +87,7 @@
     "lever-bug-7": {
       "task_id": "lever-bug-7",
       "title": "LEVER-BUG-7: [CRITICAL] Zero liquidations (depthThreshold unset)",
-      "stage": "backlog",
+      "stage": "done",
       "agent_pid": 0,
       "dispatched_at": 1774760695.6663396,
       "plan_file": "/home/lever/command/handoffs/plan-lever-bug-7.md",
@@ -99,7 +99,7 @@
     "lever-bug-8": {
       "task_id": "lever-bug-8",
       "title": "LEVER-BUG-8: [HIGH] No closing transaction fee (10bps foregone)",
-      "stage": "backlog",
+      "stage": "done",
       "agent_pid": 0,
       "dispatched_at": 1774761288.114254,
       "plan_file": "/home/lever/command/handoffs/plan-lever-bug-8.md",
@@ -111,7 +111,7 @@
     "lever-bug-9": {
       "task_id": "lever-bug-9",
       "title": "LEVER-BUG-9: [HIGH] Vault NAV missing unrealized PnL",
-      "stage": "backlog",
+      "stage": "done",
       "agent_pid": 0,
       "dispatched_at": 1774762191.9807537,
       "plan_file": "/home/lever/command/handoffs/plan-lever-bug-9.md",
@@ -171,7 +171,7 @@
     "vigil-self-improve": {
       "task_id": "vigil-self-improve",
       "title": "VIGIL-SELF-IMPROVE: System must continuously self-improve without Master having to point out every problem. Overseer must be more aggressive.",
-      "stage": "backlog",
+      "stage": "done",
       "agent_pid": 0,
       "dispatched_at": 1774782377.4010992,
       "plan_file": "/home/lever/command/handoffs/plan-vigil-self-improve.md",
@@ -184,8 +184,8 @@
       "task_id": "support-improve",
       "title": "support-improve",
       "stage": "backlog",
-      "agent_pid": 0,
-      "dispatched_at": 1774828092.9208078,
+      "agent_pid": 1241996,
+      "dispatched_at": 1774837237.7656024,
       "plan_file": "",
       "critique_file": "",
       "build_file": "",
@@ -196,8 +196,8 @@
       "task_id": "support-operate",
       "title": "support-operate",
       "stage": "backlog",
-      "agent_pid": 0,
-      "dispatched_at": 1774828092.9208078,
+      "agent_pid": 1242002,
+      "dispatched_at": 1774837237.7656024,
       "plan_file": "",
       "critique_file": "",
       "build_file": "",
@@ -208,8 +208,8 @@
       "task_id": "support-research",
       "title": "support-research",
       "stage": "backlog",
-      "agent_pid": 0,
-      "dispatched_at": 1774828092.9208078,
+      "agent_pid": 1242009,
+      "dispatched_at": 1774837237.7656024,
       "plan_file": "",
       "critique_file": "",
       "build_file": "",
@@ -217,6 +217,6 @@
       "attempts": 0
     }
   },
-  "sessions_today": 0,
+  "sessions_today": 6,
   "last_reset_date": "2026-03-30"
 }
