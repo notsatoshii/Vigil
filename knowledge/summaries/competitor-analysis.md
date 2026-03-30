@@ -88,13 +88,15 @@ CONTRARIAN VIEW: $100B notional includes wash trading. 268 projects likely inclu
 | OG | Crypto.com | Feb 2026 | Sports, politics, entertainment, economics, parlays |
 | Plus500 Futures | Plus500 | Feb 2026 | Prediction markets |
 
-### Polymarket Fee Expansion: TOMORROW March 30 (Updated 2026-03-29)
-- Taker fees expanding to 8 new categories (Politics, Finance, Economics, Culture, Weather, Tech, Mentions, Other)
-- **Geopolitics and World Events remain FREE** (LEVER's primary market category)
-- Revenue: $800K-$1M/day projected. $365M/year at current volume.
-- Maker Rebates: 0% maker fees + daily USDC rebates (Finance 50%, others 25%)
-- Early evidence: Sports fee introduction showed NO volume decline. Crypto slight pullback within variance.
-- **LEVER impact**: POSITIVE. Maker rebates incentivize resting orders = deeper CLOB = better PI quality for LEVER's oracle.
+### Polymarket Fee Expansion: NOW LIVE (March 30 2026)
+- Taker fees expanded to 8 new categories (Politics, Finance, Economics, Culture, Weather, Tech, Mentions, Other). Peak rate 1.8% on crypto.
+- **Geopolitics is the SOLE fee-free category** (LEVER's primary market category)
+- Revenue: $800K-$1M/day projected ($365M/year).
+- Maker Rebates: 0% maker fees + daily USDC rebates (Finance 50%, others 25%).
+- New referral program: 30% of commissions from direct referrals ($10K volume threshold), 10% indirect.
+- New market integrity rules: explicit bans on insider trading, stolen info, outcome manipulation.
+- Community reaction: generally positive. Arbitrage opportunities may compress.
+- **LEVER impact**: POSITIVE. Maker rebates deepen CLOB liquidity. Geopolitics fee-free = best oracle quality for LEVER's primary markets.
 
 ### Polymarket Infrastructure Buildout (Oracle Dependency Watch)
 Polymarket made 2 acquisitions in 2 months:

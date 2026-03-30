@@ -4,6 +4,54 @@
 
 ---
 
+## 2026-03-30 02:01 UTC (Day 3, 2 AM)
+
+### STATUS: Dead system. Day 3 of broken pipeline. Nobody is fixing it.
+
+**Sessions**: 3 today (date rolled at midnight). 0 active right now. 5 slots idle, spinning every 10 seconds dispatching nothing. Last productive work: ~11:00 UTC yesterday (15 hours ago). Last Master contact: 12:58 UTC yesterday. Monday 2 AM UTC, so low activity is expected, but the inactivity is not just a timing issue; the pipeline *cannot* work even if it wanted to.
+
+**Infrastructure**: Healthy. Health checks all clear through 00:00 UTC. No errors in telegram gateway since the 08:58 UTC timeout yesterday. Scheduler running but accomplishing nothing.
+
+### TOP 3 ISSUES
+
+**1. Scheduler/KANBAN disconnect (CRITICAL, DAY 3, UNFIXED, 8+ CONSECUTIVE REPORTS)**
+
+Every pipeline task in scheduler-state.json reads stage "backlog." KANBAN shows 7 items IN REVIEW. The scheduler sees "backlog," concludes nothing needs dispatching, and idles. This has been flagged in every single overseer report since it was first noticed. Nobody has fixed it. Nobody has even acknowledged it.
+
+This is the single biggest dysfunction in Vigil right now. The entire automated pipeline is broken. Every task requires manual Commander routing, which defeats the system's purpose. The 5 idle slots are not "waiting for work"; they are unable to find work that exists.
+
+This is actually worse than previously reported. OVERSEER_ACTIONS.md COMPLETED section shows operate already corrected scheduler-state.json (moved all 9 bug tasks to "done," removed ghost tasks). But checking the current state: all tasks are back at "backlog," ghost tasks are back. The scheduler is actively reverting manual corrections. This is not a data problem; it is a code bug in scheduler.py that resets task stages on every cycle or restart.
+
+ACTION|CRITICAL|build|Fix scheduler.py: it is actively reverting manual corrections to scheduler-state.json. Operate already fixed the stage fields once; scheduler overwrote them back to "backlog." The code must be patched to preserve stage transitions and not reset completed tasks.
+
+**2. Overseer reports are being written but never read (CRITICAL, systemic)**
+
+This is the meta-problem. I have flagged issue #1 in 8+ consecutive reports. Nothing happened. The overseer-to-action loop is broken. Reports go into OVERSEER_REPORT.md and die there. OVERSEER_ACTIONS.md exists but no agent reads it or acts on it. The self-improve initiative (VIGIL-SELF-IMPROVE) was supposed to fix this, but it too is stuck at "backlog" in the scheduler, which is broken because of issue #1. Circular dependency.
+
+The only way to break this cycle is for Commander to manually dispatch a BUILD session to fix the scheduler. The system cannot self-heal when the self-healing mechanism is what is broken.
+
+ACTION|CRITICAL|operate|Commander must manually dispatch a BUILD session to fix scheduler-state.json stage tracking. This cannot wait for the pipeline because the pipeline is what is broken.
+
+**3. Ghost tasks polluting scheduler (LOW, day 2)**
+
+support-improve, support-operate, support-research: no plans, no files, attempts=0. Created yesterday. Still cycling every 10 seconds. Noise.
+
+ACTION|LOW|operate|Delete support-improve, support-operate, support-research from scheduler-state.json or give them real task definitions.
+
+### WHAT CHANGED SINCE LAST REPORT
+
+Nothing. Again. That is now 8+ consecutive reports with zero action taken on the critical scheduler bug. The overseer is shouting into a void. If this report also results in no action, the overseer function itself is wasted compute.
+
+### PATTERN
+
+The system had an excellent day on March 29: 9 critical bugs fixed, landing redesign, dashboard overhaul, 118 sessions. Then it stopped. The pipeline completed work but the scheduler never learned that work was done. Tasks sit IN REVIEW on KANBAN but "backlog" in the scheduler. Nobody moves them. Nobody dispatches the next phase. The system is a car with a full tank that cannot turn the ignition.
+
+### VERDICT
+
+Monday priority, before anything else: fix the scheduler stage tracking bug. One BUILD session. Until this is resolved, Vigil is a manual system pretending to be automated. Everything else (the 7 IN REVIEW items, any new work) is blocked behind this.
+
+---
+
 ## 2026-03-30 00:01 UTC (Day 3, Midnight)
 
 ### STATUS: System idle. Monday beginning. Three persistent issues remain unfixed.
