@@ -804,3 +804,21 @@
 - OVERSEER_ACTIONS pending: 1 MEDIUM (scheduler SIGUSR1 reload), 2 HIGH (auto-VERIFY dispatch for BUILD workstream, and Monday research scan). Research scan was dispatched earlier today. Both HIGH BUILD actions remain for BUILD workstream to pick up.
 - No frustration events noted in gateway log.
 - No fixes needed. System fully healthy.
+
+---
+## OPERATE | 2026-03-30 13:36 UTC
+
+**Task**: Scheduled self-check (cron, every 30 min).
+
+**Findings**:
+- All 8 services ACTIVE: openclaw-gateway, vigil-telegram, vigil-dashboard, vigil-inbox, lever-frontend, lever-oracle, lever-accrue-keeper, caddy.
+- Web endpoints: dashboard :8080 OK, frontend :3000 OK, caddy :80 OK.
+- Disk: 19% used. Healthy.
+- RAM: 1.9Gi / 15Gi (13%). Healthy.
+- Uptime: 18 days, load avg 0.37.
+- Scheduler: 0 active, 5 available, 21 dispatched today. Clean.
+- Claude processes: 2 active (no stale sessions).
+- KANBAN: backlog empty, in-progress empty, in-review empty. All work done.
+- Oracle/keeper: STILL failing - keeper wallet balance ~0.53 gwei (~0.00000053 ETH). Needs ~0.5 ETH on Base Sepolia. Wallet: 0x0e4D636c6D79c380A137f28EF73E054364cd5434. Every oracle push cycle erroring with 'insufficient funds'. Already surfaced to Commander multiple times.
+- OVERSEER_ACTIONS pending: 2 HIGH for BUILD, 1 HIGH for RESEARCH. None for OPERATE.
+- No fixes needed. System healthy except ongoing wallet funding blocker (requires Master action).
