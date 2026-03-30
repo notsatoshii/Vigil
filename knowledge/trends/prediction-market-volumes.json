@@ -4,6 +4,14 @@
   "unit": "USD",
   "snapshots": [
     {
+      "date": "2026-03-30T12:20Z",
+      "period": "daily_snapshot",
+      "polymarket_24h_volume": "341800000",
+      "polymarket_24h_breakdown": {"sports": "125700000", "crypto": "64500000", "politics": "61100000"},
+      "notes": "FIRST DAY under new fee structure. $341.8M/24h is consistent with pre-fee levels (~$318M/day avg from $9.55B/30d). NO volume decline evident on Day 1. Fee expansion appears volume-neutral so far.",
+      "source": "Token Terminal, Polymarket"
+    },
+    {
       "date": "2026-03-29T09:47Z",
       "period": "weekly_update",
       "combined_weekly_record": "$5.9B (Kalshi $3.4B + Polymarket $2.5B)",

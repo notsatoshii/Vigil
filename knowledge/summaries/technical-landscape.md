@@ -95,6 +95,19 @@ Broad release with first-class plugins, multi-agent workflows, file watching, re
 
 ---
 
+## Arbitrum: Multi-Chain Expansion Target (Ingested: 2026-03-30)
+
+Arbitrum One (Chain ID 42161) is LEVER's Q3-Q4 2026 multi-chain expansion target per roadmap.
+- **EVM-compatible**: LEVER's Solidity contracts deploy without modification
+- **Optimistic rollup L2**: ~10x cost reduction vs Ethereum L1, sub-second blocks
+- **L2 TVL share**: 30.86% (second to Base at 46.6%). Combined Base + Arbitrum = 77% of all L2 DeFi TVL.
+- **Testnet**: Arbitrum Sepolia (Chain ID 421614), 0.02 Gwei base fee, same Foundry tooling
+- **DeFi ecosystem**: GMX (perps, closest LEVER analog), Camelot, deeper than Base for derivatives
+- **Deployment**: Same workflow as Base (Remix/Foundry -> Sepolia -> mainnet -> verify on Arbiscan)
+- **No Coinbase advantage**: Unlike Base, Arbitrum lacks Coinbase app distribution. But has stronger existing DeFi/derivatives user base.
+
+---
+
 ## Base DeFi Ecosystem: LP Partners & Integration Targets (Scan: 2026-03-28)
 
 ### Key Protocols on Base

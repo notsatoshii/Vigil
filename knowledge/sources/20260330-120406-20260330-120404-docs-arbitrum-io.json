@@ -1,0 +1,72 @@
+{
+  "id": "20260330-120406-arbitrum-quickstart-solidity-remix",
+  "ingestedAt": "2026-03-30T12:04:06Z",
+  "sourceUrl": "https://docs.arbitrum.io/build-decentralized-apps/quickstart-solidity-remix",
+  "sourceType": "Technical documentation",
+  "reliability": "High (official Arbitrum docs)",
+  "fetchStatus": "Blocked by Vercel security checkpoint; content reconstructed from web search and Alchemy guide",
+
+  "summary": [
+    "Arbitrum is an Ethereum L2 using optimistic rollups. EVM-compatible (existing Solidity contracts, tools, and wallets work without modification). Reduces costs ~10x compared to Ethereum L1 while maintaining similar security.",
+    "Arbitrum One mainnet: Chain ID 42161. Arbitrum Sepolia testnet: Chain ID 421614. Gas token: ETH. Sub-second confirmations (~0.3-0.5s blocks). Public RPCs available but no WebSocket support on public endpoints.",
+    "The quickstart tutorial builds a 'CupcakeVending Machine' Solidity contract deployed via Remix IDE. Workflow: write Solidity -> compile in Remix -> deploy to local Foundry node -> test -> deploy to Arbitrum Sepolia -> deploy to Arbitrum One.",
+    "Development tools: Remix IDE (browser-based), Hardhat, Foundry (forge/cast/anvil), Alchemy/QuickNode for RPC access. Smart contracts verifiable on Arbiscan (sepolia.arbiscan.io).",
+    "Arbitrum Nitro stack: ArbOS system-level executor + Arbitrum Virtual Machine. Same EVM instruction gas costs as Ethereum. Sepolia testnet mirrors the Nitro production stack."
+  ],
+
+  "entities": [
+    {"name": "Arbitrum One", "type": "chain", "role": "Ethereum L2 optimistic rollup, Chain ID 42161, EVM-compatible"},
+    {"name": "Arbitrum Sepolia", "type": "chain", "role": "Testnet, Chain ID 421614, mirrors Nitro production stack"},
+    {"name": "Arbitrum Nitro", "type": "technology", "role": "L2 execution stack: ArbOS + Arbitrum Virtual Machine"},
+    {"name": "Remix IDE", "type": "tool", "role": "Browser-based Solidity IDE for contract compilation and deployment"},
+    {"name": "Offchain Labs", "type": "company", "role": "Arbitrum developer (implied)"},
+    {"name": "Arbiscan", "type": "tool", "role": "Block explorer for Arbitrum (sepolia.arbiscan.io for testnet)"}
+  ],
+
+  "relationships": [
+    {"from": "Arbitrum One", "to": "Ethereum", "relationship": "L2 optimistic rollup settling on Ethereum L1"},
+    {"from": "Arbitrum", "to": "LEVER Protocol", "relationship": "listed in LEVER roadmap as Q3-Q4 2026 multi-chain expansion target"},
+    {"from": "Arbitrum", "to": "Base", "relationship": "competing L2; Arbitrum has 30.86% L2 TVL share vs Base's 46.6%"},
+    {"from": "Remix IDE", "to": "Solidity", "relationship": "primary browser-based development tool for Solidity contracts"}
+  ],
+
+  "categories": ["technical"],
+
+  "technicalSpecs": {
+    "arbitrumOne": {
+      "chainId": 42161,
+      "type": "Optimistic Rollup L2",
+      "gasToken": "ETH",
+      "evmCompatible": true,
+      "costReduction": "~10x vs Ethereum L1",
+      "l2TVLShare": "30.86% (second to Base at 46.6%)"
+    },
+    "arbitrumSepolia": {
+      "chainId": 421614,
+      "gasToken": "ETH (test)",
+      "baseFee": "0.02 Gwei",
+      "blockTime": "~0.3-0.5 seconds",
+      "explorer": "sepolia.arbiscan.io"
+    },
+    "deploymentWorkflow": [
+      "1. Write Solidity contract",
+      "2. Compile in Remix IDE (match compiler version)",
+      "3. Deploy to local Foundry node (testing)",
+      "4. Deploy to Arbitrum Sepolia (staging)",
+      "5. Verify on Arbiscan",
+      "6. Deploy to Arbitrum One (production)"
+    ]
+  },
+
+  "workstreamTags": {
+    "BUILD": "Arbitrum is LEVER's Q3-Q4 2026 multi-chain expansion target. EVM-compatible means LEVER's Solidity contracts deploy without modification. Chain ID 42161 (mainnet), 421614 (Sepolia testnet). Same Foundry tooling works. Key difference from Base: Arbitrum has no Coinbase distribution advantage but has 30.86% L2 TVL share and deeper DeFi ecosystem (GMX, Camelot, etc.).",
+    "ADVISOR": "Arbitrum expansion is on the roadmap but not urgent. Base is the right launch chain (Coinbase ecosystem, 46.6% L2 TVL). Arbitrum adds ~31% more L2 TVL addressable market. Multi-chain should wait until Base traction is proven."
+  },
+
+  "sources": [
+    {"title": "Arbitrum Docs: Quickstart Solidity Remix", "url": "https://docs.arbitrum.io/build-decentralized-apps/quickstart-solidity-remix", "dateAccessed": "2026-03-30", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Alchemy: How to Start Developing on Arbitrum", "url": "https://www.alchemy.com/overviews/how-to-start-developing-on-arbitrum", "dateAccessed": "2026-03-30", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "ChainList: Arbitrum One", "url": "https://chainlist.org/chain/42161", "dateAccessed": "2026-03-30", "sourceType": "Primary", "reliability": "High"},
+    {"title": "ChainList: Arbitrum Sepolia", "url": "https://chainlist.org/chain/421614", "dateAccessed": "2026-03-30", "sourceType": "Primary", "reliability": "High"}
+  ]
+}

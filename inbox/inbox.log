@@ -14,3 +14,9 @@
 [2026-03-28T12:46:26Z] Processing: 20260328-124624-pngwing.com 1.png (type: png)
 [2026-03-28T12:46:26Z] Spawning RESEARCH session for 20260328-124624-pngwing.com 1.png...
 [2026-03-28T12:47:13Z] SUCCESS: 20260328-124624-pngwing.com 1.png processed and moved to processed/
+[2026-03-30T12:04:06Z] Processing: 20260330-120404-docs-arbitrum-io.url (type: url)
+[2026-03-30T12:04:06Z] Spawning RESEARCH session for 20260330-120404-docs-arbitrum-io.url...
+[2026-03-30T12:07:24Z] SUCCESS: 20260330-120404-docs-arbitrum-io.url processed and moved to processed/
+[2026-03-30T12:07:26Z] Processing: 20260330-120418-arbitrum-quickstart.url (type: url)
+[2026-03-30T12:07:26Z] Spawning RESEARCH session for 20260330-120418-arbitrum-quickstart.url...
+[2026-03-30T12:07:59Z] SUCCESS: 20260330-120418-arbitrum-quickstart.url processed and moved to processed/
