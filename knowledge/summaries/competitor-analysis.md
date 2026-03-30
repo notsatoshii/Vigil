@@ -91,7 +91,7 @@ CONTRARIAN VIEW: $100B notional includes wash trading. 268 projects likely inclu
 ### Polymarket Fee Expansion: NOW LIVE (March 30 2026)
 - Taker fees expanded to 8 new categories (Politics, Finance, Economics, Culture, Weather, Tech, Mentions, Other). Peak rate 1.8% on crypto.
 - **Geopolitics is the SOLE fee-free category** (LEVER's primary market category)
-- Revenue: $800K-$1M/day projected ($365M/year).
+- Revenue: ~$1.2M/day gross, ~$573K/day net (after maker rebates + referral payouts) = **~$209M annualized net** (Pine Analytics estimate at current ~$160M/day taker volume).
 - Maker Rebates: 0% maker fees + daily USDC rebates (Finance 50%, others 25%).
 - New referral program: 30% of commissions from direct referrals ($10K volume threshold), 10% indirect.
 - New market integrity rules: explicit bans on insider trading, stolen info, outcome manipulation.
