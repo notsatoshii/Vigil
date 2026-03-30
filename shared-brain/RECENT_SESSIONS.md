@@ -829,3 +829,23 @@
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 14%. Gateway stable. 12:00 health check passed clean. Scheduler at 24 dispatches, 1 active. No errors. No issues found, no fixes needed.
+
+---
+## OPERATE | 2026-03-30 14:37-14:39 UTC
+
+**Task**: System self-check, log review.
+
+**Findings**:
+- All 9 services checked. 8 active. vigil-dashboard-gen.timer was INACTIVE (disabled since 2026-03-28 13:29).
+- Dashboard index.html was stale: last generated 2026-03-28 13:12 (2+ days old).
+- All other services healthy: openclaw-gateway, vigil-telegram, vigil-inbox, vigil-dashboard, lever-frontend, lever-oracle, lever-accrue-keeper, caddy all active.
+- Disk: 19% used. RAM: 1.9Gi / 15Gi (12%). Scheduler: 0 active, 5 available, 24 dispatched today. Clean.
+- No errors in gateway, inbox, or telegram logs.
+- OVERSEER_ACTIONS: 2 HIGH for BUILD, 1 HIGH for RESEARCH. None for OPERATE.
+- Frustration log: no new entries since 2026-03-29.
+
+**Fixes applied**:
+- Started and enabled vigil-dashboard-gen.timer (was disabled/inactive).
+- Triggered immediate dashboard regeneration. Dashboard now current (14:39 UTC).
+
+**Status**: System healthy. Dashboard regeneration restored.
