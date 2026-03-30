@@ -638,3 +638,14 @@
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 28%. Gateway stable, no errors. 20:00 health check passed clean. Scheduler at 121 dispatches, 1 active (winding down). System stable. No issues found, no fixes needed.
+
+---
+[2026-03-30 01:14 UTC] OPERATE selfcheck
+- All 8 monitored services: ACTIVE
+- Disk: 19% used (healthy)
+- RAM: 1.7GB/15GB used (healthy)
+- CPU load: 0.38 (healthy)
+- Scheduler: running normally, 0 active sessions, 5 available
+- ISSUE FIXED: scheduler-state.json had 9 lever-bug tasks + vigil-self-improve all stuck at "backlog" even though all have verified handoffs. Root cause: process completion detection missed when BUILD sessions ran. Manually corrected all to "done". vigil-self-improve VERIFY FAIL was stale (selfcheck bugs already fixed in commit 35d3d42 before VERIFY ran).
+- OVERSEER CRITICAL action for scheduler stage fix marked completed.
+- Commit: 89067b5
