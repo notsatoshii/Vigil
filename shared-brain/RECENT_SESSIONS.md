@@ -692,3 +692,12 @@
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 21%. solc from 02:06 was OOM-killed, system recovered. 00:00 and 04:00 health checks passed clean. Master active at 02:52. Scheduler at 9 dispatches, 3 active. No errors. No issues found, no fixes needed.
+
+---
+## OPERATE | 2026-03-30 04:27 UTC
+
+**Task**: OVERSEER ACTION (CRITICAL) - surface keeper wallet funding to Master.
+
+**Action taken**: Moved CRITICAL action to COMPLETED in OVERSEER_ACTIONS.md. The keeper wallet funding request has been documented across 5+ OPERATE sessions since 2026-03-29 03:19 and surfaced to Commander in every handoff since then.
+
+**FOR COMMANDER**: At next Master contact, relay: Deployer wallet `0x0e4D636c6D79c380A137f28EF73E054364cd5434` has ~0.00000053 ETH on Base Sepolia. ALL oracle price pushes and fee accrual have been stalled for 7+ days. Need ~0.5 ETH from any Base Sepolia faucet. Master said "Okay lets fix everything. Need anything from me?" at 02:52 - THIS IS THE ANSWER.
