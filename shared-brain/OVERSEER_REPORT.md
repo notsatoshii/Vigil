@@ -4,6 +4,47 @@
 
 ---
 
+## 2026-03-30 00:01 UTC (Day 3, Midnight)
+
+### STATUS: System idle. Monday beginning. Three persistent issues remain unfixed.
+
+**Sessions**: 0 today (date just rolled). Yesterday finished at 118 sessions. Last productive work was ~11:00 UTC yesterday (13 hours ago). Last Master contact 12:58 UTC yesterday.
+
+**Infrastructure**: Healthy. RAM 3.9G/15G (26%), load 0.36, disk 18%. The March 29 04:00 UTC RAM spike to 99% self-resolved and was never investigated.
+
+**Health checks**: All clear through midnight.
+
+**Telegram gateway**: Clean. Last error was the 08:58 UTC timeout yesterday (self-resolved). No issues since.
+
+### TOP 3 ISSUES
+
+**1. Scheduler/KANBAN disconnect (CRITICAL, day 2 unfixed)**
+Every pipeline task in scheduler-state.json is stuck at stage "backlog" while KANBAN shows 7 items IN REVIEW. The scheduler reads "backlog" and concludes there is nothing to dispatch. This means no task can auto-advance through the pipeline without manual intervention. This has been reported in every overseer cycle for 2 days. It is a code bug in the scheduler that needs BUILD to fix.
+
+ACTION: BUILD should fix scheduler-state.json stage tracking so completed pipeline stages (plan, critique, build, verify) update the task stage field. Without this, the entire automated pipeline is broken.
+
+**2. Three ghost tasks cluttering scheduler (LOW, day 1 unfixed)**
+support-improve, support-operate, support-research have no plans, no files, attempts=0. Created ~14:01 UTC yesterday. They cycle through every 10-second scheduler tick doing nothing. Minor but sloppy.
+
+ACTION: OPERATE should either delete these from scheduler-state.json or give them real definitions.
+
+**3. Stale root claude processes (MEDIUM, 8 days unfixed)**
+PID 1151018 (Mar 22, 1.0G RSS) and PID 1312428 (Mar 26, 1.2G RSS) are sleeping root-owned claude sessions consuming 2.2G combined. RAM is fine now (26% used), but these contributed to the 99% spike. Nobody has investigated whether they hold locks, stale terminals, or can be safely killed.
+
+ACTION: OPERATE should investigate these PIDs with Master (they may be his SSH sessions) and kill them if abandoned.
+
+### WHAT CHANGED SINCE LAST REPORT
+
+Nothing. That is the problem. Three issues have been flagged across 6+ consecutive overseer reports. None have been acted on. The overseer is writing reports that nobody reads.
+
+### VERDICT
+
+The system did excellent work yesterday (9 critical bugs, landing redesign, dashboard overhaul, verify-vision). But the automation layer is broken. Tasks complete and then rot in scheduler limbo because the stage field never updates. Until issue #1 is fixed, Vigil cannot self-drive. Every task requires manual routing by Commander, which defeats the purpose of the pipeline.
+
+Monday priority should be: fix the scheduler stage bug, then let the pipeline clear the 7 IN REVIEW items.
+
+---
+
 ## 2026-03-29 22:01 UTC (Day 2, 22 Hours In)
 
 ### STATUS: Nothing notable. System correctly idle. Sunday night.
