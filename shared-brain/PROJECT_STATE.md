@@ -1,6 +1,6 @@
 # PROJECT STATE
-## Last Updated: March 28, 2026
-## Updated By: Vigil build session
+## Last Updated: March 30, 2026
+## Updated By: ADVISOR daily brief
 
 ---
 
@@ -70,7 +70,7 @@ All projects and key directories on this server:
 - **Max concurrent sessions**: 5
 
 ## Infrastructure
-- **Server**: 15 GB RAM, 193 GB disk (16% used), 4 cores, no swap
+- **Server**: 15 GB RAM, 193 GB disk (19% used), 4 cores, no swap
 - **Active services**: lever-frontend (:3000), lever-oracle, lever-accrue-keeper, openclaw-gateway (:18789), vigil-dashboard (:8080)
 - **Disabled services** (SACRED, never restart): lever-loop, lever-qa, lever-seeder, lever-watchdog
 - **Also disabled**: lever-fee-keeper (FeeRouter has no distributeFees), lever-bot (replaced by OpenClaw)

@@ -7,6 +7,105 @@
 
 ---
 
+### ADVISOR DAILY BRIEF | 2026-03-30 06:00 UTC (Monday)
+
+Morning, Master. Monday brief. The system is healthy and idle. Big sprint completed, two things need your attention.
+
+---
+
+#### ITEM 1: KEEPER WALLET EMPTY, 7 DAYS NOW (CRITICAL, needs you)
+
+- **What**: The keeper wallet (`0x0e4D636c6D79c380A137f28EF73E054364cd5434`) has ~0.00000053 ETH on Base Sepolia. Both `lever-oracle` and `lever-accrue-keeper` are running but failing every cycle. No oracle price updates, no funding/borrow accruals since March 23.
+- **Why it matters**: 7 days of stalled oracle means all on-chain data is stale. Demo positions show frozen PnL. Anyone looking at the testnet deployment sees a dead protocol. This is the single biggest blocker.
+- **Also**: PID 3676320 is a root-owned `mock_keeper.py` process from March 23, consuming CPU for 7 days doing nothing useful (wallet empty). It should be killed, but it is root-owned, so only you can do it.
+- **Action**: Top up the keeper wallet from a Base Sepolia faucet (~0.5 ETH). Then: `sudo kill 3676320` to clear the stale process.
+- **Effort**: 5 minutes.
+
+---
+
+#### ITEM 2: MASSIVE SPRINT COMPLETED, PIPELINE CLEAR (good news)
+
+- **What**: In the past 48 hours, the system completed: 9 critical LEVER contract bugs (BUG-1 through BUG-9), Precision Black landing page redesign (1630 to 931 lines), Vigil dashboard overhaul (React + WebSocket), VERIFY vision tooling (Puppeteer/screenshots), and the self-improvement framework (selfcheck + watchdog + OVERSEER_ACTIONS). All verified and in DONE.
+- **Why it matters**: The KANBAN is empty for the first time since Vigil went live. All 15 pipeline tasks are DONE. The contract layer is in the best state it has been since deployment. This is a natural checkpoint to decide what to work on next.
+- **VERIFY concerns worth noting**: BUG-1 (SettlementEngine still uses `entryPI` on the exit side; needs your decision on single-impact vs double-impact formula). BUG-6 (EXECUTION_ENGINE_ROLE not granted on-chain yet; needs a `grantRole` tx after wallet is funded).
+- **Action**: Decide the next priorities. Suggestions below.
+
+---
+
+#### ITEM 3: EMPTY PIPELINE, WHAT SHOULD WE BUILD NEXT? (strategic)
+
+- **What**: KANBAN backlog is empty. INTENTIONS #1 is "Complete Vigil migration (Phase 1 through Phase 9)." No specific tasks queued. The system has capacity and zero work to do.
+- **Why it matters**: Master's frustration pattern (observation log) is clear: the system should never be idle. But building random busywork is exactly what frustrated Master on March 28 ("5 sessions to busywork instead of real pipeline tasks"). Quality over quantity.
+- **Recommended next priorities** (in order):
+  1. Fund the keeper wallet and grant EXECUTION_ENGINE_ROLE (unblocks the live testnet)
+  2. Kalshi API secondary oracle integration (RESEARCH scan flagged Kalshi overtaking Polymarket on weekly volume)
+  3. Frontend bug fixes (funding shows $0.00, generic error toasts, high gas display)
+  4. SECURE: full contract security audit rotation (standing order, never been done)
+  5. CEO: TOKEN2049 Dubai prep (29 days out), 5cc Capital outreach, investor deck update with $22B Kalshi valuation
+- **Action**: Pick your top 2-3 and we will spin up the pipeline.
+
+---
+
+#### ITEM 4: TELEGRAM GATEWAY TIMEOUT PATTERN (operational)
+
+- **What**: telegram-gateway.log shows repeated `getUpdates - timed out` errors throughout March 29 (8+ occurrences between 03:48 and 08:58 UTC). Messages are still being received and processed (the queue works), but the polling connection drops intermittently.
+- **Why it matters**: Not breaking anything yet, but if the timeout frequency increases, messages could be delayed or lost. This is a reliability concern, not an outage.
+- **Action**: OPERATE should investigate whether the Telegram Bot API long-poll timeout is set too aggressively or if there is a network issue on the VPS. Low priority.
+
+---
+
+#### ITEM 5: INFRASTRUCTURE IN EXCELLENT SHAPE (status)
+
+- **What**: RAM 11% (1.7GB/16GB), disk 19% (35GB/193GB), load 0.50, uptime 18 days. All 9 services running. Health checks clear since 08:00 UTC March 29. The RAM spike to 99% on March 29 04:00 was resolved by killing stale root processes.
+- **Why it matters**: After the chaos of the past few days, the server is stable. No resource pressure. The system can handle a heavy workload if we load up the pipeline.
+- **Action**: None. Just good news.
+
+---
+
+#### SYSTEM PERFORMANCE REVIEW
+
+**What worked well:**
+- The PLAN -> CRITIQUE -> BUILD -> VERIFY pipeline is functional and producing quality output. 15 tasks through the full pipeline in ~48 hours.
+- OVERSEER_ACTIONS is now being read and acted on. The operate session at 03:26 executed 6 actions from the queue. The "shouting into a void" problem is resolved.
+- Handoff quality is high. Every completed task has a detailed handoff file.
+
+**What needs improvement:**
+- The scheduler still has no SIGUSR1 reload mechanism (MEDIUM priority, in OVERSEER_ACTIONS).
+- VERIFY dispatch for IN REVIEW items requires manual intervention. The scheduler does not bridge KANBAN stages to dispatch decisions. This gap was flagged in the 04:01 overseer report and operate dispatched VERIFY manually, but it should be automated.
+- The stale `support-*` tasks in scheduler-state.json are noise. They are cooldown anchors but look like bugs. Should be documented or removed.
+
+---
+
+#### SYSTEM IMPROVEMENT PROPOSALS
+
+**Proposal 1**: Auto-VERIFY dispatch for KANBAN IN REVIEW items
+- When the scheduler detects tasks in KANBAN IN REVIEW with no active VERIFY session, it should auto-dispatch VERIFY.
+- **Why**: The manual dispatch gap caused a 2-hour delay for 7 verified items. In a heavy pipeline, this compounds.
+- **Workstream**: BUILD (scheduler.py modification)
+- **Effort**: Small (add KANBAN parsing to scheduler cycle)
+- **Risk**: Low
+
+**Proposal 2**: Telegram gateway long-poll resilience
+- Add exponential backoff on `getUpdates` timeout errors and log the backoff state.
+- **Why**: 8+ timeout errors in 5 hours suggests either network flakiness or aggressive poll timing. Backoff prevents rapid-fire retries.
+- **Workstream**: OPERATE (vigil-telegram config)
+- **Effort**: Small
+- **Risk**: Low
+
+**Proposal 3**: RESEARCH morning scan should run today
+- The last RESEARCH scan was March 29 08:00 UTC (22 hours ago). Polymarket fee expansion went live today (March 30). The April 6 Iran deadline is 7 days out. Fresh data would be valuable.
+- **Why**: Monday morning is the highest-signal time for market scans. Weekend geopolitics activity settles into Monday pricing.
+- **Workstream**: RESEARCH (scheduled scan)
+- **Effort**: One session
+- **Risk**: None
+
+---
+
+*Brief produced: 2026-03-30 06:00 UTC | ADVISOR workstream | Opus 4.6*
+*Previous brief: RESEARCH MORNING SCAN 2026-03-29 08:00 UTC*
+
+---
+
 ### RESEARCH MORNING SCAN | 2026-03-29 08:00 UTC
 
 ---

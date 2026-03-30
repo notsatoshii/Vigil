@@ -24,6 +24,8 @@ When an action is resolved, move it to the COMPLETED section below (or delete it
 ## PENDING ACTIONS
 
 ACTION|MEDIUM|build|Scheduler has no signal-based reload: manual edits to scheduler-state.json are overwritten by in-memory state unless the service is stopped first. Add a SIGUSR1 handler to reload state from disk (no restart needed). Low urgency now that the correct stop-edit-start procedure is documented.
+ACTION|HIGH|build|Scheduler should auto-dispatch VERIFY for KANBAN IN REVIEW items. Currently requires manual intervention. The gap caused 2-hour delay for 7 items on 2026-03-30.
+ACTION|HIGH|research|Run Monday morning scan. Last scan was 2026-03-29 08:00 UTC. Polymarket fee expansion went live today. April 6 Iran deadline in 7 days. Fresh market data needed.
 
 
 ---

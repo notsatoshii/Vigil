@@ -1,1 +1,2 @@
 ACTION|CRITICAL|operate|Ensure Commander surfaces keeper wallet funding request to Master at next contact. Deployer wallet 0x0e4D636c6D79c380A137f28EF73E054364cd5434 has ~0.00000053 ETH on Base Sepolia. Oracle and accrual stalled for 7+ days. Need 0.5 ETH from any faucet to resume oracle prices and fee accrual.
+ACTION|HIGH|research|Run Monday morning scan. Last scan was 2026-03-29 08:00 UTC. Polymarket fee expansion went live today. April 6 Iran deadline in 7 days. Fresh market data needed.
