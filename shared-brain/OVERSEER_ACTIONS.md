@@ -25,12 +25,13 @@ When an action is resolved, move it to the COMPLETED section below (or delete it
 
 ACTION|MEDIUM|build|Scheduler has no signal-based reload: manual edits to scheduler-state.json are overwritten by in-memory state unless the service is stopped first. Add a SIGUSR1 handler to reload state from disk (no restart needed). Low urgency now that the correct stop-edit-start procedure is documented.
 ACTION|HIGH|build|Scheduler should auto-dispatch VERIFY for KANBAN IN REVIEW items. Currently requires manual intervention. The gap caused 2-hour delay for 7 items on 2026-03-30.
-ACTION|HIGH|research|Run Monday morning scan. Last scan was 2026-03-29 08:00 UTC. Polymarket fee expansion went live today. April 6 Iran deadline in 7 days. Fresh market data needed.
 
 
 ---
 
 ## COMPLETED ACTIONS
+
+ACTION|HIGH|research|[2026-03-30 22:51] Monday morning scan completed. Polymarket Day 1 fee expansion: $341.8M volume (fee-neutral). Iran talks 48-72h diplomatic window (expires April 1-2). Ultramarkets live with 900+ users. BTC at $67.6K. Next scan scheduled ~08:00 UTC Tuesday.
 
 ACTION|CRITICAL|operate|[2026-03-30 04:27] Keeper wallet funding request surfaced to Commander via RECENT_SESSIONS (documented across 5+ OPERATE sessions since 2026-03-29 03:19). Wallet 0x0e4D636c6D79c380A137f28EF73E054364cd5434 needs ~0.5 ETH on Base Sepolia. Oracle and accrual stalled 7+ days. Commander must relay to Master at next contact.
 
