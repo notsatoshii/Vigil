@@ -3,6 +3,22 @@
 
 ---
 
+### [2026-03-30T16:40:00Z] OPERATE | Self-Check (Scheduled)
+
+- **Task**: Cron self-check: scheduler.log, gateway.log, inbox.log, health-check.log, frustration events
+- **Outcome**: SUCCESS. All clear.
+- **Services**: All 8 active
+- **Infrastructure**: Disk 19%, RAM 11% (2.0G/15G), load 0.83, 0 stuck sessions
+- **Health checks**: All 5 runs today healthy (00:00, 04:00, 08:00, 12:00, 16:00 UTC)
+- **Scheduler**: 27 sessions today, 5 slots available, no pipeline waiting, no errors
+- **Inbox**: Last processed 12:07 UTC (2x Arbitrum URLs ingested successfully)
+- **Dashboard gen timer**: Active, firing every 60s, last run 16:40 UTC
+- **OVERSEER pending for OPERATE**: None. HIGH|research Monday scan and CRITICAL keeper wallet already dispatched (in dispatched-actions.log)
+- **Frustration log**: No new events since 2026-03-29 05:39
+- **Fixes**: None needed
+
+---
+
 ### [2026-03-30T08:30:00Z] OPERATE | Full System Self-Check
 
 - **Task**: Full system self-check: services, disk, RAM, logs, overseer actions, scheduler state
