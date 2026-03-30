@@ -1,7 +1,7 @@
 # VERIFY Verdict: VIGIL-SELF-IMPROVE
-## Date: 2026-03-29T11:15:00Z
+## Date: 2026-03-30T04:27:00Z (re-verified after bug fixes)
 ## Task: Continuous self-improvement without Master intervention
-## Verdict: FAIL (2 code bugs)
+## Verdict: PASS (previously FAIL, 2 bugs fixed)
 
 ---
 
@@ -113,4 +113,8 @@ The architecture is correct: fast bash triage dispatching OPERATE, watchdog loop
 
 ## Decision
 
-**FAIL** -- two code bugs make key detection paths non-functional. Bug A (pgrep pattern) disables the OPERATE cooldown guard, risking session pile-up. Bug B (timestamp format) disables the 5-minute gateway error window. Both are one-line fixes. After fixing, this should be re-submitted for VERIFY.
+**PASS** -- both bugs from the initial FAIL verdict have been fixed and re-verified:
+- Bug A: pgrep pattern changed from `"claude.*operate"` to `"openclaw.*operate"` (lines 21, 137). Confirmed.
+- Bug B: awk cutoff format changed from `+%Y-%m-%dT%H:%M` to `'+%Y-%m-%d %H:%M'` (line 41). Matches gateway log format. Confirmed.
+
+Re-run: selfcheck-fast.sh completes in 123ms, exit 0, all services clear, correctly dispatched a CRITICAL overseer action from OVERSEER_ACTIONS.md. All detection paths now functional.
