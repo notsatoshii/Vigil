@@ -663,3 +663,25 @@
 **Task**: System check, log review.
 
 **ISSUE**: solc-0.8.24 back at 69% RAM (11.3GB, PID 1224761, running since 02:06). Same OOM pattern from yesterday. 2.3GB available. OOM kill imminent. All 8 services currently active. Scheduler at 6 dispatches, 3 active. No gateway errors yet. Oracle still out of gas (unchanged).
+
+---
+## OPERATE | 2026-03-30 03:22-03:26 UTC
+
+**Task**: Thorough system self-check (manual trigger).
+
+**Services**: All 7 monitored services ACTIVE (openclaw-gateway, vigil-telegram, vigil-dashboard, lever-frontend, lever-oracle, lever-accrue-keeper, caddy).
+
+**Resources**: Disk 19% (35G/193G). RAM 1.6GB/15GB (11%, healthy). No solc OOM active.
+
+**Scheduler**: Clean. 6 dispatches today, 5 slots available. No stuck sessions. Ghost support-* tasks are expected cooldown anchors.
+
+**Fixed**:
+- Killed stale root bash processes PIDs 1305827 + 1305828. These were orphaned tmux-spawned shells from a March 26 Claude session that manually ran accrue-keeper.sh. They had been running 3+ days with no function (real keeper is managed by systemd PID 1258635). Confirmed they were in user.slice/user@0.service cgroup, not system.slice. Freed minor overhead.
+
+**ESCALATION NEEDED (cannot fix autonomously)**:
+- Keeper wallet gas critically low: balance 529179051661 wei = ~0.00000053 ETH on Base Sepolia. Both lever-oracle and lever-accrue-keeper are failing every cycle with "insufficient funds for gas". Oracle cannot push prices; accrue-keeper cannot call accrueAll(). Master needs to top up the keeper wallet with Base Sepolia testnet ETH from a faucet.
+- KANBAN has 7 items in "IN REVIEW" -- none have been picked up by VERIFY. This may need Master to manually trigger VERIFY sessions or the scheduler to route them.
+
+**OVERSEER_ACTIONS**: No new actions. One MEDIUM BUILD action (SIGUSR1 scheduler reload) remains pending from before.
+
+**No new git commit needed** (no code changes, only process kills).
