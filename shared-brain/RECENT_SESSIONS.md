@@ -1109,3 +1109,11 @@
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 17%. Gateway stable. 16:00 health check passed clean. Scheduler at 27 dispatches, 2 active. One transient model "overloaded" at 15:24 (single occurrence). No issues found, no fixes needed.
+
+---
+[2026-03-31 17:26 UTC] OPERATE self-check
+All services active: openclaw-gateway, vigil-telegram, vigil-dashboard, vigil-inbox, lever-frontend, lever-oracle, lever-accrue-keeper, caddy.
+Disk: 19% used (36G/193G). RAM: 2GB used / 16GB total. Scheduler: clean cycles, 27 dispatched today, 0 active, 5 available.
+Gateway: one transient overload event at 15:24 UTC (claude-sonnet-4-6 overloaded, no fallback). Self-resolved.
+OVERSEER_ACTIONS: No OPERATE items pending. BUILD and CEO items remain open.
+No issues found. No fixes needed.
