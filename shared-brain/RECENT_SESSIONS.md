@@ -962,3 +962,19 @@
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 80%. Two solc-0.8.24 processes consuming 10.6GB combined (6.7GB + 3.9GB). getUpdates timeouts at 02:14-02:15 from memory pressure. OOM kill likely imminent. Same recurring pattern. 00:00 health check passed clean. Scheduler at 6 dispatches, 2 active.
+
+---
+## OPERATE | 2026-03-31 02:54 UTC
+
+**Task**: Scheduled self-check, log review.
+
+**Findings**:
+- All 8 services active and healthy
+- Disk: 19%, RAM: 13% (2GB/15GB). Solc OOM from 02:21 check resolved -- both processes gone, memory pressure cleared.
+- Telegram: 2 timeout errors at 02:14-02:15 (memory pressure related), no issues since.
+- Scheduler: 6 dispatches today, 5 slots available. Cycling cleanly.
+- Dashboard: data.json fresh (updated 02:54).
+- Root claude PID 1788031 (Mar30, pts/11): attached to active SSH bash session, sleeping. Left alone.
+- OVERSEER_ACTIONS: 2 PENDING BUILD items only. No OPERATE items.
+- KNOWN ISSUE (ongoing): lever-oracle and lever-accrue-keeper stalled, keeper wallet needs ~0.5 ETH on Base Sepolia. Flagged to Commander.
+- No fixes needed.
