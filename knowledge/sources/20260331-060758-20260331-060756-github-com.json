@@ -1,0 +1,35 @@
+{
+  "id": "20260331-060758-github-notsatoshii-leverlanding",
+  "ingestedAt": "2026-03-31T06:07:58Z",
+  "sourceUrl": "https://github.com/notsatoshii/leverlanding",
+  "sourceType": "GitHub repository",
+  "reliability": "N/A",
+  "fetchStatus": "404 - Repository does not exist or is private",
+
+  "summary": [
+    "The repository github.com/notsatoshii/leverlanding does not exist publicly (404 error). It may be private, not yet created, or the URL may be incorrect.",
+    "The GitHub user 'notsatoshii' exists and has 6 public repos: Timmy (Solidity), Vigil (JavaScript), Aiolet-Landing (TypeScript), Claudecode, lopenclaw ('LEVER - Synthetic perpetuals layer for prediction markets', Solidity), Lever ('Lever Official Testnet', Solidity).",
+    "No 'leverlanding' repo found. The closest match is 'Aiolet-Landing' (TypeScript) which could be a landing page project, or Master may be planning to create a dedicated LEVER landing page repo.",
+    "Master's GitHub profile confirms the LEVER Protocol tech stack: Solidity for contracts (lopenclaw, Lever repos), JavaScript for Vigil, TypeScript for landing pages."
+  ],
+
+  "entities": [
+    {"name": "notsatoshii", "type": "github_user", "role": "Master's GitHub account. 6 public repos."},
+    {"name": "lopenclaw", "type": "repository", "role": "LEVER Protocol contracts: 'Synthetic perpetuals layer for prediction markets' (Solidity)"},
+    {"name": "Lever", "type": "repository", "role": "'Lever Official Testnet' (Solidity)"},
+    {"name": "Vigil", "type": "repository", "role": "Vigil system codebase (JavaScript)"},
+    {"name": "Timmy", "type": "repository", "role": "Solidity project (1 star)"},
+    {"name": "Aiolet-Landing", "type": "repository", "role": "TypeScript landing page project"}
+  ],
+
+  "categories": ["technical"],
+
+  "workstreamTags": {
+    "BUILD": "The 'leverlanding' repo does not exist yet. If Master is creating a LEVER Protocol landing page, recommend using the existing 'Aiolet-Landing' TypeScript project as a template or creating the new repo. Landing page spec is at /home/lever/command/knowledge/reference/LEVER_Landing_Page_Spec_v3.md.",
+    "CEO": "Master's public GitHub (notsatoshii) shows LEVER project repos. The 'lopenclaw' description ('Synthetic perpetuals layer for prediction markets') is good public-facing positioning."
+  },
+
+  "sources": [
+    {"title": "GitHub: notsatoshii profile", "url": "https://github.com/notsatoshii", "dateAccessed": "2026-03-31", "sourceType": "Primary", "reliability": "High"}
+  ]
+}

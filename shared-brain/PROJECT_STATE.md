@@ -1,5 +1,5 @@
 # PROJECT STATE
-## Last Updated: March 30, 2026
+## Last Updated: March 31, 2026
 ## Updated By: ADVISOR daily brief
 
 ---
@@ -36,6 +36,7 @@ All projects and key directories on this server:
 - **Demo mode**: ON by default. 4 demo positions active (SpaceX, US-Iran, FIFA, Fed Rate)
 - **TVL**: $502K | **OI**: $4.3K | **Utilization**: 0.86% | **Share Price**: $1.000007
 - **Known frontend bugs**: Funding shows $0.00 (getFundingIndex reverts), generic error toasts, high gas on openPosition (~980K)
+- **BLOCKED**: Keeper wallet empty since March 23 (Day 8). Oracle and accrual stalled. EXECUTION_ENGINE_ROLE grant pending.
 - **Protected contracts**: ExecutionEngine, LeverageModel, LeverVault, PositionManager, SettlementEngine, LiquidationEngine (do NOT redeploy)
 
 ## Landing Page

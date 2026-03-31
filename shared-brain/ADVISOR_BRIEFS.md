@@ -7,6 +7,101 @@
 
 ---
 
+### ADVISOR DAILY BRIEF | 2026-03-31 06:03 UTC (Tuesday)
+
+Morning, Master. Tuesday brief. System is healthy, idle 36+ hours. You were active around 05:00 UTC asking about deploying the LEVER landing page. Three things need attention.
+
+---
+
+#### ITEM 1: LANDING PAGE DEPLOYMENT (ACTIVE, from your last message)
+
+- **What**: At 04:58 UTC today you asked about deploying the LEVER landing page to an actual website. The gateway restarted during the conversation (05:26 UTC), so the response may not have reached you. The landing page currently runs on port 3001 via `npx serve` at /home/claude/lever-landing/. Public URL is landing.xmarket.app (served via Caddy).
+- **Why it matters**: If you need the landing page on a new domain or different hosting (Vercel, Netlify, custom domain for LEVER specifically), that is a BUILD + OPERATE task. The current setup is a dev server, not production hosting.
+- **Action**: When you return, clarify the target: new domain (e.g., leverprotocol.xyz), different hosting provider, or just confirming the current landing.xmarket.app works. BUILD can deploy to Vercel/Netlify in one session.
+- **Effort**: Small (1-2 sessions depending on DNS/hosting choice).
+
+---
+
+#### ITEM 2: KEEPER WALLET EMPTY, DAY 8 (CRITICAL, unchanged, only you can fix)
+
+- **What**: Keeper wallet `0x0e4D636c6D79c380A137f28EF73E054364cd5434` has ~0 ETH on Base Sepolia. Oracle and accrual keeper have been stalled since March 23. All on-chain data is frozen. Demo positions show stale PnL.
+- **Why it matters**: Anyone looking at the testnet sees a dead protocol. Eight days of no oracle updates. The EXECUTION_ENGINE_ROLE grant (from BUG-6 fix) is also blocked because it requires a funded wallet.
+- **Note**: The stale root PID 3676320 appears to have been cleaned up (not found in process list). One less thing to worry about.
+- **Action**: Fund the wallet from a Base Sepolia faucet (~0.5 ETH). Then we can grant EXECUTION_ENGINE_ROLE and the testnet comes alive again.
+- **Effort**: 5 minutes.
+
+---
+
+#### ITEM 3: SYSTEM IDLE 36+ HOURS, PIPELINE EMPTY (STRATEGIC)
+
+- **What**: KANBAN is completely empty. Scheduler has 5 slots available, dispatching nothing. 9 sessions today, all overhead. The 15-task sprint from March 29-30 cleared everything and nothing replaced it. RESEARCH produced 4 actionable items (Ultramarkets response, Prediction Conference, Kalshi narrative, TOKEN2049 prep) but none became work items.
+- **Why it matters**: The system works. The pipeline proved it can deliver 15 tasks in 48 hours. But it cannot self-generate strategic work without your direction. The intelligence-to-action gap remains.
+- **Recommended priorities** (updated from yesterday, incorporating your landing page interest):
+  1. Landing page deployment to production hosting (you asked about this today)
+  2. Fund keeper wallet + grant EXECUTION_ENGINE_ROLE (unblocks live testnet)
+  3. Investor deck update: Kalshi $22B valuation, Ultramarkets as validated competitor, regulatory resilience slide
+  4. Prediction Conference April 22-24 registration (22 days out, 300 curated seats)
+  5. Frontend bug fixes (funding $0.00, error toasts, gas display)
+- **Action**: Pick your top 2-3 when you are back.
+
+---
+
+#### ITEM 4: TELEGRAM GATEWAY RESTART (operational, resolved)
+
+- **What**: The Telegram gateway received SIGTERM at 05:26 UTC and restarted cleanly at 05:27 UTC. Your last message about the landing page may have been interrupted. Two `getUpdates` timeout errors at 02:14-02:15 UTC, then clean operation.
+- **Why it matters**: The restart was clean and the gateway is healthy. But if your landing page question did not get a response, you may need to resend it.
+- **Action**: None required from you. Commander should check if the response was delivered.
+
+---
+
+#### ITEM 5: INFRASTRUCTURE STILL GREEN (status)
+
+- **What**: RAM 13% (2.0GB/16GB), disk 19% (36GB/193G), load 0.74, uptime 19 days. All 9 services running (8 original + vigil-scheduler). Health checks clear for the last 7 consecutive runs (since March 30 04:00 UTC). The stale root PID 3676320 is gone.
+- **Why it matters**: Server is stable and has plenty of capacity for a heavy workload. No resource concerns.
+- **Action**: None.
+
+---
+
+#### SYSTEM PERFORMANCE REVIEW
+
+**What worked well:**
+- OPERATE self-checks are running consistently and catching issues before they escalate. 3 clean checks on March 30, 2 clean overnight.
+- RESEARCH evening scan (March 30 20:00 UTC) was high quality: caught Ultramarkets going live (correcting prior "pre-launch" assessment), identified the April 6 Iran deadline, and flagged Prediction Conference timing. Good intelligence work.
+- Infrastructure stability: 19 days uptime, RAM stabilized at 13%, no service crashes.
+
+**What needs improvement:**
+- Intelligence-to-action gap: RESEARCH and ADVISOR produce actionable intelligence but it dies in reports. 12 consecutive overseer cycles have noted empty KANBAN. The system cannot convert its own findings into work items without Master.
+- Session utilization: 9/200 today, all overhead. 3% productive utilization. The "never idle" standing order in INTENTIONS.md is not being fulfilled because there is nothing in KANBAN to work on.
+- Telegram gateway reliability: Two timeout errors overnight. Not critical, but the pattern from March 29 (8 timeouts) is worth monitoring.
+
+---
+
+#### SYSTEM IMPROVEMENT PROPOSALS
+
+**Proposal 1**: ADVISOR should be able to add MEDIUM-priority items to KANBAN BACKLOG directly
+
+- Currently, only Master or Commander adds KANBAN items. ADVISOR identifies work but cannot queue it. This is the root cause of the intelligence-to-action gap noted in 12 consecutive overseer reports.
+- **Guard rails**: ADVISOR-generated items would be tagged `[ADVISOR-GENERATED]` and limited to improvements, research follow-ups, and maintenance. No contract changes, no deployments, no design changes without Master approval.
+- **Why**: The system has been idle 36+ hours with 5 available slots. Meanwhile, RESEARCH identified 4 actionable items that could have been queued.
+- **Workstream**: Commander CLAUDE.md update + KANBAN format update
+- **Effort**: Small
+- **Risk**: Low (guard rails prevent scope creep)
+
+**Proposal 2**: Auto-dispatch standing-order work when KANBAN is empty for >4 hours
+
+- INTENTIONS.md has standing orders: SECURE should audit contracts, IMPROVE should review the product, RESEARCH should check watchlists. When KANBAN is empty for 4+ hours, the scheduler should auto-dispatch one standing-order session per cycle.
+- **Why**: Prevents the current failure mode where the system sits idle for 36+ hours with available capacity and standing orders that explicitly say "never idle."
+- **Workstream**: BUILD (scheduler.py modification)
+- **Effort**: Medium
+- **Risk**: Medium (must avoid the "5 sessions to busywork" pattern Master flagged on March 28; cap at 1 standing-order session per hour)
+
+---
+
+*Brief produced: 2026-03-31 06:03 UTC | ADVISOR workstream | Opus 4.6*
+*Previous brief: RESEARCH EVENING SCAN 2026-03-30 20:00 UTC*
+
+---
+
 ### RESEARCH EVENING SCAN | 2026-03-30 20:00 UTC (Monday)
 
 7 items. Coverage: prediction markets, AI/tooling, crypto/DeFi, geopolitics, industry events.

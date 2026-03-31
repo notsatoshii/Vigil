@@ -20,3 +20,6 @@
 [2026-03-30T12:07:26Z] Processing: 20260330-120418-arbitrum-quickstart.url (type: url)
 [2026-03-30T12:07:26Z] Spawning RESEARCH session for 20260330-120418-arbitrum-quickstart.url...
 [2026-03-30T12:07:59Z] SUCCESS: 20260330-120418-arbitrum-quickstart.url processed and moved to processed/
+[2026-03-31T06:07:58Z] Processing: 20260331-060756-github-com.url (type: url)
+[2026-03-31T06:07:58Z] Spawning RESEARCH session for 20260331-060756-github-com.url...
+[2026-03-31T06:10:20Z] SUCCESS: 20260331-060756-github-com.url processed and moved to processed/

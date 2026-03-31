@@ -51,3 +51,11 @@
 [04:57:58] Session #38
 [05:25:49] Session #39
 [05:26:28] Session #40
+[06:04:17] Session #1
+[06:04:34] Session #2
+[06:07:56] Session #3
+[06:08:28] Session #4
+[06:11:04] Session #5
+[06:12:04] Session #6
+[06:18:15] Session #7
+[06:21:44] Session #8
