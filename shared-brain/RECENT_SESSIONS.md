@@ -936,3 +936,22 @@
 - OVERSEER_ACTIONS: Moved HIGH|research Monday scan to COMPLETED (confirmed ran, output visible in gateway logs at 22:21 UTC).
 - Remaining PENDING: MEDIUM|build (SIGUSR1 handler), HIGH|build (auto-VERIFY dispatch).
 - No new issues. No fixes needed.
+
+## OPERATE | 2026-03-30 23:52 UTC
+
+**Task**: Scheduled self-check, log review.
+
+**Findings**:
+- All 8 services active and healthy
+- Disk: 19%, RAM: 13% (2GB/15GB). No pressure.
+- Scheduler: 5 slots available, 36 dispatches today. Cycling cleanly.
+- KNOWN ISSUE (ongoing): lever-oracle and lever-accrue-keeper failing with insufficient funds. Wallet 0x0e4D636c6D79c380A137f28EF73E054364cd5434 needs ETH on Base Sepolia. Already flagged to Commander multiple times.
+- OVERSEER_ACTIONS: 2 PENDING BUILD items remain (SIGUSR1 handler, auto-VERIFY dispatch). No OPERATE items.
+- No new issues. No fixes needed.
+
+---
+## OPERATE | 2026-03-31 00:21-00:22 UTC
+
+**Task**: System check, log review.
+
+**Findings**: All 8 services active. Disk 19%, RAM 23%. New day, scheduler reset. 3 health checks since last scan all passed clean (16:00, 20:00, 00:00). Gateway stable, no errors. Scheduler dispatched 3 support sessions for new day. System stable. No issues found, no fixes needed.
