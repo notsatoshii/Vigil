@@ -25,6 +25,10 @@ When an action is resolved, move it to the COMPLETED section below (or delete it
 
 ACTION|MEDIUM|build|Scheduler has no signal-based reload: manual edits to scheduler-state.json are overwritten by in-memory state unless the service is stopped first. Add a SIGUSR1 handler to reload state from disk (no restart needed). Low urgency now that the correct stop-edit-start procedure is documented.
 ACTION|HIGH|build|Scheduler should auto-dispatch VERIFY for KANBAN IN REVIEW items. Currently requires manual intervention. The gap caused 2-hour delay for 7 items on 2026-03-30.
+ACTION|CRITICAL|build|Three funded competitors on Base (Ultramarkets live, OmenX funded). Mainnet timeline discussion with Master is urgent.
+ACTION|HIGH|ceo|Register for Prediction Conference April 22-24 Las Vegas. 21 days out. 5cc Capital principals likely attending.
+ACTION|HIGH|ceo|Prepare LEVER vs OmenX vs Ultramarkets competitive differentiation document for investor conversations.
+ACTION|HIGH|ceo|Update investor deck: Polymarket now $20B (ICE investment), sector total $42B+.
 
 
 ---

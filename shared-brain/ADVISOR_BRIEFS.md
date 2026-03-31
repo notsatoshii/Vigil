@@ -3,6 +3,97 @@
 
 ---
 
+### RESEARCH MORNING SCAN | 2026-03-31 08:00 UTC (Tuesday)
+
+8 items. Coverage: prediction markets, AI/tooling, crypto/DeFi, geopolitics/macro, industry events.
+
+---
+
+**ITEM 1: OmenX JUST LAUNCHED ON BASE TESTNET (CRITICAL, new direct competitor)**
+
+- **What**: OmenX announced a multi-million dollar angel round (Paramita VC, Penrose Ventures, M77 Ventures + CEX founders) and simultaneous public testnet launch on March 30. They claim "industry-first leveraged prediction market." Targeting mainnet on Base.
+- **Source**: [GlobeNewswire, March 30](https://www.globenewswire.com/news-release/2026/03/30/3264730/0/en/OmenX-Secures-Multi-Million-Dollar-Seed-Funding-to-Launch-Industry-First-Leveraged-Prediction-Market-Public-Testnet-Now-Live.html) | Primary | High reliability
+- **So What For Us**: This is now THREE funded leveraged prediction market competitors on Base simultaneously: LEVER (testnet, advanced architecture), Ultramarkets (live, 900+ users, 10x), and OmenX (testnet, funding just landed). The race to mainnet is ON. OmenX's "industry-first" claim is false, but that is the narrative they are building press around. We need to counter it.
+- **Suggested Action**: CEO workstream: prepare a "LEVER vs OmenX vs Ultramarkets" differentiation document for investor conversations. BUILD: track OmenX product closely.
+- **Trend Context**: Three leveraged prediction market protocols, all targeting Base, all in testnet/early-live within weeks of each other. This category is getting crowded fast.
+
+---
+
+**ITEM 2: POLYMARKET VALUATION JUMPS TO $20B AFTER ICE INVESTMENT (major sector signal)**
+
+- **What**: Polymarket secured a strategic investment from Intercontinental Exchange (ICE, the parent of NYSE) and is now valued at $20 billion. Prior valuation was $8 billion (last recorded in our watchlist).
+- **Source**: [Invezz, March 30](https://invezz.com/news/2026/03/30/prediction-markets-surge-as-polymarket-kalshi-hit-record-volumes/) | Secondary | High reliability
+- **So What For Us**: ICE involvement means TradFi is not just observing prediction markets, they are acquiring equity. This dramatically strengthens the sector narrative for fundraising. "ICE-backed Polymarket" and "$22B Kalshi" are the comps we pitch next to.
+- **Suggested Action**: CEO workstream: update investor deck with new Polymarket $20B valuation comp. The sector is now a $42B+ combined market (Polymarket $20B + Kalshi $22B).
+- **Trend Context**: Sector went from niche to $42B combined value in one quarter. March Madness + Iran war are driving ATH volumes: Kalshi hit $12.35B monthly (prior ATH $10.44B), Polymarket hit $10B monthly (prior ATH $7.94B).
+
+---
+
+**ITEM 3: DEATH BETS ACT STATUS + REP. MOULTON BANS STAFF (regulatory pressure accumulating)**
+
+- **What**: Sen. Schiff's DEATH BETS Act (would ban war/terrorism/assassination/death contracts on CFTC-registered platforms) is confirmed in committee review. Separately, Rep. Seth Moulton issued an office-wide ban barring congressional staff from using Kalshi or Polymarket.
+- **Source**: [CNBC, March 25](https://www.cnbc.com/2026/03/25/seth-moulton-prediction-market-ban-kalshi-polymarket.html) | Primary | High reliability
+- **So What For Us**: Republican-controlled Congress makes passage unlikely near-term. But if DEATH BETS passes, our Polymarket oracle feeds for war markets (Iran, Ukraine) go dark. Current Polymarket geopolitics volume is $464M+. LEVER permissionless architecture means we cannot be individually banned, but our price feeds can be. CFTC comment deadline for ANPR is April 30.
+- **Suggested Action**: CEO workstream: regulatory resilience narrative for deck. "LEVER is DeFi-native and permissionless - we cannot be banned like Kalshi."
+- **Trend Context**: 4 separate anti-prediction market bills introduced in March 2026. Pattern of congressional hostility accelerating even as CFTC chairman remains supportive.
+
+---
+
+**ITEM 4: IRAN DAY 33 | APRIL 6 BINARY UNCHANGED (geopolitical, prediction market catalyst)**
+
+- **What**: Trump extended the pause on Iranian energy infrastructure strikes until April 6 8PM ET. US presented a 15-point peace proposal via Witkoff. Iran rejected it as "maximalist, unreasonable" and offered a 5-point counter-proposal demanding Hormuz control remain Iranian. No direct US-Iran talks. Binary outcome Friday: strikes OR ceasefire.
+- **Source**: [CBS News live blog](https://www.cbsnews.com/live-updates/iran-war-trump-israel-tehran-denies-ceasefire-talks-strait-of-hormuz/) | Primary | High reliability
+- **So What For Us**: Either outcome (strikes or peace) generates new prediction market demand and oracle price feeds. The Iran war has already driven 540+ Polymarket markets and $464M+ in volume. Brent oil at $101.89, WTI $94.48 (as of March 29).
+- **Suggested Action**: None for LEVER directly. Monitor. If ceasefire lands Friday, watch for prediction market category reset.
+- **Trend Context**: Day 33. Peace proposal and rejection sequence follows standard diplomatic delay pattern. April 6 deadline is the 3rd extension Trump has granted.
+
+---
+
+**ITEM 5: ANTHROPIC WINS DOD INJUNCTION (operational risk to Vigil, watch April 2)**
+
+- **What**: Federal judge Rita Lin granted Anthropic a preliminary injunction March 26, blocking the Pentagon's "supply chain risk" designation and Trump's directive banning federal agencies from using Claude. Ruling cites "First Amendment retaliation." However, the injunction takes effect 7 days after ruling (~April 2), giving the DOD until April 2 to seek an emergency stay from the 9th Circuit.
+- **Source**: [CNBC, March 26](https://www.cnbc.com/2026/03/26/anthropic-pentagon-dod-claude-court-ruling.html) | Primary | High reliability
+- **So What For Us**: Direct operational relevance. Vigil runs on Claude Sonnet 4.6 and Opus 4.6. If the DOD obtains an emergency stay and the ban is reimposed, it would not affect our server-side API usage (we are not a federal contractor), but it signals instability in Anthropic's US regulatory environment. Claude Code updates and API access should remain unaffected.
+- **Suggested Action**: OPERATE: flag April 2 as a monitoring date for 9th Circuit emergency stay news. No action required now.
+- **Trend Context**: Part of broader Trump administration campaign against AI companies that pushed back on government mandates (Anthropic refused fully autonomous weapons use).
+
+---
+
+**ITEM 6: CLAUDE SUBSCRIPTION GROWTH RECORD (sector health signal)**
+
+- **What**: Credit card transaction data from 28M US consumers confirms Claude gaining paid subscribers in record numbers in March 2026. Driven by Super Bowl ads targeting OpenAI and surging Claude Code popularity.
+- **Source**: [TechCrunch, March 28](https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/) | Secondary | High reliability
+- **So What For Us**: AI coding tool market is healthy. Claude Code's growing user base means Vigil's architecture (built on Claude Code) is becoming more mainstream, not less. Also signals continued Anthropic investment in Claude Code features.
+- **Suggested Action**: None immediate. Positive signal.
+- **Trend Context**: Mythos model leak March 26 may have accelerated subscription interest. Q3 2026 target for public Mythos API unchanged.
+
+---
+
+**ITEM 7: BASE CHAIN HIT $10B TVL (LEVER mainnet tailwind confirmed)**
+
+- **What**: Base chain reached $10 billion in TVL, ranking 5th among all chains and 1st among L2s. Leads all chains in monthly revenue. OmenX also announced it will launch mainnet on Base, further concentrating prediction market activity on the chain.
+- **Source**: [DefiLlama data, via search](https://defillama.com/chain/base) | Primary | High reliability
+- **So What For Us**: LEVER targets Base mainnet. The chain is healthy, growing, and now attracting multiple prediction market protocols. This is both a tailwind (liquidity concentration) and a crowding risk (3 leveraged prediction markets targeting same chain).
+- **Suggested Action**: LEVER mainnet launch urgency increases. The window to be first mover on Base for leveraged prediction is closing.
+- **Trend Context**: Base TVL was $4.2B in February 2026. Growth to $10B in 6 weeks is exceptional. Coinbase integration and L2 dominance (46.6% of L2 DeFi TVL last scan) driving it.
+
+---
+
+**ITEM 8: PREDICTION CONFERENCE APRIL 22-24 (21 DAYS OUT, registration open)**
+
+- **What**: The Prediction Conference in Las Vegas (April 22-24, 300 curated seats) is 22 days out. Registration confirmed live at predictionmarketsconference.com. 5cc Capital principals (Polymarket CEO Coplan, Kalshi CEO Mansour, Ribbit's Malka, Andreessen) likely attending given their fund announcement (March 23).
+- **Source**: [predictionmarketsconference.com](https://predictionmarketsconference.com/) | Primary | High reliability
+- **So What For Us**: This is the single highest-leverage event on the calendar for LEVER fundraising. 5cc Capital just raised $35M specifically for prediction market infrastructure. Master should be registered and should have in-person meetings scheduled with 5cc Capital principals.
+- **Suggested Action**: CEO workstream: register today. 21 days is tight for travel/meeting scheduling with high-value attendees.
+- **Trend Context**: First Prediction Conference to follow the $42B combined Kalshi+Polymarket valuation milestone. Highest attention this event has ever had.
+
+---
+
+*Brief produced: 2026-03-31 08:00 UTC | RESEARCH workstream | Sonnet 4.6*
+*Previous brief: ADVISOR DAILY BRIEF 2026-03-31 06:03 UTC*
+
+---
+
 ## Latest Brief
 
 ---

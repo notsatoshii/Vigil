@@ -1,0 +1,53 @@
+{
+  "id": "20260331-082100-omenx-new-competitor",
+  "ingestedAt": "2026-03-31T08:21:00Z",
+  "sourceType": "Web scan (GlobeNewsWire, Metaverse Post)",
+  "reliability": "High (official press release via GlobeNewsWire)",
+  "scanType": "URGENT: New direct competitor detected - OmenX",
+
+  "summary": [
+    "OmenX announced multi-million dollar angel round AND public testnet launch on March 30, 2026. Claims 'industry-first leveraged prediction market' (false; LEVER and Ultramarkets exist). Targeting Base mainnet (same chain as LEVER).",
+    "Investors: Paramita VC, Penrose Ventures, M77 Ventures, plus CEX founders. This is real funding, not a side project.",
+    "Product: perpetual-style mechanics for prediction markets. Leverage for conviction amplification. Enter/exit instantly. Points system for testnet incentivization. Live at alpha.omenx.com.",
+    "LEVER competitive landscape has changed dramatically in 48 hours: Ultramarkets confirmed live (900+ users), OmenX announced funded testnet on Base. THREE funded leveraged prediction market protocols now competing. First to mainnet on Base gains narrative advantage.",
+    "OmenX's 'industry-first' PR claim is a direct challenge. LEVER should counter this publicly and accelerate mainnet timeline."
+  ],
+
+  "entities": [
+    {"name": "OmenX", "type": "competitor", "role": "DIRECT competitor. Funded leveraged prediction market on Base. Testnet live March 30 2026."},
+    {"name": "Paramita VC", "type": "investor", "role": "OmenX angel round participant"},
+    {"name": "Penrose Ventures", "type": "investor", "role": "OmenX angel round participant"},
+    {"name": "M77 Ventures", "type": "investor", "role": "OmenX angel round participant"},
+    {"name": "alpha.omenx.com", "type": "product", "role": "OmenX public testnet"}
+  ],
+
+  "relationships": [
+    {"from": "OmenX", "to": "Base", "relationship": "targeting mainnet deployment (same chain as LEVER)"},
+    {"from": "OmenX", "to": "LEVER Protocol", "relationship": "direct competitor: both offer leveraged prediction market positions on Base"},
+    {"from": "OmenX", "to": "Ultramarkets", "relationship": "competing leveraged prediction market protocol (Ultramarkets already live)"}
+  ],
+
+  "categories": ["strategic", "market"],
+
+  "competitiveLandscapeUpdate": {
+    "leveraged_prediction_market_protocols": [
+      {"name": "Ultramarkets", "status": "LIVE (900+ users)", "leverage": "10x", "chain": "unknown", "funding": "unknown"},
+      {"name": "OmenX", "status": "TESTNET (March 30)", "leverage": "perpetual-style (TBD)", "chain": "Base (target)", "funding": "multi-million angel (Paramita, Penrose, M77)"},
+      {"name": "LEVER Protocol", "status": "TESTNET (Base Sepolia)", "leverage": "2-50x", "chain": "Base", "funding": "pre-seed"}
+    ],
+    "race_status": "THREE-WAY RACE. Ultramarkets has first-mover. OmenX has PR narrative ('industry-first'). LEVER has superior architecture (50x, ERC-4626, continuous risk curves, deterministic fees). First to Base mainnet wins the narrative.",
+    "urgency": "CRITICAL"
+  },
+
+  "workstreamTags": {
+    "CEO": "CRITICAL COMPETITIVE ALERT: OmenX launched funded testnet on Base yesterday, claiming 'industry-first leveraged prediction market.' This is a direct challenge. THREE protocols now competing (Ultramarkets live, OmenX testnet, LEVER testnet). LEVER must (1) counter the 'industry-first' claim, (2) accelerate mainnet, (3) use Prediction Conference (April 22-24) to establish positioning. The architectural advantages (50x vs 10x, ERC-4626, continuous risk curves) are meaningless if we are third to market.",
+    "BUILD": "URGENCY UPGRADED: OmenX launched funded testnet on Base (same chain) on March 30. They are targeting Base mainnet. LEVER must accelerate mainnet readiness. The ERC-4626 vault, dual oracle, and 16-contract architecture are differentiators, but only if deployed.",
+    "ADVISOR": "Competitive landscape shifted from 'LEVER is the only leveraged prediction market' to 'three-way race.' Ultramarkets (live, 900 users), OmenX (funded testnet, Base), LEVER (testnet, best architecture). Strategy must shift from 'unique product' to 'best implementation, fastest to Base mainnet.' Counter OmenX's 'industry-first' PR claim immediately."
+  },
+
+  "sources": [
+    {"title": "GlobeNewsWire: OmenX Funding + Testnet Launch", "url": "https://www.globenewswire.com/news-release/2026/03/30/3264730/0/en/OmenX-Secures-Multi-Million-Dollar-Seed-Funding-to-Launch-Industry-First-Leveraged-Prediction-Market-Public-Testnet-Now-Live.html", "dateAccessed": "2026-03-31", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Metaverse Post: OmenX Launch", "url": "https://mpost.io/omenx-secures-multi-million-dollar-seed-funding-to-launch-industry-first-leveraged-prediction-market-public-testnet-now-live/", "dateAccessed": "2026-03-31", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "OmenX Alpha", "url": "https://alpha.omenx.com/", "dateAccessed": "2026-03-31", "sourceType": "Primary", "reliability": "High"}
+  ]
+}

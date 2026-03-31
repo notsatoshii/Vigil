@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-30T20:00:00Z",
+  "last_updated": "2026-03-31T08:00:00Z",
   "description": "Prediction market competitor tracking. Updated on each RESEARCH scan.",
   "entities": [
     {
@@ -8,12 +8,13 @@
       "chain": "Polygon",
       "website": "https://polymarket.com",
       "status": "live",
-      "last_scan": "2026-03-28",
+      "last_scan": "2026-03-31",
       "metrics": {
-        "30d_volume_usd": "9550000000",
-        "weekly_volume_usd": "2500000000",
-        "weekly_market_share_pct_2026_03_29": 43,
-        "valuation_usd": "8000000000",
+        "march_monthly_volume_usd": "10000000000",
+        "prior_ath_monthly_volume_usd": "7940000000",
+        "valuation_usd": "20000000000",
+        "valuation_prior_usd": "8000000000",
+        "valuation_investor": "Intercontinental Exchange (ICE, parent of NYSE)",
         "daily_revenue_target_usd": "1000000",
         "active_markets": "115000+",
         "note_2026_03_29": "Kalshi overtook Polymarket on weekly volume this week ($3.4B Kalshi vs $2.5B Polymarket). First time Polymarket has been #2 on weekly volume."
@@ -103,6 +104,28 @@
       "competitive_position": "infrastructure layer, not a direct consumer platform",
       "threat_to_lever": "low - different model (sports-focused, no leverage)",
       "opportunity_for_lever": "infrastructure integration if Azuro adds LEVER as a leverage layer"
+    },
+    {
+      "name": "OmenX",
+      "type": "leveraged_prediction_market",
+      "chain": "Base (mainnet target)",
+      "website": "https://alpha.omenx.com",
+      "status": "public testnet live (March 30, 2026)",
+      "last_scan": "2026-03-31",
+      "metrics": {
+        "funding": "multi-million dollar angel round",
+        "investors": "Paramita VC, Penrose Ventures, M77 Ventures, CEX founders"
+      },
+      "recent_developments": [
+        {
+          "date": "2026-03-30",
+          "event": "Announced angel funding round and simultaneous public testnet launch. Targeting Base mainnet. Uses perpetual-style mechanics. Claims 'industry-first leveraged prediction market' (false - LEVER exists).",
+          "significance": "critical"
+        }
+      ],
+      "competitive_position": "DIRECT LEVER COMPETITOR. Testnet live March 30 on Base (same chain as LEVER). Perpetual-style mechanics with leverage. Funded. Press narrative claims first mover.",
+      "threat_to_lever": "HIGH. Three funded leveraged prediction market protocols now targeting Base (LEVER, Ultramarkets, OmenX). First to mainnet gains narrative advantage.",
+      "opportunity_for_lever": "LEVER has superior architecture (ERC-4626, continuous risk curves, deterministic fee split, 50x). OmenX is testnet-only vs LEVER's more mature codebase. Counter the 'industry-first' claim publicly."
     },
     {
       "name": "Ultramarkets",

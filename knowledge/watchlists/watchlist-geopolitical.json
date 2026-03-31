@@ -1,14 +1,14 @@
 {
-  "last_updated": "2026-03-30T20:00:00Z",
+  "last_updated": "2026-03-31T08:00:00Z",
   "description": "Active geopolitical situations driving prediction market demand. Updated each RESEARCH scan.",
   "active_situations": [
     {
       "name": "US-Iran War / Strait of Hormuz Crisis",
       "status": "active",
       "started": "2026-02-28",
-      "day_number": 31,
-      "last_scan": "2026-03-30T20:00Z",
-      "summary": "Day 31 (March 30 evening). ESCALATION UPDATE: Trump posted new ultimatum on Truth Social March 30 - if Hormuz not reopened 'shortly,' US will destroy all Iranian power plants, oil wells, Kharg Island, and desalination plants. Iran demands Lebanon ceasefire be bundled with any Iran deal. Pakistan direct-talks window expired with no contact. No US-Iran direct talks since war began. Brent peaked $126/bbl, currently $101.89. April 6 binary outcome remains the key prediction market event this week.",
+      "day_number": 33,
+      "last_scan": "2026-03-31T08:00Z",
+      "summary": "Day 33 (March 31 morning). NEGOTIATION UPDATE: Trump extended pause on energy strikes to April 6 8PM ET. US presented 15-point peace proposal via Witkoff at Cabinet meeting. Iran rejected it as 'maximalist, unreasonable.' Iran's 5-point counteroffer demands Hormuz control remain Iranian. Lebanon ceasefire still a bundled Iranian condition. No direct US-Iran talks. April 6 binary (strikes vs ceasefire) is the week's key prediction market catalyst. Brent $101.89, WTI $94.48.",
       "key_upcoming_dates": [
         {
           "date": "2026-04-06",

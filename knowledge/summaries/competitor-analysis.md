@@ -136,6 +136,26 @@ Polymarket made 2 acquisitions in 2 months:
 - **URGENCY**: Ultramarkets has first-mover advantage with 900+ users. LEVER must accelerate mainnet timeline.
 - [app.ultramarkets.xyz](https://www.app.ultramarkets.xyz/)
 
+### OmenX (DIRECT COMPETITOR, ON BASE) *** NEW - March 30, 2026 ***
+- **Status**: Public testnet live at alpha.omenx.com (March 30, 2026). Targeting Base mainnet.
+- **What**: "Industry-first leveraged prediction market" (false claim; LEVER and Ultramarkets predate it). Perpetual-style mechanics for prediction markets.
+- **Funding**: Multi-million dollar angel round (Paramita VC, Penrose Ventures, M77 Ventures, CEX founders)
+- **Chain**: Base (SAME AS LEVER)
+- **Threat level**: **HIGH** (funded, on Base, PR narrative claiming first-mover)
+- **Points system**: Testnet incentivization via points (likely token airdrop strategy)
+- **LEVER differentiators**: 50x leverage, ERC-4626 institutional vault, continuous risk curves, deterministic 50/30/20 fee split, dual oracle architecture
+- **URGENCY**: OmenX on Base = direct race for the same users. LEVER must reach Base mainnet first.
+- [GlobeNewsWire](https://www.globenewswire.com/news-release/2026/03/30/3264730/0/en/OmenX-Secures-Multi-Million-Dollar-Seed-Funding-to-Launch-Industry-First-Leveraged-Prediction-Market-Public-Testnet-Now-Live.html)
+
+### THREE-WAY COMPETITIVE RACE (as of March 31, 2026)
+| Protocol | Status | Leverage | Chain | Funding |
+|----------|--------|----------|-------|---------|
+| Ultramarkets | **LIVE** (900+ users) | 10x | Unknown | Unknown |
+| OmenX | **Testnet** (funded) | Perp-style (TBD) | Base (target) | Multi-million angel |
+| **LEVER** | **Testnet** | 2-50x | Base | Pre-seed |
+
+LEVER has the best architecture. But architecture without deployment is a whitepaper.
+
 ### Limitless Exchange (ADJACENT, ON BASE)
 - **What**: Largest prediction market on Base. Binary options-style short-term markets (1-min to zero-day expiry). NOT leveraged positions.
 - **Funding**: $10M seed led by 1confirmation, with Coinbase Ventures, DCG, F-Prime, Arrington Capital
