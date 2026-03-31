@@ -3,7 +3,7 @@
 
 ### Market Opportunity (UPDATED 2026-03-28)
 
-- **$21B+ monthly volume** across prediction markets (up from $1.2B in mid-2025; 17x growth in 8 months)
+- **$22B+ monthly volume** in March 2026 (Kalshi $12B ATH + Polymarket $10.15B ATH). Up from $1.2B in mid-2025 (18x growth in 8 months)
 - **$100B+ notional volume** in 2025; January 2026 set all-time high of $17.2B monthly
 - **Kalshi: $22B valuation** ($1B raise from Coatue, March 2026); **Polymarket: ~$20B valuation** (exploring raise)
 - **5c(c) Capital**: first dedicated prediction market VC fund ($35M), backed by both Kalshi and Polymarket CEOs, Marc Andreessen, Ribbit Capital, ex-Multicoin. Focus: prediction market infrastructure (NOT exchanges). LEVER fits this thesis perfectly. First close within weeks.

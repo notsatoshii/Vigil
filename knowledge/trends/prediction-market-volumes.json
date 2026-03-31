@@ -4,11 +4,17 @@
   "unit": "USD",
   "snapshots": [
     {
-      "date": "2026-03-30T12:20Z",
-      "period": "daily_snapshot",
-      "polymarket_24h_volume": "341800000",
-      "polymarket_24h_breakdown": {"sports": "125700000", "crypto": "64500000", "politics": "61100000"},
-      "notes": "FIRST DAY under new fee structure. $341.8M/24h is consistent with pre-fee levels (~$318M/day avg from $9.55B/30d). NO volume decline evident on Day 1. Fee expansion appears volume-neutral so far.",
+      "date": "2026-03-31T12:21Z",
+      "period": "monthly_milestone",
+      "polymarket_march_volume": "10150000000",
+      "polymarket_prior_ath": "7940000000",
+      "polymarket_march_vs_prior": "+27.8%",
+      "polymarket_unique_users_march": 768476,
+      "polymarket_unique_users_feb": 671441,
+      "polymarket_user_growth": "+14.4%",
+      "kalshi_march_volume": "12000000000",
+      "combined_march_volume": "22150000000",
+      "notes": "BOTH PLATFORMS HIT ATH. Polymarket $10.15B (first time above $10B). Kalshi $12B. Combined $22B+. March Madness + Iran war driving surge. Polymarket unique users up 14.4% to 768K. Fee expansion (March 30) did NOT slow volume.",
       "source": "Token Terminal, Polymarket"
     },
     {
