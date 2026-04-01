@@ -3,6 +3,89 @@
 
 ---
 
+### ADVISOR DAILY BRIEF | 2026-04-01 06:00 UTC (Wednesday)
+
+5 items. Day 4 of pipeline idle. 26th consecutive overseer cycle with zero productive work.
+
+---
+
+**ITEM 1: DAY 4 IDLE. COMPETITORS SHIPPING. WE ARE NOT. (CRITICAL, SYSTEMIC, WORSENING)**
+
+- **Observation**: Last productive handoff was March 30 20:05 UTC (research scan). Last code handoff was March 30 04:27 UTC (verify-vigil-self-improve). That is 82+ hours of zero code output. KANBAN has zero items in every column. 3 ghost support-* tasks sit in scheduler backlog with 0 attempts. Meanwhile: OmenX launched Base testnet March 30 with multi-million funding. Ultramarkets is live with 900+ users. Both are on Base. Both are shipping.
+- **Why it matters**: The system has 5 available session slots running 24/7 and nothing to do with them. We burned ~100+ cron sessions in 4 days producing overseer reports about our own inactivity. The competitive window on Base for leveraged prediction markets is closing. We had first-mover advantage; we are losing it to inaction.
+- **Proposed action**: This is a Master-dependent blocker. The system cannot self-generate work without KANBAN items. When Master returns, the priority is: (1) fund keeper wallet, (2) decide on mainnet timeline, (3) populate KANBAN with the next sprint. The system is ready. It just has nothing to build.
+- **Workstream**: Commander (relay to Master)
+- **Risk**: HIGH. Competitive position eroding daily.
+- **Effort**: 5 minutes (keeper wallet), 30 minutes (sprint planning)
+
+---
+
+**ITEM 2: KEEPER WALLET EMPTY. DAY 10. PROTOCOL BROKEN ON TESTNET. (CRITICAL, UNCHANGED)**
+
+- **Observation**: Wallet 0x0e4D636c6D79c380A137f28EF73E054364cd5434 has been empty since March 22. Oracle prices stale. Accrual keeper stalled. EXECUTION_ENGINE_ROLE grant pending (requires funded wallet). The protocol is non-functional for any demo or investor visit.
+- **Why it matters**: If 5cc Capital or any investor asks for a testnet demo, it will not work. 10 days of a broken testnet with a 2-minute fix (Base Sepolia faucet) is not a resource problem; it is an attention problem.
+- **Proposed action**: Master: fund the wallet. 0.5 ETH on Base Sepolia. Then OPERATE can grant EXECUTION_ENGINE_ROLE and unblock the protocol.
+- **Workstream**: Master (only he can do this)
+- **Risk**: CRITICAL. Demo-breaking. Investor-facing.
+- **Effort**: 2 minutes
+
+---
+
+**ITEM 3: PREDICTION CONFERENCE IN 21 DAYS. ZERO PREP. (HIGH, WORSENING)**
+
+- **Observation**: Prediction Conference April 22-24, Las Vegas. $997 registration. 5cc Capital (first prediction market VC fund) principals likely attending. CEO workstream completed competitive differentiation doc (LEVER_COMPETITIVE_DIFF.md) and updated investor research. But: no registration, no deck tailored for the event, no mainnet timeline to present.
+- **Why it matters**: This is the single best in-person pitch opportunity in Q2. OmenX will be there pitching their "industry-first" narrative (false, but funded). If Master does not register in the next 7-10 days, the window closes or costs more. The $42B sector valuation (Polymarket $20B + Kalshi $22B) makes the timing ideal for fundraising conversations.
+- **Proposed action**: Master decision needed: register for Prediction Conference ($997) and greenlight CEO workstream to prepare a targeted pitch deck incorporating competitive diff and updated sector comps.
+- **Workstream**: CEO (pending Master approval)
+- **Risk**: HIGH. Opportunity cost of missing this event is immeasurable.
+- **Effort**: $997 + 2-3 CEO sessions for deck
+
+---
+
+**ITEM 4: MASTER'S LAST SESSION: LANDING PAGE DEPLOYMENT (context for follow-up)**
+
+- **Observation**: Master's last interaction was March 31 ~05:00-06:48 UTC. He asked about deploying the LEVER landing page to an actual website and shared the GitHub repo (github.com/notsatoshii/leverlanding). The gateway restarted mid-conversation at 05:26 UTC (SIGTERM), and the response to his second message may not have been delivered. He then sent follow-up messages through 06:48 UTC about the repo.
+- **Why it matters**: Master may be waiting for a response that was lost to the gateway restart. When he returns, Commander should proactively address the landing page deployment status and the leverlanding repo context, not wait for him to ask again.
+- **Proposed action**: Commander should lead with landing page deployment status at next Master contact. If there is enough context from the gateway logs to act on (deploy leverlanding repo), route to BUILD/OPERATE.
+- **Workstream**: Commander
+- **Risk**: MEDIUM. Master frustration if he feels ignored.
+- **Effort**: 10 minutes
+
+---
+
+**ITEM 5: APRIL 2 MONITORING: ANTHROPIC DOD INJUNCTION (operational watch)**
+
+- **Observation**: Federal judge's preliminary injunction blocking the Pentagon's ban on Claude takes effect ~April 2 (7 days after March 26 ruling). DOD has until then to seek an emergency stay from the 9th Circuit. Tomorrow is the deadline.
+- **Why it matters**: If the DOD obtains an emergency stay and the ban is reimposed, it would not directly affect our API usage (we are not a federal contractor), but it signals instability in Anthropic's regulatory environment. Worth monitoring, not worth worrying about.
+- **Proposed action**: OPERATE should check news feeds on April 2 for 9th Circuit emergency stay filings. No preemptive action needed.
+- **Workstream**: OPERATE
+- **Risk**: LOW for us directly. Medium for Anthropic ecosystem sentiment.
+- **Effort**: 5 minutes of monitoring
+
+---
+
+### SYSTEM IMPROVEMENT PROPOSALS | 2026-04-01
+
+**Proposal 1: Reduce overseer frequency when idle**
+
+When KANBAN is empty and no handoffs exist in 24 hours, reduce overseer cycles from every 2 hours to every 8 hours. This has been proposed 7 times in OVERSEER_REPORT.md. The math: 12 overseer sessions/day vs 3 when idle. Saves ~9 sessions/day of pure waste. No information is lost because there is no information to capture. Approve/reject: Master.
+
+**Proposal 2: ADVISOR should be able to add items to KANBAN BACKLOG**
+
+Currently ADVISOR is READ-ONLY and can only propose. When the system is idle for 48+ hours and ADVISOR identifies concrete, low-risk work (e.g., documentation updates, test coverage improvements, knowledge graph maintenance), ADVISOR should be able to add those items to KANBAN BACKLOG for the scheduler to pick up. This breaks the deadlock where the system has capacity, has identified work, but cannot act because nobody populates KANBAN. Approve/reject: Master.
+
+---
+
+### BRAIN MAINTENANCE | 2026-04-01
+
+- RECENT_SESSIONS.md: ~22 entries. Under 30 cap. No pruning needed.
+- OVERSEER_REPORT.md: Growing large (26+ reports). Will prune reports older than 7 days on next cycle if approved.
+- PROJECT_STATE updated: keeper wallet now Day 10. Uptime 20 days. Added leverlanding repo reference.
+- LESSONS.md: No new entries (no productive work to learn from).
+- DECISIONS.md: No new decisions.
+
+---
+
 ### RESEARCH MORNING SCAN | 2026-03-31 08:00 UTC (Tuesday)
 
 8 items. Coverage: prediction markets, AI/tooling, crypto/DeFi, geopolitics/macro, industry events.
