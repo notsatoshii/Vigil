@@ -1152,3 +1152,37 @@ No issues found. No fixes needed.
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 20%. New day, scheduler reset. 3 health checks since last scan all passed clean (16:00, 20:00, 00:00). Gateway stable, no errors. Scheduler dispatched 3 support sessions for new day. System stable. No issues found, no fixes needed.
+
+---
+## OPERATE selfcheck | 2026-04-01 01:43 UTC
+**Trigger**: Scheduled cron selfcheck
+**Summary**: All clear. Found one systemic gap and fixed it.
+**Fix**: selfcheck-fast.sh was defined but never added to root crontab. Added `*/5 * * * * /bin/bash /home/lever/command/heartbeat/selfcheck-fast.sh` to root crontab. Last run was 2026-03-30 04:40 (~21 hours stale). HIGH/CRITICAL OVERSEER_ACTIONS (3 x build, 3 x ceo) were not being auto-dispatched.
+**System health**: All 8 services active. Disk 19%, RAM 15%, load 0.89.
+**No other issues found.**
+
+---
+## CEO | 2026-04-01 02:00-02:20 UTC
+
+**Task**: OVERSEER actions: Prediction Conference registration + competitive differentiation doc.
+
+**Done**:
+1. Researched Prediction Conference April 22-24 Las Vegas ($997, 300 seats, predictionmarketsconference.com). Surfaced to Master with 5cc Capital context. Awaiting approval to register.
+2. Researched and wrote competitive differentiation document: LEVER vs OmenX vs Ultramarkets. Saved to shared-brain/LEVER_COMPETITIVE_DIFF.md. Includes positioning table, five core differentiators, honest competitor advantages, objection handling for investor conversations, and 5cc Capital relevance.
+
+**Key findings**:
+- OmenX: Funded (multi-million angel), Former Head of Futures at Binance/Bybit, testnet on Base, no public specs, claiming "industry-first" (false)
+- Ultramarkets: LIVE with 900+ users, 10x max leverage, pre-resolution auto-close, no published architecture
+- LEVER advantage: 30-50x leverage, ERC-4626, full transparency, continuous risk curves
+- 5cc Capital: $35M fund (first close ~April 2026), founded by ex-Kalshi, backed by Polymarket CEO + a16z + Ribbit
+
+**Files changed**: shared-brain/LEVER_COMPETITIVE_DIFF.md (new), CEO_TRACKER.md (updated), OVERSEER_ACTIONS.md (updated)
+
+**Remaining OVERSEER action**: Update investor deck with Polymarket $20B / sector $42B+ data (HIGH).
+
+---
+## OPERATE | 2026-04-01 02:21-02:22 UTC
+
+**Task**: System check, log review.
+
+**Findings**: All 8 services active. Disk 19%, RAM 22%. Gateway stable. 00:00 health check passed clean. Scheduler at 6 dispatches, 3 active. No errors. No issues found, no fixes needed.
