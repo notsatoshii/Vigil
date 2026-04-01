@@ -3,6 +3,28 @@
 
 ---
 
+## IMPROVE | 2026-04-01 09:00 UTC (Weekly Deep Review)
+
+**Task**: Weekly scheduled product review across all major pages and flows.
+
+**What was reviewed**: Markets page, trade panel (via Long button click on SpaceX market), Vault page, Positions page, mobile viewport (375px). Screenshots saved to /home/lever/screenshots/improve_weekly_01 through 05.
+
+**State of prior proposals**: All 9 prior proposals (#1-#9) remain OPEN. Zero code has been deployed since March 28. The frontend is frozen. All known bugs persist.
+
+**New findings**:
+- 20 markets now in the list (up from previous count). Market data layer is active even without a code deploy.
+- Two expired markets ("BTC Above $80k March 2026?", "ETH Above $2600 March 2026?") appear in the active list with fully-enabled Long/Short buttons. Critical UX hazard.
+- OI Capacity section in trade panel is a good feature but needs visual progress bars to be readable.
+- Footer raw RPC latency number (284ms, 532ms) reads as debug output in a user-facing product.
+
+**New proposals written**: #10 (Expired markets in active list -- Ship now), #11 (OI meters need progress bars -- Next sprint), #12 (Footer latency as qualitative badge -- Backlog)
+
+**Recommendations for ADVISOR**: The expired markets bug (#10) is the most important new finding. It should go to BUILD immediately without waiting for Master approval -- it is a clear bug, not a design decision. The other 9 proposals have now been open for 4 days. If no BUILD capacity exists, at minimum Proposals #1 (empty stat bar), #6 (CTA link), and #9 (notional placeholder) are Small effort and could be batched into a single 2-hour BUILD session.
+
+**Files changed**: IMPROVE_PROPOSALS.md (3 new proposals), RECENT_SESSIONS.md (this entry)
+
+---
+
 ## RESEARCH | 2026-04-01 08:00 UTC
 
 **Task**: Morning market scan across all 5 domains.

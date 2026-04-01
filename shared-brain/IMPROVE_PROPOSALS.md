@@ -4,6 +4,88 @@
 
 ---
 
+## Session: 2026-04-01 09:00 UTC (Weekly Deep Review)
+Reviewed: Markets list, trade panel (Long click), Vault, Positions, mobile (375px)
+Browser: Chromium/Puppeteer, 1440x900 desktop + 375x812 mobile
+Screenshots: /home/lever/screenshots/improve_weekly_01 through 05
+Frontend last commit: 2026-03-28 (no code deployed in 4 days)
+
+**Status of prior proposals #1-#9**: All still OPEN. Zero code changes since initial review session. The product is frozen. All previously reported issues persist unchanged.
+
+**New market count**: 20 markets now visible (up from previous count). Several new markets added without a code deploy, suggesting the oracle/market data layer is working independently. Positive sign.
+
+---
+
+### PROPOSAL #10: Expired Markets Show Active Long/Short Buttons
+**Category**: UX / Data Integrity
+**Page/Component**: Trade page, market card grid
+**Status**: OPEN
+**Priority**: Ship now
+
+**Current State**: Two markets appear in the main "20 active markets" list with fully-enabled Long and Short buttons, but their resolution countdown shows "Expired":
+- "BTC Above $80k March 2026?" -- RESOLUTION: Expired
+- "ETH Above $2600 March 2026?" -- RESOLUTION: Expired
+
+Both markets are past their resolution date. A user clicking Long or Short on an expired market will get a confusing transaction failure or a silent error (per the existing Proposal #8 pattern). The header counts "20 active markets" which includes these expired ones, making the total misleading.
+
+**Proposed Change**: Filter expired markets from the default market list. Options in order of preference:
+1. Remove them from the main list entirely and move to a collapsible "Expired / Resolved" section at the bottom
+2. Disable the Long/Short buttons on expired cards and replace with a greyed "Expired" badge
+3. Minimum: stop counting them in the "20 active markets" header
+
+The "Expired" resolution label is already computed correctly. Just act on it in the UI.
+
+**User Impact**: Any trader who clicks on an expired market will hit a failure. Particularly bad in demo mode where we are trying to impress users.
+**Effort Estimate**: Small (filter/conditional render based on expiry status already available in data)
+
+---
+
+### PROPOSAL #11: OI Capacity Meters Need Visual Progress Bars
+**Category**: Data Visualization / UX
+**Page/Component**: Trade panel, OI Capacity section
+**Status**: OPEN
+**Priority**: Next sprint
+
+**Current State**: The trade panel has a useful OI Capacity section showing:
+- Global OI: $11,662 / $41,176,897
+- Market OI: $550 / $4,117,690
+- Side OI: $287 / $2,882,383
+- Per-user OI: $0 / $823,538
+
+The data is correct and the concept is good. But it is presented as raw numbers with no visual fill indicator. A trader cannot parse "$11,662 / $41,176,897" quickly -- they need to see that this is essentially 0% filled.
+
+The "Binding Limit" label reads: "Per-user OI -- $823,538 remaining" which sounds like it was copied from an internal API response. It is not user-facing language.
+
+**Proposed Change**:
+1. Add a slim progress bar (like a mini fuel gauge) to each OI row. The visual fill immediately communicates capacity. At current utilization (near zero), it tells a positive story: "plenty of room."
+2. Rename "Binding Limit" to "Your position limit: $823,538" (plain English)
+3. When any OI tier approaches 80% fill, color the bar yellow; 95% red. This is the risk signal traders actually need.
+
+**User Impact**: Any trader evaluating position size. The OI section is already there and conceptually good. Visualizing it takes 30 minutes and makes it genuinely useful.
+**Effort Estimate**: Small (add progress bar component to existing rows, rename label)
+
+---
+
+### PROPOSAL #12: Footer RPC Latency Number Reads as Debug Output
+**Category**: UI / Polish
+**Page/Component**: Footer, all pages
+**Status**: OPEN
+**Priority**: Backlog
+
+**Current State**: The footer displays a raw millisecond latency figure that changes with every page interaction. Example: "OPERATIONAL | Base Sepolia | Polymarket Oracle | 532ms | v1.0.0-beta | TESTNET". The number fluctuates (284ms on one render, 532ms on the next). For a regular user this is meaningless. For a developer it is a debug printout. In a demo context, a VC watching you click around sees an apparently random number ticking in the footer.
+
+**Proposed Change**: Replace the raw "Nms" number with a qualitative status dot:
+- Green dot: under 300ms ("Oracle: Fast")
+- Yellow dot: 300-800ms ("Oracle: Slow")
+- Red dot: over 800ms or unreachable ("Oracle: Delayed")
+
+Clicking the dot could expand to show the raw figure for technical users. This turns a confusing debug artifact into a meaningful status signal.
+
+**User Impact**: Visible on every page, every user. Low priority because it does not block any workflow, but it is a polish item that would stop the "why is there a random number in the footer" question.
+**Effort Estimate**: Small (replace text with conditional badge component)
+
+---
+
 ## Session: 2026-03-28 (Quick Review)
 Reviewed: Markets page, Vault page, Positions page, market trade panel
 Browser: Chromium/Puppeteer, 1440x900 desktop + 375x812 mobile
