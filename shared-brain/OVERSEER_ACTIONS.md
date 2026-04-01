@@ -24,18 +24,20 @@ When an action is resolved, move it to the COMPLETED section below (or delete it
 ## PENDING ACTIONS
 
 ACTION|MEDIUM|build|Scheduler has no signal-based reload: manual edits to scheduler-state.json are overwritten by in-memory state unless the service is stopped first. Add a SIGUSR1 handler to reload state from disk (no restart needed). Low urgency now that the correct stop-edit-start procedure is documented.
-ACTION|HIGH|build|Scheduler should auto-dispatch VERIFY for KANBAN IN REVIEW items. Currently requires manual intervention. The gap caused 2-hour delay for 7 items on 2026-03-30.
 ACTION|CRITICAL|build|Three funded competitors on Base (Ultramarkets live, OmenX funded). Mainnet timeline discussion with Master is urgent.
-ACTION|HIGH|ceo|Register for Prediction Conference April 22-24 Las Vegas. 21 days out. 5cc Capital principals likely attending.
-ACTION|HIGH|ceo|Prepare LEVER vs OmenX vs Ultramarkets competitive differentiation document for investor conversations.
-ACTION|HIGH|ceo|Update investor deck: Polymarket now $20B (ICE investment), sector total $42B+.
 
 
 ---
 
 ## COMPLETED ACTIONS
 
+ACTION|HIGH|ceo|[2026-04-01 02:20] Investor research doc updated with latest market data: Polymarket $20B (ICE $2B total), Kalshi $22B, sector $42B+, 840K+ MAW, $21B monthly volume ATH, fee expansion $209M annualized, OmenX competitive entry added. File: knowledge/summaries/investor-research.md.
+
+ACTION|HIGH|ceo|[2026-04-01 02:00] Prediction Conference April 22-24 Las Vegas. Surfaced to Master with full details ($997, predictionmarketsconference.com, 5cc Capital context). Awaiting Master approval to register. Tracked in CEO_TRACKER.md.
+ACTION|HIGH|ceo|[2026-04-01 02:15] Competitive differentiation doc completed: shared-brain/LEVER_COMPETITIVE_DIFF.md. LEVER vs OmenX vs Ultramarkets with positioning, objection handling, and 5cc Capital relevance.
+
 ACTION|HIGH|research|[2026-03-30 22:51] Monday morning scan completed. Polymarket Day 1 fee expansion: $341.8M volume (fee-neutral). Iran talks 48-72h diplomatic window (expires April 1-2). Ultramarkets live with 900+ users. BTC at $67.6K. Next scan scheduled ~08:00 UTC Tuesday.
+ACTION|HIGH|build|[2026-04-01 01:53] Scheduler now auto-syncs KANBAN IN REVIEW items into task state for VERIFY dispatch. Added sync_in_review_items() to scheduler.py main loop. Fixes the 2-hour gap from 2026-03-30.
 
 ACTION|CRITICAL|operate|[2026-03-30 04:27] Keeper wallet funding request surfaced to Commander via RECENT_SESSIONS (documented across 5+ OPERATE sessions since 2026-03-29 03:19). Wallet 0x0e4D636c6D79c380A137f28EF73E054364cd5434 needs ~0.5 ETH on Base Sepolia. Oracle and accrual stalled 7+ days. Commander must relay to Master at next contact.
 

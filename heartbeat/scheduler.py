@@ -347,6 +347,45 @@ def check_completed_tasks():
             state.save()
 
 
+def sync_in_review_items():
+    """Sync KANBAN 'IN REVIEW' items into state.tasks so VERIFY auto-dispatches.
+
+    When BUILD sessions are dispatched by Commander (not the scheduler), they write
+    handoffs and update KANBAN to 'IN REVIEW', but the scheduler has no task entry.
+    This function scans for orphaned IN REVIEW items and creates 'built' entries.
+    """
+    in_review = read_kanban_section("IN REVIEW")
+    for item in in_review:
+        tid = make_task_id(item)
+        if tid in state.tasks:
+            continue  # already tracked
+
+        # Look for a matching build handoff file
+        handoff_patterns = [
+            Path(HANDOFFS) / f"build-{tid}.md",
+            Path(HANDOFFS) / f"build-20*-{tid}.md",  # timestamped variants
+        ]
+        build_file = None
+        for pattern in handoff_patterns:
+            matches = list(Path(HANDOFFS).glob(pattern.name))
+            if matches:
+                build_file = str(sorted(matches, key=lambda f: f.stat().st_mtime, reverse=True)[0])
+                break
+
+        if not build_file:
+            # Try broader glob for any build handoff mentioning this task ID
+            for f in sorted(Path(HANDOFFS).glob("build-*.md"), key=lambda f: f.stat().st_mtime, reverse=True):
+                if tid.replace("-", "") in f.stem.replace("-", ""):
+                    build_file = str(f)
+                    break
+
+        if build_file:
+            log.info(f"SYNC: Found orphaned IN REVIEW item '{tid}' with handoff {build_file}. Creating 'built' task for VERIFY dispatch.")
+            state.tasks[tid] = TaskState(task_id=tid, title=item, stage="built")
+            state.tasks[tid].build_file = build_file
+            state.save()
+
+
 def dispatch_pipeline_work():
     """Dispatch work based on current state and available capacity."""
     available = MAX_SESSIONS - count_agent_processes()
@@ -538,6 +577,7 @@ def main():
         try:
             state.reset_daily()
             check_completed_tasks()
+            sync_in_review_items()
             dispatched = dispatch_pipeline_work()
             update_active_work()
 

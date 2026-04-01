@@ -1,12 +1,16 @@
 # Investor Research
 ## LEVER Protocol -- Key Narrative Points
 
-### Market Opportunity (UPDATED 2026-03-28)
+### Market Opportunity (UPDATED 2026-04-01)
 
-- **$22B+ monthly volume** in March 2026 (Kalshi $12B ATH + Polymarket $10.15B ATH). Up from $1.2B in mid-2025 (18x growth in 8 months)
-- **$100B+ notional volume** in 2025; January 2026 set all-time high of $17.2B monthly
-- **Kalshi: $22B valuation** ($1B raise from Coatue, March 2026); **Polymarket: ~$20B valuation** (exploring raise)
-- **5c(c) Capital**: first dedicated prediction market VC fund ($35M), backed by both Kalshi and Polymarket CEOs, Marc Andreessen, Ribbit Capital, ex-Multicoin. Focus: prediction market infrastructure (NOT exchanges). LEVER fits this thesis perfectly. First close within weeks.
+- **$21B+ monthly volume** in March 2026 (sector ATH per TRM Labs). Polymarket single-day record $425M (Mar 23)
+- **Polymarket: ~$20B valuation** (ICE/NYSE parent invested ~$2B total: $1B Oct 2025 + $600M Mar 2026). Secondary market implies $11.6B, exploring raise at ~$20B
+- **Kalshi: $22B valuation** ($1B+ raise from Sequoia, CapitalG, ARK). ~$1.5B estimated annual revenue. NFA-registered futures commission merchant for margin trading
+- **Combined sector valuation: $42B+** across the two market leaders alone
+- **840K+ monthly active wallets** on Polymarket (nearly tripled in 6 months). 865K monthly active users sector-wide (+118% YoY)
+- **5cc Capital**: first dedicated prediction market VC fund ($35M), backed by both Kalshi and Polymarket CEOs, Marc Andreessen, Ribbit Capital, ex-Multicoin. Focus: prediction market infrastructure (NOT exchanges). LEVER fits this thesis perfectly. First close ~April 2026
+- **Polymarket fee expansion** (Mar 30): taker fees now in 8 categories. ~$209M annualized net revenue. Geopolitics only fee-free category
+- **Polymarket acquisitions**: Dome (cross-platform API, Feb 2026), Brahma (DeFi execution infra, Mar 2026)
 - **268 projects tracked** globally (Prediction Index), but ZERO offer leveraged exposure. LEVER is the only leverage layer.
 - **$105-210B addressable market** based on derivatives-to-spot ratios (5-10x on $21B monthly)
 - Traditional derivatives offer 20-100x leverage across equities, commodities, currencies -- prediction markets have none
@@ -60,6 +64,14 @@ When the insurance fund exceeds 20% of TVL, the split shifts to 50/50/0 (LP and 
 - Largest prediction market on Base ($500M+ volume); potential integration target
 - Risk: if Limitless adds leverage, they become direct competitor with Coinbase backing
 - LEVER references external prices (Polymarket); Limitless creates its own markets
+
+**vs. OmenX (direct competitor, testnet launched March 30 2026):**
+- Multi-million angel round (Paramita, Penrose, M77, CEX founders). Founder: Former Head of Futures at Binance and Bybit
+- Targeting Base mainnet (same chain as LEVER)
+- No public technical documentation, no published risk framework, no disclosed max leverage
+- Points/airdrop system for user acquisition. AI agent integration planned
+- Claiming "industry-first leveraged prediction market" (factually false)
+- **Strong fundraising pedigree but marketing-first, architecture-second. No transparency.**
 
 **vs. Traditional prediction markets (Polymarket, Kalshi):**
 - 2-50x capital efficiency vs. 1x spot only

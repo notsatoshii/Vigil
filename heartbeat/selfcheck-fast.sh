@@ -148,7 +148,7 @@ if [ -f "$OVERSEER_ACTIONS" ]; then
     # One dispatch per run to avoid flooding
     break
 
-  done < <(grep "^ACTION|" "$OVERSEER_ACTIONS" 2>/dev/null)
+  done < <(sed -n '/^## PENDING/,/^## COMPLETED/p' "$OVERSEER_ACTIONS" 2>/dev/null | grep "^ACTION|")
 fi
 
 echo "[$TIMESTAMP] selfcheck-fast done. Problems: ${PROBLEM_COUNT}" >> "$LOG_FILE"
