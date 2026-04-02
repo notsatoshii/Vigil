@@ -3,6 +3,84 @@
 
 ---
 
+### ADVISOR DAILY BRIEF | 2026-04-02 06:00 UTC (Thursday)
+
+4 items. Day 6 of pipeline idle. ~150 hours since last code handoff. 47+ hours since last Master message.
+
+---
+
+**ITEM 1: DAY 6. THE SYSTEM IS WRITING REPORTS ABOUT HAVING NOTHING TO REPORT. (CRITICAL, SYSTEMIC, WORSENING)**
+
+- **Observation**: Last code handoff: March 30 04:27 UTC (150+ hours ago). Last Master message: March 31 06:48 UTC (47+ hours ago). KANBAN: zero in every column. 34+ consecutive overseer cycles with identical findings. 12 IMPROVE proposals aging (9 open for 6 days). The system has burned an estimated 130+ cron sessions since the last productive work, the vast majority producing self-observation output that nobody reads. We have spent more compute describing inactivity than we spent fixing all 9 LEVER bugs last week.
+- **Why it matters**: The competitive environment is not waiting. OmenX is funded and building on Base. Ultramarkets is live with 900+ users. Base explicitly named prediction markets as a 2026 priority. Every idle day widens the gap between our positioning (strong) and our product (broken testnet, no mainnet plan). The system works. It proved that March 28-30 when it shipped 9 bug fixes, a full dashboard, and a landing page redesign in 48 hours. It just has nothing to do.
+- **Proposed action**: When Master returns, Commander should lead with three concrete asks: (1) fund keeper wallet (2 min), (2) decide on Prediction Conference ($997, 20 days), (3) name the next 3 KANBAN items. Do not ask open-ended "what should we work on." Present the options from IMPROVE proposals and strategic priorities.
+- **Workstream**: Commander
+- **Risk**: CRITICAL. Competitive position eroding.
+- **Effort**: 30 minutes of Master's attention unlocks weeks of work.
+
+---
+
+**ITEM 2: KEEPER WALLET EMPTY. DAY 12. (CRITICAL, UNCHANGED)**
+
+- **Observation**: Wallet 0x0e4D636c6D79c380A137f28EF73E054364cd5434. Empty since March 22. Oracle stale. Accrual stalled. Protocol non-functional for demos. EXECUTION_ENGINE_ROLE grant pending.
+- **Why it matters**: 12 days of a broken testnet. A 2-minute faucet transaction. If we get an investor inquiry this week, there is no working product to show.
+- **Proposed action**: Fund it. Base Sepolia faucet. ~0.5 ETH.
+- **Workstream**: Master only
+- **Risk**: CRITICAL. Investor-facing.
+- **Effort**: 2 minutes.
+
+---
+
+**ITEM 3: PREDICTION CONFERENCE NOW 20 DAYS. CLOCK RUNNING. (HIGH, WORSENING)**
+
+- **Observation**: April 22-24, Las Vegas. $997 registration. 5cc Capital principals (Kalshi/Polymarket CEO-backed fund) likely attending. CEO workstream has competitive diff doc ready. No registration. No deck. No mainnet timeline to present. This item has been in the brief for 4 consecutive days.
+- **Why it matters**: In 20 days, OmenX will be in the room claiming "industry-first leveraged prediction markets on Base." We should be too, with a stronger narrative (we were building before them, deeper protocol design, institutional-grade architecture). But we need to register and prep. The $42B sector valuation makes the pitch compelling; the $997 is trivial relative to the opportunity.
+- **Proposed action**: Register. Route to CEO for targeted pitch deck once approved.
+- **Workstream**: CEO (pending Master)
+- **Risk**: HIGH. Opportunity cost unmeasurable. Competitors will be there.
+- **Effort**: $997 + 2-3 CEO sessions
+
+---
+
+**ITEM 4: NOVEMBER 2026 MIDTERMS: MAINNET BY JULY OR MISS THE WINDOW (STRATEGIC, NEW FRAMING)**
+
+- **Observation**: Polymarket's midterm markets already at $4.3M volume 7 months before the election. US midterms are historically the single largest volume driver for prediction markets. Working backwards from November: LEVER needs 3-4 months of stable mainnet operation to credibly handle election volume. That puts the hard deadline at July 2026. Today is April 2. That is 90 days. We have not started mainnet planning.
+- **Why it matters**: If we miss the midterm cycle, the next comparable volume event is the 2028 presidential primaries, two years away. The $42B sector will consolidate around whoever captures midterm volume. OmenX, Ultramarkets, and Polymarket's DeFi expansion all target this window.
+- **Proposed action**: When Master returns and KANBAN is populated, mainnet readiness should be the organizing principle. Not "what feature next" but "what gets us to mainnet by July." This means: (1) finish keeper/oracle fixes, (2) mainnet contract audit, (3) mainnet deployment scripts, (4) production frontend. Everything else is secondary.
+- **Workstream**: PLAN (when Master greenlights)
+- **Risk**: CRITICAL strategically. Missing November 2026 = missing the market's biggest onramp.
+- **Effort**: Full sprint. Multiple months.
+
+---
+
+### SYSTEM IMPROVEMENT PROPOSALS | 2026-04-02
+
+**Proposal 1: Reduce overseer frequency when idle (14th request)**
+
+When KANBAN is empty and no handoffs exist in 24 hours, reduce overseer from every 2 hours to every 8 hours. Saves ~9 sessions/day. The math is indefensible: we have run 34+ identical overseer cycles since March 30. Each reads the same 5 files, writes the same report, and costs the same compute. Nothing changes between cycles when nothing is happening. This proposal has now been repeated more times than any task on the KANBAN board has ever existed. Approve/reject: Master.
+
+**Proposal 2: Let ADVISOR add items to KANBAN BACKLOG (4th request)**
+
+ADVISOR identifies work (IMPROVE proposals, documentation gaps, test coverage). The scheduler has capacity. But ADVISOR is READ-ONLY and cannot populate KANBAN. This creates a deadlock where identified work sits in proposals forever while the system burns cron sessions doing nothing. Allowing ADVISOR to add items to BACKLOG (not IN PROGRESS, just BACKLOG) would let the system self-heal during idle periods. Master can review and reject any BACKLOG item. Approve/reject: Master.
+
+**Proposal 3: Prune OVERSEER_REPORT.md (maintenance)**
+
+OVERSEER_REPORT.md now contains 34+ reports, most identical. Propose pruning all reports older than 7 days, keeping only the most recent 5 and any that contain unique findings. This file is ballooning without adding information value.
+
+---
+
+### BRAIN MAINTENANCE | 2026-04-02
+
+- PROJECT_STATE.md: Will update (keeper Day 12, uptime 21 days, last Master contact March 31)
+- RECENT_SESSIONS.md: ~22 entries, under 30 cap, no pruning needed
+- OVERSEER_REPORT.md: 34+ entries, needs pruning (Proposal 3 above)
+- LESSONS.md: No new entries (no productive work)
+- DECISIONS.md: No new decisions
+- Scheduler double-logging bug: Still present (every ~10s cycle produces 2-3 duplicate lines). 13th cycle noting. Harmless but sloppy.
+- Infrastructure: RAM 16% (2.4G/15G), disk 19% (37G/193G), load 0.96, uptime 21 days. All health checks clean. All selfchecks clean. Solid.
+
+---
+
 ## MORNING MARKET SCAN - 2026-04-01 08:00 UTC
 
 9 items across all 5 domains.
