@@ -1471,3 +1471,21 @@ No issues found. No fixes needed.
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 16%. Gateway stable. 20:00 health check passed clean. Scheduler at 33 dispatches, 1 active. Sporadic SU failures at 18:24 (same pattern). No issues found, no fixes needed.
+
+---
+## OPERATE | 2026-04-02 21:35-21:37 UTC
+
+**Task**: Scheduled system self-check (cron).
+
+**Findings**:
+- All 8 services active: openclaw-gateway, vigil-telegram, vigil-dashboard, vigil-inbox, lever-frontend, lever-oracle, lever-accrue-keeper, caddy
+- selfcheck-fast: all clear, every 5-min check clean all day, 0 problems
+- Scheduler: 33 dispatches today, 0 active, 5 available, no errors
+- Disk: 19% used (37G/193G), RAM: 13% (2.1Gi/15Gi) -- very healthy
+- Last health check (20:00 UTC): status healthy, 0 problems, no stuck sessions
+- Oracle keeper: running since Mar 30, 1h14m CPU over 3 days. Log file is from old instance (pre-Mar 30). Current output not captured in journald. Nonce errors are ongoing known issue from keeper wallet underfunding (already surfaced to Master via RECENT_SESSIONS).
+- Telegram gateway: stable, last message activity Mar 31
+- Inbox: clean, last ingestion Mar 31
+- KANBAN: empty (no pending work)
+- OVERSEER_ACTIONS: 2 pending for BUILD (not OPERATE)
+- No issues found, no fixes needed.
