@@ -1431,3 +1431,13 @@ No issues found. No fixes needed.
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 19%. Gateway stable. 16:00 health check passed clean. Scheduler at 27 dispatches, 1 active. Sporadic SU failures at 14:24 (same pattern). No issues found, no fixes needed.
+
+---
+[2026-04-02 17:28 UTC] OPERATE self-check
+- All services active: openclaw-gateway, vigil-telegram, vigil-dashboard, vigil-inbox, lever-frontend, lever-oracle, lever-accrue-keeper, caddy
+- selfcheck-fast: all green for past 90+ min
+- Scheduler: 0 active, 5 available, 27 dispatched today, no errors
+- Disk: 19% used (safe), RAM: 13% -> freed to ~14% after cleanup
+- Found stale root claude PID 1788031 (sleeping since Mar30, ~275MB) -- killed, RAM freed
+- OVERSEER_ACTIONS: 2 MEDIUM/CRITICAL items for BUILD pending (scheduler SIGUSR1 handler, mainnet timeline discussion)
+- No Vigil system issues found. No fixes needed.
