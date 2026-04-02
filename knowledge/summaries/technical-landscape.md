@@ -98,7 +98,7 @@ Broad release with first-class plugins, multi-agent workflows, file watching, re
 ## Anthropic Regulatory Status (Updated: 2026-04-02)
 - **DOD designated Anthropic as "supply chain risk"** (March 3, 2026) after contract renegotiation breakdown over AI usage restrictions
 - **Northern District of California** (Judge Lin, March 26): granted preliminary injunction blocking the designation. Takes effect April 2.
-- **TODAY (April 2)**: Deadline for DOD to seek 9th Circuit emergency stay. If no stay filed, Anthropic wins this round.
+- **April 2 deadline passed**: No confirmed 9th Circuit emergency stay filing found in public reporting. If DOD missed the deadline, the preliminary injunction blocking the Anthropic ban is now IN EFFECT. Anthropic's restrictions on mass surveillance and lethal autonomous warfare remain intact. D.C. Circuit case (FASCSA § 4713) still pending separately.
 - **D.C. Circuit**: Separate FASCSA (§4713) designation still pending. D.C. panel has not ruled yet.
 - **Vigil impact**: Low direct risk. We use API, not a federal contract. But signals regulatory instability around our model provider. Monitor.
 
