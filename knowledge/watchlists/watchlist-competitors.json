@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-31T08:00:00Z",
+  "last_updated": "2026-04-02T08:00:00Z",
   "description": "Prediction market competitor tracking. Updated on each RESEARCH scan.",
   "entities": [
     {
@@ -36,7 +36,7 @@
           "significance": "high"
         }
       ],
-      "competitive_position": "dominant, 43% market share, moving aggressively on monetization and institutional integration. BANNED in Portugal (Jan 2026) and Hungary. Nuclear detonation market removed in March 2026 under pressure.",
+      "competitive_position": "dominant, 43% market share, moving aggressively on monetization and institutional integration. BANNED in Portugal (Jan 2026) and Hungary. Nuclear detonation market removed in March 2026 under pressure. Publicly feuding with Kalshi (attack ads, April 2026). Paradigm VC building prediction market terminal will use Polymarket data as primary feed.",
       "threat_to_lever": "Primary oracle source. If Polymarket delists categories under DEATH BETS Act or CFTC pressure, LEVER loses price feeds for those markets.",
       "opportunity_for_lever": "Taker fee expansion makes Polymarket more expensive. Fee-sensitive traders may migrate to lower-cost platforms."
     },
@@ -187,6 +187,52 @@
       "competitive_position": "Primary BNB Chain prediction market. Points system model. YZi Labs (Binance) backed.",
       "threat_to_lever": "XMarket competitor on BNB Chain. Much larger volume. YZi Labs backing gives ecosystem advantages.",
       "opportunity_for_lever": "XMarket's creator revenue share (50%) and CLOB model differentiates from Opinion's points model."
+    },
+    {
+      "name": "DraftKings Predictions",
+      "type": "prediction_market_exchange",
+      "chain": "TradFi (US regulated, all 50 states)",
+      "website": "https://draftkings.com/predictions",
+      "status": "live",
+      "last_scan": "2026-04-02",
+      "metrics": {
+        "parent_company_users": "10000000+",
+        "states_available": 50,
+        "launch_date": "2025-12-19",
+        "super_bowl_volume_multiplier": "3x average"
+      },
+      "recent_developments": [
+        {
+          "date": "2026-04-01",
+          "event": "Confirmed scaling as part of a 'super app' combining sports betting, prediction markets, and casino in all 50 states. CEO Jason Robins presented super app roadmap at investor day March 2.",
+          "significance": "high"
+        }
+      ],
+      "competitive_position": "TradFi-native, sportsbook-first entering prediction markets with 10M+ existing user base. Targeting same casual user as Kalshi/Polymarket but with sports-betting brand recognition. NOT DeFi-native.",
+      "threat_to_lever": "low direct. Different user segment (sportsbook users vs DeFi natives). But competes with Kalshi/Polymarket for casual users, which could reduce their growth and create more space for DeFi-native alternatives.",
+      "opportunity_for_lever": "Validates the sector. If DraftKings users want leverage on prediction outcomes, LEVER's DeFi-native leverage primitive is the answer the centralized platforms cannot provide."
+    },
+    {
+      "name": "Paradigm (trading terminal)",
+      "type": "prediction_market_infrastructure",
+      "chain": "multi-platform",
+      "website": "https://paradigm.xyz",
+      "status": "in development (building)",
+      "last_scan": "2026-04-02",
+      "metrics": {
+        "lead_partner": "Arjun Balaji",
+        "project_type": "Bloomberg-style trading terminal + market-making desk + prediction market index"
+      },
+      "recent_developments": [
+        {
+          "date": "2026-04-01",
+          "event": "Fortune exclusive: Paradigm building pro-grade prediction market trading terminal for institutional traders. Also building internal market-making business and an S&P 500-style prediction market index.",
+          "significance": "critical"
+        }
+      ],
+      "competitive_position": "VC becoming infrastructure operator. Terminal will route liquidity across Polymarket, Kalshi, and on-chain platforms. Index product would create passive exposure vehicles.",
+      "threat_to_lever": "medium. If Paradigm's terminal routes liquidity, they control the institutional distribution layer. LEVER needs to be a supported platform on any Paradigm terminal.",
+      "opportunity_for_lever": "DIRECT PITCH TARGET. Arjun Balaji is the right contact. LEVER is the DeFi leverage layer that does not yet exist in Paradigm's stack. Reach out before the terminal ships."
     },
     {
       "name": "5cc Capital",

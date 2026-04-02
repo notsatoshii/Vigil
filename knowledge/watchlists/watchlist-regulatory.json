@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-28T20:00:00Z",
+  "last_updated": "2026-04-02T08:00:00Z",
   "description": "Regulatory watchlist for prediction markets, DeFi, and stablecoin regulation.",
   "entities": [
     {
@@ -9,6 +9,12 @@
       "last_scan": "2026-03-28",
       "key_personnel": "Chairman Michael Selig",
       "recent_actions": [
+        {
+          "date": "2026-04-01",
+          "action": "Director of Enforcement David Miller announced at NYU Law School that insider trading laws apply to all prediction markets under CEA Section 6(c)(1) and Rule 180.1 (misappropriation theory). Five enforcement priority areas: insider trading in prediction markets, market manipulation, market abuse/disruptive trading, retail fraud, willful AML/KYC violations. This is the CFTC's first explicit enforcement posture on prediction market insider trading.",
+          "significance": "critical",
+          "source": "https://www.sullcrom.com/insights/memo/2026/April/CFTC-Updates-Enforcement-Priorities-Cooperation-Policy-Prediction-Markets-Insider-Trading"
+        },
         {
           "date": "2026-03-16",
           "action": "Published ANPR (Advanced Notice of Proposed Rulemaking) for prediction markets. Seeking public comment on principles-based framework addressing manipulation, asymmetric information, and sensitive event categories.",

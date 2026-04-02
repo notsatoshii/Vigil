@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-31T08:00:00Z",
+  "last_updated": "2026-04-02T08:00:00Z",
   "description": "Active geopolitical situations driving prediction market demand. Updated each RESEARCH scan.",
   "active_situations": [
     {
@@ -7,8 +7,8 @@
       "status": "active",
       "started": "2026-02-28",
       "day_number": 33,
-      "last_scan": "2026-03-31T14:21Z",
-      "summary": "Day 36 (April 2). TRUMP ADDRESS: war 'nearing completion,' will hit Iran 'extremely hard' for 2-3 more weeks. Iran navy 'gone,' air force 'in ruins,' most leaders dead. Threatened to bring Iran 'back to stone ages' if no deal. Considering NATO withdrawal. Asian stocks fell (Nikkei -2.1%, Kospi -3.9%). Iran denies seeking truce, fires more missiles at Israel. IRGC tech threat: conditional, no company strikes yet. April 6 energy deadline 4 days. Hormuz: 130/day to 6/day transit collapse.",
+      "last_scan": "2026-04-02T08:00Z",
+      "summary": "Day 33 (April 2). April 6 deadline is 4 days away. Iran publicly rejected US 15-point peace plan but privately signaling openness to talks. IRGC threatened conditional strikes on US companies (none executed). Hormuz transit collapsed from 130 ships/day to 6/day. Oil at $101.89 Brent (+4.8% daily), WTI at $94.48 (+4.6%). Binary outcome on April 6: energy infrastructure strikes, or ceasefire deal. Either outcome generates massive new prediction market volume. Supply disruption at 4.5-5M barrels/day.",
       "key_upcoming_dates": [
         {
           "date": "2026-04-06",
@@ -53,6 +53,21 @@
       "last_scan": "2026-03-28",
       "summary": "Markets already active. $4.1M Balance of Power market on Polymarket. Conditional markets launched March 2026. Volume expected to surge 6-9 months before November.",
       "prediction_market_demand": "growing - Polymarket reported 15% WoW growth on conditional election markets since February"
+    },
+    {
+      "name": "Peru General Election",
+      "status": "imminent",
+      "election_date": "2026-04",
+      "last_scan": "2026-04-02",
+      "summary": "General elections scheduled for April 2026 following the impeachment of President Dina Boluarte. Ongoing political uncertainty. XMarket opportunity: LatAm prediction market demand is growing. Peru is a key LatAm market for XMarket user acquisition.",
+      "prediction_market_demand": "medium - XMarket-relevant user acquisition opportunity"
+    },
+    {
+      "name": "US-China Summit (April 2026)",
+      "status": "anticipated",
+      "last_scan": "2026-04-02",
+      "summary": "Trump-Xi summit anticipated in April. Expected to produce tentative trade arrangement involving US semiconductors vs Chinese rare earth minerals. A deal would affect 317 active tariff prediction markets and reduce uncertainty for XMarket's Korea/SEA user base.",
+      "prediction_market_demand": "high if summit announced - binary outcome market"
     },
     {
       "name": "NYC Mayoral Election",

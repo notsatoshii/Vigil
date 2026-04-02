@@ -47,6 +47,15 @@ Published in Federal Register as 2026-05105. Principles-based framework seeking 
 - States estimate **$600M in lost tax revenue** from unregulated prediction markets
 - **California**: Governor Newsom signed executive order banning state appointees from insider prediction market trading
 
+### CFTC Enforcement Posture on Insider Trading (NEW - April 1, 2026)
+**David Miller** (Director of Enforcement, joined March 2): "We will aggressively detect, investigate, and prosecute insider trading in prediction markets." First public remarks at NYU Law School.
+- **Key legal basis**: CEA Section 6(c)(1) and Rule 180.1 (misappropriation theory). Same framework as traditional commodities insider trading.
+- **What is allowed**: Using your own knowledge/analysis to trade. "Participants are allowed to use their own knowledge."
+- **What is NOT allowed**: Trading on "misappropriated information" (stolen, tipped, confidential). Example: athlete's trainer using confidential injury info to trade.
+- **Prosecutorial discretion**: Will not pursue "trivial" cases. Focus on egregious misappropriation.
+- **Five enforcement priorities**: (1) insider trading in prediction markets, (2) market manipulation (especially energy), (3) market abuse/disruptive trading, (4) retail fraud, (5) willful AML/KYC violations.
+- **LEVER implication**: LEVER must consider whether leveraged positions amplify insider trading liability. Per-user position limits and on-chain transparency are defenses. LEVER does not facilitate information misappropriation; it provides a trading venue.
+
 ### Insider Trading Scandals
 - **Maduro ouster (Jan 2026)**: Polymarket user bought high volume of contracts predicting Maduro's removal in late Dec 2025/early Jan 2026. Profited $400K+ after US military captured Maduro on Jan 3.
 - **Iran strike (Feb 28, 2026)**: Six newly created Polymarket wallets earned ~$1.2M. Account "Magamyman" placed first trade 71 minutes before news broke, profited $553K.

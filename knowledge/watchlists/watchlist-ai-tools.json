@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-03-31T08:00:00Z",
+  "last_updated": "2026-04-02T08:00:00Z",
   "description": "AI models, agent frameworks, and dev tools relevant to Vigil system. Updated each RESEARCH scan.",
   "tools": [
     {
       "name": "Anthropic (company regulatory status)",
       "provider": "Anthropic",
-      "status": "WATCH - DOD injunction expires April 2",
-      "last_scan": "2026-03-31",
-      "notes": "Anthropic won preliminary injunction March 26 blocking Trump/DOD 'supply chain risk' designation and federal agency ban on Claude. Judge Lin ruled it 'First Amendment retaliation.' Injunction takes effect April 2. DOD has until April 2 to seek 9th Circuit emergency stay. If stay granted, Claude API usage by federal contractors disrupted (does not affect Vigil directly - we are not a federal contractor). Monitor April 2.",
+      "status": "MONITORING - April 2 is DOD 9th Circuit emergency stay deadline",
+      "last_scan": "2026-04-02",
+      "notes": "April 2 is the deadline for DOD to seek a 9th Circuit emergency stay of the preliminary injunction blocking the federal agency ban on Claude. If no stay is filed today, Anthropic wins this round. OPERATE workstream should check for any 9th Circuit filing by end of day April 2. Vigil is not a federal contractor so no direct impact either way.",
       "vigil_impact": "low direct risk. Server-side API not affected by federal contractor ban. But signals regulatory instability around Anthropic."
     },
     {
@@ -40,7 +40,7 @@
       "leak_date": "2026-03-26",
       "confirmed_by": "Anthropic via Fortune",
       "capabilities": "Dramatically outperforms Opus 4.6 on coding, reasoning, cybersecurity. Currently cybersecurity defense use only.",
-      "availability": "No API yet. Piloting with select customers (cybersecurity defense only). Polymarket gives 45% odds of public release by June 30, 2026. Consensus: Q3 2026. Possible IPO October 2026 may align with general API release late Q3/Q4.",
+      "availability": "No API yet. Piloting with select customers (cybersecurity defense only). Polymarket updated to approximately 25% odds of public access by April 30, 2026 (down from 45% for June 30). Consensus timing shifting toward Q3 2026. Possible IPO October 2026 may align with general API release late Q3/Q4.",
       "vigil_impact": "critical - when available, should replace Opus for SECURE workstream. May upgrade ADVISOR.",
       "action": "OPERATE to add monthly check: has Mythos API gone public? Check Anthropic release notes monthly."
     },
@@ -77,6 +77,15 @@
       "context_window": "1M tokens",
       "key_feature": "Tool Search API for large toolset systems. Native computer use.",
       "vigil_impact": "competitive intelligence only. We use Claude. But Tool Search architecture is worth monitoring for Vigil's tool routing design."
+    },
+    {
+      "name": "xAI Grok 4.20",
+      "provider": "xAI",
+      "status": "live",
+      "release_date": "2026-Q1",
+      "last_scan": "2026-04-02",
+      "key_feature": "Completely new multi-agent architecture. Different from GPT and Claude agent frameworks.",
+      "vigil_impact": "monitor only. Multi-agent architecture worth studying for future Vigil design. Not replacing Claude."
     },
     {
       "name": "OpenClaw",
