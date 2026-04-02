@@ -95,6 +95,15 @@ Broad release with first-class plugins, multi-agent workflows, file watching, re
 
 ---
 
+## Anthropic Regulatory Status (Updated: 2026-04-02)
+- **DOD designated Anthropic as "supply chain risk"** (March 3, 2026) after contract renegotiation breakdown over AI usage restrictions
+- **Northern District of California** (Judge Lin, March 26): granted preliminary injunction blocking the designation. Takes effect April 2.
+- **TODAY (April 2)**: Deadline for DOD to seek 9th Circuit emergency stay. If no stay filed, Anthropic wins this round.
+- **D.C. Circuit**: Separate FASCSA (§4713) designation still pending. D.C. panel has not ruled yet.
+- **Vigil impact**: Low direct risk. We use API, not a federal contract. But signals regulatory instability around our model provider. Monitor.
+
+---
+
 ## Arbitrum: Multi-Chain Expansion Target (Ingested: 2026-03-30)
 
 Arbitrum One (Chain ID 42161) is LEVER's Q3-Q4 2026 multi-chain expansion target per roadmap.
