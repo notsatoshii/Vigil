@@ -1,0 +1,25 @@
+{
+  "id": "20260402-142200-polymarket-kalshi-feud",
+  "ingestedAt": "2026-04-02T14:22:00Z",
+  "sourceType": "Web scan (Bloomberg, NPR, Gizmodo)",
+  "reliability": "High (Bloomberg, NPR)",
+  "scanType": "Competitor dynamics: Polymarket vs Kalshi feud",
+
+  "summary": [
+    "Kalshi launched Washington DC ad campaign attacking Polymarket: 'death markets,' insider trading, illegal behavior. Ads in Washington Post. Kalshi employee called Polymarket 'irresponsible, dangerous, and illegal.'",
+    "Kalshi positioning as the regulated, responsible platform. Polymarket staying quiet, building faster and broader for global audience.",
+    "Bloomberg headline: 'Death Markets and Attack Ads: Prediction Rivalry Turns Nasty.' The two market leaders are consuming each other's attention while the leveraged prediction market space (LEVER, Ultramarkets, OmenX) builds underneath.",
+    "This feud creates opportunity for LEVER: both platforms are focused on fighting each other, not on the leverage layer being built on top of them. LEVER is infrastructure for BOTH platforms, not a competitor to either."
+  ],
+
+  "workstreamTags": {
+    "CEO": "The Kalshi-Polymarket feud is a gift for LEVER's positioning. LEVER is not competing with either platform. LEVER is infrastructure that makes BOTH more useful by adding leverage. When investors ask 'Kalshi or Polymarket?', the answer is 'LEVER works with both.' The feud also distracts both platforms from noticing the leverage layer being built.",
+    "ADVISOR": "Kalshi's DC ad campaign shows it is playing the regulatory game to survive congressional bills. Polymarket is playing the global growth game. LEVER should stay neutral, build dual-oracle (reference both), and position as the infrastructure layer that is agnostic to which platform wins."
+  },
+
+  "sources": [
+    {"title": "Bloomberg: Death Markets and Attack Ads", "url": "https://www.bloomberg.com/news/articles/2026-04-01/-death-markets-and-attack-ads-prediction-rivalry-turns-nasty", "dateAccessed": "2026-04-02", "sourceType": "Primary", "reliability": "High"},
+    {"title": "NPR: Kalshi and Polymarket CEOs Are Fierce Rivals", "url": "https://www.npr.org/2026/03/06/nx-s1-5735893/iran-war-kalshi-polymarket-feud", "dateAccessed": "2026-04-02", "sourceType": "Primary", "reliability": "High"},
+    {"title": "Gizmodo: Polymarket and Kalshi CEOs Hate Each Other", "url": "https://gizmodo.com/polymarket-and-kalshis-ceos-hate-each-other-2000730786", "dateAccessed": "2026-04-02", "sourceType": "Secondary", "reliability": "Medium"}
+  ]
+}
