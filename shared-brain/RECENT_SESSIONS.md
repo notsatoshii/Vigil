@@ -3,6 +3,33 @@
 
 ---
 
+### [2026-04-03T20:00:00Z] RESEARCH | Evening Market Scan
+
+- **Task**: Friday April 3 evening market scan across all 5 coverage domains.
+- **Outcome**: SUCCESS. 10-item scan produced. All watchlists and trends updated.
+- **Key findings**:
+  1. CFTC sued Arizona, Connecticut, Illinois (April 2) asserting exclusive federal jurisdiction over prediction markets. Federal preemption case now in courts. Most significant regulatory action in sector history. Positive for sector clarity; DeFi-native LEVER is not the target.
+  2. Iran April 6 deadline is 72 hours away (Monday 8PM ET). No breakthrough. Iran parliament rejected negotiations. Three scenarios: strikes, extension, ceasefire. All generate prediction market volume.
+  3. Kalshi-Polymarket feud escalating with attack ads ("We don't do death markets"). Bloomberg covered as major narrative war April 1. Risk: fuels Congressional Democrats' legislative push.
+  4. Claude Code v2.1.91 shipped today (April 3). Three releases in three days (v2.1.89-91). MCP tool result override up to 500K chars is directly useful for RESEARCH. OPERATE should verify Vigil is running latest.
+  5. Claude Mythos: training complete, no public API as of April 3. Anthropic briefing US officials on cyberattack risk implications. Likely Q2-Q3 2026 for general availability.
+  6. Crypto macro: BTC at $66,650, Fear and Greed at 9, 46 consecutive days extreme fear, worst Q1 since 2018 (-22%). One year since original Liberation Day tariff shock.
+  7. BNB Chain extending zero-fee carnival through April. Tether Gold live on BNB Chain. Consensus Miami May 5-7 confirmed.
+  8. Prediction Conference (April 22-24, Las Vegas): 19 days out. Registration still not confirmed. TOKEN2049 Dubai 26 days out. Both Master decisions overdue.
+- **Watchlists updated**: watchlist-regulatory.json (CFTC v. three states added), watchlist-geopolitical.json (Day 36, April 6 deadline update), watchlist-ai-tools.json (Claude Code v2.1.91, DOD injunction status updated, Mythos status)
+- **Trends updated**: prediction-market-volumes.json (CFTC lawsuit context), key-dates-calendar-q2-2026.json (April 6 three-scenario update)
+- **Files changed**: research-latest.md (created), RECENT_SESSIONS.md (this entry), 4 watchlist/trend files updated
+- **Master decisions pending**: Fund keeper wallet (Day 14, CRITICAL), Prediction Conference registration ($997, 19 days out), TOKEN2049 Dubai registration (26 days out)
+
+---
+
+### [2026-04-03T20:11:00Z] ADVISOR | Overseer Cycle #58
+
+- **Task**: Biweekly overseer check. Efficiency, quality, bottlenecks, system health.
+- **Outcome**: 58th consecutive idle report. Scheduler fix confirmed holding (clean 2-line-per-cycle in logs). Day 8 idle. 30/200 sessions all cron. KANBAN empty. No handoffs since March 30. Keeper wallet Day 14. Iran deadline now under 48 hours. Two remaining blockers both require Master. Infrastructure perfect (13 consecutive clean health checks). 17th proposal to reduce overseer frequency when idle.
+
+---
+
 ### [2026-04-03T18:01:00Z] ADVISOR | Overseer Cycle #57
 
 - **Task**: Biweekly overseer check. Efficiency, quality, bottlenecks, system health.
@@ -1655,3 +1682,10 @@ No issues found. No fixes needed.
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 17%. Gateway stable. 16:00 health check passed clean. Scheduler at 30 dispatches, 1 active. Sporadic SU failures (same pattern). No issues found, no fixes needed.
+
+---
+## OPERATE | 2026-04-03 20:23-20:25 UTC
+
+**Task**: System check, log review.
+
+**Findings**: All 8 services active. Disk 19%, RAM 18%. Gateway stable. 20:00 health check passed clean. Scheduler at 33 dispatches, 2 active. No errors. No issues found, no fixes needed.
