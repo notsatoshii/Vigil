@@ -1614,3 +1614,30 @@ No issues found. No fixes needed.
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 25%. Gateway stable. 16:00 health check passed clean. Scheduler at 27 dispatches, 3 active. Sporadic SU failures (same pattern). No issues found, no fixes needed.
+
+---
+## OPERATE | 2026-04-03 17:51-17:53 UTC
+
+**Task**: System self-check (manual trigger from Commander).
+
+**Findings**:
+- All 8 services active: openclaw-gateway, vigil-telegram, vigil-dashboard, vigil-inbox, lever-frontend, lever-oracle, lever-accrue-keeper, caddy
+- Disk: 19% used (37G/193G) - healthy
+- RAM: 2.1GB/15GB used, 13GB available - healthy
+- Landing page (port 3001) running under root - stable
+- Gateway memory: 2.6GB for openclaw-gateway (peak 9.6GB) - within acceptable range, no action needed
+- SU failure pattern continues (~30min intervals) - known recurring pattern, no escalation
+
+**Issue Found and Fixed**:
+- DUPLICATE SCHEDULER PROCESSES detected: PID 280029 (lever, nohup from a Claude session Apr 1) and PID 612524 (root, systemd-managed, correct one) were both running
+- This caused every log line to appear twice in scheduler.log and every dispatch event to fire twice
+- Killed rogue PIDs: 280029 (scheduler) and 280028 (orphan bash wrapper)
+- Only the systemd-managed scheduler (PID 612524) remains
+- Confirmed single entries in scheduler.log post-fix
+
+**OVERSEER_ACTIONS pending**:
+- MEDIUM|build: Scheduler SIGUSR1 reload handler (low urgency)
+- CRITICAL|build: Three funded competitors, mainnet timeline discussion (routing to Commander for Master)
+
+**No frustration events added to TIMMY_PERSONALITY.md** - session was clean.
+
