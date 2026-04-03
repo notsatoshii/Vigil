@@ -1,14 +1,14 @@
 {
-  "last_updated": "2026-04-02T08:00:00Z",
+  "last_updated": "2026-04-03T20:00:00Z",
   "description": "AI models, agent frameworks, and dev tools relevant to Vigil system. Updated each RESEARCH scan.",
   "tools": [
     {
       "name": "Anthropic (company regulatory status)",
       "provider": "Anthropic",
-      "status": "MONITORING - April 2 is DOD 9th Circuit emergency stay deadline",
-      "last_scan": "2026-04-02",
-      "notes": "April 2 is the deadline for DOD to seek a 9th Circuit emergency stay of the preliminary injunction blocking the federal agency ban on Claude. If no stay is filed today, Anthropic wins this round. OPERATE workstream should check for any 9th Circuit filing by end of day April 2. Vigil is not a federal contractor so no direct impact either way.",
-      "vigil_impact": "low direct risk. Server-side API not affected by federal contractor ban. But signals regulatory instability around Anthropic."
+      "status": "MONITORING - DOD injunction status past deadline",
+      "last_scan": "2026-04-03",
+      "notes": "April 2 deadline for DOD to seek 9th Circuit emergency stay has passed. No confirmed stay filing found in April 3 search. Anthropic appears to have won this round. Vigil is not a federal contractor so no direct impact. Separately: Anthropic privately briefing top US officials on Claude Mythos cyberattack risk implications -- signals Anthropic taking government relations very seriously.",
+      "vigil_impact": "low direct risk. Server-side API not affected by federal contractor ban. Anthropic's government engagement increases, not decreases."
     },
     {
       "name": "Claude Sonnet 4.6",
@@ -48,8 +48,8 @@
       "name": "Claude Code",
       "provider": "Anthropic",
       "status": "active - core Vigil tool",
-      "version": "v2.1.76",
-      "last_scan": "2026-03-28",
+      "version": "v2.1.91",
+      "last_scan": "2026-04-03",
       "march_2026_features": [
         "/loop command - recurring background task execution (cron-like)",
         "/voice command - push-to-talk, 20 languages, hold spacebar to activate",
@@ -60,10 +60,15 @@
         "/effort command with 'ultrathink' keyword for max compute",
         "--channels flag for MCP message pushes"
       ],
+      "april_2026_features": [
+        "v2.1.91 (April 3): MCP tool result persistence override via _meta[anthropic/maxResultSizeChars] up to 500K chars. Plugin executables in bin/. Multi-line prompt support in deep links. Faster Edit tool with shorter anchors.",
+        "v2.1.90 (April 2): /powerup interactive lessons with animated demos. Marketplace cache kept during offline scenarios. Rate-limit dialog loop fix.",
+        "v2.1.89 (April 1): Defer permission decision for PreToolUse hooks in headless sessions. Flicker-free rendering (CLAUDE_CODE_NO_FLICKER=1). Named subagents in typeahead. Windows/long-session stability improvements."
+      ],
       "known_bugs": [
         "Rate limit drain bug reported March 26 - suspected but unconfirmed"
       ],
-      "vigil_impact": "/loop could replace some OpenClaw cron jobs. Computer Use could enable visual dashboard verification. Agent Teams (CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS) now stable after March early-month patches (nested spawning bug and memory leak fixed). Vigil multi-session architecture could migrate to native Agent Teams, reducing OpenClaw orchestration overhead.",
+      "vigil_impact": "MCP tool result override to 500K chars is directly useful for RESEARCH workstream (large web page fetches). /powerup lessons could improve new-developer onboarding. OPERATE should verify Vigil is running v2.1.91. Agent Teams (CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS) production-stable.",
       "agent_teams_status": "production-stable as of March 2026. Requires v2.1.32+. Disabled by default. Enable via CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS in settings.json."
     },
     {

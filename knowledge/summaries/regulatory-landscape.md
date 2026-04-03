@@ -16,7 +16,16 @@ Published in Federal Register as 2026-05105. Principles-based framework seeking 
 
 ---
 
-### CFTC (United States): Supportive but Under Pressure
+### CFTC SUES THREE STATES (April 2, 2026) *** GAME-CHANGER ***
+**The CFTC and DOJ filed federal lawsuits against Arizona, Connecticut, and Illinois** asserting exclusive federal jurisdiction over prediction markets. Chairman Selig: "Congress specifically rejected a fragmented patchwork of state regulations."
+- States had sent cease-and-desist orders to Kalshi and Crypto.com. Arizona filed criminal charges against Kalshi.
+- CFTC argues prediction markets are SWAPS under the Commodity Exchange Act, making them federally regulated derivatives under CFTC exclusive jurisdiction.
+- This effectively shields Kalshi and Polymarket from state interference if CFTC wins.
+- **At stake**: whether prediction markets are financial instruments (CFTC jurisdiction) or gambling products (state jurisdiction).
+- **LEVER impact**: MASSIVELY POSITIVE. Federal preemption of state interference = regulatory certainty for the sector. Our oracle sources gain federal protection. Fundraising narrative strengthened: "The US federal government is actively defending prediction markets as legitimate financial instruments."
+- Sources: [CoinDesk](https://www.coindesk.com/policy/2026/04/02/cftc-sues-illinois-over-state-s-cease-and-desist-letters-against-prediction-markets) | [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-02/cftc-sues-illinois-over-state-effort-to-limit-prediction-markets) | [CNBC](https://www.cnbc.com/2026/04/02/prediction-market-lawsuit-regulation-arizona-coonecticut-illinois.html)
+
+### CFTC (United States): Supportive and ACTIVELY DEFENDING the sector
 - **January 2026**: Chairman Michael Selig announced four-part agenda to support responsible development of event contract markets
 - **Key action**: Withdrew the 2024 proposed rule that would have prohibited political/sports contracts
 - **March 16, 2026**: Published Advanced Notice of Proposed Rulemaking (ANPR) for prediction markets. Principles-based regime addressing manipulation and asymmetric information. **Comment deadline: April 30, 2026.**

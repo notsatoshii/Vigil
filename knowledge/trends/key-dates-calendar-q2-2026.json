@@ -12,10 +12,17 @@
     },
     {
       "date": "2026-04-06",
-      "event": "Trump deadline: Iran energy infrastructure strikes OR peace deal",
+      "event": "Trump deadline: Iran energy infrastructure strikes OR peace deal (8PM ET Monday)",
       "category": "geopolitics",
-      "impact": "Binary outcome. Strikes = oil shock + more prediction market volume. Deal = different market dynamics. Either way, prediction demand stays elevated.",
-      "action": "Watch for ceasefire breakthrough or escalation"
+      "status": "IMMINENT -- 72 HOURS. No breakthrough as of April 3 evening.",
+      "three_scenarios": {
+        "strikes": "Trump hits 15 Iranian power grid nodes. Oil spike above $120. New prediction market wave on escalation/de-escalation.",
+        "extension": "Fourth deadline extension. Markets recalibrate, another pause. Volume continues elevated.",
+        "ceasefire": "Surprise deal. Polymarket ceasefire-by-April-30 at 56% odds. Oil crashes, crypto recovers, midterm prediction markets accelerate."
+      },
+      "impact": "All three outcomes generate prediction market volume. Strikes or ceasefire are bigger volume drivers than extension.",
+      "action": "Monday night watch. RESEARCH scan April 6-7 morning to update geopolitical watchlist.",
+      "last_updated": "2026-04-03T20:00Z"
     },
     {
       "date": "2026-04-06",

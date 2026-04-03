@@ -1,8 +1,15 @@
 {
   "description": "Weekly prediction market volume snapshots. Updated each RESEARCH scan.",
-  "last_updated": "2026-03-29T00:14:00Z",
+  "last_updated": "2026-04-03T20:00:00Z",
   "unit": "USD",
   "snapshots": [
+    {
+      "date": "2026-04-03T20:00Z",
+      "period": "weekly_update_evening_scan",
+      "notes": "CFTC sued AZ/CT/IL April 2 to assert exclusive federal jurisdiction over prediction markets. Federal preemption case now in federal courts. Kalshi-Polymarket feud escalating with Kalshi running attack ads ('We don't do death markets') in Washington. Combined weekly volume remains near $5.9B record. Iran April 6 deadline 72 hours away -- both outcome scenarios (strikes or ceasefire) generate new prediction market volume. CFTC ANPR comment deadline April 30.",
+      "sector_narrative": "The sector is simultaneously at record volumes AND facing maximum regulatory scrutiny. Federal preemption case outcome will define the industry structure for years. Decentralized (DeFi-native) platforms are not the target of any action.",
+      "source": "CFTC.gov press release 9206-26, Bloomberg April 1, Axios April 3"
+    },
     {
       "date": "2026-03-31T12:21Z",
       "period": "monthly_milestone",

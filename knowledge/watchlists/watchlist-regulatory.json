@@ -6,9 +6,17 @@
       "name": "CFTC",
       "jurisdiction": "United States (federal)",
       "current_stance": "supportive",
-      "last_scan": "2026-03-28",
+      "last_scan": "2026-04-03",
       "key_personnel": "Chairman Michael Selig",
       "recent_actions": [
+        {
+          "date": "2026-04-02",
+          "action": "CFTC filed lawsuits against Arizona, Connecticut, and Illinois asserting exclusive federal jurisdiction over prediction markets under the Commodity Exchange Act. Chairman Selig: 'Congress specifically rejected a fragmented patchwork of state regulations.' Federal preemption of state interference. Most significant regulatory action in prediction market history. Effectively shields Kalshi and Polymarket from state cease-and-desist orders.",
+          "significance": "critical",
+          "source": "https://www.cftc.gov/PressRoom/PressReleases/9206-26",
+          "lever_impact": "positive. DeFi-native LEVER is not the target but our oracle sources (Polymarket, Kalshi) gain federal protection. Regulatory certainty for the sector increases our fundraising narrative.",
+          "last_scan_note": "2026-04-03 evening"
+        },
         {
           "date": "2026-04-01",
           "action": "Director of Enforcement David Miller announced at NYU Law School that insider trading laws apply to all prediction markets under CEA Section 6(c)(1) and Rule 180.1 (misappropriation theory). Five enforcement priority areas: insider trading in prediction markets, market manipulation, market abuse/disruptive trading, retail fraud, willful AML/KYC violations. This is the CFTC's first explicit enforcement posture on prediction market insider trading.",
