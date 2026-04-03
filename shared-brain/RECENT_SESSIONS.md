@@ -1569,3 +1569,13 @@ No issues found. No fixes needed.
 
 **Findings**: All 8 services active. Disk 19%, RAM 12% (2058MB/15993MB). Gateway stable. 08:00 health check clean, 0 problems. selfcheck-fast running clean all morning (0 problems every 5 min). Scheduler at 18 dispatches, 0 active. Sporadic SU failures continue (known pattern). Gateway update available: v2026.4.2 vs current v2026.3.24 -- flagging for Master. PENDING OVERSEER_ACTIONS (BUILD-targeted, not OPERATE): MEDIUM scheduler SIGUSR1 handler, CRITICAL mainnet timeline discussion re: 3 funded Base competitors. No OPERATE actions pending. No fixes needed.
 
+
+---
+[2026-04-03 11:45 UTC] OPERATE self-check
+- All 8 services active: openclaw-gateway, vigil-telegram, vigil-dashboard, vigil-inbox, lever-frontend, lever-oracle, lever-accrue-keeper, caddy
+- Disk: 19% used (37G/193G). RAM: 2.2GB/15GB used, 13GB available. Healthy.
+- Scheduler: 18 sessions today, 5 slots free, no errors. KANBAN empty (all done).
+- Gateway logs: no errors since last check. Note: OpenClaw update available v2026.4.2 (current v2026.3.24).
+- OVERSEER_ACTIONS: 2 pending (both for BUILD, not OPERATE): scheduler SIGUSR1 reload and mainnet timeline discussion.
+- No new frustration events in observation log.
+- No issues found. No action taken.
