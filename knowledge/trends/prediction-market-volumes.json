@@ -15,6 +15,14 @@
       "kalshi_march_volume": "12000000000",
       "combined_march_volume": "22150000000",
       "notes": "BOTH PLATFORMS HIT ATH. Polymarket $10.15B (first time above $10B). Kalshi $12B. Combined $22B+. March Madness + Iran war driving surge. Polymarket unique users up 14.4% to 768K. Fee expansion (March 30) did NOT slow volume.",
+      "iran_ceasefire_odds_april3": {
+        "ceasefire_by_april30": "56%",
+        "ceasefire_by_june30": "61%",
+        "ceasefire_by_dec31": "72%",
+        "ceasefire_before_oil_120": "26%",
+        "total_ceasefire_market_volume": "$84.5M",
+        "source": "Polymarket, April 3 2026"
+      },
       "source": "Token Terminal, Polymarket"
     },
     {
