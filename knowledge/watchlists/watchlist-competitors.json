@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-02T08:00:00Z",
+  "last_updated": "2026-04-04T08:00:00Z",
   "description": "Prediction market competitor tracking. Updated on each RESEARCH scan.",
   "entities": [
     {
@@ -36,7 +36,7 @@
           "significance": "high"
         }
       ],
-      "competitive_position": "dominant, 43% market share, moving aggressively on monetization and institutional integration. BANNED in Portugal (Jan 2026) and Hungary. Nuclear detonation market removed in March 2026 under pressure. Publicly feuding with Kalshi (attack ads, April 2026). Paradigm VC building prediction market terminal will use Polymarket data as primary feed.",
+      "competitive_position": "dominant, 46% monthly volume share ($10.15B/$22B combined March 2026 ATH). Moving aggressively on monetization and institutional integration. BANNED in Portugal (Jan 2026) and Hungary. Nuclear detonation market removed in March 2026 under pressure. Publicly feuding with Kalshi (attack ads, April 2026). Paradigm VC building prediction market terminal will use Polymarket data as primary feed. 768,476 unique users in March 2026 (up 14.4% MoM). 50M+ combined users with Kalshi cited April 2026.",
       "threat_to_lever": "Primary oracle source. If Polymarket delists categories under DEATH BETS Act or CFTC pressure, LEVER loses price feeds for those markets.",
       "opportunity_for_lever": "Taker fee expansion makes Polymarket more expensive. Fee-sensitive traders may migrate to lower-cost platforms."
     },
@@ -110,8 +110,8 @@
       "type": "leveraged_prediction_market",
       "chain": "Base (mainnet target)",
       "website": "https://alpha.omenx.com",
-      "status": "public testnet live (March 30, 2026)",
-      "last_scan": "2026-03-31",
+      "status": "public testnet live (March 30, 2026). Still testnet as of April 4, 2026. No mainnet date announced.",
+      "last_scan": "2026-04-04",
       "metrics": {
         "funding": "multi-million dollar angel round",
         "investors": "Paramita VC, Penrose Ventures, M77 Ventures, CEX founders"

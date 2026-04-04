@@ -4,6 +4,18 @@
   "unit": "USD",
   "snapshots": [
     {
+      "date": "2026-04-04T08:00Z",
+      "period": "weekly_update_morning_scan",
+      "btc_price": 66855,
+      "fear_greed_index": 11,
+      "fear_greed_label": "extreme_fear",
+      "brent_crude": 107,
+      "bnb_chain_tvl_usd": 5400000000,
+      "base_tvl_usd": 4000000000,
+      "notes": "First green BTC month since September 2025. F&G at 11 (improving from 9 but still extreme fear). Iran deadline 36 hours away. Combined March ATH confirmed ($22B: Polymarket $10.15B + Kalshi $12B). 13 federally regulated prediction market platforms now operational in US. Counter-cyclical thesis confirmed: sector at ATH while crypto in extreme fear. GPT-5.5 Spud pretraining complete -- release weeks away.",
+      "source": "CoinGabbar, BlockchainMagazine, DeFiLlama, April 4 2026"
+    },
+    {
       "date": "2026-04-03T20:00Z",
       "period": "weekly_update_evening_scan",
       "notes": "CFTC sued AZ/CT/IL April 2 to assert exclusive federal jurisdiction over prediction markets. Federal preemption case now in federal courts. Kalshi-Polymarket feud escalating with Kalshi running attack ads ('We don't do death markets') in Washington. Combined weekly volume remains near $5.9B record. Iran April 6 deadline 72 hours away -- both outcome scenarios (strikes or ceasefire) generate new prediction market volume. CFTC ANPR comment deadline April 30.",

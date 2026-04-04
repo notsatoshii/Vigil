@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-04-03T20:00:00Z",
+  "last_updated": "2026-04-04T08:00:00Z",
   "description": "AI models, agent frameworks, and dev tools relevant to Vigil system. Updated each RESEARCH scan.",
   "tools": [
     {
       "name": "Anthropic (company regulatory status)",
       "provider": "Anthropic",
-      "status": "MONITORING - DOD injunction status past deadline",
-      "last_scan": "2026-04-03",
-      "notes": "April 2 deadline for DOD to seek 9th Circuit emergency stay has passed. No confirmed stay filing found in April 3 search. Anthropic appears to have won this round. Vigil is not a federal contractor so no direct impact. Separately: Anthropic privately briefing top US officials on Claude Mythos cyberattack risk implications -- signals Anthropic taking government relations very seriously.",
+      "status": "MONITORING - DOD injunction resolved, context window beta deprecation incoming",
+      "last_scan": "2026-04-04",
+      "notes": "DOD injunction: April 2 deadline passed, no confirmed stay filing. Anthropic won this round. IMPORTANT: Anthropic retiring 1M token context window BETA for Claude Sonnet 4.5 and Claude Sonnet 4 on April 30, 2026. Beta header will have no effect after that date; requests exceeding standard 200K context will error. Vigil uses Sonnet 4.6 and Opus 4.6 (not affected). OPERATE: verify no Vigil scripts call Sonnet 4.5 or 4 with extended context beta header.",
       "vigil_impact": "low direct risk. Server-side API not affected by federal contractor ban. Anthropic's government engagement increases, not decreases."
     },
     {
@@ -76,12 +76,23 @@
       "provider": "OpenAI",
       "status": "live",
       "release_date": "2026-03-05",
-      "last_scan": "2026-03-28",
+      "last_scan": "2026-04-04",
       "ai_index_score": "57 (tied #1 with Gemini 3.1 Pro)",
       "computer_use_success_rate": "75% (OSWorld), vs 72.4% human baseline",
       "context_window": "1M tokens",
       "key_feature": "Tool Search API for large toolset systems. Native computer use.",
       "vigil_impact": "competitive intelligence only. We use Claude. But Tool Search architecture is worth monitoring for Vigil's tool routing design."
+    },
+    {
+      "name": "GPT-5.5 (Spud)",
+      "provider": "OpenAI",
+      "status": "pretraining complete, not yet released",
+      "pretraining_complete": "2026-03-24",
+      "expected_release": "April-May 2026 (Sam Altman: 'a few weeks')",
+      "last_scan": "2026-04-04",
+      "key_feature": "Greg Brockman: 'two years of research, big model feel'. OpenAI discontinued Sora to redirect resources. Whether ships as GPT-5.5 or GPT-6 unconfirmed.",
+      "vigil_impact": "monitor only. Race with Mythos is real. If Spud ships before Mythos, OpenAI recaptures benchmark leadership temporarily. Not replacing Claude for Vigil.",
+      "polymarket_market": "https://polymarket.com/event/gpt-5pt5-released-by"
     },
     {
       "name": "xAI Grok 4.20",

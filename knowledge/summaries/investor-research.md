@@ -51,6 +51,12 @@ When the insurance fund exceeds 20% of TVL, the split shifts to 50/50/0 (LP and 
 
 ### Competitive Advantages
 
+**vs. Kalshi Kinetic Markets (institutional margin trading, FCM registered March 24 2026):**
+- Kalshi is adding margin trading through TradFi regulatory route (FCM registration)
+- Institutional-only initially, may expand to retail later
+- Requires CFTC rulebook approval (not yet granted)
+- LEVER differentiator: DeFi-native (permissionless, 24/7, no KYC), 50x leverage (vs TradFi margin ratios), ERC-4626 composability with DeFi ecosystem
+
 **vs. Ultramarkets (direct competitor, LIVE with 900+ users as of March 30 2026):**
 - 50x max leverage vs. Ultramarkets' 10x cap
 - Continuous time-based risk curves vs. binary pre-resolution auto-close

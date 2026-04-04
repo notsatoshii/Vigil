@@ -147,14 +147,17 @@ Polymarket made 2 acquisitions in 2 months:
 - **URGENCY**: OmenX on Base = direct race for the same users. LEVER must reach Base mainnet first.
 - [GlobeNewsWire](https://www.globenewswire.com/news-release/2026/03/30/3264730/0/en/OmenX-Secures-Multi-Million-Dollar-Seed-Funding-to-Launch-Industry-First-Leveraged-Prediction-Market-Public-Testnet-Now-Live.html)
 
-### THREE-WAY COMPETITIVE RACE (as of March 31, 2026)
-| Protocol | Status | Leverage | Chain | Funding |
-|----------|--------|----------|-------|---------|
+### FOUR-WAY COMPETITIVE RACE (as of April 4, 2026)
+| Protocol | Status | Leverage | Chain/Platform | Funding |
+|----------|--------|----------|----------------|---------|
+| **Kalshi (Kinetic Markets)** | **FCM registered (March 24)** | Margin trading (institutional) | TradFi (CFTC-regulated) | $22B valuation |
 | Ultramarkets | **LIVE** (900+ users) | 10x | Unknown | Unknown |
 | OmenX | **Testnet** (funded) | Perp-style (TBD) | Base (target) | Multi-million angel |
 | **LEVER** | **Testnet** | 2-50x | Base | Pre-seed |
 
-LEVER has the best architecture. But architecture without deployment is a whitepaper.
+**Kalshi entering the leverage space** changes the race. Their FCM registration enables institutional margin trading on prediction markets. Still needs CFTC rulebook approval and will start institutional-only. But a $22B platform adding leverage is the biggest competitive threat. LEVER's advantage: DeFi-native, permissionless, 24/7, 50x leverage, retail + institutional. Kalshi's advantage: CFTC-regulated, institutional trust, massive existing volume ($12B/month).
+
+LEVER has the best DeFi architecture. But the space is no longer "unique."
 
 ### Limitless Exchange (ADJACENT, ON BASE)
 - **What**: Largest prediction market on Base. Binary options-style short-term markets (1-min to zero-day expiry). NOT leveraged positions.
