@@ -42,6 +42,14 @@
         "total_ceasefire_market_volume": "$84.5M",
         "source": "Polymarket, April 3 2026"
       },
+      "iran_ceasefire_odds_april4": {
+        "ceasefire_by_dec31": "72% (unchanged)",
+        "total_ceasefire_market_volume": "$87.7M (+$3.2M in 2 days)",
+        "new_market": "Will Iranian regime fall by April 30? (active)",
+        "new_market2": "Strait of Hormuz traffic returns to normal by end of May? (active)",
+        "iran_48h_truce_rejected": true,
+        "source": "Polymarket, April 4 2026"
+      },
       "source": "Token Terminal, Polymarket"
     },
     {

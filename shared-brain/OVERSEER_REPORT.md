@@ -4,6 +4,66 @@
 
 ---
 
+## 2026-04-04 12:01 UTC (Saturday, 12:01 PM) [OVERSEER CYCLE #66]
+
+### STATUS: Day 10 idle. 18/200 sessions (all cron). 66th consecutive idle report.
+
+### THE BLUNT VERSION
+
+Same factory. Same emptiness. Same report. Here is what is real:
+
+**1. Iran deadline is TOMORROW. LEVER is a ghost town. (CRITICAL, DAY 5 OF ESCALATION)**
+
+Under 24 hours to the April 6 nuclear deadline. NPT exit rhetoric from Iran's parliament signals escalation. Every outcome (deal, collapse, strike) spikes prediction market volume. LEVER's testnet: keeper wallet empty (Day 17), no demo, no positioning. Anyone discovering LEVER during the surge sees a dead product. Only Master can fund the wallet. ~101+ hours since last Master message.
+
+**2. Vigil is spending more on self-observation than it spent on the entire March bug sprint. (CRITICAL, SYSTEMIC)**
+
+66 overseer cycles. All identical. Estimated cumulative cost: $45-55 in Opus tokens to produce the same two paragraphs. The March 28-30 sprint that fixed 8 critical protocol bugs cost less than this. RESEARCH market scans (2/day) are the only sessions producing information that did not exist before. Everything else is overhead monitoring nothing.
+
+Scheduler logs confirm: 10-second polling cycles, 5 available slots, 0 dispatched, 0 active. The machine is perfectly healthy and perfectly idle.
+
+**3. Three zombie tasks rotting in scheduler-state.json. (HIGH)**
+
+support-improve, support-operate, support-research: all pid=0, attempts=0, no plan/critique/build/verify files. Created and abandoned. They clutter every ACTIVE_WORK report and will never dispatch. This has been flagged in 5+ consecutive cycles.
+
+### EFFICIENCY
+
+18/200 sessions today (all cron). Breakdown: ~7 overseer/advisor, 4 health checks, 4 research scans, 3 scheduler overhead. Zero dispatched work. Zero human-initiated sessions. KANBAN: 0 backlog, 0 planned, 0 in progress, 0 in review.
+
+### QUALITY
+
+No handoffs since March 30 (5 days). No code in 10+ days. BUILD, VERIFY, PLAN, CRITIQUE all dormant. Last meaningful output: 8 critical bug fixes and dashboard overhaul on March 28-30. Quality of that sprint was solid (all verified). Nothing since.
+
+### BOTTLENECKS
+
+Structural deadlock. Two blockers, both require Master:
+1. Keeper wallet funding (Day 17, only Master has keys)
+2. KANBAN population (no tasks, no work, no output)
+
+ADVISOR cannot write to KANBAN. No workstream can self-assign. The pipeline is not stuck; it is starving.
+
+### SYSTEM HEALTH
+
+Infrastructure: flawless. 40+ consecutive clean health checks spanning 7+ days. RAM nominal, disk nominal, load nominal. Telegram gateway last real activity: March 31. Scheduler: clean 10-second cycles, no errors, no duplicates.
+
+### RECURRING PROBLEMS
+
+No new occurrences of any documented lesson. All March lessons (decimal precision, CSP stripping, role hashes, gas limits, constructor args) remain valid and should be enforced when code work resumes.
+
+### WASTED WORK
+
+This report. The 66th copy. The honest accounting: every hour ADVISOR runs an idle overseer cycle, it costs roughly the same as a BUILD session that could ship a feature. 66 idle cycles = 66 feature sessions worth of budget burned on "nothing changed."
+
+### ACTIONS
+
+```
+ACTION|CRITICAL|operate|Reduce overseer cron to every 12h when KANBAN empty >48h. 20th request. At this point, not acting on this is itself waste.
+ACTION|HIGH|operate|Delete zombie tasks from scheduler-state.json: support-improve, support-operate, support-research. pid=0, attempts=0, will never dispatch. 6th request.
+ACTION|HIGH|advisor|Grant ADVISOR write access to KANBAN BACKLOG to break the structural deadlock. 8th request.
+```
+
+---
+
 ## 2026-04-04 10:01 UTC (Saturday, 10:01 AM) [OVERSEER CYCLE #65]
 
 ### STATUS: Day 10 idle. 15/200 sessions (all cron). 65th consecutive idle report.
