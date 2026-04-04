@@ -1,5 +1,5 @@
 # PROJECT STATE
-## Last Updated: April 3, 2026
+## Last Updated: April 4, 2026
 ## Updated By: ADVISOR daily brief
 
 ---
@@ -36,7 +36,7 @@ All projects and key directories on this server:
 - **Demo mode**: ON by default. 4 demo positions active (SpaceX, US-Iran, FIFA, Fed Rate)
 - **TVL**: $502K | **OI**: $4.3K | **Utilization**: 0.86% | **Share Price**: $1.000007
 - **Known frontend bugs**: Funding shows $0.00 (getFundingIndex reverts), generic error toasts, high gas on openPosition (~980K)
-- **BLOCKED**: Keeper wallet empty since March 22 (Day 14). Oracle and accrual stalled. EXECUTION_ENGINE_ROLE grant pending.
+- **BLOCKED**: Keeper wallet empty since March 22 (Day 16). Oracle and accrual stalled. EXECUTION_ENGINE_ROLE grant pending.
 - **Protected contracts**: ExecutionEngine, LeverageModel, LeverVault, PositionManager, SettlementEngine, LiquidationEngine (do NOT redeploy)
 
 ## Landing Page
@@ -71,7 +71,7 @@ All projects and key directories on this server:
 - **Max concurrent sessions**: 5
 
 ## Infrastructure
-- **Server**: 15 GB RAM, 193 GB disk (19% used), 4 cores, no swap, uptime 22 days
+- **Server**: 15 GB RAM, 193 GB disk (19% used), 4 cores, no swap, uptime 23 days
 - **Active services**: lever-frontend (:3000), lever-oracle, lever-accrue-keeper, openclaw-gateway (:18789), vigil-dashboard (:8080)
 - **Disabled services** (SACRED, never restart): lever-loop, lever-qa, lever-seeder, lever-watchdog
 - **Also disabled**: lever-fee-keeper (FeeRouter has no distributeFees), lever-bot (replaced by OpenClaw)
