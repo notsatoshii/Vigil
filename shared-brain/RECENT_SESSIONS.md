@@ -3,6 +3,32 @@
 
 ---
 
+### [2026-04-04T08:15:00Z] ADVISOR | Overseer Cycle #64
+
+- **Task**: Biweekly overseer check.
+- **Outcome**: 64th consecutive idle report. Day 10 idle. 12/200 sessions (all cron). KANBAN empty. No handoffs since March 30. Keeper wallet Day 17. Iran deadline 34 hours. Infrastructure perfect. 18th proposal to reduce overseer frequency.
+
+---
+
+### [2026-04-04T08:00:00Z] RESEARCH | Morning Market Scan
+
+- **Task**: Saturday April 4 morning market scan across all 5 coverage domains.
+- **Outcome**: SUCCESS. 10-item scan produced. All watchlists and trends updated.
+- **Key findings**:
+  1. Iran April 6 deadline 36 hours away. No breakthrough. Iran parliament pushing NPT exit (escalation signal). All outcome scenarios generate prediction market volume. CONTRARIAN: NPT exit push reduces Iran's negotiating flexibility; strike probability may be higher than the 30% consensus.
+  2. Combined March prediction market ATH confirmed: $22B (Polymarket $10.15B + Kalshi $12B). 13 federally regulated platforms now operational in US. Counter-cyclical thesis confirmed.
+  3. GPT-5.5 (Spud) pretraining complete March 24. Sam Altman: "a few weeks." OpenAI-Anthropic Mythos race is real. Claude Mythos remains Q3 2026 consensus. Anthropic deprecating extended context beta for Sonnet 4.5/4 on April 30 (Vigil unaffected, uses 4.6).
+  4. BTC at $66,855, F&G index 11 (extreme fear). Brent crude $107. BNB Chain TVL $5.4B (+40.5%), Base TVL $4.0B. First green BTC month since September.
+  5. OmenX still testnet, no mainnet date. Leveraged prediction market race on Base (LEVER vs OmenX vs Ultramarkets) clock is ticking.
+  6. Prediction Conference 18 days (April 22-24, Las Vegas, 300 seats). Korea BUIDL Week 9 days (April 13-19, Seoul). TOKEN2049 Dubai 25 days (April 29-30). All three decisions pending from Master.
+  7. CFTC v. AZ/CT/IL proceeding. States have 30-day response window. ANPR comment deadline April 30.
+- **Watchlists updated**: watchlist-competitors.json (March ATH data, OmenX status update), watchlist-ai-tools.json (GPT-5.5 Spud entry added, Anthropic context window deprecation noted), watchlist-geopolitical.json (Iran 36-hour update, NPT exit risk flagged)
+- **Trends updated**: prediction-market-volumes.json (April 4 morning snapshot added), key-dates-calendar-q2-2026.json (Iran status updated to 36-hour critical)
+- **Files written**: MORNING_SCAN_2026-04-04.md (created), RECENT_SESSIONS.md (this entry)
+- **Master decisions pending**: Fund keeper wallet (Day 17, CRITICAL), Prediction Conference registration ($997, 18 days, 300 seats), Korea BUIDL Week (9 days), TOKEN2049 Dubai (25 days)
+
+---
+
 ### [2026-04-04T06:00:00Z] ADVISOR | Full Daily Brief (5-phase cycle)
 
 - **Task**: Saturday daily brief, full 5-dimension analysis, system improvement proposals, brain maintenance
@@ -1775,3 +1801,26 @@ No issues found. No fixes needed.
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 16%. Gateway stable. 04:00 health check passed clean. Scheduler at 12 dispatches, 1 active. No errors. No issues found, no fixes needed.
+
+## OPERATE | 2026-04-04 08:17 UTC
+
+**Task**: Scheduled system self-check.
+
+**Findings**:
+- All 8 services active (openclaw-gateway, vigil-telegram, vigil-dashboard, vigil-inbox, lever-frontend, lever-oracle, lever-accrue-keeper, caddy)
+- Disk 19%, RAM 13% (2112MB / 15993MB)
+- Selfcheck-fast: 0 problems across all runs since 06:00 UTC
+- Health check 08:00: healthy, 0 problems
+- Scheduler: 5 slots available, 12 tasks today, stable cycling
+- Inbox: last processed March 31, no pending items
+- Gateway: active, clean logs
+- No stuck processes, no errors, no fixes needed
+- Claude Code version: 2.1.90 (latest known is 2.1.91 -- minor version behind, non-critical)
+- No pending OPERATE actions in OVERSEER_ACTIONS.md
+
+---
+## OPERATE | 2026-04-04 08:23-08:25 UTC
+
+**Task**: System check, log review.
+
+**Findings**: All 8 services active. Disk 19%, RAM 17%. Gateway stable. 08:00 health check passed clean. Scheduler at 15 dispatches, 2 active. No errors. No issues found, no fixes needed.
