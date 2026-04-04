@@ -1859,3 +1859,15 @@ No issues found. No fixes needed.
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 18%. Gateway stable. 12:00 health check passed clean. Scheduler at 24 dispatches, 2 active. No errors. No issues found, no fixes needed.
+
+---
+[2026-04-04 15:21 UTC] OPERATE self-check (cron)
+- All 8 services active: openclaw-gateway, vigil-telegram, vigil-dashboard, vigil-inbox, lever-frontend, lever-oracle, lever-accrue-keeper, caddy
+- Disk: 19% used (37G/193G). RAM: 16% used (2.5G/16G)
+- Selfcheck: 0 problems across all 5-minute checks today
+- Health check (12:00 UTC): status=healthy, no problems
+- Scheduler: 5 slots available, 24 dispatched today, pipeline_waiting=False
+- Inbox: no recent activity (last success 2026-03-31)
+- Gateway: active, agents firing on schedule, no errors
+- OVERSEER: 2 MEDIUM/CRITICAL pending for BUILD (SIGUSR1 reload, mainnet timeline)
+- No issues found. No fixes needed.
