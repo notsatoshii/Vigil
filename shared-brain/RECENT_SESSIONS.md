@@ -1934,3 +1934,12 @@ No issues found. No fixes needed.
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 17%. Gateway stable. 00:00 health check passed clean. Scheduler at 6 dispatches, 1 active. Transient model fallback failures (00:28, 01:28, 02:01). No issues found, no fixes needed.
+
+---
+## OPERATE | 2026-04-05 04:23-04:25 UTC
+
+**Task**: System check, log review.
+
+**Findings**: All 8 services active. Disk 19%, RAM 16%. Gateway stable. 04:00 health check passed clean. Scheduler at 9 dispatches, 1 active.
+
+**NEW: Anthropic billing change detected at 04:14**: API returned 400 error: "Third-party apps now draw from your extra usage, not your plan limits. We've added a $200 credit to get you started. Claim it at claude.ai/settings/usage." Commander should claim the credit and monitor usage. Model fallback failures (~hourly) may be related to this billing transition.
