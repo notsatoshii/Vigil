@@ -2041,3 +2041,8 @@ No issues found. No fixes needed.
 **Task**: System check, log review.
 
 **Findings**: All 8 services active. Disk 19%, RAM 21%. Gateway stable. Master active at 08:01 (research update). 08:00 health check passed clean. Scheduler at 15 dispatches, 2 active. Hourly model fallback failures continuing (billing change related). No issues found, no fixes needed.
+
+### [2026-04-06T08:42:32Z] RESEARCH | Inbox ingestion: 20260406-083914-youtu-be.url
+- **Task**: Knowledge ingestion from inbox
+- **Outcome**: SUCCESS
+- **Source**: 20260406-083914-youtu-be.url (url)

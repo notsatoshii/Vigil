@@ -1,0 +1,52 @@
+{
+  "id": "20260406-083916-theo-claude-code-unusable",
+  "ingestedAt": "2026-04-06T08:39:16Z",
+  "sourceUrl": "https://youtu.be/stZr6U_7S90?si=StNkIGFpHc-weM2N",
+  "sourceType": "YouTube video",
+  "reliability": "Medium (tech influencer opinion, but reflects real user experience)",
+  "fetchStatus": "YouTube content not directly fetchable; reconstructed from oEmbed metadata + web search",
+
+  "videoMetadata": {
+    "title": "Claude Code is unusable now",
+    "channel": "Theo - t3.gg",
+    "author_url": "https://www.youtube.com/@t3dotgg",
+    "platform": "YouTube"
+  },
+
+  "summary": [
+    "Theo (t3.gg), a prominent tech YouTuber and developer, published a video titled 'Claude Code is unusable now' criticizing Claude Code's deteriorating usability, likely focused on the rate limit drain crisis that has affected users since March 23, 2026.",
+    "Core issue: Claude Code's prompt caching system is broken (GitHub issue #40524). Cache writes happen but reads fail, causing full reprocessing of conversation history. Users paying $100-200/month see 5-hour session windows drain in 90 minutes on identical workloads.",
+    "Anthropic admitted (April 1) that users are hitting limits 'way faster than expected.' Described as both a caching regression and 'intentional capacity management.' The bug hits hardest on agentic workflows with large codebases, exactly the Max plan use case.",
+    "Theo has also criticized Claude Code being closed-source (preventing community bug fixes) and Anthropic DMCA'ing his fork. The relationship between Anthropic and power users is strained.",
+    "Vigil relevance: Vigil runs on Claude Code and may be affected by the same rate limit drain. This could explain any session cost spikes observed since March 23. The rate limit drain bug was noted in our AI tools watchlist but this video shows it is now mainstream discourse among developers."
+  ],
+
+  "entities": [
+    {"name": "Theo (t3.gg)", "type": "person", "role": "Prominent tech YouTuber/developer, Claude Code power user and critic"},
+    {"name": "Claude Code rate limit drain", "type": "bug", "role": "Broken prompt caching since March 23, 5-hour sessions draining in 90 minutes"},
+    {"name": "GitHub issue #40524", "type": "reference", "role": "Bug report: cache invalidation causes full reprocessing"},
+    {"name": "GitHub issue #41788", "type": "reference", "role": "Max 20 plan rate limit exhausted in ~70 minutes"},
+    {"name": "T3 Code", "type": "product", "role": "Theo's coding tool, now supports Claude Code CLI integration"}
+  ],
+
+  "relationships": [
+    {"from": "Claude Code rate limit drain", "to": "Vigil system", "relationship": "may affect Vigil session costs and reliability since March 23"},
+    {"from": "Theo", "to": "Anthropic", "relationship": "strained: DMCA on fork, closed-source criticism, rate limit complaints"},
+    {"from": "prompt caching bug", "to": "agentic workflows", "relationship": "disproportionately affects large codebase + multi-step agent use cases (Vigil's exact pattern)"}
+  ],
+
+  "categories": ["technical"],
+
+  "workstreamTags": {
+    "BUILD": "The rate limit drain bug (prompt caching regression since March 23) may be affecting Vigil session costs. OPERATE should check if Vigil sessions are consuming more tokens than expected. Mitigation: ensure Claude Code is updated to v2.1.91 (latest fixes). Monitor GitHub issues #40524 and #41788 for resolution.",
+    "ADVISOR": "Developer sentiment toward Claude Code is turning negative among power users. Theo has 1M+ YouTube subscribers. 'Claude Code is unusable now' as a headline hurts Anthropic's developer brand. For Vigil: monitor for any service disruptions, but our API usage pattern may differ from CLI usage pattern."
+  },
+
+  "sources": [
+    {"title": "YouTube: Claude Code is unusable now (Theo t3.gg)", "url": "https://www.youtube.com/watch?v=stZr6U_7S90", "dateAccessed": "2026-04-06", "sourceType": "Primary", "reliability": "Medium"},
+    {"title": "Anthropic admits Claude Code limits hit faster than expected", "url": "https://www.devclass.com/ai-ml/2026/04/01/anthropic-admits-claude-code-users-hitting-usage-limits-way-faster-than-expected/5213575", "dateAccessed": "2026-04-06", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "GitHub: Max 20 rate limit exhausted in 70 minutes", "url": "https://github.com/anthropics/claude-code/issues/41788", "dateAccessed": "2026-04-06", "sourceType": "Primary", "reliability": "High"},
+    {"title": "MacRumors: Rapid Rate Limit Drain", "url": "https://www.macrumors.com/2026/03/26/claude-code-users-rapid-rate-limit-drain-bug/", "dateAccessed": "2026-04-06", "sourceType": "Secondary", "reliability": "High"},
+    {"title": "The Register: Anthropic admits quotas running out too fast", "url": "https://www.theregister.com/2026/03/31/anthropic_claude_code_limits/", "dateAccessed": "2026-04-06", "sourceType": "Secondary", "reliability": "High"}
+  ]
+}
