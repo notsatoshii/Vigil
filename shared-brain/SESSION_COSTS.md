@@ -65,3 +65,9 @@
 [08:01:41] Session #10
 [08:33:59] Session #11
 [08:39:14] Session #12
+[08:45:58] Session #13
+[08:52:37] Session #14
+[08:56:39] Session #15
+[09:13:05] Session #16
+[09:14:51] Session #17
+[09:18:41] Session #18
