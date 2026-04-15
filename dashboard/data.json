@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-04-15T09:44:32Z",
-  "epoch": 1776246272,
+  "timestamp": "2026-04-15T10:44:49Z",
+  "epoch": 1776249889,
   "system": {
     "health": "healthy",
     "healthTime": "2026-04-15T07:00:02Z",
-    "ramUsed": 4765,
+    "ramUsed": 4818,
     "ramTotal": 15993,
-    "ramPct": 29,
+    "ramPct": 30,
     "diskPct": 30,
     "diskUsed": "57G",
     "diskTotal": "193G",
-    "cpuLoad": "0.59",
-    "uptime": "4 weeks, 6 days, 5 hours, 15 minutes"
+    "cpuLoad": "0.65",
+    "uptime": "4 weeks, 6 days, 6 hours, 15 minutes"
   },
   "services": {
     "leverFrontend": 1,
@@ -47,7 +47,7 @@
   "advisorSummary": "",
   "recentSessions": ["[2026-03-28T12:04:32Z] RESEARCH | Inbox ingestion: 20260328-115813-PredictionIndex2025-2026.pdf","[2026-03-28T12:36:23Z] RESEARCH | Inbox ingestion: 20260328-123557-photo-20260328-123557.jpg","[2026-03-28T12:47:13Z] RESEARCH | Inbox ingestion: 20260328-124624-pngwing.com 1.png","[2026-03-29T11:05:00Z] BUILD | VIGIL-SELF-IMPROVE","[2026-03-30T12:07:24Z] RESEARCH | Inbox ingestion: 20260330-120404-docs-arbitrum-io.url","[2026-03-30T12:07:59Z] RESEARCH | Inbox ingestion: 20260330-120418-arbitrum-quickstart.url","[2026-03-31T06:10:20Z] RESEARCH | Inbox ingestion: 20260331-060756-github-com.url","[2026-04-06T08:42:32Z] RESEARCH | Inbox ingestion: 20260406-083914-youtu-be.url"],
   "recentHandoffs": [{"name":"research-20260330-2000","time":1774901104,"summary":"Monday March 30, 2026 evening market scan (8pm UTC). Full 5-domain coverage:"},{"name":"verify-vigil-self-improve","time":1774844844,"summary":"The architecture is sound: selfcheck-fast.sh (fast triage, <100ms), watchdog.sh "},{"name":"operate-20260330-0326","time":1774841044,"summary":"Thorough system self-check triggered manually."},{"name":"build-vigil-self-improve","time":1774782294,"summary":" Task: VIGIL-SELF-IMPROVE — Continuous Self-Improvement Without Master Interve"},{"name":"verify-vigil-verify-vision","time":1774782085,"summary":"Two Puppeteer screenshot tools created and the VERIFY CLAUDE.md updated with con"}],
-  "nextJobs": [{"name":"operate-selfcheck","next":"in 4m"},{"name":"overseer","next":"in 17m"},{"name":"research-evening-scan","next":"in 10h"},{"name":"advisor-daily-brief","next":"in 20h"},{"name":"research-morning-scan","next":"in 22h"},{"name":"secure-weekly-audit","next":"in 5d"},{"name":"ceo-weekly-brief","next":"in 5d"}],
+  "nextJobs": [{"name":"operate-selfcheck","next":"in 4m"},{"name":"overseer","next":"in 1h"},{"name":"research-evening-scan","next":"in 9h"},{"name":"advisor-daily-brief","next":"in 19h"},{"name":"research-morning-scan","next":"in 21h"},{"name":"secure-weekly-audit","next":"in 5d"},{"name":"ceo-weekly-brief","next":"in 5d"}],
   "projects": {
     "lever": {
       "status": "testnet",
